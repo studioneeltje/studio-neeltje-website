@@ -1301,12 +1301,12 @@
           {
             "key": "15",
             "label": "Knop / link: Bespreek 6 uur",
-            "value": "Bespreek 6 uur"
+            "value": "Kies 6 uur fotografie"
           },
           {
             "key": "16",
             "label": "Label: Ruimte voor de hele flow",
-            "value": "Ruimte voor de hele flow"
+            "value": "Meest gekozen"
           },
           {
             "key": "17",
@@ -1371,7 +1371,7 @@
           {
             "key": "29",
             "label": "Knop / link: Bespreek 9 uur",
-            "value": "Bespreek 9 uur"
+            "value": "Kies 9 uur fotografie"
           },
           {
             "key": "30",
@@ -1436,12 +1436,12 @@
           {
             "key": "42",
             "label": "Knop / link: Bespreek 12 uur",
-            "value": "Bespreek 12 uur"
+            "value": "Kies 12 uur fotografie"
           },
           {
             "key": "43",
             "label": "Tekst: Prijzen zijn exclusief reiskosten. Kennismaken e",
-            "value": "Prijzen zijn exclusief reiskosten. Kennismaken en overleggen is vrijblijvend."
+            "value": "Kennismaken is vrijblijvend. Je zit nog nergens aan vast. Prijzen zijn exclusief reiskosten."
           }
         ],
         "images": [],

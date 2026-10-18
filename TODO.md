@@ -134,3 +134,14 @@ bouwwens van Neeltje. Deze eerste bouwstap is op 18 oktober 2026 aangevraagd.
 - [x] Rustige witte basis voor tekst/FAQ en fotogalerij; merkkleuren behouden.
 - [x] Toetsenbordfocus, snelkoppeling naar inhoud en verminderde beweging meenemen.
 - [x] Dezelfde vormgeving laden in Puck en conceptvoorvertoningen.
+
+## Links, hover en prijskaarten — bouw goedgekeurd
+
+- [x] Extra onderste lijn bij ‘Lees het artikel’ verwijderen; alleen de tekst onderstrepen.
+- [x] Meer ruimte tussen Instagram-intro en volgknop (32 px).
+- [x] Alleen het woord Instagram onderstrepen, niet het losse pijltje.
+- [x] Prijskaarten compacter en gelijk uitlijnen, met duidelijke keuzeacties en vrijblijvende kennismaking.
+- [x] 9 uur aanmerken als ‘Meest gekozen’, ook op mobiel als eerste tonen.
+- [x] Duidelijke hoverfeedback voor knoppen: kleur, lift en bewegend pijltje.
+- [x] Menu-items een herkenbare hover en actuele-paginastijl geven.
+- [x] Feedback bij toetsenbord en aanraken behouden, animatie bij verminderde beweging uitschakelen.

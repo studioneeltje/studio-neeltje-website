@@ -1299,12 +1299,12 @@
         {
           "key": "15",
           "label": "Knop / link: Bespreek 6 uur",
-          "value": "Bespreek 6 uur"
+          "value": "Kies 6 uur fotografie"
         },
         {
           "key": "16",
           "label": "Label: Ruimte voor de hele flow",
-          "value": "Ruimte voor de hele flow"
+          "value": "Meest gekozen"
         },
         {
           "key": "17",
@@ -1369,7 +1369,7 @@
         {
           "key": "29",
           "label": "Knop / link: Bespreek 9 uur",
-          "value": "Bespreek 9 uur"
+          "value": "Kies 9 uur fotografie"
         },
         {
           "key": "30",
@@ -1434,12 +1434,12 @@
         {
           "key": "42",
           "label": "Knop / link: Bespreek 12 uur",
-          "value": "Bespreek 12 uur"
+          "value": "Kies 12 uur fotografie"
         },
         {
           "key": "43",
           "label": "Tekst: Prijzen zijn exclusief reiskosten. Kennismaken e",
-          "value": "Prijzen zijn exclusief reiskosten. Kennismaken en overleggen is vrijblijvend."
+          "value": "Kennismaken is vrijblijvend. Je zit nog nergens aan vast. Prijzen zijn exclusief reiskosten."
         }
       ],
       "images": [],
@@ -1523,7 +1523,7 @@
   },
   "Social": {
     "label": "Social media",
-    "html": "<section class=\"social-feature\" id=\"social\" aria-labelledby=\"social-title\"><div class=\"social-feature-head\"><div><div class=\"section-tag\">{{t:0}}</div><h2 id=\"social-title\">{{t:1}}<br><em>{{t:2}}</em></h2></div><div class=\"social-feature-note\"><p>{{t:3}}</p><a class=\"social-follow-link\" href=\"{{link:0}}\" target=\"_blank\" rel=\"noopener noreferrer\">{{t:4}} <span aria-hidden=\"true\">↗</span></a></div></div><div class=\"social-photo-grid\" aria-label=\"Een kijkje in de trouwverhalen van Studio Neeltje\"><a class=\"social-photo social-photo-tall\" href=\"{{link:1}}\" aria-label=\"Bekijk de fotocarrousel\">{{image:0}}<span class=\"social-photo-label\">{{t:5}}</span></a><a class=\"social-photo social-photo-wide\" href=\"{{link:2}}\" aria-label=\"Bekijk de fotocarrousel\">{{image:1}}<span class=\"social-photo-label\">{{t:6}}</span></a><a class=\"social-photo social-photo-portrait\" href=\"{{link:3}}\" aria-label=\"Bekijk de fotocarrousel\">{{image:2}}<span class=\"social-photo-label\">{{t:7}}</span></a><a class=\"social-photo social-photo-square\" href=\"{{link:4}}\" aria-label=\"Bekijk de fotocarrousel\">{{image:3}}<span class=\"social-photo-label\">{{t:8}}</span></a></div><div class=\"social-feature-bottom\"><span>{{t:9}}</span><a href=\"{{link:5}}\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Open Instagram\">{{t:10}} <span aria-hidden=\"true\">↗</span></a></div></section>",
+    "html": "<section class=\"social-feature\" id=\"social\" aria-labelledby=\"social-title\"><div class=\"social-feature-head\"><div><div class=\"section-tag\">{{t:0}}</div><h2 id=\"social-title\">{{t:1}}<br><em>{{t:2}}</em></h2></div><div class=\"social-feature-note\"><p>{{t:3}}</p><a class=\"social-follow-link\" href=\"{{link:0}}\" target=\"_blank\" rel=\"noopener noreferrer\">{{t:4}} <span aria-hidden=\"true\">↗</span></a></div></div><div class=\"social-photo-grid\" aria-label=\"Een kijkje in de trouwverhalen van Studio Neeltje\"><a class=\"social-photo social-photo-tall\" href=\"{{link:1}}\" aria-label=\"Bekijk de fotocarrousel\">{{image:0}}<span class=\"social-photo-label\">{{t:5}}</span></a><a class=\"social-photo social-photo-wide\" href=\"{{link:2}}\" aria-label=\"Bekijk de fotocarrousel\">{{image:1}}<span class=\"social-photo-label\">{{t:6}}</span></a><a class=\"social-photo social-photo-portrait\" href=\"{{link:3}}\" aria-label=\"Bekijk de fotocarrousel\">{{image:2}}<span class=\"social-photo-label\">{{t:7}}</span></a><a class=\"social-photo social-photo-square\" href=\"{{link:4}}\" aria-label=\"Bekijk de fotocarrousel\">{{image:3}}<span class=\"social-photo-label\">{{t:8}}</span></a></div><div class=\"social-feature-bottom\"><span>{{t:9}}</span><a href=\"{{link:5}}\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Open Instagram\"><span class=\"sn-link-label\">{{t:10}}</span> <span class=\"sn-link-arrow\" aria-hidden=\"true\">↗</span></a></div></section>",
     "defaults": {
       "texts": [
         {
