@@ -145,3 +145,16 @@ bouwwens van Neeltje. Deze eerste bouwstap is op 18 oktober 2026 aangevraagd.
 - [x] Duidelijke hoverfeedback voor knoppen: kleur, lift en bewegend pijltje.
 - [x] Menu-items een herkenbare hover en actuele-paginastijl geven.
 - [x] Feedback bij toetsenbord en aanraken behouden, animatie bij verminderde beweging uitschakelen.
+
+## Fotografie-effecten en openstaande opmaak — bouw goedgekeurd
+
+- [x] De drie teksten boven de draaiende fotogalerij verwijderen.
+- [x] De fotomuurkop naar het formaat van andere sectiekoppen brengen.
+- [x] Nummer/categorielabels uit de blogafbeeldingen verwijderen.
+- [x] Gratis trouwchecklist en Contact zichtbaar houden buiten het uitklapmenu.
+- [x] Foto's rustig onthullen bij het binnenkomen in beeld, met behoud van hun afmetingen.
+- [x] Reportagekaarten met zichtbare cover en tweede hoverfoto uit dezelfde reportage.
+      Tweede foto instelbaar in Sveltia; anders eerste andere galerijfoto.
+      Bij slechts één foto wordt geen ander bruidspaar als tweede beeld gebruikt.
+- [x] Subtiele, eenmalige zoom in de header; de tekst blijft stil.
+- [x] Foto's zichtbaar houden zonder JavaScript en met verminderde beweging.

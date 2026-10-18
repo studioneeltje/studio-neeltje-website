@@ -7,6 +7,18 @@
   if(!reduced&&'IntersectionObserver'in window){const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');io.unobserve(entry.target);}}),{threshold:.03});reveal.forEach(el=>io.observe(el));}
   else reveal.forEach(el=>el.classList.add('in-view'));
 
+  // Photograph reveals are progressive enhancement: no script means visible photos.
+  if(!reduced&&'IntersectionObserver'in window){
+    const photoObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.querySelectorAll('.sn-photo-reveal').forEach(photo=>photo.classList.add('sn-photo-visible'));photoObserver.unobserve(entry.target);}
+    }),{threshold:.04});
+    document.querySelectorAll('.sn-story-images,.journal-card-visual,.social-photo,.about-split-photo,.sn-photo-section>.sn-picture,.sn-story-gallery>button').forEach(el=>{
+      el.classList.add('sn-photo-reveal');photoObserver.observe(el.parentElement);
+    });
+    const heroObserver=new IntersectionObserver(entries=>entries.forEach(entry=>entry.target.classList.toggle('sn-hero-paused',!entry.isIntersecting)));
+    document.querySelectorAll('.canvas-hero').forEach(el=>heroObserver.observe(el));
+  }
+
   const dialog=document.createElement('dialog');dialog.className='sn-lightbox';dialog.setAttribute('aria-label','Vergrote foto');
   dialog.innerHTML='<button class="lightbox-close" aria-label="Foto sluiten" type="button">×</button><button class="lightbox-prev" aria-label="Vorige foto" type="button">←</button><figure><img alt=""></figure><button class="lightbox-next" aria-label="Volgende foto" type="button">→</button>';
   document.body.appendChild(dialog);let photos=[],active=0,trigger;

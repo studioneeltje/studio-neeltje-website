@@ -51,6 +51,7 @@ collections:
       - {name: excerpt, label: Korte introductie, widget: text}
       - {name: body, label: Het verhaal, widget: markdown}
       - {name: cover, label: Omslagfoto, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title]}
+      - {name: hoverCover, label: Tweede foto bij aanwijzen, hint: "Kies een ander beeld uit deze reportage. Zonder keuze wordt de eerste andere galerijfoto gebruikt.", widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
       - name: gallery
         label: Foto's in de galerij
         widget: list

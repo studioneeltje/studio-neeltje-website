@@ -29,7 +29,7 @@ for(const page of pages)for(const block of page.content){
  for(const image of selections)if(!media.some(a=>a.id===image?.mediaId&&a.kind==='image'))throw Error(`${page.title}: kies een bestaande foto in ${block.type}.`);
  if(block.type==='Video'&&!media.some(a=>a.id===block.props.mediaId&&a.kind==='video'))throw Error(`${page.title}: kies een bestaande video.`);
 }
-for(const record of [...stories,...articles])if(record.published!==false){for(const id of [record.cover,...(record.gallery||[])])if(!media.some(a=>a.id===id&&a.kind==='image'))throw Error(`${record.title}: een foto ontbreekt in de mediabibliotheek.`);}
+for(const record of [...stories,...articles])if(record.published!==false){for(const id of [record.cover,...(record.hoverCover?[record.hoverCover]:[]),...(record.gallery||[])])if(!media.some(a=>a.id===id&&a.kind==='image'))throw Error(`${record.title}: een foto ontbreekt in de mediabibliotheek.`);}
 const context={templates,settings,media,manifest,stories,articles};
 const roleNames=[...new Set(Object.values(templates).flatMap(t=>[...t.html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1])))];
 function blockSelectors(css){for(const id of roleNames)css=css.replace(new RegExp('#'+id+'(?=[\\s.:,{>+~\\[])','g'),`[data-role="${id}"]`);return css;}

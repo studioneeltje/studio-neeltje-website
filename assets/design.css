@@ -289,3 +289,73 @@
   .mode-canvas :is(.button,.canvas-price-card,.social-follow-link,.standalone-form-submit,.story-project-link),.site-footer .footer-cta,#mast .sn-navigation>a {transform:none!important}
   .mode-canvas :is(.button,.social-follow-link,.standalone-form-submit,.story-project-link) :is(i,span[aria-hidden="true"]),#mast .sn-navigation>a span,.site-footer .footer-cta i {transform:none!important}
 }
+
+/* A quieter photo-wall title uses the same section-heading scale. */
+.mode-canvas .canvas-wall:not(.studio-wall)>h2 {font:800 clamp(36px,4.8vw,68px)/1.06 'Host Grotesk',sans-serif!important;letter-spacing:-.04em!important;max-width:100%;text-align:left}
+.mode-canvas .canvas-wall>.section-tag {text-align:left}
+/* Visible reportage covers with an optional second image from that same story. */
+.mode-canvas .canvas-project-list {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 24px;border:0}
+.mode-canvas .canvas-project.sn-story-card {display:block;min-width:0;min-height:0;padding:0;border:0;color:#65001d;transition:none}
+.mode-canvas .canvas-project.sn-story-card:hover {padding:0;color:#65001d}
+.mode-canvas .sn-story-images {position:relative;width:100%;aspect-ratio:3/2;overflow:hidden;background:#e8f2ff}
+.mode-canvas .sn-story-images .sn-picture {display:contents}
+.mode-canvas .canvas-project.sn-story-card img {position:absolute;inset:0;display:block;width:100%;height:100%;max-width:100%;opacity:1;object-fit:cover;transform:none;box-shadow:none;transition:opacity .7s ease,transform 1s cubic-bezier(.2,.8,.2,1)}
+.mode-canvas .canvas-project.sn-story-card img.sn-story-hover-image {opacity:0}
+.mode-canvas .sn-story-card-meta {display:grid;grid-template-columns:minmax(0,1fr) 36px;gap:8px 16px;padding-top:20px}
+.mode-canvas .sn-story-card-meta>span {grid-column:1/-1;font:400 14px/1.5 'Host Grotesk',sans-serif;letter-spacing:.06em}
+.mode-canvas .sn-story-card-meta>b {font:700 clamp(26px,3vw,38px)/1.12 'Host Grotesk',sans-serif;letter-spacing:-.035em}
+.mode-canvas .sn-story-card-meta>i {font:normal 30px/1 'Host Grotesk',sans-serif;transition:transform .3s}
+@media(hover:hover) {
+  .mode-canvas .sn-story-card:hover img {transform:scale(1.035)}
+  .mode-canvas .sn-story-card.has-second-photo:hover img.sn-story-hover-image {opacity:1}
+  .mode-canvas .sn-story-card:hover .sn-story-card-meta>i {transform:translate(3px,-3px)}
+}
+.mode-canvas .sn-story-card.has-second-photo:focus-visible img.sn-story-hover-image {opacity:1}
+/* One gentle, finite zoom behind the stationary title and colour wash. */
+@keyframes sn-hero-breathe {from{transform:scale(1)}to{transform:scale(1.045)}}
+.sn-public .mode-canvas .canvas-hero .canvas-card.card-one img {animation:sn-hero-breathe 18s ease-out both;transform-origin:var(--sn-x,50%) var(--sn-y,50%)}
+.sn-public .mode-canvas .sn-hero-paused .canvas-card.card-one img {animation-play-state:paused}
+/* Reveal a print downwards without changing its dimensions or scroll position. */
+.sn-public .sn-photo-reveal {clip-path:inset(0 0 100% 0);transition:clip-path 1s cubic-bezier(.2,.7,.2,1)}
+.sn-public .sn-photo-reveal.sn-photo-visible {clip-path:inset(0)}
+/* Header actions remain outside the menu at every screen width. */
+#mast.sn-header {gap:16px}
+#mast .sn-navigation {margin-left:auto;flex:0 1 auto}
+#mast .sn-header-actions {display:flex;align-items:center;gap:12px;flex-shrink:0}
+#mast .sn-header-action {display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:12px 18px;border:1px solid #65001d;border-radius:32px;font:600 17px/1.3 'Host Grotesk',sans-serif;color:#65001d;text-decoration:none;background:transparent;transition:background .25s,color .25s,transform .25s,box-shadow .25s}
+#mast .sn-header-action.nav-checklist {background:#65001d;color:#fde6f2}
+#mast .sn-header-action>span {font-size:23px;transition:transform .3s}
+@media(hover:hover) {
+  #mast .sn-header-action:hover {background:#65001d;color:#fde6f2;transform:translateY(-2px);box-shadow:0 5px 0 #ff4802}
+  #mast .sn-header-action.nav-checklist:hover {background:#fff;color:#65001d}
+  #mast .sn-header-action:hover>span {transform:translate(3px,-3px)}
+}
+#mast .sn-header-action:active {transform:translateY(1px);box-shadow:0 2px 0 #ff4802}
+@media(max-width:1200px) {
+  #mast .sn-navigation>a:not(.nav-contact):not(.nav-checklist) {padding-inline:8px}
+  #mast .sn-navigation {gap:0}
+}
+@media(max-width:1100px) {
+  #mast.sn-header {flex-wrap:nowrap}
+  #mast .sn-header-actions {margin-left:auto}
+  #mast .sn-navigation {margin:0;flex:1 0 100%}
+  #mast .sn-menu-toggle {order:4;flex-shrink:0}
+}
+@media(max-width:760px) {
+  #mast.sn-header {display:grid;grid-template-columns:1fr auto;height:auto;min-height:148px;padding:8px 24px 16px;gap:8px 12px}
+  #mast .sn-brand {grid-row:1;grid-column:1;width:60px;height:60px}
+  #mast .sn-menu-toggle {grid-row:1;grid-column:2}
+  #mast .sn-header-actions {grid-row:2;grid-column:1/-1;display:grid;grid-template-columns:1.65fr 1fr;gap:12px;width:100%;margin:0}
+  #mast .sn-header-action {min-height:52px;padding:12px 14px;font-size:17px;text-align:center;gap:6px}
+  #mast .sn-header-action>span {display:none}
+  #mast[data-menu-ready] .sn-navigation {padding:20px 24px 28px;max-height:calc(100svh - 148px)}
+  .mode-canvas .canvas-project-list {grid-template-columns:1fr;gap:32px}
+  .mode-canvas .canvas-wall:not(.studio-wall)>h2 {font-size:36px!important}
+}
+@media(prefers-reduced-motion:reduce) {
+  .sn-public .sn-photo-reveal {clip-path:none!important;transition:none!important}
+  .sn-public .mode-canvas .canvas-hero .canvas-card.card-one img {animation:none!important;transform:none!important}
+  .mode-canvas .sn-story-card img,#mast .sn-header-action,#mast .sn-header-action>span {transition:none!important;transform:none!important}
+}
+
+@media(prefers-reduced-motion:reduce){.sn-public .canvas-hero::before{clip-path:none!important}}

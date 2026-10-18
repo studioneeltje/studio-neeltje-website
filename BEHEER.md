@@ -104,3 +104,13 @@ Contactformulieren, datumaanvragen en nieuwsbriefinschrijvingen versturen in
 deze testversie nog geen gegevens. Daarvoor kiezen we later de diensten.
 Pic-Time blijft volledig los. Het eigen domein en de overstap van Wix volgen
 pas wanneer de nieuwe website klaar is.
+
+### Tweede foto bij een reportagekaart
+
+Open in Sveltia **Trouwreportages**, kies de reportage en vul **Tweede foto bij
+Aanwijzen** in met een ander beeld uit diezelfde bruiloft. Zonder expliciete keuze
+gebruikt de site de eerste andere foto uit de galerij. Is er maar één foto, dan
+blijft de omslag zichtbaar met een subtiele zoom. Op een aanraakscherm blijft de
+omslag staan en opent een tik meteen de reportage. Bij toetsenbordfocus kan de
+tweede foto ook zichtbaar worden. De foto's blijven altijd normaal zichtbaar
+wanneer JavaScript ontbreekt of minder beweging is ingesteld.
