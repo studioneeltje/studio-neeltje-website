@@ -24,7 +24,7 @@ function blockConfig(context){
    else{
      if(spec.defaults.texts?.length)fields.texts={type:'custom',label:'Teksten in dit blok',render:TextsField};
      if(spec.defaults.images?.length&&!['Stories','Journal'].includes(type))fields.images={type:'custom',label:'Foto’s en uitsneden',render:props=><ImagesField {...props} context={context}/>};
-     if(spec.defaults.links?.length&&type!=='Journal')fields.links={type:'custom',label:'Links en knoppen',render:LinksField};
+     if(spec.defaults.links?.length&&!['Journal','Orbit'].includes(type))fields.links={type:'custom',label:'Links en knoppen',render:props=><LinksField {...props} hiddenKeys={type==='Social'?['0','5']:[]}/>};
    }
    if(['Stories','Journal'].includes(type))fields.crops={type:'custom',label:'Uitsneden van omslagfoto’s',render:props=><RecordCrops {...props} context={context} records={type==='Stories'?context.stories:context.articles}/>};
    components[type]={label:spec.label,fields,defaultProps:structuredClone(spec.defaults),render:props=><div className="sn-puck-block" dangerouslySetInnerHTML={{__html:renderBlock({type,props},context)}}/>};

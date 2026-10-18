@@ -3,7 +3,7 @@ import {CropEditor}from'./CropEditor.jsx';
 import {assetURL}from'../shared/media.mjs';
 
 export function TextsField({value=[],onChange}){return <div className="field-list">{value.map((item,i)=><label key={item.key}>{item.label}<textarea rows={item.value.length>100?4:2} value={item.value} onChange={event=>onChange(value.map((v,j)=>j===i?{...v,value:event.target.value}:v))}/></label>)}</div>;}
-export function LinksField({value=[],onChange}){return <div className="field-list">{value.map((item,i)=><label key={item.key}>{item.label}<input value={item.href} onChange={event=>onChange(value.map((v,j)=>j===i?{...v,href:event.target.value}:v))}/></label>)}</div>;}
+export function LinksField({value=[],onChange,hiddenKeys=[]}){return <div className="field-list">{value.map((item,i)=>hiddenKeys.includes(item.key)?null:<label key={item.key}>{item.label}<input value={item.href} onChange={event=>onChange(value.map((v,j)=>j===i?{...v,href:event.target.value}:v))}/></label>)}</div>;}
 export function ImagePicker({value,onChange,context,label='Foto',fixedMedia=false}){
  const image=value||{mediaId:'',desktop:null,mobile:null};const [screen,setScreen]=useState('desktop');const asset=context.media.find(a=>a.id===image.mediaId);
  return <div className="image-picker"><label>{label}{fixedMedia?<span className="field-help">{asset?.title}</span>:<select value={image.mediaId} onChange={e=>onChange({...image,mediaId:e.target.value})}><option value="">Kies een foto</option>{context.media.filter(a=>a.kind!=='video').map(a=><option value={a.id} key={a.id}>{a.title}</option>)}</select>}</label>
