@@ -12,3 +12,6 @@ html,body.sn-public{overflow-x:clip}.sn-public .canvas-title,.sn-preview .canvas
 
 /* Crop inside the photo surface while keeping decorative frames outside it. */
 .orbit-card .sn-picture{display:block;overflow:hidden;width:100%}.about-split-photo .sn-picture{position:absolute;inset:0;display:block;overflow:hidden}.checklist-art .sn-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.72) saturate(.8)}
+
+/* Keep image boxes bounded even before a block-specific rule is applied. */
+.sn-media{display:block;max-width:100%;height:auto}.mode-canvas .canvas-wall .salon-wall{overflow:hidden}

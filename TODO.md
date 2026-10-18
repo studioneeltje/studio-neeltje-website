@@ -112,3 +112,10 @@ bouwwens van Neeltje. Deze eerste bouwstap is op 18 oktober 2026 aangevraagd.
 - [x] Uitloggen sluit de editor en verwijdert de token uit het geheugen.
 - [ ] Volledige afscherming van beheerbestanden bij de toekomstige hosting regelen.
       GitHub Pages ondersteunt geen servercontrole voor deze bestanden.
+
+## Fotomuur en beeldweergave in Puck — bouw goedgekeurd 18 oktober 2026
+
+- [x] Oorspronkelijke positioneringsklassen op de zes fotomuurfoto’s herstellen.
+- [x] Foto’s binnen hun blok begrenzen zodat ze niet voorbij de footer doorlopen.
+- [x] Absolute mediapaden gebruiken in Puck, uitsnedevelden en conceptvoorvertoning.
+- [x] Ook responsive bronvarianten, grote weergave, posters en ondertiteling vanuit de juiste map laden.

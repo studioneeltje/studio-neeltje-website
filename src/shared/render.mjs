@@ -11,7 +11,7 @@ export function renderBlock(block, context) {
   else {
     html = html.replace(/\{\{t:(\d+)\}\}/g,(_,key)=>e(p.texts?.[key]?.value ?? spec.defaults.texts?.[key]?.value ?? ''));
     const sizes={Hero:'100vw',Orbit:'(max-width: 760px) 150px, 280px',Mosaic:'(max-width: 760px) 88vw, 45vw',StoryCarousel:'(max-width: 760px) 70vw, 480px',Social:'(max-width: 760px) 45vw, 25vw',Wall:'(max-width: 760px) 40vw, 300px',Checklist:'(max-width: 760px) 88vw, 45vw',About:'(max-width: 760px) 88vw, 45vw',ContactCTA:'(max-width: 760px) 88vw, 400px'};
-    html = html.replace(/\{\{image:(\d+)\}\}/g,(_,key)=>imageMarkup({...p.images?.[key]||spec.defaults.images?.[key],sizes:sizes[block.type]}, context,{eager:block.type === 'Hero' && Number(key) === 0}));
+    html = html.replace(/\{\{image:(\d+)\}\}/g,(_,key)=>imageMarkup({...p.images?.[key]||spec.defaults.images?.[key],sizes:sizes[block.type]}, context,{eager:block.type === 'Hero' && Number(key) === 0,className:spec.imageClasses?.[key] || ''}));
     html = html.replace(/\{\{link:(\d+)\}\}/g,(_,key)=>e(safeURL(p.links?.[key]?.href ?? spec.defaults.links?.[key]?.href)));
     if (block.type === 'Stories') {
       const stories = context.stories.filter(s => s.published !== false);

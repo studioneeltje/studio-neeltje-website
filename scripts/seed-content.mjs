@@ -30,16 +30,16 @@ const defaults={};
 const names={Hero:'Header met foto',Quote:'Quote met handtekening',Checklist:'Gratis trouwchecklist',Availability:'Datumaanvraag',ContactForm:'Contactformulier',Stories:'Reportages uit Sveltia',StoryCarousel:'Van eerste moment tot laatste dans',Orbit:'Draai mee door jullie dag',Mosaic:'Alles wat ertussen leeft',Review:'Review',Wall:'Fotomuur',About:'Wat er echt gebeurt',Journal:'Artikelen uit Sveltia',FAQ:'Veelgestelde vragen',Method:'Rustig dichtbij, altijd alert',Pricing:'Prijsopties',ContactCTA:'Kennismaken',Social:'Social media',Intro:'Pagina-intro',Steps:'Werkwijze in stappen'};
 function makeTemplate(type,element) {
   const $block=load(element,null,false);
-  const texts=[],images=[],links=[];
+  const texts=[],images=[],links=[],imageClasses=[];
   $block('dialog').remove();
   const parentLabel=node=>{const p=node.parent;return ['h1','h2','h3','h4','blockquote'].includes(p?.name)?'Titel':p?.name==='a'?'Knop / link':p?.name==='p'?'Tekst':'Label';};
   function visit(node){for(const child of [...(node.children||[])]){if(child.type==='text' && child.data.trim() && /[\p{L}\p{N}]/u.test(child.data) && !['style','script'].includes(node.name)){const value=child.data.trim();const key=texts.length;texts.push({key:String(key),label:`${parentLabel(child)}: ${value.slice(0,48)}`,value});child.data=child.data.replace(value,`{{t:${key}}}`);}else visit(child);}}
   for(const node of $block.root().children().get()) visit(node);
-  $block('img[src]').each((_,img)=>{const key=images.length,im=$block(img),alt=im.attr('alt')||'';images.push({key:String(key),label:alt||`Foto ${key+1}`,mediaId:addMedia(im.attr('src'),alt),desktop:null,mobile:null});im.replaceWith(`{{image:${key}}}`);});
+  $block('img[src]').each((_,img)=>{const key=images.length,im=$block(img),alt=im.attr('alt')||'';imageClasses.push(im.attr('class')||'');images.push({key:String(key),label:alt||`Foto ${key+1}`,mediaId:addMedia(im.attr('src'),alt),desktop:null,mobile:null});im.replaceWith(`{{image:${key}}}`);});
   $block('a[href]').each((_,a)=>{const link=$block(a);const key=links.length;links.push({key:String(key),label:`Link ${key+1}`,href:linkURL(link.attr('href'))});link.attr('href',`{{link:${key}}}`);});
   if(type==='Stories')$block('.canvas-project-list').html('<!-- stories:start --><!-- stories:end -->');
   if(type==='Journal')$block('.journal-cards').html('<!-- articles:start --><!-- articles:end -->');
-  const item={label:names[type],html:$block.html(),defaults:{texts,images,links}};
+  const item={label:names[type],html:$block.html(),imageClasses,defaults:{texts,images,links}};
   templates[type]=item;defaults[type]={type,props:{id:`${type.toLowerCase()}-default`,...structuredClone(item.defaults)}};
   return defaults[type];
 }

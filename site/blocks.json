@@ -976,7 +976,15 @@
         }
       ],
       "links": []
-    }
+    },
+    "imageClasses": [
+      "salon-photo photo-portrait-a",
+      "salon-photo photo-landscape-a",
+      "salon-photo photo-portrait-b",
+      "salon-photo photo-portrait-c",
+      "salon-photo photo-landscape-b",
+      "salon-photo photo-portrait-grand"
+    ]
   },
   "About": {
     "label": "Wat er echt gebeurt",
