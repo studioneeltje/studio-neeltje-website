@@ -94,3 +94,12 @@ Pic-Time blijft volledig los van deze website en valt buiten dit bouwplan.
 
 Nieuwe wensen komen eerst op deze lijst. Bouwen gebeurt pas na een expliciete
 bouwwens van Neeltje. Deze eerste bouwstap is op 18 oktober 2026 aangevraagd.
+
+## Verbindingsfout GitHub — 18 oktober 2026
+
+- [x] De extra slash achter de repository-URL bij het koppelen verwijderen.
+      De route met slash geeft bij de browsercontrole HTTP 404; zonder slash
+      geeft GitHub HTTP 204 met de vereiste toegangsheaders. Hierdoor verschijnt
+      nu “Failed to fetch” voordat de token wordt gecontroleerd.
+- [x] Een begrijpelijke melding tonen bij een verbindingsprobleem.
+- [x] De reparatie publiceren na het expliciete “bouw” van Neeltje.

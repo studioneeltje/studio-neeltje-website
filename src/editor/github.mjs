@@ -4,7 +4,12 @@ export function setToken(value){token=String(value).trim();}
 export function isConnected(){return Boolean(token);}
 export async function api(endpoint,{method='GET',body,allow404=false}={}) {
   if(!token)throw new Error('Koppel eerst je GitHub-account om wijzigingen online op te slaan.');
-  const response=await fetch(`https://api.github.com/repos/${REPO}/${endpoint}`,{method,headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});
+  // GitHub's repository endpoint rejects a trailing slash during CORS preflight.
+  const route=String(endpoint||'').replace(/^\/+/, '');
+  const url=`https://api.github.com/repos/${REPO}${route?'/'+route:''}`;
+  let response;
+  try{response=await fetch(url,{method,headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});}
+  catch{throw new Error('De verbinding met GitHub kon niet worden gemaakt. Controleer je internetverbinding en probeer opnieuw. Blijft dit gebeuren? Vernieuw de beheerpagina en koppel opnieuw.');}
   if(response.status===404&&allow404)return null;
   if(!response.ok){if(response.status===409||response.status===422)throw new Error('De inhoud is intussen gewijzigd of kon niet worden samengevoegd. Laad het concept opnieuw; je lokale wijzigingen blijven bewaard.');if(response.status===401||response.status===403)throw new Error('GitHub geeft geen schrijfrechten. Controleer of de sleutel toegang heeft tot deze repository, Contents en Pull requests.');throw new Error(`Opslaan bij GitHub is mislukt (${response.status}). Probeer later opnieuw.`);}
   return response.status===204?null:response.json();
