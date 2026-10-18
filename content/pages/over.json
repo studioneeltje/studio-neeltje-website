@@ -305,22 +305,22 @@
           {
             "key": "0",
             "label": "Label: DOOR DE LENS / MOMENTEN OM TE BEWAREN",
-            "value": "DOOR DE LENS / MOMENTEN OM TE BEWAREN"
+            "value": "live vanuit de studio in Hilversum"
           },
           {
             "key": "1",
             "label": "Titel: Draai mee door",
-            "value": "Draai mee door"
+            "value": "Zo ziet mijn werk"
           },
           {
             "key": "2",
             "label": "Label: jullie dag.",
-            "value": "jullie dag."
+            "value": "er ook uit."
           },
           {
             "key": "3",
             "label": "Tekst: Een bewegende beeldwereld vol echte momenten. Kl",
-            "value": "Een bewegende beeldwereld vol echte momenten. Klik op een foto om haar groot te bekijken."
+            "value": "Klik op een foto om deze eens goed te bekijken."
           },
           {
             "key": "4",
@@ -330,12 +330,12 @@
           {
             "key": "5",
             "label": "Label: ECHT · ONGEREGISEERD · HELEMAAL JULLIE",
-            "value": "ECHT · ONGEREGISEERD · HELEMAAL JULLIE"
+            "value": ""
           },
           {
             "key": "6",
             "label": "Label: PORTFOLIO / 2024—26",
-            "value": "PORTFOLIO / 2024—26"
+            "value": ""
           },
           {
             "key": "7",
@@ -521,7 +521,7 @@
           {
             "key": "3",
             "label": "Tekst: Ik fotografeer de dag zoals hij zich ontvouwt: d",
-            "value": "Natuurlijk kan ik een muurbloempje zijn. Zeker tijdens de ceremonie. Dan wil ik dat je niet door hebt dat ik er ben. Maar aan de andere kant, iedereen op een bruiloft voegt wat toe. Zowel positief als negatief. Mijn missie is: positiviteit. En energie! Omdat ik weet hoe belangrijk het is om je goed te voelen om de mooiste foto's te maken."
+            "value": "Natuurlijk kan ik een muurbloempje zijn. Zeker tijdens de ceremonie. Dan wil ik dat je niet door hebt dat ik er ben. Maar aan de andere kant: iedereen op een bruiloft voegt wat toe. Zowel positief als negatief. Mijn missie is: positiviteit. En energie! Omdat ik weet hoe belangrijk het is om je goed te voelen om de mooiste foto's te maken. Hierin komt mijn achtergrond als portretfotograaf echt heel goed van pas. Daar heeft nooit iemand zin in. En dus is het belangrijk om een veilige omgeving te creëren. Waarin het tóch best wel leuk is om op de foto te gaan..."
           },
           {
             "key": "4",
@@ -646,7 +646,7 @@
           {
             "key": "0",
             "label": "Link 1",
-            "href": "over.html"
+            "href": ""
           }
         ],
         "id": "About-a6421dc9-6101-4f92-afc3-4ffcaa455cc1"
@@ -684,7 +684,7 @@
           {
             "key": "5",
             "label": "Knop / link: Lees mijn verhaal",
-            "value": "Lees mijn verhaal"
+            "value": ""
           }
         ],
         "images": [],
@@ -692,7 +692,7 @@
           {
             "key": "0",
             "label": "Link 1",
-            "href": "over.html"
+            "href": ""
           }
         ],
         "id": "Method-503c2995-1473-4eeb-a1e1-7036ed957f85"
