@@ -47,7 +47,7 @@
           {
             "key": "0",
             "label": "Label: EVEN AFSTEMMEN?",
-            "value": "EVEN AFSTEMMEN?"
+            "value": "nieuwsgierig?"
           },
           {
             "key": "1",
@@ -62,22 +62,22 @@
           {
             "key": "3",
             "label": "Tekst: Een datum, een vraag of gewoon even kennismaken?",
-            "value": "Een datum, een vraag of gewoon even kennismaken? Laat een bericht achter. Ik lees graag wat jullie in gedachten hebben."
+            "value": "Een datum, een vraag of gewoon even kennismaken? Laat een bericht achter. Ik hoor graag wat jullie in gedachten hebben."
           },
           {
             "key": "4",
             "label": "Label: 01 / KENNISMAKEN",
-            "value": "01 / KENNISMAKEN"
+            "value": "Even kennismaken"
           },
           {
             "key": "5",
             "label": "Label: Vrijblijvend en persoonlijk",
-            "value": "Vrijblijvend en persoonlijk"
+            "value": "natuurlijk vrijblijvend"
           },
           {
             "key": "6",
             "label": "Label: STUUR NEELTJE EEN BERICHT",
-            "value": "STUUR NEELTJE EEN BERICHT"
+            "value": "MAILTJE NAAR NEELTJE"
           },
           {
             "key": "7",
@@ -133,6 +133,75 @@
         "images": [],
         "links": []
       }
+    },
+    {
+      "type": "Wall",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 03 — Jullie foto's thuis",
+            "value": "muurbloempje"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Niet alleen in een album.",
+            "value": "Hangen jullie straks"
+          },
+          {
+            "key": "2",
+            "label": "Label: Ook aan de muur.",
+            "value": "bij mij op de muur."
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Trouwfoto in een klassieke houten staande lijst",
+            "mediaId": "foto-26fee13582a7",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Details van een trouwdag in een liggende bronzen lijst",
+            "mediaId": "foto-f5d8e85a877d",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Trouwfoto in een vergulde staande lijst",
+            "mediaId": "foto-d5f77408f803",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "3",
+            "label": "Een spontaan moment in een donkerhouten staande lijst",
+            "mediaId": "foto-6f5e773ded94",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "4",
+            "label": "Een liggende trouwfoto in een klassieke houten lijst",
+            "mediaId": "foto-26fee13582a7",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "5",
+            "label": "Een grote trouwfoto in een rijk vergulde staande lijst",
+            "mediaId": "foto-26fee13582a7",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "id": "Wall-6c27de1e-5fe9-4425-b48c-1f611e2a4623"
+      }
     }
-  ]
+  ],
+  "zones": {}
 }
