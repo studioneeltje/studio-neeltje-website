@@ -422,3 +422,8 @@
   .mode-canvas .sn-post-header {padding:14px}
   .mode-canvas .social-feature-bottom {flex-wrap:wrap;gap:12px}
 }
+/* Compact social cards: at most four across, without oversized tablet photos. */
+.mode-canvas .sn-instagram-grid {grid-template-columns:repeat(4,minmax(0,1fr));max-width:1120px;margin-inline:auto;gap:18px}
+@media(max-width:1100px) and (min-width:901px){.mode-canvas .sn-instagram-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.mode-canvas .sn-post-header{padding:12px 10px;gap:8px}.mode-canvas .sn-post-header strong{font-size:14px}.mode-canvas .sn-post-header>div>span{font-size:12px}.mode-canvas .sn-post-dots{font-size:14px}}
+@media(max-width:900px) and (min-width:601px){.mode-canvas .sn-instagram-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:620px;gap:20px}}
+@media(max-width:600px){.mode-canvas .sn-instagram-grid{grid-template-columns:none;grid-auto-columns:clamp(210px,68vw,260px);max-width:100%;gap:16px}}

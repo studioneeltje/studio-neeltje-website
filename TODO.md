@@ -176,3 +176,4 @@ bouwwens van Neeltje. Deze eerste bouwstap is op 18 oktober 2026 aangevraagd.
 - [x] Bestaande foto's, bijschriften en links bewerkbaar houden in Puck.
 - [x] Op mobiel een horizontaal veegbare reeks posts gebruiken.
 - [x] Geen verzonnen likes, reacties of live-feedkoppeling tonen; pictogrammen zijn decoratief.
+- [x] Socialposts compacter maken: maximaal vier naast elkaar vanaf 901 px, twee op tablet en kleinere veegkaarten op mobiel.
