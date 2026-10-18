@@ -359,3 +359,8 @@
 }
 
 @media(prefers-reduced-motion:reduce){.sn-public .canvas-hero::before{clip-path:none!important}}
+/* Use the complete vector artwork, with its original proportions and colours. */
+#mast .sn-logo-crop {width:64px;height:64px;overflow:visible}
+#mast .sn-logo-crop img {position:static;display:block;width:64px;height:64px;max-width:100%;margin:0;padding:0;object-fit:contain}
+#mast .sn-brand {flex-basis:64px;width:64px;height:64px}
+@media(max-width:760px){#mast .sn-logo-crop,#mast .sn-logo-crop img{width:56px;height:56px}#mast .sn-brand{width:56px;height:56px}}

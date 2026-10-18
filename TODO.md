@@ -158,3 +158,6 @@ bouwwens van Neeltje. Deze eerste bouwstap is op 18 oktober 2026 aangevraagd.
       Bij slechts één foto wordt geen ander bruidspaar als tweede beeld gebruikt.
 - [x] Subtiele, eenmalige zoom in de header; de tekst blijft stil.
 - [x] Foto's zichtbaar houden zonder JavaScript en met verminderde beweging.
+- [x] Aangeleverd SVG-logo volledig en scherp gebruiken, zonder PNG-uitsnede.
+- [x] Nieuwe versies van opmaak en scripts automatisch van een inhoudsgebonden versienummer voorzien.
+- [ ] Tweede foto's bij de juiste reportages kiezen. Michelle en Tristan horen hier niet bij.
