@@ -260,7 +260,7 @@
 }
 @media(hover:hover) {
   .mode-canvas :is(.button,.story-project-link,.standalone-form-submit,.availability-form button,.social-follow-link):hover,.site-footer .footer-cta:hover {
-    transform:translateY(-3px);background:#65001d;color:#fde6f2;box-shadow:0 8px 0 #ff4802;filter:none;
+    transform:translateY(-3px);background:#850a35;color:#fde6f2;box-shadow:0 8px 0 #ff4802;filter:none;
   }
   .mode-canvas :is(.canvas-end,.story-showcase,.standalone-contact-form,.canvas-price-card.is-featured) :is(.button,.standalone-form-submit):hover,.mode-canvas .canvas-hero .canvas-deck .button:hover,.site-footer .footer-cta:hover {background:#fff;color:#65001d;box-shadow:0 8px 0 #ff4802}
   .mode-canvas :is(.button,.story-project-link,.standalone-form-submit,.social-follow-link):hover :is(i,span[aria-hidden="true"]),.site-footer .footer-cta:hover i,#mast .sn-navigation>:is(.nav-contact,.nav-checklist):hover span {transform:translate(3px,-3px) rotate(-8deg)}
