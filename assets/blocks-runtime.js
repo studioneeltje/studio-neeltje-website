@@ -12,7 +12,7 @@
     const photoObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
       if(entry.isIntersecting){entry.target.querySelectorAll('.sn-photo-reveal').forEach(photo=>photo.classList.add('sn-photo-visible'));photoObserver.unobserve(entry.target);}
     }),{threshold:.04});
-    document.querySelectorAll('.sn-story-images,.journal-card-visual,.social-photo,.about-split-photo,.sn-photo-section>.sn-picture,.sn-story-gallery>button').forEach(el=>{
+    document.querySelectorAll('.sn-story-images,.journal-card-visual,.social-photo,.about-photo-surface,.sn-photo-section>.sn-picture,.sn-story-gallery>button').forEach(el=>{
       el.classList.add('sn-photo-reveal');photoObserver.observe(el.parentElement);
     });
     const heroObserver=new IntersectionObserver(entries=>entries.forEach(entry=>entry.target.classList.toggle('sn-hero-paused',!entry.isIntersecting)));

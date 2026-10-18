@@ -114,3 +114,12 @@ blijft de omslag zichtbaar met een subtiele zoom. Op een aanraakscherm blijft de
 omslag staan en opent een tik meteen de reportage. Bij toetsenbordfocus kan de
 tweede foto ook zichtbaar worden. De foto's blijven altijd normaal zichtbaar
 wanneer JavaScript ontbreekt of minder beweging is ingesteld.
+
+### Roze fotolabel bij ‘Wat er echt gebeurt’
+
+Ga naar **Sveltia → Algemene instellingen → Huisstijl, menu & footer → Fotolabel
+bij Over Neeltje**. Hier kun je de tekst wijzigen, het label verbergen en kiezen
+voor **Op de foto, linksonder** of **Onder de foto**. Sla op en publiceer de wijziging;
+de website wordt opnieuw opgebouwd. De instelling geldt voor dit blok op alle
+pagina's. Vernieuw Puck na publicatie om de nieuwe instelling daar ook te zien.
+De overige blokteksten en de foto zelf blijf je in Puck aanpassen.

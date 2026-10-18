@@ -46,5 +46,10 @@
     "emphasis": "voor praktische tips.",
     "copy": "Schrijf je in en ontvang praktische tips voor jullie trouwdag, precies op de momenten dat ze van pas komen.",
     "button": "Ontvang de tips"
+  },
+  "aboutPhotoNote": {
+    "enabled": true,
+    "text": "recht uit het hart",
+    "position": "inside"
   }
 }

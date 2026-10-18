@@ -103,6 +103,20 @@ collections:
               - {name: label, label: Tekst, widget: string}
               - {name: href, label: Link, widget: string}
               - {name: kind, label: Vorm, widget: select, options: [{label: Menulink, value: link}, {label: Oranje knop, value: checklist}, {label: Donkerrode knop, value: contact}]}
+          - name: aboutPhotoNote
+            label: Fotolabel bij Over Neeltje
+            widget: object
+            hint: Geldt voor het blok met de kop Wat er echt gebeurt, op alle pagina's waarop dit blok staat.
+            fields:
+              - {name: enabled, label: Fotolabel tonen, widget: boolean, default: true}
+              - {name: text, label: Tekst op het roze label, widget: string, required: false}
+              - name: position
+                label: Plaatsing
+                widget: select
+                default: inside
+                options:
+                  - {label: "Op de foto, linksonder", value: inside}
+                  - {label: Onder de foto, value: below}
           - name: footer
             label: Nieuwsbriefuitnodiging onderaan
             widget: object

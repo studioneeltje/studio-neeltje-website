@@ -25,6 +25,15 @@ export function renderBlock(block, context) {
       html = html.replace(/<!-- articles:start -->[\s\S]*?<!-- articles:end -->/, `<!-- articles:start -->${context.articles.filter(a=>a.published!==false).map((article,i)=>`<a class="journal-card" href="artikel-${e(article.id)}.html"><div class="journal-card-visual">${imageMarkup({...p.crops?.[article.id],mediaId:article.cover,sizes:'(max-width: 780px) 88vw, 30vw'},context)}</div><div class="journal-card-meta"><span>${e(article.category)}</span><span>${e(article.readTime || '5 min lezen')}</span></div><h3>${e(article.title)}</h3><span class="journal-card-link"><span class="sn-link-label">Lees het artikel</span> <i aria-hidden="true">↗</i></span></a>`).join('')}<!-- articles:end -->`);
     }
   }
+  if (block.type === 'About') {
+    const note=context.settings.aboutPhotoNote;
+    const position=note?.position==='below'?'below':'inside';
+    html=html.replace('class="about-split-photo"',`class="about-split-photo" data-note-position="${position}"`);
+    if(note){
+      const markup=note.enabled!==false && String(note.text||'').trim() ? `<span class="about-photo-note">${e(note.text)}</span>` : '';
+      html=html.replace(/<span class="about-photo-note">[\s\S]*?<\/span>/,markup);
+    }
+  }
   if (block.type === 'Social') html = html.replace(/href="https:\/\/(?:www\.)?instagram\.com[^"]*"/g, `href="${e(safeURL(context.settings.instagram))}"`);
   const id = String(p.id || block.type).replace(/[^\w-]/g,'');
   // Original named anchors remain as data roles. Every instance gets unique IDs.

@@ -161,3 +161,10 @@ bouwwens van Neeltje. Deze eerste bouwstap is op 18 oktober 2026 aangevraagd.
 - [x] Aangeleverd SVG-logo volledig en scherp gebruiken, zonder PNG-uitsnede.
 - [x] Nieuwe versies van opmaak en scripts automatisch van een inhoudsgebonden versienummer voorzien.
 - [ ] Tweede foto's bij de juiste reportages kiezen. Michelle en Tristan horen hier niet bij.
+
+## Fotolabel ‘Wat er echt gebeurt’ — bouw goedgekeurd
+
+- [x] Alleen de foto onthullen, zodat het roze label niet door het fotomasker wordt afgesneden.
+- [x] Label veilig binnen de foto plaatsen, zonder negatieve verschuiving.
+- [x] In Sveltia labeltekst, aan/uit en plaatsing op/onder de foto kunnen instellen.
+- [x] Het label één beheerbron in Sveltia geven; geen dubbel bewerkbaar tekstveld in Puck.

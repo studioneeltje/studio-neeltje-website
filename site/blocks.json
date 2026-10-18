@@ -988,7 +988,7 @@
   },
   "About": {
     "label": "Wat er echt gebeurt",
-    "html": "<section class=\"canvas-intro\" id=\"about-split-feature\" aria-label=\"Over Neeltje\"><div class=\"about-split-copy\"><div class=\"section-tag\">{{t:0}}</div><h2>{{t:1}}<br><em>{{t:2}}</em></h2><div class=\"long-copy\"><p>{{t:3}}</p><a class=\"button magnetic\" href=\"{{link:0}}\">{{t:4}} <i>↗</i></a></div></div><div class=\"about-split-photo\">{{image:0}}<span class=\"about-photo-note\">{{t:5}}</span></div></section>",
+    "html": "<section class=\"canvas-intro\" id=\"about-split-feature\" aria-label=\"Over Neeltje\"><div class=\"about-split-copy\"><div class=\"section-tag\">{{t:0}}</div><h2>{{t:1}}<br><em>{{t:2}}</em></h2><div class=\"long-copy\"><p>{{t:3}}</p><a class=\"button magnetic\" href=\"{{link:0}}\">{{t:4}} <i>↗</i></a></div></div><div class=\"about-split-photo\"><div class=\"about-photo-surface\">{{image:0}}</div><span class=\"about-photo-note\">{{t:5}}</span></div></section>",
     "defaults": {
       "texts": [
         {

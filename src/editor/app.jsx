@@ -24,7 +24,7 @@ function blockConfig(context){
    else if(type==='Video')fields={title:{type:'text',label:'Titel'},eyebrow:{type:'text',label:'Bovenregel'},mediaId:{type:'select',label:'Video uit de mediabibliotheek',options:[{label:'Kies een video',value:''},...context.media.filter(a=>a.kind==='video').map(a=>({label:a.title,value:a.id}))]},type:{type:'radio',label:'Gebruik',options:[{label:'Vertelvideo met geluid',value:'talk'},{label:'Stille sfeerclip',value:'clip'}]},caption:{type:'textarea',label:'Bijschrift'}};
    else if(type==='Text')fields={title:{type:'text',label:'Titel'},eyebrow:{type:'text',label:'Bovenregel'},body:{type:'textarea',label:'Tekst'}};
    else{
-     if(spec.defaults.texts?.length)fields.texts={type:'custom',label:'Teksten in dit blok',render:TextsField};
+     if(spec.defaults.texts?.length)fields.texts={type:'custom',label:'Teksten in dit blok',render:props=><><TextsField {...props} hiddenKeys={type==='About'?['5']:[]}/>{type==='About'&&<p className="field-help">Het roze fotolabel beheer je in Sveltia → Algemene instellingen → Huisstijl, menu &amp; footer → Fotolabel bij Over Neeltje.</p>}</>};
      if(spec.defaults.images?.length&&!['Stories','Journal'].includes(type))fields.images={type:'custom',label:'Foto’s en uitsneden',render:props=><ImagesField {...props} context={context}/>};
      if(spec.defaults.links?.length&&!['Journal','Orbit'].includes(type))fields.links={type:'custom',label:'Links en knoppen',render:props=><LinksField {...props} hiddenKeys={type==='Social'?['0','5']:[]}/>};
    }
