@@ -34,7 +34,7 @@ export async function saveDraft(page,mediaChanges=[],uploads=[],expectedHead=nul
   else if(expectedHead!==ref.object.sha)throw new Error('Dit concept is elders gewijzigd. Laad het GitHub-concept opnieuw voordat je opslaat.');
   const base=await api(`git/commits/${ref.object.sha}`);const tree=[];
   for(const upload of uploads){const buffer=await upload.file.arrayBuffer();let binary='';for(let i=0;i<buffer.byteLength;i+=0x8000)binary+=String.fromCharCode(...new Uint8Array(buffer,i,Math.min(0x8000,buffer.byteLength-i)));const blob=await api('git/blobs',{method:'POST',body:{content:btoa(binary),encoding:'base64'}});tree.push({path:upload.path,mode:'100644',type:'blob',sha:blob.sha});}
-  tree.push({path:`content/pages/${page.id}.json`,mode:'100644',type:'blob',content:JSON.stringify(page,null,2)+'\n'});
+  tree.push({path:`content/pages/${page.id}.json`,mode:'100644',type:'blob',content:JSON.stringify(Object.fromEntries(Object.entries(page).filter(([key])=>key!=='localOnly')),null,2)+'\n'});
   for(const asset of mediaChanges){const {previewURL,...saved}=asset;tree.push({path:`content/media/${asset.id}.json`,mode:'100644',type:'blob',content:JSON.stringify(saved,null,2)+'\n'});}
   const createdTree=await api('git/trees',{method:'POST',body:{base_tree:base.tree.sha,tree}});
   const commit=await api('git/commits',{method:'POST',body:{message:`Concept: ${page.title}`,tree:createdTree.sha,parents:[ref.object.sha]}});

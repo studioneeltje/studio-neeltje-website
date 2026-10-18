@@ -56,6 +56,6 @@ const routes={reportages:'reportages',over:'over',werkwijze:'werkwijze',journal:
 await fs.writeFile(path.join(out,'preview-pagina.html'),`<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>Studio Neeltje</title><script>const r=${JSON.stringify(routes)};const p=new URLSearchParams(location.search).get('pagina')||'reportages';location.replace((r[p]||r.reportages)+'.html'+location.hash);</script></head><body><a href="index.html">Naar de homepage</a></body></html>`);
 await fs.mkdir(path.join(out,'content'),{recursive:true});await fs.writeFile(path.join(out,'content/bundle.json'),JSON.stringify({...context,pages,mediaSettings}));
 await fs.mkdir(path.join(out,'cms/vendor'),{recursive:true});await fs.cp('node_modules/@sveltia/cms/dist',path.join(out,'cms/vendor'),{recursive:true,filter:source=>!source.endsWith('.map')&&!source.endsWith('.mjs')});
-await fs.copyFile('cms/config.yml',path.join(out,'cms/config.yml'));parse(await fs.readFile('cms/config.yml','utf8'));
+const cmsConfig=(await fs.readFile('cms/config.yml','utf8')).replace(/max_file_size: \d+/,`max_file_size: ${mediaSettings.maxUploadMB*1024*1024}`);parse(cmsConfig);await fs.writeFile(path.join(out,'cms/config.yml'),cmsConfig);
 await viteBuild();
 console.log(`Gebouwd: ${pages.length} Puck-pagina's, ${stories.length} reportages en ${articles.length} artikelen.`);
