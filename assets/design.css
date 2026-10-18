@@ -1,0 +1,232 @@
+/* Shared visual system: public pages and the Puck canvas use the same rules. */
+:root {
+  --sn-content-width: 1200px;
+  --sn-copy-width: 650px;
+  --sn-gutter: 32px;
+  --sn-edge: max(var(--sn-gutter), calc((100% - var(--sn-content-width)) / 2));
+  --sn-section-space: 96px;
+  --sn-grid-gap: 24px;
+}
+.sn-public, .sn-preview {font-family:'Host Grotesk',sans-serif;font-size:17px;line-height:1.65;color:#65001d}
+.sn-public *, .sn-preview * {box-sizing:border-box}
+.sn-public p, .sn-preview p {text-wrap:pretty}
+.mode-canvas :is(p,li,.long-copy,.quote-note) {font:400 17px/1.7 'Host Grotesk',sans-serif!important}
+.mode-canvas :is(h1,h2,h3,h4) {text-wrap:balance}
+.mode-canvas :is(h2,h3,h4) {line-height:1.06!important;letter-spacing:-.04em!important}
+.mode-canvas h2 {font-size:clamp(36px,4.8vw,68px)!important}
+.mode-canvas :is(h2,h3) em {line-height:1.08!important;letter-spacing:-.035em!important}
+.mode-canvas :is(.section-tag,.standalone-form-kicker), .footer-kicker {
+  font-size:14px!important;line-height:1.5!important;letter-spacing:.08em!important;font-weight:500;
+}
+.mode-canvas .section-tag {margin-bottom:20px;color:inherit!important;opacity:1!important}
+.mode-canvas :is(h2,h3) {margin-top:0}
+.mode-canvas :is(.long-copy,.checklist-copy>p,.availability-copy>p,.contact-end-copy>p,.standalone-form-intro>p,.quote-note,.sn-text-section>p,.sn-story-body>p,.sn-story-body>ul,.sn-page-intro>p) {max-width:var(--sn-copy-width)}
+.mode-canvas :is(.checklist-copy>p,.availability-copy>p,.contact-end-copy>p,.standalone-form-intro>p) {margin-top:32px}
+.mode-canvas :is(.canvas-intro,.canvas-wall,.canvas-selected-stories,.story-showcase,.orbit-gallery-yeung,.portfolio-mosaic-section,.canvas-journal,.canvas-faq,.canvas-pricing,.canvas-end,.social-feature,.checklist-feature,.availability-check,.standalone-form-module,.quote-module,.truus-review,.sn-photo-section,.sn-video-section,.sn-text-section,.sn-page-intro,.sn-steps,.sn-story-body) {
+  width:100%;max-width:none;margin:0;padding:var(--sn-section-space) var(--sn-edge);
+}
+.mode-canvas :is(.canvas-selected-head,.canvas-project-list,.story-showcase-head,.orbit-gallery-heading,.orbit-stage-wrap,.portfolio-mosaic-head,.portfolio-mosaic,.canvas-journal-head,.journal-cards,.canvas-pricing-head,.canvas-price-grid,.social-feature-head,.social-photo-grid,.social-feature-bottom) {width:100%;max-width:1200px;margin-left:auto;margin-right:auto}
+.mode-canvas :is(.canvas-selected-head,.story-showcase-head,.orbit-gallery-heading,.portfolio-mosaic-head,.canvas-journal-head,.canvas-pricing-head,.social-feature-head) {margin-bottom:48px;gap:48px}
+.mode-canvas :is(.story-showcase-head,.portfolio-mosaic-head,.canvas-pricing-head,.social-feature-head) {display:grid;grid-template-columns:minmax(0,1.65fr) minmax(240px,1fr);align-items:end}
+.mode-canvas :is(.story-showcase-head,.portfolio-mosaic-head,.canvas-pricing-head,.social-feature-head)>* {min-width:0}
+.mode-canvas :is(.story-showcase-hint,.orbit-gallery-heading>p,.portfolio-mosaic-head>p,.canvas-pricing-head>p,.social-feature-note>p) {max-width:360px;margin:0;text-align:left}
+.mode-canvas :is(.checklist-feature,.availability-check,.standalone-form-module,.canvas-end,.canvas-intro[data-role="about-split-feature"]) {grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px}
+.mode-canvas :is(.checklist-feature,.availability-check,.standalone-form-module,.canvas-end,.canvas-intro[data-role="about-split-feature"])>* {min-width:0}
+.mode-canvas .canvas-intro[data-role="about-split-feature"] {display:grid;align-items:center}
+.mode-canvas .about-split-copy {padding:0;width:auto;max-width:none}
+.mode-canvas .about-split-copy h2 {font-size:clamp(40px,5vw,72px)!important;margin-bottom:32px!important}
+.mode-canvas .about-split-copy .long-copy {margin:0}
+.mode-canvas .about-split-photo {width:100%;margin:0;min-width:0}
+.mode-canvas .canvas-intro-copy {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px}
+.mode-canvas .canvas-intro-copy h2 {margin-bottom:32px!important}
+.mode-canvas .canvas-intro-copy .long-copy {margin:0}
+.mode-canvas .canvas-faq {display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:72px;align-items:start;background:#fff}
+.mode-canvas .canvas-faq-intro {min-width:0;position:static}
+.mode-canvas .canvas-faq-intro h2 {font-size:clamp(34px,3.7vw,52px)!important;overflow-wrap:anywhere;margin-bottom:32px}
+.mode-canvas .canvas-faq-list {min-width:0;width:100%}
+.mode-canvas .canvas-faq-list summary {font:600 21px/1.4 'Host Grotesk',sans-serif!important;letter-spacing:-.02em;padding:24px 40px 24px 0;min-height:72px}
+.mode-canvas .canvas-faq-list details>p {padding:0 40px 24px 0;margin:0;max-width:650px}
+/* Large editorial moments remain distinct from supporting headings. */
+.mode-canvas .quote-module {text-align:center}
+.mode-canvas .quote-module blockquote {max-width:1100px;margin:0 auto;font-size:clamp(36px,5.5vw,78px)!important;line-height:1.12!important;letter-spacing:-.045em!important}
+.mode-canvas .quote-module .quote-note {margin:32px auto 0}
+.mode-canvas .quote-handwritten {font-size:clamp(28px,3.4vw,44px)!important;margin-top:32px}
+.mode-canvas .story-showcase-head h3 {font-size:clamp(38px,5vw,72px)!important;line-height:1.05!important;max-width:100%;margin-bottom:0}
+.mode-canvas .canvas-wall h2 {font-size:clamp(38px,5vw,72px)!important;margin-bottom:32px}
+.mode-canvas .canvas-wall .salon-wall {max-width:1120px;margin:48px auto 0}
+.mode-canvas .review-quote {font-size:clamp(30px,4.2vw,56px)!important;line-height:1.2!important;max-width:1000px;margin-left:auto;margin-right:auto}
+.mode-canvas .review-top {margin-bottom:32px}
+/* One readable action treatment, with smaller secondary text links. */
+.mode-canvas :is(.button,.story-project-link,.standalone-form-submit,.availability-form button,.social-follow-link), .site-footer .footer-cta {
+  display:inline-flex;align-items:center;justify-content:space-between;gap:20px;
+  min-height:56px;padding:12px 14px 12px 24px;border:1px solid transparent;border-radius:40px;
+  font:600 17px/1.35 'Host Grotesk',sans-serif!important;letter-spacing:0!important;text-transform:none!important;
+  text-align:left;text-decoration:none;background:#65001d;color:#fde6f2;cursor:pointer;
+}
+.mode-canvas :is(.button,.story-project-link,.standalone-form-submit,.availability-form button,.social-follow-link):hover, .site-footer .footer-cta:hover {box-shadow:0 5px 16px #65001d20;filter:brightness(1.08)}
+.mode-canvas :is(.button,.story-project-link,.standalone-form-submit) i {display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;font-size:23px;font-style:normal;background:#ff4802;color:#65001d}
+.mode-canvas :is(.canvas-end,.story-showcase) .button,.mode-canvas .canvas-price-card.is-featured .button,.site-footer .footer-cta {background:#fde6f2;color:#65001d}
+.mode-canvas .canvas-price-card .button {width:100%}
+.mode-canvas :is(.journal-card-link,.social-feature-bottom a) {display:inline-flex;align-items:center;gap:12px;min-height:48px;font:600 17px/1.4 'Host Grotesk',sans-serif!important;letter-spacing:0!important;color:#65001d;text-decoration:underline;text-underline-offset:5px}
+.mode-canvas :is(.journal-card-link i,.social-feature-bottom a span) {font-size:23px}
+.mode-canvas :is(.orbit-controls button,.story-arrow) {width:52px;height:52px;min-width:52px;min-height:52px;border:1px solid #65001d;background:#fde6f2;color:#65001d;font:400 25px/1 'Host Grotesk',sans-serif;cursor:pointer}
+.mode-canvas .orbit-gallery-yeung .orbit-controls {width:min(100%,650px);padding:0;margin:32px auto 0;grid-template-columns:52px minmax(0,1fr) 52px;gap:20px;font:400 15px/1.5 'Host Grotesk',sans-serif;letter-spacing:0}
+.mode-canvas .orbit-gallery-yeung .orbit-controls button {width:52px;height:52px;background:#65001d;color:#fde6f2}
+.mode-canvas .orbit-gallery-yeung .orbit-stage-meta {font-size:13px;letter-spacing:.06em;top:24px}
+.mode-canvas .orbit-gallery-yeung .orbit-stage-meta span:first-child {color:#fde6f2}
+.mode-canvas .orbit-gallery-yeung .orbit-card:after {width:44px;height:44px;background:#fde6f2;color:#65001d}
+.mode-canvas .orbit-gallery-yeung .orbit-stage {height:680px!important}
+.mode-canvas .story-slider-controls {margin-top:32px;gap:24px}
+.mode-canvas .story-project-meta {padding-top:32px}
+.mode-canvas .story-project-meta h4 {font-size:28px!important;margin:12px 0 20px}
+.mode-canvas .story-count {font-size:14px!important;margin-top:24px}
+.mode-canvas .story-range {min-height:44px;cursor:pointer}
+/* Photography: square edges, quieter gaps and consistent metadata. */
+.mode-canvas .portfolio-mosaic {column-gap:24px;columns:3 240px}
+.mode-canvas .portfolio-mosaic-item {margin-bottom:24px}
+.mode-canvas :is(.journal-cards,.canvas-price-grid,.social-photo-grid) {gap:24px}
+.mode-canvas .journal-card h3 {font-size:30px!important;line-height:1.15!important;margin:20px 0 16px}
+.mode-canvas :is(.journal-card-meta,.journal-card-number,.mosaic-index,.social-photo-label,.social-feature-bottom,.review-credit,.contact-photo-tag) {font-size:14px!important;line-height:1.5!important;opacity:1}
+.mode-canvas .journal-card-number {background:#65001d;color:#fde6f2;padding:8px 12px}
+.mode-canvas .canvas-project {grid-template-columns:56px minmax(0,1fr) 48px;gap:24px;padding:28px 0;min-height:108px}
+.mode-canvas .canvas-project b {font-size:clamp(28px,3.6vw,48px);line-height:1.12;letter-spacing:-.035em}
+.mode-canvas .canvas-project>span {font-size:15px}
+.mode-canvas .canvas-project i {font-size:36px}
+.mode-canvas .canvas-price-card {padding:32px 28px;box-shadow:none}
+.mode-canvas .canvas-price-card.is-featured {transform:none}
+.mode-canvas .canvas-price-card h3 {font-size:32px!important;line-height:1.16!important}
+.mode-canvas .canvas-price-card h4 {font-size:17px!important;line-height:1.4!important}
+.mode-canvas :is(.canvas-price-value span,.canvas-price-badge,.canvas-pricing-note,.checklist-reassurance,.contact-reassurance,.standalone-form-aside,.standalone-form-privacy,.availability-form small) {font-size:15px!important;line-height:1.6!important;opacity:1!important}
+.mode-canvas .canvas-price-badge {padding:8px 16px;background:#fde6f2;color:#65001d;font-weight:600}
+.mode-canvas .checklist-sheet {padding:24px;left:12%;width:72%}
+.mode-canvas :is(.checklist-sheet small,.checklist-row) {font-size:15px;line-height:1.5}
+.mode-canvas .checklist-row {gap:10px;margin-top:14px}
+.mode-canvas .checklist-reassurance {margin:24px 0 32px}
+/* Form fields and help text are readable without zooming. */
+.mode-canvas :is(.standalone-contact-form,.availability-form) {padding:32px;box-shadow:none;border:1px solid #65001d30}
+.mode-canvas .standalone-form-fields {gap:24px}
+.mode-canvas :is(form label,.standalone-form-fields label), .footer-newsletter-form label {font:500 17px/1.5 'Host Grotesk',sans-serif!important;letter-spacing:0;text-transform:none}
+.mode-canvas :is(input:not([type="range"]):not([type="checkbox"]),textarea), .site-footer input {width:100%;min-width:0;min-height:56px;border:1px solid #65001d75;border-radius:0;padding:14px 16px;font:400 17px/1.5 'Host Grotesk',sans-serif!important;background:#fff;color:#65001d}
+.mode-canvas textarea {min-height:144px;resize:vertical}
+.mode-canvas input::placeholder,.mode-canvas textarea::placeholder {color:#775963;opacity:1}
+.mode-canvas :is(form small,.standalone-form-status), .site-footer [data-form-status] {font-size:15px!important;line-height:1.6!important}
+.mode-canvas .availability-form-row {grid-template-columns:1fr;gap:16px}
+.mode-canvas .availability-form button {justify-content:center;width:100%}
+.mode-canvas .standalone-form-submit {width:100%;margin-top:24px}
+/* Hero photo and entrance stay full bleed; text shares the site grid. */
+#mast.sn-header {padding-inline:var(--sn-edge);height:88px}
+#mast .sn-navigation {gap:22px}
+#mast .sn-navigation>a {font-size:17px}
+#mast .sn-navigation>.nav-checklist {background:#65001d;color:#fde6f2}
+#mast .sn-navigation>.nav-contact {background:transparent;color:#65001d;border:1px solid #65001d}
+.mode-canvas .canvas-hero {padding:0;min-height:760px;height:min(900px,calc(100svh - 88px))}
+.mode-canvas .canvas-top {left:var(--sn-edge);right:var(--sn-edge);top:40px}
+.mode-canvas .canvas-top span {font-size:14px;line-height:1.5}
+.mode-canvas .canvas-title {left:var(--sn-edge);width:calc(100% - 2 * var(--sn-gutter));max-width:1200px;top:27%;font-size:clamp(60px,7.6vw,112px)!important;line-height:1!important;letter-spacing:-.045em!important}
+.mode-canvas .canvas-title .title-script {margin-left:0!important;font-size:1em;line-height:1.06!important}
+.mode-canvas .canvas-deck {left:var(--sn-edge);bottom:9%;width:auto;max-width:560px}
+.mode-canvas .canvas-deck p {max-width:490px;margin-bottom:24px}
+.mode-canvas .sn-page-intro {min-height:0;padding-top:96px;padding-bottom:80px}
+.mode-canvas .sn-page-intro h1 {font-size:clamp(44px,6.4vw,88px);line-height:1.04;letter-spacing:-.045em;max-width:18ch;margin:0 0 32px}
+.mode-canvas .sn-page-intro h1 em {line-height:1.08}
+.mode-canvas .sn-page-intro p {margin-bottom:0}
+.mode-canvas .sn-steps {gap:24px}
+.mode-canvas .sn-steps h2 {font-size:30px!important}
+.mode-canvas .sn-story-cover {padding-inline:var(--sn-edge)}
+.mode-canvas .sn-story-gallery {padding:32px var(--sn-edge) 96px;gap:24px}
+.site-footer {padding:96px var(--sn-edge) 32px}
+.site-footer .footer-top {max-width:1200px;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:64px;margin:0 auto 64px;padding:0}
+.site-footer h2 {font-size:clamp(36px,4.6vw,64px);line-height:1.08;letter-spacing:-.04em;margin:20px 0 0}
+.site-footer h2 em {line-height:1.1}
+.site-footer p {font:400 17px/1.7 'Host Grotesk',sans-serif;color:#fde6f2;opacity:1;max-width:650px}
+.site-footer .footer-newsletter-form {grid-template-columns:1fr;gap:16px;margin-top:24px}
+.site-footer .footer-newsletter-form .footer-cta {width:100%;justify-content:center}
+.site-footer .footer-menu {max-width:1200px;margin:0 auto;padding:40px 0;gap:48px}
+.site-footer .footer-menu h3 {font-size:17px;line-height:1.5;letter-spacing:0;margin-bottom:16px}
+.site-footer .footer-menu a {display:inline-flex;align-items:center;min-height:44px;font:400 17px/1.5 'Host Grotesk',sans-serif;opacity:1}
+.site-footer .footer-bottom {max-width:1200px;margin:0 auto;padding:24px 0 0;gap:24px;font-size:14px;line-height:1.5;letter-spacing:.04em}
+/* A visible keyboard focus is also retained on dark surfaces. */
+.sn-public :is(a,button,input,textarea,summary,[tabindex]):focus-visible,.sn-preview :is(a,button,input,textarea,summary,[tabindex]):focus-visible {outline:3px solid currentColor!important;outline-offset:5px!important}
+@media(max-width:1000px) {
+  :root {--sn-section-space:80px}
+  .mode-canvas :is(.checklist-feature,.availability-check,.standalone-form-module,.canvas-end,.canvas-intro[data-role="about-split-feature"],.canvas-intro-copy) {gap:40px}
+  .mode-canvas :is(.story-showcase-head,.orbit-gallery-heading,.portfolio-mosaic-head,.canvas-journal-head,.canvas-pricing-head,.social-feature-head) {display:block}
+  .mode-canvas :is(.story-showcase-hint,.orbit-gallery-heading>p,.portfolio-mosaic-head>p,.canvas-pricing-head>p,.social-feature-note>p) {margin-top:24px;max-width:650px}
+  .mode-canvas .canvas-faq {gap:40px;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+  .site-footer .footer-top {gap:40px}
+}
+@media(max-width:760px) {
+  :root {--sn-gutter:24px;--sn-section-space:64px}
+  .mode-canvas h2 {font-size:clamp(34px,8vw,46px)!important}
+  .mode-canvas :is(.checklist-feature,.availability-check,.standalone-form-module,.canvas-end,.canvas-intro[data-role="about-split-feature"],.canvas-intro-copy,.canvas-faq) {grid-template-columns:minmax(0,1fr);gap:40px}
+  .mode-canvas :is(.canvas-selected-head,.story-showcase-head,.orbit-gallery-heading,.portfolio-mosaic-head,.canvas-journal-head,.canvas-pricing-head,.social-feature-head) {margin-bottom:32px}
+  .mode-canvas .canvas-faq-intro h2 {font-size:36px!important}
+  .mode-canvas .canvas-faq-list summary {font-size:19px!important;padding-block:22px}
+  .mode-canvas .story-showcase-head h3 {font-size:clamp(34px,8vw,46px)!important}
+  .mode-canvas .portfolio-mosaic {columns:2 120px;column-gap:16px}
+  .mode-canvas .portfolio-mosaic-item {margin-bottom:16px}
+  .mode-canvas .canvas-project {grid-template-columns:28px minmax(0,1fr) 28px;gap:12px;min-height:92px;padding:24px 0}
+  .mode-canvas .canvas-project b {font-size:28px}
+  .mode-canvas .canvas-project i {font-size:28px}
+  .mode-canvas :is(.standalone-contact-form,.availability-form,.canvas-price-card) {padding:24px}
+  .mode-canvas .standalone-form-fields {grid-template-columns:1fr}
+  .mode-canvas .orbit-gallery-yeung .orbit-stage {height:560px!important}
+  .mode-canvas .orbit-gallery-yeung .orbit-stage-meta {left:16px;right:16px;font-size:12px}
+  .mode-canvas .orbit-gallery-yeung .orbit-controls {gap:12px;font-size:14px}
+  .mode-canvas .canvas-top {top:32px}
+  .mode-canvas .canvas-top span {font-size:12px;letter-spacing:.06em}
+  .mode-canvas .canvas-hero {height:760px;min-height:760px}
+  .mode-canvas .canvas-title {top:26%;font-size:clamp(38px,8.8vw,64px)!important;width:calc(100% - 48px)}
+  .mode-canvas .canvas-title .title-outline {white-space:normal}
+  .mode-canvas .canvas-deck {bottom:9%;right:24px;max-width:440px}
+  .mode-canvas .sn-page-intro {padding-top:64px;padding-bottom:64px}
+  .mode-canvas .sn-page-intro h1 {font-size:clamp(40px,10vw,64px)}
+  .mode-canvas .sn-story-gallery {padding-bottom:64px}
+  .site-footer {padding-top:72px}
+  .site-footer .footer-top {grid-template-columns:1fr;gap:32px;margin-bottom:40px}
+  .site-footer .footer-menu {grid-template-columns:1fr;gap:32px;padding-block:32px}
+  .site-footer .footer-bottom {display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+  #mast.sn-header {height:80px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .sn-public *, .sn-preview * {animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .sn-public :is(.quote-letter,.quote-note,.quote-handwritten,.review-line,.portfolio-mosaic-item) {opacity:1!important;clip-path:none!important;transform:none!important}
+}
+/* Resolve two legacy high-specificity section rules on the shared grid. */
+.mode-canvas .quote-module,.mode-canvas .canvas-wall:not(.studio-wall) {padding:var(--sn-section-space) var(--sn-edge)!important}
+.mode-canvas .canvas-intro-copy {display:block}
+.mode-canvas .canvas-intro-copy>div:last-child {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}
+.mode-canvas .canvas-intro-copy>div:last-child h2 {margin-bottom:0!important}
+.mode-canvas .canvas-hero .canvas-deck .button {background:#fde6f2;color:#65001d}
+.mode-canvas .review-top,.mode-canvas .review-more summary {font-size:15px;line-height:1.6;letter-spacing:.04em}
+.mode-canvas .review-more summary {min-height:48px;display:inline-flex;align-items:center;gap:16px}
+.mode-canvas .checklist-sheet small {font-size:13px!important;line-height:1.5}
+.mode-canvas .canvas-faq-list summary::after {color:#65001d}
+@media(max-width:1000px) {.mode-canvas .canvas-intro-copy>div:last-child {gap:40px}}
+@media(max-width:760px) {
+  .mode-canvas .canvas-intro-copy>div:last-child {grid-template-columns:1fr;gap:32px}
+  .mode-canvas .checklist-sheet {left:8%;width:80%;padding:20px}
+  .mode-canvas .checklist-sheet strong {font-size:34px}
+  .mode-canvas .checklist-sheet small {font-size:12px!important}
+  .mode-canvas .canvas-wall:not(.studio-wall)>h2 {font-size:36px!important}
+  .mode-canvas .review-top {display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+}
+.mode-canvas .standalone-contact-form .standalone-form-submit {background:#fde6f2;color:#65001d}
+.mode-canvas .standalone-contact-form .standalone-form-kicker {color:#fde6f2}
+.mode-canvas .standalone-form-aside span {opacity:1;color:#65001d}
+@media(max-width:760px) {
+  .mode-canvas .checklist-art {min-height:0;margin:0;padding:36px 24px 64px}
+  .mode-canvas .checklist-sheet {position:relative;left:auto;top:auto;width:100%;min-height:0;padding:20px;margin:0}
+  .mode-canvas .checklist-row {margin-top:10px;padding-block:10px}
+  .mode-canvas .checklist-sticker {top:auto;bottom:16px;right:8px;padding:14px 18px}
+}
+.site-footer .footer-top {align-items:start;padding-bottom:48px}
+.site-footer :is(.footer-kicker,.footer-menu h3) {color:#fde6f2}
+.site-footer .footer-kicker::before {color:#fde6f2}
+.sn-skip-link {position:absolute;z-index:100;left:24px;top:12px;padding:14px 22px;background:#65001d;color:#fde6f2;font:600 17px/1.4 'Host Grotesk',sans-serif;transform:translateY(-180%)}
+.sn-skip-link:focus {transform:none}
+@media(max-width:760px) {
+  .sn-lightbox button {width:44px;height:44px}
+  .sn-lightbox {padding-inline:48px}
+  .site-footer .footer-top {padding-bottom:32px}
+}

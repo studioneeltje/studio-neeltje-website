@@ -119,3 +119,18 @@ bouwwens van Neeltje. Deze eerste bouwstap is op 18 oktober 2026 aangevraagd.
 - [x] Foto’s binnen hun blok begrenzen zodat ze niet voorbij de footer doorlopen.
 - [x] Absolute mediapaden gebruiken in Puck, uitsnedevelden en conceptvoorvertoning.
 - [x] Ook responsive bronvarianten, grote weergave, posters en ondertiteling vanuit de juiste map laden.
+
+## Visuele verfijning — bouw goedgekeurd 18 oktober 2026
+
+- [x] Gedeelde inhoudsbreedte van maximaal 1200 px met gecentreerde uitlijning;
+      achtergronden en de hero blijven beeldvullend.
+- [x] Lopende tekst maximaal 650 px breed, Host Grotesk Regular 17 px.
+- [x] Consistente zijruimte: minimaal 32 px op tablet/desktop en 24 px op mobiel.
+- [x] Vast ritme voor secties (96/80/64 px), koppen en kaartafstanden (24 px).
+- [x] Rustigere ondersteunende koppen en een duidelijke hiërarchie per blok.
+- [x] Knoppen, secundaire links, labels en galerijbediening beter leesbaar maken.
+- [x] Meer contrast voor primaire acties en ruimere aanraakvlakken en velden.
+- [x] Formulieren, FAQ, checklist, prijskaarten en footer op dezelfde grid zetten.
+- [x] Rustige witte basis voor tekst/FAQ en fotogalerij; merkkleuren behouden.
+- [x] Toetsenbordfocus, snelkoppeling naar inhoud en verminderde beweging meenemen.
+- [x] Dezelfde vormgeving laden in Puck en conceptvoorvertoningen.

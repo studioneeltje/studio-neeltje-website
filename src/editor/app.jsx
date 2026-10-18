@@ -12,7 +12,7 @@ import{connect,setToken,isConnected,openDraft,saveDraft,publishDraft,sourcePrevi
 
 const ROOT=new URL('../',location.href).href;
 const fontURL='https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700;800&family=Manrope:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Mono&display=swap';
-const styles=`<link rel="stylesheet" href="${fontURL}"><link rel="stylesheet" href="${new URL('assets/theme.css',ROOT).href}"><link rel="stylesheet" href="${new URL('assets/site.css',ROOT).href}"><link rel="stylesheet" href="${new URL('assets/blocks.css',ROOT).href}">`;
+const styles=`<link rel="stylesheet" href="${fontURL}"><link rel="stylesheet" href="${new URL('assets/theme.css',ROOT).href}"><link rel="stylesheet" href="${new URL('assets/site.css',ROOT).href}"><link rel="stylesheet" href="${new URL('assets/blocks.css',ROOT).href}"><link rel="stylesheet" href="${new URL('assets/design.css',ROOT).href}">`;
 const links=`<base href="${ROOT}">${styles}`;
 function PreviewFrame({children,document:doc}){useEffect(()=>{if(!doc)return;doc.body.className='theme-canvas sn-preview';let base=doc.head.querySelector('base');if(!base){base=doc.createElement('base');doc.head.prepend(base);}base.href=ROOT;doc.head.insertAdjacentHTML('beforeend',styles);},[doc]);return <>{children}</>;}
 function blockConfig(context){
