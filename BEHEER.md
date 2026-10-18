@@ -11,7 +11,7 @@ reportages, artikelen en algemene instellingen. De blokken voor reportages en
 Journal lezen die inhoud vanzelf uit Sveltia. De mediagegevens staan maar op één
 plek; beide omgevingen gebruiken dezelfde bibliotheek.
 
-## Eenmalig verbinden
+## Inloggen bij het websitebeheer
 
 Deze eerste versie gebruikt rechtstreeks GitHub, zonder betaald CMS-abonnement
 of extra inlogserver. Je hebt een **fine-grained personal access token** nodig:
@@ -21,8 +21,12 @@ of extra inlogserver. Je hebt een **fine-grained personal access token** nodig:
 3. Kies bij **Repository access** alleen `studio-neeltje-website`.
 4. Kies onder **Repository permissions**: **Contents: Read and write**,
    **Pull requests: Read and write**, **Actions: Read-only**.
-5. Maak de sleutel aan en voer hem zelf in bij **GitHub koppelen** in Puck.
+5. Maak de sleutel aan en voer hem zelf in op het **inlogscherm** van Puck. Alleen het GitHub-account `studioneeltje` wordt toegelaten.
    In Sveltia kies je **Sign In Using Token** en voer je dezelfde sleutel in.
+
+De editor toont vóór inloggen geen pagina-overzicht of bouwstenen. De beheerinhoud wordt pas geladen na controle van je GitHub-account en schrijfrechten. Met **Uitloggen** sluit je de editor direct af.
+
+Dit is een toegangspoort in de browser. GitHub Pages kan de statische beheerbestanden en de openbare repository niet privé maken. Volledige afscherming van bestanden vereist later hosting met toegangscontrole. De website-inhoud is openbaar portfolio-materiaal; zet hier geen privé klantgegevens in.
 
 Deel de sleutel niet in de chat of in de repository. Puck bewaart hem alleen in
 het geheugen: na sluiten of vernieuwen verbind je opnieuw. Sveltia beheert zijn

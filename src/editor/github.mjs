@@ -1,20 +1,32 @@
 const REPO='studioneeltje/studio-neeltje-website';
-let token='';
-export function setToken(value){token=String(value).trim();}
-export function isConnected(){return Boolean(token);}
-export async function api(endpoint,{method='GET',body,allow404=false}={}) {
-  if(!token)throw new Error('Koppel eerst je GitHub-account om wijzigingen online op te slaan.');
-  // GitHub's repository endpoint rejects a trailing slash during CORS preflight.
-  const route=String(endpoint||'').replace(/^\/+/, '');
-  const url=`https://api.github.com/repos/${REPO}${route?'/'+route:''}`;
+let token='',verifiedOwner=false;
+export function setToken(value){token=String(value).trim();verifiedOwner=false;}
+export function isConnected(){return Boolean(token&&verifiedOwner);}
+async function request(url,{method='GET',body,allow404=false}={}) {
+  if(!token)throw new Error('Log eerst in met je GitHub-token.');
   let response;
   try{response=await fetch(url,{method,headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});}
-  catch{throw new Error('De verbinding met GitHub kon niet worden gemaakt. Controleer je internetverbinding en probeer opnieuw. Blijft dit gebeuren? Vernieuw de beheerpagina en koppel opnieuw.');}
+  catch{throw new Error('De verbinding met GitHub kon niet worden gemaakt. Controleer je internetverbinding en probeer opnieuw. Blijft dit gebeuren? Vernieuw de beheerpagina en log opnieuw in.');}
   if(response.status===404&&allow404)return null;
-  if(!response.ok){if(response.status===409||response.status===422)throw new Error('De inhoud is intussen gewijzigd of kon niet worden samengevoegd. Laad het concept opnieuw; je lokale wijzigingen blijven bewaard.');if(response.status===401||response.status===403)throw new Error('GitHub geeft geen schrijfrechten. Controleer of de sleutel toegang heeft tot deze repository, Contents en Pull requests.');throw new Error(`Opslaan bij GitHub is mislukt (${response.status}). Probeer later opnieuw.`);}
+  if(!response.ok){if(response.status===401)throw new Error('GitHub herkent deze token niet. Controleer of je de volledige, geldige token hebt gekopieerd.');if(response.status===409||response.status===422)throw new Error('De inhoud is intussen gewijzigd of kon niet worden samengevoegd. Laad het concept opnieuw; je lokale wijzigingen blijven bewaard.');if(response.status===403)throw new Error('GitHub geeft geen toegang. Controleer of de token rechten heeft voor deze repository, Contents, Pull requests en Actions.');throw new Error(`De aanvraag bij GitHub is mislukt (${response.status}). Probeer later opnieuw.`);}
   return response.status===204?null:response.json();
 }
-export async function connect(value){setToken(value);try{const repo=await api('');if(!repo.permissions?.push)throw new Error('Dit account heeft geen schrijfrechten voor de website.');return repo;}catch(error){setToken('');throw error;}}
+export async function api(endpoint,options={}) {
+  if(!isConnected())throw new Error('Log eerst in met het GitHub-account van Studio Neeltje.');
+  // GitHub's repository endpoint rejects a trailing slash during CORS preflight.
+  const route=String(endpoint||'').replace(/^\/+/, '');
+  return request(`https://api.github.com/repos/${REPO}${route?'/'+route:''}`,options);
+}
+export async function connect(value){
+  setToken(value);
+  try{
+    const user=await request('https://api.github.com/user');
+    if(String(user.login||'').toLowerCase()!==REPO.split('/')[0].toLowerCase())throw new Error('Deze beheeromgeving is alleen toegankelijk voor het GitHub-account studioneeltje.');
+    const repo=await request(`https://api.github.com/repos/${REPO}`);
+    if(!repo.permissions?.push)throw new Error('Deze token heeft geen schrijfrechten voor de website. Controleer de rechten voor studio-neeltje-website.');
+    verifiedOwner=true;return repo;
+  }catch(error){setToken('');throw error;}
+}
 export async function readFile(file,ref='main'){const result=await api(`contents/${file}?ref=${encodeURIComponent(ref)}`,{allow404:true});if(!result)return null;return {sha:result.sha,data:JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(result.content.replace(/\n/g,'')),c=>c.charCodeAt(0))))};}
 export async function head(branch='main'){return api(`git/ref/heads/${branch}`);}
 export function pageBranch(id){if(!/^[a-z0-9][a-z0-9-]{0,80}$/.test(id))throw new Error('Gebruik een korte paginanaam met letters, cijfers en streepjes.');return `puck/${id}`;}

@@ -103,3 +103,12 @@ bouwwens van Neeltje. Deze eerste bouwstap is op 18 oktober 2026 aangevraagd.
       nu “Failed to fetch” voordat de token wordt gecontroleerd.
 - [x] Een begrijpelijke melding tonen bij een verbindingsprobleem.
 - [x] De reparatie publiceren na het expliciete “bouw” van Neeltje.
+
+## Inloggen vóór websitebeheer — bouw aangevraagd 18 oktober 2026
+
+- [x] Eerst een inlogscherm tonen, ook bij een rechtstreekse paginalink.
+- [x] Alleen het GitHub-account studioneeltje met schrijfrechten toelaten.
+- [x] Pagina-inhoud en lokale uploads pas na inloggen laden.
+- [x] Uitloggen sluit de editor en verwijdert de token uit het geheugen.
+- [ ] Volledige afscherming van beheerbestanden bij de toekomstige hosting regelen.
+      GitHub Pages ondersteunt geen servercontrole voor deze bestanden.
