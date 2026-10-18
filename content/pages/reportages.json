@@ -1,0 +1,203 @@
+{
+  "id": "reportages",
+  "title": "Reportages",
+  "description": "Trouwfotografie door Studio Neeltje.",
+  "root": {
+    "props": {
+      "title": "Reportages",
+      "description": "Trouwfotografie door Studio Neeltje."
+    }
+  },
+  "content": [
+    {
+      "type": "Intro",
+      "props": {
+        "id": "reportages-intro-0",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
+            "value": "STUDIO NEELTJE / TROUWFOTOGRAFIE"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie verhaal.",
+            "value": "Reportages"
+          },
+          {
+            "key": "2",
+            "label": "Label: Helemaal eigen.",
+            "value": "in beeld."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Een dag vol momenten om te bewaren.",
+            "value": "Een dag vol momenten om te bewaren."
+          }
+        ],
+        "images": [],
+        "links": []
+      }
+    },
+    {
+      "type": "Stories",
+      "props": {
+        "id": "reportages-stories-1",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: SELECTED STORIES / 2024—26",
+            "value": "SELECTED STORIES / 2024—26"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Reportages",
+            "value": "Reportages"
+          },
+          {
+            "key": "2",
+            "label": "Titel: in beeld.",
+            "value": "in beeld."
+          },
+          {
+            "key": "3",
+            "label": "Knop / link: Alle verhalen",
+            "value": "Alle verhalen"
+          }
+        ],
+        "images": [],
+        "links": [
+          {
+            "key": "0",
+            "label": "Alle verhalen",
+            "href": "reportages.html"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Review",
+      "props": {
+        "id": "reportages-review-2",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: WOORDEN VAN EEN BRUIDSPAAR",
+            "value": "WOORDEN VAN EEN BRUIDSPAAR"
+          },
+          {
+            "key": "1",
+            "label": "Label: JEROEN & MARTINE / 01",
+            "value": "JEROEN & MARTINE / 01"
+          },
+          {
+            "key": "2",
+            "label": "Label: De mooiste dag van je dromen",
+            "value": "De mooiste dag van je dromen"
+          },
+          {
+            "key": "3",
+            "label": "Label: met de liefde van je leven,",
+            "value": "met de liefde van je leven,"
+          },
+          {
+            "key": "4",
+            "label": "Label: daar wil je",
+            "value": "daar wil je"
+          },
+          {
+            "key": "5",
+            "label": "Label: Neeltje",
+            "value": "Neeltje"
+          },
+          {
+            "key": "6",
+            "label": "Label: bij hebben!",
+            "value": "bij hebben!"
+          },
+          {
+            "key": "7",
+            "label": "Label: Lees de volledige review",
+            "value": "Lees de volledige review"
+          },
+          {
+            "key": "8",
+            "label": "Tekst: Haar betrokkenheid, professionaliteit en creativ",
+            "value": "Haar betrokkenheid, professionaliteit en creative brein maakte voor ons de fotoreportage (wat stiekem best spannend is) ontspannen en fun! Neeltje wist ook onze speciale momenten van de ceremonie en receptie perfect vast te leggen. Het resultaat? Liefdevolle, prachtige foto’s en video's die ons helemaal terugbrengen naar onze dag."
+          },
+          {
+            "key": "9",
+            "label": "Label: Jeroen en Martine Stroomberg",
+            "value": "Jeroen en Martine Stroomberg"
+          },
+          {
+            "key": "10",
+            "label": "Label: ERVARING VAN EEN BRUIDSPAAR",
+            "value": "ERVARING VAN EEN BRUIDSPAAR"
+          }
+        ],
+        "images": [],
+        "links": []
+      }
+    },
+    {
+      "type": "ContactCTA",
+      "props": {
+        "id": "reportages-contactcta-3",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: Neeltje · jullie trouwfotograaf",
+            "value": "Neeltje · jullie trouwfotograaf"
+          },
+          {
+            "key": "1",
+            "label": "Label: 05 — ZULLEN WE KENNISMAKEN?",
+            "value": "05 — ZULLEN WE KENNISMAKEN?"
+          },
+          {
+            "key": "2",
+            "label": "Titel: Voelt dit als",
+            "value": "Voelt dit als"
+          },
+          {
+            "key": "3",
+            "label": "Label: jullie verhaal?",
+            "value": "jullie verhaal?"
+          },
+          {
+            "key": "4",
+            "label": "Tekst: Vertel me over jullie trouwdag, datum en locatie",
+            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt — en wat ik voor jullie kan betekenen."
+          },
+          {
+            "key": "5",
+            "label": "Knop / link: Vertel me jullie plannen",
+            "value": "Vertel me jullie plannen"
+          },
+          {
+            "key": "6",
+            "label": "Label: Vrijblijvend kennismaken · gewoon kijken of het ",
+            "value": "Vrijblijvend kennismaken · gewoon kijken of het klikt"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "foto-75c93a94397c",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "contact.html"
+          }
+        ]
+      }
+    }
+  ]
+}

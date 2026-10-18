@@ -1,0 +1,18 @@
+{
+  "imageWidths": [
+    480,
+    800,
+    1280,
+    1920,
+    2560
+  ],
+  "webpQuality": 85,
+  "avifQuality": 65,
+  "videoWidths": [
+    640,
+    1280
+  ],
+  "videoCRF": 23,
+  "maxVideoMinutes": 15,
+  "maxUploadMB": 45
+}

@@ -1,0 +1,17 @@
+import React,{useState}from'react';
+import {CropEditor}from'./CropEditor.jsx';
+import {assetURL}from'../shared/media.mjs';
+
+export function TextsField({value=[],onChange}){return <div className="field-list">{value.map((item,i)=><label key={item.key}>{item.label}<textarea rows={item.value.length>100?4:2} value={item.value} onChange={event=>onChange(value.map((v,j)=>j===i?{...v,value:event.target.value}:v))}/></label>)}</div>;}
+export function LinksField({value=[],onChange}){return <div className="field-list">{value.map((item,i)=><label key={item.key}>{item.label}<input value={item.href} onChange={event=>onChange(value.map((v,j)=>j===i?{...v,href:event.target.value}:v))}/></label>)}</div>;}
+export function ImagePicker({value,onChange,context,label='Foto',fixedMedia=false}){
+ const image=value||{mediaId:'',desktop:null,mobile:null};const [screen,setScreen]=useState('desktop');const asset=context.media.find(a=>a.id===image.mediaId);
+ return <div className="image-picker"><label>{label}{fixedMedia?<span className="field-help">{asset?.title}</span>:<select value={image.mediaId} onChange={e=>onChange({...image,mediaId:e.target.value})}><option value="">Kies een foto</option>{context.media.filter(a=>a.kind!=='video').map(a=><option value={a.id} key={a.id}>{a.title}</option>)}</select>}</label>
+ {asset&&<><div className="segmented" role="group" aria-label="Uitsnede voor scherm"><button type="button" aria-pressed={screen==='desktop'} onClick={()=>setScreen('desktop')}>Desktop</button><button type="button" aria-pressed={screen==='mobile'} onClick={()=>setScreen('mobile')}>Mobiel</button></div><label className="inline-check"><input type="checkbox" checked={image[screen]!==null&&image[screen]!==undefined} onChange={e=>onChange({...image,[screen]:e.target.checked?{...asset.focus,zoom:1}:null})}/>Eigen uitsnede voor {screen==='desktop'?'desktop':'mobiel'}</label>
+ {image[screen]===null||image[screen]===undefined?<p className="field-help">{screen==='mobile'?'Mobiel volgt de desktopuitsnede, of anders het standaardfocuspunt.':'Dit blok gebruikt het standaardfocuspunt van de foto.'}</p>:<CropEditor src={asset.previewURL||assetURL(asset,context.manifest)} value={image[screen]} focus={asset.focus} label={screen==='desktop'?'Desktopuitsnede':'Mobiele uitsnede'} onChange={crop=>onChange({...image,[screen]:crop})}/>}
+ {image[screen]==null&&<img className="asset-thumbnail" src={asset.previewURL||assetURL(asset,context.manifest)} alt={asset.alt||asset.title}/>}</>}
+ </div>;
+}
+export function ImagesField({value=[],onChange,context}){return <div>{value.map((image,i)=><details className="image-slot" key={image.key}><summary>{image.label||`Foto ${i+1}`}</summary><ImagePicker value={image} context={context} onChange={next=>onChange(value.map((v,j)=>j===i?next:v))}/></details>)}<p className="field-help">Een nieuwe foto upload je via Media. De gekozen foto kun je in meerdere blokken gebruiken.</p></div>;}
+
+export function RecordCrops({value={},onChange,context,records}){return <div>{records.filter(r=>r.published!==false).map(record=><details className="image-slot" key={record.id}><summary>{record.title}</summary><ImagePicker fixedMedia label="Omslagfoto uit Sveltia" value={{...value[record.id],mediaId:record.cover}} context={context} onChange={({desktop,mobile})=>onChange({...value,[record.id]:{desktop,mobile}})}/></details>)}<p className="field-help">De omslagfoto kies je in Sveltia. Hier pas je alleen de uitsnede voor deze pagina aan.</p></div>;}

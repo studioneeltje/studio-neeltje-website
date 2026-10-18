@@ -1,0 +1,111 @@
+{
+  "id": "leveranciers",
+  "title": "Leveranciers",
+  "description": "Trouwfotografie door Studio Neeltje.",
+  "root": {
+    "props": {
+      "title": "Leveranciers",
+      "description": "Trouwfotografie door Studio Neeltje."
+    }
+  },
+  "content": [
+    {
+      "type": "Intro",
+      "props": {
+        "id": "leveranciers-intro-0",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
+            "value": "STUDIO NEELTJE / TROUWFOTOGRAFIE"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie verhaal.",
+            "value": "Leveranciers"
+          },
+          {
+            "key": "2",
+            "label": "Label: Helemaal eigen.",
+            "value": "Helemaal eigen."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Een dag vol momenten om te bewaren.",
+            "value": "Een dag vol momenten om te bewaren."
+          }
+        ],
+        "images": [],
+        "links": []
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "leveranciers-text-1",
+        "eyebrow": "STUDIO NEELTJE",
+        "title": "Jullie verhaal",
+        "body": "Vertel hier jullie verhaal."
+      }
+    },
+    {
+      "type": "ContactCTA",
+      "props": {
+        "id": "leveranciers-contactcta-2",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: Neeltje · jullie trouwfotograaf",
+            "value": "Neeltje · jullie trouwfotograaf"
+          },
+          {
+            "key": "1",
+            "label": "Label: 05 — ZULLEN WE KENNISMAKEN?",
+            "value": "05 — ZULLEN WE KENNISMAKEN?"
+          },
+          {
+            "key": "2",
+            "label": "Titel: Voelt dit als",
+            "value": "Voelt dit als"
+          },
+          {
+            "key": "3",
+            "label": "Label: jullie verhaal?",
+            "value": "jullie verhaal?"
+          },
+          {
+            "key": "4",
+            "label": "Tekst: Vertel me over jullie trouwdag, datum en locatie",
+            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt — en wat ik voor jullie kan betekenen."
+          },
+          {
+            "key": "5",
+            "label": "Knop / link: Vertel me jullie plannen",
+            "value": "Vertel me jullie plannen"
+          },
+          {
+            "key": "6",
+            "label": "Label: Vrijblijvend kennismaken · gewoon kijken of het ",
+            "value": "Vrijblijvend kennismaken · gewoon kijken of het klikt"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "foto-75c93a94397c",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "contact.html"
+          }
+        ]
+      }
+    }
+  ]
+}

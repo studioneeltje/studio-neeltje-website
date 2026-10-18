@@ -13,17 +13,71 @@ studioneeltje.com bij een nog te kiezen hostingprovider.
 
 De hoofdbranch `main` wordt gebruikt voor de GitHub Pages-testomgeving.
 
-## Beheeromgeving — eerst verder bespreken
+## Beheeromgeving
 
-- [ ] Puck gebruiken voor de visuele opbouw met herbruikbare bouwstenen.
-- [ ] Sanity en Sveltia vergelijken op de dagelijkse redactiewerkwijze,
-      mediabeheer, publicatie, kosten en onderhoud; nog geen CMS gekozen.
-- [ ] Vastleggen welke velden in Puck bewerkt worden en welke in het CMS,
+- [x] Sveltia gekozen als CMS. Eigen beheer en lage kosten hebben prioriteit.
+      Een overstap wordt pas overwogen als er later concrete beperkingen zijn.
+- [x] Puck gebruiken voor de visuele opbouw met herbruikbare bouwstenen.
+- [x] Sveltia aansluiten voor content, reportages en algemene instellingen.
+- [x] Vastleggen welke velden in Puck bewerkt worden en welke in het CMS,
       zodat dezelfde tekst of instelling maar één bron heeft.
-- [ ] Bestaande homepageblokken omzetten in bewerkbare componenten met behoud
+- [x] Bestaande homepageblokken omzetten in bewerkbare componenten met behoud
       van vormgeving en animaties.
-- [ ] Teksten, afbeeldingen, reportages, menu en algemene instellingen
+- [x] Teksten, afbeeldingen, reportages, menu en algemene instellingen
       zelfstandig kunnen beheren; met concepten en een controle voor publicatie.
+
+## Foto-uitsneden — bouw aangevraagd 18 oktober 2026
+
+Gebouwd: gedeelde focusinstelling en afzonderlijke desktop- en mobiele uitsneden.
+
+- [x] Een standaard focuspunt per foto kunnen kiezen, zodat belangrijke
+      onderwerpen bij het bijsnijden in beeld blijven.
+- [x] De uitsnede voor een specifieke toepassing of een specifiek blok kunnen
+      aanpassen zonder andere toepassingen van dezelfde foto te wijzigen.
+- [x] Een aparte mobiele uitsnede kunnen instellen waar nodig.
+- [x] De daadwerkelijke weergave in het gekozen vlak visueel kunnen bekijken
+      en aanpassen, waaronder brede, vierkante en staande vlakken.
+- [x] Bronbestand intact laten; uitsneden en focuspunten als instellingen bewaren.
+- [x] Instellingen vanuit de media-invoer en Puck kunnen gebruiken, met één bron
+      per instelling en een bruikbare standaard als geen uitsnede is gekozen.
+
+## Automatische optimalisatie van foto's en video's — toegevoegd 18 oktober 2026
+
+- [x] Media één keer kunnen uploaden en vervolgens automatisch laten verwerken.
+- [x] Foto's verkleinen en comprimeren met behoud van verhouding en aandacht
+      voor fotografische kwaliteit; nooit automatisch vergroten of bijsnijden.
+- [x] Meerdere afbeeldingsformaten in pixels genereren voor onder meer mobiel,
+      desktop en grote weergave; de browser kiest de passende webversie op basis
+      van weergavegrootte en schermdichtheid.
+- [x] Moderne fotoformaten toepassen en afbeeldingen buiten het eerste scherm
+      pas laden wanneer ze nodig zijn; essentiële headerbeelden direct laden.
+- [x] Originele bronbestanden en afgeleide webversies onderscheiden, zodat
+      latere verwerking mogelijk blijft zonder de bron te overschrijven.
+- [x] Video's automatisch omzetten naar gecomprimeerde webversies voor mobiel
+      en desktop, met een passende voorbeeldafbeelding en zuinig laadgedrag.
+- [x] Videogebruik vastgesteld: sfeerclips en video's waarin Neeltje vertelt.
+- [ ] Gebruikelijke aantallen en lengte van video’s verder afstemmen.
+      De eerste verwerking staat op maximaal 45 MB en 15 minuten per bestand;
+      bronnen in GitHub, verwerking in GitHub Actions, webversies in Pages.
+- [x] Vertelvideo's met geluid via bewuste afspeelactie tonen, met toegankelijke
+      bediening en ondersteuning voor ondertiteling. Sfeerclips kunnen waar
+      passend stil afspelen; rekening houden met bewegingsvoorkeuren.
+- [x] Foto- en video-optimalisatie laten werken vanuit dezelfde media-invoer,
+      ongeacht of de bestanden via Sveltia of een Puck-component worden gekozen.
+- [x] Verwerking en publicatie op elkaar afstemmen: geen verwijzingen naar
+      varianten publiceren die nog niet klaar zijn; fouten zichtbaar melden.
+
+De ingebouwde uploadcompressie van Sveltia staat uit. De gezamenlijke publicatiestap
+maakt AVIF- en WebP-foto's (480–2560 px) en MP4-video's (640/1280 px), met behoud
+van de bronbestanden en geluid. Ondertiteling via VTT. Verwerken gebeurt voordat
+de website wordt gepubliceerd. Deze opzet vraagt geen extra betaald mediaplatform;
+grote videovolumes vragen later een passende opslagdienst.
+
+## Eerste ingebruikname
+
+- [ ] Neeltje verbindt Puck en Sveltia met haar eigen beperkte GitHub-sleutel.
+- [ ] Eerste echte wijziging opslaan, voorvertonen en publiceren met Neeltje.
+- [ ] Gebruikelijke videobestanden van Neeltje beoordelen op kwaliteit en omvang.
 
 ## Functies en productieomgeving — later specificeren
 

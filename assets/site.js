@@ -43,7 +43,7 @@
   window.matchMedia('(max-width: 1100px)').addEventListener('change', () => setMenu(false));
 
   const filename = window.location.pathname.split('/').pop();
-  let page = url.searchParams.get('pagina') || '';
+  let page = url.searchParams.get('pagina') || filename.replace(/\.html$/, '');
   if (filename === 'weddingschecklist.html') page = 'checklist';
   if (filename.startsWith('pagina-reportage-') || ['kasteel', 'dengh', 'bordeaux', 'malaga'].includes(page)) {
     page = 'reportages';

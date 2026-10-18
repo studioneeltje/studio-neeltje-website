@@ -1,0 +1,129 @@
+backend:
+  name: github
+  repo: studioneeltje/studio-neeltje-website
+  branch: main
+  auth_methods: [token]
+publish_mode: editorial_workflow
+site_url: https://studioneeltje.github.io/studio-neeltje-website/
+display_url: https://studioneeltje.github.io/studio-neeltje-website/
+app_title: Studio Neeltje — inhoud & instellingen
+media_folder: /media/originals
+public_folder: /media/originals
+media_libraries:
+  default:
+    config:
+      max_file_size: 47185920
+      slugify_filename: true
+# Keep source files untouched. The publication workflow creates all web versions.
+collections:
+  - name: media
+    label: Foto's & video's
+    label_singular: Mediabestand
+    folder: content/media
+    extension: json
+    format: json
+    create: true
+    identifier_field: id
+    slug: '{{id}}'
+    summary: '{{title}}'
+    fields:
+      - {name: id, label: Korte unieke naam, widget: string, pattern: ['^[a-z0-9][a-z0-9-]{0,100}$', 'Gebruik kleine letters, cijfers en streepjes.']}
+      - {name: title, label: Titel, widget: string}
+      - {name: kind, label: Soort, widget: select, options: [{label: Foto, value: image}, {label: Video, value: video}], default: image}
+      - {name: source, label: Origineel bestand, widget: file}
+      - {name: alt, label: Beschrijving voor toegankelijkheid, widget: text, required: false, default: ''}
+      - {name: focus, label: Standaardfocus in de foto, widget: neeltje-focus, required: false}
+      - {name: captions, label: Ondertiteling (VTT), widget: file, required: false}
+  - name: stories
+    label: Trouwreportages
+    label_singular: Trouwreportage
+    folder: content/stories
+    extension: json
+    format: json
+    create: true
+    identifier_field: title
+    slug: '{{id}}'
+    preview_path: 'reportage-{{id}}.html'
+    fields:
+      - {name: id, label: Korte naam in de URL, widget: string, pattern: ['^[a-z0-9][a-z0-9-]{0,80}$', 'Gebruik kleine letters, cijfers en streepjes.']}
+      - {name: title, label: Titel, widget: string}
+      - {name: location, label: Locatie, widget: string}
+      - {name: excerpt, label: Korte introductie, widget: text}
+      - {name: body, label: Het verhaal, widget: markdown}
+      - {name: cover, label: Omslagfoto, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title]}
+      - name: gallery
+        label: Foto's in de galerij
+        widget: list
+        field: {name: photo, label: Foto, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title]}
+      - {name: published, label: Tonen op de website, widget: boolean, default: true}
+  - name: articles
+    label: Journal
+    label_singular: Artikel
+    folder: content/articles
+    extension: json
+    format: json
+    create: true
+    identifier_field: title
+    slug: '{{id}}'
+    preview_path: 'artikel-{{id}}.html'
+    fields:
+      - {name: id, label: Korte naam in de URL, widget: string, pattern: ['^[a-z0-9][a-z0-9-]{0,80}$', 'Gebruik kleine letters, cijfers en streepjes.']}
+      - {name: title, label: Titel, widget: string}
+      - {name: category, label: Onderwerp, widget: string}
+      - {name: readTime, label: Leestijd, widget: string, default: '5 min lezen'}
+      - {name: excerpt, label: Korte introductie, widget: text}
+      - {name: body, label: Artikeltekst, widget: markdown}
+      - {name: cover, label: Omslagfoto, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title]}
+      - {name: published, label: Tonen op de website, widget: boolean, default: true}
+  - name: settings
+    label: Algemene instellingen
+    files:
+      - name: site
+        label: Huisstijl, menu & footer
+        file: content/settings/site.json
+        fields:
+          - {name: title, label: Naam van de website, widget: string}
+          - {name: email, label: E-mailadres, widget: string, required: false}
+          - {name: phone, label: Telefoonnummer, widget: string, required: false}
+          - {name: instagram, label: Instagram-link, widget: string, required: false}
+          - name: colors
+            label: Huisstijlkleuren
+            widget: object
+            fields:
+              - {name: wine, label: Donkerrood, widget: color}
+              - {name: pink, label: Lichtroze, widget: color}
+              - {name: blue, label: Lichtblauw, widget: color}
+              - {name: orange, label: Oranje, widget: color}
+          - name: navigation
+            label: Hoofdmenu
+            widget: list
+            summary: '{{label}}'
+            fields:
+              - {name: label, label: Tekst, widget: string}
+              - {name: href, label: Link, widget: string}
+              - {name: kind, label: Vorm, widget: select, options: [{label: Menulink, value: link}, {label: Oranje knop, value: checklist}, {label: Donkerrode knop, value: contact}]}
+          - name: footer
+            label: Nieuwsbriefuitnodiging onderaan
+            widget: object
+            fields:
+              - {name: title, label: Titel eerste regel, widget: string}
+              - {name: emphasis, label: Schuine titelregel, widget: string}
+              - {name: copy, label: Toelichting, widget: text}
+              - {name: button, label: Knoptekst, widget: string}
+      - name: media
+        label: Beeldkwaliteit & verwerking
+        file: content/settings/media.json
+        fields:
+          - name: imageWidths
+            label: Fotobreedtes in pixels
+            widget: list
+            field: {name: width, widget: number, value_type: int, min: 100, max: 4096}
+          - {name: webpQuality, label: WebP-kwaliteit, widget: number, value_type: int, min: 1, max: 100}
+          - {name: avifQuality, label: AVIF-kwaliteit, widget: number, value_type: int, min: 1, max: 100}
+          - name: videoWidths
+            label: Videobreedtes in pixels
+            widget: list
+            field: {name: width, widget: number, value_type: int, min: 100, max: 1920}
+          - {name: videoCRF, label: Videocompressie (lager is hogere kwaliteit), widget: number, value_type: int, min: 16, max: 35}
+          - {name: maxVideoMinutes, label: Maximale videolengte in minuten, widget: number, value_type: int, min: 1, max: 30}
+          - {name: maxUploadMB, label: Maximale bronbestandsgrootte in MB, widget: number, value_type: int, min: 1, max: 90}

@@ -1,0 +1,50 @@
+{
+  "title": "Studio Neeltje",
+  "email": "",
+  "phone": "",
+  "instagram": "",
+  "colors": {
+    "wine": "#65001D",
+    "pink": "#FDE6F2",
+    "blue": "#E8F2FF",
+    "orange": "#FF4802"
+  },
+  "navigation": [
+    {
+      "label": "Reportages",
+      "href": "reportages.html",
+      "kind": "link"
+    },
+    {
+      "label": "Over Neeltje",
+      "href": "over.html",
+      "kind": "link"
+    },
+    {
+      "label": "Werkwijze",
+      "href": "werkwijze.html",
+      "kind": "link"
+    },
+    {
+      "label": "Journal",
+      "href": "journal.html",
+      "kind": "link"
+    },
+    {
+      "label": "Gratis checklist",
+      "href": "weddingschecklist.html",
+      "kind": "checklist"
+    },
+    {
+      "label": "Contact",
+      "href": "contact.html",
+      "kind": "contact"
+    }
+  ],
+  "footer": {
+    "title": "Schrijf je in",
+    "emphasis": "voor praktische tips.",
+    "copy": "Schrijf je in en ontvang praktische tips voor jullie trouwdag, precies op de momenten dat ze van pas komen.",
+    "button": "Ontvang de tips"
+  }
+}

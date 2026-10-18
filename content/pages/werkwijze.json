@@ -1,0 +1,503 @@
+{
+  "id": "werkwijze",
+  "title": "Werkwijze",
+  "description": "Trouwfotografie door Studio Neeltje.",
+  "root": {
+    "props": {
+      "title": "Werkwijze",
+      "description": "Trouwfotografie door Studio Neeltje."
+    }
+  },
+  "content": [
+    {
+      "type": "Intro",
+      "props": {
+        "id": "werkwijze-intro-0",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
+            "value": "STUDIO NEELTJE / TROUWFOTOGRAFIE"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie verhaal.",
+            "value": "Werkwijze"
+          },
+          {
+            "key": "2",
+            "label": "Label: Helemaal eigen.",
+            "value": "Helemaal eigen."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Een dag vol momenten om te bewaren.",
+            "value": "Een dag vol momenten om te bewaren."
+          }
+        ],
+        "images": [],
+        "links": []
+      }
+    },
+    {
+      "type": "Steps",
+      "props": {
+        "id": "werkwijze-steps-1",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 01 / KENNISMAKEN",
+            "value": "01 / KENNISMAKEN"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie verhaal",
+            "value": "Jullie verhaal"
+          },
+          {
+            "key": "2",
+            "label": "Tekst: Vertel over jullie plannen en datum.",
+            "value": "Vertel over jullie plannen en datum."
+          },
+          {
+            "key": "3",
+            "label": "Label: 02 / DE DAG",
+            "value": "02 / DE DAG"
+          },
+          {
+            "key": "4",
+            "label": "Titel: Vrij beleven",
+            "value": "Vrij beleven"
+          },
+          {
+            "key": "5",
+            "label": "Tekst: Ik beweeg mee, zonder de dag over te nemen.",
+            "value": "Ik beweeg mee, zonder de dag over te nemen."
+          },
+          {
+            "key": "6",
+            "label": "Label: 03 / HERINNEREN",
+            "value": "03 / HERINNEREN"
+          },
+          {
+            "key": "7",
+            "label": "Titel: Beelden terug",
+            "value": "Beelden terug"
+          },
+          {
+            "key": "8",
+            "label": "Tekst: Een reportage die jullie weer terugbrengt.",
+            "value": "Een reportage die jullie weer terugbrengt."
+          }
+        ],
+        "images": [],
+        "links": []
+      }
+    },
+    {
+      "type": "Pricing",
+      "props": {
+        "id": "werkwijze-pricing-2",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: TROUWFOTOGRAFIE / INVESTERING",
+            "value": "TROUWFOTOGRAFIE / INVESTERING"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Hoeveel van jullie dag",
+            "value": "Hoeveel van jullie dag"
+          },
+          {
+            "key": "2",
+            "label": "Label: leggen we vast?",
+            "value": "leggen we vast?"
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Kies de reportage die past bij jullie planning. ",
+            "value": "Kies de reportage die past bij jullie planning. Twijfel je? Vertel me wat jullie belangrijk vinden, dan denk ik met jullie mee."
+          },
+          {
+            "key": "4",
+            "label": "Label: 6 uur",
+            "value": "6 uur"
+          },
+          {
+            "key": "5",
+            "label": "Titel: trouwfotografie",
+            "value": "trouwfotografie"
+          },
+          {
+            "key": "6",
+            "label": "Tekst: Bijvoorbeeld ceremonie → borrel → diner",
+            "value": "Bijvoorbeeld ceremonie → borrel → diner"
+          },
+          {
+            "key": "7",
+            "label": "Titel: Dit is inbegrepen:",
+            "value": "Dit is inbegrepen:"
+          },
+          {
+            "key": "8",
+            "label": "Label: Tot 6 uur trouwfotografie",
+            "value": "Tot 6 uur trouwfotografie"
+          },
+          {
+            "key": "9",
+            "label": "Label: Oplevering binnen 8 weken",
+            "value": "Oplevering binnen 8 weken"
+          },
+          {
+            "key": "10",
+            "label": "Label: Preview binnen 1 week",
+            "value": "Preview binnen 1 week"
+          },
+          {
+            "key": "11",
+            "label": "Label: Een complete online galerij met zorgvuldig gesel",
+            "value": "Een complete online galerij met zorgvuldig geselecteerde foto’s in hoge resolutie"
+          },
+          {
+            "key": "12",
+            "label": "Label: Een prachtige beeldbank met alle foto’s die mooi",
+            "value": "Een prachtige beeldbank met alle foto’s die mooi zijn (geen maximum aantal foto’s)"
+          },
+          {
+            "key": "13",
+            "label": "Label: € 1.550",
+            "value": "€ 1.550"
+          },
+          {
+            "key": "14",
+            "label": "Label: totaal",
+            "value": "totaal"
+          },
+          {
+            "key": "15",
+            "label": "Knop / link: Bespreek 6 uur",
+            "value": "Bespreek 6 uur"
+          },
+          {
+            "key": "16",
+            "label": "Label: Ruimte voor de hele flow",
+            "value": "Ruimte voor de hele flow"
+          },
+          {
+            "key": "17",
+            "label": "Label: 9 uur",
+            "value": "9 uur"
+          },
+          {
+            "key": "18",
+            "label": "Titel: trouwfotografie",
+            "value": "trouwfotografie"
+          },
+          {
+            "key": "19",
+            "label": "Tekst: Bijvoorbeeld voorbereidingen → ceremonie → borre",
+            "value": "Bijvoorbeeld voorbereidingen → ceremonie → borrel → diner"
+          },
+          {
+            "key": "20",
+            "label": "Titel: Dit is inbegrepen:",
+            "value": "Dit is inbegrepen:"
+          },
+          {
+            "key": "21",
+            "label": "Label: Tot 9 uur trouwfotografie",
+            "value": "Tot 9 uur trouwfotografie"
+          },
+          {
+            "key": "22",
+            "label": "Label: Oplevering binnen 8 weken",
+            "value": "Oplevering binnen 8 weken"
+          },
+          {
+            "key": "23",
+            "label": "Label: Preview binnen 1 week",
+            "value": "Preview binnen 1 week"
+          },
+          {
+            "key": "24",
+            "label": "Label: Een complete online galerij met zorgvuldig gesel",
+            "value": "Een complete online galerij met zorgvuldig geselecteerde foto’s in hoge resolutie"
+          },
+          {
+            "key": "25",
+            "label": "Label: Een prachtige beeldbank met alle foto’s die mooi",
+            "value": "Een prachtige beeldbank met alle foto’s die mooi zijn (geen maximum aantal foto’s)"
+          },
+          {
+            "key": "26",
+            "label": "Label: € 1.965",
+            "value": "€ 1.965"
+          },
+          {
+            "key": "27",
+            "label": "Label: totaal",
+            "value": "totaal"
+          },
+          {
+            "key": "28",
+            "label": "Tekst: Bespaar 10%",
+            "value": "Bespaar 10%"
+          },
+          {
+            "key": "29",
+            "label": "Knop / link: Bespreek 9 uur",
+            "value": "Bespreek 9 uur"
+          },
+          {
+            "key": "30",
+            "label": "Label: 12 uur",
+            "value": "12 uur"
+          },
+          {
+            "key": "31",
+            "label": "Titel: trouwfotografie",
+            "value": "trouwfotografie"
+          },
+          {
+            "key": "32",
+            "label": "Tekst: Van het aankleden tot de dansvloer",
+            "value": "Van het aankleden tot de dansvloer"
+          },
+          {
+            "key": "33",
+            "label": "Titel: Dit is inbegrepen:",
+            "value": "Dit is inbegrepen:"
+          },
+          {
+            "key": "34",
+            "label": "Label: Tot 12 uur trouwfotografie",
+            "value": "Tot 12 uur trouwfotografie"
+          },
+          {
+            "key": "35",
+            "label": "Label: Oplevering binnen 8 weken",
+            "value": "Oplevering binnen 8 weken"
+          },
+          {
+            "key": "36",
+            "label": "Label: Preview binnen 1 week",
+            "value": "Preview binnen 1 week"
+          },
+          {
+            "key": "37",
+            "label": "Label: Een complete online galerij met zorgvuldig gesel",
+            "value": "Een complete online galerij met zorgvuldig geselecteerde foto’s in hoge resolutie"
+          },
+          {
+            "key": "38",
+            "label": "Label: Een prachtige beeldbank met alle foto’s die mooi",
+            "value": "Een prachtige beeldbank met alle foto’s die mooi zijn (geen maximum aantal foto’s)"
+          },
+          {
+            "key": "39",
+            "label": "Label: € 2.250",
+            "value": "€ 2.250"
+          },
+          {
+            "key": "40",
+            "label": "Label: totaal",
+            "value": "totaal"
+          },
+          {
+            "key": "41",
+            "label": "Tekst: Bespaar 20%",
+            "value": "Bespaar 20%"
+          },
+          {
+            "key": "42",
+            "label": "Knop / link: Bespreek 12 uur",
+            "value": "Bespreek 12 uur"
+          },
+          {
+            "key": "43",
+            "label": "Tekst: Prijzen zijn exclusief reiskosten. Kennismaken e",
+            "value": "Prijzen zijn exclusief reiskosten. Kennismaken en overleggen is vrijblijvend."
+          }
+        ],
+        "images": [],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "contact.html"
+          },
+          {
+            "key": "1",
+            "label": "Link 2",
+            "href": "contact.html"
+          },
+          {
+            "key": "2",
+            "label": "Link 3",
+            "href": "contact.html"
+          }
+        ]
+      }
+    },
+    {
+      "type": "FAQ",
+      "props": {
+        "id": "werkwijze-faq-3",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: GOED OM TE WETEN",
+            "value": "GOED OM TE WETEN"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Veelgestelde",
+            "value": "Veelgestelde"
+          },
+          {
+            "key": "2",
+            "label": "Titel: vragen.",
+            "value": "vragen."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Praktische antwoorden over trouwfotografie, jull",
+            "value": "Praktische antwoorden over trouwfotografie, jullie planning en kennismaken met Studio Neeltje."
+          },
+          {
+            "key": "4",
+            "label": "Label: Is mijn trouwdatum nog beschikbaar?",
+            "value": "Is mijn trouwdatum nog beschikbaar?"
+          },
+          {
+            "key": "5",
+            "label": "Tekst: Stuur je trouwdatum en locatie via het contactfo",
+            "value": "Stuur je trouwdatum en locatie via het contactformulier. Ik laat jullie weten of ik beschikbaar ben en denk graag mee over de invulling van jullie dag."
+          },
+          {
+            "key": "6",
+            "label": "Label: Fotografeer je alleen in Utrecht?",
+            "value": "Fotografeer je alleen in Utrecht?"
+          },
+          {
+            "key": "7",
+            "label": "Tekst: Nee. Ik fotografeer bruiloften op verschillende ",
+            "value": "Nee. Ik fotografeer bruiloften op verschillende plekken in Nederland en ook op bestemmingen daarbuiten. Vertel me waar jullie trouwen, dan bespreken we samen de mogelijkheden."
+          },
+          {
+            "key": "8",
+            "label": "Label: Hoeveel uur fotografie hebben we nodig?",
+            "value": "Hoeveel uur fotografie hebben we nodig?"
+          },
+          {
+            "key": "9",
+            "label": "Tekst: Dat hangt af van wat jullie graag willen laten v",
+            "value": "Dat hangt af van wat jullie graag willen laten vastleggen. We bekijken samen jullie planning en kiezen welke momenten voor jullie belangrijk zijn, van de voorbereidingen tot het feest."
+          },
+          {
+            "key": "10",
+            "label": "Label: Moeten we de hele dag poseren?",
+            "value": "Moeten we de hele dag poseren?"
+          },
+          {
+            "key": "11",
+            "label": "Tekst: Nee. Ik fotografeer vooral wat er echt gebeurt e",
+            "value": "Nee. Ik fotografeer vooral wat er echt gebeurt en geef alleen aanwijzingen wanneer dat prettig is, bijvoorbeeld tijdens een korte portretsessie. Zo blijft er ruimte om jullie dag zelf te beleven."
+          },
+          {
+            "key": "12",
+            "label": "Label: Wat gebeurt er na onze trouwdag met de foto's?",
+            "value": "Wat gebeurt er na onze trouwdag met de foto's?"
+          },
+          {
+            "key": "13",
+            "label": "Tekst: Na de bruiloft selecteer en bewerk ik de beelden",
+            "value": "Na de bruiloft selecteer en bewerk ik de beelden zorgvuldig. Tijdens onze kennismaking vertel ik jullie hoe de oplevering en online galerij in zijn werk gaan."
+          },
+          {
+            "key": "14",
+            "label": "Label: Wat kost een trouwreportage?",
+            "value": "Wat kost een trouwreportage?"
+          },
+          {
+            "key": "15",
+            "label": "Tekst: De prijs hangt onder andere af van de duur en lo",
+            "value": "De prijs hangt onder andere af van de duur en locatie van jullie reportage. Stuur me jullie datum en plannen, dan kan ik vertellen welke mogelijkheden en tarieven passen."
+          },
+          {
+            "key": "16",
+            "label": "Label: Hoe leggen we onze datum vast?",
+            "value": "Hoe leggen we onze datum vast?"
+          },
+          {
+            "key": "17",
+            "label": "Tekst: We beginnen met een kennismaking en bespreken ju",
+            "value": "We beginnen met een kennismaking en bespreken jullie wensen en de mogelijkheden. Daarna ontvangen jullie duidelijkheid over het voorstel en de afspraken om de datum te reserveren."
+          }
+        ],
+        "images": [],
+        "links": []
+      }
+    },
+    {
+      "type": "ContactCTA",
+      "props": {
+        "id": "werkwijze-contactcta-4",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: Neeltje · jullie trouwfotograaf",
+            "value": "Neeltje · jullie trouwfotograaf"
+          },
+          {
+            "key": "1",
+            "label": "Label: 05 — ZULLEN WE KENNISMAKEN?",
+            "value": "05 — ZULLEN WE KENNISMAKEN?"
+          },
+          {
+            "key": "2",
+            "label": "Titel: Voelt dit als",
+            "value": "Voelt dit als"
+          },
+          {
+            "key": "3",
+            "label": "Label: jullie verhaal?",
+            "value": "jullie verhaal?"
+          },
+          {
+            "key": "4",
+            "label": "Tekst: Vertel me over jullie trouwdag, datum en locatie",
+            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt — en wat ik voor jullie kan betekenen."
+          },
+          {
+            "key": "5",
+            "label": "Knop / link: Vertel me jullie plannen",
+            "value": "Vertel me jullie plannen"
+          },
+          {
+            "key": "6",
+            "label": "Label: Vrijblijvend kennismaken · gewoon kijken of het ",
+            "value": "Vrijblijvend kennismaken · gewoon kijken of het klikt"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "foto-75c93a94397c",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "contact.html"
+          }
+        ]
+      }
+    }
+  ]
+}

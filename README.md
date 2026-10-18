@@ -1,32 +1,49 @@
 # Studio Neeltje — nieuwe website
 
-Dit is de testsite voor de nieuwe website, die uiteindelijk op studioneeltje.com
-bij een nog te kiezen hostingprovider komt. GitHub Pages publiceert nu de
-testversie vanuit `main`, met de hoofdmap als bron.
+Living Canvas-testsite met een statische publieke website, Puck als visuele
+paginabouwer en Sveltia voor inhoud en instellingen.
 
-## Pagina's en gedeelde opmaak
+## Beheren
 
-- `index.html` is de homepage; `nieuwe-site.html` blijft beschikbaar als alias.
-- `preview-pagina.html?pagina=reportages` en de overige `pagina`-waarden tonen
-  de subpagina's. De losse reportagepagina's blijven ook beschikbaar.
-- Alleen Living Canvas is actief. Oude `stijl`-links houden hun pagina en anker,
-  maar kunnen geen andere ontwerpvariant meer activeren.
-- `components/site-header.html` is de bron van het gedeelde menu.
-- `assets/site.css` en `assets/site.js` verzorgen de gedeelde header en het
-  mobiele menu. De header is al in de HTML aanwezig en hoeft niet opgehaald
-  te worden tijdens het laden van een pagina.
+Zie [BEHEER.md](BEHEER.md) voor de Nederlandstalige handleiding en
+[TODO.md](TODO.md) voor het resterende werk.
 
-Na wijzigingen aan de headerbron: voer `python3 scripts/sync-header.py` uit om
-alle pagina's bij te werken. Voor een lokaal voorbeeld: `python3 -m http.server
-4173 --bind 127.0.0.1`, open daarna http://127.0.0.1:4173/.
+## Structuur
 
-Alle lokale bestandsverwijzingen zijn relatief zodat ze zowel onder de
-GitHub Pages-repository als op een toekomstig hoofddomein kunnen werken.
-De huidige foto's verwijzen grotendeels naar Wix; de definitieve mediaopslag
-moet nog worden gekozen. Bewaar de lokale afbeeldingbestanden in de hoofdmap.
+- `content/pages`: Puck-pagina’s en de eigen inhoud per blok.
+- `content/stories`, `content/articles`: inhoud beheerd via Sveltia.
+- `content/media`: gedeelde foto- en videogegevens, inclusief standaardfocus.
+- `content/settings`: gedeelde huisstijl, menu, footer en beeldverwerking.
+- `media/originals`: ongewijzigde bronnen; nooit handmatig overschrijven.
+- `site/blocks.json`, `site/theme.css`: bestaande vormgeving en bloktemplates.
+- `src/editor`: Puck, mediabeheer, uitsnede-editor en GitHub-concepten.
+- `src/shared`: renderer voor website en Puck; één implementatie voor uitsneden.
+- `scripts/process-media.mjs`: Sharp en FFmpeg, met herbruikbare afgeleiden.
+- `scripts/build.mjs`: valideert inhoud en bouwt statische pagina’s + editors.
+- `assets/blocks-runtime.js`: toegankelijke galerijen en animaties per blok.
 
-## Vervolg
+De HTML-bestanden in de repository-root zijn de vorige statische versie ter
+referentie. De publicatie gebruikt uitsluitend de gegenereerde map `dist`.
+Nieuwe wijzigingen gebeuren in `content`, `site`, `src` en `assets`.
 
-Zie [de todo-lijst](TODO.md). Puck is de gewenste visuele bouwer; de CMS-keuze
-staat nog open. Formulierverzending, nieuwsbrief en beschikbaarheid zijn nog
-geen aangesloten productiefuncties. Pic-Time staat los van dit project.
+## Lokaal bouwen
+
+Vereist Node 24 en pnpm 11.25.0. `pnpm install --frozen-lockfile`, vervolgens
+`pnpm build`. Bekijk `dist` via een lokale webserver (`pnpm preview`).
+`pnpm dev` is uitsluitend voor de editorcode; maak eerst de publieke databundel
+met een volledige build. Open de website niet rechtstreeks als `file://`.
+
+## Publicatie
+
+GitHub Pages gebruikt **GitHub Actions** als bron. De workflow `website.yml`
+bouwt en verwerkt media bij wijzigingen in `main`. Een mislukte build publiceert
+niets. Concepten komen op branches met pull requests en krijgen een bouwcontrole
+en een downloadbaar preview-artifact. De Puck-publicatieknop vereist een geslaagde
+bouwcontrole van precies de opgeslagen versie.
+
+Bronbestanden blijven bewaard. Afgeleide media worden buiten Git opgeslagen in
+het publicatiepakket; `.cache/processed` wordt via Actions-cache hergebruikt.
+Er staan geen sleutels in de code. Het publieke deel heeft geen CMS-login nodig.
+
+GitHub Pages is de testomgeving. De uiteindelijke website komt op
+**studioneeltje.com** bij een later te kiezen hostingprovider.
