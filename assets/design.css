@@ -364,3 +364,10 @@
 #mast .sn-logo-crop img {position:static;display:block;width:64px;height:64px;max-width:100%;margin:0;padding:0;object-fit:contain}
 #mast .sn-brand {flex-basis:64px;width:64px;height:64px}
 @media(max-width:760px){#mast .sn-logo-crop,#mast .sn-logo-crop img{width:56px;height:56px}#mast .sn-brand{width:56px;height:56px}}
+/* Keep the two prominent actions together on the right. */
+#mast .sn-header-actions {margin-left:auto;justify-content:flex-end}
+#mast .sn-header-action {background:#fde6f2;color:#65001d;border:1.5px solid #65001d;font-weight:600}
+#mast .sn-header-action.nav-checklist {background:#65001d;color:#fde6f2}
+@media(max-width:760px) {
+  #mast .sn-header-actions {grid-template-columns:minmax(0,224px) minmax(90px,auto);justify-content:end}
+}
