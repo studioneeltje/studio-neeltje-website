@@ -1,0 +1,235 @@
+/* Shared Living Canvas header. Namespaced to keep page-specific CSS out. */
+:root {
+  --sn-wine: #65001d;
+  --sn-pink: #fde6f2;
+  --sn-orange: #ff4802;
+}
+
+#mast.sn-header {
+  position: relative;
+  z-index: 25;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  height: 78px;
+  margin: 0;
+  padding: 0 5vw;
+  border: 0;
+  border-bottom: 1px solid #65001d1c;
+  background: var(--sn-pink);
+  color: var(--sn-wine);
+  font: 400 17px/1.4 'Host Grotesk', sans-serif;
+}
+
+#mast .sn-brand {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 66px;
+  align-items: center;
+  width: 66px;
+  height: 66px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+}
+
+#mast .sn-logo-crop {
+  position: relative;
+  display: block;
+  width: 54px;
+  height: 54px;
+  overflow: hidden;
+}
+
+#mast .sn-logo-crop img {
+  position: absolute;
+  left: -16px;
+  top: -13px;
+  display: block;
+  width: 101px;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  transform: none;
+  filter: none;
+}
+
+#mast .sn-home-hint {
+  position: absolute;
+  left: 42px;
+  top: -4px;
+  padding: 7px 12px;
+  border-radius: 24px;
+  background: var(--sn-pink);
+  color: var(--sn-wine);
+  box-shadow: 0 5px 16px #65001d24;
+  font: 600 13px/1.2 'Host Grotesk', sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity .2s, transform .2s;
+  pointer-events: none;
+}
+
+#mast .sn-brand:hover .sn-home-hint,
+#mast .sn-brand:focus-visible .sn-home-hint {
+  opacity: 1;
+  transform: none;
+}
+
+#mast .sn-navigation {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  gap: clamp(16px, 2.2vw, 38px);
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  font: 400 17px/1.4 'Host Grotesk', sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+#mast .sn-navigation > a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin: 0;
+  padding: 8px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--sn-wine);
+  font: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s, background .2s, transform .2s;
+}
+
+#mast .sn-navigation > a:not(.nav-contact):not(.nav-checklist)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 6px;
+  height: 2px;
+  background: var(--sn-orange);
+  transition: right .25s;
+}
+
+#mast .sn-navigation > a:hover::after,
+#mast .sn-navigation > a[aria-current="page"]::after { right: 0; }
+
+#mast .sn-navigation > .nav-checklist,
+#mast .sn-navigation > .nav-contact {
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+#mast .sn-navigation > .nav-checklist {
+  background: var(--sn-orange);
+  color: var(--sn-wine);
+}
+
+#mast .sn-navigation > .nav-contact {
+  background: var(--sn-wine);
+  color: var(--sn-pink);
+}
+
+#mast .sn-navigation > .nav-checklist:hover {
+  background: var(--sn-wine);
+  color: var(--sn-pink);
+  transform: translateY(-2px);
+}
+
+#mast .sn-navigation > .nav-contact:hover {
+  background: var(--sn-orange);
+  color: var(--sn-wine);
+  transform: translateY(-2px);
+}
+
+#mast .sn-menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  margin: 0 0 0 auto;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 30px;
+  background: var(--sn-wine);
+  color: var(--sn-pink);
+  font: 600 17px/1.4 'Host Grotesk', sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  cursor: pointer;
+}
+
+#mast a:focus-visible,
+#mast button:focus-visible {
+  outline: 3px solid var(--sn-wine);
+  outline-offset: 4px;
+}
+
+@media (max-width: 1100px) {
+  #mast.sn-header {
+    flex-wrap: wrap;
+    gap: 0 20px;
+    height: auto;
+    min-height: 78px;
+    padding: 6px 5vw;
+  }
+
+  #mast .sn-navigation {
+    flex: 1 0 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px 24px;
+    padding: 12px 0 20px;
+  }
+
+  #mast[data-menu-ready] .sn-menu-toggle { display: inline-flex; }
+
+  #mast[data-menu-ready] .sn-navigation {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 5vw 28px;
+    background: var(--sn-pink);
+    border-bottom: 1px solid #65001d1c;
+    box-shadow: 0 18px 24px #65001d12;
+    max-height: calc(100svh - 78px);
+    overflow-y: auto;
+  }
+
+  #mast[data-menu-ready][data-menu-open] .sn-navigation { display: flex; }
+  #mast .sn-navigation > a { align-self: flex-start; font-size: 19px; }
+  #mast .sn-navigation > .nav-checklist,
+  #mast .sn-navigation > .nav-contact { margin-top: 4px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #mast *, #mast *::after { transition: none !important; }
+}
