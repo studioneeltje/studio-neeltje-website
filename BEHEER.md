@@ -123,3 +123,11 @@ voor **Op de foto, linksonder** of **Onder de foto**. Sla op en publiceer de wij
 de website wordt opnieuw opgebouwd. De instelling geldt voor dit blok op alle
 pagina's. Vernieuw Puck na publicatie om de nieuwe instelling daar ook te zien.
 De overige blokteksten en de foto zelf blijf je in Puck aanpassen.
+
+### Socialblok in Instagramstijl
+
+Bewerk in Puck het blok **Social**: kies de vier foto's, pas de bijschriften aan
+bij Teksten en stel via Links in waar elke foto naartoe gaat. De algemene
+Instagram-link staat in Sveltia bij Algemene instellingen. Het blok toont je
+zelfgekozen foto's in Instagramstijl; het is geen automatisch opgehaalde feed.
+De hart-, reactie-, deel- en bewaariconen zijn decoratief, zonder fictieve aantallen.

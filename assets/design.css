@@ -390,3 +390,35 @@
   .mode-canvas .canvas-intro[data-role="about-split-feature"] .about-photo-note {left:16px;bottom:16px;max-width:calc(100% - 32px);padding:12px 16px;font-size:23px}
   .mode-canvas .about-split-photo[data-note-position="below"] .about-photo-note {max-width:100%}
 }
+
+/* All header pills share the Menu + height and type scale. */
+#mast .sn-header-action,#mast .sn-menu-toggle {box-sizing:border-box;height:44px;min-height:44px;padding:8px 16px;font:600 17px/1.4 'Host Grotesk',sans-serif;border-radius:28px;gap:10px}
+#mast .sn-header-action>span {font-size:20px;line-height:1}
+@media(max-width:760px){#mast .sn-header-action{height:44px;min-height:44px;padding:6px 12px;font-size:17px}}
+@media(max-width:360px){#mast .sn-header-action{font-size:16px;line-height:1;padding:4px 10px}}
+/* An Instagram-inspired editorial feed, using our own selected images. */
+.mode-canvas .sn-instagram-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto;gap:20px;align-items:stretch}
+.mode-canvas .sn-instagram-post {min-width:0;display:flex;flex-direction:column;background:#fff;border:1px solid #65001d20;color:#65001d;box-shadow:0 8px 24px #65001d06}
+.mode-canvas .sn-post-header {display:flex;align-items:center;gap:10px;min-height:72px;padding:14px 12px}
+.mode-canvas .sn-post-header>img {display:block;position:static;width:32px;height:32px;min-width:32px;object-fit:contain;border-radius:50%}
+.mode-canvas .sn-post-header>div {display:grid;min-width:0;gap:2px}
+.mode-canvas .sn-post-header strong {font:600 15px/1.3 'Host Grotesk',sans-serif}
+.mode-canvas .sn-post-header>div>span {font:400 13px/1.4 'Host Grotesk',sans-serif;color:#77505e}
+.mode-canvas .sn-post-dots {margin-left:auto;font-size:17px;letter-spacing:1px}
+.mode-canvas .sn-post-photo {grid-column:auto;grid-row:auto;display:block;position:relative;aspect-ratio:4/5;width:100%;overflow:hidden;background:#e8f2ff}
+.mode-canvas .sn-post-photo::after {content:none;display:none}
+.mode-canvas .sn-post-photo img {display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mode-canvas .sn-post-photo:focus-visible {outline-offset:-5px!important}
+.mode-canvas .sn-post-actions {display:flex;align-items:center;gap:14px;padding:16px 14px 10px;pointer-events:none}
+.mode-canvas .sn-post-actions svg {display:block;width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.mode-canvas .sn-post-actions .sn-post-bookmark {margin-left:auto}
+.mode-canvas .sn-instagram-post .sn-post-caption {margin:0;padding:0 14px 20px;font:400 17px/1.5 'Host Grotesk',sans-serif!important;letter-spacing:0;text-wrap:pretty}
+.mode-canvas .sn-post-caption strong {display:block;margin-bottom:6px;font-weight:600}
+.mode-canvas .social-feature-bottom {margin-top:28px}
+@media(max-width:1100px){.mode-canvas .sn-instagram-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}}
+@media(max-width:600px){
+  .mode-canvas .sn-instagram-grid {display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:86%;grid-template-rows:auto;gap:16px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-left:0;padding:0 0 18px;scrollbar-color:#65001d #fde6f2;scrollbar-width:thin}
+  .mode-canvas .sn-instagram-post {scroll-snap-align:start}
+  .mode-canvas .sn-post-header {padding:14px}
+  .mode-canvas .social-feature-bottom {flex-wrap:wrap;gap:12px}
+}

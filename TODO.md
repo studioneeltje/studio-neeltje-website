@@ -168,3 +168,11 @@ bouwwens van Neeltje. Deze eerste bouwstap is op 18 oktober 2026 aangevraagd.
 - [x] Label veilig binnen de foto plaatsen, zonder negatieve verschuiving.
 - [x] In Sveltia labeltekst, aan/uit en plaatsing op/onder de foto kunnen instellen.
 - [x] Het label één beheerbron in Sveltia geven; geen dubbel bewerkbaar tekstveld in Puck.
+
+## Compacte menuknoppen en Instagramstijl — bouw goedgekeurd
+
+- [x] Checklist en Contact dezelfde hoogte (44 px), lettergrootte en compacte padding als Menu + geven.
+- [x] Het socialblok als vier Instagramachtige posts opmaken, met profielregel, foto, pictogrammen en bijschrift.
+- [x] Bestaande foto's, bijschriften en links bewerkbaar houden in Puck.
+- [x] Op mobiel een horizontaal veegbare reeks posts gebruiken.
+- [x] Geen verzonnen likes, reacties of live-feedkoppeling tonen; pictogrammen zijn decoratief.
