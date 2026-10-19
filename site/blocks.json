@@ -273,7 +273,7 @@
   },
   "Availability": {
     "label": "Datumaanvraag",
-    "html": "<section class=\"availability-check\" id=\"datumcheck\" aria-labelledby=\"availability-title\"><div class=\"availability-copy\"><div class=\"section-tag\">{{t:0}}</div><h2 id=\"availability-title\">{{t:1}}<br><em>{{t:2}}</em></h2><p>{{t:3}}</p></div><form class=\"availability-form\" id=\"availabilityForm\"><label for=\"availabilityDate\">{{t:4}}</label><div class=\"availability-form-row\"><input id=\"availabilityDate\" name=\"weddingDate\" type=\"date\" required=\"\" aria-describedby=\"availability-note availability-status\"><button type=\"submit\">{{t:5}} <span aria-hidden=\"true\">↗</span></button></div><small id=\"availability-note\">{{t:6}}</small><p class=\"availability-status\" id=\"availability-status\" aria-live=\"polite\" hidden=\"\"></p></form></section>",
+    "html": "<section class=\"availability-check\" id=\"datumcheck\" aria-labelledby=\"availability-title\"><div class=\"availability-copy\"><div class=\"section-tag\">{{t:0}}</div><h2 id=\"availability-title\">{{t:1}}<br><em>{{t:2}}</em></h2><p>{{t:3}}</p></div><form class=\"availability-form\" id=\"availabilityForm\"><label for=\"availabilityDate\">{{t:4}}</label><div class=\"availability-form-row\"><input id=\"availabilityDate\" name=\"weddingDate\" type=\"date\" required=\"\" aria-describedby=\"availability-note availability-status\"></div><label class=\"availability-email-label\">Jullie e-mailadres<input name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"jullie@email.nl\" required></label><button type=\"submit\">{{t:5}} <span aria-hidden=\"true\">↗</span></button><small id=\"availability-note\">{{t:6}}</small><p class=\"availability-status\" id=\"availability-status\" aria-live=\"polite\" hidden=\"\"></p></form></section>",
     "defaults": {
       "texts": [
         {
@@ -846,68 +846,12 @@
     }
   },
   "Review": {
-    "label": "Review",
-    "html": "<section class=\"truus-review\" aria-label=\"Review van Jeroen en Martine\">\n  <div class=\"review-top\"><span>{{t:0}}</span><span>{{t:1}}</span></div>\n  <blockquote class=\"review-quote\"><span class=\"review-line\">{{t:2}}</span><span class=\"review-line\">{{t:3}}</span><span class=\"review-line\">{{t:4}} <span class=\"review-marker\">{{t:5}}</span> <span class=\"review-marker\">{{t:6}}</span></span></blockquote>\n  <details class=\"review-more\"><summary>{{t:7}} <span aria-hidden=\"true\">+</span></summary><p>{{t:8}}</p></details>\n  <div class=\"review-credit\"><span>{{t:9}}</span><span>{{t:10}}</span></div>\n</section>",
+    "label": "Losse reviewkaarten uit Sveltia",
+    "html": "",
     "defaults": {
-      "texts": [
-        {
-          "key": "0",
-          "label": "Label: WOORDEN VAN EEN BRUIDSPAAR",
-          "value": "WOORDEN VAN EEN BRUIDSPAAR"
-        },
-        {
-          "key": "1",
-          "label": "Label: JEROEN & MARTINE / 01",
-          "value": "JEROEN & MARTINE / 01"
-        },
-        {
-          "key": "2",
-          "label": "Label: De mooiste dag van je dromen",
-          "value": "De mooiste dag van je dromen"
-        },
-        {
-          "key": "3",
-          "label": "Label: met de liefde van je leven,",
-          "value": "met de liefde van je leven,"
-        },
-        {
-          "key": "4",
-          "label": "Label: daar wil je",
-          "value": "daar wil je"
-        },
-        {
-          "key": "5",
-          "label": "Label: Neeltje",
-          "value": "Neeltje"
-        },
-        {
-          "key": "6",
-          "label": "Label: bij hebben!",
-          "value": "bij hebben!"
-        },
-        {
-          "key": "7",
-          "label": "Label: Lees de volledige review",
-          "value": "Lees de volledige review"
-        },
-        {
-          "key": "8",
-          "label": "Tekst: Haar betrokkenheid, professionaliteit en creativ",
-          "value": "Haar betrokkenheid, professionaliteit en creative brein maakte voor ons de fotoreportage (wat stiekem best spannend is) ontspannen en fun! Neeltje wist ook onze speciale momenten van de ceremonie en receptie perfect vast te leggen. Het resultaat? Liefdevolle, prachtige foto’s en video's die ons helemaal terugbrengen naar onze dag."
-        },
-        {
-          "key": "9",
-          "label": "Label: Jeroen en Martine Stroomberg",
-          "value": "Jeroen en Martine Stroomberg"
-        },
-        {
-          "key": "10",
-          "label": "Label: ERVARING VAN EEN BRUIDSPAAR",
-          "value": "ERVARING VAN EEN BRUIDSPAAR"
-        }
-      ],
-      "images": [],
-      "links": []
+      "eyebrow": "LIEVE WOORDEN / VAN BRUIDSPAREN",
+      "title": "Wat zij",
+      "emphasis": "ervan vinden."
     }
   },
   "Wall": {
@@ -1647,8 +1591,8 @@
     }
   },
   "Intro": {
-    "label": "Pagina-intro",
-    "html": "<section class=\"sn-page-intro\"><div class=\"section-tag\">{{t:0}}</div><h1>{{t:1}}<br><em>{{t:2}}</em></h1><p>{{t:3}}</p></section>",
+    "label": "Redactionele collage-header",
+    "html": "<section class=\"sn-collage-header\"><div class=\"sn-collage-copy\"><div class=\"section-tag\">{{t:0}}</div><h1>{{t:1}}<br><em>{{t:2}}</em></h1><p>{{t:3}}</p></div><div class=\"sn-collage-photos\"><figure class=\"sn-collage-back\">{{image:0}}</figure><figure class=\"sn-collage-main\">{{image:1}}</figure><figure class=\"sn-collage-detail\">{{image:2}}</figure></div></section>",
     "defaults": {
       "texts": [
         {
@@ -1672,7 +1616,29 @@
           "value": "Een dag vol momenten om te bewaren."
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "key": "0",
+          "label": "Foto achteraan",
+          "mediaId": "foto-26fee13582a7",
+          "desktop": null,
+          "mobile": null
+        },
+        {
+          "key": "1",
+          "label": "Hoofdfoto",
+          "mediaId": "foto-d5f77408f803",
+          "desktop": null,
+          "mobile": null
+        },
+        {
+          "key": "2",
+          "label": "Detailfoto",
+          "mediaId": "foto-6f5e773ded94",
+          "desktop": null,
+          "mobile": null
+        }
+      ],
       "links": []
     }
   },
@@ -1762,6 +1728,31 @@
       "eyebrow": "STUDIO NEELTJE",
       "title": "Jullie verhaal",
       "body": "Vertel hier jullie verhaal."
+    }
+  },
+  "InfoCards": {
+    "label": "Twee informatiekaarten uit Sveltia",
+    "html": "",
+    "defaults": {
+      "eyebrow": "VOOR JULLIE DAG. EN DAARNA.",
+      "title": "Volop beleven.",
+      "emphasis": "Mooi bewaren."
+    }
+  },
+  "Journey": {
+    "label": "Samen op weg — compacte stappenbalk",
+    "html": "",
+    "defaults": {
+      "eyebrow": "VAN EEN EERSTE HALLO TOT JULLIE HERINNERINGEN",
+      "title": "Samen op weg.",
+      "emphasis": "Helemaal jullie."
+    }
+  },
+  "ThankYou": {
+    "label": "Bevestigingspagina",
+    "html": "",
+    "defaults": {
+      "kind": "contact"
     }
   }
 }

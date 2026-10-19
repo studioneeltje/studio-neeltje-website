@@ -131,3 +131,13 @@ bij Teksten en stel via Links in waar elke foto naartoe gaat. De algemene
 Instagram-link staat in Sveltia bij Algemene instellingen. Het blok toont je
 zelfgekozen foto's in Instagramstijl; het is geen automatisch opgehaalde feed.
 De hart-, reactie-, deel- en bewaariconen zijn decoratief, zonder fictieve aantallen.
+
+### Achtergrond en tekstkleur per blok
+
+Open een pagina in **Puck**, selecteer een blok en kies bovenaan bij
+**Achtergrond & tekstkleur** één kleurvlak: **Wit**, **Blauw**, **Roze** of
+**Donkerrood**. De tekst wordt automatisch donkerrood op lichte vlakken en roze
+op donkerrood. Accenten blijven rood-oranje. Kaarten en formuliervlakken houden
+hun eigen leesbare kleurcombinatie. De foto in een header blijft zichtbaar.
+Bekijk je concept, sla het op en publiceer het zoals andere paginawijzigingen.
+Bestaande blokken behouden hun opmaak totdat je een kleur kiest.

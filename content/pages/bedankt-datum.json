@@ -1,0 +1,20 @@
+{
+  "id": "bedankt-datum",
+  "title": "Bevestiging — Datumaanvraag",
+  "root": {
+    "props": {
+      "title": "Bevestiging — Datumaanvraag",
+      "description": "Studio Neeltje — volgende stap."
+    }
+  },
+  "content": [
+    {
+      "type": "ThankYou",
+      "props": {
+        "id": "bedankt-datum-content",
+        "kind": "availability",
+        "background": "pink"
+      }
+    }
+  ]
+}

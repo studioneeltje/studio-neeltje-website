@@ -1,3 +1,8 @@
+import {prepareForms} from './forms.mjs';
+import {journeyMarkup,thankYouMarkup} from './experience.mjs';
+import {infoCardsMarkup,reviewCardsMarkup,removeEmptyButtons} from './editorial.mjs';
+import {articleReadTime} from './article-data.mjs';
+import {BACKGROUNDS} from './themes.mjs';
 import {escapeHTML as e, safeURL, imageMarkup, videoMarkup, assetURL} from './media.mjs';
 
 export function renderBlock(block, context) {
@@ -5,7 +10,11 @@ export function renderBlock(block, context) {
   const spec = context.templates[block.type];
   if (!spec) throw new Error(`Onbekend blok: ${block.type}`);
   let html = spec.html;
-  if (block.type === 'Video') html = `<section class="sn-video-section"><div class="section-tag">${e(p.eyebrow)}</div><h2>${e(p.title)}</h2>${videoMarkup(p.mediaId,context,p)}</section>`;
+  if(block.type==='ThankYou') html=thankYouMarkup(p.kind||'contact',context);
+  else if(block.type==='Journey') html=journeyMarkup(p,context);
+  else if (block.type === 'InfoCards') html=infoCardsMarkup(p,context);
+  else if(block.type === 'Review') html=reviewCardsMarkup(p,context);
+  else if (block.type === 'Video') html = `<section class="sn-video-section"><div class="section-tag">${e(p.eyebrow)}</div><h2>${e(p.title)}</h2>${videoMarkup(p.mediaId,context,p)}</section>`;
   else if (block.type === 'Photo') html = `<section class="sn-photo-section" style="--sn-aspect:${e(p.aspect || '3/2')}">${imageMarkup(p.image,context,{aspect:p.aspect || '3/2'})}${p.caption ? `<p>${e(p.caption)}</p>` : ''}</section>`;
   else if (block.type === 'Text') html = `<section class="sn-text-section"><div class="section-tag">${e(p.eyebrow)}</div><h2>${e(p.title)}</h2><p>${e(p.body).replace(/\n/g,'<br>')}</p></section>`;
   else {
@@ -16,15 +25,14 @@ export function renderBlock(block, context) {
     if (block.type === 'Stories') {
       const stories = context.stories.filter(s => s.published !== false);
       html = html.replace(/<!-- stories:start -->[\s\S]*?<!-- stories:end -->/, `<!-- stories:start -->${stories.map((story,i)=>{
-        const second=story.hoverCover || story.gallery?.find(id=>id!==story.cover);
-        const secondary=second && second!==story.cover && context.media.some(asset=>asset.id===second);
-        return `<a class="canvas-project sn-story-card${secondary?' has-second-photo':''}" href="reportage-${e(story.id)}.html"><div class="sn-story-images">${imageMarkup({...p.crops?.[story.id],mediaId:story.cover,sizes:'(max-width: 760px) 90vw, (max-width: 1280px) 45vw, 588px'},context,{className:'sn-story-cover-image'})}${secondary?imageMarkup({...p.crops?.[story.id+'-hover'],mediaId:second,sizes:'(max-width: 760px) 90vw, (max-width: 1280px) 45vw, 588px',alt:''},context,{className:'sn-story-hover-image'}):''}</div><div class="sn-story-card-meta"><span>${String(i+1).padStart(2,'0')} / ${e(story.location || 'Trouwreportage')}</span><b>${e(story.title)}</b><i aria-hidden="true">↗</i></div></a>`;
+        return `<a class="canvas-project sn-story-row" href="reportage-${e(story.id)}.html"><span class="sn-story-index">${String(i+1).padStart(2,'0')}</span><b>${e(story.title)}</b><span class="sn-story-location">${e(story.location||'Trouwreportage')}</span><i aria-hidden="true">↗</i><div class="sn-story-hover-photo">${imageMarkup({...p.crops?.[story.id],mediaId:story.cover,sizes:'(max-width: 760px) 90vw, 420px'},context)}</div></a>`;
       }).join('')}<!-- stories:end -->`);
     }
     if (block.type === 'Journal') {
-      html = html.replace(/<!-- articles:start -->[\s\S]*?<!-- articles:end -->/, `<!-- articles:start -->${context.articles.filter(a=>a.published!==false).map((article,i)=>`<a class="journal-card" href="artikel-${e(article.id)}.html"><div class="journal-card-visual">${imageMarkup({...p.crops?.[article.id],mediaId:article.cover,sizes:'(max-width: 780px) 88vw, 30vw'},context)}</div><div class="journal-card-meta"><span>${e(article.category)}</span><span>${e(article.readTime || '5 min lezen')}</span></div><h3>${e(article.title)}</h3><span class="journal-card-link"><span class="sn-link-label">Lees het artikel</span> <i aria-hidden="true">↗</i></span></a>`).join('')}<!-- articles:end -->`);
+      html = html.replace(/<!-- articles:start -->[\s\S]*?<!-- articles:end -->/, `<!-- articles:start -->${context.articles.filter(a=>a.published!==false).map((article,i)=>`<a class="journal-card" href="artikel-${e(article.id)}.html">${article.cover?`<div class="journal-card-visual">${imageMarkup({...p.crops?.[article.id],mediaId:article.cover,sizes:'(max-width: 780px) 88vw, 30vw'},context)}</div>`:''}<div class="journal-card-meta"><span>${e(article.category)}</span><span>${articleReadTime(article)}</span></div><h3>${e(article.title)}</h3><span class="journal-card-link"><span class="sn-link-label">Lees het artikel</span> <i aria-hidden="true">↗</i></span></a>`).join('')}<!-- articles:end -->`);
     }
   }
+  if(block.type==='ContactForm'&&p.formKind==='checklist')html=html.replace(/<label[^>]*>[\s\S]*?<\/label>/g,label=>/name="(?:date|location|message)"/.test(label)?'':label);
   if (block.type === 'About') {
     const note=context.settings.aboutPhotoNote;
     const position=note?.position==='below'?'below':'inside';
@@ -35,11 +43,12 @@ export function renderBlock(block, context) {
     }
   }
   if (block.type === 'Social') html = html.replace(/href="https:\/\/(?:www\.)?instagram\.com[^"]*"/g, `href="${e(safeURL(context.settings.instagram))}"`);
+  html=prepareForms(removeEmptyButtons(html),context.settings,{preview:context.preview,defaultKind:p.formKind||'contact'});
   const id = String(p.id || block.type).replace(/[^\w-]/g,'');
   // Original named anchors remain as data roles. Every instance gets unique IDs.
   html = html.replace(/\bid="([^"]+)"/g,(_,old)=>`id="${e(id)}-${e(old)}" data-role="${e(old)}"`)
     .replace(/(aria-labelledby|aria-describedby|aria-controls|for)="([^"]+)"/g,(_,attr,ids)=>`${attr}="${ids.split(' ').map(old=>`${id}-${old}`).join(' ')}"`);
-  return `<div data-sn-block="${e(block.type)}" data-block-id="${e(id)}">${html}</div>`;
+  return `<div data-sn-block="${e(block.type)}" data-block-id="${e(id)}"${BACKGROUNDS.includes(p.background)?` data-sn-theme="${p.background}"`:''}>${html}</div>`;
 }
 
 export function renderPage(page, context) {
@@ -52,7 +61,7 @@ export function renderPage(page, context) {
 }
 
 export function renderHeader(settings) {
-  const items = settings.navigation || [];
+  const items = (settings.navigation || []).filter(item=>item.label?.trim()&&safeURL(item.href,'')&&safeURL(item.href,'')!=='#');
   const menu=items.filter(item=>item.kind==='link');
   const actions=items.filter(item=>item.kind!=='link');
   const link=item=>`<a data-page="${e(item.href?.replace(/\.html.*$/,''))}" href="${e(safeURL(item.href))}">${e(item.label)}</a>`;
@@ -61,5 +70,5 @@ export function renderHeader(settings) {
 
 export function renderFooter(settings) {
   const f = settings.footer;
-  return `<footer class="site-footer" id="footer"><div class="footer-stripe-line" aria-hidden="true"></div><div class="footer-top"><div><div class="footer-kicker">STUDIO NEELTJE / NIEUWSBRIEF</div><h2>${e(f.title)}<br><em>${e(f.emphasis)}</em></h2></div><div class="footer-cta-side"><p>${e(f.copy)}</p><form class="footer-newsletter-form" data-form="newsletter"><label for="newsletter-email">Jullie e-mailadres</label><input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="Jullie e-mailadres" required><button class="footer-cta" type="submit">${e(f.button)} <i aria-hidden="true">↗</i></button><p data-form-status hidden aria-live="polite"></p></form></div></div><div class="footer-menu"><div><h3>Ontdek</h3><nav aria-label="Ontdek">${settings.navigation.filter(n=>n.kind==='link').map(n=>`<a href="${e(safeURL(n.href))}">${e(n.label)}</a>`).join('')}</nav></div><div><h3>Studio</h3><nav><a href="weddingschecklist.html">Gratis trouwchecklist</a><a href="contact.html">Contact</a></nav></div><div><h3>Contact</h3><nav>${settings.email ? `<a href="mailto:${e(settings.email)}">${e(settings.email)}</a>` : '<a href="contact.html">Kennismaken ↗</a>'}${settings.phone ? `<a href="tel:${e(settings.phone.replace(/[^+\d]/g,''))}">${e(settings.phone)}</a>` : ''}<a href="#mast">Terug naar boven ↑</a></nav></div></div><div class="footer-bottom"><a href="index.html">Studio Neeltje</a><span>ECHT · ONGEDWONGEN · HELEMAAL JULLIE</span><span>© ${new Date().getFullYear()}</span></div></footer>`;
+  return prepareForms(`<footer class="site-footer" id="footer"><div class="footer-stripe-line" aria-hidden="true"></div><div class="footer-top"><div><div class="footer-kicker">STUDIO NEELTJE / NIEUWSBRIEF</div><h2>${e(f.title)}<br><em>${e(f.emphasis)}</em></h2></div><div class="footer-cta-side"><p>${e(f.copy)}</p><form class="footer-newsletter-form" data-form="newsletter"><label for="newsletter-email">Jullie e-mailadres</label><input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="Jullie e-mailadres" required><button class="footer-cta" type="submit">${e(f.button)} <i aria-hidden="true">↗</i></button><p data-form-status hidden aria-live="polite"></p></form></div></div><div class="footer-menu"><div><h3>Ontdek</h3><nav aria-label="Ontdek">${settings.navigation.filter(n=>n.kind==='link').map(n=>`<a href="${e(safeURL(n.href))}">${e(n.label)}</a>`).join('')}</nav></div><div><h3>Studio</h3><nav><a href="weddingschecklist.html">Gratis trouwchecklist</a><a href="contact.html">Contact</a></nav></div><div><h3>Contact</h3><nav>${settings.email ? `<a href="mailto:${e(settings.email)}">${e(settings.email)}</a>` : '<a href="contact.html">Kennismaken ↗</a>'}${settings.phone ? `<a href="tel:${e(settings.phone.replace(/[^+\d]/g,''))}">${e(settings.phone)}</a>` : ''}<a href="#mast">Terug naar boven ↑</a></nav></div></div><div class="footer-bottom"><a href="index.html">Studio Neeltje</a><span>ECHT · ONGEDWONGEN · HELEMAAL JULLIE</span><span>© ${new Date().getFullYear()}</span></div></footer>`,settings);
 }

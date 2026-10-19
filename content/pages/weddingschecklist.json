@@ -35,8 +35,31 @@
             "value": "Een dag vol momenten om te bewaren."
           }
         ],
-        "images": [],
-        "links": []
+        "images": [
+          {
+            "key": "0",
+            "label": "Foto achteraan",
+            "mediaId": "foto-26fee13582a7",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Hoofdfoto",
+            "mediaId": "foto-d5f77408f803",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Detailfoto",
+            "mediaId": "foto-6f5e773ded94",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "background": "white"
       }
     },
     {
@@ -156,37 +179,37 @@
           {
             "key": "0",
             "label": "Label: EVEN AFSTEMMEN?",
-            "value": "EVEN AFSTEMMEN?"
+            "value": "EEN FIJNE START VOOR JULLIE PLANNING"
           },
           {
             "key": "1",
             "label": "Titel: Vertel me",
-            "value": "Vertel me"
+            "value": "Jullie checklist."
           },
           {
             "key": "2",
             "label": "Label: jullie plannen.",
-            "value": "jullie plannen."
+            "value": "Meer rust."
           },
           {
             "key": "3",
             "label": "Tekst: Een datum, een vraag of gewoon even kennismaken?",
-            "value": "Een datum, een vraag of gewoon even kennismaken? Laat een bericht achter. Ik lees graag wat jullie in gedachten hebben."
+            "value": "Vraag de gratis trouwchecklist aan met jullie namen en e-mailadres."
           },
           {
             "key": "4",
             "label": "Label: 01 / KENNISMAKEN",
-            "value": "01 / KENNISMAKEN"
+            "value": "GRATIS VOOR JULLIE"
           },
           {
             "key": "5",
             "label": "Label: Vrijblijvend en persoonlijk",
-            "value": "Vrijblijvend en persoonlijk"
+            "value": "STAP VOOR STAP OVERZICHT"
           },
           {
             "key": "6",
             "label": "Label: STUUR NEELTJE EEN BERICHT",
-            "value": "STUUR NEELTJE EEN BERICHT"
+            "value": "DE GRATIS TROUWCHECKLIST"
           },
           {
             "key": "7",
@@ -226,7 +249,7 @@
           {
             "key": "14",
             "label": "Label: Verstuur mijn bericht",
-            "value": "Verstuur mijn bericht"
+            "value": "Vraag de checklist aan"
           },
           {
             "key": "15",
@@ -240,7 +263,8 @@
           }
         ],
         "images": [],
-        "links": []
+        "links": [],
+        "formKind": "checklist"
       }
     }
   ]

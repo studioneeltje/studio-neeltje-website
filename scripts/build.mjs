@@ -1,3 +1,4 @@
+import {formSettingsScript} from '../src/shared/forms.mjs';
 import fs from'node:fs/promises';
 import path from'node:path';
 import{createHash}from'node:crypto';
@@ -8,13 +9,14 @@ import{marked}from'marked';
 import sanitizeHTML from'sanitize-html';
 import{processMedia}from'./process-media.mjs';
 import{renderPage,renderHeader,renderFooter}from'../src/shared/render.mjs';
+import {renderArticle} from './render-article.mjs';
 import{imageMarkup,escapeHTML as e}from'../src/shared/media.mjs';
 
 export async function loadCollection(name,root=process.cwd()){
  const dir=path.join(root,'content',name);const names=(await fs.readdir(dir)).filter(n=>n.endsWith('.json')).sort();return Promise.all(names.map(async n=>JSON.parse(await fs.readFile(path.join(dir,n),'utf8'))));
 }
 const read=async p=>JSON.parse(await fs.readFile(p,'utf8'));
-const assetVersion=createHash('sha256').update((await Promise.all(['site/theme.css','assets/site.css','assets/blocks.css','assets/design.css','assets/site.js','assets/blocks-runtime.js'].map(p=>fs.readFile(p,'utf8')))).join('\n')).digest('hex').slice(0,12);
+const assetVersion=createHash('sha256').update((await Promise.all(['site/theme.css','assets/site.css','assets/blocks.css','assets/design.css','assets/site.js','assets/blocks-runtime.js','assets/forms.js'].map(p=>fs.readFile(p,'utf8')))).join('\n')).digest('hex').slice(0,12);
 process.env.VITE_ASSET_VERSION=assetVersion;
 const out='dist';
 await fs.rm(out,{recursive:true,force:true});
@@ -32,7 +34,19 @@ for(const page of pages)for(const block of page.content){
  for(const image of selections)if(!media.some(a=>a.id===image?.mediaId&&a.kind==='image'))throw Error(`${page.title}: kies een bestaande foto in ${block.type}.`);
  if(block.type==='Video'&&!media.some(a=>a.id===block.props.mediaId&&a.kind==='video'))throw Error(`${page.title}: kies een bestaande video.`);
 }
-for(const record of [...stories,...articles])if(record.published!==false){for(const id of [record.cover,...(record.hoverCover?[record.hoverCover]:[]),...(record.gallery||[])])if(!media.some(a=>a.id===id&&a.kind==='image'))throw Error(`${record.title}: een foto ontbreekt in de mediabibliotheek.`);}
+for(const record of [...stories,...articles])if(record.published!==false){for(const id of [record.cover,record.hoverCover,...(record.gallery||[]),...(record.sections||[]).flatMap(s=>[s.image,s.secondImage])].filter(Boolean))if(!media.some(a=>a.id===id&&a.kind==='image'))throw Error(`${record.title}: een foto ontbreekt in de mediabibliotheek.`);}
+settings.editorial=await read('content/settings/editorial.json');
+settings.experience=await read('content/settings/experience.json');
+settings.forms=await read('content/settings/forms.json');
+if(settings.forms.checklistFile){
+ const source=path.resolve(String(settings.forms.checklistFile).replace(/^\//,''));
+ const base=path.resolve('media/originals')+path.sep;
+ if(!source.startsWith(base)||path.extname(source).toLowerCase()!=='.pdf')throw Error('Kies voor de trouwchecklist een PDF uit de uploads.');
+ const real=await fs.realpath(source);if(!real.startsWith(base))throw Error('Ongeldig checklistbestand.');
+ await fs.mkdir(path.join(out,'downloads'),{recursive:true});await fs.copyFile(real,path.join(out,'downloads/trouwchecklist.pdf'));settings.forms.checklistFile='downloads/trouwchecklist.pdf';
+}
+if(settings.experience.author.image&&!media.some(a=>a.id===settings.experience.author.image&&a.kind==='image'))throw Error('De auteursfoto ontbreekt in de mediabibliotheek.');
+for(const item of [...settings.editorial.cards,...settings.editorial.reviews])if(item.image&&!media.some(a=>a.id===item.image&&a.kind==='image'))throw Error('Een foto bij de informatiekaarten of reviews ontbreekt.');
 const context={templates,settings,media,manifest,stories,articles};
 const roleNames=[...new Set(Object.values(templates).flatMap(t=>[...t.html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1])))];
 function blockSelectors(css){for(const id of roleNames)css=css.replace(new RegExp('#'+id+'(?=[\\s.:,{>+~\\[])','g'),`[data-role="${id}"]`);return css;}
@@ -41,17 +55,17 @@ function brandCSS(css){for(const[from,to]of Object.entries({'#65001d':settings.c
 await fs.mkdir(path.join(out,'assets'),{recursive:true});
 await fs.writeFile(path.join(out,'assets/theme.css'),brandCSS(blockSelectors((await fs.readFile('site/theme.css','utf8')).replace(/url\((["']?)(classic-photo-wall-v2\.png)\1\)/g,'url(../$2)'))));
 for(const name of ['site.css','blocks.css','design.css'])await fs.writeFile(path.join(out,'assets',name),brandCSS(await fs.readFile('assets/'+name,'utf8')));
-for(const name of ['site.js','blocks-runtime.js'])await fs.copyFile('assets/'+name,path.join(out,'assets',name));
+for(const name of ['site.js','blocks-runtime.js','forms.js'])await fs.copyFile('assets/'+name,path.join(out,'assets',name));
 for(const name of ['studio-neeltje-logo.png','studio-neeltje-logo.svg','classic-photo-wall-v2.png'])await fs.copyFile(name,path.join(out,name));
 await fs.writeFile(path.join(out,'.nojekyll'),'');
 const fonts='https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Host+Grotesk:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Homemade+Apple&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap';
-function documentHTML(title,description,content){return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(title)}</title><meta name="description" content="${e(description)}"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="${fonts}" rel="stylesheet"><link rel="stylesheet" href="assets/theme.css?v=${assetVersion}"><link rel="stylesheet" href="assets/site.css?v=${assetVersion}"><link rel="stylesheet" href="assets/blocks.css?v=${assetVersion}"><link rel="stylesheet" href="assets/design.css?v=${assetVersion}"><script src="assets/site.js?v=${assetVersion}" defer></script><script src="assets/blocks-runtime.js?v=${assetVersion}" defer></script><noscript><style>.review-line,.quote-note,.quote-handwritten,.portfolio-mosaic-item{opacity:1!important;transform:none!important;clip-path:none!important}</style></noscript></head><body class="theme-canvas sn-public">${renderHeader(settings)}<main id="main-content" tabindex="-1"><div class="mode mode-canvas active">${content}</div></main>${renderFooter(settings)}</body></html>`;}
+function documentHTML(title,description,content,{noindex=false}={}){return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(title)}</title><meta name="description" content="${e(description)}">${noindex?'<meta name="robots" content="noindex,follow">':''}<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="${fonts}" rel="stylesheet"><link rel="stylesheet" href="assets/theme.css?v=${assetVersion}"><link rel="stylesheet" href="assets/site.css?v=${assetVersion}"><link rel="stylesheet" href="assets/blocks.css?v=${assetVersion}"><link rel="stylesheet" href="assets/design.css?v=${assetVersion}"><script src="assets/site.js?v=${assetVersion}" defer></script><script src="assets/blocks-runtime.js?v=${assetVersion}" defer></script><script src="assets/forms.js?v=${assetVersion}" defer></script><noscript><style>.review-line,.quote-note,.quote-handwritten,.portfolio-mosaic-item{opacity:1!important;transform:none!important;clip-path:none!important}</style></noscript></head><body class="theme-canvas sn-public">${renderHeader(settings)}<main id="main-content" tabindex="-1"><div class="mode mode-canvas active">${content}</div></main>${renderFooter(settings)}${formSettingsScript(settings)}</body></html>`;}
 function fixLinks(html){const $=load(html);$('a').each((_,el)=>{const a=$(el),href=a.attr('href')||'';if(href.includes('preview-pagina.html?')){const url=new URL(href,'https://example.test/');const id=url.searchParams.get('pagina'),article=url.searchParams.get('artikel');const map={kasteel:'reportage-keukenhof',dengh:'reportage-dengh',bordeaux:'reportage-bordeaux',malaga:'reportage-malaga',checklist:'weddingschecklist'};a.attr('href',`${article?'artikel-'+article:map[id]||id||'reportages'}.html${url.hash}`);}if(a.closest('.orbit-card').length){const img=a.find('img');if(img.length)a.attr('href',img.attr('data-full-src')||img.attr('src'));}});return $.html();}
-for(const page of pages){const html=fixLinks(documentHTML(page.root?.props?.title||page.title,page.root?.props?.description||page.description||'',renderPage(page,context)));const file=page.id==='home'?'index.html':`${page.id}.html`;await fs.writeFile(path.join(out,file),html);if(page.id==='home')await fs.writeFile(path.join(out,'nieuwe-site.html'),html);}
+for(const page of pages){const html=fixLinks(documentHTML(page.root?.props?.title||page.title,page.root?.props?.description||page.description||'',renderPage(page,context),{noindex:page.id.startsWith('bedankt-')}));const file=page.id==='home'?'index.html':`${page.id}.html`;await fs.writeFile(path.join(out,file),html);if(page.id==='home')await fs.writeFile(path.join(out,'nieuwe-site.html'),html);}
 function prose(value){return sanitizeHTML(marked.parse(String(value||''),{async:false}),{allowedTags:['p','br','h2','h3','h4','ul','ol','li','strong','em','a','blockquote'],allowedAttributes:{a:['href','title']},allowedSchemes:['https','http','mailto','tel']});}
 for(const [collection,prefix]of [[stories,'reportage'],[articles,'artikel']])for(const record of collection.filter(r=>r.published!==false)){
  if(!/^[a-z0-9][a-z0-9-]{0,80}$/.test(record.id))throw Error('Ongeldige URL voor een reportage of artikel.');
- const content=`<section class="sn-page-intro"><div class="section-tag">${e(record.location||record.category||'STUDIO NEELTJE')}</div><h1>${e(record.title)}</h1><p>${e(record.excerpt)}</p></section><div class="sn-story-cover">${imageMarkup({mediaId:record.cover},context,{eager:true})}</div><article class="sn-story-body">${prose(record.body)}</article>${record.gallery?`<section class="sn-story-gallery" aria-label="Fotogalerij">${record.gallery.map((id,i)=>`<button aria-label="Vergroot foto ${i+1}">${imageMarkup({mediaId:id},context)}</button>`).join('')}</section>`:''}<section class="sn-text-section"><a class="button" href="${prefix==='reportage'?'reportages':'journal'}.html">← Terug naar ${prefix==='reportage'?'reportages':'journal'}</a></section>`;
+ const content=prefix==='artikel'?renderArticle(record,context):`<section class="sn-page-intro"><div class="section-tag">${e(record.location||record.category||'STUDIO NEELTJE')}</div><h1>${e(record.title)}</h1><p>${e(record.excerpt)}</p></section><div class="sn-story-cover">${imageMarkup({mediaId:record.cover},context,{eager:true})}</div><article class="sn-story-body">${prose(record.body)}</article>${record.gallery?`<section class="sn-story-gallery" aria-label="Fotogalerij">${record.gallery.map((id,i)=>`<button aria-label="Vergroot foto ${i+1}">${imageMarkup({mediaId:id},context)}</button>`).join('')}</section>`:''}<section class="sn-text-section"><a class="button" href="${prefix==='reportage'?'reportages':'journal'}.html">← Terug naar ${prefix==='reportage'?'reportages':'journal'}</a></section>`;
  await fs.writeFile(path.join(out,`${prefix}-${record.id}.html`),documentHTML(record.title,record.excerpt,content));
  if(prefix==='reportage')await fs.writeFile(path.join(out,`pagina-reportage-${record.id}.html`),documentHTML(record.title,record.excerpt,content));
 }
