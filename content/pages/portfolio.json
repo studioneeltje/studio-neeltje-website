@@ -44,20 +44,20 @@
           {
             "key": "1",
             "label": "Hoofdfoto",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "foto-6f5e773ded94",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Detailfoto",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "foto-f5d8e85a877d",
             "desktop": null,
             "mobile": null
           }
         ],
         "links": [],
-        "background": "blue",
+        "background": "wine",
         "id": "Intro-545f9373-4903-4161-9676-cbc0fbe301d8"
       }
     },
@@ -205,7 +205,7 @@
             "href": "reportage-keukenhof.html"
           }
         ],
-        "background": "wine",
+        "background": "pink",
         "id": "StoryCarousel-7f5e9421-5311-458f-bedc-d9cb381add5a"
       }
     }
