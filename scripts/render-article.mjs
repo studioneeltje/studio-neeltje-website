@@ -33,7 +33,7 @@ export function renderArticle(record,context){
  const summary=(record.summary||[]).filter(s=>String(s).trim());if(!summary.length&&record.excerpt)summary.push(record.excerpt);
  const author=record.author||'Neeltje';
  const eligible=context.articles.filter(a=>a.id!==record.id&&a.published!==false);
- const selected=record.related?.length?record.related.map(id=>eligible.find(a=>a.id===id)).filter(Boolean):eligible.slice().sort((a,b)=>Number(b.category===record.category)-Number(a.category===record.category)).slice(0,3);
+ const selected=record.related?.length?record.related.map(id=>eligible.find(a=>a.id===id)).filter(Boolean).slice(0,3):eligible.slice().sort((a,b)=>Number(b.category===record.category)-Number(a.category===record.category)).slice(0,3);
  const cta=record.cta===undefined?{enabled:true,title:'Meer rust in jullie planning?',text:'De gratis trouwchecklist helpt jullie stap voor stap op weg.',label:'Ontdek de gratis trouwchecklist',href:'weddingschecklist.html'}:record.cta;
  const href=safeURL(cta?.href,'');const showCta=cta?.enabled!==false&&cta?.label?.trim()&&href;
  return `<div class="sn-article-progress" role="progressbar" aria-label="Leesvoortgang van dit artikel" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden><span></span></div>

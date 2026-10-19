@@ -25,7 +25,7 @@ export function renderBlock(block, context) {
       }).join('')}<!-- stories:end -->`);
     }
     if (block.type === 'Journal') {
-      html = html.replace(/<!-- articles:start -->[\s\S]*?<!-- articles:end -->/, `<!-- articles:start -->${context.articles.filter(a=>a.published!==false).map((article,i)=>`<a class="journal-card" href="artikel-${e(article.id)}.html"><div class="journal-card-visual">${imageMarkup({...p.crops?.[article.id],mediaId:article.cover,sizes:'(max-width: 780px) 88vw, 30vw'},context)}</div><div class="journal-card-meta"><span>${e(article.category)}</span><span>${articleReadTime(article)}</span></div><h3>${e(article.title)}</h3><span class="journal-card-link"><span class="sn-link-label">Lees het artikel</span> <i aria-hidden="true">↗</i></span></a>`).join('')}<!-- articles:end -->`);
+      html = html.replace(/<!-- articles:start -->[\s\S]*?<!-- articles:end -->/, `<!-- articles:start -->${context.articles.filter(a=>a.published!==false).map((article,i)=>`<a class="journal-card" href="artikel-${e(article.id)}.html">${article.cover?`<div class="journal-card-visual">${imageMarkup({...p.crops?.[article.id],mediaId:article.cover,sizes:'(max-width: 780px) 88vw, 30vw'},context)}</div>`:''}<div class="journal-card-meta"><span>${e(article.category)}</span><span>${articleReadTime(article)}</span></div><h3>${e(article.title)}</h3><span class="journal-card-link"><span class="sn-link-label">Lees het artikel</span> <i aria-hidden="true">↗</i></span></a>`).join('')}<!-- articles:end -->`);
     }
   }
   if (block.type === 'About') {
@@ -56,7 +56,7 @@ export function renderPage(page, context) {
 }
 
 export function renderHeader(settings) {
-  const items = settings.navigation || [];
+  const items = (settings.navigation || []).filter(item=>item.label?.trim()&&safeURL(item.href,'')&&safeURL(item.href,'')!=='#');
   const menu=items.filter(item=>item.kind==='link');
   const actions=items.filter(item=>item.kind!=='link');
   const link=item=>`<a data-page="${e(item.href?.replace(/\.html.*$/,''))}" href="${e(safeURL(item.href))}">${e(item.label)}</a>`;
