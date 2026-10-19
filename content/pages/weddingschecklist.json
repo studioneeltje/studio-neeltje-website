@@ -170,7 +170,7 @@
             "href": "over.html"
           }
         ],
-        "background": "white",
+        "background": "pink",
         "id": "About-d73ab92f-cfd0-4282-9343-86e042e94a73"
       }
     },
@@ -183,61 +183,6 @@
         },
         "id": "weddingschecklist-contents",
         "background": "white"
-      }
-    },
-    {
-      "type": "ChecklistAudience",
-      "props": {
-        "variant": "personal",
-        "openFirst": true,
-        "id": "weddingschecklist-audience",
-        "background": "pink"
-      }
-    },
-    {
-      "type": "Quote",
-      "props": {
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: 01 — TUSSEN DE MOMENTEN",
-            "value": "01 — TUSSEN DE MOMENTEN"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Jullie beleven de",
-            "value": "Ik was bang dat een "
-          },
-          {
-            "key": "2",
-            "label": "Label: dag",
-            "value": "checklist alleen maar extra druk zou geven"
-          },
-          {
-            "key": "3",
-            "label": "Titel: . Ik zie ook wat er tussendoor",
-            "value": ". Ik zie ook wat er tussendoor"
-          },
-          {
-            "key": "4",
-            "label": "Label: gebeurt.",
-            "value": "gebeurt."
-          },
-          {
-            "key": "5",
-            "label": "Label: met liefde gezien, Neeltje",
-            "value": ""
-          },
-          {
-            "key": "6",
-            "label": "Tekst: Een trouwdag bestaat uit meer dan de grote momen",
-            "value": "“Ik was bang dat een checklist alleen maar extra druk zou geven, maar dit deed juist het tegenovergestelde. Alles mocht, niets moest. Dat gaf ons vertrouwen in onze keuzes.”"
-          }
-        ],
-        "images": [],
-        "links": [],
-        "background": "wine",
-        "id": "Quote-d463cd32-b8e3-4cee-978b-1702d0994aa3"
       }
     },
     {
@@ -283,8 +228,63 @@
             "href": ""
           }
         ],
-        "background": "white",
+        "background": "blue",
         "id": "Method-bc47232b-fc4a-4d61-9159-8aa88c1e2078"
+      }
+    },
+    {
+      "type": "ChecklistAudience",
+      "props": {
+        "variant": "personal",
+        "openFirst": true,
+        "id": "weddingschecklist-audience",
+        "background": "wine"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 01 — TUSSEN DE MOMENTEN",
+            "value": "01 — TUSSEN DE MOMENTEN"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie beleven de",
+            "value": "Ik was bang dat een checklist alleen maar extra druk zou "
+          },
+          {
+            "key": "2",
+            "label": "Label: dag",
+            "value": "geven. "
+          },
+          {
+            "key": "3",
+            "label": "Titel: . Ik zie ook wat er tussendoor",
+            "value": " Ik zie ook wat er tussendoor"
+          },
+          {
+            "key": "4",
+            "label": "Label: gebeurt.",
+            "value": "gebeurt."
+          },
+          {
+            "key": "5",
+            "label": "Label: met liefde gezien, Neeltje",
+            "value": ""
+          },
+          {
+            "key": "6",
+            "label": "Tekst: Een trouwdag bestaat uit meer dan de grote momen",
+            "value": "“Ik was bang dat een checklist alleen maar extra druk zou geven, maar dit deed juist het tegenovergestelde. Alles mocht, niets moest. Dat gaf ons vertrouwen in onze keuzes.”"
+          }
+        ],
+        "images": [],
+        "links": [],
+        "background": "pink",
+        "id": "Quote-d463cd32-b8e3-4cee-978b-1702d0994aa3"
       }
     },
     {
@@ -381,7 +381,7 @@
         "links": [],
         "id": "weddingschecklist-contactform-2",
         "formKind": "checklist",
-        "background": "pink"
+        "background": "white"
       }
     },
     {
