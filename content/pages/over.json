@@ -114,7 +114,7 @@
             "href": "over.html"
           }
         ],
-        "background": "pink"
+        "background": "white"
       }
     },
     {
@@ -229,7 +229,7 @@
         ],
         "links": [],
         "id": "Wall-114c831b-0110-4314-9823-6ab3fbe35751",
-        "background": "blue"
+        "background": "pink"
       }
     },
     {
@@ -320,7 +320,8 @@
             "href": "over.html"
           }
         ],
-        "id": "Method-6a908ce4-7800-44be-88ec-cc76ae70ce6c"
+        "id": "Method-6a908ce4-7800-44be-88ec-cc76ae70ce6c",
+        "background": "blue"
       }
     },
     {
@@ -457,7 +458,7 @@
           }
         ],
         "id": "Orbit-eb1bc293-1d34-449b-8c4a-f2e40db66cfd",
-        "background": "wine"
+        "background": "white"
       }
     },
     {
@@ -523,7 +524,7 @@
         "images": [],
         "links": [],
         "id": "Review-8e90c379-08a1-4348-8172-4a4e299c479d",
-        "background": "pink"
+        "background": "wine"
       }
     },
     {
@@ -622,7 +623,8 @@
         ],
         "images": [],
         "links": [],
-        "id": "Quote-002a9126-aaa1-498a-ae52-50c757614fc9"
+        "id": "Quote-002a9126-aaa1-498a-ae52-50c757614fc9",
+        "background": "wine"
       }
     },
     {
@@ -677,7 +679,7 @@
           }
         ],
         "id": "About-a6421dc9-6101-4f92-afc3-4ffcaa455cc1",
-        "background": "blue"
+        "background": "pink"
       }
     },
     {
