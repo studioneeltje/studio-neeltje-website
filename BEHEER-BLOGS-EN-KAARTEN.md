@@ -31,7 +31,7 @@ De eerste twee kaarten zijn fragmenten van dezelfde bestaande review van Jeroen 
 - **Twee informatiekaarten uit Sveltia** en **Losse reviewkaarten uit Sveltia:** plaatsing, kop en achtergrond in Puck. De kaartinhoud heeft één beheerplek in Sveltia.
 - **Reportages uit Sveltia:** de oorspronkelijke lijst met scheidingslijnen en zwevende foto bij aanwijzen. Op mobiel blijven de rijen direct aanklikbaar. Titels en foto's komen uit Trouwreportages; uitsneden pas je per blok in Puck aan.
 
-Dezelfde renderer en stylesheet worden gebruikt door de editor en de gepubliceerde pagina. Heb je een oud lokaal concept open, kies dan **Gepubliceerde versie laden** om de nieuwe pagina-indeling op te halen. Dat vervangt dat lokale paginaconcept; bewaar het eerst als je eigen wijzigingen wilt houden.
+Dezelfde renderer en stylesheet worden gebruikt door de editor en de gepubliceerde pagina. **Gepubliceerde versie laden** bewaart eerst een herstelpunt van je huidige bewerking. Nieuwe vormgeving of een nieuwe editor betekent niet dat je je eigen concept moet vervangen.
 
 ## Nieuw: stappenbalk, auteur en bevestigingen
 
@@ -51,7 +51,13 @@ De instellingen staan in Sveltia → Algemene instellingen → **Formulierkoppel
 
 ### GitHub-concept in Puck
 
-Na vernieuwen van de beheeromgeving moet je opnieuw inloggen. Kies de juiste pagina en **GitHub-concept laden**. Het bewerkvlak wordt nu opnieuw opgebouwd met dat concept. De versie wordt lokaal bewaard. Je bestaande GitHub-concept wordt niet automatisch gepubliceerd of aangepast door deze reparatie.
+Na vernieuwen van de beheeromgeving moet je opnieuw inloggen. Kies de juiste pagina; je lokale bewerking blijft het uitgangspunt. **Concept opslaan** bewaart die online. Staat daar een andere versie, dan krijg je een vergelijking met de optie **Mijn bewerking als nieuwe versie opslaan**. Een oudere versie laden is nooit verplicht.
+
+**Online concept vergelijken** toont eerst de bouwstenen van beide versies. Alleen **Deze andere versie overnemen** vervangt het bewerkvlak. Eerst wordt een herstelpunt opgeslagen; als dat mislukt, blijft de huidige bewerking staan. Een pagina die tijdens het ophalen wordt gewijzigd, wordt niet stilzwijgend vervangen.
+
+**Versiegeschiedenis** geeft toegang tot maximaal 30 recente herstelpunten per pagina op dit apparaat, online GitHub-versies en **Reservekopie terugzetten** voor een JSON-bestand. Lokale herstelpunten worden automatisch gemaakt en vóór bronwissels extra vastgelegd. Herstelpunten bevatten pagina-inhoud en mediagegevens, geen toegangstoken. Een ander apparaat heeft zijn eigen lokale geschiedenis; online versies blijven in GitHub. Terugzetten publiceert niets.
+
+Voor de trouwchecklist is op 19 oktober 2026 de geëxporteerde bewerking van 21:57 teruggezet in het bestaande online concept. Die bevat de eigen checklistkop, Waarom deze checklist?, quote, Wat de meeste checklists je niet vertellen en contactoproep. De nieuwe verkoopblokken en het losse formulier zijn toegevoegd. Latere, niet opgeslagen wijzigingen zijn niet in deze reservekopie aanwezig.
 
 
 ## Trouwchecklist: Papier & overzicht en Voor wie
@@ -66,4 +72,4 @@ Alle teksten, vijf herkenningspunten, drie voordelen, covergegevens en optionele
 
 Bij het eerste openen met de nieuwe editor krijgen oudere lokale checklistconcepten en GitHub-concepten de twee nieuwe bouwstenen erbij, zonder bestaande teksten te vervangen. Deze eenmalige aanvulling wordt op het concept gemarkeerd; later bewust verwijderde blokken worden niet opnieuw toegevoegd. Ontbreekt het checklistformulier, dan wordt de losse formulierbouwsteen toegevoegd.
 
-**Bewaar eigen lokale wijzigingen met Concept opslaan.** Je hoeft daarvoor geen ouder GitHub-concept over je huidige bewerking te laden. Opslaan maakt een nieuwe versie in het bestaande concept en behoudt de geschiedenis. Is een eerder geladen GitHub-concept ondertussen elders gewijzigd, dan weigert de beveiligde opslag zoals voorheen. Publicatie blijft een aparte stap na het bekijken van de voorvertoning.
+**Bewaar eigen lokale wijzigingen met Concept opslaan.** Je hoeft daarvoor geen ouder GitHub-concept over je huidige bewerking te laden. Opslaan maakt een nieuwe versie in het bestaande concept en behoudt de geschiedenis. Is het online concept intussen elders gewijzigd, dan krijg je een vergelijking en kun je jouw huidige bewerking als nieuwe versie opslaan. De opslag blijft beveiligd tegen wijzigingen tijdens het verzenden. Publicatie blijft een aparte stap na het bekijken van de voorvertoning.
