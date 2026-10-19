@@ -16,7 +16,7 @@ export async function loadCollection(name,root=process.cwd()){
  const dir=path.join(root,'content',name);const names=(await fs.readdir(dir)).filter(n=>n.endsWith('.json')).sort();return Promise.all(names.map(async n=>JSON.parse(await fs.readFile(path.join(dir,n),'utf8'))));
 }
 const read=async p=>JSON.parse(await fs.readFile(p,'utf8'));
-const assetVersion=createHash('sha256').update((await Promise.all(['site/theme.css','assets/site.css','assets/blocks.css','assets/design.css','assets/site.js','assets/blocks-runtime.js','assets/forms.js'].map(p=>fs.readFile(p,'utf8')))).join('\n')).digest('hex').slice(0,12);
+const assetVersion=createHash('sha256').update((await Promise.all(['site/theme.css','assets/site.css','assets/blocks.css','assets/design.css','assets/checklist.css','assets/site.js','assets/blocks-runtime.js','assets/forms.js'].map(p=>fs.readFile(p,'utf8')))).join('\n')).digest('hex').slice(0,12);
 process.env.VITE_ASSET_VERSION=assetVersion;
 const out='dist';
 await fs.rm(out,{recursive:true,force:true});
@@ -30,7 +30,7 @@ for(const asset of media){
  if(asset.captions){const source=path.resolve(String(asset.captions).replace(/^\//,''));if(!source.startsWith(path.resolve('media/originals')+path.sep))throw Error('Ongeldig ondertitelpad.');const text=await fs.readFile(source,'utf8');if(!text.startsWith('WEBVTT'))throw Error('Ondertiteling moet een WebVTT-bestand zijn.');const target=`media/captions/${asset.id}.vtt`;await fs.mkdir(path.dirname(path.join(out,target)),{recursive:true});await fs.writeFile(path.join(out,target),text);manifest[asset.id].captions=target;}
 }
 for(const page of pages)for(const block of page.content){
- const selections=block.props.images||[];if(block.type==='Photo')selections.push(block.props.image);
+ const selections=[...(block.props.images||[])];if(block.type==='Photo'||block.type==='ChecklistContents'&&block.props.image?.mediaId)selections.push(block.props.image);
  for(const image of selections)if(!media.some(a=>a.id===image?.mediaId&&a.kind==='image'))throw Error(`${page.title}: kies een bestaande foto in ${block.type}.`);
  if(block.type==='Video'&&!media.some(a=>a.id===block.props.mediaId&&a.kind==='video'))throw Error(`${page.title}: kies een bestaande video.`);
 }
@@ -38,6 +38,12 @@ for(const record of [...stories,...articles])if(record.published!==false){for(co
 settings.editorial=await read('content/settings/editorial.json');
 settings.experience=await read('content/settings/experience.json');
 settings.forms=await read('content/settings/forms.json');
+settings.checklist=await read('content/settings/checklist.json');
+for(const [label,items]of [['voordelen',settings.checklist.contents.benefits],['herkenningspunten',settings.checklist.audience.points]]){
+ if(![3,5,7].includes(items?.length))throw Error(`Trouwchecklist: kies 3, 5 of 7 ${label}.`);
+ if(items.some(item=>!item.title?.trim()||!item.text?.trim()))throw Error(`Trouwchecklist: geef alle ${label} een titel en toelichting.`);
+}
+if(settings.checklist.contents.cover&&!media.some(asset=>asset.id===settings.checklist.contents.cover&&asset.kind==='image'))throw Error('De coverfoto van de trouwchecklist ontbreekt in de mediabibliotheek.');
 if(settings.forms.checklistFile){
  const source=path.resolve(String(settings.forms.checklistFile).replace(/^\//,''));
  const base=path.resolve('media/originals')+path.sep;
@@ -54,12 +60,12 @@ function blockSelectors(css){for(const id of roleNames)css=css.replace(new RegEx
 function brandCSS(css){for(const[from,to]of Object.entries({'#65001d':settings.colors.wine,'#fde6f2':settings.colors.pink,'#e8f2ff':settings.colors.blue,'#ff4802':settings.colors.orange}))css=css.replace(new RegExp(from,'gi'),to);return css;}
 await fs.mkdir(path.join(out,'assets'),{recursive:true});
 await fs.writeFile(path.join(out,'assets/theme.css'),brandCSS(blockSelectors((await fs.readFile('site/theme.css','utf8')).replace(/url\((["']?)(classic-photo-wall-v2\.png)\1\)/g,'url(../$2)'))));
-for(const name of ['site.css','blocks.css','design.css'])await fs.writeFile(path.join(out,'assets',name),brandCSS(await fs.readFile('assets/'+name,'utf8')));
+for(const name of ['site.css','blocks.css','design.css','checklist.css'])await fs.writeFile(path.join(out,'assets',name),brandCSS(await fs.readFile('assets/'+name,'utf8')));
 for(const name of ['site.js','blocks-runtime.js','forms.js'])await fs.copyFile('assets/'+name,path.join(out,'assets',name));
 for(const name of ['studio-neeltje-logo.png','studio-neeltje-logo.svg','classic-photo-wall-v2.png'])await fs.copyFile(name,path.join(out,name));
 await fs.writeFile(path.join(out,'.nojekyll'),'');
 const fonts='https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Host+Grotesk:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Homemade+Apple&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap';
-function documentHTML(title,description,content,{noindex=false}={}){return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(title)}</title><meta name="description" content="${e(description)}">${noindex?'<meta name="robots" content="noindex,follow">':''}<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="${fonts}" rel="stylesheet"><link rel="stylesheet" href="assets/theme.css?v=${assetVersion}"><link rel="stylesheet" href="assets/site.css?v=${assetVersion}"><link rel="stylesheet" href="assets/blocks.css?v=${assetVersion}"><link rel="stylesheet" href="assets/design.css?v=${assetVersion}"><script src="assets/site.js?v=${assetVersion}" defer></script><script src="assets/blocks-runtime.js?v=${assetVersion}" defer></script><script src="assets/forms.js?v=${assetVersion}" defer></script><noscript><style>.review-line,.quote-note,.quote-handwritten,.portfolio-mosaic-item{opacity:1!important;transform:none!important;clip-path:none!important}</style></noscript></head><body class="theme-canvas sn-public">${renderHeader(settings)}<main id="main-content" tabindex="-1"><div class="mode mode-canvas active">${content}</div></main>${renderFooter(settings)}${formSettingsScript(settings)}</body></html>`;}
+function documentHTML(title,description,content,{noindex=false}={}){return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(title)}</title><meta name="description" content="${e(description)}">${noindex?'<meta name="robots" content="noindex,follow">':''}<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="${fonts}" rel="stylesheet"><link rel="stylesheet" href="assets/theme.css?v=${assetVersion}"><link rel="stylesheet" href="assets/site.css?v=${assetVersion}"><link rel="stylesheet" href="assets/blocks.css?v=${assetVersion}"><link rel="stylesheet" href="assets/design.css?v=${assetVersion}"><link rel="stylesheet" href="assets/checklist.css?v=${assetVersion}"><script src="assets/site.js?v=${assetVersion}" defer></script><script src="assets/blocks-runtime.js?v=${assetVersion}" defer></script><script src="assets/forms.js?v=${assetVersion}" defer></script><noscript><style>.review-line,.quote-note,.quote-handwritten,.portfolio-mosaic-item{opacity:1!important;transform:none!important;clip-path:none!important}</style></noscript></head><body class="theme-canvas sn-public">${renderHeader(settings)}<main id="main-content" tabindex="-1"><div class="mode mode-canvas active">${content}</div></main>${renderFooter(settings)}${formSettingsScript(settings)}</body></html>`;}
 function fixLinks(html){const $=load(html);$('a').each((_,el)=>{const a=$(el),href=a.attr('href')||'';if(href.includes('preview-pagina.html?')){const url=new URL(href,'https://example.test/');const id=url.searchParams.get('pagina'),article=url.searchParams.get('artikel');const map={kasteel:'reportage-keukenhof',dengh:'reportage-dengh',bordeaux:'reportage-bordeaux',malaga:'reportage-malaga',checklist:'weddingschecklist'};a.attr('href',`${article?'artikel-'+article:map[id]||id||'reportages'}.html${url.hash}`);}if(a.closest('.orbit-card').length){const img=a.find('img');if(img.length)a.attr('href',img.attr('data-full-src')||img.attr('src'));}});return $.html();}
 for(const page of pages){const html=fixLinks(documentHTML(page.root?.props?.title||page.title,page.root?.props?.description||page.description||'',renderPage(page,context),{noindex:page.id.startsWith('bedankt-')}));const file=page.id==='home'?'index.html':`${page.id}.html`;await fs.writeFile(path.join(out,file),html);if(page.id==='home')await fs.writeFile(path.join(out,'nieuwe-site.html'),html);}
 function prose(value){return sanitizeHTML(marked.parse(String(value||''),{async:false}),{allowedTags:['p','br','h2','h3','h4','ul','ol','li','strong','em','a','blockquote'],allowedAttributes:{a:['href','title']},allowedSchemes:['https','http','mailto','tel']});}

@@ -218,3 +218,21 @@ Neeltje wil onderstaande onderdelen in de eigen huisstijl en met een uitgesproke
 - [x] Alles toegankelijk uitwerken: duidelijke knoppen, toetsenbordfocus, leesbare contrasten, geen informatie afhankelijk van animatie, bewegingsvoorkeur respecteren.
 
 De gekozen subtiele zweefanimatie van de drie collagefoto's is meegenomen in deze bouwstap.
+
+## Gratis trouwchecklist — bouw aangevraagd 19 oktober 2026
+
+- [x] Verkoopblok ‘Wat je in de trouwchecklist vindt’ uitvoeren als **Papier & overzicht**.
+      Op 19 oktober 2026 gekozen door Neeltje: tastbare checklistpreview met rechte hoeken,
+      drie overzichtelijke voordelen en een duidelijke knop naar het aparte formulier.
+      Referentie: trouwchecklist-drie-ontwerpen.html, variant ‘Papier & overzicht’.
+      Bouw goedgekeurd op 19 oktober 2026: ‘over gaat op bouwen’.
+- [x] Het blok ‘Voor wie is deze trouwchecklist?’ opnieuw vormgeven in dezelfde huisstijl.
+      Alle vijf herkenningspunten behouden. Neeltje kiest zowel **Persoonlijk & herkenbaar**
+      als **Rustig & redactioneel**. Beide bouwen als kiesbare varianten van één component,
+      met één inhoudsbron en behoud van de vijf punten bij wisselen van vormgeving.
+      Geen groene emoji-vinkjes; donkerrood, roze, blauw en rood-oranje gebruiken.
+      Bouw goedgekeurd op 19 oktober 2026. Persoonlijk & herkenbaar standaard op de landingspagina.
+- [x] Vaste ontwerpregel toepassen: visueel uitgewerkte opsommingen hebben **3, 5 of 7**
+      onderdelen, altijd oneven en nooit meer dan 7. Gewone tekst blijft helder en rustig.
+
+De drie opmaken zijn gebouwd. Puck kiest plaatsing, stijl en achtergrond; Sveltia beheert één gedeelde inhoudsbron. Oudere checklistconcepten worden eenmalig aangevuld met behoud van alle bestaande blokken. De verzendkoppeling blijft uitgesteld.

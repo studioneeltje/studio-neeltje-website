@@ -240,6 +240,61 @@ collections:
               - {name: caption, label: Onderschrift, widget: string, required: false}
               - {name: image, label: Foto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
               - {name: visible, label: Tonen, widget: boolean, default: true}
+      - name: checklist
+        label: 'Trouwchecklist: verkoopblokken'
+        file: content/settings/checklist.json
+        fields:
+          - name: contents
+            label: Papier & overzicht
+            widget: object
+            fields:
+              - {name: eyebrow, label: Bovenregel, widget: string, required: false}
+              - {name: title, label: Titel, widget: string}
+              - {name: emphasis, label: Sierlijke titelregel, widget: string}
+              - {name: intro, label: Introductie, widget: text}
+              - name: benefits
+                label: Voordelen
+                hint: Gebruik 3, 5 of 7 voordelen. Een even aantal wordt bij publicatie afgekeurd.
+                widget: list
+                min: 3
+                max: 7
+                summary: '{{title}}'
+                fields:
+                  - {name: title, label: Titel, widget: string}
+                  - {name: text, label: Toelichting, widget: text}
+              - {name: cover, label: Coverfoto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+              - {name: coverLabel, label: Label op de cover, widget: string, required: false}
+              - {name: coverTitle, label: Cover titel, widget: string}
+              - {name: coverEmphasis, label: Cover sierlijke regel, widget: string}
+              - {name: coverFooter, label: Cover onderregel, widget: string, required: false}
+              - {name: button, label: Knoptekst (optioneel), widget: string, required: false}
+              - {name: href, label: Knoplink (optioneel), widget: string, required: false, hint: '#checklist-aanvragen verwijst naar het aparte checklistformulier. Zonder tekst of link wordt de knop verborgen.'}
+              - {name: note, label: Korte tekst onder de knop, widget: string, required: false}
+          - name: audience
+            label: Voor wie is deze trouwchecklist?
+            hint: Beide stijlen gebruiken deze inhoud. De vormgeving kies je per blok in Puck.
+            widget: object
+            fields:
+              - {name: eyebrow, label: Bovenregel, widget: string, required: false}
+              - {name: title, label: Titel persoonlijk & herkenbaar, widget: string}
+              - {name: emphasis, label: Sierlijke regel persoonlijk & herkenbaar, widget: string}
+              - {name: editorialTitle, label: Titel rustig & redactioneel, widget: string}
+              - {name: editorialEmphasis, label: Sierlijke regel rustig & redactioneel, widget: string}
+              - {name: intro, label: Introductie, widget: text}
+              - {name: asideTitle, label: Persoonlijke zijtekst titel, widget: string, required: false}
+              - {name: asideText, label: Persoonlijke zijtekst, widget: text, required: false}
+              - {name: footer, label: Redactionele onderregel, widget: string, required: false}
+              - name: points
+                label: Herkenningspunten
+                hint: Gebruik 3, 5 of 7 punten. De lange en korte titel horen bij hetzelfde punt; toelichting wordt gedeeld.
+                widget: list
+                min: 3
+                max: 7
+                summary: '{{title}}'
+                fields:
+                  - {name: title, label: Persoonlijke titel, widget: string}
+                  - {name: shortTitle, label: Korte redactionele titel, widget: string}
+                  - {name: text, label: Toelichting, widget: text}
       - name: experience
         label: Stappen, auteur & bevestigingen
         file: content/settings/experience.json
