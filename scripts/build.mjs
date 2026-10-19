@@ -8,6 +8,7 @@ import{marked}from'marked';
 import sanitizeHTML from'sanitize-html';
 import{processMedia}from'./process-media.mjs';
 import{renderPage,renderHeader,renderFooter}from'../src/shared/render.mjs';
+import {renderArticle} from './render-article.mjs';
 import{imageMarkup,escapeHTML as e}from'../src/shared/media.mjs';
 
 export async function loadCollection(name,root=process.cwd()){
@@ -32,7 +33,9 @@ for(const page of pages)for(const block of page.content){
  for(const image of selections)if(!media.some(a=>a.id===image?.mediaId&&a.kind==='image'))throw Error(`${page.title}: kies een bestaande foto in ${block.type}.`);
  if(block.type==='Video'&&!media.some(a=>a.id===block.props.mediaId&&a.kind==='video'))throw Error(`${page.title}: kies een bestaande video.`);
 }
-for(const record of [...stories,...articles])if(record.published!==false){for(const id of [record.cover,...(record.hoverCover?[record.hoverCover]:[]),...(record.gallery||[])])if(!media.some(a=>a.id===id&&a.kind==='image'))throw Error(`${record.title}: een foto ontbreekt in de mediabibliotheek.`);}
+for(const record of [...stories,...articles])if(record.published!==false){for(const id of [record.cover,record.hoverCover,...(record.gallery||[]),...(record.sections||[]).flatMap(s=>[s.image,s.secondImage])].filter(Boolean))if(!media.some(a=>a.id===id&&a.kind==='image'))throw Error(`${record.title}: een foto ontbreekt in de mediabibliotheek.`);}
+settings.editorial=await read('content/settings/editorial.json');
+for(const item of [...settings.editorial.cards,...settings.editorial.reviews])if(item.image&&!media.some(a=>a.id===item.image&&a.kind==='image'))throw Error('Een foto bij de informatiekaarten of reviews ontbreekt.');
 const context={templates,settings,media,manifest,stories,articles};
 const roleNames=[...new Set(Object.values(templates).flatMap(t=>[...t.html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1])))];
 function blockSelectors(css){for(const id of roleNames)css=css.replace(new RegExp('#'+id+'(?=[\\s.:,{>+~\\[])','g'),`[data-role="${id}"]`);return css;}
@@ -51,7 +54,7 @@ for(const page of pages){const html=fixLinks(documentHTML(page.root?.props?.titl
 function prose(value){return sanitizeHTML(marked.parse(String(value||''),{async:false}),{allowedTags:['p','br','h2','h3','h4','ul','ol','li','strong','em','a','blockquote'],allowedAttributes:{a:['href','title']},allowedSchemes:['https','http','mailto','tel']});}
 for(const [collection,prefix]of [[stories,'reportage'],[articles,'artikel']])for(const record of collection.filter(r=>r.published!==false)){
  if(!/^[a-z0-9][a-z0-9-]{0,80}$/.test(record.id))throw Error('Ongeldige URL voor een reportage of artikel.');
- const content=`<section class="sn-page-intro"><div class="section-tag">${e(record.location||record.category||'STUDIO NEELTJE')}</div><h1>${e(record.title)}</h1><p>${e(record.excerpt)}</p></section><div class="sn-story-cover">${imageMarkup({mediaId:record.cover},context,{eager:true})}</div><article class="sn-story-body">${prose(record.body)}</article>${record.gallery?`<section class="sn-story-gallery" aria-label="Fotogalerij">${record.gallery.map((id,i)=>`<button aria-label="Vergroot foto ${i+1}">${imageMarkup({mediaId:id},context)}</button>`).join('')}</section>`:''}<section class="sn-text-section"><a class="button" href="${prefix==='reportage'?'reportages':'journal'}.html">← Terug naar ${prefix==='reportage'?'reportages':'journal'}</a></section>`;
+ const content=prefix==='artikel'?renderArticle(record,context):`<section class="sn-page-intro"><div class="section-tag">${e(record.location||record.category||'STUDIO NEELTJE')}</div><h1>${e(record.title)}</h1><p>${e(record.excerpt)}</p></section><div class="sn-story-cover">${imageMarkup({mediaId:record.cover},context,{eager:true})}</div><article class="sn-story-body">${prose(record.body)}</article>${record.gallery?`<section class="sn-story-gallery" aria-label="Fotogalerij">${record.gallery.map((id,i)=>`<button aria-label="Vergroot foto ${i+1}">${imageMarkup({mediaId:id},context)}</button>`).join('')}</section>`:''}<section class="sn-text-section"><a class="button" href="${prefix==='reportage'?'reportages':'journal'}.html">← Terug naar ${prefix==='reportage'?'reportages':'journal'}</a></section>`;
  await fs.writeFile(path.join(out,`${prefix}-${record.id}.html`),documentHTML(record.title,record.excerpt,content));
  if(prefix==='reportage')await fs.writeFile(path.join(out,`pagina-reportage-${record.id}.html`),documentHTML(record.title,record.excerpt,content));
 }

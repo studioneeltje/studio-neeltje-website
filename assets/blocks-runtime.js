@@ -63,3 +63,42 @@
   document.querySelectorAll('video[data-ambient]').forEach(video=>{const button=video.parentElement.querySelector('.sn-video-toggle');button?.addEventListener('click',()=>video.paused?video.play():video.pause());video.addEventListener('play',()=>button.textContent='Sfeerclip pauzeren');video.addEventListener('pause',()=>button.textContent='Sfeerclip afspelen');if(!reduced&&'IntersectionObserver'in window)new IntersectionObserver(entries=>{if(entries[0].isIntersecting)video.play().catch(()=>{});else video.pause();},{threshold:.3}).observe(video);});
   function resolveAnchor(){const target=location.hash.slice(1);if(target&&!document.getElementById(target))document.querySelector(`[data-role="${CSS.escape(target)}"]`)?.scrollIntoView();}window.addEventListener('hashchange',resolveAnchor);resolveAnchor();
 })();
+
+// Article progress stops at the end of the reading, before recommendations/footer.
+(() => {
+ const reading=document.querySelector('[data-article-reading]');
+ const progress=document.querySelector('.sn-article-progress');
+ if(!reading||!progress)return;
+ const fill=progress.querySelector('span');
+ const links=[...document.querySelectorAll('.sn-article-toc a')];
+ const headings=links.map(link=>document.getElementById(link.hash.slice(1)));
+ let queued=false;
+ function update(){
+  queued=false;
+  const box=reading.getBoundingClientRect();
+  const start=box.top+window.scrollY;
+  const end=Math.max(start+1,box.bottom+window.scrollY-window.innerHeight);
+  const value=Math.round(Math.max(0,Math.min(1,(window.scrollY-start)/(end-start)))*100);
+  progress.hidden=false;fill.style.transform=`scaleX(${value/100})`;
+  progress.setAttribute('aria-valuenow',String(value));
+  let active=-1;headings.forEach((heading,i)=>{if(heading&&heading.getBoundingClientRect().top<window.innerHeight*.35)active=i;});
+  links.forEach((link,i)=>{if(i===active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
+ }
+ function schedule(){if(!queued){queued=true;requestAnimationFrame(update);}}
+ window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);
+ if('ResizeObserver'in window)new ResizeObserver(schedule).observe(reading);
+ document.fonts?.ready.then(schedule);update();
+})();
+
+// Independent tilted review cards: two stationary cards, or three plus arrows.
+document.querySelectorAll('.sn-reviews').forEach(section=>{
+ const track=section.querySelector('.sn-reviews-track');
+ const cards=[...track.children];const nav=section.querySelector('.sn-reviews-navigation');
+ const prev=nav.querySelector('[data-reviews-prev]'),next=nav.querySelector('[data-reviews-next]');
+ let index=0;
+ function render(){const cols=Math.max(1,parseInt(getComputedStyle(track).getPropertyValue('--review-cols'),10)||2);index=Math.max(0,Math.min(index,cards.length-cols));track.style.transform=`translateX(-${index*(track.clientWidth+32)/cols}px)`;nav.hidden=cards.length<=cols;prev.disabled=index===0;next.disabled=index>=cards.length-cols;nav.querySelector('[data-reviews-status]').textContent=`${index+1}–${Math.min(cards.length,index+cols)} / ${cards.length}`;cards.forEach((card,i)=>{card.inert=i<index||i>=index+cols;});}
+ prev.addEventListener('click',()=>{index--;render();});next.addEventListener('click',()=>{index++;render();});
+ section.addEventListener('keydown',event=>{if(event.key==='ArrowRight'&&!next.disabled){event.preventDefault();index++;render();}if(event.key==='ArrowLeft'&&!prev.disabled){event.preventDefault();index--;render();}});
+ if('ResizeObserver'in window)new ResizeObserver(render).observe(track);else window.addEventListener('resize',render);
+ render();
+});

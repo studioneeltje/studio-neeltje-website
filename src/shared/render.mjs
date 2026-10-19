@@ -1,3 +1,5 @@
+import {infoCardsMarkup,reviewCardsMarkup,removeEmptyButtons} from './editorial.mjs';
+import {articleReadTime} from './article-data.mjs';
 import {BACKGROUNDS} from './themes.mjs';
 import {escapeHTML as e, safeURL, imageMarkup, videoMarkup, assetURL} from './media.mjs';
 
@@ -6,7 +8,9 @@ export function renderBlock(block, context) {
   const spec = context.templates[block.type];
   if (!spec) throw new Error(`Onbekend blok: ${block.type}`);
   let html = spec.html;
-  if (block.type === 'Video') html = `<section class="sn-video-section"><div class="section-tag">${e(p.eyebrow)}</div><h2>${e(p.title)}</h2>${videoMarkup(p.mediaId,context,p)}</section>`;
+  if (block.type === 'InfoCards') html=infoCardsMarkup(p,context);
+  else if(block.type === 'Review') html=reviewCardsMarkup(p,context);
+  else if (block.type === 'Video') html = `<section class="sn-video-section"><div class="section-tag">${e(p.eyebrow)}</div><h2>${e(p.title)}</h2>${videoMarkup(p.mediaId,context,p)}</section>`;
   else if (block.type === 'Photo') html = `<section class="sn-photo-section" style="--sn-aspect:${e(p.aspect || '3/2')}">${imageMarkup(p.image,context,{aspect:p.aspect || '3/2'})}${p.caption ? `<p>${e(p.caption)}</p>` : ''}</section>`;
   else if (block.type === 'Text') html = `<section class="sn-text-section"><div class="section-tag">${e(p.eyebrow)}</div><h2>${e(p.title)}</h2><p>${e(p.body).replace(/\n/g,'<br>')}</p></section>`;
   else {
@@ -17,13 +21,11 @@ export function renderBlock(block, context) {
     if (block.type === 'Stories') {
       const stories = context.stories.filter(s => s.published !== false);
       html = html.replace(/<!-- stories:start -->[\s\S]*?<!-- stories:end -->/, `<!-- stories:start -->${stories.map((story,i)=>{
-        const second=story.hoverCover || story.gallery?.find(id=>id!==story.cover);
-        const secondary=second && second!==story.cover && context.media.some(asset=>asset.id===second);
-        return `<a class="canvas-project sn-story-card${secondary?' has-second-photo':''}" href="reportage-${e(story.id)}.html"><div class="sn-story-images">${imageMarkup({...p.crops?.[story.id],mediaId:story.cover,sizes:'(max-width: 760px) 90vw, (max-width: 1280px) 45vw, 588px'},context,{className:'sn-story-cover-image'})}${secondary?imageMarkup({...p.crops?.[story.id+'-hover'],mediaId:second,sizes:'(max-width: 760px) 90vw, (max-width: 1280px) 45vw, 588px',alt:''},context,{className:'sn-story-hover-image'}):''}</div><div class="sn-story-card-meta"><span>${String(i+1).padStart(2,'0')} / ${e(story.location || 'Trouwreportage')}</span><b>${e(story.title)}</b><i aria-hidden="true">↗</i></div></a>`;
+        return `<a class="canvas-project sn-story-row" href="reportage-${e(story.id)}.html"><span class="sn-story-index">${String(i+1).padStart(2,'0')}</span><b>${e(story.title)}</b><span class="sn-story-location">${e(story.location||'Trouwreportage')}</span><i aria-hidden="true">↗</i><div class="sn-story-hover-photo">${imageMarkup({...p.crops?.[story.id],mediaId:story.cover,sizes:'(max-width: 760px) 90vw, 420px'},context)}</div></a>`;
       }).join('')}<!-- stories:end -->`);
     }
     if (block.type === 'Journal') {
-      html = html.replace(/<!-- articles:start -->[\s\S]*?<!-- articles:end -->/, `<!-- articles:start -->${context.articles.filter(a=>a.published!==false).map((article,i)=>`<a class="journal-card" href="artikel-${e(article.id)}.html"><div class="journal-card-visual">${imageMarkup({...p.crops?.[article.id],mediaId:article.cover,sizes:'(max-width: 780px) 88vw, 30vw'},context)}</div><div class="journal-card-meta"><span>${e(article.category)}</span><span>${e(article.readTime || '5 min lezen')}</span></div><h3>${e(article.title)}</h3><span class="journal-card-link"><span class="sn-link-label">Lees het artikel</span> <i aria-hidden="true">↗</i></span></a>`).join('')}<!-- articles:end -->`);
+      html = html.replace(/<!-- articles:start -->[\s\S]*?<!-- articles:end -->/, `<!-- articles:start -->${context.articles.filter(a=>a.published!==false).map((article,i)=>`<a class="journal-card" href="artikel-${e(article.id)}.html"><div class="journal-card-visual">${imageMarkup({...p.crops?.[article.id],mediaId:article.cover,sizes:'(max-width: 780px) 88vw, 30vw'},context)}</div><div class="journal-card-meta"><span>${e(article.category)}</span><span>${articleReadTime(article)}</span></div><h3>${e(article.title)}</h3><span class="journal-card-link"><span class="sn-link-label">Lees het artikel</span> <i aria-hidden="true">↗</i></span></a>`).join('')}<!-- articles:end -->`);
     }
   }
   if (block.type === 'About') {
@@ -36,6 +38,7 @@ export function renderBlock(block, context) {
     }
   }
   if (block.type === 'Social') html = html.replace(/href="https:\/\/(?:www\.)?instagram\.com[^"]*"/g, `href="${e(safeURL(context.settings.instagram))}"`);
+  html=removeEmptyButtons(html);
   const id = String(p.id || block.type).replace(/[^\w-]/g,'');
   // Original named anchors remain as data roles. Every instance gets unique IDs.
   html = html.replace(/\bid="([^"]+)"/g,(_,old)=>`id="${e(id)}-${e(old)}" data-role="${e(old)}"`)
