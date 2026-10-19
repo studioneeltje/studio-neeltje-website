@@ -1,0 +1,20 @@
+{
+  "id": "bedankt-nieuwsbrief",
+  "title": "Bevestiging — Nieuwsbrief",
+  "root": {
+    "props": {
+      "title": "Bevestiging — Nieuwsbrief",
+      "description": "Studio Neeltje — volgende stap."
+    }
+  },
+  "content": [
+    {
+      "type": "ThankYou",
+      "props": {
+        "id": "bedankt-nieuwsbrief-content",
+        "kind": "newsletter",
+        "background": "pink"
+      }
+    }
+  ]
+}

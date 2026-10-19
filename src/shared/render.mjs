@@ -1,3 +1,5 @@
+import {prepareForms} from './forms.mjs';
+import {journeyMarkup,thankYouMarkup} from './experience.mjs';
 import {infoCardsMarkup,reviewCardsMarkup,removeEmptyButtons} from './editorial.mjs';
 import {articleReadTime} from './article-data.mjs';
 import {BACKGROUNDS} from './themes.mjs';
@@ -8,7 +10,9 @@ export function renderBlock(block, context) {
   const spec = context.templates[block.type];
   if (!spec) throw new Error(`Onbekend blok: ${block.type}`);
   let html = spec.html;
-  if (block.type === 'InfoCards') html=infoCardsMarkup(p,context);
+  if(block.type==='ThankYou') html=thankYouMarkup(p.kind||'contact',context);
+  else if(block.type==='Journey') html=journeyMarkup(p,context);
+  else if (block.type === 'InfoCards') html=infoCardsMarkup(p,context);
   else if(block.type === 'Review') html=reviewCardsMarkup(p,context);
   else if (block.type === 'Video') html = `<section class="sn-video-section"><div class="section-tag">${e(p.eyebrow)}</div><h2>${e(p.title)}</h2>${videoMarkup(p.mediaId,context,p)}</section>`;
   else if (block.type === 'Photo') html = `<section class="sn-photo-section" style="--sn-aspect:${e(p.aspect || '3/2')}">${imageMarkup(p.image,context,{aspect:p.aspect || '3/2'})}${p.caption ? `<p>${e(p.caption)}</p>` : ''}</section>`;
@@ -28,6 +32,7 @@ export function renderBlock(block, context) {
       html = html.replace(/<!-- articles:start -->[\s\S]*?<!-- articles:end -->/, `<!-- articles:start -->${context.articles.filter(a=>a.published!==false).map((article,i)=>`<a class="journal-card" href="artikel-${e(article.id)}.html">${article.cover?`<div class="journal-card-visual">${imageMarkup({...p.crops?.[article.id],mediaId:article.cover,sizes:'(max-width: 780px) 88vw, 30vw'},context)}</div>`:''}<div class="journal-card-meta"><span>${e(article.category)}</span><span>${articleReadTime(article)}</span></div><h3>${e(article.title)}</h3><span class="journal-card-link"><span class="sn-link-label">Lees het artikel</span> <i aria-hidden="true">↗</i></span></a>`).join('')}<!-- articles:end -->`);
     }
   }
+  if(block.type==='ContactForm'&&p.formKind==='checklist')html=html.replace(/<label[^>]*>[\s\S]*?<\/label>/g,label=>/name="(?:date|location|message)"/.test(label)?'':label);
   if (block.type === 'About') {
     const note=context.settings.aboutPhotoNote;
     const position=note?.position==='below'?'below':'inside';
@@ -38,7 +43,7 @@ export function renderBlock(block, context) {
     }
   }
   if (block.type === 'Social') html = html.replace(/href="https:\/\/(?:www\.)?instagram\.com[^"]*"/g, `href="${e(safeURL(context.settings.instagram))}"`);
-  html=removeEmptyButtons(html);
+  html=prepareForms(removeEmptyButtons(html),context.settings,{preview:context.preview,defaultKind:p.formKind||'contact'});
   const id = String(p.id || block.type).replace(/[^\w-]/g,'');
   // Original named anchors remain as data roles. Every instance gets unique IDs.
   html = html.replace(/\bid="([^"]+)"/g,(_,old)=>`id="${e(id)}-${e(old)}" data-role="${e(old)}"`)
@@ -65,5 +70,5 @@ export function renderHeader(settings) {
 
 export function renderFooter(settings) {
   const f = settings.footer;
-  return `<footer class="site-footer" id="footer"><div class="footer-stripe-line" aria-hidden="true"></div><div class="footer-top"><div><div class="footer-kicker">STUDIO NEELTJE / NIEUWSBRIEF</div><h2>${e(f.title)}<br><em>${e(f.emphasis)}</em></h2></div><div class="footer-cta-side"><p>${e(f.copy)}</p><form class="footer-newsletter-form" data-form="newsletter"><label for="newsletter-email">Jullie e-mailadres</label><input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="Jullie e-mailadres" required><button class="footer-cta" type="submit">${e(f.button)} <i aria-hidden="true">↗</i></button><p data-form-status hidden aria-live="polite"></p></form></div></div><div class="footer-menu"><div><h3>Ontdek</h3><nav aria-label="Ontdek">${settings.navigation.filter(n=>n.kind==='link').map(n=>`<a href="${e(safeURL(n.href))}">${e(n.label)}</a>`).join('')}</nav></div><div><h3>Studio</h3><nav><a href="weddingschecklist.html">Gratis trouwchecklist</a><a href="contact.html">Contact</a></nav></div><div><h3>Contact</h3><nav>${settings.email ? `<a href="mailto:${e(settings.email)}">${e(settings.email)}</a>` : '<a href="contact.html">Kennismaken ↗</a>'}${settings.phone ? `<a href="tel:${e(settings.phone.replace(/[^+\d]/g,''))}">${e(settings.phone)}</a>` : ''}<a href="#mast">Terug naar boven ↑</a></nav></div></div><div class="footer-bottom"><a href="index.html">Studio Neeltje</a><span>ECHT · ONGEDWONGEN · HELEMAAL JULLIE</span><span>© ${new Date().getFullYear()}</span></div></footer>`;
+  return prepareForms(`<footer class="site-footer" id="footer"><div class="footer-stripe-line" aria-hidden="true"></div><div class="footer-top"><div><div class="footer-kicker">STUDIO NEELTJE / NIEUWSBRIEF</div><h2>${e(f.title)}<br><em>${e(f.emphasis)}</em></h2></div><div class="footer-cta-side"><p>${e(f.copy)}</p><form class="footer-newsletter-form" data-form="newsletter"><label for="newsletter-email">Jullie e-mailadres</label><input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="Jullie e-mailadres" required><button class="footer-cta" type="submit">${e(f.button)} <i aria-hidden="true">↗</i></button><p data-form-status hidden aria-live="polite"></p></form></div></div><div class="footer-menu"><div><h3>Ontdek</h3><nav aria-label="Ontdek">${settings.navigation.filter(n=>n.kind==='link').map(n=>`<a href="${e(safeURL(n.href))}">${e(n.label)}</a>`).join('')}</nav></div><div><h3>Studio</h3><nav><a href="weddingschecklist.html">Gratis trouwchecklist</a><a href="contact.html">Contact</a></nav></div><div><h3>Contact</h3><nav>${settings.email ? `<a href="mailto:${e(settings.email)}">${e(settings.email)}</a>` : '<a href="contact.html">Kennismaken ↗</a>'}${settings.phone ? `<a href="tel:${e(settings.phone.replace(/[^+\d]/g,''))}">${e(settings.phone)}</a>` : ''}<a href="#mast">Terug naar boven ↑</a></nav></div></div><div class="footer-bottom"><a href="index.html">Studio Neeltje</a><span>ECHT · ONGEDWONGEN · HELEMAAL JULLIE</span><span>© ${new Date().getFullYear()}</span></div></footer>`,settings);
 }

@@ -1,0 +1,20 @@
+{
+  "id": "bedankt-contact",
+  "title": "Bevestiging — Contact",
+  "root": {
+    "props": {
+      "title": "Bevestiging — Contact",
+      "description": "Studio Neeltje — volgende stap."
+    }
+  },
+  "content": [
+    {
+      "type": "ThankYou",
+      "props": {
+        "id": "bedankt-contact-content",
+        "kind": "contact",
+        "background": "pink"
+      }
+    }
+  ]
+}

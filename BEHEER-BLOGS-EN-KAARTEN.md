@@ -32,3 +32,23 @@ De eerste twee kaarten zijn fragmenten van dezelfde bestaande review van Jeroen 
 - **Reportages uit Sveltia:** de oorspronkelijke lijst met scheidingslijnen en zwevende foto bij aanwijzen. Op mobiel blijven de rijen direct aanklikbaar. Titels en foto's komen uit Trouwreportages; uitsneden pas je per blok in Puck aan.
 
 Dezelfde renderer en stylesheet worden gebruikt door de editor en de gepubliceerde pagina. Heb je een oud lokaal concept open, kies dan **Gepubliceerde versie laden** om de nieuwe pagina-indeling op te halen. Dat vervangt dat lokale paginaconcept; bewaar het eerst als je eigen wijzigingen wilt houden.
+
+## Nieuw: stappenbalk, auteur en bevestigingen
+
+Sveltia → Algemene instellingen → **Stappen, auteur & bevestigingen**:
+
+- Drie stappen, teksten en optionele knop van de compacte stappenbalk.
+- Auteursfoto, naam, korte introductie en link naar Over Neeltje. De foto is optioneel. Per artikel kun je het auteursblok uitzetten via **Persoonlijk auteursblok tonen**. Het profiel van Neeltje wordt alleen getoond bij artikelen van Neeltje.
+- De teksten van de vier bevestigingspagina's: contact, datumaanvraag, nieuwsbrief en checklist.
+
+In Puck staat **Samen op weg — compacte stappenbalk** bij Plannen en contact. De stappenbalk is ook op de homepage geplaatst. De bevestigingspagina's staan tussen de pagina's. Kies daar **Voorvertoning** om de bedoelde bevestiging als duidelijk gemarkeerd voorbeeld te bekijken. Rechtstreeks via de publieke URL wordt zonder geslaagde verzending geen verzendbevestiging geclaimd. Een link met `?voorbeeld=1` toont een expliciet gemarkeerd voorbeeld.
+
+### Verzending bewust nog uitgeschakeld
+
+Op verzoek van Neeltje: **Verzending later aansluiten**. Contact- en datumaanvragen zijn bestemd voor **info@studioneeltje.com**. De website toont nu dit adres als alternatief. De formulierknoppen zijn uitgeschakeld zolang geen verwerkingsdienst is gekoppeld; formulieren tonen geen nepbevestiging. Nieuwsbriefdienst en checklistbestand zijn nog niet gekozen.
+
+De instellingen staan in Sveltia → Algemene instellingen → **Formulierkoppelingen (nog uitgeschakeld)**. Daar horen alleen openbare formulier-endpoints; nooit wachtwoorden, toegangstokens of geheime API-sleutels. Het voorbereide endpoint-contract is HTTPS met CORS, POST JSON, veld `form` als formulierdoel en een antwoord met `{ "success": true }` na daadwerkelijke verwerking. Het backend moet zelf e-mailvalidatie, spambeveiliging, limieten, bezorging en eventuele nieuwsbriefbevestiging afhandelen. Alleen een geactiveerde aansluiting maakt de knop bruikbaar. Preview verstuurt nooit gegevens. Na een bevestigde verwerking gaat de gebruiker naar de passende bedankpagina.
+
+### GitHub-concept in Puck
+
+Na vernieuwen van de beheeromgeving moet je opnieuw inloggen. Kies de juiste pagina en **GitHub-concept laden**. Het bewerkvlak wordt nu opnieuw opgebouwd met dat concept. De versie wordt lokaal bewaard. Je bestaande GitHub-concept wordt niet automatisch gepubliceerd of aangepast door deze reparatie.

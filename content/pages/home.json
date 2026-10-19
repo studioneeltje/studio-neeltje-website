@@ -1174,6 +1174,16 @@
       }
     },
     {
+      "type": "Journey",
+      "props": {
+        "id": "home-journey",
+        "background": "white",
+        "eyebrow": "VAN EEN EERSTE HALLO TOT JULLIE HERINNERINGEN",
+        "title": "Samen op weg.",
+        "emphasis": "Helemaal jullie."
+      }
+    },
+    {
       "type": "Pricing",
       "props": {
         "id": "home-pricing-15",

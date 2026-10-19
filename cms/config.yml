@@ -81,6 +81,7 @@ collections:
       - {name: author, label: Auteur, widget: string, default: Neeltje}
       - {name: date, label: Publicatiedatum, widget: datetime, date_format: 'DD-MM-YYYY', time_format: false, format: 'YYYY-MM-DD', required: false}
       - {name: updated, label: Bijgewerkt op, widget: datetime, date_format: 'DD-MM-YYYY', time_format: false, format: 'YYYY-MM-DD', required: false}
+      - {name: showAuthor, label: Persoonlijk auteursblok tonen, widget: boolean, default: true}
       - {name: showToc, label: Inhoudsopgave bij minimaal drie tussenkoppen, widget: boolean, default: true}
       - {name: body, label: Artikeltekst, widget: markdown, required: false, hint: Gebruik kop 2 of kop 3 voor de inhoudsopgave. Voeg hieronder afwisselende blokken toe. De leestijd wordt automatisch berekend.}
       - {name: cover, label: Headerfoto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
@@ -239,6 +240,111 @@ collections:
               - {name: caption, label: Onderschrift, widget: string, required: false}
               - {name: image, label: Foto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
               - {name: visible, label: Tonen, widget: boolean, default: true}
+      - name: experience
+        label: Stappen, auteur & bevestigingen
+        file: content/settings/experience.json
+        fields:
+          - name: journey
+            label: Compacte stappenbalk
+            widget: object
+            fields:
+              - {name: eyebrow, label: Bovenregel, widget: string}
+              - {name: title, label: Titel, widget: string}
+              - {name: emphasis, label: Sierlijke titelregel, widget: string}
+              - {name: button, label: Knoptekst (optioneel), widget: string, required: false}
+              - {name: href, label: Knoplink (optioneel), widget: string, required: false}
+              - name: steps
+                label: Stappen
+                widget: list
+                min: 3
+                max: 3
+                summary: '{{title}}'
+                fields:
+                  - {name: phase, label: Fase, widget: string}
+                  - {name: title, label: Titel, widget: string}
+                  - {name: text, label: Toelichting, widget: text}
+          - name: author
+            label: Persoonlijk auteursblok onder blogs
+            widget: object
+            fields:
+              - {name: enabled, label: Auteursblok tonen, widget: boolean, default: true}
+              - {name: eyebrow, label: Bovenregel, widget: string}
+              - {name: title, label: Aanhef, widget: string}
+              - {name: name, label: Naam, widget: string}
+              - {name: bio, label: Persoonlijke introductie, widget: text}
+              - {name: image, label: Foto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+              - {name: button, label: Linktekst (optioneel), widget: string, required: false}
+              - {name: href, label: Link (optioneel), widget: string, required: false}
+          - name: thanks
+            label: Bevestigingsteksten na geslaagde verzending
+            hint: Verzending is nog niet aangesloten. Deze teksten worden pas als bevestiging getoond na een geslaagde verzending, of als duidelijk gemarkeerd voorbeeld in Puck.
+            widget: object
+            fields:
+              - name: contact
+                label: Contactaanvraag
+                widget: object
+                fields:
+                  - {name: title, label: Titel, widget: string}
+                  - {name: emphasis, label: Sierlijke titelregel, widget: string}
+                  - {name: copy, label: Bericht, widget: text}
+                  - {name: nextTitle, label: Volgende stap titel, widget: string}
+                  - {name: nextCopy, label: Volgende stap tekst, widget: text}
+              - name: availability
+                label: Datumaanvraag
+                widget: object
+                fields:
+                  - {name: title, label: Titel, widget: string}
+                  - {name: emphasis, label: Sierlijke titelregel, widget: string}
+                  - {name: copy, label: Bericht, widget: text}
+                  - {name: nextTitle, label: Volgende stap titel, widget: string}
+                  - {name: nextCopy, label: Volgende stap tekst, widget: text}
+              - name: newsletter
+                label: Nieuwsbrief
+                widget: object
+                fields:
+                  - {name: title, label: Titel, widget: string}
+                  - {name: emphasis, label: Sierlijke titelregel, widget: string}
+                  - {name: copy, label: Bericht, widget: text}
+                  - {name: nextTitle, label: Volgende stap titel, widget: string}
+                  - {name: nextCopy, label: Volgende stap tekst, widget: text}
+              - name: checklist
+                label: Trouwchecklist
+                widget: object
+                fields:
+                  - {name: title, label: Titel, widget: string}
+                  - {name: emphasis, label: Sierlijke titelregel, widget: string}
+                  - {name: copy, label: Bericht, widget: text}
+                  - {name: nextTitle, label: Volgende stap titel, widget: string}
+                  - {name: nextCopy, label: Volgende stap tekst, widget: text}
+      - name: forms
+        label: Formulierkoppelingen (nog uitgeschakeld)
+        file: content/settings/forms.json
+        fields:
+          - {name: recipient, label: E-mailadres voor contact- en datumaanvragen, widget: string}
+          - name: contact
+            label: Contact en datumaanvragen
+            hint: Verzending is op verzoek uitgesteld. Alleen activeren nadat een echte verwerkingsdienst is aangesloten. Geen geheime sleutels invullen.
+            widget: object
+            fields:
+              - {name: provider, label: Verwerking, widget: select, options: [{label: Nog niet aangesloten, value: none}, {label: Eigen openbaar JSON-formulierendpoint, value: json}], default: none}
+              - {name: endpoint, label: Openbaar HTTPS-endpoint, widget: string, required: false}
+              - {name: activated, label: Verwerking is aangesloten en klaar, widget: boolean, default: false}
+          - name: newsletter
+            label: Nieuwsbrief
+            widget: object
+            fields:
+              - {name: provider, label: Verwerking, widget: select, options: [{label: Nog niet aangesloten, value: none}, {label: Eigen openbaar JSON-formulierendpoint, value: json}], default: none}
+              - {name: endpoint, label: Openbaar HTTPS-endpoint, widget: string, required: false}
+              - {name: activated, label: Verwerking is aangesloten en klaar, widget: boolean, default: false}
+          - name: checklist
+            label: Checklistaanvraag
+            widget: object
+            fields:
+              - {name: provider, label: Verwerking, widget: select, options: [{label: Nog niet aangesloten, value: none}, {label: Eigen openbaar JSON-formulierendpoint, value: json}], default: none}
+              - {name: endpoint, label: Openbaar HTTPS-endpoint, widget: string, required: false}
+              - {name: activated, label: Verwerking is aangesloten en klaar, widget: boolean, default: false}
+          - {name: checklistFile, label: Checklistbestand (optioneel), widget: file, required: false}
+          - {name: privacyURL, label: Link naar privacy-informatie (optioneel), widget: string, required: false}
       - name: media
         label: Beeldkwaliteit & verwerking
         file: content/settings/media.json

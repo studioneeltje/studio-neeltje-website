@@ -273,7 +273,7 @@
   },
   "Availability": {
     "label": "Datumaanvraag",
-    "html": "<section class=\"availability-check\" id=\"datumcheck\" aria-labelledby=\"availability-title\"><div class=\"availability-copy\"><div class=\"section-tag\">{{t:0}}</div><h2 id=\"availability-title\">{{t:1}}<br><em>{{t:2}}</em></h2><p>{{t:3}}</p></div><form class=\"availability-form\" id=\"availabilityForm\"><label for=\"availabilityDate\">{{t:4}}</label><div class=\"availability-form-row\"><input id=\"availabilityDate\" name=\"weddingDate\" type=\"date\" required=\"\" aria-describedby=\"availability-note availability-status\"><button type=\"submit\">{{t:5}} <span aria-hidden=\"true\">↗</span></button></div><small id=\"availability-note\">{{t:6}}</small><p class=\"availability-status\" id=\"availability-status\" aria-live=\"polite\" hidden=\"\"></p></form></section>",
+    "html": "<section class=\"availability-check\" id=\"datumcheck\" aria-labelledby=\"availability-title\"><div class=\"availability-copy\"><div class=\"section-tag\">{{t:0}}</div><h2 id=\"availability-title\">{{t:1}}<br><em>{{t:2}}</em></h2><p>{{t:3}}</p></div><form class=\"availability-form\" id=\"availabilityForm\"><label for=\"availabilityDate\">{{t:4}}</label><div class=\"availability-form-row\"><input id=\"availabilityDate\" name=\"weddingDate\" type=\"date\" required=\"\" aria-describedby=\"availability-note availability-status\"></div><label class=\"availability-email-label\">Jullie e-mailadres<input name=\"email\" type=\"email\" autocomplete=\"email\" placeholder=\"jullie@email.nl\" required></label><button type=\"submit\">{{t:5}} <span aria-hidden=\"true\">↗</span></button><small id=\"availability-note\">{{t:6}}</small><p class=\"availability-status\" id=\"availability-status\" aria-live=\"polite\" hidden=\"\"></p></form></section>",
     "defaults": {
       "texts": [
         {
@@ -1737,6 +1737,22 @@
       "eyebrow": "VOOR JULLIE DAG. EN DAARNA.",
       "title": "Volop beleven.",
       "emphasis": "Mooi bewaren."
+    }
+  },
+  "Journey": {
+    "label": "Samen op weg — compacte stappenbalk",
+    "html": "",
+    "defaults": {
+      "eyebrow": "VAN EEN EERSTE HALLO TOT JULLIE HERINNERINGEN",
+      "title": "Samen op weg.",
+      "emphasis": "Helemaal jullie."
+    }
+  },
+  "ThankYou": {
+    "label": "Bevestigingspagina",
+    "html": "",
+    "defaults": {
+      "kind": "contact"
     }
   }
 }

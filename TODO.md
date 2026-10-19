@@ -185,3 +185,36 @@ bouwwens van Neeltje. Deze eerste bouwstap is op 18 oktober 2026 aangevraagd.
 - [x] De bestaande rood-oranje accentkleur behouden.
 - [x] Knoppen en zelfstandige kaarten/formulieren met passende contrasten tonen.
 - [x] Kleurkeuze opslaan op het blok, met dezelfde weergave in builder en publicatie.
+
+## Collageheader — gebouwd na expliciet ‘bouw’ (19 oktober 2026)
+
+- [x] De drie foto's rechts in de reportage/collageheader continu subtiel laten zweven.
+- [x] Elke foto beweegt 4–8 pixels omhoog en omlaag, met maximaal 1 graad extra kanteling bovenop de vaste collagehoek.
+- [x] Verschillende vloeiende cycli van 8–14 seconden gebruiken, zonder zichtbare pauze of sprong.
+- [x] De foto's volledig zichtbaar houden; bestaande uitsneden en klikbediening behouden.
+- [x] Bij de toegankelijkheidsinstelling ‘minder beweging’ blijven de foto's stil.
+
+Uitvoering goedgekeurd met ‘bouw’ op 19 oktober 2026; geïmplementeerd met behoud van de collagehoeken en ondersteuning voor minder beweging.
+
+## Puck-concept laden — reparatie gebouwd 19 oktober 2026
+
+- [x] Bij ‘GitHub-concept laden’ het bewerkvlak werkelijk verversen met het geladen concept. De voorvertoning toont het nieuwe concept, terwijl Puck intern de vorige versie vasthoudt.
+- [x] Hetzelfde vernieuwingsprobleem bij ‘Gepubliceerde versie laden’ oplossen.
+- [x] Voorkomen dat een oud bewerkvlak een nieuw geladen concept weer overschrijft.
+- [x] Geladen concept en bijbehorende mediagegevens veilig bewaren; geen concept publiceren of vervangen tijdens de diagnose.
+
+Waargenomen op /beheer/?pagina=over: melding ‘Online concept geladen’, donkerrode header in de voorvertoning; bewerkvlak toont de oude versie. Code gebruikt dezelfde Puck-key per pagina en een tijdelijke wissel via queueMicrotask, waardoor een nieuwe initialisatie niet betrouwbaar plaatsvindt.
+Uitvoering goedgekeurd met ‘bouw’. De editor krijgt bij een bronwissel een nieuwe instantie; callbacks van de oude instantie worden genegeerd.
+
+## Aanvullingen en visuele afwerking — aangevraagd 19 oktober 2026
+
+Neeltje wil onderstaande onderdelen in de eigen huisstijl en met een uitgesproken, verzorgde visuele uitwerking. Uitvoering op 19 oktober 2026 expliciet goedgekeurd met ‘bouw’.
+
+- [x] Persoonlijk auteursblok onder blogartikelen: optionele foto van Neeltje, korte bewerkbare introductie, sierlijke naam en optionele knop naar Over Neeltje. Rustige teksthiërarchie met Host Grotesk Regular 17 px, donkerrood en lichte merkvlakken; vierkante fotohoeken.
+- [x] Compacte stappenbalk: Kennismaken → jullie dag → de foto's ontvangen. Redactionele nummering, verfijnde verbindingslijn en rustige overgangen bij aanwijzen; op mobiel logisch onder elkaar. Bewerkbare teksten en optionele link naar de uitgebreide werkwijze. Herbruikbaar in Puck, dezelfde weergave in voorvertoning en publicatie.
+- [x] Verzorgde bedankpagina's of passende bevestigingsweergaven na contact-, nieuwsbrief- en checklistaanvragen. Duidelijke bevestiging, bewerkbare vervolgstap en alleen een reactietermijn als die daadwerkelijk is afgesproken. Grafische typografie en subtiele merkdetails; geen decoratieve bollen. Geen succes tonen zolang de aanvraag niet werkelijk is verwerkt.
+- [x] De eerder vastgestelde Puck-conceptfout herstellen voordat verder op het geladen concept wordt gewerkt.
+- [ ] Formulieren echt aansluiten op verwerking en bezorging — op 19 oktober 2026 door Neeltje uitgesteld: ‘Verzending later aansluiten’. Info@studioneeltje.com is opgegeven als ontvangstadres. Foutmeldingen, verzendstatus en bescherming tegen dubbel verzenden zijn voorbereid; alle verzendschakelaars blijven uit. Huidige formulieren zijn demo's. Voor uitvoering vaststellen welke ontvangstadressen, nieuwsbriefdienst en checklistlevering bedoeld zijn; geen accounts, abonnementen of externe diensten zonder passende toestemming aanmaken. GitHub Pages heeft hiervoor een externe verwerkingsdienst of apart backend nodig.
+- [x] Alles toegankelijk uitwerken: duidelijke knoppen, toetsenbordfocus, leesbare contrasten, geen informatie afhankelijk van animatie, bewegingsvoorkeur respecteren.
+
+De gekozen subtiele zweefanimatie van de drie collagefoto's is meegenomen in deze bouwstap.

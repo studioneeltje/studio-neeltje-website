@@ -1,10 +1,11 @@
+import {authorMarkup} from '../src/shared/experience.mjs';
 import {marked} from 'marked';
 import sanitizeHTML from 'sanitize-html';
 import {load} from 'cheerio';
 import {imageMarkup,escapeHTML as e,safeURL} from '../src/shared/media.mjs';
 import {articleReadTime} from '../src/shared/article-data.mjs';
 
-function prose(value){return sanitizeHTML(marked.parse(String(value||''),{async:false}),{allowedTags:['p','br','h2','h3','h4','ul','ol','li','strong','em','a','blockquote'],allowedAttributes:{a:['href','title']},allowedSchemes:['https','http','mailto','tel']});}
+function prose(value){return sanitizeHTML(marked.parse(String(value||''),{async:false}),{allowedTags:['p','br','h2','h3','h4','ul','ol','li','strong','em','a','blockquote','img'],allowedAttributes:{a:['href','title'],img:['src','alt','width','height','loading','decoding']},allowedSchemes:['https','http','mailto','tel'],transformTags:{img:(tagName,attrs)=>{const size=String(attrs.src||'').match(/\/(?:fill|fit)\/w_(\d+),h_(\d+)/);return{tagName,attribs:{...attrs,loading:'lazy',decoding:'async',...(size?{width:size[1],height:size[2]}:{})}};}}});}
 function dateMarkup(value,label){
  const raw=String(value||'').slice(0,10);if(!/^\d{4}-\d{2}-\d{2}$/.test(raw))return '';
  const date=new Date(raw+'T12:00:00Z');if(!Number.isFinite(date.getTime())||date.toISOString().slice(0,10)!==raw)return '';
@@ -45,6 +46,7 @@ export function renderArticle(record,context){
  <div class="sn-article-layout${toc?' has-toc':''}">${toc}${$.html()}</div>
  <div class="sn-article-signoff"><span>Met liefde gedeeld,</span><em>${e(author)}</em></div>
  </div>
+ ${authorMarkup(record,context)}
  ${showCta?`<section class="sn-article-cta">${cta.title?`<h2>${e(cta.title)}</h2>`:''}${cta.text?`<p>${e(cta.text)}</p>`:''}<a class="button" href="${e(href)}"><span>${e(cta.label)}</span><i aria-hidden="true">↗</i></a></section>`:''}
  </article>
  ${selected.length?`<section class="sn-article-related" aria-labelledby="related-title"><div class="sn-article-related-head"><span class="sn-article-label">Nog even verder lezen</span><h2 id="related-title">Ook fijn <em>om te weten.</em></h2></div><div class="sn-article-related-grid">${selected.map(a=>`<a class="sn-article-related-card" href="artikel-${e(a.id)}.html">${a.cover?`<div class="sn-article-related-image">${picture(a.cover,context,'(max-width: 760px) 90vw, 380px')}</div>`:''}<div class="sn-article-meta"><span>${e(a.category||'JOURNAL')}</span><span>${articleReadTime(a)}</span></div><h3>${e(a.title)}</h3><span class="sn-article-related-link">Lees het artikel <i aria-hidden="true">↗</i></span></a>`).join('')}</div></section>`:''}`;

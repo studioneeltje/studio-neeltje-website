@@ -57,9 +57,6 @@
     block.querySelector('[data-role="storyPrev"]')?.addEventListener('click',()=>show(active-1));block.querySelector('[data-role="storyNext"]')?.addEventListener('click',()=>show(active+1));range?.addEventListener('input',()=>show(Number(range.value)));stage?.addEventListener('pointerdown',e=>start=e.clientX);stage?.addEventListener('pointerup',e=>{if(Math.abs(e.clientX-start)>35)show(active+(e.clientX<start?1:-1));});window.addEventListener('resize',()=>show(active));show(0);
   });
 
-  document.querySelectorAll('form').forEach(form=>form.addEventListener('submit',event=>{
-    event.preventDefault();let status=form.querySelector('[data-form-status],.standalone-form-status');if(!status){status=document.createElement('p');status.setAttribute('aria-live','polite');form.appendChild(status);}status.hidden=false;status.textContent='Deze testwebsite verstuurt nog geen gegevens. De verzendkoppeling wordt later aangesloten.';
-  }));
   document.querySelectorAll('video[data-ambient]').forEach(video=>{const button=video.parentElement.querySelector('.sn-video-toggle');button?.addEventListener('click',()=>video.paused?video.play():video.pause());video.addEventListener('play',()=>button.textContent='Sfeerclip pauzeren');video.addEventListener('pause',()=>button.textContent='Sfeerclip afspelen');if(!reduced&&'IntersectionObserver'in window)new IntersectionObserver(entries=>{if(entries[0].isIntersecting)video.play().catch(()=>{});else video.pause();},{threshold:.3}).observe(video);});
   function resolveAnchor(){const target=location.hash.slice(1);if(target&&!document.getElementById(target))document.querySelector(`[data-role="${CSS.escape(target)}"]`)?.scrollIntoView();}window.addEventListener('hashchange',resolveAnchor);resolveAnchor();
 })();
@@ -102,3 +99,5 @@ document.querySelectorAll('.sn-reviews').forEach(section=>{
  if('ResizeObserver'in window)new ResizeObserver(render).observe(track);else window.addEventListener('resize',render);
  render();
 });
+
+if('IntersectionObserver'in window){const collageObserver=new IntersectionObserver(entries=>entries.forEach(entry=>entry.target.classList.toggle('sn-animation-paused',!entry.isIntersecting)),{threshold:.01});document.querySelectorAll('.sn-collage-photos').forEach(collage=>collageObserver.observe(collage));}

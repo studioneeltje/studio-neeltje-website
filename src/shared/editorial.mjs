@@ -13,6 +13,7 @@ export function reviewCardsMarkup(p,context){
 }
 // Treat the visual label and URL as one optional action, in preview and publication.
 export function removeEmptyButtons(html){return html.replace(/<a\b([^>]*)>([\s\S]*?)<\/a>/g,(whole,attrs,content)=>{
+ if(/\bdata-thanks-download\b/.test(attrs)&&/\bhidden\b/.test(attrs))return whole;
  const classes=attrs.match(/\bclass="([^"]*)"/)?.[1]||'';
  if(!/(?:^|\s)(?:button|sn-info-button|sn-text-link|social-follow-link|story-project-link)(?:\s|$)/.test(classes))return whole;
  const href=attrs.match(/\bhref="([^"]*)"/)?.[1]?.trim();
