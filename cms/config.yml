@@ -71,10 +71,90 @@ collections:
       - {name: id, label: Korte naam in de URL, widget: string, pattern: ['^[a-z0-9][a-z0-9-]{0,80}$', 'Gebruik kleine letters, cijfers en streepjes.']}
       - {name: title, label: Titel, widget: string}
       - {name: category, label: Onderwerp, widget: string}
-      - {name: readTime, label: Leestijd, widget: string, default: '5 min lezen'}
-      - {name: excerpt, label: Korte introductie, widget: text}
-      - {name: body, label: Artikeltekst, widget: markdown}
-      - {name: cover, label: Omslagfoto, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title]}
+      - {name: excerpt, label: Introductie, widget: text}
+      - name: summary
+        label: Voor de snelle lezer
+        hint: Korte punten die de kern samenvatten. Zonder punten wordt de introductie gebruikt.
+        widget: list
+        required: false
+        field: {name: point, label: Kernpunt, widget: string}
+      - {name: author, label: Auteur, widget: string, default: Neeltje}
+      - {name: date, label: Publicatiedatum, widget: datetime, date_format: 'DD-MM-YYYY', time_format: false, format: 'YYYY-MM-DD', required: false}
+      - {name: updated, label: Bijgewerkt op, widget: datetime, date_format: 'DD-MM-YYYY', time_format: false, format: 'YYYY-MM-DD', required: false}
+      - {name: showAuthor, label: Persoonlijk auteursblok tonen, widget: boolean, default: true}
+      - {name: showToc, label: Inhoudsopgave bij minimaal drie tussenkoppen, widget: boolean, default: true}
+      - {name: body, label: Artikeltekst, widget: markdown, required: false, hint: Gebruik kop 2 of kop 3 voor de inhoudsopgave. Voeg hieronder afwisselende blokken toe. De leestijd wordt automatisch berekend.}
+      - {name: cover, label: Headerfoto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+      - {name: coverCaption, label: Bijschrift headerfoto, widget: string, required: false}
+      - name: sections
+        label: Artikelblokken
+        hint: Versleep de blokken om tekst, tips en foto's af te wisselen. Foto's zijn optioneel.
+        widget: list
+        required: false
+        types:
+          - name: text
+            label: Tekst
+            widget: object
+            fields:
+              - {name: title, label: Tussenkop, widget: string, required: false}
+              - {name: text, label: Tekst, widget: markdown}
+          - name: photo
+            label: Eén foto
+            widget: object
+            fields:
+              - {name: image, label: Foto, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title]}
+              - {name: width, label: Breedte, widget: select, options: [{label: Tekstbreedte, value: copy}, {label: Breed, value: wide}], default: copy}
+              - {name: caption, label: Bijschrift, widget: string, required: false}
+          - name: pair
+            label: Twee foto's naast elkaar
+            widget: object
+            fields:
+              - {name: image, label: Eerste foto, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title]}
+              - {name: secondImage, label: Tweede foto, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title]}
+              - {name: caption, label: Bijschrift, widget: string, required: false}
+          - name: split
+            label: Foto naast tekst
+            widget: object
+            fields:
+              - {name: title, label: Tussenkop, widget: string, required: false}
+              - {name: text, label: Tekst, widget: markdown}
+              - {name: image, label: Foto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+              - {name: caption, label: Bijschrift, widget: string, required: false}
+          - name: tip
+            label: Praktische tip
+            widget: object
+            fields:
+              - {name: title, label: Titel, widget: string}
+              - {name: text, label: Tip, widget: markdown}
+          - name: checklist
+            label: Checklist
+            widget: object
+            fields:
+              - {name: title, label: Titel, widget: string}
+              - name: items
+                label: Punten
+                widget: list
+                field: {name: item, label: Punt, widget: string}
+      - name: related
+        label: Gerelateerde artikelen
+        hint: Laat leeg voor maximaal drie automatische leestips met voorkeur voor hetzelfde onderwerp.
+        widget: relation
+        collection: articles
+        search_fields: [title]
+        value_field: id
+        display_fields: [title]
+        multiple: true
+        required: false
+      - name: cta
+        label: Uitnodiging onder het artikel
+        widget: object
+        required: false
+        fields:
+          - {name: enabled, label: Uitnodiging tonen, widget: boolean, default: true}
+          - {name: title, label: Titel, widget: string, default: 'Meer rust in jullie planning?', required: false}
+          - {name: text, label: Toelichting, widget: text, default: 'De gratis trouwchecklist helpt jullie stap voor stap op weg.', required: false}
+          - {name: label, label: Knoptekst, widget: string, default: 'Ontdek de gratis trouwchecklist', required: false}
+          - {name: href, label: Link, widget: string, default: weddingschecklist.html, required: false, hint: Alleen met knoptekst én link verschijnt de uitnodiging.}
       - {name: published, label: Tonen op de website, widget: boolean, default: true}
   - name: settings
     label: Algemene instellingen
@@ -125,6 +205,201 @@ collections:
               - {name: emphasis, label: Schuine titelregel, widget: string}
               - {name: copy, label: Toelichting, widget: text}
               - {name: button, label: Knoptekst, widget: string}
+      - name: editorial
+        label: Informatiekaarten & reviews
+        file: content/settings/editorial.json
+        fields:
+          - name: cards
+            label: Volop beleven, mooi bewaren
+            widget: list
+            min: 2
+            max: 2
+            summary: '{{title}}'
+            fields:
+              - {name: label, label: Bovenregel, widget: string, required: false}
+              - {name: title, label: Titel, widget: string}
+              - {name: emphasis, label: Sierlijke titelregel, widget: string, required: false}
+              - {name: text, label: Tekst, widget: text, required: false}
+              - {name: image, label: Foto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+              - name: tags
+                label: Korte kenmerken (optioneel)
+                widget: list
+                required: false
+                field: {name: tag, label: Kenmerk, widget: string}
+              - {name: button, label: Knoptekst (optioneel), widget: string, required: false}
+              - {name: href, label: Knoplink (optioneel), widget: string, required: false, hint: Alleen als tekst én link ingevuld zijn wordt de knop zichtbaar.}
+          - name: reviews
+            label: Losse reviewkaarten
+            hint: Twee kaarten naast elkaar. Bij meer reviews maximaal drie op desktop, met pijltjes. Op mobiel één per keer. De huidige twee teksten komen uit dezelfde echte review.
+            widget: list
+            min: 2
+            summary: '{{name}} — {{caption}}'
+            fields:
+              - {name: quote, label: Quote, widget: text}
+              - {name: name, label: Naam (sierlijk lettertype), widget: string}
+              - {name: caption, label: Onderschrift, widget: string, required: false}
+              - {name: image, label: Foto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+              - {name: visible, label: Tonen, widget: boolean, default: true}
+      - name: checklist
+        label: 'Trouwchecklist: verkoopblokken'
+        file: content/settings/checklist.json
+        fields:
+          - name: contents
+            label: Papier & overzicht
+            widget: object
+            fields:
+              - {name: eyebrow, label: Bovenregel, widget: string, required: false}
+              - {name: title, label: Titel, widget: string}
+              - {name: emphasis, label: Sierlijke titelregel, widget: string}
+              - {name: intro, label: Introductie, widget: text}
+              - name: benefits
+                label: Voordelen
+                hint: Gebruik 3, 5 of 7 voordelen. Een even aantal wordt bij publicatie afgekeurd.
+                widget: list
+                min: 3
+                max: 7
+                summary: '{{title}}'
+                fields:
+                  - {name: title, label: Titel, widget: string}
+                  - {name: text, label: Toelichting, widget: text}
+              - {name: cover, label: Coverfoto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+              - {name: coverLabel, label: Label op de cover, widget: string, required: false}
+              - {name: coverTitle, label: Cover titel, widget: string}
+              - {name: coverEmphasis, label: Cover sierlijke regel, widget: string}
+              - {name: coverFooter, label: Cover onderregel, widget: string, required: false}
+              - {name: button, label: Knoptekst (optioneel), widget: string, required: false}
+              - {name: href, label: Knoplink (optioneel), widget: string, required: false, hint: '#checklist-aanvragen verwijst naar het aparte checklistformulier. Zonder tekst of link wordt de knop verborgen.'}
+              - {name: note, label: Korte tekst onder de knop, widget: string, required: false}
+          - name: audience
+            label: Voor wie is deze trouwchecklist?
+            hint: Beide stijlen gebruiken deze inhoud. De vormgeving kies je per blok in Puck.
+            widget: object
+            fields:
+              - {name: eyebrow, label: Bovenregel, widget: string, required: false}
+              - {name: title, label: Titel persoonlijk & herkenbaar, widget: string}
+              - {name: emphasis, label: Sierlijke regel persoonlijk & herkenbaar, widget: string}
+              - {name: editorialTitle, label: Titel rustig & redactioneel, widget: string}
+              - {name: editorialEmphasis, label: Sierlijke regel rustig & redactioneel, widget: string}
+              - {name: intro, label: Introductie, widget: text}
+              - {name: asideTitle, label: Persoonlijke zijtekst titel, widget: string, required: false}
+              - {name: asideText, label: Persoonlijke zijtekst, widget: text, required: false}
+              - {name: footer, label: Redactionele onderregel, widget: string, required: false}
+              - name: points
+                label: Herkenningspunten
+                hint: Gebruik 3, 5 of 7 punten. De lange en korte titel horen bij hetzelfde punt; toelichting wordt gedeeld.
+                widget: list
+                min: 3
+                max: 7
+                summary: '{{title}}'
+                fields:
+                  - {name: title, label: Persoonlijke titel, widget: string}
+                  - {name: shortTitle, label: Korte redactionele titel, widget: string}
+                  - {name: text, label: Toelichting, widget: text}
+      - name: experience
+        label: Stappen, auteur & bevestigingen
+        file: content/settings/experience.json
+        fields:
+          - name: journey
+            label: Compacte stappenbalk
+            widget: object
+            fields:
+              - {name: eyebrow, label: Bovenregel, widget: string}
+              - {name: title, label: Titel, widget: string}
+              - {name: emphasis, label: Sierlijke titelregel, widget: string}
+              - {name: button, label: Knoptekst (optioneel), widget: string, required: false}
+              - {name: href, label: Knoplink (optioneel), widget: string, required: false}
+              - name: steps
+                label: Stappen
+                widget: list
+                min: 3
+                max: 3
+                summary: '{{title}}'
+                fields:
+                  - {name: phase, label: Fase, widget: string}
+                  - {name: title, label: Titel, widget: string}
+                  - {name: text, label: Toelichting, widget: text}
+          - name: author
+            label: Persoonlijk auteursblok onder blogs
+            widget: object
+            fields:
+              - {name: enabled, label: Auteursblok tonen, widget: boolean, default: true}
+              - {name: eyebrow, label: Bovenregel, widget: string}
+              - {name: title, label: Aanhef, widget: string}
+              - {name: name, label: Naam, widget: string}
+              - {name: bio, label: Persoonlijke introductie, widget: text}
+              - {name: image, label: Foto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+              - {name: button, label: Linktekst (optioneel), widget: string, required: false}
+              - {name: href, label: Link (optioneel), widget: string, required: false}
+          - name: thanks
+            label: Bevestigingsteksten na geslaagde verzending
+            hint: Verzending is nog niet aangesloten. Deze teksten worden pas als bevestiging getoond na een geslaagde verzending, of als duidelijk gemarkeerd voorbeeld in Puck.
+            widget: object
+            fields:
+              - name: contact
+                label: Contactaanvraag
+                widget: object
+                fields:
+                  - {name: title, label: Titel, widget: string}
+                  - {name: emphasis, label: Sierlijke titelregel, widget: string}
+                  - {name: copy, label: Bericht, widget: text}
+                  - {name: nextTitle, label: Volgende stap titel, widget: string}
+                  - {name: nextCopy, label: Volgende stap tekst, widget: text}
+              - name: availability
+                label: Datumaanvraag
+                widget: object
+                fields:
+                  - {name: title, label: Titel, widget: string}
+                  - {name: emphasis, label: Sierlijke titelregel, widget: string}
+                  - {name: copy, label: Bericht, widget: text}
+                  - {name: nextTitle, label: Volgende stap titel, widget: string}
+                  - {name: nextCopy, label: Volgende stap tekst, widget: text}
+              - name: newsletter
+                label: Nieuwsbrief
+                widget: object
+                fields:
+                  - {name: title, label: Titel, widget: string}
+                  - {name: emphasis, label: Sierlijke titelregel, widget: string}
+                  - {name: copy, label: Bericht, widget: text}
+                  - {name: nextTitle, label: Volgende stap titel, widget: string}
+                  - {name: nextCopy, label: Volgende stap tekst, widget: text}
+              - name: checklist
+                label: Trouwchecklist
+                widget: object
+                fields:
+                  - {name: title, label: Titel, widget: string}
+                  - {name: emphasis, label: Sierlijke titelregel, widget: string}
+                  - {name: copy, label: Bericht, widget: text}
+                  - {name: nextTitle, label: Volgende stap titel, widget: string}
+                  - {name: nextCopy, label: Volgende stap tekst, widget: text}
+      - name: forms
+        label: Formulierkoppelingen (nog uitgeschakeld)
+        file: content/settings/forms.json
+        fields:
+          - {name: recipient, label: E-mailadres voor contact- en datumaanvragen, widget: string}
+          - name: contact
+            label: Contact en datumaanvragen
+            hint: Verzending is op verzoek uitgesteld. Alleen activeren nadat een echte verwerkingsdienst is aangesloten. Geen geheime sleutels invullen.
+            widget: object
+            fields:
+              - {name: provider, label: Verwerking, widget: select, options: [{label: Nog niet aangesloten, value: none}, {label: Eigen openbaar JSON-formulierendpoint, value: json}], default: none}
+              - {name: endpoint, label: Openbaar HTTPS-endpoint, widget: string, required: false}
+              - {name: activated, label: Verwerking is aangesloten en klaar, widget: boolean, default: false}
+          - name: newsletter
+            label: Nieuwsbrief
+            widget: object
+            fields:
+              - {name: provider, label: Verwerking, widget: select, options: [{label: Nog niet aangesloten, value: none}, {label: Eigen openbaar JSON-formulierendpoint, value: json}], default: none}
+              - {name: endpoint, label: Openbaar HTTPS-endpoint, widget: string, required: false}
+              - {name: activated, label: Verwerking is aangesloten en klaar, widget: boolean, default: false}
+          - name: checklist
+            label: Checklistaanvraag
+            widget: object
+            fields:
+              - {name: provider, label: Verwerking, widget: select, options: [{label: Nog niet aangesloten, value: none}, {label: Eigen openbaar JSON-formulierendpoint, value: json}], default: none}
+              - {name: endpoint, label: Openbaar HTTPS-endpoint, widget: string, required: false}
+              - {name: activated, label: Verwerking is aangesloten en klaar, widget: boolean, default: false}
+          - {name: checklistFile, label: Checklistbestand (optioneel), widget: file, required: false}
+          - {name: privacyURL, label: Link naar privacy-informatie (optioneel), widget: string, required: false}
       - name: media
         label: Beeldkwaliteit & verwerking
         file: content/settings/media.json

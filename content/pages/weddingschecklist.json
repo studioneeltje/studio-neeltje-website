@@ -147,7 +147,125 @@
           }
         ]
       }
+    },
+    {
+      "type": "ChecklistContents",
+      "props": {
+        "image": {
+          "desktop": null,
+          "mobile": null
+        },
+        "id": "weddingschecklist-contents",
+        "background": "white"
+      }
+    },
+    {
+      "type": "ChecklistAudience",
+      "props": {
+        "variant": "personal",
+        "openFirst": true,
+        "id": "weddingschecklist-audience",
+        "background": "pink"
+      }
+    },
+    {
+      "type": "ContactForm",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: EVEN AFSTEMMEN?",
+            "value": "EEN FIJNE START VOOR JULLIE PLANNING"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Vertel me",
+            "value": "Jullie checklist."
+          },
+          {
+            "key": "2",
+            "label": "Label: jullie plannen.",
+            "value": "Meer rust."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Een datum, een vraag of gewoon even kennismaken?",
+            "value": "Vraag de gratis trouwchecklist aan met jullie namen en e-mailadres."
+          },
+          {
+            "key": "4",
+            "label": "Label: 01 / KENNISMAKEN",
+            "value": "GRATIS VOOR JULLIE"
+          },
+          {
+            "key": "5",
+            "label": "Label: Vrijblijvend en persoonlijk",
+            "value": "STAP VOOR STAP OVERZICHT"
+          },
+          {
+            "key": "6",
+            "label": "Label: STUUR NEELTJE EEN BERICHT",
+            "value": "DE GRATIS TROUWCHECKLIST"
+          },
+          {
+            "key": "7",
+            "label": "Label: Jullie namen",
+            "value": "Jullie namen"
+          },
+          {
+            "key": "8",
+            "label": "Label: E-mailadres",
+            "value": "E-mailadres"
+          },
+          {
+            "key": "9",
+            "label": "Label: Trouwdatum",
+            "value": "Trouwdatum"
+          },
+          {
+            "key": "10",
+            "label": "Label: als die al bekend is",
+            "value": "als die al bekend is"
+          },
+          {
+            "key": "11",
+            "label": "Label: Locatie",
+            "value": "Locatie"
+          },
+          {
+            "key": "12",
+            "label": "Label: optioneel",
+            "value": "optioneel"
+          },
+          {
+            "key": "13",
+            "label": "Label: Jullie bericht",
+            "value": "Jullie bericht"
+          },
+          {
+            "key": "14",
+            "label": "Label: Verstuur mijn bericht",
+            "value": "Vraag de checklist aan"
+          },
+          {
+            "key": "15",
+            "label": "Tekst: Het formulier staat klaar. Om berichten te ontva",
+            "value": "Het formulier staat klaar. Om berichten te ontvangen, moet de verzendkoppeling nog worden ingesteld."
+          },
+          {
+            "key": "16",
+            "label": "Tekst: Je gegevens gebruik ik alleen om op jullie beric",
+            "value": "Je gegevens gebruik ik alleen om op jullie bericht te reageren."
+          }
+        ],
+        "images": [],
+        "links": [],
+        "id": "weddingschecklist-contactform-2",
+        "formKind": "checklist",
+        "background": "pink"
+      }
     }
   ],
-  "zones": {}
+  "zones": {},
+  "checklistDesignVersion": 1
 }

@@ -1,0 +1,8 @@
+{
+  "recipient": "info@studioneeltje.com",
+  "contact": {"provider": "none", "endpoint": "", "activated": false},
+  "newsletter": {"provider": "none", "endpoint": "", "activated": false},
+  "checklist": {"provider": "none", "endpoint": "", "activated": false},
+  "checklistFile": "",
+  "privacyURL": ""
+}

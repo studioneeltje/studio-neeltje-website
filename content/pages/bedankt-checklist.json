@@ -1,0 +1,20 @@
+{
+  "id": "bedankt-checklist",
+  "title": "Bevestiging — Checklist",
+  "root": {
+    "props": {
+      "title": "Bevestiging — Checklist",
+      "description": "Studio Neeltje — volgende stap."
+    }
+  },
+  "content": [
+    {
+      "type": "ThankYou",
+      "props": {
+        "id": "bedankt-checklist-content",
+        "kind": "checklist",
+        "background": "pink"
+      }
+    }
+  ]
+}

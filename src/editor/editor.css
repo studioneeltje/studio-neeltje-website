@@ -9,3 +9,11 @@
 
 /* Public entry point: editor content is loaded only after owner verification. */
 .admin-login{min-height:100svh;background:#fde6f2;display:grid;align-content:center;justify-items:center;padding:50px 24px;color:#65001d}.login-brand{font-size:15px;font-weight:800;letter-spacing:.14em;margin-bottom:30px}.login-brand span{color:#ff4802}.login-card{width:min(100%,580px);background:#fff;padding:clamp(28px,5vw,55px);box-shadow:0 18px 65px #65001d0d}.login-card h1{font-size:clamp(45px,7vw,65px);line-height:1.02;letter-spacing:-.055em;margin:23px 0}.login-card h1 em{font-family:'Playfair Display',serif;font-weight:500;color:#ff4802}.login-card>p{font-size:17px;line-height:1.65}.login-card form{margin:26px 0}.login-card label{font-size:16px}.login-card input{min-height:52px;font-size:17px}.login-card .admin-button{width:100%;display:flex;justify-content:space-between;align-items:center;margin-top:20px;min-height:52px;font-size:17px}.login-card .field-help{font-size:14px;line-height:1.6}.login-error{background:#fff0e8;color:#65001d;padding:14px;font-size:16px;line-height:1.5}.login-back{display:inline-block;margin-top:12px;font-size:15px}
+
+/* One-click palette choices in the block inspector. */
+.background-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.background-choices button{position:relative;display:flex;flex-direction:column;align-items:stretch;gap:8px;width:100%;margin:0;padding:8px;border:1px solid #65001d40;background:#fff;color:#65001d;text-align:left;font:500 15px/1.4 'Host Grotesk',sans-serif;border-radius:6px;cursor:pointer}
+.background-choices button[aria-pressed=true]{border:2px solid #65001d;padding:7px;box-shadow:0 0 0 2px #fde6f2}
+.background-swatch{display:grid;place-items:center;min-height:54px;border:1px solid #65001d20;font:600 23px/1.2 'Host Grotesk',sans-serif;border-radius:3px}
+.background-selected{position:absolute;right:10px;bottom:8px;font-weight:700}
+.background-choices button:focus-visible{outline:3px solid #ff4802;outline-offset:3px}

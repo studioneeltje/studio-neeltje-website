@@ -1,0 +1,39 @@
+{
+  "contents": {
+    "eyebrow": "Jullie trouwdag begint hier",
+    "title": "Minder uitzoekwerk.",
+    "emphasis": "Meer voorpret.",
+    "intro": "Van de eerste plannen tot de laatste checks. In 15 pagina’s weten jullie wat aandacht verdient — en wat nog even kan wachten.",
+    "benefits": [
+      {"title": "Weten waar je begint.", "text": "Een logische volgorde, slimme keuzes en tips voor jullie locatie."},
+      {"title": "Ruimte in jullie planning.", "text": "Een tijdlijn vanaf 18 maanden en genoeg tijd voor de momenten die tellen."},
+      {"title": "Ook aan de rest gedacht.", "text": "Last-minute checks en eerlijke inzichten uit de praktijk. Juist die helpen."}
+    ],
+    "cover": "foto-26fee13582a7",
+    "coverLabel": "Gratis voor jullie",
+    "coverTitle": "De trouw",
+    "coverEmphasis": "checklist.",
+    "coverFooter": "Meer rust. Meer jullie.",
+    "button": "Ja, ik wil de gratis checklist",
+    "href": "#checklist-aanvragen",
+    "note": "15 pagina’s · Praktisch en helder · Van een trouwfotograaf"
+  },
+  "audience": {
+    "eyebrow": "Deze is voor jullie",
+    "title": "Volop beleven.",
+    "emphasis": "Goed voorbereid.",
+    "editorialTitle": "Klinkt dit",
+    "editorialEmphasis": "als jullie?",
+    "intro": "Jullie plannen bewust. Want de dag mag niet alleen mooi zijn, maar ook goed voelen.",
+    "asideTitle": "Klinkt dit als jullie?",
+    "asideText": "Dan is deze trouwchecklist een fijne plek om te beginnen.",
+    "footer": "Dan is deze trouwchecklist voor jullie.",
+    "points": [
+      {"title": "Jullie houden van overzicht.", "shortTitle": "Meer overzicht.", "text": "Weten wat je wanneer regelt, met ruimte in je hoofd."},
+      {"title": "Jullie willen vooral genieten.", "shortTitle": "Zelf kunnen genieten.", "text": "De dag beleven, zonder steeds de planning te managen."},
+      {"title": "Jullie vinden herinneringen belangrijk.", "shortTitle": "Herinneringen voor later.", "text": "Aandacht voor de momenten die jullie later nog voelen."},
+      {"title": "Jullie kijken graag vooruit.", "shortTitle": "Weten wat er aankomt.", "text": "Je voorbereiden op wat er op jullie afkomt."},
+      {"title": "Jullie leren graag van ervaring.", "shortTitle": "Leren van ervaring.", "text": "Praktische inzichten en valkuilen die je liever voor bent."}
+    ]
+  }
+}

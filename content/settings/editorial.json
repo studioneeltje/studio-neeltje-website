@@ -1,0 +1,44 @@
+{
+  "cards": [
+    {
+      "label": "Voor jullie trouwdag",
+      "title": "Jullie zijn erbij.",
+      "emphasis": "Ik leg het vast.",
+      "text": "Van het aankleden tot die laatste dans. Met ruimte voor alles wat vanzelf gebeurt, zonder jullie dag steeds stil te zetten.",
+      "tags": [
+        "Trouwreportages",
+        "Echte momenten",
+        "Nederland & daarbuiten"
+      ],
+      "button": "Ontdek de trouwreportages",
+      "href": "reportages.html",
+      "image": ""
+    },
+    {
+      "label": "Voor alles erna",
+      "title": "Niet alleen een foto.",
+      "emphasis": "Een herinnering.",
+      "text": "Beelden die je niet alleen terugziet, maar ook weer even voelt. In een album, aan de muur of samen op de bank.",
+      "tags": [],
+      "button": "Ontdek de mogelijkheden",
+      "href": "contact.html",
+      "image": "foto-d5f77408f803"
+    }
+  ],
+  "reviews": [
+    {
+      "quote": "De mooiste dag van je dromen met de liefde van je leven, daar wil je Neeltje bij hebben!",
+      "name": "Jeroen & Martine",
+      "caption": "Over hun trouwdag",
+      "image": "",
+      "visible": true
+    },
+    {
+      "quote": "Haar betrokkenheid, professionaliteit en creative brein maakte voor ons de fotoreportage (wat stiekem best spannend is) ontspannen en fun! Neeltje wist ook onze speciale momenten van de ceremonie en receptie perfect vast te leggen. Het resultaat? Liefdevolle, prachtige foto’s en video's die ons helemaal terugbrengen naar onze dag.",
+      "name": "Jeroen & Martine",
+      "caption": "Over de fotoreportage · uit dezelfde review",
+      "image": "",
+      "visible": true
+    }
+  ]
+}

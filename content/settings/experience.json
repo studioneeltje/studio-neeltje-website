@@ -1,0 +1,30 @@
+{
+  "journey": {
+    "eyebrow": "VAN EEN EERSTE HALLO TOT JULLIE HERINNERINGEN",
+    "title": "Samen op weg.",
+    "emphasis": "Helemaal jullie.",
+    "button": "Zo werk ik",
+    "href": "werkwijze.html",
+    "steps": [
+      {"phase": "VOORAF", "title": "Even kennismaken.", "text": "Jullie vertellen over jullie plannen. We ontdekken of het klikt en bespreken wat voor jullie belangrijk is."},
+      {"phase": "OP JULLIE DAG", "title": "Volop beleven.", "text": "Jullie zijn erbij. Ik beweeg mee, kijk om me heen en leg ook de kleine momenten vast."},
+      {"phase": "VOOR ALTIJD", "title": "Steeds weer voelen.", "text": "Met jullie foto's keer je terug naar de dag. Naar de mensen, de blikken en alles ertussenin."}
+    ]
+  },
+  "author": {
+    "enabled": true,
+    "eyebrow": "ACHTER DE WOORDEN EN DE CAMERA",
+    "title": "Aangenaam,",
+    "name": "Neeltje",
+    "bio": "Ik fotografeer trouwdagen zoals ze voelen: ongedwongen, met ruimte voor jullie eigen verhaal. In dit Journal deel ik wat ik onderweg zie en leer, zodat jullie met meer rust naar jullie dag kunnen toeleven.",
+    "image": "foto-75c93a94397c",
+    "button": "Leer me kennen",
+    "href": "over.html"
+  },
+  "thanks": {
+    "contact": {"title": "Jullie verhaal", "emphasis": "is onderweg.", "copy": "Bedankt voor jullie bericht. Wat fijn om meer over jullie plannen te horen.", "nextTitle": "Ik lees persoonlijk mee.", "nextCopy": "Ik reageer via het e-mailadres dat jullie hebben ingevuld. Bewaar jullie ideeën vooral; ik hoor ze graag."},
+    "availability": {"title": "Jullie datum", "emphasis": "staat genoteerd.", "copy": "Bedankt voor jullie datumaanvraag. Ik kijk persoonlijk of ik nog beschikbaar ben.", "nextTitle": "Eerst even afstemmen.", "nextCopy": "Ik reageer via jullie e-mailadres. Een datumaanvraag is nog geen reservering of bevestiging."},
+    "newsletter": {"title": "Een beetje rust", "emphasis": "in jullie inbox.", "copy": "Bedankt voor jullie aanmelding. Kijk in jullie inbox voor de vervolgstap.", "nextTitle": "Check jullie inbox.", "nextCopy": "Wanneer de nieuwsbriefdienst om bevestiging vraagt, rond je de aanmelding af via de link in de e-mail."},
+    "checklist": {"title": "Meer overzicht.", "emphasis": "Meer voorpret.", "copy": "Bedankt voor jullie aanvraag van de trouwchecklist.", "nextTitle": "Op jullie eigen tempo.", "nextCopy": "Neem de checklist er samen bij. Kies wat bij jullie past, stap voor stap."}
+  }
+}

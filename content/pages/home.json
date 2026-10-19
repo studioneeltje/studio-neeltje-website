@@ -856,68 +856,23 @@
       }
     },
     {
+      "type": "InfoCards",
+      "props": {
+        "id": "home-info-cards",
+        "background": "white",
+        "eyebrow": "VOOR JULLIE DAG. EN DAARNA.",
+        "title": "Volop beleven.",
+        "emphasis": "Mooi bewaren."
+      }
+    },
+    {
       "type": "Review",
       "props": {
         "id": "home-review-9",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: WOORDEN VAN EEN BRUIDSPAAR",
-            "value": "WOORDEN VAN EEN BRUIDSPAAR"
-          },
-          {
-            "key": "1",
-            "label": "Label: JEROEN & MARTINE / 01",
-            "value": "JEROEN & MARTINE / 01"
-          },
-          {
-            "key": "2",
-            "label": "Label: De mooiste dag van je dromen",
-            "value": "De mooiste dag van je dromen"
-          },
-          {
-            "key": "3",
-            "label": "Label: met de liefde van je leven,",
-            "value": "met de liefde van je leven,"
-          },
-          {
-            "key": "4",
-            "label": "Label: daar wil je",
-            "value": "daar wil je"
-          },
-          {
-            "key": "5",
-            "label": "Label: Neeltje",
-            "value": "Neeltje"
-          },
-          {
-            "key": "6",
-            "label": "Label: bij hebben!",
-            "value": "bij hebben!"
-          },
-          {
-            "key": "7",
-            "label": "Label: Lees de volledige review",
-            "value": "Lees de volledige review"
-          },
-          {
-            "key": "8",
-            "label": "Tekst: Haar betrokkenheid, professionaliteit en creativ",
-            "value": "Haar betrokkenheid, professionaliteit en creative brein maakte voor ons de fotoreportage (wat stiekem best spannend is) ontspannen en fun! Neeltje wist ook onze speciale momenten van de ceremonie en receptie perfect vast te leggen. Het resultaat? Liefdevolle, prachtige foto’s en video's die ons helemaal terugbrengen naar onze dag."
-          },
-          {
-            "key": "9",
-            "label": "Label: Jeroen en Martine Stroomberg",
-            "value": "Jeroen en Martine Stroomberg"
-          },
-          {
-            "key": "10",
-            "label": "Label: ERVARING VAN EEN BRUIDSPAAR",
-            "value": "ERVARING VAN EEN BRUIDSPAAR"
-          }
-        ],
-        "images": [],
-        "links": []
+        "background": "wine",
+        "eyebrow": "LIEVE WOORDEN / VAN BRUIDSPAREN",
+        "title": "Wat zij",
+        "emphasis": "ervan vinden."
       }
     },
     {
@@ -1216,6 +1171,16 @@
             "href": "over.html"
           }
         ]
+      }
+    },
+    {
+      "type": "Journey",
+      "props": {
+        "id": "home-journey",
+        "background": "white",
+        "eyebrow": "VAN EEN EERSTE HALLO TOT JULLIE HERINNERINGEN",
+        "title": "Samen op weg.",
+        "emphasis": "Helemaal jullie."
       }
     },
     {
