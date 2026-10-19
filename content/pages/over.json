@@ -228,7 +228,8 @@
           }
         ],
         "links": [],
-        "id": "Wall-114c831b-0110-4314-9823-6ab3fbe35751"
+        "id": "Wall-114c831b-0110-4314-9823-6ab3fbe35751",
+        "background": "blue"
       }
     },
     {
@@ -243,17 +244,17 @@
           {
             "key": "1",
             "label": "Titel: Jullie beleven de",
-            "value": "En toen moest ik zelf op de "
+            "value": "En toen moest ik zelf op de foto."
           },
           {
             "key": "2",
             "label": "Label: dag",
-            "value": "foto"
+            "value": ""
           },
           {
             "key": "3",
             "label": "Titel: . Ik zie ook wat er tussendoor",
-            "value": ". Ik schrok me een"
+            "value": "Ik schrok me een"
           },
           {
             "key": "4",
