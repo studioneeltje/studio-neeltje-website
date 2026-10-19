@@ -27,12 +27,12 @@
           {
             "key": "2",
             "label": "Label: Helemaal eigen.",
-            "value": "Vertel me jullie plannen."
+            "value": "gegevens."
           },
           {
             "key": "3",
             "label": "Tekst: Een dag vol momenten om te bewaren.",
-            "value": "Een dag vol momenten om te bewaren."
+            "value": "Kan handig zijn"
           }
         ],
         "images": [],
@@ -68,12 +68,12 @@
           {
             "key": "4",
             "label": "Label: 01 / KENNISMAKEN",
-            "value": "Even kennismaken"
+            "value": "Natuurlijk vrijblijvend"
           },
           {
             "key": "5",
             "label": "Label: Vrijblijvend en persoonlijk",
-            "value": "natuurlijk vrijblijvend"
+            "value": "Altijd persoonlijk"
           },
           {
             "key": "6",
@@ -152,7 +152,7 @@
           {
             "key": "2",
             "label": "Label: Ook aan de muur.",
-            "value": "bij mij op de muur."
+            "value": "bij mij op de muur?"
           }
         ],
         "images": [
@@ -200,7 +200,8 @@
           }
         ],
         "links": [],
-        "id": "Wall-6c27de1e-5fe9-4425-b48c-1f611e2a4623"
+        "id": "Wall-6c27de1e-5fe9-4425-b48c-1f611e2a4623",
+        "background": "white"
       }
     }
   ],
