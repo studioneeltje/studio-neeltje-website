@@ -1,0 +1,67 @@
+{
+  "id": "portfolio",
+  "title": "Portfolio",
+  "root": {
+    "props": {
+      "title": "Portfolio",
+      "description": ""
+    }
+  },
+  "content": [
+    {
+      "type": "Intro",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
+            "value": "STUDIO NEELTJE / TROUWFOTOGRAFIE"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie verhaal.",
+            "value": "Portfolio"
+          },
+          {
+            "key": "2",
+            "label": "Label: Helemaal eigen.",
+            "value": "showcases."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Een dag vol momenten om te bewaren.",
+            "value": "Om je een beetje een beeld te gevne"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Foto achteraan",
+            "mediaId": "foto-26fee13582a7",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Hoofdfoto",
+            "mediaId": "foto-d5f77408f803",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Detailfoto",
+            "mediaId": "foto-6f5e773ded94",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "background": "blue",
+        "id": "Intro-545f9373-4903-4161-9676-cbc0fbe301d8"
+      }
+    }
+  ],
+  "zones": {},
+  "description": ""
+}
