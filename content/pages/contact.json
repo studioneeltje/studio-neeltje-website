@@ -27,12 +27,12 @@
           {
             "key": "2",
             "label": "Label: Helemaal eigen.",
-            "value": "gegevens."
+            "value": "Vertel me jullie plannen."
           },
           {
             "key": "3",
             "label": "Tekst: Een dag vol momenten om te bewaren.",
-            "value": "Voor als je meer wilt weten"
+            "value": "Een dag vol momenten om te bewaren."
           }
         ],
         "images": [],
@@ -152,7 +152,7 @@
           {
             "key": "2",
             "label": "Label: Ook aan de muur.",
-            "value": "bij mij op de muur?"
+            "value": "bij mij op de muur."
           }
         ],
         "images": [
