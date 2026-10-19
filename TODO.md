@@ -236,3 +236,11 @@ De gekozen subtiele zweefanimatie van de drie collagefoto's is meegenomen in dez
       onderdelen, altijd oneven en nooit meer dan 7. Gewone tekst blijft helder en rustig.
 
 De drie opmaken zijn gebouwd. Puck kiest plaatsing, stijl en achtergrond; Sveltia beheert één gedeelde inhoudsbron. Oudere checklistconcepten worden eenmalig aangevuld met behoud van alle bestaande blokken. De verzendkoppeling blijft uitgesteld.
+
+## Veilig conceptbeheer en checklistherstel — bouw en publicatie goedgekeurd
+
+- [x] De checklistbewerking uit de reservekopie van 19 oktober 21:57 terugzetten als online concept, met behoud van de nieuwe verkoopblokken.
+- [x] Opslaan zonder verplicht een ouder concept over het huidige werk te laden; bij gelijktijdige wijzigingen beide versies eerst vergelijken.
+- [x] Automatische herstelpunten, versiegeschiedenis en het terugzetten van een JSON-reservekopie toevoegen. Vóór iedere bronwissel de huidige bewerking veilig bewaren.
+
+Neeltje heeft op 19 oktober 2026 expliciet toestemming gegeven: ‘Bouw en publiceer de reparatie’. Het herstelde paginaconcept blijft een concept; alleen de reparatie van het beheer wordt op de testsite gepubliceerd.

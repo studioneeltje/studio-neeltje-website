@@ -1,5 +1,6 @@
 const REPO='studioneeltje/studio-neeltje-website';
 let token='',verifiedOwner=false;
+function draftConflict(){const error=new Error('Het online concept is intussen gewijzigd. Je huidige bewerking is behouden. Vergelijk de versies om veilig verder te gaan.');error.code='DRAFT_CHANGED';return error;}
 export function setToken(value){token=String(value).trim();verifiedOwner=false;}
 export function isConnected(){return Boolean(token&&verifiedOwner);}
 async function request(url,{method='GET',body,allow404=false}={}) {
@@ -8,7 +9,7 @@ async function request(url,{method='GET',body,allow404=false}={}) {
   try{response=await fetch(url,{method,headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});}
   catch{throw new Error('De verbinding met GitHub kon niet worden gemaakt. Controleer je internetverbinding en probeer opnieuw. Blijft dit gebeuren? Vernieuw de beheerpagina en log opnieuw in.');}
   if(response.status===404&&allow404)return null;
-  if(!response.ok){if(response.status===401)throw new Error('GitHub herkent deze token niet. Controleer of je de volledige, geldige token hebt gekopieerd.');if(response.status===409||response.status===422)throw new Error('De inhoud is intussen gewijzigd of kon niet worden samengevoegd. Laad het concept opnieuw; je lokale wijzigingen blijven bewaard.');if(response.status===403)throw new Error('GitHub geeft geen toegang. Controleer of de token rechten heeft voor deze repository, Contents, Pull requests en Actions.');throw new Error(`De aanvraag bij GitHub is mislukt (${response.status}). Probeer later opnieuw.`);}
+  if(!response.ok){if(response.status===401)throw new Error('GitHub herkent deze token niet. Controleer of je de volledige, geldige token hebt gekopieerd.');if(response.status===409||response.status===422)throw draftConflict();if(response.status===403)throw new Error('GitHub geeft geen toegang. Controleer of de token rechten heeft voor deze repository, Contents, Pull requests en Actions.');throw new Error(`De aanvraag bij GitHub is mislukt (${response.status}). Probeer later opnieuw.`);}
   return response.status===204?null:response.json();
 }
 export async function api(endpoint,options={}) {
@@ -30,12 +31,28 @@ export async function connect(value){
 export async function readFile(file,ref='main'){const result=await api(`contents/${file}?ref=${encodeURIComponent(ref)}`,{allow404:true});if(!result)return null;return {sha:result.sha,data:JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(result.content.replace(/\n/g,'')),c=>c.charCodeAt(0))))};}
 export async function head(branch='main'){return api(`git/ref/heads/${branch}`);}
 export function pageBranch(id){if(!/^[a-z0-9][a-z0-9-]{0,80}$/.test(id))throw new Error('Gebruik een korte paginanaam met letters, cijfers en streepjes.');return `puck/${id}`;}
+async function readDraftAt(id,ref){
+ const entries=await api(`contents/content/media?ref=${encodeURIComponent(ref)}`);
+ const media=await Promise.all(entries.filter(e=>e.name.endsWith('.json')).map(async entry=>(await readFile(entry.path,ref)).data));
+ const file=await readFile(`content/pages/${id}.json`,ref);if(!file)throw Error('Deze versie bevat geen paginaconcept. Je huidige bewerking blijft staan.');
+ return {media,...file};
+}
 export async function openDraft(id){
  const branch=pageBranch(id),ref=await api(`git/ref/heads/${branch}`,{allow404:true});if(!ref)return null;
  const prs=await api(`pulls?head=studioneeltje:${encodeURIComponent(branch)}&base=main&state=open`);if(!prs.length)return null;
- const entries=await api(`contents/content/media?ref=${encodeURIComponent(branch)}`),media=[];
- for(const entry of entries.filter(e=>e.name.endsWith('.json')))media.push((await readFile(entry.path,branch)).data);
- return {branch,head:ref.object.sha,pr:prs[0],media,...await readFile(`content/pages/${id}.json`,branch)};
+ // Every file belongs to the same immutable snapshot, even during another save.
+ const sha=prs[0].head.sha;
+ return {branch,head:sha,versionSha:sha,pr:prs[0],...await readDraftAt(id,sha)};
+}
+export async function listDraftHistory(id){
+ const branch=pageBranch(id),ref=await api(`git/ref/heads/${branch}`,{allow404:true});if(!ref)return [];
+ const commits=await api(`commits?sha=${ref.object.sha}&path=content/pages/${id}.json&per_page=30`);
+ return commits.map(commit=>({sha:commit.sha,date:commit.commit.committer.date,label:commit.commit.message.split('\n')[0]}));
+}
+export async function openDraftVersion(id,sha){
+ if(!/^[a-f0-9]{40}$/.test(sha))throw Error('Deze versie kon niet worden geopend.');
+ const current=await openDraft(id);
+ return {...await readDraftAt(id,sha),branch:pageBranch(id),head:current?.head||null,pr:current?.pr||null,versionSha:sha,fromHistory:true};
 }
 export async function sourcePreview(asset,branch){
  const file=await api(`contents/${asset.source.replace(/^\//,'')}?ref=${encodeURIComponent(branch)}`);
@@ -44,11 +61,11 @@ export async function sourcePreview(asset,branch){
 }
 export async function saveDraft(page,mediaChanges=[],uploads=[],expectedHead=null,baselineMedia=[]){
   const stable=value=>JSON.stringify(value&&typeof value==='object'&&!Array.isArray(value)?Object.fromEntries(Object.keys(value).sort().filter(k=>k!=='previewURL').map(k=>[k,JSON.parse(stable(value[k])||'null')])):value);
-  for(const asset of mediaChanges){const baseline=baselineMedia.find(m=>m.id===asset.id);const current=await readFile(`content/media/${asset.id}.json`);if(stable(current?.data)!==stable(baseline))throw Error(`De mediagegevens van ${asset.title} zijn intussen elders veranderd. Vernieuw de beheeromgeving voordat je deze wijziging opslaat.`);}
+  for(const asset of mediaChanges){const baseline=baselineMedia.find(m=>m.id===asset.id);const current=await readFile(`content/media/${asset.id}.json`);if(stable(current?.data)!==stable(baseline))throw Error(`De mediagegevens van ${asset.title} zijn intussen elders veranderd. Je pagina is lokaal bewaard. Download een reservekopie voordat je de beheeromgeving vernieuwt.`);}
   const branch=pageBranch(page.id);const main=await head();let ref=await api(`git/ref/heads/${branch}`,{allow404:true});
   if(!ref){ref=await api('git/refs',{method:'POST',body:{ref:`refs/heads/${branch}`,sha:main.object.sha}});}
-  else if(!expectedHead){const open=await api(`pulls?head=studioneeltje:${encodeURIComponent(branch)}&base=main&state=open`);if(open.length)throw new Error('Er staat al een concept. Laad het GitHub-concept voordat je opslaat.');await api('merges',{method:'POST',body:{base:branch,head:'main'}});ref=await head(branch);}
-  else if(expectedHead!==ref.object.sha)throw new Error('Dit concept is elders gewijzigd. Laad het GitHub-concept opnieuw voordat je opslaat.');
+  else if(!expectedHead){const open=await api(`pulls?head=studioneeltje:${encodeURIComponent(branch)}&base=main&state=open`);if(open.length)throw draftConflict();await api('merges',{method:'POST',body:{base:branch,head:'main'}});ref=await head(branch);}
+  else if(expectedHead!==ref.object.sha)throw draftConflict();
   const base=await api(`git/commits/${ref.object.sha}`);const tree=[];
   for(const upload of uploads){const buffer=await upload.file.arrayBuffer();let binary='';for(let i=0;i<buffer.byteLength;i+=0x8000)binary+=String.fromCharCode(...new Uint8Array(buffer,i,Math.min(0x8000,buffer.byteLength-i)));const blob=await api('git/blobs',{method:'POST',body:{content:btoa(binary),encoding:'base64'}});tree.push({path:upload.path,mode:'100644',type:'blob',sha:blob.sha});}
   tree.push({path:`content/pages/${page.id}.json`,mode:'100644',type:'blob',content:JSON.stringify(Object.fromEntries(Object.entries(page).filter(([key])=>key!=='localOnly')),null,2)+'\n'});

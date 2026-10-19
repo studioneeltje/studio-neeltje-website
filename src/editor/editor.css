@@ -17,3 +17,26 @@
 .background-swatch{display:grid;place-items:center;min-height:54px;border:1px solid #65001d20;font:600 23px/1.2 'Host Grotesk',sans-serif;border-radius:3px}
 .background-selected{position:absolute;right:10px;bottom:8px;font-weight:700}
 .background-choices button:focus-visible{outline:3px solid #ff4802;outline-offset:3px}
+
+/* Safe, explicit version choices; the editor stays untouched behind the dialog. */
+.versions-modal{max-width:1080px;padding:clamp(24px,4vw,44px);border-top:6px solid var(--orange)}
+.versions-modal h2{margin-top:18px;font-size:clamp(32px,4vw,48px)}
+.versions-modal>p{max-width:760px;font-size:17px}
+.version-compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:28px 0}
+.version-compare>section{padding:24px;background:var(--sky);min-width:0}
+.version-compare>section+section{background:var(--pink)}
+.version-compare h3{font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 20px}
+.version-compare strong{font-size:23px;letter-spacing:-.03em}
+.version-outline{padding-left:22px;display:grid;gap:14px;font-size:15px;line-height:1.4}
+.version-outline li{padding-left:4px}.version-outline span,.version-outline small{display:block}
+.version-outline small{font-size:14px;margin-top:3px;font-weight:400}
+.version-actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+.version-actions button,.version-import{min-height:46px;font-size:15px}
+.version-import{display:inline-flex;position:relative;align-items:center;border:1px solid #65001d50;padding:10px 16px;margin:0;border-radius:6px;cursor:pointer}
+.version-import input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.version-import:focus-within{outline:3px solid var(--orange);outline-offset:3px}
+.version-list{list-style:none;padding:0;margin:16px 0 30px;display:grid}
+.version-list li{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:18px 0;border-top:1px solid #65001d25}
+.version-list strong,.version-list span{display:block}.version-list strong{font-size:16px}.version-list span{font-size:14px;line-height:1.5;margin-top:5px}
+.version-list button{flex:none;font-size:15px}
+@media(max-width:650px){.version-compare{grid-template-columns:1fr}.version-compare>section{padding:20px}.version-list li{align-items:flex-start;gap:10px}.version-actions{flex-direction:column}.version-actions button,.version-import{width:100%;justify-content:center}}
