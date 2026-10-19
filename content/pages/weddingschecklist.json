@@ -10,36 +10,6 @@
   },
   "content": [
     {
-      "type": "Intro",
-      "props": {
-        "id": "weddingschecklist-intro-0",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
-            "value": "STUDIO NEELTJE / TROUWFOTOGRAFIE"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Jullie verhaal.",
-            "value": "Gratis trouwchecklist"
-          },
-          {
-            "key": "2",
-            "label": "Label: Helemaal eigen.",
-            "value": "Helemaal eigen."
-          },
-          {
-            "key": "3",
-            "label": "Tekst: Een dag vol momenten om te bewaren.",
-            "value": "Een dag vol momenten om te bewaren."
-          }
-        ],
-        "images": [],
-        "links": []
-      }
-    },
-    {
       "type": "Checklist",
       "props": {
         "id": "weddingschecklist-checklist-1",
@@ -82,22 +52,22 @@
           {
             "key": "7",
             "label": "Label: GRATIS",
-            "value": "GRATIS"
+            "value": "EEN"
           },
           {
             "key": "8",
             "label": "Label: voor jullie",
-            "value": "voor jullie"
+            "value": "goede start"
           },
           {
             "key": "9",
             "label": "Label: EXTRA HULP BIJ JULLIE PLANNING",
-            "value": "EXTRA HULP BIJ JULLIE PLANNING"
+            "value": "alles geregeld voor jullie bruiloft"
           },
           {
             "key": "10",
             "label": "Titel: Download de",
-            "value": "Download de"
+            "value": "Jullie"
           },
           {
             "key": "11",
@@ -107,7 +77,7 @@
           {
             "key": "12",
             "label": "Titel: weddingchecklist",
-            "value": "weddingchecklist"
+            "value": "trouwchecklist"
           },
           {
             "key": "13",
@@ -127,14 +97,14 @@
           {
             "key": "16",
             "label": "Knop / link: Bekijk de gratis checklist",
-            "value": "Bekijk de gratis checklist"
+            "value": "Download de gratis checklist"
           }
         ],
         "images": [
           {
             "key": "0",
             "label": "Een sfeervolle trouwdag met warme tafelsetting",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "foto-f5d8e85a877d",
             "desktop": null,
             "mobile": null
           }
@@ -145,7 +115,63 @@
             "label": "Link 1",
             "href": "weddingschecklist.html"
           }
-        ]
+        ],
+        "background": "wine"
+      }
+    },
+    {
+      "type": "About",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: TROUWFOTOGRAFIE / NEELTJE MEIJLER",
+            "value": "TROUWFOTOGRAAF / NEELTJE MEIJLER"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Wat er",
+            "value": "Waarom"
+          },
+          {
+            "key": "2",
+            "label": "Label: echt gebeurt.",
+            "value": "deze checklist?"
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Ik fotografeer de dag zoals hij zich ontvouwt: d",
+            "value": "Ik zie het keer op keer gebeuren. Stellen die alles 'goed' geregeld hebben, maar op de dag zelf alsnog moeten schakelen. Omdat de planning uitloopt. Omdat emoties onverwacht binnenkomen. Omdat je niet alles kunt controleren. Deze trouwchecklist is geen garantie voor perfectie. Wel voor voorbereiding, rust en vertrouwen. Zodat jullie op de dag zelf maar één taak hebben: aanwezig zijn."
+          },
+          {
+            "key": "4",
+            "label": "Knop / link: Bekijk mijn werk",
+            "value": ""
+          },
+          {
+            "key": "5",
+            "label": "Label: recht uit het hart",
+            "value": "recht uit het hart"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "foto-d5f77408f803",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "over.html"
+          }
+        ],
+        "background": "white",
+        "id": "About-d73ab92f-cfd0-4282-9343-86e042e94a73"
       }
     },
     {
@@ -166,6 +192,99 @@
         "openFirst": true,
         "id": "weddingschecklist-audience",
         "background": "pink"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 01 — TUSSEN DE MOMENTEN",
+            "value": "01 — TUSSEN DE MOMENTEN"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie beleven de",
+            "value": "Ik was bang dat een "
+          },
+          {
+            "key": "2",
+            "label": "Label: dag",
+            "value": "checklist alleen maar extra druk zou geven"
+          },
+          {
+            "key": "3",
+            "label": "Titel: . Ik zie ook wat er tussendoor",
+            "value": ". Ik zie ook wat er tussendoor"
+          },
+          {
+            "key": "4",
+            "label": "Label: gebeurt.",
+            "value": "gebeurt."
+          },
+          {
+            "key": "5",
+            "label": "Label: met liefde gezien, Neeltje",
+            "value": ""
+          },
+          {
+            "key": "6",
+            "label": "Tekst: Een trouwdag bestaat uit meer dan de grote momen",
+            "value": "“Ik was bang dat een checklist alleen maar extra druk zou geven, maar dit deed juist het tegenovergestelde. Alles mocht, niets moest. Dat gaf ons vertrouwen in onze keuzes.”"
+          }
+        ],
+        "images": [],
+        "links": [],
+        "background": "wine",
+        "id": "Quote-d463cd32-b8e3-4cee-978b-1702d0994aa3"
+      }
+    },
+    {
+      "type": "Method",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: MEER OVER NEELTJE",
+            "value": ""
+          },
+          {
+            "key": "1",
+            "label": "Titel: Rustig dichtbij.",
+            "value": "Wat de meeste checklists"
+          },
+          {
+            "key": "2",
+            "label": "Label: Altijd alert.",
+            "value": "je niet vertellen."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Ik fotografeer zoals ik zelf graag herinner: met",
+            "value": "De meeste checklists gaan over tafels, bloemen en catering. Logisch, maar er is één ding dat bijna altijd wordt overgeslagen: de fotografie-planning."
+          },
+          {
+            "key": "4",
+            "label": "Tekst: Vooraf leren we elkaar kennen. Op de dag zelf vo",
+            "value": "Wanneer is het goede licht? Hoeveel tijd heb je nodig voor een fotoshoot? Wat doe je als de dag uitloopt? Vanuit mijn werk als trouwfotograaf zie ik keer op keer waar het misgaat. En precies daarom heb ik die inzichten in deze checklist verwerkt. Zodat jij er op de dag zelf geen seconde aan hoeft te denken."
+          },
+          {
+            "key": "5",
+            "label": "Knop / link: Lees mijn verhaal",
+            "value": ""
+          }
+        ],
+        "images": [],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": ""
+          }
+        ],
+        "background": "white",
+        "id": "Method-bc47232b-fc4a-4d61-9159-8aa88c1e2078"
       }
     },
     {
@@ -263,6 +382,66 @@
         "id": "weddingschecklist-contactform-2",
         "formKind": "checklist",
         "background": "pink"
+      }
+    },
+    {
+      "type": "ContactCTA",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: Neeltje · jullie trouwfotograaf",
+            "value": "Neeltje · jullie trouwfotograaf"
+          },
+          {
+            "key": "1",
+            "label": "Label: 05 — ZULLEN WE KENNISMAKEN?",
+            "value": "lekker gepland en nu?"
+          },
+          {
+            "key": "2",
+            "label": "Titel: Voelt dit als",
+            "value": "Op zoek naar"
+          },
+          {
+            "key": "3",
+            "label": "Label: jullie verhaal?",
+            "value": "jullie fotograaf?"
+          },
+          {
+            "key": "4",
+            "label": "Tekst: Vertel me over jullie trouwdag, datum en locatie",
+            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt — en wat ik voor jullie kan betekenen."
+          },
+          {
+            "key": "5",
+            "label": "Knop / link: Vertel me jullie plannen",
+            "value": "Vertel me jullie plannen"
+          },
+          {
+            "key": "6",
+            "label": "Label: Vrijblijvend kennismaken · gewoon kijken of het ",
+            "value": "Vrijblijvend kennismaken · gewoon kijken of het klikt"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "foto-75c93a94397c",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "contact.html"
+          }
+        ],
+        "background": "wine",
+        "id": "ContactCTA-9818b1a0-33a3-484a-a37b-5a383841f796"
       }
     }
   ],
