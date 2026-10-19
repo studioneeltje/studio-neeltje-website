@@ -1,4 +1,5 @@
 import {prepareForms} from './forms.mjs';
+import {checklistContentsMarkup,checklistAudienceMarkup} from './checklist.mjs';
 import {journeyMarkup,thankYouMarkup} from './experience.mjs';
 import {infoCardsMarkup,reviewCardsMarkup,removeEmptyButtons} from './editorial.mjs';
 import {articleReadTime} from './article-data.mjs';
@@ -10,7 +11,9 @@ export function renderBlock(block, context) {
   const spec = context.templates[block.type];
   if (!spec) throw new Error(`Onbekend blok: ${block.type}`);
   let html = spec.html;
-  if(block.type==='ThankYou') html=thankYouMarkup(p.kind||'contact',context);
+  if(block.type==='ChecklistContents') html=checklistContentsMarkup(p,context);
+  else if(block.type==='ChecklistAudience') html=checklistAudienceMarkup(p,context);
+  else if(block.type==='ThankYou') html=thankYouMarkup(p.kind||'contact',context);
   else if(block.type==='Journey') html=journeyMarkup(p,context);
   else if (block.type === 'InfoCards') html=infoCardsMarkup(p,context);
   else if(block.type === 'Review') html=reviewCardsMarkup(p,context);
@@ -53,10 +56,14 @@ export function renderBlock(block, context) {
 
 export function renderPage(page, context) {
   const ids = new Set();
+  let checklistAnchor=false;
   return page.content.map(block=>{
     const id=block.props?.id;
     if (!id || ids.has(id)) throw new Error('Ieder blok moet een unieke identificatie hebben.');
-    ids.add(id);return renderBlock(block,context);
+    ids.add(id);
+    const anchor=block.type==='ContactForm'&&block.props.formKind==='checklist'&&!checklistAnchor?'<span class="sn-checklist-form-anchor" id="checklist-aanvragen" aria-hidden="true"></span>':'';
+    if(anchor)checklistAnchor=true;
+    return anchor+renderBlock(block,context);
   }).join('\n');
 }
 

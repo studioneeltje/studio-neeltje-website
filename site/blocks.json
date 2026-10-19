@@ -1754,5 +1754,23 @@
     "defaults": {
       "kind": "contact"
     }
+  },
+  "ChecklistContents": {
+    "label": "Trouwchecklist — Papier & overzicht",
+    "html": "",
+    "defaults": {
+      "image": {
+        "desktop": null,
+        "mobile": null
+      }
+    }
+  },
+  "ChecklistAudience": {
+    "label": "Voor wie — twee stijlen",
+    "html": "",
+    "defaults": {
+      "variant": "personal",
+      "openFirst": true
+    }
   }
 }

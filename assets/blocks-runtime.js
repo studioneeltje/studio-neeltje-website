@@ -1,6 +1,13 @@
 (() => {
   'use strict';
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.addEventListener('click',event=>{
+    const link=event.target.closest('a[href="#checklist-aanvragen"]');
+    const anchor=link&&document.getElementById('checklist-aanvragen');
+    if(!anchor)return;
+    event.preventDefault();anchor.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});
+    anchor.nextElementSibling?.querySelector('form input:not([type="hidden"])')?.focus({preventScroll:true});
+  });
   document.body.classList.add('motion-ready');
   document.querySelectorAll('.canvas-title').forEach(el=>el.classList.add('title-ready'));
   const reveal=document.querySelectorAll('.quote-module,.truus-review,.canvas-intro,.showcase-intro,.story-showcase,.canvas-wall,.canvas-end,.portfolio-mosaic-item');

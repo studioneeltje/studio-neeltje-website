@@ -52,3 +52,18 @@ De instellingen staan in Sveltia → Algemene instellingen → **Formulierkoppel
 ### GitHub-concept in Puck
 
 Na vernieuwen van de beheeromgeving moet je opnieuw inloggen. Kies de juiste pagina en **GitHub-concept laden**. Het bewerkvlak wordt nu opnieuw opgebouwd met dat concept. De versie wordt lokaal bewaard. Je bestaande GitHub-concept wordt niet automatisch gepubliceerd of aangepast door deze reparatie.
+
+
+## Trouwchecklist: Papier & overzicht en Voor wie
+
+In Puck → **Plannen en contact** staan:
+
+- **Trouwchecklist — Papier & overzicht**: de checklist als gelaagde, rechte cover met drie voordelen en een knop naar het losse aanvraagformulier. De coverfoto en desktop-/mobiele uitsnede zijn per blok te kiezen.
+- **Voor wie — twee stijlen**: kies bij **Vormgeving** voor **Persoonlijk & herkenbaar** of **Rustig & redactioneel**. De eerste gebruikt de vijf herkenningspunten met sterren; de tweede toont dezelfde punten als een uitklapbare redactionele lijst.
+- De bestaande losse formulierbouwsteen blijft apart. De actieknop verwijst naar het eerste checklistformulier op de pagina. Verzending blijft uitgesteld.
+
+Alle teksten, vijf herkenningspunten, drie voordelen, covergegevens en optionele knop staan op één plek: **Sveltia → Algemene instellingen → Trouwchecklist: verkoopblokken**. Een lege knoptekst of lege link verbergt de knop. De lijstlengte moet 3, 5 of 7 zijn; andere aantallen houden publicatie tegen met een melding.
+
+Bij het eerste openen met de nieuwe editor krijgen oudere lokale checklistconcepten en GitHub-concepten de twee nieuwe bouwstenen erbij, zonder bestaande teksten te vervangen. Deze eenmalige aanvulling wordt op het concept gemarkeerd; later bewust verwijderde blokken worden niet opnieuw toegevoegd. Ontbreekt het checklistformulier, dan wordt de losse formulierbouwsteen toegevoegd.
+
+**Bewaar eigen lokale wijzigingen met Concept opslaan.** Je hoeft daarvoor geen ouder GitHub-concept over je huidige bewerking te laden. Opslaan maakt een nieuwe versie in het bestaande concept en behoudt de geschiedenis. Is een eerder geladen GitHub-concept ondertussen elders gewijzigd, dan weigert de beveiligde opslag zoals voorheen. Publicatie blijft een aparte stap na het bekijken van de voorvertoning.

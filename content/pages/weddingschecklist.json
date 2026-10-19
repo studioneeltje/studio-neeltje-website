@@ -166,9 +166,29 @@
           {
             "key": "0",
             "label": "Link 1",
-            "href": "weddingschecklist.html"
+            "href": "#checklist-aanvragen"
           }
         ]
+      }
+    },
+    {
+      "type": "ChecklistContents",
+      "props": {
+        "image": {
+          "desktop": null,
+          "mobile": null
+        },
+        "id": "weddingschecklist-contents",
+        "background": "white"
+      }
+    },
+    {
+      "type": "ChecklistAudience",
+      "props": {
+        "variant": "personal",
+        "openFirst": true,
+        "id": "weddingschecklist-audience",
+        "background": "pink"
       }
     },
     {
@@ -267,5 +287,6 @@
         "formKind": "checklist"
       }
     }
-  ]
+  ],
+  "checklistDesignVersion": 1
 }
