@@ -177,3 +177,11 @@ bouwwens van Neeltje. Deze eerste bouwstap is op 18 oktober 2026 aangevraagd.
 - [x] Op mobiel een horizontaal veegbare reeks posts gebruiken.
 - [x] Geen verzonnen likes, reacties of live-feedkoppeling tonen; pictogrammen zijn decoratief.
 - [x] Socialposts compacter maken: maximaal vier naast elkaar vanaf 901 px, twee op tablet en kleinere veegkaarten op mobiel.
+
+## Achtergrondkeuze per bouwsteen — bouw goedgekeurd
+
+- [x] Eén klik in Puck voor wit, blauw, roze of donkerrood.
+- [x] Donkerrode tekst op lichte achtergronden en roze tekst op donkerrood.
+- [x] De bestaande rood-oranje accentkleur behouden.
+- [x] Knoppen en zelfstandige kaarten/formulieren met passende contrasten tonen.
+- [x] Kleurkeuze opslaan op het blok, met dezelfde weergave in builder en publicatie.

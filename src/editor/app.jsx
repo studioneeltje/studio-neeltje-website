@@ -1,3 +1,4 @@
+import {defaultBackground} from '../shared/themes.mjs';
 import React,{useState,useEffect,useMemo,useRef}from'react';
 import{createRoot}from'react-dom/client';
 import{Puck}from'@puckeditor/core';
@@ -6,7 +7,7 @@ import'./editor.css';
 import{renderBlock,renderPage,renderHeader,renderFooter}from'../shared/render.mjs';
 import{assetURL,escapeHTML}from'../shared/media.mjs';
 import{CropEditor}from'./CropEditor.jsx';
-import{TextsField,LinksField,ImagesField,ImagePicker,RecordCrops}from'./Fields.jsx';
+import{TextsField,LinksField,ImagesField,ImagePicker,RecordCrops,BackgroundField}from'./Fields.jsx';
 import{readLocal,writeLocal,getUploads,saveUpload,backupJSON,removeLocal}from'./storage.mjs';
 import{connect,setToken,isConnected,openDraft,saveDraft,publishDraft,sourcePreview}from'./github.mjs';
 
@@ -29,7 +30,8 @@ function blockConfig(context){
      if(spec.defaults.links?.length&&!['Journal','Orbit'].includes(type))fields.links={type:'custom',label:'Links en knoppen',render:props=><LinksField {...props} hiddenKeys={type==='Social'?['0','5']:[]}/>};
    }
    if(['Stories','Journal'].includes(type))fields.crops={type:'custom',label:'Uitsneden van omslagfoto’s',render:props=><RecordCrops {...props} context={context} records={type==='Stories'?context.stories:context.articles}/>};
-   components[type]={label:spec.label,fields,defaultProps:structuredClone(spec.defaults),render:props=><div className="sn-puck-block" dangerouslySetInnerHTML={{__html:renderBlock({type,props},context)}}/>};
+   fields={background:{type:'custom',label:'Achtergrond & tekstkleur',render:props=><BackgroundField {...props} fallback={defaultBackground(type)} colors={context.settings.colors}/>},...fields};
+   components[type]={label:spec.label,fields,defaultProps:{...structuredClone(spec.defaults),background:defaultBackground(type)},render:props=><div className="sn-puck-block" dangerouslySetInnerHTML={{__html:renderBlock({type,props},context)}}/>};
  }
  return{components,categories:{intro:{title:'Introductie',components:['Hero','Intro','Text','Quote','About','Method']},media:{title:'Foto’s en video',components:['Photo','Video','Mosaic','Orbit','StoryCarousel','Wall']},stories:{title:'Verhalen',components:['Stories','Journal','Review','Social']},actions:{title:'Plannen en contact',components:['Checklist','ContactForm','ContactCTA','Availability','Pricing','FAQ','Steps']}},root:{fields:{title:{type:'text',label:'Paginatitel'},description:{type:'textarea',label:'Omschrijving voor zoekmachines'}},render:({children})=><div className="mode mode-canvas active">{children}</div>}};
 }

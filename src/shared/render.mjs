@@ -1,3 +1,4 @@
+import {BACKGROUNDS} from './themes.mjs';
 import {escapeHTML as e, safeURL, imageMarkup, videoMarkup, assetURL} from './media.mjs';
 
 export function renderBlock(block, context) {
@@ -39,7 +40,7 @@ export function renderBlock(block, context) {
   // Original named anchors remain as data roles. Every instance gets unique IDs.
   html = html.replace(/\bid="([^"]+)"/g,(_,old)=>`id="${e(id)}-${e(old)}" data-role="${e(old)}"`)
     .replace(/(aria-labelledby|aria-describedby|aria-controls|for)="([^"]+)"/g,(_,attr,ids)=>`${attr}="${ids.split(' ').map(old=>`${id}-${old}`).join(' ')}"`);
-  return `<div data-sn-block="${e(block.type)}" data-block-id="${e(id)}">${html}</div>`;
+  return `<div data-sn-block="${e(block.type)}" data-block-id="${e(id)}"${BACKGROUNDS.includes(p.background)?` data-sn-theme="${p.background}"`:''}>${html}</div>`;
 }
 
 export function renderPage(page, context) {

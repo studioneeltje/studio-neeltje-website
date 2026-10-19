@@ -427,3 +427,30 @@
 @media(max-width:1100px) and (min-width:901px){.mode-canvas .sn-instagram-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.mode-canvas .sn-post-header{padding:12px 10px;gap:8px}.mode-canvas .sn-post-header strong{font-size:14px}.mode-canvas .sn-post-header>div>span{font-size:12px}.mode-canvas .sn-post-dots{font-size:14px}}
 @media(max-width:900px) and (min-width:601px){.mode-canvas .sn-instagram-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:620px;gap:20px}}
 @media(max-width:600px){.mode-canvas .sn-instagram-grid{grid-template-columns:none;grid-auto-columns:clamp(210px,68vw,260px);max-width:100%;gap:16px}}
+
+/* Optional per-block palette, shared by the public site and the visual editor. */
+[data-sn-theme]{--sn-wine:#65001d;--sn-pink:#fde6f2;--sn-accent:#ff4802;--sn-fg:#65001d;--sn-bg:#fff;--sn-rule:#65001d35;--sn-action-bg:#65001d;--sn-action-fg:#fde6f2;--sn-action-hover:#850a35}
+[data-sn-theme="blue"]{--sn-bg:#e8f2ff}
+[data-sn-theme="pink"]{--sn-bg:#fde6f2}
+[data-sn-theme="wine"]{--sn-bg:#65001d;--sn-fg:#fde6f2;--sn-rule:#fde6f255;--sn-action-bg:#fde6f2;--sn-action-fg:#65001d;--sn-action-hover:#fff}
+.mode-canvas [data-sn-theme]>section {background:var(--sn-bg)!important;background-image:none!important;color:var(--sn-fg)!important}
+.mode-canvas [data-sn-theme] :is(h1,h2,h3,h4,p,li,blockquote,.long-copy,.section-tag,.review-top,.review-credit,.story-count,.story-project-meta,.canvas-project,.sn-story-card,.sn-story-card-meta,.social-feature-bottom,.standalone-form-aside,.checklist-reassurance,.contact-reassurance,.canvas-pricing-note,.canvas-price-value,.canvas-price-value span,.price-hours,.canvas-price-saving,.journal-card-meta,.sn-text-section,.sn-steps,.sn-page-intro,.orbit-controls) {color:var(--sn-fg)!important;opacity:1}
+.mode-canvas [data-sn-theme] :is(h1,h2,h3,h4) em,.mode-canvas [data-sn-theme] :is(.title-script,.quote-handwritten,.about-photo-note em) {color:var(--sn-accent)!important}
+.mode-canvas [data-sn-theme] :is(.title-outline,.title-outline .hero-word,.wall-title-highlight,.about-split-copy h2,.canvas-faq-list summary,.review-line,.sn-video figcaption) {color:var(--sn-fg)!important}
+.mode-canvas [data-sn-theme] :is(.canvas-faq-list summary,.review-more summary,.journal-card,.journal-card-link,.social-feature-bottom a,.social-feature-bottom .sn-link-label,.sn-post-caption,.sn-post-header strong,.sn-post-header>div>span) {color:var(--sn-fg)!important}
+.mode-canvas [data-sn-theme] :is(.canvas-faq-list details,.price-route,.canvas-price-value,.social-feature-bottom,.canvas-project-list,.review-top) {border-color:var(--sn-rule)!important}
+/* Independent surfaces keep their own readable text/background pairs. */
+.mode-canvas [data-sn-theme] :is(.canvas-price-card,.availability-form,.sn-instagram-post,.checklist-sheet,.about-photo-note) {--sn-fg:#65001d;--sn-bg:#fff;--sn-rule:#65001d35;--sn-action-bg:#65001d;--sn-action-fg:#fde6f2;--sn-action-hover:#850a35;background:var(--sn-bg)!important;color:var(--sn-fg)!important}
+.mode-canvas [data-sn-theme] :is(.canvas-price-card.is-featured,.standalone-contact-form,.orbit-stage) {--sn-fg:#fde6f2;--sn-bg:#65001d;--sn-rule:#fde6f255;--sn-action-bg:#fde6f2;--sn-action-fg:#65001d;--sn-action-hover:#fff;background:var(--sn-bg)!important;color:var(--sn-fg)!important}
+.mode-canvas [data-sn-theme] .about-photo-note {background:#fde6f2!important}
+.mode-canvas [data-sn-theme] :is(.standalone-form-kicker,form label,form small,.orbit-stage-meta) {color:var(--sn-fg)!important}
+.mode-canvas [data-sn-theme] :is(.button,.story-project-link,.standalone-form-submit,.availability-form button,.social-follow-link,.sn-video-toggle,.orbit-controls button,.story-arrow) {background:var(--sn-action-bg)!important;color:var(--sn-action-fg)!important;border-color:var(--sn-action-bg)!important}
+.mode-canvas [data-sn-theme] :is(.button i,.standalone-form-submit i,.social-follow-link>span) {background:var(--sn-accent)!important;color:#65001d!important}
+.mode-canvas [data-sn-theme] .sn-post-actions {color:var(--sn-fg)!important}
+.mode-canvas [data-sn-theme] :is(.quote-marker,.review-marker) {color:#65001d!important}
+.mode-canvas [data-sn-theme] :is(.quote-marker,.review-marker)::before {background:var(--sn-accent)!important}
+@media(hover:hover){.mode-canvas [data-sn-theme] :is(.button,.story-project-link,.standalone-form-submit,.availability-form button,.social-follow-link,.sn-video-toggle,.orbit-controls button,.story-arrow):hover {background:var(--sn-action-hover)!important;color:var(--sn-action-fg)!important}}
+/* The image stays visible when a hero palette is changed; only its wash changes. */
+.mode-canvas [data-sn-theme] .canvas-hero::before {background:linear-gradient(0deg,var(--sn-bg),transparent 85%),linear-gradient(90deg,var(--sn-bg),transparent 90%)!important}
+.mode-canvas [data-sn-theme="white"] .canvas-hero .canvas-card.card-one img,.mode-canvas [data-sn-theme="blue"] .canvas-hero .canvas-card.card-one img,.mode-canvas [data-sn-theme="pink"] .canvas-hero .canvas-card.card-one img {filter:brightness(.96) saturate(.85)!important}
+.mode-canvas [data-sn-theme] .canvas-hero :is(.canvas-top,.canvas-deck,.canvas-deck p) {color:var(--sn-fg)!important;text-shadow:none}

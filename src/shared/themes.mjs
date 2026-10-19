@@ -1,0 +1,4 @@
+// Stored on each Puck block; the same value drives preview and publication.
+export const BACKGROUNDS=['white','blue','pink','wine'];
+export const BLOCK_BACKGROUNDS={Hero:'wine',Quote:'wine',Checklist:'blue',Availability:'blue',ContactForm:'pink',Stories:'blue',StoryCarousel:'wine',Orbit:'blue',Mosaic:'white',Review:'wine',Wall:'blue',About:'white',Journal:'pink',FAQ:'white',Method:'white',Pricing:'blue',ContactCTA:'wine',Social:'pink',Intro:'blue',Steps:'white',Photo:'white',Video:'white',Text:'white'};
+export const defaultBackground=type=>BLOCK_BACKGROUNDS[type]||'white';
