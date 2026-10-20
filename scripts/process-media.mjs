@@ -51,7 +51,14 @@ export async function processMedia({root=process.cwd(),outputDir=path.join(root,
     const asset=JSON.parse(await fs.readFile(path.join(root,'content/media',filename),'utf8'));
     if(!/^[a-z0-9][a-z0-9-]{0,100}$/.test(asset.id))throw new Error('Ongeldige media-identificatie.');
     if(asset.deletedAt){manifest[asset.id]={deleted:true,kind:asset.kind,...asset.dimensions};continue;}
-    const input=await readSource(asset,root,config.maxUploadMB*1024*1024,cacheDir);
+    let input;
+    try{input=await readSource(asset,root,config.maxUploadMB*1024*1024,cacheDir);}
+    catch(error){
+      if(error.code!=='ENOENT'||/^https:\/\//.test(asset.source))throw error;
+      manifest[asset.id]={missing:true,kind:asset.kind,...asset.dimensions};
+      console.warn(`Bronbestand ontbreekt: ${asset.id}; een leeg mediavlak wordt getoond.`);
+      continue;
+    }
     const hash=crypto.createHash('sha256').update(input).update(JSON.stringify(config)).update('neeltje-media-v1').digest('hex').slice(0,24);
     const work=path.join(cacheDir,'processed',hash);let result;
     try{result=JSON.parse(await fs.readFile(path.join(work,'result.json'),'utf8'));}
