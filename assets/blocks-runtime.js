@@ -30,11 +30,11 @@
   dialog.innerHTML='<button class="lightbox-close" aria-label="Foto sluiten" type="button">×</button><button class="lightbox-prev" aria-label="Vorige foto" type="button">←</button><figure><img alt=""></figure><button class="lightbox-next" aria-label="Volgende foto" type="button">→</button>';
   document.body.appendChild(dialog);let photos=[],active=0,trigger;
   function showPhoto(index){active=(index+photos.length)%photos.length;const original=photos[active].querySelector('img');const img=dialog.querySelector('img');img.src=original.dataset.fullSrc||original.currentSrc||original.src;img.alt=original.alt;}
-  function openGallery(items,index,source){photos=items;trigger=source;showPhoto(index);dialog.showModal();document.body.classList.add('sn-lightbox-open');}
+  function openGallery(items,index,source){photos=items;trigger=source;dialog.classList.toggle('sn-lightbox-wall',Boolean(source.closest('.salon-wall')));dialog.querySelectorAll('.lightbox-prev,.lightbox-next').forEach(button=>button.hidden=items.length<2);showPhoto(index);dialog.showModal();document.body.classList.add('sn-lightbox-open');}
   dialog.addEventListener('click',event=>{if(event.target.closest('.lightbox-prev')){event.stopPropagation();showPhoto(active-1);}else if(event.target.closest('.lightbox-next')){event.stopPropagation();showPhoto(active+1);}else dialog.close();});
   dialog.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'){event.preventDefault();showPhoto(active-1);}if(event.key==='ArrowRight'){event.preventDefault();showPhoto(active+1);}});
   dialog.addEventListener('close',()=>{document.body.classList.remove('sn-lightbox-open');trigger?.focus({preventScroll:true});});
-  document.querySelectorAll('.portfolio-mosaic,.sn-story-gallery').forEach(gallery=>{const items=[...gallery.querySelectorAll('button')].filter(b=>b.querySelector('img'));items.forEach((item,index)=>item.addEventListener('click',event=>{event.preventDefault();openGallery(items,index,item);}));});
+  document.querySelectorAll('.portfolio-mosaic,.sn-story-gallery,.salon-wall').forEach(gallery=>{const items=[...gallery.querySelectorAll('button')].filter(b=>b.querySelector('img'));items.forEach((item,index)=>item.addEventListener('click',event=>{event.preventDefault();openGallery(items,index,item);}));});
 
   document.querySelectorAll('[data-sn-block="Orbit"]').forEach(block=>{
     const stage=block.querySelector('.orbit-stage'),cards=[...block.querySelectorAll('.orbit-card')],status=block.querySelector('[data-role="orbitStatus"]');

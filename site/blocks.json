@@ -1772,5 +1772,14 @@
       "variant": "personal",
       "openFirst": true
     }
+  },
+  "SingleReview": {
+    "label": "Losse review met lees meer",
+    "html": "",
+    "defaults": {
+      "eyebrow": "WOORDEN VAN EEN BRUIDSPAAR",
+      "reviewId": "jeroen-martine",
+      "crops": {}
+    }
   }
 }

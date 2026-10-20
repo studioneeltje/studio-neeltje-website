@@ -1,7 +1,7 @@
 import {prepareForms} from './forms.mjs';
 import {checklistContentsMarkup,checklistAudienceMarkup} from './checklist.mjs';
 import {journeyMarkup,thankYouMarkup} from './experience.mjs';
-import {infoCardsMarkup,reviewCardsMarkup,removeEmptyButtons} from './editorial.mjs';
+import {infoCardsMarkup,reviewCardsMarkup,singleReviewMarkup,removeEmptyButtons} from './editorial.mjs';
 import {articleReadTime} from './article-data.mjs';
 import {BACKGROUNDS} from './themes.mjs';
 import {escapeHTML as e, safeURL, imageMarkup, videoMarkup, assetURL} from './media.mjs';
@@ -17,13 +17,20 @@ export function renderBlock(block, context) {
   else if(block.type==='Journey') html=journeyMarkup(p,context);
   else if (block.type === 'InfoCards') html=infoCardsMarkup(p,context);
   else if(block.type === 'Review') html=reviewCardsMarkup(p,context);
+  else if(block.type === 'SingleReview') html=singleReviewMarkup(p,context);
   else if (block.type === 'Video') html = `<section class="sn-video-section"><div class="section-tag">${e(p.eyebrow)}</div><h2>${e(p.title)}</h2>${videoMarkup(p.mediaId,context,p)}</section>`;
   else if (block.type === 'Photo') html = `<section class="sn-photo-section" style="--sn-aspect:${e(p.aspect || '3/2')}">${imageMarkup(p.image,context,{aspect:p.aspect || '3/2'})}${p.caption ? `<p>${e(p.caption)}</p>` : ''}</section>`;
   else if (block.type === 'Text') html = `<section class="sn-text-section"><div class="section-tag">${e(p.eyebrow)}</div><h2>${e(p.title)}</h2><p>${e(p.body).replace(/\n/g,'<br>')}</p></section>`;
   else {
     html = html.replace(/\{\{t:(\d+)\}\}/g,(_,key)=>e(p.texts?.[key]?.value ?? spec.defaults.texts?.[key]?.value ?? ''));
     const sizes={Hero:'100vw',Orbit:'(max-width: 760px) 150px, 280px',Mosaic:'(max-width: 760px) 88vw, 45vw',StoryCarousel:'(max-width: 760px) 70vw, 480px',Social:'(max-width: 760px) 45vw, 25vw',Wall:'(max-width: 760px) 40vw, 300px',Checklist:'(max-width: 760px) 88vw, 45vw',About:'(max-width: 760px) 88vw, 45vw',ContactCTA:'(max-width: 760px) 88vw, 400px'};
-    html = html.replace(/\{\{image:(\d+)\}\}/g,(_,key)=>imageMarkup({...p.images?.[key]||spec.defaults.images?.[key],sizes:sizes[block.type]}, context,{eager:block.type === 'Hero' && Number(key) === 0,className:spec.imageClasses?.[key] || ''}));
+    html = html.replace(/\{\{image:(\d+)\}\}/g,(_,key)=>{
+      const selection=p.images?.[key]||spec.defaults.images?.[key];
+      const image=imageMarkup({...selection,sizes:sizes[block.type]},context,{eager:block.type==='Hero'&&Number(key)===0,className:block.type==='Wall'?'':spec.imageClasses?.[key]||''});
+      if(block.type!=='Wall')return image;
+      const asset=context.media.find(asset=>asset.id===selection?.mediaId);
+      return asset?`<button type="button" class="sn-wall-open ${e(spec.imageClasses?.[key]||'')}" aria-label="Vergroot foto: ${e(asset.alt||asset.title)}" aria-haspopup="dialog">${image}</button>`:image;
+    });
     html = html.replace(/\{\{link:(\d+)\}\}/g,(_,key)=>e(safeURL(p.links?.[key]?.href ?? spec.defaults.links?.[key]?.href)));
     if (block.type === 'Stories') {
       const stories = context.stories.filter(s => s.published !== false);

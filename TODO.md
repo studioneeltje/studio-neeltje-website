@@ -244,3 +244,35 @@ De drie opmaken zijn gebouwd. Puck kiest plaatsing, stijl en achtergrond; Svelti
 - [x] Automatische herstelpunten, versiegeschiedenis en het terugzetten van een JSON-reservekopie toevoegen. Vóór iedere bronwissel de huidige bewerking veilig bewaren.
 
 Neeltje heeft op 19 oktober 2026 expliciet toestemming gegeven: ‘Bouw en publiceer de reparatie’. Het herstelde paginaconcept blijft een concept; alleen de reparatie van het beheer wordt op de testsite gepubliceerd.
+
+## Portfolio als verhaal per project — op de todo, nog niet bouwen
+
+Referentie van Neeltje: https://www.studioneeltje.com/trouwfotograaf-kasteel-keukenhof-lisse. De bestaande Keukenhof-pagina wisselt het verhaal, informatie over de locatie, losse foto's en galerijen af. Op de nieuwe site moet iedere reportage een eigen verhaal kunnen worden, in de nieuwe huisstijl.
+
+- [ ] Een projectheader met titel, namen van het bruidspaar, locatie en gekozen headerbeeld(en).
+- [ ] Losse, verschuifbare verhaalhoofdstukken met eigen tussenkoppen en teksten, bijvoorbeeld voorbereidingen, ceremonie en avondfeest. Geen verplichte vaste hoeveelheid hoofdstukken.
+- [ ] Afwisselende beeldonderdelen: tekst naast foto, losse brede foto, twee foto's en een galerij. Foto's en uitsneden per onderdeel kiezen; bestaande optimalisatie en vergroting behouden.
+- [ ] Een optionele review van het bruidspaar met eigen quote, naam en optionele foto. Alleen tonen als een echte review is ingevuld; geen leeg vlak, verzonnen review of beoordeling tonen.
+- [ ] Optionele projectinformatie over locatie, bijzonderheden en leveranciers met links, zodat elk project eigen inhoud krijgt.
+- [ ] SEO per project uitbreiden met eigen zoekmachinetitel, metabeschrijving en duidelijke URL; semantische koppen en de bestaande alt-teksten behouden. Geen resultaatgaranties of verplicht zoekwoordenveld suggereren.
+- [ ] Passende afsluiting met optionele contactknop en gerelateerde reportages; koppeling aan het Portfolio-overzicht vanuit dezelfde projectbron.
+
+Voorgestelde beheeropzet: projectinhoud, review en SEO hebben één vaste plek in Sveltia. De projectpagina's ook visueel toegankelijk maken in Puck voor plaatsing en volgorde van de onderdelen, zonder teksten op twee plekken te kopiëren. Dit vereist uitbreiding van de huidige vaste reportage-template en is nog niet gebouwd. Wachten op expliciet ‘bouw’ en passende publicatietoestemming.
+
+## Losse review met uitklapbare tekst — gebouwd na expliciet ‘bouw’
+
+Neeltje vraagt de oorspronkelijke zelfstandige review terug: ‘De mooiste dag van je dromen … daar wil je Neeltje bij hebben!’ met ‘Lees de volledige review +’. De bron staat nog in site/source-home.html als .truus-review met details.review-more. Deze is bij de omzetting van Review naar ‘Losse reviewkaarten uit Sveltia’ uit de beschikbare bouwstenen verdwenen.
+
+- [x] Deze grote losse review terugbrengen als eigen Puck-bouwsteen ‘Losse review met lees meer’, naast de bestaande reviewkaarten.
+- [x] Een zichtbare korte quote en een optionele uitklapbare volledige review, met naam en optionele foto van het bruidspaar. Zonder lange tekst geen uitklapknop; alleen echte ingevulde inhoud tonen.
+- [x] Het onderdeel op gewone Puck-pagina's kunnen plaatsen, met één inhoudsbron en de bestaande huisstijl- en achtergrondkeuzes. De gedeelde renderer is herbruikbaar voor de toekomstige projectopbouw; die portfolio-uitbreiding blijft apart op de todo. De huidige reviewkaarten en persoonlijke quote blijven beschikbaar.
+
+Gebouwd op 19 oktober 2026. Publicatie wacht op expliciete toestemming.
+
+## Aanvulling tijdens deze bouwstap — fotomuur
+
+- [x] Een foto/lijst op de fotomuur aanklikbaar maken en groot openen met een doorzichtige achtergrond.
+- [x] Een klik op de foto of op een willekeurige plek eromheen sluit de grote weergave. Kruisje, Escape en pijltjestoetsen blijven beschikbaar.
+- [x] De kaders en uitsneden van de fotomuur behouden, inclusief bediening met het toetsenbord.
+
+Toegevoegd door Neeltje tijdens de actieve bouwstap voor de losse review. Voor deze stap is ‘bouw’ gegeven; publicatie is nog niet gevraagd.

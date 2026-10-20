@@ -73,3 +73,15 @@ Alle teksten, vijf herkenningspunten, drie voordelen, covergegevens en optionele
 Bij het eerste openen met de nieuwe editor krijgen oudere lokale checklistconcepten en GitHub-concepten de twee nieuwe bouwstenen erbij, zonder bestaande teksten te vervangen. Deze eenmalige aanvulling wordt op het concept gemarkeerd; later bewust verwijderde blokken worden niet opnieuw toegevoegd. Ontbreekt het checklistformulier, dan wordt de losse formulierbouwsteen toegevoegd.
 
 **Bewaar eigen lokale wijzigingen met Concept opslaan.** Je hoeft daarvoor geen ouder GitHub-concept over je huidige bewerking te laden. Opslaan maakt een nieuwe versie in het bestaande concept en behoudt de geschiedenis. Is het online concept intussen elders gewijzigd, dan krijg je een vergelijking en kun je jouw huidige bewerking als nieuwe versie opslaan. De opslag blijft beveiligd tegen wijzigingen tijdens het verzenden. Publicatie blijft een aparte stap na het bekijken van de voorvertoning.
+
+## Losse review met lees meer
+
+In Puck → **Verhalen → Losse review met lees meer** staat de grote zelfstandige quote met een uitklapbare volledige review. Dit is een aparte bouwsteen naast de reviewkaarten en de persoonlijke quote met handtekening.
+
+- Kies de gewenste review in Puck. Achtergrond en tekstkleur volgen de vier bestaande huisstijlkeuzes.
+- Bewerk de korte quote, naam, onderschrift, optionele foto en optionele volledige tekst in **Sveltia → Algemene instellingen → Informatiekaarten & reviews → Reviews voor kaarten en losse quote**. De korte naam van een review verbindt de inhoud met de bouwsteen; wijzig deze niet nadat hij op een pagina is gekozen.
+- Zonder volledige tekst of bestaand gekoppeld vervolg verschijnt geen uitklapknop. Zonder zichtbare quote en naam verschijnt de bouwsteen niet op de website. Een foto is nooit verplicht; met foto kun je in Puck de desktop- en mobiele uitsnede aanpassen.
+
+De twee bestaande fragmenten van Jeroen & Martine blijven als kaarten behouden. De losse quote gebruikt het tweede fragment als vervolg, zodat die bestaande tekst niet op twee plekken bewerkt hoeft te worden. Een ingevulde volledige tekst bij de eerste review krijgt voorrang.
+
+Foto's in de **Fotomuur** openen in de grote galerijweergave met een volledig transparante achtergrond. Klik op de foto of eromheen om te sluiten. Kruisje en Escape sluiten ook; pijltjes wisselen tussen de foto's. Het bewerkvlak van Puck blijft bedoeld om blokken te selecteren; interactie bekijk je via **Voorvertoning**.
