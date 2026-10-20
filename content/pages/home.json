@@ -207,7 +207,7 @@
           {
             "key": "0",
             "label": "Trouwfoto in een klassieke houten staande lijst",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-8c01d3c1-6616-4457-81e1-48e5c3400af5",
             "desktop": null,
             "mobile": null
           },
@@ -221,14 +221,14 @@
           {
             "key": "2",
             "label": "Trouwfoto in een vergulde staande lijst",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "foto-26fee13582a7",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "3",
             "label": "Een spontaan moment in een donkerhouten staande lijst",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "media-7f699810-3004-4378-a464-7c56b1e52337",
             "desktop": null,
             "mobile": null
           },
@@ -534,6 +534,36 @@
         ],
         "background": "white",
         "id": "About-32d07291-408f-4595-b799-e731c362b1c2"
+      }
+    },
+    {
+      "type": "SingleReview",
+      "props": {
+        "eyebrow": "WOORDEN VAN EEN BRUIDSPAAR",
+        "reviewId": "jeroen-martine",
+        "crops": {},
+        "background": "pink",
+        "id": "SingleReview-17ea4c69-180f-4b2b-8578-191460dc316e"
+      }
+    },
+    {
+      "type": "SingleReview",
+      "props": {
+        "eyebrow": "WOORDEN VAN EEN BRUIDSPAAR",
+        "reviewId": "jeroen-martine",
+        "crops": {},
+        "background": "wine",
+        "id": "SingleReview-f056815c-9718-450c-8247-4d9628caed12"
+      }
+    },
+    {
+      "type": "Journey",
+      "props": {
+        "eyebrow": "VAN EEN EERSTE HALLO TOT JULLIE HERINNERINGEN",
+        "title": "Samen op weg.",
+        "emphasis": "Helemaal jullie.",
+        "background": "white",
+        "id": "Journey-c5d00c29-e1d1-4748-9073-496de5b3f63a"
       }
     },
     {
