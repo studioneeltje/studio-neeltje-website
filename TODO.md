@@ -329,7 +329,27 @@ Neeltje kiest op 20 oktober 2026 uitsluitend **De uitwaaier — verfijnd**. De p
 
 Dit is een ontwerpkeuze; bouwen wacht op expliciet ‘bouw’, publiceren op afzonderlijke toestemming.
 
-## Focusverlies bij tekstbewerking — gebouwd, nog niet gepubliceerd
+## Ontbrekende fotovelden in contactheader — gebouwd, nog niet gepubliceerd
+
+### Gerichte bugcontrole op verzoek van Neeltje
+
+Na de melding over Contact zijn editorvelden, mediabeschikbaarheid en de carrouselcode gericht gelezen. Geen gebruikersinhoud gewijzigd of publicatie gestart. Dit is geen volledige controle van alle pagina’s, apparaten of diensten.
+
+- [x] **Ontbrekende bronfoto’s in Puck overal herkennen.** ImagePicker, MediaLibrary en MediaDetails controleren momenteel voornamelijk deletedAt; een manifestvermelding missing:true kan toch als actieve/kiesbare foto worden behandeld. assetURL en thumbnailURL leveren dan een lege URL, met een leeg/kapot voorbeeld en misleidende beschikbaarheid als gevolg. De Sveltia-/VisualMediaPicker-controle is al uitgebreider. Gelijk trekken, zonder bewust verwijderde bestanden terug te zetten.
+- [x] **Carrousel bij veel reportages begrenzen.** De schaalberekening 1 - abs(offset) * .12 wordt bij offset 9 negatief. Bij 20 reportages bereikt een achterste kaart offset 10 en schaal -0.2; daardoor kan die gespiegeld/omgekeerd verschijnen. Schaal en lagen veilig begrenzen, met dezelfde huidige uitstraling bij kleine aantallen. Dit is een latente fout, niet waargenomen op de huidige carrousel met vier reportages.
+- [x] **De ontbrekende fotovelden uit de onderstaande melding generiek herstellen.** Het probleem zit in de vaste fotovelden, niet alleen in Contact; ook andere bestaande blokken met een lege of onvolledige images-array kunnen geen fotokeuzes tonen terwijl de weergave standaardbeelden gebruikt.
+
+Neeltje heeft expliciet ‘bouw’ gezegd voor alle drie auditpunten. Gebouwd; publicatie wacht op afzonderlijke toestemming. De reeds gepubliceerde focus- en Sveltia-reparaties blijven intact.
+
+Neeltje ziet bij de geselecteerde Redactionele collage-header op Contact alleen teksten en de mediatoelichting, zonder fotovakken. Dit is bevestigd in de open Chrome-bewerking, zonder wijzigingen of herladen. De gepubliceerde pagina heeft drie images-selecties; het online concept puck/contact bevat images: []. ImagesField rendert daardoor geen velden, terwijl de renderer wel op de drie standaardfoto’s terugvalt.
+
+- [x] Ontbrekende of lege fotovelden in een vast fotoblok veilig aanvullen vanuit de blokdefinitie, zodat Foto achteraan, Hoofdfoto en Detailfoto weer kiesbaar zijn. Bestaande ingevulde keuzes en expliciet leeggemaakte media-ID’s behouden.
+- [x] Ook gedeeltelijke oudere selecties afhandelen zonder bestaande uitsneden, teksten of conceptinhoud te vervangen; lege fotobronnen blijven duidelijke ontbrekende beelden.
+- [x] In een aparte voorbeeldbewerking controleren met images: [], ontbrekende images en drie bestaande selecties. Het echte contactconcept niet automatisch overschrijven of een oudere versie laten laden. Gebouwd na expliciet ‘bouw’; afzonderlijke publicatietoestemming volgt.
+
+Controle: productiebouw geslaagd. Gerichte controle van lege/ontbrekende/partiële fotovelden, expliciet leegmaken, uitsnedebehoud en mediabeschikbaarheid geslaagd. Schaal blijft positief voor 1, 4, 20 en 100 kaarten. In een aparte lokale voorbeeldbewerking zijn drie velden zichtbaar, ontbrekende foto’s niet kiesbaar en is een beschikbare vervangende hoofdfoto succesvol geplaatst. Het echte Contact-concept is niet aangepast.
+
+## Focusverlies bij tekstbewerking — gepubliceerd
 
 Neeltje meldt na publicatie van de portfolio-carrousel dat een tekstveld na één letter de focus verliest. Codeonderzoek: de nieuwe StoryCarousel.resolveFields wordt door Puck na elke inhoudswijziging aangeroepen en maakt telkens een nieuwe custom tekstveld-renderfunctie aan. Dit is de waarschijnlijke oorzaak van het opnieuw opbouwen van het invoerveld. De editorconfiguratie zelf is al met useMemo gestabiliseerd; de bestaande lokale opslag en herstelpunten zijn hiervan onafhankelijk. Geen live klantbewerking gewijzigd of pagina ververst tijdens het onderzoek.
 
@@ -349,7 +369,7 @@ Neeltje kiest dit bestaande onderdeel voor haar Portfolio-overzicht, in plaats v
 
 Gebouwd op 20 oktober 2026. De lokale productiebouw is geslaagd. Nieuwe carrousels gebruiken standaard alle gepubliceerde reportages; bestaande blokken zonder bronkeuze behouden hun handmatige inhoud. De Portfolio-pagina en andere concepten zijn niet gewijzigd. Neeltje heeft op 20 oktober 2026 expliciet ‘publiceer’ gezegd. PR #23 is samengevoegd als 0f8af426f0724baa42b409f9c3ca99fca88ffc32. Tijdens publicatie is ook het omgaan met fysiek verwijderde bronbestanden hersteld: er verschijnt een leeg mediavlak; de verwijderde bestanden worden niet teruggezet. Gepubliceerd op de GitHub Pages-testsite; run 39446499695 is geslaagd.
 
-## Sveltia-beeldbank vernieuwen — gebouwd, nog niet gepubliceerd
+## Sveltia-beeldbank vernieuwen — gepubliceerd
 
 Neeltje geeft op 20 oktober 2026 expliciet opdracht deze reparatie samen met het focusverlies te bouwen.
 
@@ -358,3 +378,5 @@ Neeltje geeft op 20 oktober 2026 expliciet opdracht deze reparatie samen met het
 - [x] Leesfouten en GitHub-begrenzing zichtbaar melden en de laatst gepubliceerde bibliotheek bruikbaar houden. Geen tokens uit Sveltia uitlezen of nieuwe tokens opslaan. Deze openbare GitHub Pages-repository wordt alleen-lezen benaderd. Voor een eventuele private repository is later een geauthenticeerde koppeling nodig.
 
 De productiebouw is geslaagd. Gerichte controle met nagebootste GitHub-antwoorden bevestigt dat een online mediaconcept verschijnt, een verwijderd origineel herkenbaar blijft, lokale uploads een eigen status krijgen en media niet dubbel voorkomen. Een echte upload/publicatie vanuit het account is niet uitgevoerd.
+
+Publicatie van beide reparaties expliciet goedgekeurd op 20 oktober 2026. PR #25 is samengevoegd als 05215a36edaa7cdc86a8b6b09a2dfe8e448bcd4c. GitHub Pages-run 39474743085 is geslaagd. Open gebruikersbewerkingen zijn niet herladen of gewijzigd.

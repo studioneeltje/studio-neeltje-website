@@ -24,6 +24,9 @@ export function assetURL(asset, manifest = {}, root = '') {
   if(entry?.missing||entry?.deleted)return '';
   return mediaURL(entry?.src || asset?.previewURL || asset?.source || '',root);
 }
+export function isMediaAvailable(asset,manifest={}){
+ return Boolean(asset&&!asset.deletedAt&&!asset.libraryMissing&&!manifest[asset.id]?.missing&&!manifest[asset.id]?.deleted);
+}
 export function thumbnailURL(asset,manifest={},root=''){
   const variants=manifest[asset?.id]?.variants||[];
   const thumbnail=variants.filter(v=>v.format==='webp').sort((a,b)=>a.width-b.width)[0];

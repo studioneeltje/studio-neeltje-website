@@ -121,3 +121,9 @@ Upload je foto's één keer in **Puck → Media**. Kies daar **Media online opsl
 Foto’s die nog alleen op dit apparaat staan, kun je in dezelfde browser herkennen maar pas kiezen nadat je ze online hebt opgeslagen. Een online mediaconcept kun je alvast kiezen; publiceer de media vóór je de reportage of pagina publiceert. Webformaten worden bij de bestaande GitHub-bouw gemaakt; concepten kunnen tijdelijk het origineel tonen. Een fysiek verwijderd origineel krijgt een melding en kan niet als nieuwe foto worden gekozen. Vernieuwen herstelt geen verwijderde bestanden.
 
 De verbinding gebruikt de openbare repository en vraagt geen extra token. Als GitHub tijdelijk aanvragen begrenst of niet bereikbaar is, verschijnt een melding; de gepubliceerde bibliotheek blijft beschikbaar. Bij gebruik in een andere browser of op een ander apparaat zijn alleen online opgeslagen bestanden beschikbaar.
+
+## Fotovelden bij oudere paginaconcepten
+
+Bij vaste fotoblokken blijven alle fotovakken beschikbaar, ook als een ouder concept een lege of gedeeltelijke fotolijst bevat. In de redactionele collage-header zijn dat **Foto achteraan**, **Hoofdfoto** en **Detailfoto**. Selecteer de header, klap het gewenste vak onder Foto’s en uitsneden open en kies een foto. De ontbrekende velden worden pas samen met jouw bewerking opgeslagen; je bestaande teksten en uitsneden worden niet automatisch overschreven. Een bewust leeggemaakte fotokeuze blijft leeg.
+
+Puck toont bij fysiek ontbrekende bronbestanden een duidelijke melding, zonder kapotte miniaturen of uitsnedevoorbeeld. Die foto’s zijn niet opnieuw plaatsbaar. Een soft verwijderd beeld kan worden teruggezet als het origineel nog aanwezig is; kies anders een nieuw beeld op de gebruikte plek. De carrousel behoudt ook bij grotere aantallen reportages positieve afmetingen en geldige lagen.

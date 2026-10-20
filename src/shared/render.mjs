@@ -5,6 +5,7 @@ import {infoCardsMarkup,reviewCardsMarkup,singleReviewMarkup,removeEmptyButtons}
 import {articleReadTime} from './article-data.mjs';
 import {BACKGROUNDS} from './themes.mjs';
 import {tiltCardMarkup} from './tilt-card.mjs';
+import {imageSlots} from './image-slots.mjs';
 import {storyCarouselMarkup} from './story-carousel.mjs';
 import {escapeHTML as e, safeURL, imageMarkup, videoMarkup, assetURL} from './media.mjs';
 
@@ -29,7 +30,7 @@ export function renderBlock(block, context) {
     html = html.replace(/\{\{t:(\d+)\}\}/g,(_,key)=>e(p.texts?.[key]?.value ?? spec.defaults.texts?.[key]?.value ?? ''));
     const sizes={Hero:'100vw',Orbit:'(max-width: 760px) 150px, 280px',Mosaic:'(max-width: 760px) 88vw, 45vw',StoryCarousel:'(max-width: 760px) 70vw, 480px',Social:'(max-width: 760px) 45vw, 25vw',Wall:'(max-width: 760px) 40vw, 300px',Checklist:'(max-width: 760px) 88vw, 45vw',About:'(max-width: 760px) 88vw, 45vw',ContactCTA:'(max-width: 760px) 88vw, 400px'};
     html = html.replace(/\{\{image:(\d+)\}\}/g,(_,key)=>{
-      const selection=p.images?.[key]||spec.defaults.images?.[key];
+      const selection=imageSlots(p.images,spec.defaults.images)[key];
       const image=imageMarkup({...selection,sizes:sizes[block.type]},context,{eager:block.type==='Hero'&&Number(key)===0,className:block.type==='Wall'?'':spec.imageClasses?.[key]||''});
       if(block.type!=='Wall')return image;
       const asset=context.media.find(asset=>asset.id===selection?.mediaId);
