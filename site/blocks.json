@@ -1773,6 +1773,20 @@
       "openFirst": true
     }
   },
+  "TiltCard": {
+    "label": "Kantelkaart — kort tekstje met knop",
+    "html": "",
+    "defaults": {
+      "labelText": "Bewaar dit gevoel",
+      "eyebrow": "VAN EEN EERSTE HALLO TOT VOOR ALTIJD",
+      "title": "Jullie dag.",
+      "emphasis": "Voor altijd.",
+      "body": "Trouwreportages vanaf €1.550.\nVan 6 uur tot een volledige trouwdag.",
+      "button": "Bekijk de pakketten",
+      "href": "werkwijze.html#prijzen",
+      "motion": "on"
+    }
+  },
   "SingleReview": {
     "label": "Losse review met lees meer",
     "html": "",
