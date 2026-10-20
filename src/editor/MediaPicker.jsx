@@ -1,10 +1,10 @@
 import React,{useEffect,useRef,useState}from'react';
 import{createPortal}from'react-dom';
-import{thumbnailURL}from'../shared/media.mjs';
+import{thumbnailURL,isMediaAvailable}from'../shared/media.mjs';
 
 export function VisualMediaPicker({media=[],manifest={},assetBaseURL='',value=[],multiple=false,max=Infinity,onChoose,onClose}){
  const dialog=useRef(null),[query,setQuery]=useState(''),[selected,setSelected]=useState(()=>value.filter(Boolean)),[inspect,setInspect]=useState(value[0]||''),[limit,setLimit]=useState(60);
- const unavailable=asset=>asset.libraryLocalOnly||asset.libraryMissing||manifest[asset.id]?.missing||manifest[asset.id]?.deleted;
+ const unavailable=asset=>!isMediaAvailable(asset,manifest)||asset.libraryLocalOnly;
  const ready=selected.filter(id=>{const asset=media.find(item=>item.id===id&&!item.deletedAt);return asset&&!unavailable(asset);});
  const active=media.filter(a=>a.kind==='image'&&!a.deletedAt),filtered=active.filter(a=>`${a.title} ${a.alt||''}`.toLocaleLowerCase('nl').includes(query.toLocaleLowerCase('nl'))),photo=active.find(a=>a.id===inspect);
  useEffect(()=>{const el=dialog.current;el.showModal();return()=>el.close();},[]);

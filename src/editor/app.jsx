@@ -41,7 +41,7 @@ function blockConfig(context){
    else if(type==='Text')fields={title:{type:'text',label:'Titel'},eyebrow:{type:'text',label:'Bovenregel'},body:{type:'textarea',label:'Tekst'}};
    else{
      if(spec.defaults.texts?.length)fields.texts={type:'custom',label:'Teksten in dit blok',render:props=><><TextsField {...props} hiddenKeys={type==='About'?['5']:[]}/>{type==='About'&&<p className="field-help">Het roze fotolabel beheer je in Sveltia → Algemene instellingen → Huisstijl, menu &amp; footer → Fotolabel bij Over Neeltje.</p>}</>};
-     if(spec.defaults.images?.length&&!['Stories','Journal'].includes(type))fields.images={type:'custom',label:'Foto’s en uitsneden',render:props=><ImagesField {...props} context={context}/>};
+     if(spec.defaults.images?.length&&!['Stories','Journal'].includes(type))fields.images={type:'custom',label:'Foto’s en uitsneden',render:props=><ImagesField {...props} defaults={spec.defaults.images} context={context}/>};
      if(spec.defaults.links?.length&&!['Journal','Orbit'].includes(type))fields.links={type:'custom',label:'Links en knoppen',render:props=><LinksField {...props} hiddenKeys={type==='Social'?['0','5']:[]}/>};
    }
    if(type==='StoryCarousel'){
