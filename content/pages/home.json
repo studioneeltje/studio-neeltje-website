@@ -179,7 +179,7 @@
             "href": "over.html"
           }
         ],
-        "background": "white"
+        "background": "blue"
       }
     },
     {
@@ -193,7 +193,7 @@
         "button": "Ontdek",
         "href": "werkwijze.html#prijzen",
         "motion": "on",
-        "background": "white",
+        "background": "wine",
         "id": "TiltCard-3648be06-ba1d-43fa-b372-efc5576db3d7"
       }
     },
@@ -547,7 +547,7 @@
             "href": "over.html"
           }
         ],
-        "background": "white",
+        "background": "blue",
         "id": "About-32d07291-408f-4595-b799-e731c362b1c2"
       }
     },
@@ -557,7 +557,7 @@
         "eyebrow": "WOORDEN VAN EEN BRUIDSPAAR",
         "reviewId": "jeroen-martine",
         "crops": {},
-        "background": "blue",
+        "background": "white",
         "id": "SingleReview-17ea4c69-180f-4b2b-8578-191460dc316e"
       }
     },
@@ -593,7 +593,7 @@
           {
             "key": "5",
             "label": "Knop / link: Lees mijn verhaal",
-            "value": "Lees mijn verhaal"
+            "value": ""
           }
         ],
         "images": [],
@@ -650,7 +650,7 @@
         ],
         "images": [],
         "links": [],
-        "background": "white",
+        "background": "wine",
         "id": "Quote-a2a29841-58a6-46f9-9651-74bef4d9dc05"
       }
     },
@@ -751,7 +751,7 @@
         ],
         "images": [],
         "links": [],
-        "background": "wine",
+        "background": "white",
         "id": "Quote-f4d3dcf6-61da-4b7a-b99d-4ce1512fe66d"
       }
     },
@@ -763,6 +763,137 @@
         "crops": {},
         "background": "blue",
         "id": "SingleReview-f056815c-9718-450c-8247-4d9628caed12"
+      }
+    },
+    {
+      "type": "TiltCard",
+      "props": {
+        "labelText": "Over neeltje",
+        "eyebrow": "WAAROM IK OOK KIJK NAAR JULLIE GASTEN?",
+        "title": "Meer weten",
+        "emphasis": "over mij?",
+        "body": "Ik geef je een kijkje achter de schermen. Of kijkje in mijn hoofd. Maar net hoe je het wilt noemen.",
+        "button": "Meer lezen",
+        "href": "werkwijze.html#prijzen",
+        "motion": "on",
+        "background": "wine",
+        "id": "TiltCard-d6393a3e-c970-4fa2-9ecd-e1997fc68d22"
+      }
+    },
+    {
+      "type": "Mosaic",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: PORTFOLIO / MOMENTEN OM TE BEWAREN",
+            "value": "PORTFOLIO / MOMENTEN OM TE BEWAREN"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Alles wat",
+            "value": "Alles wat"
+          },
+          {
+            "key": "2",
+            "label": "Label: ertussen leeft.",
+            "value": "ertussen leeft."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Van grote gebaren tot kleine blikken. Een verzam",
+            "value": "Van grote gebaren tot kleine blikken. Een verzameling beelden om rustig doorheen te dwalen."
+          },
+          {
+            "key": "4",
+            "label": "Label: 01",
+            "value": "01"
+          },
+          {
+            "key": "5",
+            "label": "Label: 02",
+            "value": "02"
+          },
+          {
+            "key": "6",
+            "label": "Label: 03",
+            "value": "03"
+          },
+          {
+            "key": "7",
+            "label": "Label: 04",
+            "value": "04"
+          },
+          {
+            "key": "8",
+            "label": "Label: 05",
+            "value": "05"
+          },
+          {
+            "key": "9",
+            "label": "Label: 06",
+            "value": "06"
+          },
+          {
+            "key": "10",
+            "label": "Label: 07",
+            "value": "07"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Een spontaan moment tijdens een bruiloft bij Kasteel Keukenhof",
+            "mediaId": "foto-d5f77408f803",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Een liefdevol moment tijdens een destination wedding in Spanje",
+            "mediaId": "foto-26fee13582a7",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Een vrolijk moment tijdens een bruiloft in Utrecht",
+            "mediaId": "foto-6f5e773ded94",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "3",
+            "label": "Een trouwmoment tijdens een bruiloft in Bordeaux",
+            "mediaId": "foto-e21748886faf",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "4",
+            "label": "Persoonlijke details die klaarstaan voor de trouwdag",
+            "mediaId": "foto-f5d8e85a877d",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "5",
+            "label": "Neeltje, jullie trouwfotograaf, tussen de momenten door",
+            "mediaId": "foto-75c93a94397c",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "6",
+            "label": "Een beeld om later samen naar terug te kijken",
+            "mediaId": "foto-95c436480d00",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "background": "white",
+        "id": "Mosaic-0357bef3-446d-4781-8be3-e8c2f126673d"
       }
     },
     {
