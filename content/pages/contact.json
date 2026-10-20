@@ -35,7 +35,29 @@
             "value": ""
           }
         ],
-        "images": [],
+        "images": [
+          {
+            "key": "0",
+            "label": "Foto achteraan",
+            "mediaId": "media-bd67ca84-6f83-4357-b39b-aa1fdb20e4ae",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Hoofdfoto",
+            "mediaId": "media-1d8b3650-7a39-4265-bf49-9f13fc637e35",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Detailfoto",
+            "mediaId": "media-8840b361-fd43-4c0d-bbd0-81951e686f50",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
         "links": [],
         "background": "wine"
       }
@@ -132,7 +154,8 @@
           }
         ],
         "images": [],
-        "links": []
+        "links": [],
+        "background": "pink"
       }
     },
     {
