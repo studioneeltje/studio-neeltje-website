@@ -524,7 +524,7 @@
         "images": [],
         "links": [],
         "id": "Review-8e90c379-08a1-4348-8172-4a4e299c479d",
-        "background": "wine"
+        "background": "white"
       }
     },
     {
@@ -773,7 +773,7 @@
           {
             "key": "0",
             "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "foto-75c93a94397c",
+            "mediaId": "media-59f8840e-3701-4844-b7b1-efb83fc31f58",
             "desktop": null,
             "mobile": null
           }
