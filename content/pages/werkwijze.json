@@ -1,11 +1,11 @@
 {
   "id": "werkwijze",
-  "title": "Werkwijze",
-  "description": "Trouwfotografie door Studio Neeltje.",
+  "title": "Investering",
+  "description": "Tarieven trouwfotograaf | Studio Neeltje | Investering & pakketten",
   "root": {
     "props": {
-      "title": "Werkwijze",
-      "description": "Trouwfotografie door Studio Neeltje."
+      "title": "Investering",
+      "description": "Tarieven trouwfotograaf | Studio Neeltje | Investering & pakketten"
     }
   },
   "content": [
@@ -17,104 +17,96 @@
           {
             "key": "0",
             "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
-            "value": "STUDIO NEELTJE / TROUWFOTOGRAFIE"
+            "value": "STUDIO NEELTJE / het financiële plaatje"
           },
           {
             "key": "1",
             "label": "Titel: Jullie verhaal.",
-            "value": "Werkwijze"
+            "value": "Investeren"
           },
           {
             "key": "2",
             "label": "Label: Helemaal eigen.",
-            "value": "Helemaal eigen."
+            "value": "in herinneringen."
           },
           {
             "key": "3",
             "label": "Tekst: Een dag vol momenten om te bewaren.",
-            "value": "Een dag vol momenten om te bewaren."
+            "value": ""
           }
         ],
         "images": [
           {
             "key": "0",
             "label": "Foto achteraan",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-ef86e876-ba1d-440b-9c47-a67638d8e694",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "1",
             "label": "Hoofdfoto",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-9d2bfa5c-152a-403e-a690-cd372d735754",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Detailfoto",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "media-8c01d3c1-6616-4457-81e1-48e5c3400af5",
             "desktop": null,
             "mobile": null
           }
         ],
         "links": [],
-        "background": "white"
+        "background": "wine"
       }
     },
     {
-      "type": "Steps",
+      "type": "Method",
       "props": {
-        "id": "werkwijze-steps-1",
         "texts": [
           {
             "key": "0",
-            "label": "Label: 01 / KENNISMAKEN",
-            "value": "01 / KENNISMAKEN"
+            "label": "Label: MEER OVER NEELTJE",
+            "value": ""
           },
           {
             "key": "1",
-            "label": "Titel: Jullie verhaal",
-            "value": "Jullie verhaal"
+            "label": "Titel: Rustig dichtbij.",
+            "value": "Dit kun je"
           },
           {
             "key": "2",
-            "label": "Tekst: Vertel over jullie plannen en datum.",
-            "value": "Vertel over jullie plannen en datum."
+            "label": "Label: Altijd alert.",
+            "value": "verwachten."
           },
           {
             "key": "3",
-            "label": "Label: 02 / DE DAG",
-            "value": "02 / DE DAG"
+            "label": "Tekst: Ik fotografeer zoals ik zelf graag herinner: met",
+            "value": "ullie trouwdag duurt één dag. De foto's blijven een leven lang. Van het begin van jullie dag tot tot de laatste dans. Maar net wat jullie vastgelegd willen hebben."
           },
           {
             "key": "4",
-            "label": "Titel: Vrij beleven",
-            "value": "Vrij beleven"
+            "label": "Tekst: Vooraf leren we elkaar kennen. Op de dag zelf vo",
+            "value": "Trouwfotografie vanaf €1.550 · Noord-Holland · heel Nederland · buitenland"
           },
           {
             "key": "5",
-            "label": "Tekst: Ik beweeg mee, zonder de dag over te nemen.",
-            "value": "Ik beweeg mee, zonder de dag over te nemen."
-          },
-          {
-            "key": "6",
-            "label": "Label: 03 / HERINNEREN",
-            "value": "03 / HERINNEREN"
-          },
-          {
-            "key": "7",
-            "label": "Titel: Beelden terug",
-            "value": "Beelden terug"
-          },
-          {
-            "key": "8",
-            "label": "Tekst: Een reportage die jullie weer terugbrengt.",
-            "value": "Een reportage die jullie weer terugbrengt."
+            "label": "Knop / link: Lees mijn verhaal",
+            "value": ""
           }
         ],
         "images": [],
-        "links": []
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": ""
+          }
+        ],
+        "background": "blue",
+        "id": "Method-1c2102f2-68c6-4ad8-be44-32dfca236333"
       }
     },
     {
@@ -360,107 +352,8 @@
             "label": "Link 3",
             "href": "contact.html"
           }
-        ]
-      }
-    },
-    {
-      "type": "FAQ",
-      "props": {
-        "id": "werkwijze-faq-3",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: GOED OM TE WETEN",
-            "value": "GOED OM TE WETEN"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Veelgestelde",
-            "value": "Veelgestelde"
-          },
-          {
-            "key": "2",
-            "label": "Titel: vragen.",
-            "value": "vragen."
-          },
-          {
-            "key": "3",
-            "label": "Tekst: Praktische antwoorden over trouwfotografie, jull",
-            "value": "Praktische antwoorden over trouwfotografie, jullie planning en kennismaken met Studio Neeltje."
-          },
-          {
-            "key": "4",
-            "label": "Label: Is mijn trouwdatum nog beschikbaar?",
-            "value": "Is mijn trouwdatum nog beschikbaar?"
-          },
-          {
-            "key": "5",
-            "label": "Tekst: Stuur je trouwdatum en locatie via het contactfo",
-            "value": "Stuur je trouwdatum en locatie via het contactformulier. Ik laat jullie weten of ik beschikbaar ben en denk graag mee over de invulling van jullie dag."
-          },
-          {
-            "key": "6",
-            "label": "Label: Fotografeer je alleen in Utrecht?",
-            "value": "Fotografeer je alleen in Utrecht?"
-          },
-          {
-            "key": "7",
-            "label": "Tekst: Nee. Ik fotografeer bruiloften op verschillende ",
-            "value": "Nee. Ik fotografeer bruiloften op verschillende plekken in Nederland en ook op bestemmingen daarbuiten. Vertel me waar jullie trouwen, dan bespreken we samen de mogelijkheden."
-          },
-          {
-            "key": "8",
-            "label": "Label: Hoeveel uur fotografie hebben we nodig?",
-            "value": "Hoeveel uur fotografie hebben we nodig?"
-          },
-          {
-            "key": "9",
-            "label": "Tekst: Dat hangt af van wat jullie graag willen laten v",
-            "value": "Dat hangt af van wat jullie graag willen laten vastleggen. We bekijken samen jullie planning en kiezen welke momenten voor jullie belangrijk zijn, van de voorbereidingen tot het feest."
-          },
-          {
-            "key": "10",
-            "label": "Label: Moeten we de hele dag poseren?",
-            "value": "Moeten we de hele dag poseren?"
-          },
-          {
-            "key": "11",
-            "label": "Tekst: Nee. Ik fotografeer vooral wat er echt gebeurt e",
-            "value": "Nee. Ik fotografeer vooral wat er echt gebeurt en geef alleen aanwijzingen wanneer dat prettig is, bijvoorbeeld tijdens een korte portretsessie. Zo blijft er ruimte om jullie dag zelf te beleven."
-          },
-          {
-            "key": "12",
-            "label": "Label: Wat gebeurt er na onze trouwdag met de foto's?",
-            "value": "Wat gebeurt er na onze trouwdag met de foto's?"
-          },
-          {
-            "key": "13",
-            "label": "Tekst: Na de bruiloft selecteer en bewerk ik de beelden",
-            "value": "Na de bruiloft selecteer en bewerk ik de beelden zorgvuldig. Tijdens onze kennismaking vertel ik jullie hoe de oplevering en online galerij in zijn werk gaan."
-          },
-          {
-            "key": "14",
-            "label": "Label: Wat kost een trouwreportage?",
-            "value": "Wat kost een trouwreportage?"
-          },
-          {
-            "key": "15",
-            "label": "Tekst: De prijs hangt onder andere af van de duur en lo",
-            "value": "De prijs hangt onder andere af van de duur en locatie van jullie reportage. Stuur me jullie datum en plannen, dan kan ik vertellen welke mogelijkheden en tarieven passen."
-          },
-          {
-            "key": "16",
-            "label": "Label: Hoe leggen we onze datum vast?",
-            "value": "Hoe leggen we onze datum vast?"
-          },
-          {
-            "key": "17",
-            "label": "Tekst: We beginnen met een kennismaking en bespreken ju",
-            "value": "We beginnen met een kennismaking en bespreken jullie wensen en de mogelijkheden. Daarna ontvangen jullie duidelijkheid over het voorstel en de afspraken om de datum te reserveren."
-          }
         ],
-        "images": [],
-        "links": []
+        "background": "blue"
       }
     },
     {
@@ -508,7 +401,7 @@
           {
             "key": "0",
             "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "foto-75c93a94397c",
+            "mediaId": "media-1d8b3650-7a39-4265-bf49-9f13fc637e35",
             "desktop": null,
             "mobile": null
           }
@@ -522,5 +415,6 @@
         ]
       }
     }
-  ]
+  ],
+  "zones": {}
 }
