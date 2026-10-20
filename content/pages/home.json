@@ -229,7 +229,7 @@
           {
             "key": "1",
             "label": "Details van een trouwdag in een liggende bronzen lijst",
-            "mediaId": "media-8840b361-fd43-4c0d-bbd0-81951e686f50",
+            "mediaId": "media-17911fc8-bf7f-4438-a7a7-8dc051fd60c5",
             "desktop": null,
             "mobile": null
           },
@@ -243,14 +243,14 @@
           {
             "key": "3",
             "label": "Een spontaan moment in een donkerhouten staande lijst",
-            "mediaId": "media-7f699810-3004-4378-a464-7c56b1e52337",
+            "mediaId": "media-02a06c59-e38a-4af4-b041-f3b54d5f3bb1",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "4",
             "label": "Een liggende trouwfoto in een klassieke houten lijst",
-            "mediaId": "media-486b1aea-2474-4f79-a31a-18436d3ba28c",
+            "mediaId": "media-d26dbf53-64d1-4e6d-b5e6-d161d0c8e517",
             "desktop": null,
             "mobile": null
           },
@@ -776,7 +776,7 @@
         "button": "Meer lezen",
         "href": "werkwijze.html#prijzen",
         "motion": "on",
-        "background": "wine",
+        "background": "white",
         "id": "TiltCard-d6393a3e-c970-4fa2-9ecd-e1997fc68d22"
       }
     },
@@ -1333,7 +1333,7 @@
             "href": "https://www.instagram.com/"
           }
         ],
-        "background": "pink"
+        "background": "blue"
       }
     }
   ],
