@@ -31,14 +31,18 @@
       "name": "Jeroen & Martine",
       "caption": "Over hun trouwdag",
       "image": "",
-      "visible": true
+      "visible": true,
+      "id": "jeroen-martine",
+      "fullText": ""
     },
     {
       "quote": "Haar betrokkenheid, professionaliteit en creative brein maakte voor ons de fotoreportage (wat stiekem best spannend is) ontspannen en fun! Neeltje wist ook onze speciale momenten van de ceremonie en receptie perfect vast te leggen. Het resultaat? Liefdevolle, prachtige foto’s en video's die ons helemaal terugbrengen naar onze dag.",
       "name": "Jeroen & Martine",
       "caption": "Over de fotoreportage · uit dezelfde review",
       "image": "",
-      "visible": true
+      "visible": true,
+      "id": "jeroen-martine-vervolg",
+      "continuationOf": "jeroen-martine"
     }
   ]
 }

@@ -36,6 +36,13 @@ for(const page of pages)for(const block of page.content){
 }
 for(const record of [...stories,...articles])if(record.published!==false){for(const id of [record.cover,record.hoverCover,...(record.gallery||[]),...(record.sections||[]).flatMap(s=>[s.image,s.secondImage])].filter(Boolean))if(!media.some(a=>a.id===id&&a.kind==='image'))throw Error(`${record.title}: een foto ontbreekt in de mediabibliotheek.`);}
 settings.editorial=await read('content/settings/editorial.json');
+const reviewIds=new Set();
+for(const review of settings.editorial.reviews){
+ if(!/^[a-z0-9][a-z0-9-]{0,80}$/.test(review.id||'')||reviewIds.has(review.id))throw Error('Geef iedere review een unieke korte naam, zoals jeroen-martine.');
+ reviewIds.add(review.id);
+}
+for(const review of settings.editorial.reviews)if(review.continuationOf&&(!reviewIds.has(review.continuationOf)||review.continuationOf===review.id))throw Error('Het gekoppelde vervolg hoort niet bij een bestaande andere review.');
+for(const page of pages)for(const block of page.content)if(block.type==='SingleReview'&&block.props.reviewId&&!reviewIds.has(block.props.reviewId))throw Error(`${page.title}: kies een bestaande review in de losse quote.`);
 settings.experience=await read('content/settings/experience.json');
 settings.forms=await read('content/settings/forms.json');
 settings.checklist=await read('content/settings/checklist.json');

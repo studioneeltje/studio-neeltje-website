@@ -229,13 +229,16 @@ collections:
               - {name: button, label: Knoptekst (optioneel), widget: string, required: false}
               - {name: href, label: Knoplink (optioneel), widget: string, required: false, hint: Alleen als tekst én link ingevuld zijn wordt de knop zichtbaar.}
           - name: reviews
-            label: Losse reviewkaarten
-            hint: Twee kaarten naast elkaar. Bij meer reviews maximaal drie op desktop, met pijltjes. Op mobiel één per keer. De huidige twee teksten komen uit dezelfde echte review.
+            label: Reviews voor kaarten en losse quote
+            hint: Dezelfde review kies je in Puck voor een kaart of de grote losse quote. De huidige twee teksten zijn fragmenten van dezelfde echte review; de losse quote gebruikt het vervolg automatisch zolang Volledige review leeg is.
             widget: list
             min: 2
             summary: '{{name}} — {{caption}}'
             fields:
+              - {name: id, label: Korte naam van de review, widget: string, hint: 'Bijvoorbeeld jeroen-martine. Houd deze naam gelijk nadat je de review op een pagina hebt gekozen.', pattern: ['^[a-z0-9][a-z0-9-]{0,80}$', 'Gebruik kleine letters, cijfers en streepjes.']}
               - {name: quote, label: Quote, widget: text}
+              - {name: fullText, label: Volledige review (optioneel uitklapbaar), widget: text, required: false, hint: Alleen voor de grote losse quote. Zonder tekst of gekoppeld vervolg verschijnt geen uitklapknop.}
+              - {name: continuationOf, widget: hidden, default: '', required: false}
               - {name: name, label: Naam (sierlijk lettertype), widget: string}
               - {name: caption, label: Onderschrift, widget: string, required: false}
               - {name: image, label: Foto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
