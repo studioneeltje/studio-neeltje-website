@@ -1,12 +1,17 @@
 {
-  "id": "foto-6f5e773ded94",
-  "title": "Portfoliofoto",
   "alt": "",
-  "kind": "image",
-  "source": "media/originals/foto-6f5e773ded94.jpg",
+  "deletedAt": "2026-10-20T08:11:54.091Z",
+  "dimensions": {
+    "width": 3601,
+    "height": 5401
+  },
   "focus": {
     "x": 50,
     "y": 50
   },
-  "originalSourceURL": "https://static.wixstatic.com/media/31108f_a2289c669fbb4815a7b6835801ea71e2~mv2.jpg"
+  "id": "foto-6f5e773ded94",
+  "kind": "image",
+  "originalSourceURL": "https://static.wixstatic.com/media/31108f_a2289c669fbb4815a7b6835801ea71e2~mv2.jpg",
+  "source": "media/originals/foto-6f5e773ded94.jpg",
+  "title": "Portfoliofoto"
 }

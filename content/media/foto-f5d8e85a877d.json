@@ -1,12 +1,17 @@
 {
-  "id": "foto-f5d8e85a877d",
-  "title": "Kleine details van een trouwdag",
   "alt": "Kleine details van een trouwdag",
-  "kind": "image",
-  "source": "media/originals/foto-f5d8e85a877d.jpg",
+  "deletedAt": "2026-10-20T08:11:54.091Z",
+  "dimensions": {
+    "width": 7008,
+    "height": 4672
+  },
   "focus": {
     "x": 50,
     "y": 50
   },
-  "originalSourceURL": "https://static.wixstatic.com/media/31108f_b36e517377c245e1bb63575a3e1b25cf~mv2.jpg"
+  "id": "foto-f5d8e85a877d",
+  "kind": "image",
+  "originalSourceURL": "https://static.wixstatic.com/media/31108f_b36e517377c245e1bb63575a3e1b25cf~mv2.jpg",
+  "source": "media/originals/foto-f5d8e85a877d.jpg",
+  "title": "Kleine details van een trouwdag"
 }
