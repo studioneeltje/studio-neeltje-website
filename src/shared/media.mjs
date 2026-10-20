@@ -23,12 +23,25 @@ export function assetURL(asset, manifest = {}, root = '') {
   const entry = manifest[asset?.id];
   return mediaURL(entry?.src || asset?.previewURL || asset?.source || '',root);
 }
+export function thumbnailURL(asset,manifest={},root=''){
+  const variants=manifest[asset?.id]?.variants||[];
+  const thumbnail=variants.filter(v=>v.format==='webp').sort((a,b)=>a.width-b.width)[0];
+  return asset?.previewURL?.startsWith('blob:')?asset.previewURL:mediaURL(thumbnail?.src||assetURL(asset,manifest),root);
+}
+export function missingImageMarkup(selection={},asset,{className='',aspect=''}={}){
+  const label='Foto ontbreekt — kies een nieuwe foto';
+  const width=Math.round(clamp(asset?.dimensions?.width||1200,1,100000)),height=Math.round(clamp(asset?.dimensions?.height||800,1,100000));
+  // An image keeps the sizing/positioning rules of every existing photo frame.
+  // No original, derived file or enlargeable image is exposed for a trashed photo.
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 600 400" preserveAspectRatio="none"><rect width="600" height="400" fill="#e8f2ff"/><rect x="22" y="22" width="556" height="356" fill="none" stroke="#65001d" stroke-opacity=".25" stroke-dasharray="8 8"/><g fill="none" stroke="#65001d" stroke-width="3"><rect x="278" y="140" width="44" height="36"/><path d="m279 170 12-12 10 10 8-8 12 12"/><circle cx="309" cy="150" r="3"/></g><text x="300" y="218" fill="#65001d" font-family="sans-serif" font-size="19" text-anchor="middle">Foto ontbreekt</text><text x="300" y="245" fill="#65001d" font-family="sans-serif" font-size="14" text-anchor="middle">Kies een nieuwe foto</text></svg>`;
+  return `<picture class="sn-picture" data-sn-missing="true"><img class="sn-media sn-missing-image ${escapeHTML(className)}" data-sn-missing="true" src="data:image/svg+xml,${encodeURIComponent(svg)}" alt="${label}" width="${width}" height="${height}"${aspect?` style="aspect-ratio:${escapeHTML(aspect)}"`:''} draggable="false"></picture>`;
+}
 export function imageMarkup(selection, context, {eager = false, className = '', aspect = ''} = {}) {
   const asset = context.media.find(a => a.id === selection?.mediaId);
-  if (!asset) return '<span class="sn-missing-media">Kies een foto in de beheeromgeving.</span>';
+  if (!asset||asset.deletedAt) return missingImageMarkup(selection,asset,{className,aspect});
   const processed = context.manifest?.[asset.id];
   const url = assetURL(asset, context.manifest, context.assetBaseURL);
-  if (!url) return '<span class="sn-missing-media">Foto wordt verwerkt.</span>';
+  if (!url) return missingImageMarkup(selection,asset,{className,aspect});
   const {desktop, mobile} = imagePresentation(asset, selection);
   const variants = processed?.variants || [];
   const sources = ['avif','webp'].map(format => {
@@ -41,7 +54,7 @@ export function imageMarkup(selection, context, {eager = false, className = '', 
 }
 export function videoMarkup(mediaId, context, {type = 'talk', caption = '', title = ''} = {}) {
   const asset = context.media.find(a => a.id === mediaId);
-  if (!asset) return '<p>Kies een video in de beheeromgeving.</p>';
+  if (!asset||asset.deletedAt) return '<div class="sn-missing-media">Video ontbreekt — kies een nieuwe video.</div>';
   const entry = context.manifest?.[asset.id];
   const url = entry?.src || asset.previewURL;
   if (!url) return '<p class="sn-video-processing">Deze video wordt bij publicatie geoptimaliseerd.</p>';

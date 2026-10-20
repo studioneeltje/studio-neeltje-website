@@ -48,15 +48,41 @@ eigen browsersessie; meld je daar af op een gedeelde computer.
 
 Een concept blijft ook lokaal op je apparaat bewaard. Via **Reservekopie** kun
 je de pagina-instellingen downloaden. Nieuwe bronbestanden worden tijdelijk in
-de browser bewaard totdat je een paginaconcept opslaat; deze reservekopie bevat
+de browser bewaard totdat je ze online opslaat; deze reservekopie bevat
 geen bronbestanden. Wis de browseropslag daarom niet voor je online hebt opgeslagen.
-Via **GitHub-concept laden** haal je een reeds opgeslagen concept terug.
+Via **Online concept vergelijken** bekijk je een reeds opgeslagen concept voordat je het overneemt.
 
 ## Foto’s, focus en uitsneden
 
-Upload via **Media** in Puck of via **Foto’s & video’s** in Sveltia. In Sveltia
-maak je eerst een media-item met een unieke naam, titel, type en bronbestand.
-Een bestand alleen in de algemene uploadlijst zetten maakt nog geen media-item.
+Voor een hele fotoserie open je **Media** in Puck. Sleep meerdere bestanden tegelijk
+naar het uploadvlak of selecteer ze met de bestandskiezer. De wachtrij bewaart elk
+origineel op dit apparaat; een mislukt bestand kun je afzonderlijk opnieuw proberen.
+Er verschijnt geen bewerkvenster voor iedere foto. Klik op een miniatuur als je de
+titel, beschrijving of standaardfocus wilt aanpassen.
+
+Met **Media online opslaan** bewaar je de bestanden als GitHub-concept, ook zonder
+een pagina te openen. Wacht op de beeldverwerking en kies daarna **Opgeslagen media
+publiceren**. Dit publiceert de beelden en mediagegevens, zonder paginaconcepten te
+publiceren. Een onderbroken online upload hervat met de al verstuurde bestanden.
+Een mediareservekopie bevat alleen mediagegevens; de originelen blijven tijdelijk
+in de browser totdat ze zijn gepubliceerd. Wis de browseropslag niet vóór online opslag.
+
+In Puck klik je bij een fotoveld op **Foto visueel kiezen**. Je ziet miniaturen, kunt
+zoeken en krijgt een groter voorbeeld. Bij meerdere fotovakken kun je een selectie
+tegelijk toevoegen; deze vult de bestaande vakken in de gekozen volgorde. In Sveltia
+gebruik je dezelfde visuele kiezer bij omslagfoto’s, artikelblokken, galerijen en
+instellingen. Voor een galerij kies je meerdere foto's en kun je de volgorde aanpassen.
+Publiceer nieuw toegevoegde media eerst; kies daarna in Sveltia **Beeldbank vernieuwen**.
+Een los bestand in de algemene uploadlijst van Sveltia maakt nog geen media-item.
+
+Gebruik **Naar prullenbak**, ook als een foto op pagina’s staat. Die verwijzingen
+en uitsneden blijven behouden, maar tonen een leeg vlak **Foto ontbreekt — kies een
+nieuwe foto**. De verwijderde foto is niet meer te kiezen of te vergroten. Onder
+**Ruimte voor een nieuw beeld** zie je waar een vervanging nodig is. Dit overzicht
+bevat de gepubliceerde inhoud en lokale pagina’s; andere online concepten kunnen
+de foto ook gebruiken. **Beeld terugzetten** herstelt de bestaande verwijzingen.
+Prullenbakwijzigingen sla en publiceer je met de mediaknoppen. De prullenbak verwijdert
+geen originelen uit de GitHub-geschiedenis en verlaagt de bronopslag dus niet.
 
 - Een foto heeft één standaardfocuspunt. Klik in de bronfoto of gebruik de
   schuifjes; pijltjestoetsen werken ook.

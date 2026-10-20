@@ -267,7 +267,7 @@ Neeltje vraagt de oorspronkelijke zelfstandige review terug: ‘De mooiste dag v
 - [x] Een zichtbare korte quote en een optionele uitklapbare volledige review, met naam en optionele foto van het bruidspaar. Zonder lange tekst geen uitklapknop; alleen echte ingevulde inhoud tonen.
 - [x] Het onderdeel op gewone Puck-pagina's kunnen plaatsen, met één inhoudsbron en de bestaande huisstijl- en achtergrondkeuzes. De gedeelde renderer is herbruikbaar voor de toekomstige projectopbouw; die portfolio-uitbreiding blijft apart op de todo. De huidige reviewkaarten en persoonlijke quote blijven beschikbaar.
 
-Gebouwd op 19 oktober 2026. Publicatie wacht op expliciete toestemming.
+Gebouwd en op 20 oktober 2026 gepubliceerd na expliciet ‘Publiceer beide op de testsite’, via PR #12, main 999849d812cc3183e57ce4f8b66898a22dd5db81.
 
 ## Aanvulling tijdens deze bouwstap — fotomuur
 
@@ -275,4 +275,24 @@ Gebouwd op 19 oktober 2026. Publicatie wacht op expliciete toestemming.
 - [x] Een klik op de foto of op een willekeurige plek eromheen sluit de grote weergave. Kruisje, Escape en pijltjestoetsen blijven beschikbaar.
 - [x] De kaders en uitsneden van de fotomuur behouden, inclusief bediening met het toetsenbord.
 
-Toegevoegd door Neeltje tijdens de actieve bouwstap voor de losse review. Voor deze stap is ‘bouw’ gegeven; publicatie is nog niet gevraagd.
+Toegevoegd door Neeltje tijdens de actieve bouwstap voor de losse review. Daarna expliciet goedgekeurd en samen met de review gepubliceerd op de testsite op 20 oktober 2026.
+
+## Mediabeheer voor veel fotografie — gebouwd 20 oktober 2026
+
+Aangevraagd door Neeltje op 20 oktober 2026. Ook foto's die op pagina's worden gebruikt mogen uit de mediabibliotheek worden verwijderd. Daarnaast wil zij veel foto's tegelijk uploaden en foto's visueel kunnen kiezen bij het vullen van blokken en galerijen.
+
+- [x] **Foto's verwijderen, ook wanneer ze in gebruik zijn.** Gebruik op een pagina mag verwijderen niet blokkeren. De foto verdwijnt uit de actieve bibliotheek; op iedere gebruikte plek verschijnt een duidelijk vormgegeven vlak ‘Foto ontbreekt — kies een nieuwe foto’, met behoud van de afmetingen en opmaak. Dit werkt in Puck, voorvertoning en gepubliceerde pagina's, ook voor omslagen, galerijen, de fotomuur en foto's uit instellingen. Geen kapotte afbeeldingen, ongewenste automatische vervangfoto of blokkerende bouwfout bij bewust verwijderde media. Verwijderen herstelbaar maken via een prullenbak en zichtbaar maken waar een vervangende foto nodig is. In deze taak worden nog geen foto's daadwerkelijk verwijderd.
+- [x] **Bulk uploaden.** Meerdere bestanden tegelijk kiezen of in één keer slepen, met een wachtrij, voortgang per foto en voor de hele reeks, duidelijke geslaagde/mislukte uploads en opnieuw proberen van alleen mislukte bestanden. Grote reeksen beheerst verwerken zonder voor iedere foto een bewerkvenster te openen; tussentijdse opslag en de bestaande automatische optimalisatie en bronbehoud blijven behouden. De mediaveranderingen zelfstandig kunnen opslaan als er nog geen pagina geopend is.
+- [x] **Visuele fotokiezer.** Een overzicht met miniaturen bij het kiezen van een afbeelding in Puck, met grotere voorvertoning, zoeken/filteren en duidelijke geselecteerde foto. Een titel blijft aanvullende informatie; kiezen gebeurt door op het beeld te klikken. Ook toepassen bij foto- en galerijkeuzes in Sveltia voor reportages en blogs, met selectie van meerdere foto's waar een galerij wordt gevuld. De bestaande standaardfocus en aparte desktop-/mobiele uitsneden blijven beschikbaar. Met toetsenbord en schermlezer bedienbaar houden.
+
+De oude editor verwerkte één bestand per upload en gebruikte titelkeuzelijsten. Verwijderde of ontbrekende foto's hebben nu een vast fotovlak; verwerking slaat prullenbakbestanden over. Originelen blijven bewaard voor herstel. Na expliciet ‘bouw’ op 20 oktober 2026 gebouwd: herstelbare verwijdering, een lokale uploadwachtrij met afzonderlijk opnieuw proberen, hervatbare online opslag, zelfstandig mediaconcept en visuele selectie in Puck en Sveltia. De bestaande media-inhoud en paginaconcepten zijn niet gewijzigd. Publicatie van deze code staat nog open.
+
+## Reviewkaarten — kleuren en aanhalingsteken gebouwd 20 oktober 2026
+
+Aangevraagd door Neeltje op 20 oktober 2026 voor de twee losse kaarten bij ‘Wat zij ervan vinden’. Met ‘hetzelfde quote’ bedoelt zij expliciet hetzelfde aanhalingsteken als in de enkele review met uitklapgedeelte, niet dezelfde reviewtekst.
+
+- [x] De kleurvlakken van de reviewkaarten automatisch afstemmen op de gekozen sectieachtergrond: wit, blauw, roze of donkerrood. Beide kaarten blijven duidelijk zichtbaar ten opzichte van hun omgeving; quote, naam, bijschrift, accenten en bediening krijgen passende leesbare kleuren in de huisstijl.
+- [x] Het sierlijke aanhalingsteken optisch gelijk maken aan dat van ‘Losse review met lees meer’: dezelfde vorm, lettertypebehandeling, kleur en passende verhoudingen binnen de kleinere kaart. De bestaande reviewteksten behouden.
+- [x] De twee losse kaarten, optionele foto's, hoverbeweging en bestaande navigatie behouden. De kleurkeuze en quote-tekens moeten hetzelfde worden weergegeven in Puck, voorvertoning en op de website.
+
+Gebouwd na expliciet ‘bouw’ op 20 oktober 2026. De twee reviewteksten zijn behouden. Beide reviewbouwstenen delen één stijlregel voor de aanhalingstekens; kaartvlakken volgen de vier sectiekleuren. De lokale bouw is geslaagd. Nog niet gepubliceerd.

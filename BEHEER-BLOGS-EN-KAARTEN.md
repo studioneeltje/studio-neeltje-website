@@ -84,4 +84,10 @@ In Puck → **Verhalen → Losse review met lees meer** staat de grote zelfstand
 
 De twee bestaande fragmenten van Jeroen & Martine blijven als kaarten behouden. De losse quote gebruikt het tweede fragment als vervolg, zodat die bestaande tekst niet op twee plekken bewerkt hoeft te worden. Een ingevulde volledige tekst bij de eerste review krijgt voorrang.
 
+Bij **Losse reviewkaarten uit Sveltia** passen de twee kaartvlakken zich aan de
+sectieachtergrond aan: roze en blauw op wit, wit en roze op blauw, wit en blauw op
+roze, en wit en roze op donkerrood. De tekst op de kaarten blijft donkerrood.
+Beide reviewbouwstenen gebruiken dezelfde sierlijke aanhalingstekens; de quote
+blijft Host Grotesk en de naam Playfair Display Italic. De achtergrond kies je in Puck.
+
 Foto's in de **Fotomuur** openen in de grote galerijweergave met een volledig transparante achtergrond. Klik op de foto of eromheen om te sluiten. Kruisje en Escape sluiten ook; pijltjes wisselen tussen de foto's. Het bewerkvlak van Puck blijft bedoeld om blokken te selecteren; interactie bekijk je via **Voorvertoning**.

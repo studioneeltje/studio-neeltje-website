@@ -34,6 +34,8 @@ collections:
       - {name: alt, label: Beschrijving voor toegankelijkheid, widget: text, required: false, default: ''}
       - {name: focus, label: Standaardfocus in de foto, widget: neeltje-focus, required: false}
       - {name: captions, label: Ondertiteling (VTT), widget: file, required: false}
+      - {name: deletedAt, widget: hidden, required: false}
+      - {name: dimensions, widget: hidden, required: false}
   - name: stories
     label: Trouwreportages
     label_singular: Trouwreportage
@@ -50,12 +52,14 @@ collections:
       - {name: location, label: Locatie, widget: string}
       - {name: excerpt, label: Korte introductie, widget: text}
       - {name: body, label: Het verhaal, widget: markdown}
-      - {name: cover, label: Omslagfoto, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title]}
-      - {name: hoverCover, label: Tweede foto bij aanwijzen, hint: "Kies een ander beeld uit deze reportage. Zonder keuze wordt de eerste andere galerijfoto gebruikt.", widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+      - {name: cover, label: Omslagfoto, widget: neeltje-image}
+      - {name: hoverCover, label: Tweede foto bij aanwijzen, hint: "Kies een ander beeld uit deze reportage. Zonder keuze wordt de eerste andere galerijfoto gebruikt.", widget: neeltje-image, required: false}
       - name: gallery
         label: Foto's in de galerij
-        widget: list
-        field: {name: photo, label: Foto, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title]}
+        widget: neeltje-image
+        multiple: true
+        required: false
+        hint: Kies meerdere foto's op beeld en stel de volgorde in voordat je ze toevoegt.
       - {name: published, label: Tonen op de website, widget: boolean, default: true}
   - name: articles
     label: Journal
@@ -84,7 +88,7 @@ collections:
       - {name: showAuthor, label: Persoonlijk auteursblok tonen, widget: boolean, default: true}
       - {name: showToc, label: Inhoudsopgave bij minimaal drie tussenkoppen, widget: boolean, default: true}
       - {name: body, label: Artikeltekst, widget: markdown, required: false, hint: Gebruik kop 2 of kop 3 voor de inhoudsopgave. Voeg hieronder afwisselende blokken toe. De leestijd wordt automatisch berekend.}
-      - {name: cover, label: Headerfoto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+      - {name: cover, label: Headerfoto (optioneel), widget: neeltje-image, required: false}
       - {name: coverCaption, label: Bijschrift headerfoto, widget: string, required: false}
       - name: sections
         label: Artikelblokken
@@ -102,15 +106,15 @@ collections:
             label: Eén foto
             widget: object
             fields:
-              - {name: image, label: Foto, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title]}
+              - {name: image, label: Foto, widget: neeltje-image}
               - {name: width, label: Breedte, widget: select, options: [{label: Tekstbreedte, value: copy}, {label: Breed, value: wide}], default: copy}
               - {name: caption, label: Bijschrift, widget: string, required: false}
           - name: pair
             label: Twee foto's naast elkaar
             widget: object
             fields:
-              - {name: image, label: Eerste foto, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title]}
-              - {name: secondImage, label: Tweede foto, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title]}
+              - {name: image, label: Eerste foto, widget: neeltje-image}
+              - {name: secondImage, label: Tweede foto, widget: neeltje-image}
               - {name: caption, label: Bijschrift, widget: string, required: false}
           - name: split
             label: Foto naast tekst
@@ -118,7 +122,7 @@ collections:
             fields:
               - {name: title, label: Tussenkop, widget: string, required: false}
               - {name: text, label: Tekst, widget: markdown}
-              - {name: image, label: Foto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+              - {name: image, label: Foto (optioneel), widget: neeltje-image, required: false}
               - {name: caption, label: Bijschrift, widget: string, required: false}
           - name: tip
             label: Praktische tip
@@ -220,7 +224,7 @@ collections:
               - {name: title, label: Titel, widget: string}
               - {name: emphasis, label: Sierlijke titelregel, widget: string, required: false}
               - {name: text, label: Tekst, widget: text, required: false}
-              - {name: image, label: Foto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+              - {name: image, label: Foto (optioneel), widget: neeltje-image, required: false}
               - name: tags
                 label: Korte kenmerken (optioneel)
                 widget: list
@@ -241,7 +245,7 @@ collections:
               - {name: continuationOf, widget: hidden, default: '', required: false}
               - {name: name, label: Naam (sierlijk lettertype), widget: string}
               - {name: caption, label: Onderschrift, widget: string, required: false}
-              - {name: image, label: Foto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+              - {name: image, label: Foto (optioneel), widget: neeltje-image, required: false}
               - {name: visible, label: Tonen, widget: boolean, default: true}
       - name: checklist
         label: 'Trouwchecklist: verkoopblokken'
@@ -265,7 +269,7 @@ collections:
                 fields:
                   - {name: title, label: Titel, widget: string}
                   - {name: text, label: Toelichting, widget: text}
-              - {name: cover, label: Coverfoto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+              - {name: cover, label: Coverfoto (optioneel), widget: neeltje-image, required: false}
               - {name: coverLabel, label: Label op de cover, widget: string, required: false}
               - {name: coverTitle, label: Cover titel, widget: string}
               - {name: coverEmphasis, label: Cover sierlijke regel, widget: string}
@@ -330,7 +334,7 @@ collections:
               - {name: title, label: Aanhef, widget: string}
               - {name: name, label: Naam, widget: string}
               - {name: bio, label: Persoonlijke introductie, widget: text}
-              - {name: image, label: Foto (optioneel), widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false}
+              - {name: image, label: Foto (optioneel), widget: neeltje-image, required: false}
               - {name: button, label: Linktekst (optioneel), widget: string, required: false}
               - {name: href, label: Link (optioneel), widget: string, required: false}
           - name: thanks
