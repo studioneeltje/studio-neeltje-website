@@ -22,6 +22,7 @@ const fontURL='https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;50
 const styles=`<link rel="stylesheet" href="${fontURL}"><link rel="stylesheet" href="${new URL('assets/theme.css?v='+ASSET_VERSION,ROOT).href}"><link rel="stylesheet" href="${new URL('assets/site.css?v='+ASSET_VERSION,ROOT).href}"><link rel="stylesheet" href="${new URL('assets/blocks.css?v='+ASSET_VERSION,ROOT).href}"><link rel="stylesheet" href="${new URL('assets/design.css?v='+ASSET_VERSION,ROOT).href}"><link rel="stylesheet" href="${new URL('assets/checklist.css?v='+ASSET_VERSION,ROOT).href}">`;
 const links=`<base href="${ROOT}">${styles}`;
 function PreviewFrame({children,document:doc}){useEffect(()=>{if(!doc)return;doc.body.className='theme-canvas sn-preview';let base=doc.head.querySelector('base');if(!base){base=doc.createElement('base');doc.head.prepend(base);}base.href=ROOT;doc.head.insertAdjacentHTML('beforeend',styles);},[doc]);return <>{children}</>;}
+function CarouselTextsField(props){return <TextsField {...props} hiddenKeys={['4','5','6','7','8','9','10','11','12','13','14','15','17','18']}/>;}
 function blockConfig(context){
  const components={};
  for(const[type,spec]of Object.entries(context.templates)){
@@ -52,12 +53,14 @@ function blockConfig(context){
    if(type==='ContactForm')fields.formKind={type:'select',label:'Gebruik van het formulier',options:[{label:'Contactaanvraag',value:'contact'},{label:'Gratis checklist aanvragen',value:'checklist'}]};
    if(['Stories','Journal'].includes(type))fields.crops={type:'custom',label:'Uitsneden van omslagfoto’s',render:props=><RecordCrops {...props} context={context} records={type==='Stories'?context.stories:context.articles}/>};
    fields={background:{type:'custom',label:'Achtergrond & tekstkleur',render:props=><BackgroundField {...props} fallback={defaultBackground(type)} colors={context.settings.colors}/>},...fields};
-   components[type]={label:spec.label,fields,defaultProps:{...structuredClone(spec.defaults),background:defaultBackground(type)},...(type==='StoryCarousel'?{resolveFields:({props})=>{
-     const resolved={...fields};
-     if(!['all','selected'].includes(props.storySource)){delete resolved.storySelection;delete resolved.crops;}
-     else{delete resolved.images;delete resolved.links;resolved.texts={type:'custom',label:'Kop en knoptekst',render:fieldProps=><TextsField {...fieldProps} hiddenKeys={['4','5','6','7','8','9','10','11','12','13','14','15','17','18']}/>};if(props.storySource!=='selected')delete resolved.storySelection;}
-     return resolved;
-   }}:{}),render:props=><div className="sn-puck-block" dangerouslySetInnerHTML={{__html:renderBlock({type,props},context)}}/>};
+   let resolveCarouselFields;
+   if(type==='StoryCarousel'){
+     const manual={...fields,texts:{...fields.texts,key:'carousel-manual-texts'}},selected={...fields,texts:{type:'custom',key:'carousel-project-texts',label:'Kop en knoptekst',render:CarouselTextsField}};
+     delete manual.storySelection;delete manual.crops;delete selected.images;delete selected.links;
+     const all={...selected};delete all.storySelection;
+     resolveCarouselFields=({props})=>props.storySource==='selected'?selected:props.storySource==='all'?all:manual;
+   }
+   components[type]={label:spec.label,fields,defaultProps:{...structuredClone(spec.defaults),background:defaultBackground(type)},...(resolveCarouselFields?{resolveFields:resolveCarouselFields}:{}),render:props=><div className="sn-puck-block" dangerouslySetInnerHTML={{__html:renderBlock({type,props},context)}}/>};
  }
  return{components,categories:{intro:{title:'Introductie',components:['Hero','Intro','Text','Quote','About','Method','InfoCards']},media:{title:'Foto’s en video',components:['Photo','Video','Mosaic','Orbit','StoryCarousel','Wall']},stories:{title:'Verhalen',components:['Stories','Journal','Review','SingleReview','Social']},actions:{title:'Plannen en contact',components:['TiltCard','Checklist','ChecklistContents','ChecklistAudience','ContactForm','ContactCTA','Availability','Pricing','FAQ','Steps','Journey','ThankYou']}},root:{fields:{title:{type:'text',label:'Paginatitel'},description:{type:'textarea',label:'Omschrijving voor zoekmachines'}},render:({children})=><div className="mode mode-canvas active">{children}</div>}};
 }
