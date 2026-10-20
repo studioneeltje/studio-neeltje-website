@@ -1,3 +1,4 @@
+import{saveUpload}from'./storage.mjs';
 const REPO='studioneeltje/studio-neeltje-website';
 let token='',verifiedOwner=false;
 function draftConflict(){const error=new Error('Het online concept is intussen gewijzigd. Je huidige bewerking is behouden. Vergelijk de versies om veilig verder te gaan.');error.code='DRAFT_CHANGED';return error;}
@@ -37,6 +38,29 @@ async function readDraftAt(id,ref){
  const file=await readFile(`content/pages/${id}.json`,ref);if(!file)throw Error('Deze versie bevat geen paginaconcept. Je huidige bewerking blijft staan.');
  return {media,...file};
 }
+const MEDIA_BRANCH='beheer/media-bibliotheek';
+const cleanAsset=asset=>asset&&Object.fromEntries(Object.entries(asset).filter(([key])=>key!=='previewURL').sort(([a],[b])=>a.localeCompare(b)));
+const sameAsset=(a,b)=>JSON.stringify(cleanAsset(a))===JSON.stringify(cleanAsset(b));
+async function uploadFiles(uploads,tree,onProgress=()=>{}){
+ const total=uploads.reduce((sum,item)=>sum+item.file.size,0);let completed=0;
+ for(const upload of uploads){onProgress({name:upload.file.name,completed,total});let sha=upload.blobSha;if(!/^[a-f0-9]{40}$/.test(sha||'')){const buffer=await upload.file.arrayBuffer();let binary='';for(let i=0;i<buffer.byteLength;i+=0x8000)binary+=String.fromCharCode(...new Uint8Array(buffer,i,Math.min(0x8000,buffer.byteLength-i)));const blob=await api('git/blobs',{method:'POST',body:{content:btoa(binary),encoding:'base64'}});sha=blob.sha;upload.blobSha=sha;await saveUpload(upload);}tree.push({path:upload.path,mode:'100644',type:'blob',sha});completed+=upload.file.size;onProgress({name:upload.file.name,completed,total});}
+}
+export async function saveMediaDraft(changes,uploads,baselineMedia,onProgress,knownDraft){
+ if(!changes.length)throw Error('Er zijn geen nieuwe mediaveranderingen om op te slaan.');
+ let ref=await api(`git/ref/heads/${MEDIA_BRANCH}`,{allow404:true});
+ const prs=ref?await api(`pulls?head=studioneeltje:${encodeURIComponent(MEDIA_BRANCH)}&base=main&state=open`):[];
+ if(!ref){const main=await head();ref=await api('git/refs',{method:'POST',body:{ref:`refs/heads/${MEDIA_BRANCH}`,sha:main.object.sha}});}
+ else if(!prs.length){await api('merges',{method:'POST',body:{base:MEDIA_BRANCH,head:'main'}});ref=await head(MEDIA_BRANCH);}
+ // Keep unrelated online media edits. A conflicting change is never overwritten.
+ for(const asset of changes){const baseline=baselineMedia.find(a=>a.id===asset.id),current=(await readFile(`content/media/${asset.id}.json`,ref.object.sha))?.data;const previous=knownDraft?.head===ref.object.sha?knownDraft.changes?.find(item=>item.id===asset.id)||baseline:baseline;if(!sameAsset(current,previous)&&!sameAsset(current,asset))throw Error(`‘${asset.title}’ is online gewijzigd. Je lokale werk is behouden. Download een mediareservekopie en vergelijk de mediagegevens voordat je deze opnieuw opslaat.`);const main=(await readFile(`content/media/${asset.id}.json`))?.data;if(!sameAsset(main,baseline)&&!sameAsset(main,asset))throw Error(`‘${asset.title}’ is intussen gepubliceerd met andere gegevens. Je lokale bewerking is behouden.`);}
+ const base=await api(`git/commits/${ref.object.sha}`),tree=[];
+ await uploadFiles(uploads,tree,onProgress);
+ for(const asset of changes)tree.push({path:`content/media/${asset.id}.json`,mode:'100644',type:'blob',content:JSON.stringify(cleanAsset(asset),null,2)+'\n'});
+ const created=await api('git/trees',{method:'POST',body:{base_tree:base.tree.sha,tree}}),commit=await api('git/commits',{method:'POST',body:{message:'Concept: mediabibliotheek',tree:created.sha,parents:[ref.object.sha]}});
+ await api(`git/refs/heads/${MEDIA_BRANCH}`,{method:'PATCH',body:{sha:commit.sha,force:false}});
+ const pr=prs[0]||await api('pulls',{method:'POST',body:{title:'Media: beeldbank bijwerken',head:MEDIA_BRANCH,base:'main',body:'Mediabeheer zonder pagina-aanpassingen. Controleer de beelden, prullenbak en automatische optimalisatie voordat je publiceert.'}});
+ return {branch:MEDIA_BRANCH,head:commit.sha,pr};
+}
 export async function openDraft(id){
  const branch=pageBranch(id),ref=await api(`git/ref/heads/${branch}`,{allow404:true});if(!ref)return null;
  const prs=await api(`pulls?head=studioneeltje:${encodeURIComponent(branch)}&base=main&state=open`);if(!prs.length)return null;
@@ -67,7 +91,7 @@ export async function saveDraft(page,mediaChanges=[],uploads=[],expectedHead=nul
   else if(!expectedHead){const open=await api(`pulls?head=studioneeltje:${encodeURIComponent(branch)}&base=main&state=open`);if(open.length)throw draftConflict();await api('merges',{method:'POST',body:{base:branch,head:'main'}});ref=await head(branch);}
   else if(expectedHead!==ref.object.sha)throw draftConflict();
   const base=await api(`git/commits/${ref.object.sha}`);const tree=[];
-  for(const upload of uploads){const buffer=await upload.file.arrayBuffer();let binary='';for(let i=0;i<buffer.byteLength;i+=0x8000)binary+=String.fromCharCode(...new Uint8Array(buffer,i,Math.min(0x8000,buffer.byteLength-i)));const blob=await api('git/blobs',{method:'POST',body:{content:btoa(binary),encoding:'base64'}});tree.push({path:upload.path,mode:'100644',type:'blob',sha:blob.sha});}
+  await uploadFiles(uploads,tree);
   tree.push({path:`content/pages/${page.id}.json`,mode:'100644',type:'blob',content:JSON.stringify(Object.fromEntries(Object.entries(page).filter(([key])=>key!=='localOnly')),null,2)+'\n'});
   for(const asset of mediaChanges){const {previewURL,...saved}=asset;tree.push({path:`content/media/${asset.id}.json`,mode:'100644',type:'blob',content:JSON.stringify(saved,null,2)+'\n'});}
   const createdTree=await api('git/trees',{method:'POST',body:{base_tree:base.tree.sha,tree}});

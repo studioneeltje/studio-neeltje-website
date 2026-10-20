@@ -34,7 +34,7 @@
   dialog.addEventListener('click',event=>{if(event.target.closest('.lightbox-prev')){event.stopPropagation();showPhoto(active-1);}else if(event.target.closest('.lightbox-next')){event.stopPropagation();showPhoto(active+1);}else dialog.close();});
   dialog.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'){event.preventDefault();showPhoto(active-1);}if(event.key==='ArrowRight'){event.preventDefault();showPhoto(active+1);}});
   dialog.addEventListener('close',()=>{document.body.classList.remove('sn-lightbox-open');trigger?.focus({preventScroll:true});});
-  document.querySelectorAll('.portfolio-mosaic,.sn-story-gallery,.salon-wall').forEach(gallery=>{const items=[...gallery.querySelectorAll('button')].filter(b=>b.querySelector('img'));items.forEach((item,index)=>item.addEventListener('click',event=>{event.preventDefault();openGallery(items,index,item);}));});
+  document.querySelectorAll('.portfolio-mosaic,.sn-story-gallery,.salon-wall').forEach(gallery=>{gallery.querySelectorAll('button').forEach(button=>{if(button.querySelector('img[data-sn-missing]')&&!button.querySelector('img:not([data-sn-missing])')){button.disabled=true;button.setAttribute('aria-label','Foto ontbreekt — kies een nieuwe foto');}});const items=[...gallery.querySelectorAll('button')].filter(b=>b.querySelector('img:not([data-sn-missing])'));items.forEach((item,index)=>item.addEventListener('click',event=>{event.preventDefault();openGallery(items,index,item);}));});
 
   document.querySelectorAll('[data-sn-block="Orbit"]').forEach(block=>{
     const stage=block.querySelector('.orbit-stage'),cards=[...block.querySelectorAll('.orbit-card')],status=block.querySelector('[data-role="orbitStatus"]');
@@ -46,7 +46,7 @@
     }
     function frame(now){raf=0;if(!visible)return;const dt=Math.min(48,now-(last||now));last=now;if(pointer===null&&!dialog.open&&!stage.matches(':hover,:focus-within')&&!document.hidden){if(Math.abs(velocity)>.0002){angle+=velocity*dt;velocity*=Math.pow(.94,dt/16);}else if(!reduced)angle+=dt*.00012;layout();}raf=requestAnimationFrame(frame);}
     function start(){if(!raf&&visible){last=0;raf=requestAnimationFrame(frame);}}
-    stage.classList.add('is-ready');cards.forEach((card,index)=>{const image=card.querySelector('img');if(!image.complete)image.addEventListener('load',layout,{once:true});card.addEventListener('click',event=>{event.preventDefault();if(performance.now()<suppress)return;openGallery(cards,index,card);});});
+    stage.classList.add('is-ready');cards.forEach((card,index)=>{const image=card.querySelector('img');if(!image.complete)image.addEventListener('load',layout,{once:true});card.addEventListener('click',event=>{event.preventDefault();if(performance.now()<suppress)return;if(image?.dataset.snMissing)return;const available=cards.filter(item=>item.querySelector('img:not([data-sn-missing])'));if(available.length)openGallery(available,available.indexOf(card),card);});});
     function step(dir){angle+=dir*Math.PI*2/cards.length;velocity=0;layout();}
     block.querySelector('[data-role="orbitPrev"]')?.addEventListener('click',()=>step(-1));block.querySelector('[data-role="orbitNext"]')?.addEventListener('click',()=>step(1));
     stage.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'){event.preventDefault();step(-1);}if(event.key==='ArrowRight'){event.preventDefault();step(1);}});

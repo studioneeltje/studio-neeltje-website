@@ -29,7 +29,7 @@ export function renderBlock(block, context) {
       const image=imageMarkup({...selection,sizes:sizes[block.type]},context,{eager:block.type==='Hero'&&Number(key)===0,className:block.type==='Wall'?'':spec.imageClasses?.[key]||''});
       if(block.type!=='Wall')return image;
       const asset=context.media.find(asset=>asset.id===selection?.mediaId);
-      return asset?`<button type="button" class="sn-wall-open ${e(spec.imageClasses?.[key]||'')}" aria-label="Vergroot foto: ${e(asset.alt||asset.title)}" aria-haspopup="dialog">${image}</button>`:image;
+      return asset&&!asset.deletedAt?`<button type="button" class="sn-wall-open ${e(spec.imageClasses?.[key]||'')}" aria-label="Vergroot foto: ${e(asset.alt||asset.title)}" aria-haspopup="dialog">${image}</button>`:`<span class="sn-wall-open ${e(spec.imageClasses?.[key]||'')}">${image}</span>`;
     });
     html = html.replace(/\{\{link:(\d+)\}\}/g,(_,key)=>e(safeURL(p.links?.[key]?.href ?? spec.defaults.links?.[key]?.href)));
     if (block.type === 'Stories') {

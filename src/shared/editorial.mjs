@@ -18,7 +18,7 @@ export function singleReviewMarkup(p,context){
  // Existing cards hold two fragments of one real review. Reuse the continuation
  // instead of making another editable copy of that text for the new block.
  const full=review.fullText?.trim()||records.filter(record=>record.continuationOf===review.id&&record.visible!==false).map(record=>record.quote?.trim()).filter(Boolean).join('\n\n');
- const photo=review.image&&context.media.some(asset=>asset.id===review.image&&asset.kind==='image');
+ const photo=Boolean(review.image);
  return `<section class="sn-single-review${photo?' has-photo':''}" id="single-review" aria-label="Review van ${e(review.name)}"><div class="sn-single-review-inner"><div class="sn-single-review-heading"><span class="section-tag">${e(p.eyebrow||'WOORDEN VAN EEN BRUIDSPAAR')}</span></div><figure><div class="sn-single-review-copy"><span class="sn-single-review-mark" aria-hidden="true">“</span><blockquote>${e(review.quote).replace(/\n/g,'<br>')}</blockquote>${full?`<details class="sn-single-review-more"><summary><span>Lees de volledige review</span><span class="sn-single-review-toggle" aria-hidden="true">+</span></summary><div class="sn-single-review-full">${full.split(/\n\s*\n/).map(paragraph=>`<p>${e(paragraph).replace(/\n/g,'<br>')}</p>`).join('')}</div></details>`:''}<figcaption><strong>${e(review.name)}</strong>${review.caption?`<span>${e(review.caption)}</span>`:''}</figcaption></div>${photo?`<div class="sn-single-review-photo">${imageMarkup({...p.crops?.[review.id],mediaId:review.image,sizes:'(max-width: 760px) 70vw, 300px'},context)}</div>`:''}</figure></div></section>`;
 }
 // Treat the visual label and URL as one optional action, in preview and publication.

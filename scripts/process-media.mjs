@@ -50,6 +50,7 @@ export async function processMedia({root=process.cwd(),outputDir=path.join(root,
   for(const filename of entries){
     const asset=JSON.parse(await fs.readFile(path.join(root,'content/media',filename),'utf8'));
     if(!/^[a-z0-9][a-z0-9-]{0,100}$/.test(asset.id))throw new Error('Ongeldige media-identificatie.');
+    if(asset.deletedAt){manifest[asset.id]={deleted:true,kind:asset.kind,...asset.dimensions};continue;}
     const input=await readSource(asset,root,config.maxUploadMB*1024*1024,cacheDir);
     const hash=crypto.createHash('sha256').update(input).update(JSON.stringify(config)).update('neeltje-media-v1').digest('hex').slice(0,24);
     const work=path.join(cacheDir,'processed',hash);let result;

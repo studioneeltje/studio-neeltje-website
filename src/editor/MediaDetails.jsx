@@ -1,0 +1,12 @@
+import React from'react';
+import{CropEditor}from'./CropEditor.jsx';
+import{assetURL}from'../shared/media.mjs';
+import{mediaUses}from'../shared/media-library.mjs';
+export function MediaDetails({asset,context,busy,onClose,onChange,onTrash,onRestore,onCaptions}){
+ const uses=mediaUses(asset.id,context);
+ return <div className="modal-backdrop"><section className="admin-modal media-details" role="dialog" aria-modal="true" aria-label="Mediagegevens bewerken"><button type="button" className="close-modal" onClick={onClose} aria-label="Sluiten">×</button><h2>{asset.deletedAt?'In de prullenbak.':asset.kind==='video'?'Jouw video.':'Foto & focus.'}</h2>
+ {asset.deletedAt?<><p>Deze foto is niet meer te kiezen. Op gebruikte plekken staat een leeg fotovlak. Het origineel en de uitsneden zijn bewaard.</p><button type="button" className="admin-button" disabled={busy} onClick={()=>onRestore([asset])}>Beeld terugzetten ↶</button></>:<fieldset disabled={busy}><label>Titel<input value={asset.title} onChange={e=>onChange({...asset,title:e.target.value})}/></label>{asset.kind==='image'?<><label>Beschrijving voor toegankelijkheid<textarea value={asset.alt||''} onChange={e=>onChange({...asset,alt:e.target.value})}/></label><CropEditor focusOnly src={asset.previewURL||assetURL(asset,context.manifest,context.assetBaseURL)} value={asset.focus} label="Standaardfocus voor alle toepassingen" onChange={focus=>onChange({...asset,focus:focus||{x:50,y:50}})}/></>:<><video src={asset.previewURL||assetURL(asset,context.manifest,context.assetBaseURL)} controls preload="metadata"/><label>Ondertiteling (VTT-bestand)<input type="file" accept=".vtt,text/vtt" onChange={e=>{if(e.target.files[0])onCaptions(e.target.files[0]);e.target.value='';}}/></label></>}</fieldset>}
+ <div className="media-usage"><h3>{uses.length?`Gebruikt op ${uses.length} plekken`:'Nog niet gebruikt in de geladen pagina’s'}</h3>{uses.length>0&&<ul>{uses.map((use,i)=><li key={i}>{use.label}</li>)}</ul>}<p className="field-help">Dit overzicht gebruikt de gepubliceerde inhoud en je lokale paginabewerkingen. Andere online concepten kunnen dit beeld ook gebruiken.</p></div>
+ <div className="version-actions"><button type="button" className="admin-button" onClick={onClose}>Sluiten</button>{!asset.deletedAt&&<button type="button" disabled={busy} onClick={()=>onTrash([asset])}>Naar prullenbak</button>}</div><p className="field-help">Je wijzigingen zijn lokaal bewaard. Met ‘Media online opslaan’ bewaar je ze ook in GitHub.</p>
+ </section></div>;
+}
