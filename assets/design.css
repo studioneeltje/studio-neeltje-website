@@ -764,3 +764,7 @@ body.sn-lightbox-open{overflow:hidden}
 .sn-public .sn-article-intro{white-space:pre-line}
 .sn-public .sn-author-layout.sn-author-no-photo{grid-template-columns:1fr}
 .mode-canvas [data-sn-theme] .sn-journey-rail>li+li{border-left-color:var(--sn-rule)}
+.mode-canvas .story-slide .sn-carousel-project{display:block;width:100%;height:100%;color:inherit;touch-action:pan-y}
+.mode-canvas .story-slide .sn-carousel-project:focus-visible{outline:3px solid #ff4802;outline-offset:-4px}
+.mode-canvas .story-slide.is-active:has(.sn-carousel-project){cursor:auto}
+.mode-canvas .sn-carousel-empty{max-width:650px;margin:32px auto}
