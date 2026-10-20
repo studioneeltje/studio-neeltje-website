@@ -167,7 +167,7 @@
           {
             "key": "0",
             "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-1d8b3650-7a39-4265-bf49-9f13fc637e35",
             "desktop": null,
             "mobile": null
           }
@@ -180,6 +180,21 @@
           }
         ],
         "background": "white"
+      }
+    },
+    {
+      "type": "TiltCard",
+      "props": {
+        "labelText": "WAT JE KUNT VERWACHTEN",
+        "eyebrow": "",
+        "title": "Jullie bruiloft",
+        "emphasis": "vastgelegd.",
+        "body": "Trouwreportages vanaf €1.550.\nVan 6 uur tot een volledige trouwdag.",
+        "button": "Ontdek",
+        "href": "werkwijze.html#prijzen",
+        "motion": "on",
+        "background": "white",
+        "id": "TiltCard-3648be06-ba1d-43fa-b372-efc5576db3d7"
       }
     },
     {
@@ -520,7 +535,7 @@
           {
             "key": "0",
             "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "foto-75c93a94397c",
+            "mediaId": "media-de690c1b-44e8-4914-9bb4-f4473ae5bae4",
             "desktop": null,
             "mobile": null
           }
