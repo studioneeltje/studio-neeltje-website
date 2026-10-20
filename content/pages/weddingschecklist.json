@@ -158,7 +158,7 @@
           {
             "key": "0",
             "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-4d094ad9-eb76-4185-98c9-d332814bc9e3",
             "desktop": null,
             "mobile": null
           }
@@ -179,7 +179,8 @@
       "props": {
         "image": {
           "desktop": null,
-          "mobile": null
+          "mobile": null,
+          "mediaId": "media-9f44b0a0-3e9d-4625-b9db-b44c9d9409d5"
         },
         "id": "weddingschecklist-contents",
         "background": "white"
@@ -411,7 +412,7 @@
           {
             "key": "4",
             "label": "Tekst: Vertel me over jullie trouwdag, datum en locatie",
-            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt — en wat ik voor jullie kan betekenen."
+            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt en wat ik voor jullie kan betekenen."
           },
           {
             "key": "5",
@@ -428,7 +429,7 @@
           {
             "key": "0",
             "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "foto-75c93a94397c",
+            "mediaId": "media-33289b1a-d3e6-4812-8f7b-9c360f4cf344",
             "desktop": null,
             "mobile": null
           }
