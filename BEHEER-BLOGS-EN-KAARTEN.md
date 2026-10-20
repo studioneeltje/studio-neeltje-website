@@ -113,3 +113,11 @@ Foto, titel, locatie en projectlink komen uit **Sveltia → Trouwreportages**. D
 
 Publiceer nieuwe of gewijzigde reportages vanuit Sveltia en wacht tot de site opnieuw is opgebouwd. Bewaar open Puck-werk voordat je beheer ververst. Sla daarna je Portfolio-pagina als concept op en bekijk de voorvertoning. Concept opslaan en publiceren zijn afzonderlijke stappen. Je bestaande Portfolio-concept en het menu worden niet automatisch vervangen.
 
+
+## Dezelfde Puck-foto’s kiezen in Sveltia
+
+Upload je foto's één keer in **Puck → Media**. Kies daar **Media online opslaan**. Ga vervolgens in Sveltia naar het fotoveld en kies **Beeldbank vernieuwen**. De kiezer haalt de actuele mediaregistraties op GitHub op, inclusief online Puck- en mediaconcepten. Foto’s worden visueel getoond met hun status. Vernieuwen verandert je ingevulde selectie niet.
+
+Foto’s die nog alleen op dit apparaat staan, kun je in dezelfde browser herkennen maar pas kiezen nadat je ze online hebt opgeslagen. Een online mediaconcept kun je alvast kiezen; publiceer de media vóór je de reportage of pagina publiceert. Webformaten worden bij de bestaande GitHub-bouw gemaakt; concepten kunnen tijdelijk het origineel tonen. Een fysiek verwijderd origineel krijgt een melding en kan niet als nieuwe foto worden gekozen. Vernieuwen herstelt geen verwijderde bestanden.
+
+De verbinding gebruikt de openbare repository en vraagt geen extra token. Als GitHub tijdelijk aanvragen begrenst of niet bereikbaar is, verschijnt een melding; de gepubliceerde bibliotheek blijft beschikbaar. Bij gebruik in een andere browser of op een ander apparaat zijn alleen online opgeslagen bestanden beschikbaar.

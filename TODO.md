@@ -309,6 +309,8 @@ De tekst ‘Bewaar dit gevoel’ is een vrij bewerkbaar, optioneel veld in Puck.
 
 ## Kantelkaartvlak en gedeelde mediabibliotheek — op de todo, nog niet bouwen
 
+Aanvullende melding: ‘Beeldbank vernieuwen’ in Sveltia levert de verwachte Puck-foto’s niet op. Codeonderzoek bevestigt dat deze knop alleen de gepubliceerde content/bundle.json opnieuw ophaalt; hij synchroniseert geen lokale uploads of online mediaconcepten. De tekst onder het veld moet dit duidelijker uitleggen. Ook ontbrekende bronbestanden moeten als ontbrekend herkenbaar zijn in de fotokiezer, zonder kapotte miniaturen of een niet-helpende vernieuwinstructie. De volledige gedeelde bibliotheek is nog niet gebouwd.
+
 Aangevraagd op 20 oktober 2026. Neeltje bevestigt dat de grotere fotobibliotheek in **Puck → Media** staat. De bestaande kantelkaartkeuze kleurt alleen de kaart; het omringende vlak blijft de paginakleur overnemen. De Sveltia-fotokiezer leest momenteel alleen de gepubliceerde mediabundel.
 
 - [ ] Een onafhankelijke achtergrondkeuze voor het volledige vlak rond de kantelkaart toevoegen: wit, donkerrood, roze of blauw. De bestaande kaartkleur apart bewerkbaar houden, met passende tekst- en accentkleuren en behoud van opgeslagen instellingen.
@@ -327,6 +329,16 @@ Neeltje kiest op 20 oktober 2026 uitsluitend **De uitwaaier — verfijnd**. De p
 
 Dit is een ontwerpkeuze; bouwen wacht op expliciet ‘bouw’, publiceren op afzonderlijke toestemming.
 
+## Focusverlies bij tekstbewerking — gebouwd, nog niet gepubliceerd
+
+Neeltje meldt na publicatie van de portfolio-carrousel dat een tekstveld na één letter de focus verliest. Codeonderzoek: de nieuwe StoryCarousel.resolveFields wordt door Puck na elke inhoudswijziging aangeroepen en maakt telkens een nieuwe custom tekstveld-renderfunctie aan. Dit is de waarschijnlijke oorzaak van het opnieuw opbouwen van het invoerveld. De editorconfiguratie zelf is al met useMemo gestabiliseerd; de bestaande lokale opslag en herstelpunten zijn hiervan onafhankelijk. Geen live klantbewerking gewijzigd of pagina ververst tijdens het onderzoek.
+
+- [x] De definitie en renderfunctie van het carrouseltekstveld stabiel maken; alleen het zichtbare veldschema aanpassen wanneer de bronkeuze verandert.
+- [x] In een aparte lokale voorbeeldbewerking controleren dat doorlopend typen, spaties, verwijderen en cursorplaatsing behouden blijven, inclusief wisselen tussen handmatige inhoud en Sveltia-reportages.
+- [x] Bestaande teksten, selecties, uitsneden en concepten behouden. Gebouwd na expliciet ‘bouwen’ op 20 oktober 2026. Publicatie blijft een aparte stap.
+
+Gecontroleerd in een afzonderlijke lokale Puck-bewerking met dezelfde configuratie: een volledige zin letter voor letter typen, spaties, Backspace, cursorverplaatsing en wisselen naar handmatige inhoud behouden de invoerfocus. Geen echte paginaconcepten gewijzigd.
+
 ## Portfolio-overzicht via Van het eerste moment tot de laatste dans — bouw goedgekeurd
 
 Neeltje kiest dit bestaande onderdeel voor haar Portfolio-overzicht, in plaats van de lijst ‘Reportages uit Sveltia’, en geeft expliciet ‘bouw’.
@@ -335,4 +347,14 @@ Neeltje kiest dit bestaande onderdeel voor haar Portfolio-overzicht, in plaats v
 - [x] Foto, titel, locatie en juiste projectlink uit dezelfde reportagebron halen; de link onder de carrousel laten meewisselen en de actieve kaart aanklikbaar maken.
 - [x] Bestaande handmatig gevulde carrousels en paginaconcepten behouden; bronkeuze en uitsneden beschikbaar maken en het gebruik documenteren. Geen pagina's vervangen, menu's omzetten of concepten publiceren in deze bouwstap.
 
-Gebouwd op 20 oktober 2026. De lokale productiebouw is geslaagd. Nieuwe carrousels gebruiken standaard alle gepubliceerde reportages; bestaande blokken zonder bronkeuze behouden hun handmatige inhoud. De Portfolio-pagina en andere concepten zijn niet gewijzigd. Nog niet gepubliceerd.
+Gebouwd op 20 oktober 2026. De lokale productiebouw is geslaagd. Nieuwe carrousels gebruiken standaard alle gepubliceerde reportages; bestaande blokken zonder bronkeuze behouden hun handmatige inhoud. De Portfolio-pagina en andere concepten zijn niet gewijzigd. Neeltje heeft op 20 oktober 2026 expliciet ‘publiceer’ gezegd. PR #23 is samengevoegd als 0f8af426f0724baa42b409f9c3ca99fca88ffc32. Tijdens publicatie is ook het omgaan met fysiek verwijderde bronbestanden hersteld: er verschijnt een leeg mediavlak; de verwijderde bestanden worden niet teruggezet. Gepubliceerd op de GitHub Pages-testsite; run 39446499695 is geslaagd.
+
+## Sveltia-beeldbank vernieuwen — gebouwd, nog niet gepubliceerd
+
+Neeltje geeft op 20 oktober 2026 expliciet opdracht deze reparatie samen met het focusverlies te bouwen.
+
+- [x] De Sveltia-fotokiezer leest de actuele mediaregistraties op GitHub en de gewijzigde media uit open Puck- en mediaconcepten. Dezelfde media-ID’s blijven behouden; geen dubbele uploads of aparte kopie van de bibliotheek. Alleen concepten uit de eigen repository worden gelezen.
+- [x] Vernieuwen werkt de fotokiezers bij zonder de ingevulde selecties of het formulier te vervangen. Gepubliceerde media, online conceptmedia, ontbrekende bronfoto’s en uploads op alleen dit apparaat zijn herkenbaar. Alleen lokale uploads zijn nog niet plaatsbaar; eerst in Puck online opslaan. Conceptmedia vóór de pagina publiceren.
+- [x] Leesfouten en GitHub-begrenzing zichtbaar melden en de laatst gepubliceerde bibliotheek bruikbaar houden. Geen tokens uit Sveltia uitlezen of nieuwe tokens opslaan. Deze openbare GitHub Pages-repository wordt alleen-lezen benaderd. Voor een eventuele private repository is later een geauthenticeerde koppeling nodig.
+
+De productiebouw is geslaagd. Gerichte controle met nagebootste GitHub-antwoorden bevestigt dat een online mediaconcept verschijnt, een verwijderd origineel herkenbaar blijft, lokale uploads een eigen status krijgen en media niet dubbel voorkomen. Een echte upload/publicatie vanuit het account is niet uitgevoerd.
