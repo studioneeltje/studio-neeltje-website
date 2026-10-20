@@ -650,7 +650,7 @@
         ],
         "images": [],
         "links": [],
-        "background": "wine",
+        "background": "pink",
         "id": "Quote-a2a29841-58a6-46f9-9651-74bef4d9dc05"
       }
     },
@@ -705,7 +705,7 @@
             "href": "over.html"
           }
         ],
-        "background": "pink",
+        "background": "wine",
         "id": "About-5f686f27-2d70-4a29-9125-36519a90e660"
       }
     },
@@ -751,7 +751,7 @@
         ],
         "images": [],
         "links": [],
-        "background": "white",
+        "background": "blue",
         "id": "Quote-f4d3dcf6-61da-4b7a-b99d-4ce1512fe66d"
       }
     },
@@ -761,7 +761,7 @@
         "eyebrow": "WOORDEN VAN EEN BRUIDSPAAR",
         "reviewId": "jeroen-martine",
         "crops": {},
-        "background": "blue",
+        "background": "white",
         "id": "SingleReview-f056815c-9718-450c-8247-4d9628caed12"
       }
     },
