@@ -75,12 +75,12 @@
           {
             "key": "1",
             "label": "Titel: Van het eerste moment",
-            "value": "Van het eerste moment"
+            "value": "Zij weten hoe het is."
           },
           {
             "key": "2",
             "label": "Label: tot de laatste dans.",
-            "value": "tot de laatste dans."
+            "value": "Nu jullie nog."
           },
           {
             "key": "3",
@@ -207,8 +207,18 @@
             "href": "reportage-keukenhof.html"
           }
         ],
-        "background": "wine",
+        "background": "pink",
         "id": "StoryCarousel-3db35844-54bf-40f1-ba5d-aeefc07491c8"
+      }
+    },
+    {
+      "type": "Review",
+      "props": {
+        "eyebrow": "LIEVE WOORDEN / VAN BRUIDSPAREN",
+        "title": "Wat zij",
+        "emphasis": "ervan vinden.",
+        "background": "pink",
+        "id": "Review-eb9e4013-6404-4ab7-9200-ea85b2a41be1"
       }
     }
   ],
