@@ -32,7 +32,7 @@
           {
             "key": "3",
             "label": "Tekst: Een dag vol momenten om te bewaren.",
-            "value": "Welkom bij Studio Neeltje"
+            "value": "Welkom in mijn studio"
           }
         ],
         "images": [
@@ -46,14 +46,14 @@
           {
             "key": "1",
             "label": "Hoofdfoto",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-f1c2c61f-c748-4b80-a782-ff9c8128c145",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Detailfoto",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "media-486b1aea-2474-4f79-a31a-18436d3ba28c",
             "desktop": null,
             "mobile": null
           }
