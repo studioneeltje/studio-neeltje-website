@@ -21,6 +21,7 @@ export function mediaURL(value, root = '') {
 }
 export function assetURL(asset, manifest = {}, root = '') {
   const entry = manifest[asset?.id];
+  if(entry?.missing||entry?.deleted)return '';
   return mediaURL(entry?.src || asset?.previewURL || asset?.source || '',root);
 }
 export function thumbnailURL(asset,manifest={},root=''){
@@ -38,7 +39,7 @@ export function missingImageMarkup(selection={},asset,{className='',aspect=''}={
 }
 export function imageMarkup(selection, context, {eager = false, className = '', aspect = ''} = {}) {
   const asset = context.media.find(a => a.id === selection?.mediaId);
-  if (!asset||asset.deletedAt) return missingImageMarkup(selection,asset,{className,aspect});
+  if (!asset||asset.deletedAt||context.manifest?.[asset.id]?.missing||context.manifest?.[asset.id]?.deleted) return missingImageMarkup(selection,asset,{className,aspect});
   const processed = context.manifest?.[asset.id];
   const url = assetURL(asset, context.manifest, context.assetBaseURL);
   if (!url) return missingImageMarkup(selection,asset,{className,aspect});
@@ -54,7 +55,7 @@ export function imageMarkup(selection, context, {eager = false, className = '', 
 }
 export function videoMarkup(mediaId, context, {type = 'talk', caption = '', title = ''} = {}) {
   const asset = context.media.find(a => a.id === mediaId);
-  if (!asset||asset.deletedAt) return '<div class="sn-missing-media">Video ontbreekt — kies een nieuwe video.</div>';
+  if (!asset||asset.deletedAt||context.manifest?.[asset.id]?.missing||context.manifest?.[asset.id]?.deleted) return '<div class="sn-missing-media">Video ontbreekt — kies een nieuwe video.</div>';
   const entry = context.manifest?.[asset.id];
   const url = entry?.src || asset.previewURL;
   if (!url) return '<p class="sn-video-processing">Deze video wordt bij publicatie geoptimaliseerd.</p>';

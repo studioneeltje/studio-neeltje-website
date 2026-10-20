@@ -305,4 +305,34 @@ Neeltje wil een klein, uitgesproken onderdeel voor een kort tekstje met één kn
 - [x] De bestaande vier achtergrondkeuzes, passende tekstkleuren, Host Grotesk, Playfair Display Italic en merkkleuren gebruiken. Leesbare bediening, vierkante kaartvlakken en mobiele opmaak behouden.
 - [x] De gekozen beweging bij aanwijzen en toetsenbordfocus uitwerken, met respect voor minder beweging. Neeltje kiest De kantelkaart en geeft expliciet ‘bouw’.
 
-De tekst ‘Bewaar dit gevoel’ is een vrij bewerkbaar, optioneel veld in Puck. De kaart staat onder Plannen en contact. De lokale productiebouw is geslaagd. De bouwsteen is niet automatisch op bestaande pagina’s geplaatst; publicatie op de testsite staat nog open.
+De tekst ‘Bewaar dit gevoel’ is een vrij bewerkbaar, optioneel veld in Puck. De kaart staat onder Plannen en contact. De lokale productiebouw is geslaagd. De bouwsteen is niet automatisch op bestaande pagina’s geplaatst. Neeltje geeft op 20 oktober 2026 expliciet ‘publiceer’. Gepubliceerd via PR #15, main 04c269ad84d6af7b753221926eec42b2ef52613c; GitHub Actions-run 39398843750 is geslaagd.
+
+## Kantelkaartvlak en gedeelde mediabibliotheek — op de todo, nog niet bouwen
+
+Aangevraagd op 20 oktober 2026. Neeltje bevestigt dat de grotere fotobibliotheek in **Puck → Media** staat. De bestaande kantelkaartkeuze kleurt alleen de kaart; het omringende vlak blijft de paginakleur overnemen. De Sveltia-fotokiezer leest momenteel alleen de gepubliceerde mediabundel.
+
+- [ ] Een onafhankelijke achtergrondkeuze voor het volledige vlak rond de kantelkaart toevoegen: wit, donkerrood, roze of blauw. De bestaande kaartkleur apart bewerkbaar houden, met passende tekst- en accentkleuren en behoud van opgeslagen instellingen.
+- [ ] Puck → Media en de visuele fotokiezer in Sveltia dezelfde mediabibliotheek laten gebruiken, zodat opnieuw uploaden niet nodig is. Ook veilig omgaan met opgeslagen mediaconcepten en duidelijk aangeven welke foto's nog niet gepubliceerd zijn; lokale uploads eerst veilig online opslaan voordat ze elders beschikbaar worden.
+- [ ] Bestaande fotoverwijzingen, bronbestanden, focuspunten, uitsneden en herstelbare verwijderingen behouden. Verversen vanuit Sveltia mogelijk maken zonder open bewerkingen kwijt te raken of dubbele bestanden aan te maken.
+
+Dit is opgenomen als verzoek; implementatie wacht conform afspraak op expliciet ‘bouw’. Publicatie blijft een afzonderlijke stap.
+
+## Kleine fotogalerij — De uitwaaier, verfijnd — gekozen, nog niet bouwen
+
+Neeltje kiest op 20 oktober 2026 uitsluitend **De uitwaaier — verfijnd**. De plakcollage en de strakke varianten vervallen als bouwvoorstel. Referentie: fotoprints-verfijnd.html in de visualisatiemap van deze chat.
+
+- [ ] Een herbruikbare galerijbouwsteen met drie zelf te kiezen foto's, zonder zichtbare teksten, met rechte hoeken en subtiel gedraaide fotoprints.
+- [ ] De verfijnde individuele animatie behouden: alleen de aangewezen foto komt iets omhoog en draait recht, met zachte schaduw. Geen gezamenlijk uitwaaieren van de drie foto's bij aanwijzen. Ook bruikbaar met toetsenbord en aanraking, met respect voor minder beweging.
+- [ ] De vier achtergrondkleuren, een passende mobiele opmaak en selectie uit de gedeelde fotobibliotheek ondersteunen. Bestaande focuspunten en uitsneden behouden; vergroting via de bestaande transparante fotoweergave laten aansluiten.
+
+Dit is een ontwerpkeuze; bouwen wacht op expliciet ‘bouw’, publiceren op afzonderlijke toestemming.
+
+## Portfolio-overzicht via Van het eerste moment tot de laatste dans — bouw goedgekeurd
+
+Neeltje kiest dit bestaande onderdeel voor haar Portfolio-overzicht, in plaats van de lijst ‘Reportages uit Sveltia’, en geeft expliciet ‘bouw’.
+
+- [x] De bestaande carrousel laten vullen met gepubliceerde trouwreportages uit Sveltia; alle reportages automatisch of een eigen selectie en volgorde in Puck.
+- [x] Foto, titel, locatie en juiste projectlink uit dezelfde reportagebron halen; de link onder de carrousel laten meewisselen en de actieve kaart aanklikbaar maken.
+- [x] Bestaande handmatig gevulde carrousels en paginaconcepten behouden; bronkeuze en uitsneden beschikbaar maken en het gebruik documenteren. Geen pagina's vervangen, menu's omzetten of concepten publiceren in deze bouwstap.
+
+Gebouwd op 20 oktober 2026. De lokale productiebouw is geslaagd. Nieuwe carrousels gebruiken standaard alle gepubliceerde reportages; bestaande blokken zonder bronkeuze behouden hun handmatige inhoud. De Portfolio-pagina en andere concepten zijn niet gewijzigd. Nog niet gepubliceerd.

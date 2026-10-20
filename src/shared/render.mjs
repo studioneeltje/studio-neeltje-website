@@ -5,6 +5,7 @@ import {infoCardsMarkup,reviewCardsMarkup,singleReviewMarkup,removeEmptyButtons}
 import {articleReadTime} from './article-data.mjs';
 import {BACKGROUNDS} from './themes.mjs';
 import {tiltCardMarkup} from './tilt-card.mjs';
+import {storyCarouselMarkup} from './story-carousel.mjs';
 import {escapeHTML as e, safeURL, imageMarkup, videoMarkup, assetURL} from './media.mjs';
 
 export function renderBlock(block, context) {
@@ -13,6 +14,7 @@ export function renderBlock(block, context) {
   if (!spec) throw new Error(`Onbekend blok: ${block.type}`);
   let html = spec.html;
   if(block.type==='TiltCard') html=tiltCardMarkup(p);
+  else if(block.type==='StoryCarousel'&&['all','selected'].includes(p.storySource)) html=storyCarouselMarkup(p,context);
   else if(block.type==='ChecklistContents') html=checklistContentsMarkup(p,context);
   else if(block.type==='ChecklistAudience') html=checklistAudienceMarkup(p,context);
   else if(block.type==='ThankYou') html=thankYouMarkup(p.kind||'contact',context);

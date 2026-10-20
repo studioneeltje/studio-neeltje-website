@@ -101,3 +101,15 @@ Voeg in Puck onder **Plannen en contact** de bouwsteen **Kantelkaart — kort te
 - **Achtergrond & tekstkleur** kiest de kaartkleur: wit, blauw, roze of donkerrood. **Beweging bij aanwijzen** kan uit; de systeemvoorkeur voor minder beweging wordt altijd gerespecteerd.
 
 De inhoud van deze bouwsteen beheer je alleen in Puck. De gedeelde renderer geeft hem dezelfde vormgeving in het bewerkvlak, de voorvertoning en de gepubliceerde pagina. Bestaande pagina's krijgen niet automatisch een extra kaart.
+## Portfolio als carrousel
+
+Open je bestaande Portfolio-pagina in Puck. Voeg **Van eerste moment tot laatste dans** toe, of selecteer het blok dat er al staat. Onder **Inhoud van de carrousel** kies je:
+
+- **Alle gepubliceerde reportages uit Sveltia:** nieuwe gepubliceerde verhalen komen automatisch in de carrousel.
+- **Zelf reportages kiezen en ordenen:** voeg je gekozen reportages toe onder Eigen selectie en volgorde, en versleep ze naar de gewenste volgorde.
+- **Handmatige foto's en teksten behouden:** voor bestaande carrousels. De opgeslagen beelden, teksten en links blijven bewaard wanneer je van bron wisselt.
+
+Foto, titel, locatie en projectlink komen uit **Sveltia → Trouwreportages**. De actieve foto en de knop openen het bijbehorende verhaal; de knop wisselt mee met de pijlen of schuifregelaar. De omslagfoto kies je in Sveltia; uitsneden voor deze carrousel kun je apart in Puck instellen. Dubbele selecties verschijnen eenmaal. Niet-gepubliceerde of verwijderde reportages verschijnen niet, zodat er geen link naar een ontbrekende projectpagina ontstaat. Een lege selectie toont in de voorvertoning een melding, geen voorbeeldreportages.
+
+Publiceer nieuwe of gewijzigde reportages vanuit Sveltia en wacht tot de site opnieuw is opgebouwd. Bewaar open Puck-werk voordat je beheer ververst. Sla daarna je Portfolio-pagina als concept op en bekijk de voorvertoning. Concept opslaan en publiceren zijn afzonderlijke stappen. Je bestaande Portfolio-concept en het menu worden niet automatisch vervangen.
+
