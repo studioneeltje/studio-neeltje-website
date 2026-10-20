@@ -285,7 +285,7 @@ Aangevraagd door Neeltje op 20 oktober 2026. Ook foto's die op pagina's worden g
 - [x] **Bulk uploaden.** Meerdere bestanden tegelijk kiezen of in één keer slepen, met een wachtrij, voortgang per foto en voor de hele reeks, duidelijke geslaagde/mislukte uploads en opnieuw proberen van alleen mislukte bestanden. Grote reeksen beheerst verwerken zonder voor iedere foto een bewerkvenster te openen; tussentijdse opslag en de bestaande automatische optimalisatie en bronbehoud blijven behouden. De mediaveranderingen zelfstandig kunnen opslaan als er nog geen pagina geopend is.
 - [x] **Visuele fotokiezer.** Een overzicht met miniaturen bij het kiezen van een afbeelding in Puck, met grotere voorvertoning, zoeken/filteren en duidelijke geselecteerde foto. Een titel blijft aanvullende informatie; kiezen gebeurt door op het beeld te klikken. Ook toepassen bij foto- en galerijkeuzes in Sveltia voor reportages en blogs, met selectie van meerdere foto's waar een galerij wordt gevuld. De bestaande standaardfocus en aparte desktop-/mobiele uitsneden blijven beschikbaar. Met toetsenbord en schermlezer bedienbaar houden.
 
-De oude editor verwerkte één bestand per upload en gebruikte titelkeuzelijsten. Verwijderde of ontbrekende foto's hebben nu een vast fotovlak; verwerking slaat prullenbakbestanden over. Originelen blijven bewaard voor herstel. Na expliciet ‘bouw’ op 20 oktober 2026 gebouwd: herstelbare verwijdering, een lokale uploadwachtrij met afzonderlijk opnieuw proberen, hervatbare online opslag, zelfstandig mediaconcept en visuele selectie in Puck en Sveltia. De bestaande media-inhoud en paginaconcepten zijn niet gewijzigd. Publicatie van deze code staat nog open.
+De oude editor verwerkte één bestand per upload en gebruikte titelkeuzelijsten. Verwijderde of ontbrekende foto's hebben nu een vast fotovlak; verwerking slaat prullenbakbestanden over. Originelen blijven bewaard voor herstel. Na expliciet ‘bouw’ op 20 oktober 2026 gebouwd: herstelbare verwijdering, een lokale uploadwachtrij met afzonderlijk opnieuw proberen, hervatbare online opslag, zelfstandig mediaconcept en visuele selectie in Puck en Sveltia. De bestaande media-inhoud en paginaconcepten zijn niet gewijzigd. Op 20 oktober 2026 expliciet goedgekeurd met ‘Publiceer op de testsite’. Gepubliceerd via PR #13, main ee79ad6cf8726556cf619507f4a965ef95a9ddb0; GitHub Actions-run 39390478843 is geslaagd.
 
 ## Reviewkaarten — kleuren en aanhalingsteken gebouwd 20 oktober 2026
 
@@ -295,4 +295,14 @@ Aangevraagd door Neeltje op 20 oktober 2026 voor de twee losse kaarten bij ‘Wa
 - [x] Het sierlijke aanhalingsteken optisch gelijk maken aan dat van ‘Losse review met lees meer’: dezelfde vorm, lettertypebehandeling, kleur en passende verhoudingen binnen de kleinere kaart. De bestaande reviewteksten behouden.
 - [x] De twee losse kaarten, optionele foto's, hoverbeweging en bestaande navigatie behouden. De kleurkeuze en quote-tekens moeten hetzelfde worden weergegeven in Puck, voorvertoning en op de website.
 
-Gebouwd na expliciet ‘bouw’ op 20 oktober 2026. De twee reviewteksten zijn behouden. Beide reviewbouwstenen delen één stijlregel voor de aanhalingstekens; kaartvlakken volgen de vier sectiekleuren. De lokale bouw is geslaagd. Nog niet gepubliceerd.
+Gebouwd na expliciet ‘bouw’ op 20 oktober 2026. De twee reviewteksten zijn behouden. Beide reviewbouwstenen delen één stijlregel voor de aanhalingstekens; kaartvlakken volgen de vier sectiekleuren. De lokale bouw is geslaagd. Op 20 oktober 2026 gepubliceerd na expliciete toestemming, via PR #13, main ee79ad6cf8726556cf619507f4a965ef95a9ddb0. De gepubliceerde kaarten zijn visueel vastgelegd.
+
+## Kantelkaart — gebouwd na expliciet ‘bouw’ op 20 oktober 2026
+
+Neeltje wil een klein, uitgesproken onderdeel voor een kort tekstje met één knop. Het aangeleverde voorbeeld met prijzen en twee losse knoppen vindt zij te saai. Op 20 oktober 2026 drie losse visuele voorstellen gemaakt, buiten de website: **De uitschuiver**, **Het entreeticket** en **De kantelkaart**.
+
+- [x] Een herbruikbare Puck-bouwsteen maken met bewerkbare korte tekst en optionele knoptekst/link. Alleen een knop tonen als zowel tekst als link zijn ingevuld.
+- [x] De bestaande vier achtergrondkeuzes, passende tekstkleuren, Host Grotesk, Playfair Display Italic en merkkleuren gebruiken. Leesbare bediening, vierkante kaartvlakken en mobiele opmaak behouden.
+- [x] De gekozen beweging bij aanwijzen en toetsenbordfocus uitwerken, met respect voor minder beweging. Neeltje kiest De kantelkaart en geeft expliciet ‘bouw’.
+
+De tekst ‘Bewaar dit gevoel’ is een vrij bewerkbaar, optioneel veld in Puck. De kaart staat onder Plannen en contact. De lokale productiebouw is geslaagd. De bouwsteen is niet automatisch op bestaande pagina’s geplaatst; publicatie op de testsite staat nog open.

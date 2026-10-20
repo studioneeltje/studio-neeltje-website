@@ -91,3 +91,13 @@ Beide reviewbouwstenen gebruiken dezelfde sierlijke aanhalingstekens; de quote
 blijft Host Grotesk en de naam Playfair Display Italic. De achtergrond kies je in Puck.
 
 Foto's in de **Fotomuur** openen in de grote galerijweergave met een volledig transparante achtergrond. Klik op de foto of eromheen om te sluiten. Kruisje en Escape sluiten ook; pijltjes wisselen tussen de foto's. Het bewerkvlak van Puck blijft bedoeld om blokken te selecteren; interactie bekijk je via **Voorvertoning**.
+
+## Kantelkaart — kort tekstje met knop
+
+Voeg in Puck onder **Plannen en contact** de bouwsteen **Kantelkaart — kort tekstje met knop** toe. Je kiest zelf de plaats op de pagina. De licht gekantelde kaart en het oranje vel erachter bewegen bij aanwijzen of toetsenbordfocus.
+
+- **Tekst op het label (Bewaar dit gevoel)** is vrij te wijzigen. Maak dit veld leeg om het label weg te laten. Ook de bovenregel, titel, sierlijke titeltekst en korte tekst zijn per kaart bewerkbaar.
+- Vul **Knoptekst** en **Knoplink** beide in om één knop te tonen. Zonder tekst of zonder geldige link verschijnt er geen knop. De kaart kan ook als los tekstje zonder knop worden gebruikt.
+- **Achtergrond & tekstkleur** kiest de kaartkleur: wit, blauw, roze of donkerrood. **Beweging bij aanwijzen** kan uit; de systeemvoorkeur voor minder beweging wordt altijd gerespecteerd.
+
+De inhoud van deze bouwsteen beheer je alleen in Puck. De gedeelde renderer geeft hem dezelfde vormgeving in het bewerkvlak, de voorvertoning en de gepubliceerde pagina. Bestaande pagina's krijgen niet automatisch een extra kaart.
