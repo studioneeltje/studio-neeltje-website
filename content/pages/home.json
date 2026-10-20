@@ -630,12 +630,12 @@
           {
             "key": "3",
             "label": "Titel: . Ik zie ook wat er tussendoor",
-            "value": "Zowel positief"
+            "value": " Zowel negatief"
           },
           {
             "key": "4",
             "label": "Label: gebeurt.",
-            "value": " als negatief."
+            "value": " als positief."
           },
           {
             "key": "5",
@@ -655,12 +655,113 @@
       }
     },
     {
+      "type": "About",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: TROUWFOTOGRAFIE / NEELTJE MEIJLER",
+            "value": "TROUWFOTOGRAFIE / NEELTJE MEIJLER"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Wat er",
+            "value": "Zo voelt een "
+          },
+          {
+            "key": "2",
+            "label": "Label: echt gebeurt.",
+            "value": "trouwdag met mij."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Ik fotografeer de dag zoals hij zich ontvouwt: d",
+            "value": "\nZo voelt een trouwdag met mij\nIk kom niet alleen foto's maken.\nIk kom bijdragen aan een ontspannen trouwdag.\n\n\nSoms betekent dat dat ik een grap maak.\nSoms neem ik de regie.\nBijvoorbeeld tijdens de familieshoot, zodat jullie niet twintig minuten kwijt zijn aan zoeken wie het beste naast je moeder kan staan."
+          },
+          {
+            "key": "4",
+            "label": "Knop / link: Bekijk mijn werk",
+            "value": ""
+          },
+          {
+            "key": "5",
+            "label": "Label: recht uit het hart",
+            "value": "recht uit het hart"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "media-f7be80df-1f91-496c-8c7c-62305a8d2d68",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "over.html"
+          }
+        ],
+        "background": "pink",
+        "id": "About-5f686f27-2d70-4a29-9125-36519a90e660"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 01 — TUSSEN DE MOMENTEN",
+            "value": "Zo voelt een trouwdag met mij"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie beleven de",
+            "value": "Soms heb je"
+          },
+          {
+            "key": "2",
+            "label": "Label: dag",
+            "value": " wel"
+          },
+          {
+            "key": "3",
+            "label": "Titel: . Ik zie ook wat er tussendoor",
+            "value": "een beetje"
+          },
+          {
+            "key": "4",
+            "label": "Label: gebeurt.",
+            "value": " sjeu nodig."
+          },
+          {
+            "key": "5",
+            "label": "Label: met liefde gezien, Neeltje",
+            "value": "Bijvoorbeeld met familie portretten."
+          },
+          {
+            "key": "6",
+            "label": "Tekst: Een trouwdag bestaat uit meer dan de grote momen",
+            "value": "Tijdens de ceremonie zul je me juist bijna niet opmerken. Niet omdat ik er niet ben.\n\n \n\nJullie gasten willen bezig zijn met jullie, niet met mij. Ga je niet graag op de foto? Juist dan is deze manier van fotograferen fijn.\n\n\nIk leg liever het perfecte moment vast, dan dat ik zelf het middelpunt word. Behalve als het nodig is, dan heb ik daar geen problemen mee. Bijvoorbeeld met familieportretten. Daar heb je een beetje sjeu voor nodig. En soms doe ik dingen die helemaal niet in mijn takenpakket horen..."
+          }
+        ],
+        "images": [],
+        "links": [],
+        "background": "wine",
+        "id": "Quote-f4d3dcf6-61da-4b7a-b99d-4ce1512fe66d"
+      }
+    },
+    {
       "type": "SingleReview",
       "props": {
         "eyebrow": "WOORDEN VAN EEN BRUIDSPAAR",
         "reviewId": "jeroen-martine",
         "crops": {},
-        "background": "pink",
+        "background": "blue",
         "id": "SingleReview-f056815c-9718-450c-8247-4d9628caed12"
       }
     },
@@ -867,7 +968,7 @@
           {
             "key": "0",
             "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "foto-75c93a94397c",
+            "mediaId": "media-59f8840e-3701-4844-b7b1-efb83fc31f58",
             "desktop": null,
             "mobile": null
           }
