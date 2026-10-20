@@ -8,13 +8,19 @@ export function formSettingsScript(settings,{preview=false}={}){
 }
 export function prepareForms(html,settings,{preview=false,defaultKind='contact'}={}){
  return html.replace(/<form\b([^>]*)>([\s\S]*?)<\/form>/g,(_,attrs,body)=>{
-  let kind=attrs.match(/\bdata-form="([^"]+)"/)?.[1]||defaultKind;
+  let kind=attrs.match(/\bdata-form(?:-kind)?="([^"]+)"/)?.[1]||defaultKind;
   if(/availability-form/.test(attrs))kind='availability';
   if(!THANKS_ROUTES[kind])kind='contact';
   const ready=!preview&&formIsReady(kind,settings);
   const recipient=String(settings.forms?.recipient||settings.email||'').trim();
   const mail=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(recipient)?`<a href="mailto:${e(recipient)}">${e(recipient)}</a>`:'';
   const note=preview?'Voorvertoning: dit formulier verstuurt geen gegevens.':ready?'':kind==='newsletter'?'Inschrijven voor de nieuwsbrief wordt nog aangesloten.':kind==='checklist'?'Het aanvraagformulier en de download worden nog klaargezet.':`Het online formulier wordt nog aangesloten.${mail?' Stuur je bericht naar '+mail+'.':''}`;
+  if(kind==='checklist'&&!body.includes('data-checklist-newsletter')){
+   const consent=String(settings.forms?.checklistNewsletterText||'Ik wil de gratis trouwchecklist én nieuwsbrieven van Studio Neeltje ontvangen. Ik kan me op ieder moment uitschrijven.').trim();
+   const choice=`<label class="sn-checklist-consent"><input type="checkbox" name="newsletter_consent" value="yes" required data-checklist-newsletter><span>${e(consent)}</span></label>`;
+   body=/<button\b[^>]*\btype="submit"/.test(body)?body.replace(/<button\b(?=[^>]*\btype="submit")/,choice+'<button'):body+choice;
+   body=body.replace(/<p class="standalone-form-privacy">Je gegevens gebruik ik alleen om op jullie bericht te reageren\.<\/p>/,'<p class="standalone-form-privacy">Je ontvangt de trouwchecklist en nieuwsbrieven van Studio Neeltje. Uitschrijven kan altijd.</p>');
+  }
   body=body.replace(/<button\b([^>]*\btype="submit"[^>]*)>/g,(whole,a)=>`<button${a}${ready?'':' disabled aria-disabled="true"'}>`);
   const privacy=safeURL(settings.forms?.privacyURL,'');
   body+=`<div class="sn-form-honey" aria-hidden="true"><label>Laat dit veld leeg<input name="website_url" type="text" autocomplete="off" tabindex="-1"></label></div>${note?`<p class="sn-form-connection-note">${note}</p>`:''}${privacy?`<p class="sn-form-connection-note"><a href="${e(privacy)}">Hoe ik met jullie gegevens omga</a></p>`:''}`;

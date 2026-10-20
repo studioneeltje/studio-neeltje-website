@@ -406,6 +406,7 @@ collections:
               - {name: endpoint, label: Openbaar HTTPS-endpoint, widget: string, required: false}
               - {name: activated, label: Verwerking is aangesloten en klaar, widget: boolean, default: false}
           - {name: checklistFile, label: Checklistbestand (optioneel), widget: file, required: false}
+          - {name: checklistNewsletterText, label: Tekst bij verplichte nieuwsbriefkeuze voor de checklist, widget: text, default: 'Ik wil de gratis trouwchecklist én nieuwsbrieven van Studio Neeltje ontvangen. Ik kan me op ieder moment uitschrijven.', hint: 'De keuze staat nooit vooraf aan. Benoem zowel de nieuwsbrief als de mogelijkheid om uit te schrijven.'}
           - {name: privacyURL, label: Link naar privacy-informatie (optioneel), widget: string, required: false}
       - name: media
         label: Beeldkwaliteit & verwerking

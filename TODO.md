@@ -247,6 +247,20 @@ Neeltje heeft op 19 oktober 2026 expliciet toestemming gegeven: ‘Bouw en publi
 
 ## Portfolio als verhaal per project — op de todo, nog niet bouwen
 
+### SEO en inhoud — richting bevestigd door Neeltje
+
+De individuele portfolio’s zijn volwaardige SEO-landingspagina’s met substantieel eigen verhaal én uitgebreide fotografie. Neeltje geeft haar bestaande Bordeaux-pagina als inhoudelijke inspiratie: https://www.studioneeltje.com/destination-wedding-fotograaf-bordeaux-frankrijk. Pagina gelezen: duidelijke bestemmingstitel, introductie over Mark & Rooa, kennismaking/pre-wedding, meerdaags trouwweekend, locatie Domaine de Perrotin, afwisselende tekst/foto’s/galerijen, echte review, contact, leveranciers en gerelateerde bruiloft.
+
+Het nieuwe portfolio moet verplaatsbare en herhaalbare teksthoofdstukken met echte koppen en alinea’s combineren met losse foto’s en galerijen van bijvoorbeeld 20 beelden. Geen vaste beperking tot intro plus fotogalerij en geen verplichte hoeveelheid teksthoofdstukken. Bestaande aangeleverde tekst als uitgangspunt behouden; geen gefingeerde locaties, ervaringen of reviews toevoegen.
+
+SEO-inhoud per project: eigen paginatitel en metabeschrijving, bewerkbare korte URL, één duidelijke H1, logische H2/H3-hoofdstukken, beschrijvende alt-teksten, relevante interne links en tekst die als HTML leesbaar blijft. Geen zoekwoorden proppen of positiegaranties. Bij latere verhuizing naar studioneeltje.com rekening houden met bestaande URL’s en gerichte doorverwijzingen. Wix en het huidige domein blijven tijdens deze voorbereiding ongemoeid.
+
+Dit is opgenomen in het plan; deze uitbreiding is nog niet gebouwd en wacht op expliciet ‘bouw’.
+
+Aanvulling bij het bekijken van Mark & Rooa in Bordeaux: Neeltje wil tussen verhaalhoofdstukken ook volledige galerijen kunnen plaatsen, bijvoorbeeld circa 20 foto's per galerij, om te laten zien wat zij oplevert. De bestaande galerij aan het eind ondersteunt meervoudige selectie, maar de huidige vaste reportage-template heeft nog geen verplaatsbare galerijen tussen tekstonderdelen. Dit hoort bij deze nog ongebouwde portfolio-uitbreiding.
+
+- [ ] Een herhaalbaar galerijonderdeel tussen verhaalhoofdstukken, met selectie van veel foto's tegelijk uit dezelfde mediabibliotheek, eigen volgorde en uitsneden, mobiel passende weergave en de bestaande transparante vergroting met pijltjes en sluiten door klikken. Geen beperking tot één foto, drie foto's of zeven foto's; de regel voor visuele tekstopsommingen beperkt deze fotogalerijen niet.
+
 Referentie van Neeltje: https://www.studioneeltje.com/trouwfotograaf-kasteel-keukenhof-lisse. De bestaande Keukenhof-pagina wisselt het verhaal, informatie over de locatie, losse foto's en galerijen af. Op de nieuwe site moet iedere reportage een eigen verhaal kunnen worden, in de nieuwe huisstijl.
 
 - [ ] Een projectheader met titel, namen van het bruidspaar, locatie en gekozen headerbeeld(en).
@@ -319,17 +333,19 @@ Aangevraagd op 20 oktober 2026. Neeltje bevestigt dat de grotere fotobibliotheek
 
 Dit is opgenomen als verzoek; implementatie wacht conform afspraak op expliciet ‘bouw’. Publicatie blijft een afzonderlijke stap.
 
-## Kleine fotogalerij — De uitwaaier, verfijnd — gekozen, nog niet bouwen
+## Kleine fotogalerij — De uitwaaier, verfijnd — gebouwd, nog niet gepubliceerd
 
 Neeltje kiest op 20 oktober 2026 uitsluitend **De uitwaaier — verfijnd**. De plakcollage en de strakke varianten vervallen als bouwvoorstel. Referentie: fotoprints-verfijnd.html in de visualisatiemap van deze chat.
 
-- [ ] Een herbruikbare galerijbouwsteen met drie zelf te kiezen foto's, zonder zichtbare teksten, met rechte hoeken en subtiel gedraaide fotoprints.
-- [ ] De verfijnde individuele animatie behouden: alleen de aangewezen foto komt iets omhoog en draait recht, met zachte schaduw. Geen gezamenlijk uitwaaieren van de drie foto's bij aanwijzen. Ook bruikbaar met toetsenbord en aanraking, met respect voor minder beweging.
-- [ ] De vier achtergrondkleuren, een passende mobiele opmaak en selectie uit de gedeelde fotobibliotheek ondersteunen. Bestaande focuspunten en uitsneden behouden; vergroting via de bestaande transparante fotoweergave laten aansluiten.
+- [x] Een herbruikbare galerijbouwsteen met drie zelf te kiezen foto's, zonder zichtbare teksten, met rechte hoeken en subtiel gedraaide fotoprints.
+- [x] De verfijnde individuele animatie behouden: alleen de aangewezen foto komt iets omhoog en draait recht, met zachte schaduw. Geen gezamenlijk uitwaaieren van de drie foto's bij aanwijzen. Ook bruikbaar met toetsenbord en aanraking, met respect voor minder beweging.
+- [x] De vier achtergrondkleuren, een passende mobiele opmaak en selectie uit de gedeelde fotobibliotheek ondersteunen. Bestaande focuspunten en uitsneden behouden; vergroting via de bestaande transparante fotoweergave laten aansluiten.
 
-Dit is een ontwerpkeuze; bouwen wacht op expliciet ‘bouw’, publiceren op afzonderlijke toestemming.
+Neeltje heeft verduidelijkt dat haar bouwopdracht ook deze gekozen uitwaaier omvat. Bouw is goedgekeurd; publicatie blijft een afzonderlijke stap.
 
-## Ontbrekende fotovelden in contactheader — gebouwd, nog niet gepubliceerd
+Gebouwd als FanGallery, in Puck onder Foto’s en video → Uitwaaier — verfijnd (3 foto’s). Drie visuele fotokeuzes, aparte uitsneden, vier sectiekleuren en aan/uit voor beweging. Alleen de aangewezen of gefocuste print beweegt omhoog en recht; ontbrekende foto’s blijven lege, niet-aanklikbare vlakken. Klikbare foto’s gebruiken de bestaande transparante vergroting. Geen bestaande pagina automatisch gewijzigd.
+
+## Ontbrekende fotovelden in contactheader — gepubliceerd
 
 ### Gerichte bugcontrole op verzoek van Neeltje
 
@@ -380,3 +396,15 @@ Neeltje geeft op 20 oktober 2026 expliciet opdracht deze reparatie samen met het
 De productiebouw is geslaagd. Gerichte controle met nagebootste GitHub-antwoorden bevestigt dat een online mediaconcept verschijnt, een verwijderd origineel herkenbaar blijft, lokale uploads een eigen status krijgen en media niet dubbel voorkomen. Een echte upload/publicatie vanuit het account is niet uitgevoerd.
 
 Publicatie van beide reparaties expliciet goedgekeurd op 20 oktober 2026. PR #25 is samengevoegd als 05215a36edaa7cdc86a8b6b09a2dfe8e448bcd4c. GitHub Pages-run 39474743085 is geslaagd. Open gebruikersbewerkingen zijn niet herladen of gewijzigd.
+
+De drie auditreparaties zijn op 20 oktober 2026 expliciet goedgekeurd met ‘publiceer’ en gepubliceerd via PR #26, main 714b3e8bdb00cc786dd8b41b6ac8112ac9e4fcac. GitHub Pages-run 39477219086 is geslaagd. Het eigen Contact-concept en open gebruikersbewerkingen zijn behouden.
+
+## Checklistaanvraag met nieuwsbriefkeuze — gebouwd, nog niet gepubliceerd
+
+Neeltje wil de gratis checklist koppelen aan het ontvangen van nieuwsbrieven. Op 20 oktober 2026 expliciet ‘bouw’ voor deze wijziging en de verfijnde uitwaaier.
+
+- [x] Een verplichte, nooit vooraf aangevinkte checkbox bij checklistaanvragen, met duidelijke vermelding van de checklist, nieuwsbrieven en uitschrijven op ieder moment. Andere formulieren behouden hun bestaande werking.
+- [x] De tekst centraal in Sveltia bewerkbaar maken. Tegenstrijdige standaardtoelichting over alleen reageren op een bericht vervangen. Bij toekomstige verzending toestemming, gebruikte tekst en tijdstip meesturen.
+- [x] De uitgestelde verzendkoppeling uitgeschakeld houden; geen nieuwsbriefabonnement, checklistdownload of werkende uitschrijfdienst suggereren voordat de echte dienst is aangesloten. De toekomstige ontvanger moet de toestemming zelf ook valideren en uitschrijven ondersteunen.
+
+Productiebouw geslaagd. De opmaak van uitwaaier en formulier is lokaal bekeken; er zijn geen formuliergegevens verstuurd en geen abonnementen aangemaakt. Geen tests toegevoegd of uitgevoerd in deze bouwstap. Verzending en download blijven uitgeschakeld; de tekst bij toestemming is centraal in Sveltia bewerkbaar. Publicatie wacht op afzonderlijke toestemming.

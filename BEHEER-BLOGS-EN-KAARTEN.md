@@ -127,3 +127,13 @@ De verbinding gebruikt de openbare repository en vraagt geen extra token. Als Gi
 Bij vaste fotoblokken blijven alle fotovakken beschikbaar, ook als een ouder concept een lege of gedeeltelijke fotolijst bevat. In de redactionele collage-header zijn dat **Foto achteraan**, **Hoofdfoto** en **Detailfoto**. Selecteer de header, klap het gewenste vak onder Foto’s en uitsneden open en kies een foto. De ontbrekende velden worden pas samen met jouw bewerking opgeslagen; je bestaande teksten en uitsneden worden niet automatisch overschreven. Een bewust leeggemaakte fotokeuze blijft leeg.
 
 Puck toont bij fysiek ontbrekende bronbestanden een duidelijke melding, zonder kapotte miniaturen of uitsnedevoorbeeld. Die foto’s zijn niet opnieuw plaatsbaar. Een soft verwijderd beeld kan worden teruggezet als het origineel nog aanwezig is; kies anders een nieuw beeld op de gebruikte plek. De carrousel behoudt ook bij grotere aantallen reportages positieve afmetingen en geldige lagen.
+
+## Uitwaaier — verfijnd (3 foto’s)
+
+Voeg deze bouwsteen in Puck toe via **Foto’s en video → Uitwaaier — verfijnd (3 foto’s)**. Onder Foto’s en uitsneden staan Foto links, Foto midden en Foto rechts. Kies de foto’s visueel, eventueel alle drie tegelijk, en stel desktop- en mobiele uitsneden in. Kies een witte, blauwe, roze of donkerrode achtergrond. Bij aanwijzen komt alleen de betreffende print iets omhoog en recht. De beweging kan uit; minder beweging van het apparaat wordt gerespecteerd. Zonder teksten of bijschriften. In Voorvertoning en op de website opent klikken de bestaande transparante fotoweergave, met pijltjes, Escape en klikken om te sluiten. Ontbrekende foto’s zijn niet aanklikbaar.
+
+## Trouwchecklist en nieuwsbrieven
+
+Een checklistaanvraag krijgt een verplichte checkbox die nooit vooraf is aangevinkt. De tekst vermeldt zowel de checklist als de nieuwsbrieven en dat uitschrijven op ieder moment kan. Je wijzigt die tekst centraal via **Sveltia → Algemene instellingen → Formulierkoppelingen (nog uitgeschakeld) → Tekst bij verplichte nieuwsbriefkeuze voor de checklist**. De standaardtoelichting over alleen reageren op een contactbericht wordt bij dit formulier vervangen. Contact-, datum- en gewone nieuwsbriefvelden worden niet aangepast.
+
+Verzending is nog uitgesteld. Pas na het aansluiten en expliciet activeren van de checklistdienst kan het formulier gegevens versturen; de ontvanger krijgt dan de expliciete keuze, de weergegeven toestemmingstekst en het tijdstip mee. De dienst moet deze toestemming ook zelf valideren en in iedere nieuwsbrief uitschrijven aanbieden. Nu wordt niemand daadwerkelijk ingeschreven en wordt geen download geactiveerd.

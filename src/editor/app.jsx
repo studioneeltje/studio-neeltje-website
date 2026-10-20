@@ -50,6 +50,7 @@ function blockConfig(context){
      fields.crops={type:'custom',label:'Uitsneden van reportagefoto’s',render:props=><RecordCrops {...props} context={context} records={context.stories}/>};
      fields.beheer={type:'custom',label:'Portfolio beheren',render:()=> <p className="field-help">Kies hierboven reportages uit Sveltia. Foto, titel, locatie en projectlink volgen de reportage. Bij een eigen selectie kun je de volgorde aanpassen. Alleen gepubliceerde reportages krijgen een link. Bewerk verhalen via <a href={new URL('cms/',ROOT).href} target="_blank" rel="noreferrer">Sveltia → Trouwreportages ↗</a>. Ververs Puck na het publiceren vanuit Sveltia; bewaar eerst je werk.</p>};
    }
+   if(type==='FanGallery')fields.motion={type:'radio',label:'Beweging bij aanwijzen',options:[{label:'Aan',value:'on'},{label:'Uit',value:'off'}]};
    if(type==='ContactForm')fields.formKind={type:'select',label:'Gebruik van het formulier',options:[{label:'Contactaanvraag',value:'contact'},{label:'Gratis checklist aanvragen',value:'checklist'}]};
    if(['Stories','Journal'].includes(type))fields.crops={type:'custom',label:'Uitsneden van omslagfoto’s',render:props=><RecordCrops {...props} context={context} records={type==='Stories'?context.stories:context.articles}/>};
    fields={background:{type:'custom',label:'Achtergrond & tekstkleur',render:props=><BackgroundField {...props} fallback={defaultBackground(type)} colors={context.settings.colors}/>},...fields};
@@ -62,7 +63,7 @@ function blockConfig(context){
    }
    components[type]={label:spec.label,fields,defaultProps:{...structuredClone(spec.defaults),background:defaultBackground(type)},...(resolveCarouselFields?{resolveFields:resolveCarouselFields}:{}),render:props=><div className="sn-puck-block" dangerouslySetInnerHTML={{__html:renderBlock({type,props},context)}}/>};
  }
- return{components,categories:{intro:{title:'Introductie',components:['Hero','Intro','Text','Quote','About','Method','InfoCards']},media:{title:'Foto’s en video',components:['Photo','Video','Mosaic','Orbit','StoryCarousel','Wall']},stories:{title:'Verhalen',components:['Stories','Journal','Review','SingleReview','Social']},actions:{title:'Plannen en contact',components:['TiltCard','Checklist','ChecklistContents','ChecklistAudience','ContactForm','ContactCTA','Availability','Pricing','FAQ','Steps','Journey','ThankYou']}},root:{fields:{title:{type:'text',label:'Paginatitel'},description:{type:'textarea',label:'Omschrijving voor zoekmachines'}},render:({children})=><div className="mode mode-canvas active">{children}</div>}};
+ return{components,categories:{intro:{title:'Introductie',components:['Hero','Intro','Text','Quote','About','Method','InfoCards']},media:{title:'Foto’s en video',components:['Photo','Video','Mosaic','Orbit','StoryCarousel','FanGallery','Wall']},stories:{title:'Verhalen',components:['Stories','Journal','Review','SingleReview','Social']},actions:{title:'Plannen en contact',components:['TiltCard','Checklist','ChecklistContents','ChecklistAudience','ContactForm','ContactCTA','Availability','Pricing','FAQ','Steps','Journey','ThankYou']}},root:{fields:{title:{type:'text',label:'Paginatitel'},description:{type:'textarea',label:'Omschrijving voor zoekmachines'}},render:({children})=><div className="mode mode-canvas active">{children}</div>}};
 }
 
 function App(){

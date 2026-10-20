@@ -4,5 +4,6 @@
   "newsletter": {"provider": "none", "endpoint": "", "activated": false},
   "checklist": {"provider": "none", "endpoint": "", "activated": false},
   "checklistFile": "",
+  "checklistNewsletterText": "Ik wil de gratis trouwchecklist én nieuwsbrieven van Studio Neeltje ontvangen. Ik kan me op ieder moment uitschrijven.",
   "privacyURL": ""
 }
