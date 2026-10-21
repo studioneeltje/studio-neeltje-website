@@ -24,7 +24,7 @@
       "text": "Op een warme dag heeft iedereen, ergens rond de middag, gewoon trek. En door meer te zweten heb je ook meer zout nodig. Een snack die dat oplost — denk aan bitterballen, een soepje of iets hartigs naast het taartbuffet, wordt enorm gewaardeerd. Een gevuld maagje zorgt voor blije gasten tot diep in de avond."
     },
     {
-      "type": "text",
+      "type": "tip",
       "title": "Plan meer tijd voor de fotoshoot dan je denkt nodig te hebben",
       "text": "Wil je naar een mooie locatie rijden voor de fotoshoot? Reken die reistijd er dan apart bij op. Een kwartier heen en een kwartier terug betekent een half uur extra bovenop de fotoshoot zelf.\n\nDe planning op een trouwdag loopt bijna altijd anders dan gepland. Door extra tijd in te bouwen, win je niets, maar voorkom je wel stress. En een ontspannen fotoshoot betekent ook gewoon een momentje samen, weg van alle gasten. Dat is op zich al een cadeau."
     },
@@ -41,8 +41,35 @@
     },
     {
       "type": "tip",
-      "title": "",
-      "text": ""
+      "title": "Houd de ruimte tijdens het klaarmaken opgeruimd",
+      "text": "Wil je mooie foto's van het klaarmaken? Houd dan de ruimte schoon en opgeruimd. Kleding, make-up, nagellak, ondergoed, tape — het is onvermijdelijk dat zoiets ergens rondslingert, maar het gaat ten koste van de kwaliteit van je beelden. Een opgeruimde ruimte zorgt voor rustigere, mooiere foto's."
+    },
+    {
+      "type": "tip",
+      "title": "Verzamel je persoonlijke items voor detailfoto's",
+      "text": "Wil je graag mooie detailfoto's van je schoenen, sieraden of andere persoonlijke items? Leg ze dan vooraf bij elkaar op een plekje. Een fotograaf kan alleen vastleggen wat er is — als er niets is verzameld om te fotograferen, is er ook niets om mee te werken."
+    },
+    {
+      "type": "tip",
+      "title": "Bedenk vooraf met wie je op de foto wilt",
+      "text": "Familierelaties zijn niet altijd makkelijk. Maar het is jullie dag, dus jullie bepalen met wie je op de foto wilt en met wie niet. Bespreek dit vooraf met je fotograaf, zodat hij of zij dit nonchalant en zonder gedoe kan regelen. Mensen die hier moeite mee hebben, mogen daar best even aan wennen. Het is jullie keuze, niet die van hen."
+    },
+    {
+      "type": "tip",
+      "title": "en ja-woord is zo romantisch als jij hem hebt besproken",
+      "text": "Heb je geen officiële ceremonie, maar wil je toch een traditioneel moment waarop het jawoord wordt uitgesproken? Maak dat dan ook echt een moment. Laat iemand — een familielid, vriend of een ingehuurde ceremoniespreker — duidelijk aankondigen wanneer dit gebeurt.\n\nZeker de oudere generatie is niet altijd bekend met een los jawoord-moment buiten een officiële ceremonie (dus als je al getrouwd bent). Communiceer dit vooraf duidelijk, zodat niemand zich afvraagt: is dit nu het moment, of niet? Dat kan écht ongemakkelijk worden... En precies dát willen we voorkomen."
+    },
+    {
+      "type": "tip",
+      "title": "Wie wil je écht om je heen op je trouwochtend?",
+      "text": "Ochtend van de bruiloft. Make-up zit erin, haar wordt gedaan, de spanning stijgt. En dan zijn er ook nog 8 mensen in de ruimte die allemaal iets willen zeggen. Het klaarmaken duurt altijd langer dan je denkt. 2 uur voor make-up en haar is heel normaal. En als je dan ook nog gastvrouw wilt spelen voor alle vriendinnen, zussen en moeders, dan ben je best druk voor je dag überhaupt begint.\n\nMijn tip: wees eerlijk met jezelf over hoeveel mensen je om je heen wilt hebben tijdens het klaarmaken. En wie dat moeten zijn. Ben je iemand die oplaadt van gezelligheid? Prima. Maar als je eigenlijk liever rustig begint, zeg het dan gewoon. Hou het klein als je dat prettig vindt. Niemand zal het je kwalijk nemen. Het is jouw ochtend. Maak er een bewuste keuze van, geen vanzelfsprekendheid."
+    },
+    {
+      "type": "split",
+      "title": "En het allerbelangrijkste...",
+      "text": "Een bruiloft hoeft niet perfect te verlopen om onvergetelijk te zijn. De meeste van deze tips gaan niet over perfectie, ze gaan over rust. Rust voor jullie, rust voor je gasten en rust om te genieten van een dag die je maar één keer meemaakt.",
+      "image": "media-692188ff-1c50-4f51-ac6b-b598a98a5a0d",
+      "caption": ""
     }
   ],
   "related": [
@@ -50,7 +77,13 @@
     "fotoshoot-trouwdag",
     "niet-graag-op-de-foto"
   ],
-  "cta": null,
+  "cta": {
+    "enabled": false,
+    "title": "Meer rust in jullie planning?",
+    "text": "De gratis trouwchecklist helpt jullie stap voor stap op weg.",
+    "label": "Ontdek de gratis trouwchecklist",
+    "href": "weddingschecklist.html"
+  },
   "published": true,
   "readTime": "5 min lezen"
 }
