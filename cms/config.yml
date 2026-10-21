@@ -121,7 +121,8 @@ collections:
     create: true
     identifier_field: title
     slug: '{{id}}'
-    preview_path: 'artikel-{{id}}.html'
+    # Concepten worden in de visuele preview bekeken, niet via een nog niet bestaande live URL.
+    editor: {preview: true}
     fields:
       - {name: id, label: Korte naam in de URL, widget: string, pattern: ['^[a-z0-9][a-z0-9-]{0,80}$', 'Gebruik kleine letters, cijfers en streepjes.']}
       - {name: title, label: Titel, widget: string}

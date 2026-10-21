@@ -1,3 +1,4 @@
+import {renderArticle} from '../shared/article.mjs';
 import {projectMarkup} from '../shared/project-story.mjs';
 import React,{useEffect,useState}from'react';
 import{createRoot}from'react-dom/client';
@@ -69,4 +70,31 @@ class ProjectPreviewControl extends CMS.React.Component{
  render(){return CMS.React.createElement('div',{ref:el=>{this.host=el;}});}
 }
 CMS.registerPreviewTemplate('stories',ProjectPreviewControl);
+
+function prepareArticlePreview(markup){
+ const doc=new DOMParser().parseFromString(markup,'text/html'),headings=[],used=new Set();
+ doc.querySelectorAll('h2,h3').forEach(el=>{const title=el.textContent,base=title.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'onderwerp';let id='lees-'+base,n=2;while(used.has(id))id='lees-'+base+'-'+n++;used.add(id);el.id=id;headings.push({id,title,sub:el.tagName==='H3'});});
+ return {html:doc.body.innerHTML,headings};
+}
+function ArticlePreview({record}){
+ const [context,setContext]=useState(null),[error,setError]=useState(''),[mobile,setMobile]=useState(false),[large,setLarge]=useState(false);
+ useEffect(()=>{let active=true;const listener=data=>{if(active){setContext(data);setError('');}};libraryListeners.add(listener);loadLibrary().then(listener).catch(()=>{if(active)setError('De voorvertoning kon niet laden. Je tekst blijft behouden. Vernieuw de beheeromgeving nadat je je werk hebt opgeslagen.');});return()=>{active=false;libraryListeners.delete(listener);};},[]);
+ if(error)return <p role="alert">{error}</p>;
+ if(!context)return <p role="status">Je blog in de website-opmaak laden…</p>;
+ const html=renderArticle(record,{...context,assetBaseURL:ROOT,preview:true},prepareArticlePreview);
+ const source=`<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><base href="${ROOT}"><link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;600;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/theme.css"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/blocks.css"><link rel="stylesheet" href="assets/design.css"></head><body class="sn-public"><main class="mode mode-canvas active">${html}</main><script>document.addEventListener('click',function(event){var link=event.target.closest('a');if(link){event.preventDefault();var href=link.getAttribute('href')||'';if(href.startsWith('#')){var target=document.getElementById(href.slice(1));if(target)target.scrollIntoView({behavior:'smooth'});}}});var bar=document.querySelector('.sn-article-progress');if(bar){bar.hidden=false;function update(){var total=document.documentElement.scrollHeight-innerHeight;var progress=total>0?Math.min(100,Math.max(0,scrollY/total*100)):0;bar.setAttribute('aria-valuenow',Math.round(progress));bar.querySelector('span').style.width=progress+'%';}addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();}<\/script></body></html>`;
+ const frame=<iframe title="Visuele voorvertoning van je blog" sandbox="allow-scripts" srcDoc={source} style={{display:'block',width:mobile?'390px':'100%',maxWidth:'100%',height:large?'calc(100vh - 160px)':'80vh',border:0,margin:'0 auto',background:'#fff'}}/>;
+ return <section style={large?{position:'fixed',inset:12,zIndex:10000,background:'#f5f5f5',padding:16,overflow:'auto',boxShadow:'0 0 0 40px #0008'}:{}} role={large?'dialog':undefined} aria-modal={large?true:undefined} aria-label="Blogvoorvertoning" onKeyDown={event=>{if(event.key==='Escape')setLarge(false);}}>
+ <div style={{display:'flex',gap:12,flexWrap:'wrap',marginBottom:12}}><button type="button" onClick={()=>setMobile(false)} aria-pressed={!mobile}>Desktop</button><button type="button" onClick={()=>setMobile(true)} aria-pressed={mobile}>Mobiel</button><button type="button" onClick={()=>setLarge(!large)}>{large?'Sluit groot voorbeeld':'Groot bekijken ↗'}</button></div>
+ <p style={{fontSize:14,margin:'0 0 12px'}}>Dit is je huidige concept in de website-opmaak, ook vóór het opslaan. Er wordt niets gepubliceerd. Links naar andere pagina’s zijn hier uitgeschakeld.</p>{frame}</section>;
+}
+class ArticlePreviewControl extends CMS.React.Component{
+ componentDidMount(){this.root=createRoot(this.host);this.draw();}
+ componentDidUpdate(){this.draw();}
+ componentWillUnmount(){this.root.unmount();}
+ draw(){this.root.render(<ArticlePreview record={this.props.entry.get('data').toJS()}/>);}
+ render(){return CMS.React.createElement('div',{ref:el=>{this.host=el;}});}
+}
+CMS.registerPreviewTemplate('articles',ArticlePreviewControl);
+
 CMS.init();
