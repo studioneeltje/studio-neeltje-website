@@ -572,8 +572,7 @@
 .mode-canvas .sn-reviews-track[data-review-count="3"],.mode-canvas .sn-reviews-track:not([data-review-count="1"]):not([data-review-count="2"]){--review-cols:3}
 .mode-canvas [data-sn-block="Review"]{--sn-review-a:#fff;--sn-review-b:#fde6f2}
 .mode-canvas [data-sn-block="Review"][data-sn-theme="white"]{--sn-review-a:#fde6f2;--sn-review-b:#e8f2ff}
-.mode-canvas [data-sn-block="Review"][data-sn-theme="blue"]{--sn-review-a:#fff;--sn-review-b:#fde6f2}
-.mode-canvas [data-sn-block="Review"][data-sn-theme="pink"]{--sn-review-a:#fff;--sn-review-b:#e8f2ff}
+.mode-canvas [data-sn-block="Review"][data-sn-theme="blue"],.mode-canvas [data-sn-block="Review"][data-sn-theme="pink"]{--sn-review-a:#fff;--sn-review-b:#fff}
 .mode-canvas .sn-review-card{--sn-fg:#65001d;position:relative;margin:0;flex:0 0 calc((100% - (var(--review-cols) - 1)*32px)/var(--review-cols));min-width:0;display:flex;flex-direction:column;padding:36px 32px;min-height:390px;transform:rotate(-1.6deg);transition:transform .3s cubic-bezier(.3,1.6,.5,1);background:var(--sn-review-a,#fff);color:#65001d;border:1px solid #65001d18}
 .mode-canvas .sn-review-card:nth-child(even){background:var(--sn-review-b,#fde6f2);transform:rotate(1.2deg)}
 .mode-canvas .sn-review-card:hover,.mode-canvas .sn-review-card:focus-within{transform:translateY(-8px) rotate(0deg)}
@@ -588,6 +587,7 @@
 .mode-canvas .sn-reviews-navigation[hidden]{display:none}
 .mode-canvas .sn-reviews-navigation button{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;border:1px solid currentColor;color:inherit;background:transparent;font-size:24px;cursor:pointer;transition:background .2s,color .2s}
 .mode-canvas .sn-reviews-navigation button:hover:not(:disabled){background:#fde6f2;color:#65001d}
+.mode-canvas [data-sn-block="Review"]:is([data-sn-theme="blue"],[data-sn-theme="pink"]) .sn-reviews-navigation button:hover:not(:disabled){background:#fff;color:#65001d}
 .mode-canvas .sn-reviews-navigation button:disabled{opacity:.35}
 .mode-canvas [data-sn-theme] .sn-reviews-navigation{color:var(--sn-fg)}
 /* Keep independent light cards readable inside any chosen section palette. */
