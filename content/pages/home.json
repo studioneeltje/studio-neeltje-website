@@ -179,7 +179,7 @@
             "href": "over.html"
           }
         ],
-        "background": "blue"
+        "background": "white"
       }
     },
     {
@@ -193,8 +193,9 @@
         "button": "Ontdek",
         "href": "werkwijze.html#prijzen",
         "motion": "on",
-        "background": "wine",
-        "id": "TiltCard-3648be06-ba1d-43fa-b372-efc5576db3d7"
+        "background": "pink",
+        "id": "TiltCard-3648be06-ba1d-43fa-b372-efc5576db3d7",
+        "sectionBackground": "white"
       }
     },
     {
@@ -309,7 +310,7 @@
         ],
         "images": [],
         "links": [],
-        "background": "pink"
+        "background": "blue"
       }
     },
     {
@@ -355,7 +356,7 @@
             "href": ""
           }
         ],
-        "background": "pink",
+        "background": "wine",
         "id": "Method-f0069644-14d9-4e57-8602-90d653c05c56"
       }
     },
@@ -493,7 +494,7 @@
             "href": "https://static.wixstatic.com/media/31108f_a93479a7875f4c97946f3613205982af~mv2.jpg"
           }
         ],
-        "background": "wine"
+        "background": "white"
       }
     },
     {
@@ -535,7 +536,7 @@
           {
             "key": "0",
             "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "media-de690c1b-44e8-4914-9bb4-f4473ae5bae4",
+            "mediaId": "media-19fe16d2-28a2-4fa5-869f-ae0060534650",
             "desktop": null,
             "mobile": null
           }
@@ -547,7 +548,7 @@
             "href": "over.html"
           }
         ],
-        "background": "blue",
+        "background": "pink",
         "id": "About-32d07291-408f-4595-b799-e731c362b1c2"
       }
     },
@@ -557,7 +558,7 @@
         "eyebrow": "WOORDEN VAN EEN BRUIDSPAAR",
         "reviewId": "jeroen-martine",
         "crops": {},
-        "background": "white",
+        "background": "wine",
         "id": "SingleReview-17ea4c69-180f-4b2b-8578-191460dc316e"
       }
     },
@@ -604,7 +605,7 @@
             "href": "over.html"
           }
         ],
-        "background": "white",
+        "background": "blue",
         "id": "Method-0b5c85f3-794e-468f-9110-5afe8c4b7f24"
       }
     },
@@ -650,7 +651,7 @@
         ],
         "images": [],
         "links": [],
-        "background": "pink",
+        "background": "white",
         "id": "Quote-a2a29841-58a6-46f9-9651-74bef4d9dc05"
       }
     },
@@ -676,7 +677,7 @@
           {
             "key": "3",
             "label": "Tekst: Ik fotografeer de dag zoals hij zich ontvouwt: d",
-            "value": "\nZo voelt een trouwdag met mij\nIk kom niet alleen foto's maken.\nIk kom bijdragen aan een ontspannen trouwdag.\n\n\nSoms betekent dat dat ik een grap maak.\nSoms neem ik de regie.\nBijvoorbeeld tijdens de familieshoot, zodat jullie niet twintig minuten kwijt zijn aan zoeken wie het beste naast je moeder kan staan."
+            "value": "\nZo voelt een trouwdag met mij\nIk kom niet alleen foto's maken.\nIk kom bijdragen aan een ontspannen trouwdag.\n\n\nSoms betekent dat dat ik een grap maak.\nSoms neem ik de regie.\nBijvoorbeeld tijdens de familieshoot, zodat jullie niet 20 minuten kwijt zijn aan zoeken wie het beste naast je moeder kan staan."
           },
           {
             "key": "4",
@@ -705,7 +706,7 @@
             "href": "over.html"
           }
         ],
-        "background": "wine",
+        "background": "white",
         "id": "About-5f686f27-2d70-4a29-9125-36519a90e660"
       }
     },
@@ -751,7 +752,7 @@
         ],
         "images": [],
         "links": [],
-        "background": "blue",
+        "background": "pink",
         "id": "Quote-f4d3dcf6-61da-4b7a-b99d-4ce1512fe66d"
       }
     },
@@ -761,7 +762,7 @@
         "eyebrow": "WOORDEN VAN EEN BRUIDSPAAR",
         "reviewId": "jeroen-martine",
         "crops": {},
-        "background": "white",
+        "background": "wine",
         "id": "SingleReview-f056815c-9718-450c-8247-4d9628caed12"
       }
     },
@@ -776,8 +777,9 @@
         "button": "Meer lezen",
         "href": "werkwijze.html#prijzen",
         "motion": "on",
-        "background": "white",
-        "id": "TiltCard-d6393a3e-c970-4fa2-9ecd-e1997fc68d22"
+        "background": "pink",
+        "id": "TiltCard-d6393a3e-c970-4fa2-9ecd-e1997fc68d22",
+        "sectionBackground": "wine"
       }
     },
     {
@@ -1040,7 +1042,7 @@
             "href": "reportage-keukenhof.html"
           }
         ],
-        "background": "wine",
+        "background": "blue",
         "id": "StoryCarousel-46231fa5-56b8-42cf-9ac5-78fcbc44a2bc"
       }
     },
@@ -1050,7 +1052,7 @@
         "eyebrow": "VAN EEN EERSTE HALLO TOT JULLIE HERINNERINGEN",
         "title": "Samen op weg.",
         "emphasis": "Helemaal jullie.",
-        "background": "white",
+        "background": "wine",
         "id": "Journey-c5d00c29-e1d1-4748-9073-496de5b3f63a"
       }
     },
