@@ -1,11 +1,11 @@
 {
   "id": "journal",
-  "title": "Journal",
-  "description": "Trouwfotografie door Studio Neeltje.",
+  "title": "Blog",
+  "description": "Eerlijke blogs over trouwfotografie, trouwplanning en destination weddings. Geschreven vanuit de praktijk, door trouwfotograaf Neeltje van Studio Neeltje.",
   "root": {
     "props": {
-      "title": "Journal",
-      "description": "Trouwfotografie door Studio Neeltje."
+      "title": "Blog",
+      "description": "Eerlijke blogs over trouwfotografie, trouwplanning en destination weddings. Geschreven vanuit de praktijk, door trouwfotograaf Neeltje van Studio Neeltje."
     }
   },
   "content": [
@@ -17,70 +17,69 @@
           {
             "key": "0",
             "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
-            "value": "STUDIO NEELTJE / TROUWFOTOGRAFIE"
+            "value": "mijn ervaringen"
           },
           {
             "key": "1",
             "label": "Titel: Jullie verhaal.",
-            "value": "Journal"
+            "value": "Tips & tricks"
           },
           {
             "key": "2",
             "label": "Label: Helemaal eigen.",
-            "value": "Helemaal eigen."
+            "value": "in blog vorm."
           },
           {
             "key": "3",
             "label": "Tekst: Een dag vol momenten om te bewaren.",
-            "value": "Een dag vol momenten om te bewaren."
+            "value": "Wellicht heb je er wat aan. Dat hoop ik wel."
           }
         ],
         "images": [
           {
             "key": "0",
             "label": "Foto achteraan",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-b661d875-26aa-4ce0-bca1-af65e1f46b7b",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "1",
             "label": "Hoofdfoto",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-8617a914-2357-428b-b6b6-7cfd2383db25",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Detailfoto",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "media-437005a2-a847-4f5c-bcb9-97a8354d061b",
             "desktop": null,
             "mobile": null
           }
         ],
         "links": [],
-        "background": "white"
+        "background": "wine"
       }
     },
     {
       "type": "Journal",
       "props": {
-        "id": "journal-journal-1",
         "texts": [
           {
             "key": "0",
             "label": "Label: JOURNAL / TIPS & VERHALEN",
-            "value": "JOURNAL / TIPS & VERHALEN"
+            "value": "MIJN VERHAAL / TIPS & TRICKS"
           },
           {
             "key": "1",
             "label": "Titel: Voor jullie dag.",
-            "value": "Voor jullie dag."
+            "value": "Hier heb je misschien"
           },
           {
             "key": "2",
             "label": "Label: En alles ervoor.",
-            "value": "En alles ervoor."
+            "value": "nog niet aan gedacht."
           },
           {
             "key": "3",
@@ -89,105 +88,56 @@
           }
         ],
         "images": [],
-        "links": []
+        "links": [],
+        "background": "white",
+        "id": "Journal-6bb45b04-c6c1-44c2-a347-8a07fbb9a4d3"
       }
     },
     {
-      "type": "Checklist",
+      "type": "ContactCTA",
       "props": {
-        "id": "journal-checklist-2",
         "texts": [
           {
             "key": "0",
-            "label": "Label: De ultieme",
-            "value": "De ultieme"
+            "label": "Label: Neeltje · jullie trouwfotograaf",
+            "value": "Neeltje · jullie trouwfotograaf"
           },
           {
             "key": "1",
-            "label": "Label: Trouw",
-            "value": "Trouw"
+            "label": "Label: 05 — ZULLEN WE KENNISMAKEN?",
+            "value": "ZULLEN WE KENNISMAKEN?"
           },
           {
             "key": "2",
-            "label": "Label: checklist",
-            "value": "checklist"
+            "label": "Titel: Voelt dit als",
+            "value": "Trouwen"
           },
           {
             "key": "3",
-            "label": "Label: De grote lijnen en planning",
-            "value": "De grote lijnen en planning"
+            "label": "Label: jullie verhaal?",
+            "value": "met mijn hulp?"
           },
           {
             "key": "4",
-            "label": "Label: Ceremonie & dagindeling",
-            "value": "Ceremonie & dagindeling"
+            "label": "Tekst: Vertel me over jullie trouwdag, datum en locatie",
+            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt en wat ik voor jullie kan betekenen."
           },
           {
             "key": "5",
-            "label": "Label: Ruimte voor jullie eigen ideeën",
-            "value": "Ruimte voor jullie eigen ideeën"
+            "label": "Knop / link: Vertel me jullie plannen",
+            "value": "Vertel me jullie plannen"
           },
           {
             "key": "6",
-            "label": "Label: Tips vanuit fotografisch perspectief",
-            "value": "Tips vanuit fotografisch perspectief"
-          },
-          {
-            "key": "7",
-            "label": "Label: GRATIS",
-            "value": "GRATIS"
-          },
-          {
-            "key": "8",
-            "label": "Label: voor jullie",
-            "value": "voor jullie"
-          },
-          {
-            "key": "9",
-            "label": "Label: EXTRA HULP BIJ JULLIE PLANNING",
-            "value": "EXTRA HULP BIJ JULLIE PLANNING"
-          },
-          {
-            "key": "10",
-            "label": "Titel: Download de",
-            "value": "Download de"
-          },
-          {
-            "key": "11",
-            "label": "Label: gratis",
-            "value": "gratis"
-          },
-          {
-            "key": "12",
-            "label": "Titel: weddingchecklist",
-            "value": "weddingchecklist"
-          },
-          {
-            "key": "13",
-            "label": "Tekst: Willen jullie een dag die net zo soepel verloopt",
-            "value": "Willen jullie een dag die net zo soepel verloopt als jullie eruitzien? In deze checklist vind je overzicht, rust en handige ideeën voor jullie trouwdag."
-          },
-          {
-            "key": "14",
-            "label": "Tekst: Van de dagindeling tot kleine details: praktisch",
-            "value": "Van de dagindeling tot kleine details: praktische tips vanuit fotografisch perspectief, zodat er meer ruimte overblijft om volop te genieten."
-          },
-          {
-            "key": "15",
-            "label": "Label: Meer overzicht en rust tijdens het plannen",
-            "value": "Meer overzicht en rust tijdens het plannen"
-          },
-          {
-            "key": "16",
-            "label": "Knop / link: Bekijk de gratis checklist",
-            "value": "Bekijk de gratis checklist"
+            "label": "Label: Vrijblijvend kennismaken · gewoon kijken of het ",
+            "value": "Vrijblijvend kennismaken · gewoon kijken of het klikt"
           }
         ],
         "images": [
           {
             "key": "0",
-            "label": "Een sfeervolle trouwdag met warme tafelsetting",
-            "mediaId": "foto-26fee13582a7",
+            "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "media-437ed33a-0499-43f1-901a-8c1038fffc7b",
             "desktop": null,
             "mobile": null
           }
@@ -196,10 +146,13 @@
           {
             "key": "0",
             "label": "Link 1",
-            "href": "weddingschecklist.html"
+            "href": "contact.html"
           }
-        ]
+        ],
+        "background": "wine",
+        "id": "ContactCTA-32706d96-205c-458f-b8f7-3b12c3d114bf"
       }
     }
-  ]
+  ],
+  "zones": {}
 }
