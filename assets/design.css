@@ -804,3 +804,6 @@ body.sn-lightbox-open{overflow:hidden}
 
 .mode-canvas .sn-project h2{font-size:clamp(28px,3.5vw,42px)!important}
 .mode-canvas .sn-fan-gallery[data-photo-count="3"]{max-width:700px}
+
+.sn-project-cover,.sn-project-wide,.sn-project-split figure,.sn-project-review-photo{overflow:hidden}
+.sn-project-pair>.sn-picture{display:block;overflow:hidden}

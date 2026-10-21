@@ -58,7 +58,7 @@ function ProjectPreview({record}){
  useEffect(()=>{let active=true;loadLibrary().then(data=>{if(active)setContext(data);}).catch(()=>{});return()=>{active=false;};},[]);
  if(!context)return <p>Voorvertoning laden…</p>;
  const html=projectMarkup(record,{...context,assetBaseURL:ROOT,preview:true});
- const source=`<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="${ROOT}"><link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;600;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/design.css"></head><body class="sn-public"><main class="mode mode-canvas active">${html}</main></body></html>`;
+ const source=`<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="${ROOT}"><link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;600;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/theme.css"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/blocks.css"><link rel="stylesheet" href="assets/design.css"></head><body class="sn-public"><main class="mode mode-canvas active">${html}</main></body></html>`;
  return <iframe title="Voorvertoning van deze reportage" sandbox="" srcDoc={source} style={{width:'100%',height:'90vh',border:0}}/>;
 }
 class ProjectPreviewControl extends CMS.React.Component{
