@@ -597,7 +597,7 @@
     }
   },
   "Orbit": {
-    "label": "Draai mee door jullie dag",
+    "label": "Draai mee door jullie dag (tot 12 foto’s)",
     "html": "<section class=\"orbit-gallery orbit-gallery-yeung\" id=\"momenten-orbit\" aria-labelledby=\"momenten-orbit-title\">\n<div class=\"orbit-gallery-heading\"><div><div class=\"section-tag\">{{t:0}}</div><h2 id=\"momenten-orbit-title\">{{t:1}}<br><em>{{t:2}}</em></h2></div><p>{{t:3}}</p></div>\n<div class=\"orbit-stage-wrap\"><div class=\"orbit-stage\" id=\"momentOrbit\" role=\"region\" aria-roledescription=\"carrousel\" aria-label=\"Bewegende galerij met trouwfoto’s\" tabindex=\"0\">\n<a class=\"orbit-card\" data-caption=\"Kasteel Keukenhof · Nederland\" href=\"{{link:0}}\" aria-label=\"Open foto: Kasteel Keukenhof\">{{image:0}}</a>\n<a class=\"orbit-card\" data-caption=\"Málaga · Spanje\" href=\"{{link:1}}\" aria-label=\"Open foto: Málaga, Spanje\">{{image:1}}</a>\n<a class=\"orbit-card\" data-caption=\"Dengh · Utrecht\" href=\"{{link:2}}\" aria-label=\"Open foto: Dengh, Utrecht\">{{image:2}}</a>\n<a class=\"orbit-card\" data-caption=\"Bordeaux · Frankrijk\" href=\"{{link:3}}\" aria-label=\"Open foto: Bordeaux, Frankrijk\">{{image:3}}</a>\n<a class=\"orbit-card\" data-caption=\"Kleine details · tussendoor\" href=\"{{link:4}}\" aria-label=\"Open foto: kleine details van de trouwdag\">{{image:4}}</a>\n<a class=\"orbit-card\" data-caption=\"Een dag om te bewaren\" href=\"{{link:5}}\" aria-label=\"Open foto: een dag om te bewaren\">{{image:5}}</a>\n<a class=\"orbit-card\" data-caption=\"Voor later · samen herinneren\" href=\"{{link:6}}\" aria-label=\"Open foto: een moment voor later\">{{image:6}}</a>\n</div></div><div class=\"orbit-controls\"><button type=\"button\" id=\"orbitPrev\" aria-label=\"Draai terug\">←</button><span id=\"orbitStatus\" aria-live=\"polite\">{{t:7}}</span><button type=\"button\" id=\"orbitNext\" aria-label=\"Draai verder\">→</button></div>\n</section>",
     "defaults": {
       "texts": [
@@ -689,6 +689,41 @@
           "key": "6",
           "label": "Een beeld om later samen naar terug te kijken",
           "mediaId": "foto-95c436480d00",
+          "desktop": null,
+          "mobile": null
+        },
+        {
+          "key": "7",
+          "label": "Foto 8 (optioneel)",
+          "mediaId": "",
+          "desktop": null,
+          "mobile": null
+        },
+        {
+          "key": "8",
+          "label": "Foto 9 (optioneel)",
+          "mediaId": "",
+          "desktop": null,
+          "mobile": null
+        },
+        {
+          "key": "9",
+          "label": "Foto 10 (optioneel)",
+          "mediaId": "",
+          "desktop": null,
+          "mobile": null
+        },
+        {
+          "key": "10",
+          "label": "Foto 11 (optioneel)",
+          "mediaId": "",
+          "desktop": null,
+          "mobile": null
+        },
+        {
+          "key": "11",
+          "label": "Foto 12 (optioneel)",
+          "mediaId": "",
           "desktop": null,
           "mobile": null
         }
