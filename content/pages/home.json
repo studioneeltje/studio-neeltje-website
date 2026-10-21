@@ -248,7 +248,7 @@
           {
             "key": "0",
             "label": "Een spontaan moment tijdens een bruiloft bij Kasteel Keukenhof",
-            "mediaId": "media-7f699810-3004-4378-a464-7c56b1e52337",
+            "mediaId": "media-b8a24138-6ace-4808-aee9-c5a289478c7b",
             "desktop": null,
             "mobile": null
           },
@@ -269,7 +269,7 @@
           {
             "key": "3",
             "label": "Een trouwmoment tijdens een bruiloft in Bordeaux",
-            "mediaId": "media-ef86e876-ba1d-440b-9c47-a67638d8e694",
+            "mediaId": "media-9f44b0a0-3e9d-4625-b9db-b44c9d9409d5",
             "desktop": null,
             "mobile": null
           },
@@ -283,7 +283,7 @@
           {
             "key": "5",
             "label": "Neeltje, jullie trouwfotograaf, tussen de momenten door",
-            "mediaId": "media-bd3667fd-5533-4d10-8964-bdfb0c50e597",
+            "mediaId": "media-3b6209b7-07e6-432d-823a-cac95c8cd861",
             "desktop": null,
             "mobile": null
           },
@@ -291,6 +291,41 @@
             "key": "6",
             "label": "Een beeld om later samen naar terug te kijken",
             "mediaId": "media-17911fc8-bf7f-4438-a7a7-8dc051fd60c5",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "7",
+            "label": "Foto 8 (optioneel)",
+            "mediaId": "media-0a6d2a66-c13a-45e8-9aa0-91fc41ccd71e",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "8",
+            "label": "Foto 9 (optioneel)",
+            "mediaId": "media-44aa961a-44d7-4ca0-90d5-39f2ecf68ee2",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "9",
+            "label": "Foto 10 (optioneel)",
+            "mediaId": "media-692188ff-1c50-4f51-ac6b-b598a98a5a0d",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "10",
+            "label": "Foto 11 (optioneel)",
+            "mediaId": "media-02dcb870-0508-4865-8171-6f86aabd6eef",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "11",
+            "label": "Foto 12 (optioneel)",
+            "mediaId": "media-3b1c19b0-bd8f-45c4-a697-fe809183570b",
             "desktop": null,
             "mobile": null
           }
@@ -332,7 +367,7 @@
             "href": "https://static.wixstatic.com/media/31108f_a93479a7875f4c97946f3613205982af~mv2.jpg"
           }
         ],
-        "background": "pink"
+        "background": "blue"
       }
     },
     {
@@ -424,7 +459,7 @@
             "href": ""
           }
         ],
-        "background": "blue",
+        "background": "pink",
         "id": "Method-f0069644-14d9-4e57-8602-90d653c05c56"
       }
     },
