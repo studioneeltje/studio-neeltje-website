@@ -207,7 +207,7 @@
             "href": "reportage-keukenhof.html"
           }
         ],
-        "background": "pink",
+        "background": "white",
         "id": "StoryCarousel-3db35844-54bf-40f1-ba5d-aeefc07491c8"
       }
     },
@@ -217,7 +217,7 @@
         "eyebrow": "LIEVE WOORDEN / VAN BRUIDSPAREN",
         "title": "Wat zij",
         "emphasis": "ervan vonden.",
-        "background": "white",
+        "background": "pink",
         "id": "Review-eb9e4013-6404-4ab7-9200-ea85b2a41be1",
         "reviewSource": "all",
         "reviewSelection": [
