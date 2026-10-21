@@ -199,168 +199,6 @@
       }
     },
     {
-      "type": "Wall",
-      "props": {
-        "id": "home-wall-10",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: 03 — Jullie foto's thuis",
-            "value": "Jullie foto's thuis"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Niet alleen in een album.",
-            "value": "Niet alleen in een album."
-          },
-          {
-            "key": "2",
-            "label": "Label: Ook aan de muur.",
-            "value": "Ook aan de muur."
-          }
-        ],
-        "images": [
-          {
-            "key": "0",
-            "label": "Trouwfoto in een klassieke houten staande lijst",
-            "mediaId": "media-8c01d3c1-6616-4457-81e1-48e5c3400af5",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "1",
-            "label": "Details van een trouwdag in een liggende bronzen lijst",
-            "mediaId": "media-17911fc8-bf7f-4438-a7a7-8dc051fd60c5",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "2",
-            "label": "Trouwfoto in een vergulde staande lijst",
-            "mediaId": "media-3b472201-5575-497a-9875-b0267e4971c4",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "3",
-            "label": "Een spontaan moment in een donkerhouten staande lijst",
-            "mediaId": "media-02a06c59-e38a-4af4-b041-f3b54d5f3bb1",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "4",
-            "label": "Een liggende trouwfoto in een klassieke houten lijst",
-            "mediaId": "media-d26dbf53-64d1-4e6d-b5e6-d161d0c8e517",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "5",
-            "label": "Een grote trouwfoto in een rijk vergulde staande lijst",
-            "mediaId": "media-19cb0a65-f039-432d-9f33-42e1537d084f",
-            "desktop": null,
-            "mobile": null
-          }
-        ],
-        "links": [],
-        "background": "white"
-      }
-    },
-    {
-      "type": "Quote",
-      "props": {
-        "id": "home-quote-1",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: 01 — TUSSEN DE MOMENTEN",
-            "value": "HET IS NOGAL EEN EMOTIONEEL MOMENT"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Jullie beleven de",
-            "value": "Je kiest een trouwfotograaf"
-          },
-          {
-            "key": "2",
-            "label": "Label: dag",
-            "value": "niet alleen "
-          },
-          {
-            "key": "3",
-            "label": "Titel: . Ik zie ook wat er tussendoor",
-            "value": " vanwege de "
-          },
-          {
-            "key": "4",
-            "label": "Label: gebeurt.",
-            "value": "mooie foto's."
-          },
-          {
-            "key": "5",
-            "label": "Label: met liefde gezien, Neeltje",
-            "value": "met liefde gezien, Neeltje"
-          },
-          {
-            "key": "6",
-            "label": "Tekst: Een trouwdag bestaat uit meer dan de grote momen",
-            "value": "Iedere website staat vol met prachtige foto's. Iedere fotograaf zegt dat jullie vooral jezelf moeten zijn. Eerlijk gezegd maakt dat het kiezen niet makkelijker. Want hoe weet je nou wie écht bij jullie past? Volgens mij begint dat niet bij een portfolio. Het begint bij een veel belangrijkere vraag. Met wie willen jullie de hele dag optrekken? Want op jullie trouwdag ben ik er vaker bij dan sommige gasten."
-          }
-        ],
-        "images": [],
-        "links": [],
-        "background": "blue"
-      }
-    },
-    {
-      "type": "Method",
-      "props": {
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: MEER OVER NEELTJE",
-            "value": ""
-          },
-          {
-            "key": "1",
-            "label": "Titel: Rustig dichtbij.",
-            "value": "Je moet je "
-          },
-          {
-            "key": "2",
-            "label": "Label: Altijd alert.",
-            "value": "comfortabel voelen."
-          },
-          {
-            "key": "3",
-            "label": "Tekst: Ik fotografeer zoals ik zelf graag herinner: met",
-            "value": "Ik ben erbij als je je aankleedt. Ik zie de spanning vlak voordat jullie elkaar zien. Ik hoor jullie persoonlijke geloften, ik zie de tranen en hoor de grapjes. Ik loop mee tijdens de borrel. Ik hoor de eerlijke verhalen van vrienden. Ik zie je vader, die normaal nooit huilt, ineens stil worden. "
-          },
-          {
-            "key": "4",
-            "label": "Tekst: Vooraf leren we elkaar kennen. Op de dag zelf vo",
-            "value": "En ik hoor óók die ene speech waarvan iedereen denkt: \"Alsjeblieft oom Henk... rond hem maar af...\" Dan wil je niet alleen een goede trouwfotograaf. Je wilt iemand waarbij je jezelf kunt zijn."
-          },
-          {
-            "key": "5",
-            "label": "Knop / link: Lees mijn verhaal",
-            "value": ""
-          }
-        ],
-        "images": [],
-        "links": [
-          {
-            "key": "0",
-            "label": "Link 1",
-            "href": ""
-          }
-        ],
-        "background": "wine",
-        "id": "Method-f0069644-14d9-4e57-8602-90d653c05c56"
-      }
-    },
-    {
       "type": "Orbit",
       "props": {
         "id": "home-orbit-7",
@@ -494,7 +332,100 @@
             "href": "https://static.wixstatic.com/media/31108f_a93479a7875f4c97946f3613205982af~mv2.jpg"
           }
         ],
-        "background": "white"
+        "background": "pink"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "id": "home-quote-1",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 01 — TUSSEN DE MOMENTEN",
+            "value": "HET IS NOGAL EEN EMOTIONEEL MOMENT"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie beleven de",
+            "value": "Je kiest een trouwfotograaf"
+          },
+          {
+            "key": "2",
+            "label": "Label: dag",
+            "value": "niet alleen "
+          },
+          {
+            "key": "3",
+            "label": "Titel: . Ik zie ook wat er tussendoor",
+            "value": " vanwege de "
+          },
+          {
+            "key": "4",
+            "label": "Label: gebeurt.",
+            "value": "mooie foto's."
+          },
+          {
+            "key": "5",
+            "label": "Label: met liefde gezien, Neeltje",
+            "value": "met liefde gezien, Neeltje"
+          },
+          {
+            "key": "6",
+            "label": "Tekst: Een trouwdag bestaat uit meer dan de grote momen",
+            "value": "Iedere website staat vol met prachtige foto's. Iedere fotograaf zegt dat jullie vooral jezelf moeten zijn. Eerlijk gezegd maakt dat het kiezen niet makkelijker. Want hoe weet je nou wie écht bij jullie past? Volgens mij begint dat niet bij een portfolio. Het begint bij een veel belangrijkere vraag. Met wie willen jullie de hele dag optrekken? Want op jullie trouwdag ben ik er vaker bij dan sommige gasten."
+          }
+        ],
+        "images": [],
+        "links": [],
+        "background": "wine"
+      }
+    },
+    {
+      "type": "Method",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: MEER OVER NEELTJE",
+            "value": ""
+          },
+          {
+            "key": "1",
+            "label": "Titel: Rustig dichtbij.",
+            "value": "Je moet je "
+          },
+          {
+            "key": "2",
+            "label": "Label: Altijd alert.",
+            "value": "comfortabel voelen."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Ik fotografeer zoals ik zelf graag herinner: met",
+            "value": "Ik ben erbij als je je aankleedt. Ik zie de spanning vlak voordat jullie elkaar zien. Ik hoor jullie persoonlijke geloften, ik zie de tranen en hoor de grapjes. Ik loop mee tijdens de borrel. Ik hoor de eerlijke verhalen van vrienden. Ik zie je vader, die normaal nooit huilt, ineens stil worden. "
+          },
+          {
+            "key": "4",
+            "label": "Tekst: Vooraf leren we elkaar kennen. Op de dag zelf vo",
+            "value": "En ik hoor óók die ene speech waarvan iedereen denkt: \"Alsjeblieft oom Henk... rond hem maar af...\" Dan wil je niet alleen een goede trouwfotograaf. Je wilt iemand waarbij je jezelf kunt zijn."
+          },
+          {
+            "key": "5",
+            "label": "Knop / link: Lees mijn verhaal",
+            "value": ""
+          }
+        ],
+        "images": [],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": ""
+          }
+        ],
+        "background": "blue",
+        "id": "Method-f0069644-14d9-4e57-8602-90d653c05c56"
       }
     },
     {
@@ -548,7 +479,7 @@
             "href": "over.html"
           }
         ],
-        "background": "pink",
+        "background": "white",
         "id": "About-32d07291-408f-4595-b799-e731c362b1c2"
       }
     },
@@ -558,7 +489,7 @@
         "eyebrow": "WOORDEN VAN EEN BRUIDSPAAR",
         "reviewId": "jeroen-martine",
         "crops": {},
-        "background": "wine",
+        "background": "blue",
         "id": "SingleReview-17ea4c69-180f-4b2b-8578-191460dc316e"
       }
     },
@@ -605,7 +536,7 @@
             "href": "over.html"
           }
         ],
-        "background": "blue",
+        "background": "wine",
         "id": "Method-0b5c85f3-794e-468f-9110-5afe8c4b7f24"
       }
     },
@@ -651,7 +582,7 @@
           }
         ],
         "count": "3",
-        "background": "blue",
+        "background": "wine",
         "id": "FanGallery-dabd1458-524c-41df-a8af-2798ac61f454"
       }
     },
@@ -697,8 +628,77 @@
         ],
         "images": [],
         "links": [],
-        "background": "white",
+        "background": "pink",
         "id": "Quote-a2a29841-58a6-46f9-9651-74bef4d9dc05"
+      }
+    },
+    {
+      "type": "Wall",
+      "props": {
+        "id": "home-wall-10",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 03 — Jullie foto's thuis",
+            "value": "Jullie foto's thuis"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Niet alleen in een album.",
+            "value": "Niet alleen in een album."
+          },
+          {
+            "key": "2",
+            "label": "Label: Ook aan de muur.",
+            "value": "Ook aan de muur."
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Trouwfoto in een klassieke houten staande lijst",
+            "mediaId": "media-8c01d3c1-6616-4457-81e1-48e5c3400af5",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Details van een trouwdag in een liggende bronzen lijst",
+            "mediaId": "media-17911fc8-bf7f-4438-a7a7-8dc051fd60c5",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Trouwfoto in een vergulde staande lijst",
+            "mediaId": "media-3b472201-5575-497a-9875-b0267e4971c4",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "3",
+            "label": "Een spontaan moment in een donkerhouten staande lijst",
+            "mediaId": "media-02a06c59-e38a-4af4-b041-f3b54d5f3bb1",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "4",
+            "label": "Een liggende trouwfoto in een klassieke houten lijst",
+            "mediaId": "media-d26dbf53-64d1-4e6d-b5e6-d161d0c8e517",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "5",
+            "label": "Een grote trouwfoto in een rijk vergulde staande lijst",
+            "mediaId": "media-19cb0a65-f039-432d-9f33-42e1537d084f",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "background": "white"
       }
     },
     {
@@ -798,7 +798,7 @@
         ],
         "images": [],
         "links": [],
-        "background": "pink",
+        "background": "blue",
         "id": "Quote-f4d3dcf6-61da-4b7a-b99d-4ce1512fe66d"
       }
     },
@@ -1088,7 +1088,7 @@
             "href": "reportage-keukenhof.html"
           }
         ],
-        "background": "blue",
+        "background": "pink",
         "id": "StoryCarousel-46231fa5-56b8-42cf-9ac5-78fcbc44a2bc"
       }
     },
