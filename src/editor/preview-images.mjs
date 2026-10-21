@@ -3,11 +3,24 @@
 const photos=new Map();
 function embeddedPhoto(url){
  if(!photos.has(url)){
-  const pending=fetch(url).then(async response=>{
-   if(!response.ok)throw Error('Foto niet beschikbaar');
-   const file=await response.blob();
-   if(!/^image\//i.test(file.type))throw Error('Geen afbeeldingsbestand');
-   return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(Error('Foto kon niet worden gelezen'));reader.readAsDataURL(file);});
+  const pending=new Promise((resolve,reject)=>{
+   const image=new Image();
+   image.onload=()=>{
+    try{
+     const scale=Math.min(1,1600/Math.max(image.naturalWidth,image.naturalHeight));
+     const canvas=document.createElement('canvas');
+     canvas.width=Math.max(1,Math.round(image.naturalWidth*scale));
+     canvas.height=Math.max(1,Math.round(image.naturalHeight*scale));
+     const painter=canvas.getContext('2d');
+     if(!painter)throw Error('Foto kon niet worden voorbereid');
+     painter.drawImage(image,0,0,canvas.width,canvas.height);
+     const embedded=canvas.toDataURL('image/webp',0.88);
+     canvas.width=canvas.height=1;
+     resolve(embedded);
+    }catch(error){reject(error);}
+   };
+   image.onerror=()=>reject(Error('Foto kon niet worden gelezen'));
+   image.src=url;
   }).catch(error=>{photos.delete(url);throw error;});
   photos.set(url,pending);
   if(photos.size>24)photos.delete(photos.keys().next().value);
@@ -18,7 +31,7 @@ export async function inlinePreviewPhotos(markup){
  const doc=new DOMParser().parseFromString(markup,'text/html');
  const images=[...doc.querySelectorAll('img[src^="blob:"]')];
  let failed=0;
- await Promise.all(images.map(async image=>{
+ for(const image of images){
   try{
    const url=image.getAttribute('src'),embedded=await embeddedPhoto(url);
    image.setAttribute('src',embedded);
@@ -30,6 +43,6 @@ export async function inlinePreviewPhotos(markup){
    failed++;
    const notice=doc.createElement('div');notice.className='sn-missing-media';notice.setAttribute('role','img');notice.setAttribute('aria-label','Foto kan niet worden geladen in de voorvertoning');notice.textContent='Deze foto kan nog niet worden geladen in de voorvertoning. Je fotokeuze is behouden.';const picture=image.closest('picture');if(picture)picture.replaceWith(notice);else image.replaceWith(notice);
   }
- }));
+ }
  return {html:doc.body.innerHTML,failed};
 }
