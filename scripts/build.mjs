@@ -1,3 +1,4 @@
+import {projectMarkup,projectPage} from '../src/shared/project-story.mjs';
 import {formSettingsScript} from '../src/shared/forms.mjs';
 import fs from'node:fs/promises';
 import path from'node:path';
@@ -25,6 +26,7 @@ const templates=await read('site/blocks.json'),settings=await read('content/sett
 const[media,pages,stories,articles]=await Promise.all(['media','pages','stories','articles'].map(n=>loadCollection(n)));
 for(const color of Object.values(settings.colors))if(!/^#[\da-f]{6}$/i.test(color))throw Error('Kies volledige zescijferige huisstijlkleuren.');
 for(const page of pages){if(!/^[a-z0-9][a-z0-9-]{0,80}$/.test(page.id))throw Error('Ongeldige paginanaam.');for(const block of page.content){if(!templates[block.type])throw Error('Onbekend blok.');if(block.type==='Video'&&!block.props.mediaId)throw Error(`${page.title}: kies een video voordat je publiceert.`);}}
+for(const story of stories){const keys=(story.sections||[]).map((section,index)=>String(section.key||index));if(new Set(keys).size!==keys.length)throw Error(`${story.title}: geef ieder verhaalonderdeel een unieke korte naam.`);}
 const manifest=await processMedia();
 for(const asset of media){
  if(asset.captions&&!asset.deletedAt&&!manifest[asset.id]?.missing){const source=path.resolve(String(asset.captions).replace(/^\//,''));if(!source.startsWith(path.resolve('media/originals')+path.sep))throw Error('Ongeldig ondertitelpad.');const text=await fs.readFile(source,'utf8');if(!text.startsWith('WEBVTT'))throw Error('Ondertiteling moet een WebVTT-bestand zijn.');const target=`media/captions/${asset.id}.vtt`;await fs.mkdir(path.dirname(path.join(out,target)),{recursive:true});await fs.writeFile(path.join(out,target),text);manifest[asset.id].captions=target;}
@@ -35,7 +37,7 @@ for(const page of pages)for(const block of page.content){
  for(const image of selections)checkPhoto(image?.mediaId,`${page.title} · ${block.type}`);
  if(block.type==='Video'&&media.some(a=>a.id===block.props.mediaId&&a.kind!=='video'))throw Error(`${page.title}: kies een video.`);
 }
-for(const record of [...stories,...articles])if(record.published!==false){for(const id of [record.cover,record.hoverCover,...(record.gallery||[]),...(record.sections||[]).flatMap(s=>[s.image,s.secondImage])].filter(Boolean))checkPhoto(id,record.title);}
+for(const record of [...stories,...articles])if(record.published!==false){for(const id of [record.cover,record.hoverCover,record.review?.image,...(record.gallery||[]),...(record.sections||[]).flatMap(s=>[s.image,s.secondImage,...(s.gallery||[])])].filter(Boolean))checkPhoto(id,record.title);}
 settings.editorial=await read('content/settings/editorial.json');
 const reviewIds=new Set();
 for(const review of settings.editorial.reviews){
@@ -79,13 +81,15 @@ for(const page of pages){const html=fixLinks(documentHTML(page.root?.props?.titl
 function prose(value){return sanitizeHTML(marked.parse(String(value||''),{async:false}),{allowedTags:['p','br','h2','h3','h4','ul','ol','li','strong','em','a','blockquote'],allowedAttributes:{a:['href','title']},allowedSchemes:['https','http','mailto','tel']});}
 for(const [collection,prefix]of [[stories,'reportage'],[articles,'artikel']])for(const record of collection.filter(r=>r.published!==false)){
  if(!/^[a-z0-9][a-z0-9-]{0,80}$/.test(record.id))throw Error('Ongeldige URL voor een reportage of artikel.');
- const content=prefix==='artikel'?renderArticle(record,context):`<section class="sn-page-intro"><div class="section-tag">${e(record.location||record.category||'STUDIO NEELTJE')}</div><h1>${e(record.title)}</h1><p>${e(record.excerpt)}</p></section><div class="sn-story-cover">${imageMarkup({mediaId:record.cover},context,{eager:true})}</div><article class="sn-story-body">${prose(record.body)}</article>${record.gallery?`<section class="sn-story-gallery" aria-label="Fotogalerij">${record.gallery.map((id,i)=>`<button aria-label="Vergroot foto ${i+1}">${imageMarkup({mediaId:id},context)}</button>`).join('')}</section>`:''}<section class="sn-text-section"><a class="button" href="${prefix==='reportage'?'reportages':'journal'}.html">← Terug naar ${prefix==='reportage'?'reportages':'journal'}</a></section>`;
- await fs.writeFile(path.join(out,`${prefix}-${record.id}.html`),documentHTML(record.title,record.excerpt,content));
- if(prefix==='reportage')await fs.writeFile(path.join(out,`pagina-reportage-${record.id}.html`),documentHTML(record.title,record.excerpt,content));
+ const custom=prefix==='reportage'?pages.find(page=>page.id===`reportage-${record.id}`):null;
+ const content=prefix==='artikel'?renderArticle(record,context):custom?renderPage(custom,context):projectMarkup(record,context);
+ const title=record.seoTitle||record.title,description=record.seoDescription||record.excerpt;
+ await fs.writeFile(path.join(out,`${prefix}-${record.id}.html`),documentHTML(title,description,content));
+ if(prefix==='reportage')await fs.writeFile(path.join(out,`pagina-reportage-${record.id}.html`),documentHTML(title,description,content));
 }
 const routes={reportages:'reportages',over:'over',werkwijze:'werkwijze',journal:'journal',contact:'contact',checklist:'weddingschecklist',leveranciers:'leveranciers',kasteel:'reportage-keukenhof',dengh:'reportage-dengh',bordeaux:'reportage-bordeaux',malaga:'reportage-malaga'};
 await fs.writeFile(path.join(out,'preview-pagina.html'),`<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>Studio Neeltje</title><script>const r=${JSON.stringify(routes)};const p=new URLSearchParams(location.search).get('pagina')||'reportages';location.replace((r[p]||r.reportages)+'.html'+location.hash);</script></head><body><a href="index.html">Naar de homepage</a></body></html>`);
-await fs.mkdir(path.join(out,'content'),{recursive:true});await fs.writeFile(path.join(out,'content/bundle.json'),JSON.stringify({...context,pages,mediaSettings}));
+await fs.mkdir(path.join(out,'content'),{recursive:true});await fs.writeFile(path.join(out,'content/bundle.json'),JSON.stringify({...context,pages:[...pages,...stories.filter(story=>story.published!==false&&!pages.some(page=>page.id===`reportage-${story.id}`)).map(projectPage)],mediaSettings}));
 await fs.mkdir(path.join(out,'cms/vendor'),{recursive:true});await fs.cp('node_modules/@sveltia/cms/dist',path.join(out,'cms/vendor'),{recursive:true,filter:source=>!source.endsWith('.map')&&!source.endsWith('.mjs')});
 const cmsConfig=(await fs.readFile('cms/config.yml','utf8')).replace(/max_file_size: \d+/,`max_file_size: ${mediaSettings.maxUploadMB*1024*1024}`);parse(cmsConfig);await fs.writeFile(path.join(out,'cms/config.yml'),cmsConfig);
 await viteBuild();

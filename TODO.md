@@ -245,19 +245,33 @@ De drie opmaken zijn gebouwd. Puck kiest plaatsing, stijl en achtergrond; Svelti
 
 Neeltje heeft op 19 oktober 2026 expliciet toestemming gegeven: ‘Bouw en publiceer de reparatie’. Het herstelde paginaconcept blijft een concept; alleen de reparatie van het beheer wordt op de testsite gepubliceerd.
 
-## Portfolio als verhaal per project — op de todo, nog niet bouwen
+## Portfolio als verhaal per project — gebouwd 21 oktober 2026
+
+### SEO en inhoud — richting bevestigd door Neeltje
+
+De individuele portfolio’s zijn volwaardige SEO-landingspagina’s met substantieel eigen verhaal én uitgebreide fotografie. Neeltje geeft haar bestaande Bordeaux-pagina als inhoudelijke inspiratie: https://www.studioneeltje.com/destination-wedding-fotograaf-bordeaux-frankrijk. Pagina gelezen: duidelijke bestemmingstitel, introductie over Mark & Rooa, kennismaking/pre-wedding, meerdaags trouwweekend, locatie Domaine de Perrotin, afwisselende tekst/foto’s/galerijen, echte review, contact, leveranciers en gerelateerde bruiloft.
+
+Het nieuwe portfolio moet verplaatsbare en herhaalbare teksthoofdstukken met echte koppen en alinea’s combineren met losse foto’s en galerijen van bijvoorbeeld 20 beelden. Geen vaste beperking tot intro plus fotogalerij en geen verplichte hoeveelheid teksthoofdstukken. Bestaande aangeleverde tekst als uitgangspunt behouden; geen gefingeerde locaties, ervaringen of reviews toevoegen.
+
+SEO-inhoud per project: eigen paginatitel en metabeschrijving, bewerkbare korte URL, één duidelijke H1, logische H2/H3-hoofdstukken, beschrijvende alt-teksten, relevante interne links en tekst die als HTML leesbaar blijft. Geen zoekwoorden proppen of positiegaranties. Bij latere verhuizing naar studioneeltje.com rekening houden met bestaande URL’s en gerichte doorverwijzingen. Wix en het huidige domein blijven tijdens deze voorbereiding ongemoeid.
+
+Bouw en publicatie expliciet goedgekeurd op 21 oktober 2026 met de opdracht de rest van de todo te bouwen en direct te publiceren.
+
+Aanvulling bij het bekijken van Mark & Rooa in Bordeaux: Neeltje wil tussen verhaalhoofdstukken ook volledige galerijen kunnen plaatsen, bijvoorbeeld circa 20 foto's per galerij, om te laten zien wat zij oplevert. De bestaande galerij aan het eind ondersteunt meervoudige selectie, maar de huidige vaste reportage-template heeft nog geen verplaatsbare galerijen tussen tekstonderdelen. Dit hoort bij deze nog ongebouwde portfolio-uitbreiding.
+
+- [x] Een herhaalbaar galerijonderdeel tussen verhaalhoofdstukken, met selectie van veel foto's tegelijk uit dezelfde mediabibliotheek, eigen volgorde en uitsneden, mobiel passende weergave en de bestaande transparante vergroting met pijltjes en sluiten door klikken. Geen beperking tot één foto, drie foto's of zeven foto's; de regel voor visuele tekstopsommingen beperkt deze fotogalerijen niet.
 
 Referentie van Neeltje: https://www.studioneeltje.com/trouwfotograaf-kasteel-keukenhof-lisse. De bestaande Keukenhof-pagina wisselt het verhaal, informatie over de locatie, losse foto's en galerijen af. Op de nieuwe site moet iedere reportage een eigen verhaal kunnen worden, in de nieuwe huisstijl.
 
-- [ ] Een projectheader met titel, namen van het bruidspaar, locatie en gekozen headerbeeld(en).
-- [ ] Losse, verschuifbare verhaalhoofdstukken met eigen tussenkoppen en teksten, bijvoorbeeld voorbereidingen, ceremonie en avondfeest. Geen verplichte vaste hoeveelheid hoofdstukken.
-- [ ] Afwisselende beeldonderdelen: tekst naast foto, losse brede foto, twee foto's en een galerij. Foto's en uitsneden per onderdeel kiezen; bestaande optimalisatie en vergroting behouden.
-- [ ] Een optionele review van het bruidspaar met eigen quote, naam en optionele foto. Alleen tonen als een echte review is ingevuld; geen leeg vlak, verzonnen review of beoordeling tonen.
-- [ ] Optionele projectinformatie over locatie, bijzonderheden en leveranciers met links, zodat elk project eigen inhoud krijgt.
-- [ ] SEO per project uitbreiden met eigen zoekmachinetitel, metabeschrijving en duidelijke URL; semantische koppen en de bestaande alt-teksten behouden. Geen resultaatgaranties of verplicht zoekwoordenveld suggereren.
-- [ ] Passende afsluiting met optionele contactknop en gerelateerde reportages; koppeling aan het Portfolio-overzicht vanuit dezelfde projectbron.
+- [x] Een projectheader met titel, namen van het bruidspaar, locatie en gekozen headerbeeld(en).
+- [x] Losse, verschuifbare verhaalhoofdstukken met eigen tussenkoppen en teksten, bijvoorbeeld voorbereidingen, ceremonie en avondfeest. Geen verplichte vaste hoeveelheid hoofdstukken.
+- [x] Afwisselende beeldonderdelen: tekst naast foto, losse brede foto, twee foto's en een galerij. Foto's en uitsneden per onderdeel kiezen; bestaande optimalisatie en vergroting behouden.
+- [x] Een optionele review van het bruidspaar met eigen quote, naam en optionele foto. Alleen tonen als een echte review is ingevuld; geen leeg vlak, verzonnen review of beoordeling tonen.
+- [x] Optionele projectinformatie over locatie, bijzonderheden en leveranciers met links, zodat elk project eigen inhoud krijgt.
+- [x] SEO per project uitbreiden met eigen zoekmachinetitel, metabeschrijving en duidelijke URL; semantische koppen en de bestaande alt-teksten behouden. Geen resultaatgaranties of verplicht zoekwoordenveld suggereren.
+- [x] Passende afsluiting met optionele contactknop en gerelateerde reportages; koppeling aan het Portfolio-overzicht vanuit dezelfde projectbron.
 
-Voorgestelde beheeropzet: projectinhoud, review en SEO hebben één vaste plek in Sveltia. De projectpagina's ook visueel toegankelijk maken in Puck voor plaatsing en volgorde van de onderdelen, zonder teksten op twee plekken te kopiëren. Dit vereist uitbreiding van de huidige vaste reportage-template en is nog niet gebouwd. Wachten op expliciet ‘bouw’ en passende publicatietoestemming.
+Voorgestelde beheeropzet: projectinhoud, review en SEO hebben één vaste plek in Sveltia. De projectpagina's ook visueel toegankelijk maken in Puck voor plaatsing en volgorde van de onderdelen, zonder teksten op twee plekken te kopiëren. Gebouwd met herhaalbare Verhaalonderdelen in Sveltia en de Puck-bouwsteen Portfolio — verhaal per project. Dezelfde bron voedt de reportagepagina, Puck en de voorvertoning in Sveltia. Puck toont gepubliceerde reportages als eigen bewerkbare projectpagina; de inhoud blijft in Sveltia. Geen bestaande verhaalteksten of online concepten vervangen.
 
 ## Losse review met uitklapbare tekst — gebouwd na expliciet ‘bouw’
 
@@ -307,29 +321,25 @@ Neeltje wil een klein, uitgesproken onderdeel voor een kort tekstje met één kn
 
 De tekst ‘Bewaar dit gevoel’ is een vrij bewerkbaar, optioneel veld in Puck. De kaart staat onder Plannen en contact. De lokale productiebouw is geslaagd. De bouwsteen is niet automatisch op bestaande pagina’s geplaatst. Neeltje geeft op 20 oktober 2026 expliciet ‘publiceer’. Gepubliceerd via PR #15, main 04c269ad84d6af7b753221926eec42b2ef52613c; GitHub Actions-run 39398843750 is geslaagd.
 
-## Kantelkaartvlak en gedeelde mediabibliotheek — op de todo, nog niet bouwen
+## Kantelkaartvlak en gedeelde mediabibliotheek — gebouwd 21 oktober 2026
 
-Aanvullende melding: ‘Beeldbank vernieuwen’ in Sveltia levert de verwachte Puck-foto’s niet op. Codeonderzoek bevestigt dat deze knop alleen de gepubliceerde content/bundle.json opnieuw ophaalt; hij synchroniseert geen lokale uploads of online mediaconcepten. De tekst onder het veld moet dit duidelijker uitleggen. Ook ontbrekende bronbestanden moeten als ontbrekend herkenbaar zijn in de fotokiezer, zonder kapotte miniaturen of een niet-helpende vernieuwinstructie. De volledige gedeelde bibliotheek is nog niet gebouwd.
+- [x] Een onafhankelijke achtergrondkeuze voor het volledige vlak rond de kantelkaart: wit, donkerrood, roze of blauw. De bestaande kaartkleur blijft apart bewerkbaar en bestaande keuzes blijven behouden.
+- [x] De gedeelde Puck- en Sveltia-bibliotheek behouden; dubbele uploads zijn niet nodig. Bekende online media blijven kiesbaar na een mislukte verversing.
+- [x] Bronbestanden, fotoverwijzingen en uitsneden behouden. Verversen wijzigt de open inhoud en selecties niet.
 
-Aangevraagd op 20 oktober 2026. Neeltje bevestigt dat de grotere fotobibliotheek in **Puck → Media** staat. De bestaande kantelkaartkeuze kleurt alleen de kaart; het omringende vlak blijft de paginakleur overnemen. De Sveltia-fotokiezer leest momenteel alleen de gepubliceerde mediabundel.
-
-- [ ] Een onafhankelijke achtergrondkeuze voor het volledige vlak rond de kantelkaart toevoegen: wit, donkerrood, roze of blauw. De bestaande kaartkleur apart bewerkbaar houden, met passende tekst- en accentkleuren en behoud van opgeslagen instellingen.
-- [ ] Puck → Media en de visuele fotokiezer in Sveltia dezelfde mediabibliotheek laten gebruiken, zodat opnieuw uploaden niet nodig is. Ook veilig omgaan met opgeslagen mediaconcepten en duidelijk aangeven welke foto's nog niet gepubliceerd zijn; lokale uploads eerst veilig online opslaan voordat ze elders beschikbaar worden.
-- [ ] Bestaande fotoverwijzingen, bronbestanden, focuspunten, uitsneden en herstelbare verwijderingen behouden. Verversen vanuit Sveltia mogelijk maken zonder open bewerkingen kwijt te raken of dubbele bestanden aan te maken.
-
-Dit is opgenomen als verzoek; implementatie wacht conform afspraak op expliciet ‘bouw’. Publicatie blijft een afzonderlijke stap.
-
-## Kleine fotogalerij — De uitwaaier, verfijnd — gekozen, nog niet bouwen
+## Kleine fotogalerij — De uitwaaier, verfijnd — gebouwd 21 oktober 2026
 
 Neeltje kiest op 20 oktober 2026 uitsluitend **De uitwaaier — verfijnd**. De plakcollage en de strakke varianten vervallen als bouwvoorstel. Referentie: fotoprints-verfijnd.html in de visualisatiemap van deze chat.
 
-- [ ] Een herbruikbare galerijbouwsteen met drie zelf te kiezen foto's, zonder zichtbare teksten, met rechte hoeken en subtiel gedraaide fotoprints.
-- [ ] De verfijnde individuele animatie behouden: alleen de aangewezen foto komt iets omhoog en draait recht, met zachte schaduw. Geen gezamenlijk uitwaaieren van de drie foto's bij aanwijzen. Ook bruikbaar met toetsenbord en aanraking, met respect voor minder beweging.
-- [ ] De vier achtergrondkleuren, een passende mobiele opmaak en selectie uit de gedeelde fotobibliotheek ondersteunen. Bestaande focuspunten en uitsneden behouden; vergroting via de bestaande transparante fotoweergave laten aansluiten.
+- [x] Een herbruikbare galerijbouwsteen met drie zelf te kiezen foto's, zonder zichtbare teksten, met rechte hoeken en subtiel gedraaide fotoprints.
+- [x] De verfijnde individuele animatie behouden: alleen de aangewezen foto komt iets omhoog en draait recht, met zachte schaduw. Geen gezamenlijk uitwaaieren van de drie foto's bij aanwijzen. Ook bruikbaar met toetsenbord en aanraking, met respect voor minder beweging.
+- [x] De vier achtergrondkleuren, een passende mobiele opmaak en selectie uit de gedeelde fotobibliotheek ondersteunen. Bestaande focuspunten en uitsneden behouden; vergroting via de bestaande transparante fotoweergave laten aansluiten.
 
-Dit is een ontwerpkeuze; bouwen wacht op expliciet ‘bouw’, publiceren op afzonderlijke toestemming.
+Neeltje heeft verduidelijkt dat haar bouwopdracht ook deze gekozen uitwaaier omvat. Bouw is goedgekeurd; publicatie blijft een afzonderlijke stap.
 
-## Ontbrekende fotovelden in contactheader — gebouwd, nog niet gepubliceerd
+Gebouwd als FanGallery, in Puck onder Foto’s en video → Uitwaaier — verfijnd (3 foto’s). Drie visuele fotokeuzes, aparte uitsneden, vier sectiekleuren en aan/uit voor beweging. Alleen de aangewezen of gefocuste print beweegt omhoog en recht; ontbrekende foto’s blijven lege, niet-aanklikbare vlakken. Klikbare foto’s gebruiken de bestaande transparante vergroting. Geen bestaande pagina automatisch gewijzigd.
+
+## Ontbrekende fotovelden in contactheader — gepubliceerd
 
 ### Gerichte bugcontrole op verzoek van Neeltje
 
@@ -380,3 +390,25 @@ Neeltje geeft op 20 oktober 2026 expliciet opdracht deze reparatie samen met het
 De productiebouw is geslaagd. Gerichte controle met nagebootste GitHub-antwoorden bevestigt dat een online mediaconcept verschijnt, een verwijderd origineel herkenbaar blijft, lokale uploads een eigen status krijgen en media niet dubbel voorkomen. Een echte upload/publicatie vanuit het account is niet uitgevoerd.
 
 Publicatie van beide reparaties expliciet goedgekeurd op 20 oktober 2026. PR #25 is samengevoegd als 05215a36edaa7cdc86a8b6b09a2dfe8e448bcd4c. GitHub Pages-run 39474743085 is geslaagd. Open gebruikersbewerkingen zijn niet herladen of gewijzigd.
+
+De drie auditreparaties zijn op 20 oktober 2026 expliciet goedgekeurd met ‘publiceer’ en gepubliceerd via PR #26, main 714b3e8bdb00cc786dd8b41b6ac8112ac9e4fcac. GitHub Pages-run 39477219086 is geslaagd. Het eigen Contact-concept en open gebruikersbewerkingen zijn behouden.
+
+## Checklistaanvraag met nieuwsbriefkeuze — gebouwd, nog niet gepubliceerd
+
+Neeltje wil de gratis checklist koppelen aan het ontvangen van nieuwsbrieven. Op 20 oktober 2026 expliciet ‘bouw’ voor deze wijziging en de verfijnde uitwaaier.
+
+- [x] Een verplichte, nooit vooraf aangevinkte checkbox bij checklistaanvragen, met duidelijke vermelding van de checklist, nieuwsbrieven en uitschrijven op ieder moment. Andere formulieren behouden hun bestaande werking.
+- [x] De tekst centraal in Sveltia bewerkbaar maken. Tegenstrijdige standaardtoelichting over alleen reageren op een bericht vervangen. Bij toekomstige verzending toestemming, gebruikte tekst en tijdstip meesturen.
+- [x] De uitgestelde verzendkoppeling uitgeschakeld houden; geen nieuwsbriefabonnement, checklistdownload of werkende uitschrijfdienst suggereren voordat de echte dienst is aangesloten. De toekomstige ontvanger moet de toestemming zelf ook valideren en uitschrijven ondersteunen.
+
+Productiebouw geslaagd. De opmaak van uitwaaier en formulier is lokaal bekeken; er zijn geen formuliergegevens verstuurd en geen abonnementen aangemaakt. Geen tests toegevoegd of uitgevoerd in deze bouwstap. Verzending en download blijven uitgeschakeld; de tekst bij toestemming is centraal in Sveltia bewerkbaar. Publicatie wacht op afzonderlijke toestemming.
+
+## Aanvullende bouw en publicatie — expliciet goedgekeurd 21 oktober 2026
+
+- [x] Uitwaaier uitbreiden naar keuze 3 of 5 foto’s; op smalle schermen één horizontale rij houden met vegen, pijltjes bij overloop en toetsenbordbediening. De twee extra fotokeuzes blijven bewaard bij terugschakelen naar drie.
+- [x] Bij de persoonlijke quote met handtekening de markeerstifttekst leesbaar maken op donkerrood, ook vóór en tijdens het onthullen. Volledig roze markeervlak met donkerrode tekst; de omliggende tekst blijft roze.
+- [x] GitHub-verzoeken voor Sveltia samenvoegen en tijdelijk hergebruiken, onveranderlijke bronversies bewaren, beperkingen respecteren en de laatst succesvol geladen online bibliotheek lokaal bewaren. Bij een fout blijft die bruikbaar. Ook een bevestigd Puck-mediaconcept uit dezelfde browser kan worden herkend zonder een nieuw GitHub-API-verzoek. Geen tokens kopiëren of nieuwe inloggegevens opslaan. Nog uitsluitend lokale uploads blijven geblokkeerd.
+- [x] Statusmeldingen bij geblokkeerde foto’s op volle tekststerkte tonen; alleen de miniatuur vervaagt.
+- [x] Portfolio-opbouw met verhaalhoofdstukken, grote tussengalerijen, tekst naast foto, twee foto’s, optionele echte review, locatie/leveranciers, gerelateerde reportages en optionele contactknop. SEO-titel en omschrijving per project; bestaande project-URL’s behouden. Sveltia beheert de inhoud en toont een opgemaakte conceptvoorvertoning. Puck toont eigen projectpagina’s en laat de volgorde en uitsneden aanpassen met behoud van één inhoudsbron.
+
+De al gebouwde nieuwsbriefkeuze en uitwaaier worden meegenomen in deze publicatie. Formulierverzending, nieuwsbriefdienst, checklistbestand, hosting, agenda en chat blijven afhankelijk van nog te kiezen diensten of gegevens; er zijn geen diensten of abonnementen aangezet. De bestaande klantconcepten en de Wix-site zijn niet gepubliceerd of vervangen.

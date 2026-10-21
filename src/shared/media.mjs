@@ -42,7 +42,7 @@ export function missingImageMarkup(selection={},asset,{className='',aspect=''}={
 }
 export function imageMarkup(selection, context, {eager = false, className = '', aspect = ''} = {}) {
   const asset = context.media.find(a => a.id === selection?.mediaId);
-  if (!asset||asset.deletedAt||context.manifest?.[asset.id]?.missing||context.manifest?.[asset.id]?.deleted) return missingImageMarkup(selection,asset,{className,aspect});
+  if (!isMediaAvailable(asset,context.manifest)) return missingImageMarkup(selection,asset,{className,aspect});
   const processed = context.manifest?.[asset.id];
   const url = assetURL(asset, context.manifest, context.assetBaseURL);
   if (!url) return missingImageMarkup(selection,asset,{className,aspect});

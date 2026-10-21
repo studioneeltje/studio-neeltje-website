@@ -15,6 +15,13 @@
    if(!form.reportValidity())return;
    const data=new FormData(form);if(String(data.get('website_url')||'').trim()){message('Het formulier kon niet worden verstuurd.',true);return;}
    const payload={form:kind,...Object.fromEntries([...data.entries()].filter(([key,value])=>key!=='website_url'&&typeof value==='string'))};
+   if(kind==='checklist'){
+    const consent=form.querySelector('[data-checklist-newsletter]');
+    if(!consent?.checked){message('Vink aan dat je de trouwchecklist en nieuwsbrieven wilt ontvangen.',true);consent?.focus();return;}
+    payload.newsletter_consent='yes';
+    payload.newsletter_consent_text=consent.closest('label')?.querySelector('span')?.textContent||'';
+    payload.newsletter_consent_at=new Date().toISOString();
+   }
    busy=true;form.setAttribute('aria-busy','true');const button=form.querySelector('[type="submit"]');if(button)button.disabled=true;message('Even versturen…');
    const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),20000);
    try{

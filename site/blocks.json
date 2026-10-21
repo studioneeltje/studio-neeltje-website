@@ -1797,5 +1797,59 @@
       "reviewId": "jeroen-martine",
       "crops": {}
     }
+  },
+  "FanGallery": {
+    "label": "Uitwaaier — verfijnd (3 of 5 foto’s)",
+    "html": "",
+    "defaults": {
+      "motion": "on",
+      "images": [
+        {
+          "key": "0",
+          "label": "Foto links",
+          "mediaId": "",
+          "desktop": null,
+          "mobile": null
+        },
+        {
+          "key": "1",
+          "label": "Foto midden",
+          "mediaId": "",
+          "desktop": null,
+          "mobile": null
+        },
+        {
+          "key": "2",
+          "label": "Foto rechts",
+          "mediaId": "",
+          "desktop": null,
+          "mobile": null
+        },
+        {
+          "key": "3",
+          "label": "Foto 4",
+          "mediaId": "",
+          "desktop": null,
+          "mobile": null
+        },
+        {
+          "key": "4",
+          "label": "Foto 5",
+          "mediaId": "",
+          "desktop": null,
+          "mobile": null
+        }
+      ],
+      "count": "3"
+    }
+  },
+  "ProjectStory": {
+    "label": "Portfolio — verhaal per project",
+    "html": "",
+    "defaults": {
+      "storyId": "",
+      "sectionOrder": [],
+      "crops": {}
+    }
   }
 }

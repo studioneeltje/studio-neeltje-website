@@ -51,7 +51,7 @@ collections:
       - {name: title, label: Titel, widget: string}
       - {name: location, label: Locatie, widget: string}
       - {name: excerpt, label: Korte introductie, widget: text}
-      - {name: body, label: Het verhaal, widget: markdown}
+      - {name: body, label: Introductie van het verhaal, widget: markdown, required: false, hint: "Bestaande verhaaltekst blijft behouden. Voeg hieronder bij Verhaalonderdelen extra hoofdstukken en galerijen toe."}
       - {name: cover, label: Omslagfoto, widget: neeltje-image}
       - {name: hoverCover, label: Tweede foto bij aanwijzen, hint: "Kies een ander beeld uit deze reportage. Zonder keuze wordt de eerste andere galerijfoto gebruikt.", widget: neeltje-image, required: false}
       - name: gallery
@@ -61,6 +61,57 @@ collections:
         required: false
         hint: Kies meerdere foto's op beeld en stel de volgorde in voordat je ze toevoegt.
       - {name: published, label: Tonen op de website, widget: boolean, default: true}
+      - {name: couple, label: Namen van het bruidspaar, widget: string, required: false}
+      - {name: seoTitle, label: Titel voor zoekmachines, widget: string, required: false}
+      - {name: seoDescription, label: Omschrijving voor zoekmachines, widget: text, required: false}
+      - name: sections
+        label: Verhaalonderdelen — tekst en foto’s afwisselen
+        widget: list
+        required: false
+        summary: '{{fields.key}} · {{fields.heading}} · {{fields.type}}'
+        hint: Voeg zoveel onderdelen toe als je wilt. Sleep om te ordenen. Een galerij kan bijvoorbeeld 20 foto’s bevatten.
+        fields:
+          - {name: key, label: Unieke korte onderdeelnaam, widget: string, hint: 'Bijvoorbeeld voorbereidingen of ceremonie-galerij. Gebruik deze naam ook bij ordenen in Puck.', pattern: ['^[a-z0-9][a-z0-9-]{0,80}$', 'Kleine letters, cijfers en streepjes.']}
+          - name: type
+            label: Soort onderdeel
+            widget: select
+            default: text
+            options:
+              - {label: Verhaalhoofdstuk, value: text}
+              - {label: Tekst naast een foto, value: textPhoto}
+              - {label: Brede foto, value: photo}
+              - {label: Twee foto’s, value: pair}
+              - {label: Fotogalerij, value: gallery}
+              - {label: Review, value: review}
+          - {name: heading, label: Tussenkop, widget: string, required: false}
+          - {name: body, label: Verhaaltekst, widget: markdown, required: false}
+          - {name: image, label: Foto, widget: neeltje-image, required: false}
+          - {name: secondImage, label: Tweede foto, widget: neeltje-image, required: false}
+          - {name: caption, label: Bijschrift, widget: string, required: false}
+          - {name: gallery, label: Galerijfoto’s — meerdere kiezen en ordenen, widget: neeltje-image, multiple: true, required: false}
+          - {name: quote, label: Echte reviewtekst, widget: text, required: false}
+          - {name: name, label: Naam bij de review, widget: string, required: false}
+      - name: review
+        label: Review van het bruidspaar (optioneel)
+        widget: object
+        required: false
+        fields:
+          - {name: quote, label: Reviewtekst, widget: text, required: false}
+          - {name: name, label: Naam, widget: string, required: false}
+          - {name: image, label: Foto (optioneel), widget: neeltje-image, required: false}
+      - {name: details, label: Over de locatie en deze bruiloft, widget: markdown, required: false}
+      - name: suppliers
+        label: Locatie en leveranciers
+        widget: list
+        required: false
+        fields:
+          - {name: role, label: Rol, widget: string, required: false}
+          - {name: name, label: Naam, widget: string}
+          - {name: url, label: Link, widget: string, required: false}
+      - {name: contactTitle, label: Afsluitende uitnodiging, widget: string, required: false}
+      - {name: contactLabel, label: Knoptekst, widget: string, required: false}
+      - {name: contactUrl, label: Knoplink, widget: string, required: false}
+      - {name: related, label: Gerelateerde gepubliceerde reportages, widget: relation, collection: stories, search_fields: [title, location], value_field: id, display_fields: [title], multiple: true, required: false}
   - name: articles
     label: Journal
     label_singular: Artikel
@@ -406,6 +457,7 @@ collections:
               - {name: endpoint, label: Openbaar HTTPS-endpoint, widget: string, required: false}
               - {name: activated, label: Verwerking is aangesloten en klaar, widget: boolean, default: false}
           - {name: checklistFile, label: Checklistbestand (optioneel), widget: file, required: false}
+          - {name: checklistNewsletterText, label: Tekst bij verplichte nieuwsbriefkeuze voor de checklist, widget: text, default: 'Ik wil de gratis trouwchecklist én nieuwsbrieven van Studio Neeltje ontvangen. Ik kan me op ieder moment uitschrijven.', hint: 'De keuze staat nooit vooraf aan. Benoem zowel de nieuwsbrief als de mogelijkheid om uit te schrijven.'}
           - {name: privacyURL, label: Link naar privacy-informatie (optioneel), widget: string, required: false}
       - name: media
         label: Beeldkwaliteit & verwerking
