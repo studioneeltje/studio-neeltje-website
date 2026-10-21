@@ -102,7 +102,7 @@
           {
             "key": "0",
             "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "media-15fbb9ac-4988-4e3e-bf57-209afbf0f816",
+            "mediaId": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
             "desktop": null,
             "mobile": null
           }
@@ -274,7 +274,8 @@
         ],
         "images": [],
         "links": [],
-        "id": "Quote-2e894def-2d18-447b-b4dc-65127edf61da"
+        "id": "Quote-2e894def-2d18-447b-b4dc-65127edf61da",
+        "background": "wine"
       }
     },
     {
@@ -464,67 +465,11 @@
     {
       "type": "Review",
       "props": {
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: WOORDEN VAN EEN BRUIDSPAAR",
-            "value": "WOORDEN VAN EEN BRUIDSPAAR"
-          },
-          {
-            "key": "1",
-            "label": "Label: JEROEN & MARTINE / 01",
-            "value": "laat het vooral gezellig zijn"
-          },
-          {
-            "key": "2",
-            "label": "Label: De mooiste dag van je dromen",
-            "value": "Vanaf het"
-          },
-          {
-            "key": "3",
-            "label": "Label: met de liefde van je leven,",
-            "value": "eerste moment"
-          },
-          {
-            "key": "4",
-            "label": "Label: daar wil je",
-            "value": "voelden we ons"
-          },
-          {
-            "key": "5",
-            "label": "Label: Neeltje",
-            "value": " helemaal"
-          },
-          {
-            "key": "6",
-            "label": "Label: bij hebben!",
-            "value": " op ons gemak."
-          },
-          {
-            "key": "7",
-            "label": "Label: Lees de volledige review",
-            "value": "Lees de volledige review"
-          },
-          {
-            "key": "8",
-            "label": "Tekst: Haar betrokkenheid, professionaliteit en creativ",
-            "value": "Normaal gesproken schrijf je natuurlijk pas een review als je het eindresultaat hebt ontvangen, maar wij willen gewoon niet langer wachten om Neeltje en Lisa te bedanken! ❤️\n\nAfgelopen zaterdag hebben zij onze bruiloft vastgelegd met foto én video, en wat zijn wij ontzettend blij zij erbij waren om onze bijzondere dag vast te leggen. Vanaf het eerste moment voelden we ons helemaal op ons gemak. Ze waren gezellig, enthousiast en professioneel, en wisten precies hoe ze de mooiste momenten konden vastleggen zonder dat het geforceerd voelde.\n\nWe hebben de foto’s en video natuurlijk nog niet ontvangen, maar als we terugdenken aan hoe fijn en ontspannen de dag met Neeltje en Lisa was, weten we nu al dat het bijzonder gaat worden.\n\nLieve Neeltje en Lisa, onwijs bedankt voor jullie bijdrage aan onze onvergetelijke dag! Jullie waren niet alleen onze fotograaf en videograaf, maar echt een heel fijn onderdeel van onze bruiloft.\n\nWij kunnen niet wachten om alles terug te zien!"
-          },
-          {
-            "key": "9",
-            "label": "Label: Jeroen en Martine Stroomberg",
-            "value": "Onno en Sari Koole"
-          },
-          {
-            "key": "10",
-            "label": "Label: ERVARING VAN EEN BRUIDSPAAR",
-            "value": "ERVARING VAN EEN BRUIDSPAAR"
-          }
-        ],
-        "images": [],
-        "links": [],
-        "id": "Review-8e90c379-08a1-4348-8172-4a4e299c479d",
-        "background": "white"
+        "eyebrow": "LIEVE WOORDEN / VAN BRUIDSPAREN",
+        "title": "Wat zij",
+        "emphasis": "ervan vinden.",
+        "background": "pink",
+        "id": "Review-b98def89-daae-44e5-89d8-201586d23742"
       }
     },
     {
@@ -578,7 +523,8 @@
             "href": "over.html"
           }
         ],
-        "id": "About-34314f13-0724-467e-90b9-e92790a4db10"
+        "id": "About-34314f13-0724-467e-90b9-e92790a4db10",
+        "background": "wine"
       }
     },
     {
@@ -624,7 +570,7 @@
         "images": [],
         "links": [],
         "id": "Quote-002a9126-aaa1-498a-ae52-50c757614fc9",
-        "background": "wine"
+        "background": "blue"
       }
     },
     {
@@ -679,7 +625,7 @@
           }
         ],
         "id": "About-a6421dc9-6101-4f92-afc3-4ffcaa455cc1",
-        "background": "pink"
+        "background": "white"
       }
     },
     {
