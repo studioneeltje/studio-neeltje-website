@@ -92,6 +92,66 @@
         "background": "white",
         "id": "Journal-6bb45b04-c6c1-44c2-a347-8a07fbb9a4d3"
       }
+    },
+    {
+      "type": "ContactCTA",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: Neeltje · jullie trouwfotograaf",
+            "value": "Neeltje · jullie trouwfotograaf"
+          },
+          {
+            "key": "1",
+            "label": "Label: 05 — ZULLEN WE KENNISMAKEN?",
+            "value": "ZULLEN WE KENNISMAKEN?"
+          },
+          {
+            "key": "2",
+            "label": "Titel: Voelt dit als",
+            "value": "Trouwen"
+          },
+          {
+            "key": "3",
+            "label": "Label: jullie verhaal?",
+            "value": "met mijn hulp?"
+          },
+          {
+            "key": "4",
+            "label": "Tekst: Vertel me over jullie trouwdag, datum en locatie",
+            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt — en wat ik voor jullie kan betekenen."
+          },
+          {
+            "key": "5",
+            "label": "Knop / link: Vertel me jullie plannen",
+            "value": "Vertel me jullie plannen"
+          },
+          {
+            "key": "6",
+            "label": "Label: Vrijblijvend kennismaken · gewoon kijken of het ",
+            "value": "Vrijblijvend kennismaken · gewoon kijken of het klikt"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "media-437ed33a-0499-43f1-901a-8c1038fffc7b",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "contact.html"
+          }
+        ],
+        "background": "wine",
+        "id": "ContactCTA-32706d96-205c-458f-b8f7-3b12c3d114bf"
+      }
     }
   ],
   "zones": {}
