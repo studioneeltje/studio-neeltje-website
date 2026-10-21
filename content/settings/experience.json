@@ -1,25 +1,25 @@
 {
   "journey": {
-    "eyebrow": "VAN EEN EERSTE HALLO TOT JULLIE HERINNERINGEN",
-    "title": "Samen op weg.",
-    "emphasis": "Helemaal jullie.",
-    "button": "Zo werk ik",
-    "href": "werkwijze.html",
+    "eyebrow": "HOE ZIT DAT 'VRIJBLIJVEND' KENNISMAKEN?",
+    "title": "Dit kunnen jullie",
+    "emphasis": "verwachten.",
+    "button": "Ik wil vrijblijvend kennismaken",
+    "href": "contact.html",
     "steps": [
       {
-        "phase": "VOORAF",
-        "title": "Even kennismaken.",
-        "text": "Jullie vertellen over jullie plannen. We ontdekken of het klikt en bespreken wat voor jullie belangrijk is."
+        "phase": "Dubbelcheck",
+        "title": "Heel kort",
+        "text": "Ik check kort in of dit echt is wat jullie willen. Zonde om een kennismaking te hebben met iemand waarvan je na 1 minuten al denkt... dit gaat hem niet worden."
       },
       {
-        "phase": "OP JULLIE DAG",
-        "title": "Volop beleven.",
-        "text": "Jullie zijn erbij. Ik beweeg mee, kijk om me heen en leg ook de kleine momenten vast."
+        "phase": "Even bijkletsen",
+        "title": "We nemen het door",
+        "text": "Nu gaan we goed met elkaar om de tafel. Kan digitaal of fysiek bij mij thuis. Maar net wat jij prettig vindt. We bespreken de dag, jullie wensen en behoeften en hoe ik daarin jullie het best kan ondersteunen. En je stelt alle vragen die je hebt."
       },
       {
-        "phase": "VOOR ALTIJD",
-        "title": "Steeds weer voelen.",
-        "text": "Met jullie foto's keer je terug naar de dag. Naar de mensen, de blikken en alles ertussenin."
+        "phase": "Deal or no deal?",
+        "title": "Doen of niet doen?",
+        "text": "Na de kennismaking is het tijd om rustig te beslissen of wij bij elkaar passen. Nee is ook een antwoord. Ik ben er echt heilig van overtuigd: een fotograaf die bij je past, geeft je een goed gevoel. En dát zie je terug in de foto's."
       }
     ]
   },
