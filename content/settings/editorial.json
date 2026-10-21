@@ -5,44 +5,66 @@
       "title": "Jullie zijn erbij.",
       "emphasis": "Ik leg het vast.",
       "text": "Van het aankleden tot die laatste dans. Met ruimte voor alles wat vanzelf gebeurt, zonder jullie dag steeds stil te zetten.",
+      "image": "",
       "tags": [
         "Trouwreportages",
         "Echte momenten",
         "Nederland & daarbuiten"
       ],
       "button": "Ontdek de trouwreportages",
-      "href": "reportages.html",
-      "image": ""
+      "href": "reportages.html"
     },
     {
       "label": "Voor alles erna",
       "title": "Niet alleen een foto.",
       "emphasis": "Een herinnering.",
       "text": "Beelden die je niet alleen terugziet, maar ook weer even voelt. In een album, aan de muur of samen op de bank.",
+      "image": "foto-d5f77408f803",
       "tags": [],
       "button": "Ontdek de mogelijkheden",
-      "href": "contact.html",
-      "image": "foto-d5f77408f803"
+      "href": "contact.html"
     }
   ],
   "reviews": [
     {
+      "id": "jeroen-martine",
       "quote": "De mooiste dag van je dromen met de liefde van je leven, daar wil je Neeltje bij hebben!",
-      "name": "Jeroen & Martine",
+      "fullText": "\"De mooiste dag van je dromen met de liefde van je leven, daar wil je Neeltje bij hebben! Haar betrokkenheid, professionaliteit en creative brein maakte voor ons de fotoreportage (wat stiekem best spannend is) ontspannen en fun! Neeltje wist ook onze speciale momenten van de ceremonie en receptie perfect vast te leggen. Het resultaat? Liefdevolle, prachtige foto’s en video's die ons helemaal terugbrengen naar onze dag.\"",
+      "continuationOf": "",
+      "name": "Jeroen en Martine Stroomberg",
       "caption": "Over hun trouwdag",
       "image": "",
-      "visible": true,
-      "id": "jeroen-martine",
-      "fullText": ""
+      "visible": true
     },
     {
-      "quote": "Haar betrokkenheid, professionaliteit en creative brein maakte voor ons de fotoreportage (wat stiekem best spannend is) ontspannen en fun! Neeltje wist ook onze speciale momenten van de ceremonie en receptie perfect vast te leggen. Het resultaat? Liefdevolle, prachtige foto’s en video's die ons helemaal terugbrengen naar onze dag.",
-      "name": "Jeroen & Martine",
-      "caption": "Over de fotoreportage · uit dezelfde review",
+      "id": "chiel-natascha",
+      "quote": "Neeltje is een vrouw waar jij energie van krijgt.",
+      "fullText": "\"Neeltje is een vrouw waar jij energie van krijgt. Creatief, Vrolijk en tegelijkertijd een geweldige sparringspartner waarmee je de juiste balans kan vinden tussen de \"pinterest\" voorbeelden en de werkelijkheid. Bij onze bruiloft was onze locatie niet volledig geschikt als foto locatie maar ondanks dat was dit nergens op de foto's te zien. Neeltje heeft onze wensen samen met haar creativiteit weten te combineren en daarmee onze verwachtingen volledig waar gemaakt.\"",
+      "continuationOf": "jeroen-martine",
+      "name": "Chiel en Natascha Singerling",
+      "caption": "Over hun trouwdag",
       "image": "",
-      "visible": true,
-      "id": "jeroen-martine-vervolg",
-      "continuationOf": "jeroen-martine"
+      "visible": true
+    },
+    {
+      "id": "chiel-natascha",
+      "quote": "We hebben zo ontzettend genoten van je aanwezigheid.",
+      "fullText": "\"Neeltje, ik hoop dat je heerljik hebt geslapen. We hebben zo ontzettend genoten van je aanwezigheid. En we willen je nogmaals heel erg bedanken voor alles wat je gedaan hebt gisteren en al je support gisteren. Dank dank dank!! ❤️ Ik ben de foto’s nogmaals aan het bekijken. Ze zijn prachtig geworden. \"",
+      "continuationOf": "jeroen-martine",
+      "name": "Mark en Rooa",
+      "caption": "Na hun bruiloft en de eerste preview",
+      "image": "",
+      "visible": true
+    },
+    {
+      "id": "sari-onno",
+      "quote": "Vanaf het eerste moment voelden we ons helemaal op ons gemak.",
+      "fullText": "Normaal gesproken schrijf je natuurlijk pas een review als je het eindresultaat hebt ontvangen, maar wij willen gewoon niet langer wachten om Neeltje en Lisa te bedanken! ❤️\n\nAfgelopen zaterdag hebben zij onze bruiloft vastgelegd met foto én video, en wat zijn wij ontzettend blij zij erbij waren om onze bijzondere dag vast te leggen. Vanaf het eerste moment voelden we ons helemaal op ons gemak. Ze waren gezellig, enthousiast en professioneel, en wisten precies hoe ze de mooiste momenten konden vastleggen zonder dat het geforceerd voelde.\n\nWe hebben de foto’s en video natuurlijk nog niet ontvangen, maar als we terugdenken aan hoe fijn en ontspannen de dag met Neeltje en Lisa was, weten we nu al dat het bijzonder gaat worden.\n\nLieve Neeltje en Lisa, onwijs bedankt voor jullie bijdrage aan onze onvergetelijke dag! Jullie waren niet alleen onze fotograaf en videograaf, maar echt een heel fijn onderdeel van onze bruiloft.\n\nWij kunnen niet wachten om alles terug te zien!",
+      "continuationOf": "",
+      "name": "Onno en Sari Koole",
+      "caption": "Een aantal dagen na de bruiloft",
+      "image": "",
+      "visible": true
     }
   ]
 }
