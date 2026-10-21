@@ -17,7 +17,7 @@
           {
             "key": "0",
             "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
-            "value": "STUDIO NEELTJE / TROUWFOTOGRAFIE"
+            "value": "STUDIO NEELTJE / OVER NEELTJE"
           },
           {
             "key": "1",
@@ -27,39 +27,39 @@
           {
             "key": "2",
             "label": "Label: Helemaal eigen.",
-            "value": "Helemaal eigen."
+            "value": "Alo alo"
           },
           {
             "key": "3",
             "label": "Tekst: Een dag vol momenten om te bewaren.",
-            "value": "Een dag vol momenten om te bewaren."
+            "value": "Welkom in mijn studio."
           }
         ],
         "images": [
           {
             "key": "0",
             "label": "Foto achteraan",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-6f4893bc-35a3-40fb-84d3-37134e7b6a38",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "1",
             "label": "Hoofdfoto",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-f1c2c61f-c748-4b80-a782-ff9c8128c145",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Detailfoto",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "media-eab8c138-eeee-41a3-8ae4-d06c0efb0263",
             "desktop": null,
             "mobile": null
           }
         ],
         "links": [],
-        "background": "white"
+        "background": "wine"
       }
     },
     {
@@ -75,22 +75,464 @@
           {
             "key": "1",
             "label": "Titel: Wat er",
-            "value": "Wat er"
+            "value": "Ik ben dus"
           },
           {
             "key": "2",
             "label": "Label: echt gebeurt.",
-            "value": "echt gebeurt."
+            "value": "Neeltje Meijler."
           },
           {
             "key": "3",
             "label": "Tekst: Ik fotografeer de dag zoals hij zich ontvouwt: d",
-            "value": "Ik fotografeer de dag zoals hij zich ontvouwt: de grote momenten, de kleine blikken en alles wat ertussen leeft."
+            "value": "Natuurlijk is het belangrijk of ik mooie foto's maak ja of nee. Dat beslis jij op basis van wat je ziet. Maar het is ook wel heel fijn om te weten of je mij op je bruiloft ziet. En of je het gezellig vindt om mij de hele dag rond te hebben hangen. Kijk. Ik denk van wel, maar dat is aan jou om dat echt te bepalen."
           },
           {
             "key": "4",
             "label": "Knop / link: Bekijk mijn werk",
-            "value": "Bekijk mijn werk"
+            "value": "Lijkt mij ook leuk"
+          },
+          {
+            "key": "5",
+            "label": "Label: recht uit het hart",
+            "value": "recht uit het hart"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "over.html"
+          }
+        ],
+        "background": "white"
+      }
+    },
+    {
+      "type": "Method",
+      "props": {
+        "id": "over-method-2",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: MEER OVER NEELTJE",
+            "value": "Mijn achtergrond"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Rustig dichtbij.",
+            "value": "Waarom ik"
+          },
+          {
+            "key": "2",
+            "label": "Label: Altijd alert.",
+            "value": "fotograaf werd."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Ik fotografeer zoals ik zelf graag herinner: met",
+            "value": "Van jongs af aan stond ik met een camera in mijn hand. Mijn moeder had alles in huis en dat was natuurlijk bere interessant. In mijn pubertijd stond ik liever voor de camera. Mijn zus had een fotostudio van haar kamer gemaakt. Ook dat was natuurlijk weer... bere interessant."
+          },
+          {
+            "key": "4",
+            "label": "Tekst: Vooraf leren we elkaar kennen. Op de dag zelf vo",
+            "value": "En toen kreeg ik mijn eigen camera. Ik maakte foto's van onze lieve hond Rose, ik zette collega's op de foto en begon na een 'personal branding' fotoshoots een eigen bedrijf. Genaamd Brand Portraits. Voor portretten, bedrijfsfotografie en foto's voor op werkenbij websites."
+          },
+          {
+            "key": "5",
+            "label": "Knop / link: Lees mijn verhaal",
+            "value": ""
+          }
+        ],
+        "images": [],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": ""
+          }
+        ],
+        "background": "pink"
+      }
+    },
+    {
+      "type": "Orbit",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: DOOR DE LENS / MOMENTEN OM TE BEWAREN",
+            "value": "live vanuit de studio in Hilversum"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Draai mee door",
+            "value": "Zo ziet mijn werk"
+          },
+          {
+            "key": "2",
+            "label": "Label: jullie dag.",
+            "value": "er ook uit."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Een bewegende beeldwereld vol echte momenten. Kl",
+            "value": "Klik op een foto om deze eens goed te bekijken."
+          },
+          {
+            "key": "4",
+            "label": "Label: STUDIO NEELTJE",
+            "value": "STUDIO NEELTJE"
+          },
+          {
+            "key": "5",
+            "label": "Label: ECHT · ONGEREGISEERD · HELEMAAL JULLIE",
+            "value": ""
+          },
+          {
+            "key": "6",
+            "label": "Label: PORTFOLIO / 2024—26",
+            "value": ""
+          },
+          {
+            "key": "7",
+            "label": "Label: 01 / 07 · SLEEP OM TE DRAAIEN · KLIK OM TE OPENE",
+            "value": "01 / 07 · SLEEP OM TE DRAAIEN · KLIK OM TE OPENEN"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Een spontaan moment tijdens een bruiloft bij Kasteel Keukenhof",
+            "mediaId": "foto-d5f77408f803",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Een liefdevol moment tijdens een destination wedding in Spanje",
+            "mediaId": "foto-26fee13582a7",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Een vrolijk moment tijdens een bruiloft in Utrecht",
+            "mediaId": "foto-6f5e773ded94",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "3",
+            "label": "Een trouwmoment tijdens een bruiloft in Bordeaux",
+            "mediaId": "foto-e21748886faf",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "4",
+            "label": "Persoonlijke details die klaarstaan voor de trouwdag",
+            "mediaId": "foto-f5d8e85a877d",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "5",
+            "label": "Neeltje, jullie trouwfotograaf, tussen de momenten door",
+            "mediaId": "foto-75c93a94397c",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "6",
+            "label": "Een beeld om later samen naar terug te kijken",
+            "mediaId": "foto-95c436480d00",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "https://static.wixstatic.com/media/31108f_5954ea8bc4af4dc19ee32d1d9358dc0d~mv2.jpg"
+          },
+          {
+            "key": "1",
+            "label": "Link 2",
+            "href": "https://static.wixstatic.com/media/31108f_6bac505b81914da6b60da6829caa2f8e~mv2.jpg"
+          },
+          {
+            "key": "2",
+            "label": "Link 3",
+            "href": "https://static.wixstatic.com/media/31108f_a2289c669fbb4815a7b6835801ea71e2~mv2.jpg"
+          },
+          {
+            "key": "3",
+            "label": "Link 4",
+            "href": "https://static.wixstatic.com/media/31108f_026e0e715cbf4b3b8608bd92ca53cbd3~mv2.jpg"
+          },
+          {
+            "key": "4",
+            "label": "Link 5",
+            "href": "https://static.wixstatic.com/media/31108f_b36e517377c245e1bb63575a3e1b25cf~mv2.jpg"
+          },
+          {
+            "key": "5",
+            "label": "Link 6",
+            "href": "https://static.wixstatic.com/media/31108f_3cc72de4ebf540d9918eda3c6354b598~mv2.jpg"
+          },
+          {
+            "key": "6",
+            "label": "Link 7",
+            "href": "https://static.wixstatic.com/media/31108f_a93479a7875f4c97946f3613205982af~mv2.jpg"
+          }
+        ],
+        "id": "Orbit-eb1bc293-1d34-449b-8c4a-f2e40db66cfd",
+        "background": "wine"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 01 — TUSSEN DE MOMENTEN",
+            "value": "Zo is het begonnen"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie beleven de",
+            "value": "En toen moest ik zelf op de foto."
+          },
+          {
+            "key": "2",
+            "label": "Label: dag",
+            "value": ""
+          },
+          {
+            "key": "3",
+            "label": "Titel: . Ik zie ook wat er tussendoor",
+            "value": "Ik schrok me een"
+          },
+          {
+            "key": "4",
+            "label": "Label: gebeurt.",
+            "value": "hoedje."
+          },
+          {
+            "key": "5",
+            "label": "Label: met liefde gezien, Neeltje",
+            "value": "Zag ik er echt zó uit?!"
+          },
+          {
+            "key": "6",
+            "label": "Tekst: Een trouwdag bestaat uit meer dan de grote momen",
+            "value": "Jaren geleden kreeg ik foto's van mezelf terug waar ik met tranen achter mijn computer naar zat te kijken.\nNiet omdat de fotograaf geen mooie foto's kon maken.\n​\nMaar omdat ik mezelf er niet in herkende.Niemand had gezien waar ik onzeker over was.\nNiemand keek naar mijn haren en of wist hoe ik het mooi vond zitten.\nNiemand keek écht naar mij.\n​\nIk dacht alleen maar:\n\"Zie ik er zó uit?!\"\n​\nOp dat moment wist ik één ding. Ik wil dit anders doen. Ik wil niet dat mensen zichzelf terugzien zoals hun strengste innerlijke criticus dat doet."
+          }
+        ],
+        "images": [],
+        "links": [],
+        "id": "Quote-2e894def-2d18-447b-b4dc-65127edf61da",
+        "background": "blue"
+      }
+    },
+    {
+      "type": "Method",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: MEER OVER NEELTJE",
+            "value": "Mijn werkwijze"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Rustig dichtbij.",
+            "value": "Ik wil dat mensen zichzelf terugzien"
+          },
+          {
+            "key": "2",
+            "label": "Label: Altijd alert.",
+            "value": "zoals de mensen die van hen houden hen zien."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Ik fotografeer zoals ik zelf graag herinner: met",
+            "value": "\nSindsdien kijk ik heel anders naar een camera.\nVoor mij is het geen apparaat waarmee ik mooie foto's maak. Het is een manier om mensen te laten zien wat hun dierbaren allang zien.\n"
+          },
+          {
+            "key": "4",
+            "label": "Tekst: Vooraf leren we elkaar kennen. Op de dag zelf vo",
+            "value": "Dat is nog steeds de reden dat ik iedere bruiloft fotografeer zoals ik dat doe."
+          },
+          {
+            "key": "5",
+            "label": "Knop / link: Lees mijn verhaal",
+            "value": "Lees mijn verhaal"
+          }
+        ],
+        "images": [],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "over.html"
+          }
+        ],
+        "id": "Method-6a908ce4-7800-44be-88ec-cc76ae70ce6c",
+        "background": "white"
+      }
+    },
+    {
+      "type": "About",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: TROUWFOTOGRAFIE / NEELTJE MEIJLER",
+            "value": "Met een beetje sjeu"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Wat er",
+            "value": "Ik hou wel van"
+          },
+          {
+            "key": "2",
+            "label": "Label: echt gebeurt.",
+            "value": "een sfeertje."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Ik fotografeer de dag zoals hij zich ontvouwt: d",
+            "value": "Natuurlijk kan ik een muurbloempje zijn. Zeker tijdens de ceremonie. Dan wil ik dat je niet door hebt dat ik er ben. Maar aan de andere kant: iedereen op een bruiloft voegt wat toe. Zowel positief als negatief. Mijn missie is: positiviteit. En energie! Omdat ik weet hoe belangrijk het is om je goed te voelen om de mooiste foto's te maken. Hierin komt mijn achtergrond als portretfotograaf echt heel goed van pas. Daar heeft nooit iemand zin in. En dus is het belangrijk om een veilige omgeving te creëren. Waarin het tóch best wel leuk is om op de foto te gaan..."
+          },
+          {
+            "key": "4",
+            "label": "Knop / link: Bekijk mijn werk",
+            "value": ""
+          },
+          {
+            "key": "5",
+            "label": "Label: recht uit het hart",
+            "value": "recht uit het hart"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "media-5631701b-05e3-4c81-8bc5-c5a8a3cd11d6",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "over.html"
+          }
+        ],
+        "id": "About-34314f13-0724-467e-90b9-e92790a4db10",
+        "background": "white"
+      }
+    },
+    {
+      "type": "Review",
+      "props": {
+        "eyebrow": "LIEVE WOORDEN / VAN BRUIDSPAREN",
+        "title": "Wat bruidsparen",
+        "emphasis": "ervan vinden.",
+        "background": "pink",
+        "id": "Review-b98def89-daae-44e5-89d8-201586d23742"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 01 — TUSSEN DE MOMENTEN",
+            "value": "Ik was laatst op een bruiloft"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie beleven de",
+            "value": "\"Ik ben echt "
+          },
+          {
+            "key": "2",
+            "label": "Label: dag",
+            "value": "even toe"
+          },
+          {
+            "key": "3",
+            "label": "Titel: . Ik zie ook wat er tussendoor",
+            "value": " aan een momentje "
+          },
+          {
+            "key": "4",
+            "label": "Label: gebeurt.",
+            "value": "voor mezelf.\""
+          },
+          {
+            "key": "5",
+            "label": "Label: met liefde gezien, Neeltje",
+            "value": "Dan laat ik je even met rust."
+          },
+          {
+            "key": "6",
+            "label": "Tekst: Een trouwdag bestaat uit meer dan de grote momen",
+            "value": "Een bruid zat tijdens de bruiloft even op een barkruk.\nWe waren aan het praten en toen zei ze:\n \n\"Ik ben echt even toe aan een momentje voor mezelf.\" \n \nDan weet ik dat het mijn tijd is om te gaan. Dus ik zei meteen: \n \n\"Dan laat ik je even met rust.\" \n​\nIk stond op het punt om weg te gaan.\n​\nToen keek me aan en zei:\n \n\"Nee hoor... blijf. Dit is juist gezellig.\"\n​\nIk weet nog dat ik daarna in de auto naar huis dacht:\nMisschien is dat wel een van de mooiste complimenten die ik ooit heb gekregen.\nNiet omdat het over mijn foto's ging.\n​\nMaar omdat het ging over hoe het voelde dat ik erbij was."
+          }
+        ],
+        "images": [],
+        "links": [],
+        "id": "Quote-002a9126-aaa1-498a-ae52-50c757614fc9",
+        "background": "wine"
+      }
+    },
+    {
+      "type": "About",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: TROUWFOTOGRAFIE / NEELTJE MEIJLER",
+            "value": "dit neem ik elke bruiloft mee"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Wat er",
+            "value": "De les van"
+          },
+          {
+            "key": "2",
+            "label": "Label: echt gebeurt.",
+            "value": "mijn moeder."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Ik fotografeer de dag zoals hij zich ontvouwt: d",
+            "value": "Mijn moeder vertelde me ooit iets over haar eigen trouwdag. Ze zei:\n \n\"Ik heb tegen de fotograaf gezegd dat ik foto's van alle familieleden wilde.\nZe zijn al oud. Nu zijn ze er nog.\"\n​\nToen ik jong was, vond ik dat een bijzondere opmerking. Nu ik ouder word, begrijp ik haar steeds beter. Want sommige foto's worden ieder jaar waardevoller."
+          },
+          {
+            "key": "4",
+            "label": "Knop / link: Bekijk mijn werk",
+            "value": ""
           },
           {
             "key": "5",
@@ -111,45 +553,46 @@
           {
             "key": "0",
             "label": "Link 1",
-            "href": "over.html"
+            "href": ""
           }
-        ]
+        ],
+        "id": "About-a6421dc9-6101-4f92-afc3-4ffcaa455cc1",
+        "background": "blue"
       }
     },
     {
       "type": "Method",
       "props": {
-        "id": "over-method-2",
         "texts": [
           {
             "key": "0",
             "label": "Label: MEER OVER NEELTJE",
-            "value": "MEER OVER NEELTJE"
+            "value": "De les van mijn moeder"
           },
           {
             "key": "1",
             "label": "Titel: Rustig dichtbij.",
-            "value": "Rustig dichtbij."
+            "value": "Jullie gasten"
           },
           {
             "key": "2",
             "label": "Label: Altijd alert.",
-            "value": "Altijd alert."
+            "value": "doen er ook toe."
           },
           {
             "key": "3",
             "label": "Tekst: Ik fotografeer zoals ik zelf graag herinner: met",
-            "value": "Ik fotografeer zoals ik zelf graag herinner: met ruimte voor spontane momenten, zonder dat jullie steeds hoeven te denken aan de camera."
+            "value": "Daarom kijk ik op een trouwdag niet alleen naar jullie. Ik kijk ook naar die opa die stilletjes zit te genieten. Naar die vriendin die al de hele ochtend voor jullie klaarstaat. Naar de blik tussen broers en zussen. En naar de mensen waarvan je misschien nu nog niet beseft hoe belangrijk die foto's later zullen zijn.\n​"
           },
           {
             "key": "4",
             "label": "Tekst: Vooraf leren we elkaar kennen. Op de dag zelf vo",
-            "value": "Vooraf leren we elkaar kennen. Op de dag zelf voel ik aan wanneer ik dichtbij mag komen en wanneer het mooier is om juist even afstand te houden. Zo ontstaat een reportage die bij jullie past."
+            "value": "\nDat is misschien wel de grootste les die mijn moeder me ooit gaf. Nouja, werktechnisch dan. Alsof m'n moeder me alleen dat heeft geleerd... maar je snapt wat ik bedoel, toch?"
           },
           {
             "key": "5",
             "label": "Knop / link: Lees mijn verhaal",
-            "value": "Lees mijn verhaal"
+            "value": ""
           }
         ],
         "images": [],
@@ -157,9 +600,10 @@
           {
             "key": "0",
             "label": "Link 1",
-            "href": "over.html"
+            "href": ""
           }
-        ]
+        ],
+        "id": "Method-503c2995-1473-4eeb-a1e1-7036ed957f85"
       }
     },
     {
@@ -175,12 +619,12 @@
           {
             "key": "1",
             "label": "Label: 05 — ZULLEN WE KENNISMAKEN?",
-            "value": "05 — ZULLEN WE KENNISMAKEN?"
+            "value": "kletsen kan altijd"
           },
           {
             "key": "2",
             "label": "Titel: Voelt dit als",
-            "value": "Voelt dit als"
+            "value": "Pas ik bij"
           },
           {
             "key": "3",
@@ -190,7 +634,7 @@
           {
             "key": "4",
             "label": "Tekst: Vertel me over jullie trouwdag, datum en locatie",
-            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt — en wat ik voor jullie kan betekenen."
+            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt. En wat ik voor jullie kan betekenen."
           },
           {
             "key": "5",
@@ -207,7 +651,7 @@
           {
             "key": "0",
             "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "foto-75c93a94397c",
+            "mediaId": "media-59f8840e-3701-4844-b7b1-efb83fc31f58",
             "desktop": null,
             "mobile": null
           }
@@ -221,5 +665,6 @@
         ]
       }
     }
-  ]
+  ],
+  "zones": {}
 }
