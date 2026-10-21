@@ -32,7 +32,7 @@
           {
             "key": "3",
             "label": "Tekst: Een dag vol momenten om te bewaren.",
-            "value": "Welkom in mijn studio"
+            "value": "Welkom in mijn studio."
           }
         ],
         "images": [
@@ -53,7 +53,7 @@
           {
             "key": "2",
             "label": "Detailfoto",
-            "mediaId": "media-486b1aea-2474-4f79-a31a-18436d3ba28c",
+            "mediaId": "media-eab8c138-eeee-41a3-8ae4-d06c0efb0263",
             "desktop": null,
             "mobile": null
           }
@@ -80,7 +80,7 @@
           {
             "key": "2",
             "label": "Label: echt gebeurt.",
-            "value": "Neeltje Meijler"
+            "value": "Neeltje Meijler."
           },
           {
             "key": "3",
@@ -160,169 +160,8 @@
             "label": "Link 1",
             "href": ""
           }
-        ]
-      }
-    },
-    {
-      "type": "Wall",
-      "props": {
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: 03 — Jullie foto's thuis",
-            "value": "Terug in de tijd"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Niet alleen in een album.",
-            "value": "Nou, hier heb"
-          },
-          {
-            "key": "2",
-            "label": "Label: Ook aan de muur.",
-            "value": " ik het dus over."
-          }
         ],
-        "images": [
-          {
-            "key": "0",
-            "label": "Trouwfoto in een klassieke houten staande lijst",
-            "mediaId": "media-1adcd01c-f2ea-450b-9302-287ef1395484",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "1",
-            "label": "Details van een trouwdag in een liggende bronzen lijst",
-            "mediaId": "media-8eaafd81-4f5b-44bc-95cd-22304b5b0f71",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "2",
-            "label": "Trouwfoto in een vergulde staande lijst",
-            "mediaId": "media-6fc03bc0-777e-40fd-89eb-aed66ebc55b4",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "3",
-            "label": "Een spontaan moment in een donkerhouten staande lijst",
-            "mediaId": "media-73a8efd4-1921-4f0d-a46d-45408aeb2d81",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "4",
-            "label": "Een liggende trouwfoto in een klassieke houten lijst",
-            "mediaId": "media-9a5b03a6-ccda-481a-b97c-071ce6a7a6c1",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "5",
-            "label": "Een grote trouwfoto in een rijk vergulde staande lijst",
-            "mediaId": "media-a0d4f6db-b9ca-4f25-9d2c-3aedadd0e9be",
-            "desktop": null,
-            "mobile": null
-          }
-        ],
-        "links": [],
-        "id": "Wall-114c831b-0110-4314-9823-6ab3fbe35751",
         "background": "pink"
-      }
-    },
-    {
-      "type": "Quote",
-      "props": {
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: 01 — TUSSEN DE MOMENTEN",
-            "value": "Zo is het begonnen"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Jullie beleven de",
-            "value": "En toen moest ik zelf op de foto."
-          },
-          {
-            "key": "2",
-            "label": "Label: dag",
-            "value": ""
-          },
-          {
-            "key": "3",
-            "label": "Titel: . Ik zie ook wat er tussendoor",
-            "value": "Ik schrok me een"
-          },
-          {
-            "key": "4",
-            "label": "Label: gebeurt.",
-            "value": "hoedje."
-          },
-          {
-            "key": "5",
-            "label": "Label: met liefde gezien, Neeltje",
-            "value": "Zag ik er echt zó uit?!"
-          },
-          {
-            "key": "6",
-            "label": "Tekst: Een trouwdag bestaat uit meer dan de grote momen",
-            "value": "Jaren geleden kreeg ik foto's van mezelf terug waar ik met tranen achter mijn computer naar zat te kijken.\nNiet omdat de fotograaf geen mooie foto's kon maken.\n​\nMaar omdat ik mezelf er niet in herkende.Niemand had gezien waar ik onzeker over was.\nNiemand keek naar mijn haren en of wist hoe ik het mooi vond zitten.\nNiemand keek écht naar mij.\n​\nIk dacht alleen maar:\n\"Zie ik er zó uit?!\"\n​\nOp dat moment wist ik één ding. Ik wil dit anders doen. Ik wil niet dat mensen zichzelf terugzien zoals hun strengste innerlijke criticus dat doet."
-          }
-        ],
-        "images": [],
-        "links": [],
-        "id": "Quote-2e894def-2d18-447b-b4dc-65127edf61da",
-        "background": "wine"
-      }
-    },
-    {
-      "type": "Method",
-      "props": {
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: MEER OVER NEELTJE",
-            "value": "Mijn werkwijze"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Rustig dichtbij.",
-            "value": "Ik wil dat mensen zichzelf terugzien"
-          },
-          {
-            "key": "2",
-            "label": "Label: Altijd alert.",
-            "value": "zoals de mensen die van hen houden hen zien."
-          },
-          {
-            "key": "3",
-            "label": "Tekst: Ik fotografeer zoals ik zelf graag herinner: met",
-            "value": "\nSindsdien kijk ik heel anders naar een camera.\nVoor mij is het geen apparaat waarmee ik mooie foto's maak. Het is een manier om mensen te laten zien wat hun dierbaren allang zien.\n"
-          },
-          {
-            "key": "4",
-            "label": "Tekst: Vooraf leren we elkaar kennen. Op de dag zelf vo",
-            "value": "Dat is nog steeds de reden dat ik iedere bruiloft fotografeer zoals ik dat doe."
-          },
-          {
-            "key": "5",
-            "label": "Knop / link: Lees mijn verhaal",
-            "value": "Lees mijn verhaal"
-          }
-        ],
-        "images": [],
-        "links": [
-          {
-            "key": "0",
-            "label": "Link 1",
-            "href": "over.html"
-          }
-        ],
-        "id": "Method-6a908ce4-7800-44be-88ec-cc76ae70ce6c",
-        "background": "blue"
       }
     },
     {
@@ -459,17 +298,100 @@
           }
         ],
         "id": "Orbit-eb1bc293-1d34-449b-8c4a-f2e40db66cfd",
-        "background": "white"
+        "background": "wine"
       }
     },
     {
-      "type": "Review",
+      "type": "Quote",
       "props": {
-        "eyebrow": "LIEVE WOORDEN / VAN BRUIDSPAREN",
-        "title": "Wat bruidsparen",
-        "emphasis": "ervan vinden.",
-        "background": "pink",
-        "id": "Review-b98def89-daae-44e5-89d8-201586d23742"
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 01 — TUSSEN DE MOMENTEN",
+            "value": "Zo is het begonnen"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie beleven de",
+            "value": "En toen moest ik zelf op de foto."
+          },
+          {
+            "key": "2",
+            "label": "Label: dag",
+            "value": ""
+          },
+          {
+            "key": "3",
+            "label": "Titel: . Ik zie ook wat er tussendoor",
+            "value": "Ik schrok me een"
+          },
+          {
+            "key": "4",
+            "label": "Label: gebeurt.",
+            "value": "hoedje."
+          },
+          {
+            "key": "5",
+            "label": "Label: met liefde gezien, Neeltje",
+            "value": "Zag ik er echt zó uit?!"
+          },
+          {
+            "key": "6",
+            "label": "Tekst: Een trouwdag bestaat uit meer dan de grote momen",
+            "value": "Jaren geleden kreeg ik foto's van mezelf terug waar ik met tranen achter mijn computer naar zat te kijken.\nNiet omdat de fotograaf geen mooie foto's kon maken.\n​\nMaar omdat ik mezelf er niet in herkende.Niemand had gezien waar ik onzeker over was.\nNiemand keek naar mijn haren en of wist hoe ik het mooi vond zitten.\nNiemand keek écht naar mij.\n​\nIk dacht alleen maar:\n\"Zie ik er zó uit?!\"\n​\nOp dat moment wist ik één ding. Ik wil dit anders doen. Ik wil niet dat mensen zichzelf terugzien zoals hun strengste innerlijke criticus dat doet."
+          }
+        ],
+        "images": [],
+        "links": [],
+        "id": "Quote-2e894def-2d18-447b-b4dc-65127edf61da",
+        "background": "blue"
+      }
+    },
+    {
+      "type": "Method",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: MEER OVER NEELTJE",
+            "value": "Mijn werkwijze"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Rustig dichtbij.",
+            "value": "Ik wil dat mensen zichzelf terugzien"
+          },
+          {
+            "key": "2",
+            "label": "Label: Altijd alert.",
+            "value": "zoals de mensen die van hen houden hen zien."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Ik fotografeer zoals ik zelf graag herinner: met",
+            "value": "\nSindsdien kijk ik heel anders naar een camera.\nVoor mij is het geen apparaat waarmee ik mooie foto's maak. Het is een manier om mensen te laten zien wat hun dierbaren allang zien.\n"
+          },
+          {
+            "key": "4",
+            "label": "Tekst: Vooraf leren we elkaar kennen. Op de dag zelf vo",
+            "value": "Dat is nog steeds de reden dat ik iedere bruiloft fotografeer zoals ik dat doe."
+          },
+          {
+            "key": "5",
+            "label": "Knop / link: Lees mijn verhaal",
+            "value": "Lees mijn verhaal"
+          }
+        ],
+        "images": [],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "over.html"
+          }
+        ],
+        "id": "Method-6a908ce4-7800-44be-88ec-cc76ae70ce6c",
+        "background": "white"
       }
     },
     {
@@ -524,7 +446,17 @@
           }
         ],
         "id": "About-34314f13-0724-467e-90b9-e92790a4db10",
-        "background": "wine"
+        "background": "white"
+      }
+    },
+    {
+      "type": "Review",
+      "props": {
+        "eyebrow": "LIEVE WOORDEN / VAN BRUIDSPAREN",
+        "title": "Wat bruidsparen",
+        "emphasis": "ervan vinden.",
+        "background": "pink",
+        "id": "Review-b98def89-daae-44e5-89d8-201586d23742"
       }
     },
     {
@@ -570,7 +502,7 @@
         "images": [],
         "links": [],
         "id": "Quote-002a9126-aaa1-498a-ae52-50c757614fc9",
-        "background": "blue"
+        "background": "wine"
       }
     },
     {
@@ -625,7 +557,7 @@
           }
         ],
         "id": "About-a6421dc9-6101-4f92-afc3-4ffcaa455cc1",
-        "background": "white"
+        "background": "blue"
       }
     },
     {
