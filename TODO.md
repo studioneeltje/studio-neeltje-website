@@ -412,3 +412,19 @@ Productiebouw geslaagd. De opmaak van uitwaaier en formulier is lokaal bekeken; 
 - [x] Portfolio-opbouw met verhaalhoofdstukken, grote tussengalerijen, tekst naast foto, twee foto’s, optionele echte review, locatie/leveranciers, gerelateerde reportages en optionele contactknop. SEO-titel en omschrijving per project; bestaande project-URL’s behouden. Sveltia beheert de inhoud en toont een opgemaakte conceptvoorvertoning. Puck toont eigen projectpagina’s en laat de volgorde en uitsneden aanpassen met behoud van één inhoudsbron.
 
 De al gebouwde nieuwsbriefkeuze en uitwaaier worden meegenomen in deze publicatie. Formulierverzending, nieuwsbriefdienst, checklistbestand, hosting, agenda en chat blijven afhankelijk van nog te kiezen diensten of gegevens; er zijn geen diensten of abonnementen aangezet. De bestaande klantconcepten en de Wix-site zijn niet gepubliceerd of vervangen.
+
+Publicatie bevestigd op 21 oktober 2026: PR #28 samengevoegd als 4a9d0e8ee1c0ea63f054d6b23a72b23e3a28d13a. GitHub Pages-run 39572181729 geslaagd. De open gebruikersconcepten zijn behouden.
+
+## Reviewkaarten — eigen selectie per blok — aangevraagd 21 oktober 2026
+
+- [x] Bij de reviewkaarten in Puck een keuze toevoegen tussen alle zichtbare Sveltia-reviews en een eigen selectie per blok.
+- [x] Reviews visueel herkenbaar op naam en korte quote kiezen en de eigen volgorde kunnen aanpassen. De teksten en foto's blijven centraal in Sveltia; selecties op verschillende pagina's zijn onafhankelijk.
+- [x] Bestaande blokken blijven alle zichtbare reviews tonen totdat een eigen selectie is ingesteld. De algemene Sveltia-instelling Tonen blijft gerespecteerd. Lege of niet-beschikbare selecties duidelijk melden in de editor, zonder automatisch andere reviews te kiezen.
+
+Bouw en publicatie expliciet goedgekeurd door Neeltje op 21 oktober 2026: ‘bouw en publiceer’. Gebouwd met behoud van bestaande blokken en inhoud; eigen selectie en volgorde worden op ieder blok apart opgeslagen.
+
+## Draai mee door jullie dag — achtergrondvlak volgt sectiekleur
+
+- [x] Het vaste donkerrode vlak achter de draaiende foto's verwijderen als onafhankelijke kleur. Het vlak volgt nu de gekozen achtergrond: wit, blauw, roze of donkerrood; tekst en bediening volgen de passende sectiekleuren. Foto's, posities, animatie en opgeslagen instellingen blijven behouden.
+
+Toegevoegd door Neeltje tijdens de goedgekeurde bouw- en publicatiestap van de reviewkeuze op 21 oktober 2026.

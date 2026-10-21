@@ -154,3 +154,10 @@ Bij de kantelkaart kies je **Achtergrond van het volledige vlak** los van **Acht
 ## Beeldbank bij tijdelijke GitHub-begrenzing
 
 Een geslaagde beeldbankverversing wordt op dit apparaat bewaard. Bij een tijdelijke fout blijven de bekende online foto’s kiesbaar. Een voltooid Puck-mediaconcept in dezelfde browser wordt ook herkend. Wacht op een afgeronde online opslag; een uitsluitend lokale upload kan nog niet op een andere plek worden gepubliceerd. De koppeling hergebruikt recente gegevens om het aantal GitHub-verzoeken te beperken. Nieuwe wijzigingen kunnen daardoor enkele minuten later zichtbaar worden. Bij een GitHub-blokkade wordt de laatste bekende versie getoond; controleer nieuwe verwijderingen en aanvullingen na een geslaagde verversing.
+
+
+## Per blok reviews kiezen
+
+Selecteer in Puck **Losse reviewkaarten uit Sveltia**. Bij **Welke reviews tonen?** kies je alle zichtbare reviews of **Zelf reviews kiezen voor dit blok**. Voeg bij **Eigen selectie en volgorde** de gewenste reviews toe; iedere keuze toont de naam en het begin van de quote. Sleep om de volgorde te veranderen. Een lege eigen selectie toont geen kaarten; er wordt niet automatisch naar andere reviews teruggevallen. Dubbele keuzes worden één keer getoond. Een verdwenen of uitgezette review krijgt een melding in de editor. ‘Tonen’ in Sveltia blijft gelden voor alle pagina's. De reviewteksten en foto's blijven uitsluitend in Sveltia. Bewaar en publiceer de Puck-pagina om je selectie zichtbaar te maken.
+
+Bij **Draai mee door jullie dag** volgt het vlak achter de foto's voortaan de achtergrondkeuze van het blok.

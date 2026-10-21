@@ -45,6 +45,13 @@ function blockConfig(context){
      if(spec.defaults.images?.length&&!['Stories','Journal'].includes(type))fields.images={type:'custom',label:'Foto’s en uitsneden',render:props=><ImagesField {...props} defaults={spec.defaults.images} context={context}/>};
      if(spec.defaults.links?.length&&!['Journal','Orbit'].includes(type))fields.links={type:'custom',label:'Links en knoppen',render:props=><LinksField {...props} hiddenKeys={type==='Social'?['0','5']:[]}/>};
    }
+   if(type==='Review'){
+     const reviews=(context.settings.editorial?.reviews||[]).filter(review=>review.id&&review.quote?.trim()&&review.name?.trim()&&review.visible!==false);
+     const label=review=>`${review.name} — ${review.quote.slice(0,85)}${review.quote.length>85?'…':''}`;
+     fields.reviewSource={type:'radio',label:'Welke reviews tonen?',options:[{label:'Alle zichtbare reviews uit Sveltia',value:'all'},{label:'Zelf reviews kiezen voor dit blok',value:'selected'}]};
+     fields.reviewSelection={type:'array',label:'Eigen selectie en volgorde',getItemSummary:item=>{const review=reviews.find(r=>r.id===item.reviewId);return review?label(review):item.reviewId?`Niet beschikbaar: ${item.reviewId}`:'Kies een review';},defaultItemProps:{reviewId:''},arrayFields:{reviewId:{type:'select',label:'Review uit Sveltia',options:[{label:'Kies een review',value:''},...reviews.map(review=>({label:label(review),value:review.id}))]}}};
+     fields.beheer={type:'custom',label:'Reviewteksten en foto’s',render:()=> <p className="field-help">Kies hier welke reviews op dit blok verschijnen en sleep ze in de gewenste volgorde. Teksten en foto's bewerk je in Sveltia → Algemene instellingen → Informatiekaarten &amp; reviews. ‘Tonen’ uitzetten verbergt de review overal. Andere blokken houden hun eigen selectie. Nieuwe Sveltia-reviews worden beschikbaar na publicatie en het opnieuw laden van Puck; bewaar eerst je werk.</p>};
+   }
    if(type==='StoryCarousel'){
      fields.storySource={type:'select',label:'Inhoud van de carrousel',options:[{label:'Alle gepubliceerde reportages uit Sveltia',value:'all'},{label:'Zelf reportages kiezen en ordenen',value:'selected'},{label:'Handmatige foto’s en teksten behouden',value:'manual'}]};
      fields.storySelection={type:'array',label:'Eigen selectie en volgorde',getItemSummary:item=>context.stories.find(story=>story.id===item.storyId)?.title||'Kies een reportage',defaultItemProps:{storyId:''},arrayFields:{storyId:{type:'select',label:'Trouwreportage',options:[{label:'Kies een reportage',value:''},...context.stories.filter(story=>story.published!==false).map(story=>({label:story.title,value:story.id}))]}}};
@@ -62,6 +69,11 @@ function blockConfig(context){
      delete manual.storySelection;delete manual.crops;delete selected.images;delete selected.links;
      const all={...selected};delete all.storySelection;
      resolveCarouselFields=({props})=>props.storySource==='selected'?selected:props.storySource==='all'?all:manual;
+   }
+   if(type==='Review'){
+     const all={...fields};delete all.reviewSelection;
+     const selected={...fields};
+     resolveCarouselFields=({props})=>props.reviewSource==='selected'?selected:all;
    }
    components[type]={label:spec.label,fields,defaultProps:{...structuredClone(spec.defaults),background:defaultBackground(type)},...(resolveCarouselFields?{resolveFields:resolveCarouselFields}:{}),render:props=><div className="sn-puck-block" dangerouslySetInnerHTML={{__html:renderBlock({type,props},context)}}/>};
  }
