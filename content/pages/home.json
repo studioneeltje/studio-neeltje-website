@@ -248,49 +248,49 @@
           {
             "key": "0",
             "label": "Een spontaan moment tijdens een bruiloft bij Kasteel Keukenhof",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-7f699810-3004-4378-a464-7c56b1e52337",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "1",
             "label": "Een liefdevol moment tijdens een destination wedding in Spanje",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-fa80922c-b664-414c-ad4a-57fcfb2233a5",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Een vrolijk moment tijdens een bruiloft in Utrecht",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "media-f3b05dcb-5a98-4985-a21f-d0ab451e6c1c",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "3",
             "label": "Een trouwmoment tijdens een bruiloft in Bordeaux",
-            "mediaId": "foto-e21748886faf",
+            "mediaId": "media-ef86e876-ba1d-440b-9c47-a67638d8e694",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "4",
             "label": "Persoonlijke details die klaarstaan voor de trouwdag",
-            "mediaId": "foto-f5d8e85a877d",
+            "mediaId": "media-112304b6-77a5-482e-8d07-eaf795fbf7d2",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "5",
             "label": "Neeltje, jullie trouwfotograaf, tussen de momenten door",
-            "mediaId": "foto-75c93a94397c",
+            "mediaId": "media-bd3667fd-5533-4d10-8964-bdfb0c50e597",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "6",
             "label": "Een beeld om later samen naar terug te kijken",
-            "mediaId": "foto-95c436480d00",
+            "mediaId": "media-17911fc8-bf7f-4438-a7a7-8dc051fd60c5",
             "desktop": null,
             "mobile": null
           }
@@ -1048,35 +1048,35 @@
           {
             "key": "0",
             "label": "Een spontaan moment tijdens een bruiloft bij Kasteel Keukenhof",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-0a00c152-b028-458e-89a0-312045139156",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "1",
             "label": "Een liefdevol moment tijdens een destination wedding",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-09d75fa4-85b3-4837-8c33-ba02423278ca",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Een vrolijk moment tijdens een bruiloft in Utrecht",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "media-087acce5-f2cc-4622-9448-cbefd37baaf5",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "3",
             "label": "Persoonlijke details die klaarstaan voor de trouwdag",
-            "mediaId": "foto-f5d8e85a877d",
+            "mediaId": "media-02a06c59-e38a-4af4-b041-f3b54d5f3bb1",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "4",
             "label": "Een intiem portret van een bruidspaar op hun trouwdag",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-0a6d2a66-c13a-45e8-9aa0-91fc41ccd71e",
             "desktop": null,
             "mobile": null
           }
@@ -1089,7 +1089,22 @@
           }
         ],
         "background": "pink",
-        "id": "StoryCarousel-46231fa5-56b8-42cf-9ac5-78fcbc44a2bc"
+        "id": "StoryCarousel-46231fa5-56b8-42cf-9ac5-78fcbc44a2bc",
+        "storySource": "selected",
+        "storySelection": [
+          {
+            "storyId": "keukenhof"
+          },
+          {
+            "storyId": "bordeaux"
+          },
+          {
+            "storyId": "malaga"
+          },
+          {
+            "storyId": "dengh"
+          }
+        ]
       }
     },
     {
