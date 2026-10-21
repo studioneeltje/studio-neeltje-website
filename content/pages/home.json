@@ -145,7 +145,7 @@
           {
             "key": "2",
             "label": "Label: echt gebeurt.",
-            "value": "echt gebeurt."
+            "value": "écht gebeurt."
           },
           {
             "key": "3",
@@ -325,12 +325,12 @@
           {
             "key": "1",
             "label": "Titel: Rustig dichtbij.",
-            "value": "Rustig dichtbij."
+            "value": "Je moet je "
           },
           {
             "key": "2",
             "label": "Label: Altijd alert.",
-            "value": "Altijd alert."
+            "value": "comfortabel voelen."
           },
           {
             "key": "3",
@@ -607,6 +607,52 @@
         ],
         "background": "blue",
         "id": "Method-0b5c85f3-794e-468f-9110-5afe8c4b7f24"
+      }
+    },
+    {
+      "type": "FanGallery",
+      "props": {
+        "motion": "on",
+        "images": [
+          {
+            "key": "0",
+            "label": "Foto links",
+            "mediaId": "media-9d2bfa5c-152a-403e-a690-cd372d735754",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Foto midden",
+            "mediaId": "media-7f699810-3004-4378-a464-7c56b1e52337",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Foto rechts",
+            "mediaId": "media-8d29455f-b46d-4275-ad2b-110c0daad1a1",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "3",
+            "label": "Foto 4",
+            "mediaId": "",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "4",
+            "label": "Foto 5",
+            "mediaId": "",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "count": "3",
+        "background": "blue",
+        "id": "FanGallery-dabd1458-524c-41df-a8af-2798ac61f454"
       }
     },
     {
