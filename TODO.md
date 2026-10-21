@@ -428,3 +428,5 @@ Bouw en publicatie expliciet goedgekeurd door Neeltje op 21 oktober 2026: ‘bou
 - [x] Het vaste donkerrode vlak achter de draaiende foto's verwijderen als onafhankelijke kleur. Het vlak volgt nu de gekozen achtergrond: wit, blauw, roze of donkerrood; tekst en bediening volgen de passende sectiekleuren. Foto's, posities, animatie en opgeslagen instellingen blijven behouden.
 
 Toegevoegd door Neeltje tijdens de goedgekeurde bouw- en publicatiestap van de reviewkeuze op 21 oktober 2026.
+
+Tijdens de online bouw bleek de opgeslagen review van Mark en Rooa dezelfde interne naam als Chiel en Natascha te hebben. De dubbele naam is hersteld naar mark-rooa. Onbedoeld overgenomen vervolgkoppelingen naar de review van een ander bruidspaar zijn leeggemaakt; alle namen, quotes, volledige teksten en foto’s blijven behouden. De vervolgkoppeling is nu zichtbaar in Sveltia, met uitleg dat deze bij zelfstandige reviews leeg hoort te blijven.

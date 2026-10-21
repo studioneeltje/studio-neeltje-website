@@ -285,7 +285,7 @@ collections:
               - {name: href, label: Knoplink (optioneel), widget: string, required: false, hint: Alleen als tekst én link ingevuld zijn wordt de knop zichtbaar.}
           - name: reviews
             label: Reviews voor kaarten en losse quote
-            hint: Dezelfde review kies je in Puck voor een kaart of de grote losse quote. De huidige twee teksten zijn fragmenten van dezelfde echte review; de losse quote gebruikt het vervolg automatisch zolang Volledige review leeg is.
+            hint: Kies deze reviews in Puck voor kaarten of de grote losse quote. Geef iedere review een unieke korte naam. Laat Vervolg van een andere review leeg bij een zelfstandig bruidspaar.
             widget: list
             min: 2
             summary: '{{name}} — {{caption}}'
@@ -293,7 +293,7 @@ collections:
               - {name: id, label: Korte naam van de review, widget: string, hint: 'Bijvoorbeeld jeroen-martine. Houd deze naam gelijk nadat je de review op een pagina hebt gekozen.', pattern: ['^[a-z0-9][a-z0-9-]{0,80}$', 'Gebruik kleine letters, cijfers en streepjes.']}
               - {name: quote, label: Quote, widget: text}
               - {name: fullText, label: Volledige review (optioneel uitklapbaar), widget: text, required: false, hint: Alleen voor de grote losse quote. Zonder tekst of gekoppeld vervolg verschijnt geen uitklapknop.}
-              - {name: continuationOf, widget: hidden, default: '', required: false}
+              - {name: continuationOf, label: Vervolg van een andere review (meestal leeg), widget: string, default: '', required: false, hint: 'Alleen invullen als dit echt een tweede fragment van dezelfde review is. Gebruik de korte naam van de eerste review; laat dit leeg bij een ander bruidspaar.'}
               - {name: name, label: Naam (sierlijk lettertype), widget: string}
               - {name: caption, label: Onderschrift, widget: string, required: false}
               - {name: image, label: Foto (optioneel), widget: neeltje-image, required: false}
