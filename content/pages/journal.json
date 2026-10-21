@@ -1,11 +1,11 @@
 {
   "id": "journal",
-  "title": "Journal",
-  "description": "Trouwfotografie door Studio Neeltje.",
+  "title": "Blog",
+  "description": "Eerlijke blogs over trouwfotografie, trouwplanning en destination weddings. Geschreven vanuit de praktijk, door trouwfotograaf Neeltje van Studio Neeltje.",
   "root": {
     "props": {
-      "title": "Journal",
-      "description": "Trouwfotografie door Studio Neeltje."
+      "title": "Blog",
+      "description": "Eerlijke blogs over trouwfotografie, trouwplanning en destination weddings. Geschreven vanuit de praktijk, door trouwfotograaf Neeltje van Studio Neeltje."
     }
   },
   "content": [
@@ -39,27 +39,58 @@
           {
             "key": "0",
             "label": "Foto achteraan",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-b661d875-26aa-4ce0-bca1-af65e1f46b7b",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "1",
             "label": "Hoofdfoto",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-8617a914-2357-428b-b6b6-7cfd2383db25",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Detailfoto",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "media-437005a2-a847-4f5c-bcb9-97a8354d061b",
             "desktop": null,
             "mobile": null
           }
         ],
         "links": [],
-        "background": "white"
+        "background": "wine"
+      }
+    },
+    {
+      "type": "Journal",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: JOURNAL / TIPS & VERHALEN",
+            "value": "MIJN VERHAAL / TIPS & TRICKS"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Voor jullie dag.",
+            "value": "Hier heb je misschien"
+          },
+          {
+            "key": "2",
+            "label": "Label: En alles ervoor.",
+            "value": "nog niet aan gedacht."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Van handige planningstips tot ontspannen voor de",
+            "value": "Van handige planningstips tot ontspannen voor de camera staan: lees mee vanuit het perspectief van een trouwfotograaf."
+          }
+        ],
+        "images": [],
+        "links": [],
+        "background": "white",
+        "id": "Journal-6bb45b04-c6c1-44c2-a347-8a07fbb9a4d3"
       }
     }
   ],
