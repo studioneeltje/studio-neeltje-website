@@ -1,12 +1,17 @@
 {
-  "id": "foto-e21748886faf",
-  "title": "Een trouwmoment tijdens een bruiloft in Bordeaux",
   "alt": "Een trouwmoment tijdens een bruiloft in Bordeaux",
-  "kind": "image",
-  "source": "media/originals/foto-e21748886faf.jpg",
+  "deletedAt": "2026-10-20T08:11:54.091Z",
+  "dimensions": {
+    "width": 4672,
+    "height": 7008
+  },
   "focus": {
     "x": 50,
     "y": 50
   },
-  "originalSourceURL": "https://static.wixstatic.com/media/31108f_026e0e715cbf4b3b8608bd92ca53cbd3~mv2.jpg"
+  "id": "foto-e21748886faf",
+  "kind": "image",
+  "originalSourceURL": "https://static.wixstatic.com/media/31108f_026e0e715cbf4b3b8608bd92ca53cbd3~mv2.jpg",
+  "source": "media/originals/foto-e21748886faf.jpg",
+  "title": "Een trouwmoment tijdens een bruiloft in Bordeaux"
 }
