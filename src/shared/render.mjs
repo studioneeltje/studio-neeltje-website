@@ -1,3 +1,4 @@
+import {projectMarkup} from './project-story.mjs';
 import {prepareForms} from './forms.mjs';
 import {checklistContentsMarkup,checklistAudienceMarkup} from './checklist.mjs';
 import {journeyMarkup,thankYouMarkup} from './experience.mjs';
@@ -15,7 +16,8 @@ export function renderBlock(block, context) {
   const spec = context.templates[block.type];
   if (!spec) throw new Error(`Onbekend blok: ${block.type}`);
   let html = spec.html;
-  if(block.type==='TiltCard') html=tiltCardMarkup(p);
+  if(block.type==='ProjectStory') html=projectMarkup(context.stories?.find(story=>story.id===p.storyId),context,p);
+  else if(block.type==='TiltCard') html=tiltCardMarkup(p);
   else if(block.type==='FanGallery') html=fanGalleryMarkup(p,context);
   else if(block.type==='StoryCarousel'&&['all','selected'].includes(p.storySource)) html=storyCarouselMarkup(p,context);
   else if(block.type==='ChecklistContents') html=checklistContentsMarkup(p,context);
