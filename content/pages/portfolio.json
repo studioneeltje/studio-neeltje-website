@@ -37,21 +37,21 @@
           {
             "key": "0",
             "label": "Foto achteraan",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-02dcb870-0508-4865-8171-6f86aabd6eef",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "1",
             "label": "Hoofdfoto",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "media-2a0250ac-a1c4-4e17-b327-9a889fb19c6d",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Detailfoto",
-            "mediaId": "foto-f5d8e85a877d",
+            "mediaId": "media-a0878395-84ed-4d01-890c-fed7936838cb",
             "desktop": null,
             "mobile": null
           }
@@ -216,9 +216,75 @@
       "props": {
         "eyebrow": "LIEVE WOORDEN / VAN BRUIDSPAREN",
         "title": "Wat zij",
-        "emphasis": "ervan vinden.",
-        "background": "pink",
-        "id": "Review-eb9e4013-6404-4ab7-9200-ea85b2a41be1"
+        "emphasis": "ervan vonden.",
+        "background": "white",
+        "id": "Review-eb9e4013-6404-4ab7-9200-ea85b2a41be1",
+        "reviewSource": "all",
+        "reviewSelection": [
+          {
+            "reviewId": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "ContactCTA",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: Neeltje · jullie trouwfotograaf",
+            "value": "Neeltje · jullie trouwfotograaf"
+          },
+          {
+            "key": "1",
+            "label": "Label: 05 — ZULLEN WE KENNISMAKEN?",
+            "value": "05 — ZULLEN WE KENNISMAKEN?"
+          },
+          {
+            "key": "2",
+            "label": "Titel: Voelt dit als",
+            "value": "Voelt dit als"
+          },
+          {
+            "key": "3",
+            "label": "Label: jullie verhaal?",
+            "value": "jullie verhaal?"
+          },
+          {
+            "key": "4",
+            "label": "Tekst: Vertel me over jullie trouwdag, datum en locatie",
+            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt en wat ik voor jullie kan betekenen."
+          },
+          {
+            "key": "5",
+            "label": "Knop / link: Vertel me jullie plannen",
+            "value": "Vertel me jullie plannen"
+          },
+          {
+            "key": "6",
+            "label": "Label: Vrijblijvend kennismaken · gewoon kijken of het ",
+            "value": "Vrijblijvend kennismaken · gewoon kijken of het klikt"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "contact.html"
+          }
+        ],
+        "background": "wine",
+        "id": "ContactCTA-3908aad6-59a5-4c64-968a-1addb2c5f7a6"
       }
     }
   ],
