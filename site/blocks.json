@@ -853,7 +853,9 @@
     "defaults": {
       "eyebrow": "LIEVE WOORDEN / VAN BRUIDSPAREN",
       "title": "Wat zij",
-      "emphasis": "ervan vinden."
+      "emphasis": "ervan vinden.",
+      "reviewSource": "all",
+      "reviewSelection": []
     }
   },
   "Wall": {

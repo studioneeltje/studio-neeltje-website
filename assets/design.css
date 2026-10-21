@@ -442,7 +442,7 @@
 .mode-canvas [data-sn-theme][data-sn-theme][data-sn-theme] :is(.canvas-faq-list details,.price-route,.canvas-price-value,.social-feature-bottom,.canvas-project-list,.review-top) {border-color:var(--sn-rule)!important}
 /* Independent surfaces keep their own readable text/background pairs. */
 .mode-canvas [data-sn-theme][data-sn-theme][data-sn-theme] :is(.canvas-price-card,.availability-form,.sn-instagram-post,.checklist-sheet,.about-photo-note) {--sn-fg:#65001d;--sn-bg:#fff;--sn-rule:#65001d35;--sn-action-bg:#65001d;--sn-action-fg:#fde6f2;--sn-action-hover:#850a35;background:var(--sn-bg)!important;color:var(--sn-fg)!important}
-.mode-canvas [data-sn-theme][data-sn-theme][data-sn-theme] :is(.canvas-price-card.is-featured,.standalone-contact-form,.orbit-stage) {--sn-fg:#fde6f2;--sn-bg:#65001d;--sn-rule:#fde6f255;--sn-action-bg:#fde6f2;--sn-action-fg:#65001d;--sn-action-hover:#fff;background:var(--sn-bg)!important;color:var(--sn-fg)!important}
+.mode-canvas [data-sn-theme][data-sn-theme][data-sn-theme] :is(.canvas-price-card.is-featured,.standalone-contact-form) {--sn-fg:#fde6f2;--sn-bg:#65001d;--sn-rule:#fde6f255;--sn-action-bg:#fde6f2;--sn-action-fg:#65001d;--sn-action-hover:#fff;background:var(--sn-bg)!important;color:var(--sn-fg)!important}
 .mode-canvas [data-sn-theme][data-sn-theme][data-sn-theme] .about-photo-note {background:#fde6f2!important}
 .mode-canvas [data-sn-theme][data-sn-theme][data-sn-theme] :is(.standalone-form-kicker,form label,form small,.orbit-stage-meta) {color:var(--sn-fg)!important}
 .mode-canvas [data-sn-theme][data-sn-theme][data-sn-theme] :is(.button,.story-project-link,.standalone-form-submit,.availability-form button,.social-follow-link,.sn-video-toggle,.orbit-controls button,.story-arrow) {background:var(--sn-action-bg)!important;color:var(--sn-action-fg)!important;border-color:var(--sn-action-bg)!important}
@@ -807,3 +807,7 @@ body.sn-lightbox-open{overflow:hidden}
 
 .sn-project-cover,.sn-project-wide,.sn-project-split figure,.sn-project-review-photo{overflow:hidden}
 .sn-project-pair>.sn-picture{display:block;overflow:hidden}
+
+/* The rotating photos sit on the selected section colour. */
+.mode-canvas [data-sn-block="Orbit"] :is(.orbit-stage,.orbit-stage-wrap){background:transparent!important;color:inherit!important}
+.mode-canvas .sn-reviews-track[data-review-count="1"]{--review-cols:1;max-width:650px;margin-inline:auto}
