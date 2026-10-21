@@ -58,6 +58,7 @@ function blockConfig(context){
      fields.crops={type:'custom',label:'Uitsneden van reportagefoto’s',render:props=><RecordCrops {...props} context={context} records={context.stories}/>};
      fields.beheer={type:'custom',label:'Portfolio beheren',render:()=> <p className="field-help">Kies hierboven reportages uit Sveltia. Foto, titel, locatie en projectlink volgen de reportage. Bij een eigen selectie kun je de volgorde aanpassen. Alleen gepubliceerde reportages krijgen een link. Bewerk verhalen via <a href={new URL('cms/',ROOT).href} target="_blank" rel="noreferrer">Sveltia → Trouwreportages ↗</a>. Ververs Puck na het publiceren vanuit Sveltia; bewaar eerst je werk.</p>};
    }
+   if(type==='Orbit')fields.beheer={type:'custom',label:'Tot twaalf foto’s',render:()=> <p className="field-help">De eerste zeven bestaande fotovakken blijven behouden. Vul de extra fotovakken 8 tot en met 12 om de draaigalerij voller te maken. Lege extra vakken worden niet getoond; foto’s en uitsneden kies je hierboven. De volgorde volgt de genummerde fotovakken.</p>};
    if(type==='FanGallery')fields.count={type:'radio',label:'Aantal foto’s naast elkaar',options:[{label:'3 foto’s',value:'3'},{label:'5 foto’s',value:'5'}]};
    if(type==='FanGallery')fields.motion={type:'radio',label:'Beweging bij aanwijzen',options:[{label:'Aan',value:'on'},{label:'Uit',value:'off'}]};
    if(type==='ContactForm')fields.formKind={type:'select',label:'Gebruik van het formulier',options:[{label:'Contactaanvraag',value:'contact'},{label:'Gratis checklist aanvragen',value:'checklist'}]};

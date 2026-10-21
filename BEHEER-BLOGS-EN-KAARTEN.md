@@ -161,3 +161,12 @@ Een geslaagde beeldbankverversing wordt op dit apparaat bewaard. Bij een tijdeli
 Selecteer in Puck **Losse reviewkaarten uit Sveltia**. Bij **Welke reviews tonen?** kies je alle zichtbare reviews of **Zelf reviews kiezen voor dit blok**. Voeg bij **Eigen selectie en volgorde** de gewenste reviews toe; iedere keuze toont de naam en het begin van de quote. Sleep om de volgorde te veranderen. Een lege eigen selectie toont geen kaarten; er wordt niet automatisch naar andere reviews teruggevallen. Dubbele keuzes worden één keer getoond. Een verdwenen of uitgezette review krijgt een melding in de editor. ‘Tonen’ in Sveltia blijft gelden voor alle pagina's. De reviewteksten en foto's blijven uitsluitend in Sveltia. Bewaar en publiceer de Puck-pagina om je selectie zichtbaar te maken.
 
 Bij **Draai mee door jullie dag** volgt het vlak achter de foto's voortaan de achtergrondkeuze van het blok.
+
+
+## Twaalf foto’s en volledige reviews
+
+**Draai mee door jullie dag (tot 12 foto’s)** heeft nu twaalf fotovelden. De eerste zeven bestaande keuzes en uitsneden blijven behouden. Vul foto 8 tot en met 12 om de galerij uit te breiden; lege extra velden worden overgeslagen. De bestaande draaibeweging, vegen, pijltjes en vergroting blijven beschikbaar.
+
+Bij de reviewkaarten wordt **Volledige review** uit Sveltia → Informatiekaarten & reviews voortaan gebruikt voor **Lees de volledige review**. Iedere kaart klapt afzonderlijk open. Als er geen aparte lange tekst is, blijft de volledige ingevulde quote zichtbaar zonder een lege uitklapknop. De selectie en volgorde per Puck-blok blijven behouden.
+
+Het persoonlijke quoteblok met handtekening heeft een rode markeerstift in de accentkleur; het lichtroze markeervlak is verwijderd.

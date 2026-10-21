@@ -430,3 +430,20 @@ Bouw en publicatie expliciet goedgekeurd door Neeltje op 21 oktober 2026: ‘bou
 Toegevoegd door Neeltje tijdens de goedgekeurde bouw- en publicatiestap van de reviewkeuze op 21 oktober 2026.
 
 Tijdens de online bouw bleek de opgeslagen review van Mark en Rooa dezelfde interne naam als Chiel en Natascha te hebben. De dubbele naam is hersteld naar mark-rooa. Onbedoeld overgenomen vervolgkoppelingen naar de review van een ander bruidspaar zijn leeggemaakt; alle namen, quotes, volledige teksten en foto’s blijven behouden. De vervolgkoppeling is nu zichtbaar in Sveltia, met uitleg dat deze bij zelfstandige reviews leeg hoort te blijven.
+
+Reviewkeuze en doorlopende galerijachtergrond gepubliceerd op 21 oktober 2026 via PR #31, main 35269c629eefc85d23318610b17cffb8cd67d515. GitHub Pages-run 39596802368 is geslaagd. De bouw controleerde de actuele vier zelfstandige reviews; de teksten en foto's zijn behouden.
+
+## Draai mee — twaalf foto's — visueel voorstel 21 oktober 2026
+
+- [x] De draaigalerij uitbreiden van zeven vaste fotovelden naar maximaal twaalf foto's, met behoud van de huidige ingevulde foto's en uitsneden.
+- [x] Met twaalf beelden een voller geheel maken; vegen, pijltjes, vergroting en passende mobiele afmetingen behouden. De galerij volgt de gekozen sectieachtergrond.
+- [x] Eerst een los interactief voorbeeld laten beoordelen; hierin wordt bestaand voorbeeldbeeldmateriaal herhaald op twaalf posities. Bouw en publicatie inmiddels expliciet goedgekeurd op 21 oktober 2026.
+
+Neeltje kiest op 21 oktober 2026 twaalf foto's in plaats van vijftien. Het losse voorbeeld is aangepast; de website is nog niet aangepast.
+
+## Aanvullingen tijdens bouw twaalf foto's — goedgekeurd 21 oktober 2026
+
+- [x] Quote met eigen handtekening: rood-oranje merkkleur voor markeerstift en handtekening; het lichtroze markeervlak vervalt. Donkerrode tekst blijft over het hele rode markeervlak leesbaar.
+- [x] Reviewkaarten: korte quote zichtbaar houden met een eigen uitklapbare volledige review uit hetzelfde Sveltia-record. Geen losse titel zonder toegang tot een ingevulde lange tekst. Zonder afzonderlijke lange tekst staat de hele quote zichtbaar en verschijnt geen lege uitklapknop. Native bediening met toetsenbord, onafhankelijk per kaart, bestaande keuzes en kleuren behouden.
+
+Neeltje vraagt beide aanvullingen mee te nemen in dezelfde bouw en directe publicatie. Geen klantteksten of media automatisch ingevuld of vervangen.
