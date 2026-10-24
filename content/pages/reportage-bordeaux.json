@@ -1,0 +1,34 @@
+{
+  "id": "reportage-bordeaux",
+  "title": "Bordeaux, France",
+  "description": "Een dag vol grote momenten en alles wat ertussen leeft.",
+  "root": {
+    "props": {
+      "title": "Bordeaux, France",
+      "description": "Een dag vol grote momenten en alles wat ertussen leeft."
+    }
+  },
+  "content": [
+    {
+      "type": "ProjectStory",
+      "props": {
+        "id": "project-bordeaux",
+        "storyId": "bordeaux",
+        "background": "white",
+        "crops": {},
+        "sectionOrder": []
+      }
+    },
+    {
+      "type": "InfoCards",
+      "props": {
+        "eyebrow": "DIT WIL IK",
+        "title": "Ontdek jouw",
+        "emphasis": "mogelijkheden.",
+        "background": "white",
+        "id": "InfoCards-5cd6428e-1b2f-4c01-8ecf-8aa35c77583d"
+      }
+    }
+  ],
+  "zones": {}
+}
