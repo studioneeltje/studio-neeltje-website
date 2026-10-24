@@ -1,27 +1,27 @@
 {
   "cards": [
     {
-      "label": "Voor jullie trouwdag",
-      "title": "Jullie zijn erbij.",
+      "label": "NIEUWSGIERIG?",
+      "title": "Wil jij dit ook?",
       "emphasis": "Ik leg het vast.",
-      "text": "Van het aankleden tot die laatste dans. Met ruimte voor alles wat vanzelf gebeurt, zonder jullie dag steeds stil te zetten.",
-      "image": "",
+      "text": "Trouwreportages vanaf € 1.550. Van 6 uur tot een volledige trouwdag",
+      "image": "media-7c72f7bb-72b0-483c-b48e-7e2145e062d1",
       "tags": [
-        "Trouwreportages",
-        "Echte momenten",
-        "Nederland & daarbuiten"
+        "Prijzen",
+        "Pakketten",
+        "Dit kun je verwachten"
       ],
-      "button": "Ontdek de trouwreportages",
-      "href": "reportages.html"
+      "button": "Ontdek mijn pakketen",
+      "href": "investering.html"
     },
     {
-      "label": "Voor alles erna",
-      "title": "Niet alleen een foto.",
-      "emphasis": "Een herinnering.",
-      "text": "Beelden die je niet alleen terugziet, maar ook weer even voelt. In een album, aan de muur of samen op de bank.",
-      "image": "foto-d5f77408f803",
+      "label": "ZULLEN WE KENNISMAKEN?",
+      "title": "Tijd voor een",
+      "emphasis": "kennismaking?",
+      "text": "Neem vrijblijvend contact op en kom erachter of ik jullie trouwdag mooier kan maken.",
+      "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
       "tags": [],
-      "button": "Ontdek de mogelijkheden",
+      "button": "Neem contact op",
       "href": "contact.html"
     }
   ],
