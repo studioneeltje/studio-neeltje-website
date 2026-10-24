@@ -20,6 +20,16 @@
       }
     },
     {
+      "type": "InfoCards",
+      "props": {
+        "eyebrow": "VOOR JULLIE DAG. EN DAARNA.",
+        "title": "Volop beleven.",
+        "emphasis": "Mooi bewaren.",
+        "background": "white",
+        "id": "InfoCards-5cd6428e-1b2f-4c01-8ecf-8aa35c77583d"
+      }
+    },
+    {
       "type": "TiltCard",
       "props": {
         "labelText": "nieuwsgierig",
@@ -47,27 +57,27 @@
           {
             "key": "1",
             "label": "Label: 05 — ZULLEN WE KENNISMAKEN?",
-            "value": "05 — ZULLEN WE KENNISMAKEN?"
+            "value": "ZULLEN WE KENNISMAKEN?"
           },
           {
             "key": "2",
             "label": "Titel: Voelt dit als",
-            "value": "Voelt dit als"
+            "value": "Tijd voor een"
           },
           {
             "key": "3",
             "label": "Label: jullie verhaal?",
-            "value": "jullie verhaal?"
+            "value": "kennismaking?"
           },
           {
             "key": "4",
             "label": "Tekst: Vertel me over jullie trouwdag, datum en locatie",
-            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt — en wat ik voor jullie kan betekenen."
+            "value": "Neem vrijblijvend contact op en kom erachter of ik jullie trouwdag mooier kan maken."
           },
           {
             "key": "5",
             "label": "Knop / link: Vertel me jullie plannen",
-            "value": "Vertel me jullie plannen"
+            "value": "Ontdek mijn contactgegevens"
           },
           {
             "key": "6",
@@ -117,17 +127,17 @@
           {
             "key": "3",
             "label": "Tekst: Een datum, een vraag of gewoon even kennismaken?",
-            "value": "Een datum, een vraag of gewoon even kennismaken? Laat een bericht achter. Ik lees graag wat jullie in gedachten hebben."
+            "value": "Vul jullie contactverzoek in en ik laat snel van me horen."
           },
           {
             "key": "4",
             "label": "Label: 01 / KENNISMAKEN",
-            "value": "01 / KENNISMAKEN"
+            "value": "Vrijblijvend"
           },
           {
             "key": "5",
             "label": "Label: Vrijblijvend en persoonlijk",
-            "value": "Vrijblijvend en persoonlijk"
+            "value": "altijd persoonlijk"
           },
           {
             "key": "6",
