@@ -76,5 +76,19 @@
     "title": "Ontdek jouw",
     "emphasis": "mogelijkheden.",
     "background": "white"
+  },
+  "personalInvite": {
+    "eyebrow": "Jullie zijn erbij. Ik leg het vast.",
+    "title": "Jullie dag beleven.",
+    "emphasis": "Ik leg het vast.",
+    "body": "Jullie hoeven niet te weten hoe je moet poseren. Ik help jullie ontspannen, zodat jullie jezelf kunnen zijn.",
+    "button": "Vertel me over jullie trouwdag",
+    "href": "contact.html",
+    "reassurance": "Vrijblijvend kennismaken. Eerst ontdekken of het klikt.",
+    "photoLabel": "Aangenaam, Neeltje.",
+    "photoCaption": "Jullie trouwfotograaf",
+    "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
+    "quote": "Vanaf het eerste moment voelden we ons helemaal op ons gemak.",
+    "name": "Onno en Sari Koole"
   }
 }
