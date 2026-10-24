@@ -267,6 +267,24 @@ collections:
         label: Informatiekaarten & reviews
         file: content/settings/editorial.json
         fields:
+          - name: personalInvite
+            label: Persoonlijke contactuitnodiging
+            widget: object
+            required: false
+            hint: Voor de persoonlijke contactuitnodiging in Puck en de afsluiting van portfolioverhalen. Alleen tekst én link samen tonen een knop.
+            fields:
+              - {name: eyebrow, label: Bovenregel, widget: string, required: false}
+              - {name: title, label: Titel, widget: string, required: false}
+              - {name: emphasis, label: Sierlijke titelregel, widget: string, required: false}
+              - {name: body, label: Korte tekst, widget: text, required: false}
+              - {name: button, label: Knoptekst (optioneel), widget: string, required: false}
+              - {name: href, label: Knoplink (optioneel), widget: string, required: false}
+              - {name: reassurance, label: Geruststelling onder de knop, widget: string, required: false}
+              - {name: image, label: Portret van Neeltje, widget: neeltje-image, required: false}
+              - {name: photoLabel, label: Naam op het fotolabel, widget: string, required: false}
+              - {name: photoCaption, label: Ondertitel op het fotolabel, widget: string, required: false}
+              - {name: quote, label: Echte korte review (optioneel), widget: text, required: false}
+              - {name: name, label: Naam bij de review, widget: string, required: false}
           - name: portfolioCards
             label: Kop boven informatiekaarten op portfolio’s
             hint: Deze kop en de twee informatiekaarten hieronder worden automatisch op alle portfolio-projectpagina’s gebruikt, zoals op Bordeaux, Frankrijk.

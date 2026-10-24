@@ -1888,5 +1888,13 @@
       "sectionOrder": [],
       "crops": {}
     }
+  },
+  "PersonalInvite": {
+    "label": "Persoonlijke contactuitnodiging",
+    "html": "",
+    "defaults": {
+      "background": "wine",
+      "image": {}
+    }
   }
 }
