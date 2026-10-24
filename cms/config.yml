@@ -126,6 +126,8 @@ collections:
     fields:
       - {name: id, label: Korte naam in de URL, widget: string, pattern: ['^[a-z0-9][a-z0-9-]{0,80}$', 'Gebruik kleine letters, cijfers en streepjes.']}
       - {name: title, label: Titel, widget: string}
+      - {name: seoTitle, label: Titel voor zoekmachines, widget: string, required: false, hint: 'Optionele SEO-titel. Laat leeg om de artikeltitel te gebruiken. De zichtbare titel in je blog verandert hierdoor niet.'}
+      - {name: seoDescription, label: Omschrijving voor zoekmachines, widget: text, required: false, hint: 'Optionele meta-omschrijving voor dit artikel. Laat leeg om de introductie te gebruiken. De zichtbare introductie blijft hetzelfde.'}
       - {name: category, label: Onderwerp, widget: string}
       - {name: excerpt, label: Introductie, widget: text}
       - name: summary
