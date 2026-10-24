@@ -70,5 +70,11 @@
       "image": "",
       "visible": true
     }
-  ]
+  ],
+  "portfolioCards": {
+    "eyebrow": "DIT WIL IK",
+    "title": "Ontdek jouw",
+    "emphasis": "mogelijkheden.",
+    "background": "white"
+  }
 }

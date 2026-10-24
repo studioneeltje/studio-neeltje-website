@@ -1,3 +1,4 @@
+import {withPortfolioCards} from './portfolio-cards.mjs';
 import {marked} from 'marked';
 import sanitizeHTML from 'sanitize-html';
 import {escapeHTML as e,safeURL,imageMarkup,isMediaAvailable} from './media.mjs';
@@ -7,7 +8,7 @@ export function projectSections(record,order){
  if(!order?.length)return sections;
  const seen=new Set();return [...order.flatMap(item=>{const part=sections.find(s=>s.key===item.sectionKey);if(!part||seen.has(part.key))return [];seen.add(part.key);return [part];}),...sections.filter(s=>!seen.has(s.key))];
 }
-export function projectPage(record){return {id:`reportage-${record.id}`,title:record.title,description:record.seoDescription||record.excerpt,root:{props:{title:record.seoTitle||record.title,description:record.seoDescription||record.excerpt}},content:[{type:'ProjectStory',props:{id:`project-${record.id}`,storyId:record.id,background:'white',crops:{},sectionOrder:[]}}]};}
+export function projectPage(record){return withPortfolioCards({id:`reportage-${record.id}`,title:record.title,description:record.seoDescription||record.excerpt,root:{props:{title:record.seoTitle||record.title,description:record.seoDescription||record.excerpt}},content:[{type:'ProjectStory',props:{id:`project-${record.id}`,storyId:record.id,background:'white',crops:{},sectionOrder:[]}}]});}
 export function projectMarkup(record,context,props={}){
  if(record?.published===false&&!context.preview)return '';
  if(!record)return context.preview?'<section class="sn-text-section"><p>Kies een trouwreportage uit Sveltia.</p></section>':'';

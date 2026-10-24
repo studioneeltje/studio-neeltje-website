@@ -265,6 +265,16 @@ collections:
         label: Informatiekaarten & reviews
         file: content/settings/editorial.json
         fields:
+          - name: portfolioCards
+            label: Kop boven informatiekaarten op portfolio’s
+            hint: Deze kop en de twee informatiekaarten hieronder worden automatisch op alle portfolio-projectpagina’s gebruikt, zoals op Bordeaux, Frankrijk.
+            widget: object
+            required: false
+            fields:
+              - {name: eyebrow, label: Bovenregel, widget: string, required: false, default: DIT WIL IK}
+              - {name: title, label: Titel, widget: string, default: Ontdek jouw}
+              - {name: emphasis, label: Sierlijke titelregel, widget: string, default: mogelijkheden.}
+              - {name: background, label: Achtergrond, widget: select, default: white, options: [{label: Wit, value: white}, {label: Blauw, value: blue}, {label: Roze, value: pink}, {label: Donkerrood, value: wine}]}
           - name: cards
             label: Volop beleven, mooi bewaren
             widget: list

@@ -82,7 +82,7 @@ function prose(value){return sanitizeHTML(marked.parse(String(value||''),{async:
 for(const [collection,prefix]of [[stories,'reportage'],[articles,'artikel']])for(const record of collection.filter(r=>r.published!==false)){
  if(!/^[a-z0-9][a-z0-9-]{0,80}$/.test(record.id))throw Error('Ongeldige URL voor een reportage of artikel.');
  const custom=prefix==='reportage'?pages.find(page=>page.id===`reportage-${record.id}`):null;
- const content=prefix==='artikel'?renderArticle(record,context):custom?renderPage(custom,context):projectMarkup(record,context);
+ const content=prefix==='artikel'?renderArticle(record,context):custom?renderPage(custom,context):renderPage(projectPage(record),context);
  const title=record.seoTitle||record.title,description=record.seoDescription||record.excerpt;
  await fs.writeFile(path.join(out,`${prefix}-${record.id}.html`),documentHTML(title,description,content));
  if(prefix==='reportage')await fs.writeFile(path.join(out,`pagina-reportage-${record.id}.html`),documentHTML(title,description,content));

@@ -1,6 +1,7 @@
 import {renderArticle} from '../shared/article.mjs';
 import {inlinePreviewPhotos} from './preview-images.mjs';
-import {projectMarkup} from '../shared/project-story.mjs';
+import {projectPage} from '../shared/project-story.mjs';
+import {renderPage} from '../shared/render.mjs';
 import React,{useEffect,useState}from'react';
 import{createRoot}from'react-dom/client';
 import{CropEditor}from'./CropEditor.jsx';
@@ -59,7 +60,7 @@ function ProjectPreview({record}){
  const [context,setContext]=useState(null);
  useEffect(()=>{let active=true;loadLibrary().then(data=>{if(active)setContext(data);}).catch(()=>{});return()=>{active=false;};},[]);
  if(!context)return <p>Voorvertoning laden…</p>;
- const html=projectMarkup(record,{...context,assetBaseURL:ROOT,preview:true});
+ const html=renderPage(projectPage(record),{...context,assetBaseURL:ROOT,preview:true});
  const source=`<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="${ROOT}"><link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;600;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/theme.css"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/blocks.css"><link rel="stylesheet" href="assets/design.css"></head><body class="sn-public"><main class="mode mode-canvas active">${html}</main></body></html>`;
  return <iframe title="Voorvertoning van deze reportage" sandbox="" srcDoc={source} style={{width:'100%',height:'90vh',border:0}}/>;
 }

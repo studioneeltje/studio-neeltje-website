@@ -1,3 +1,4 @@
+import {portfolioCardsProps,withPortfolioCards} from './portfolio-cards.mjs';
 import {orbitGalleryMarkup} from './orbit-gallery.mjs';
 import {projectMarkup} from './project-story.mjs';
 import {prepareForms} from './forms.mjs';
@@ -13,7 +14,7 @@ import {storyCarouselMarkup} from './story-carousel.mjs';
 import {escapeHTML as e, safeURL, imageMarkup, videoMarkup, assetURL} from './media.mjs';
 
 export function renderBlock(block, context) {
-  const p = block.props || {};
+  const p = block.type==='InfoCards'&&block.props?.portfolioLinked?{...block.props,...portfolioCardsProps(context.settings)}:block.props||{};
   const spec = context.templates[block.type];
   if (!spec) throw new Error(`Onbekend blok: ${block.type}`);
   let html = spec.html;
@@ -75,7 +76,7 @@ export function renderBlock(block, context) {
 export function renderPage(page, context) {
   const ids = new Set();
   let checklistAnchor=false;
-  return page.content.map(block=>{
+  return withPortfolioCards(page).content.map(block=>{
     const id=block.props?.id;
     if (!id || ids.has(id)) throw new Error('Ieder blok moet een unieke identificatie hebben.');
     ids.add(id);
