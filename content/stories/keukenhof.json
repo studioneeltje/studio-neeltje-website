@@ -4,10 +4,32 @@
   "location": "Kasteel Keukenhof in Lisse",
   "excerpt": "De bruiloft van Rick & Ashley vond plaats bij het prachtige Kasteel Keukenhof in Lisse. Een historische locatie, een zonnige dag, heel veel gelach en vooral heel veel liefde. Als trouwfotograaf was ik er op hun trouwdag bij vanaf het klaarmaken tot het feest in Het Koetshuis.\n\nWil je spontane foto's? Dan helpt het ontzettend om elkaar gedurende de dag op te zoeken. Nou, dat zat bij Rick & Ashley wel goed. Dat leverde automatisch al veel spontane en persoonlijke beelden op.",
   "body": "### Trouwen bij Kasteel Keukenhof in Lisse\n\nKasteel Keukenhof _vormde het decor_ voor deze bijzondere bruiloft. De dag begon met het klaarmaken van de bruid en bruidegom. Ook de details kregen aandacht: van de accessoires en trouwjurk tot de voorbereidingen.\n\nHet kasteel is een bijzondere plek om te trouwen. Het historische interieur en de ruimtes rondom het landgoed bieden bovendien volop mogelijkheden voor trouwfotografie, ook wanneer het weer niet helemaal meewerkt.\n\nDat zorgde er overigens ook voor dat we een curator (voelde als personal assistent, wat dan weer heel luxe aan voelt), mét handschoenen aan, om hulp moesten vragen wanneer er iets verplaatst moest worden. \n\nTijdens de trouwdag fotografeerde ik de ceremonie, het proostmoment op het balkon, het aansnijden van de taart en de borrel. Daarna was het tijd voor de fotoshoot met Rick & Ashley, het diner en feest.",
-  "cover": "foto-d5f77408f803",
+  "cover": "media-9d2bfa5c-152a-403e-a690-cd372d735754",
   "hoverCover": "media-9d2bfa5c-152a-403e-a690-cd372d735754",
   "gallery": [
-    "foto-d5f77408f803"
+    "media-02a06c59-e38a-4af4-b041-f3b54d5f3bb1",
+    "media-09d75fa4-85b3-4837-8c33-ba02423278ca",
+    "media-106322ca-b338-47d1-b316-0296a855ae66",
+    "media-112304b6-77a5-482e-8d07-eaf795fbf7d2",
+    "media-3b1c19b0-bd8f-45c4-a697-fe809183570b",
+    "media-41e8a879-35b2-4061-aa86-8b24402fc54f",
+    "media-486b1aea-2474-4f79-a31a-18436d3ba28c",
+    "media-dbd5c63e-22e7-4772-9068-9bfe877c95e2",
+    "media-f669c3e1-6b18-4d21-8eaf-aa7754cbd0f3",
+    "media-c57fd4db-f7ac-4fd8-a1a5-3d71f9053bd5",
+    "media-c3eae223-88d3-4733-bb0f-513728fb05de",
+    "media-b4c0093e-2bef-46d0-b359-fbeca19919e7",
+    "media-c745d232-c49a-4b3d-89cd-2c4eee0ae2a1",
+    "media-bd67ca84-6f83-4357-b39b-aa1fdb20e4ae",
+    "media-c2bbe5d2-4a04-4ce0-9eda-fbba9edb7e56",
+    "media-b0a245b5-c42b-406a-b332-9c0b8493d0a6",
+    "media-79e21b6b-4ece-4934-a66e-2386d228f283",
+    "media-2f611f03-cdd4-4f0a-9a48-9395764a1b02",
+    "media-83fd3a61-a89d-4899-b3ab-2d99026c566a",
+    "media-a23f21db-149e-4c2d-b838-94a8296b2c70",
+    "media-0b0a12fa-30b0-4f89-9c4b-e2064499e14c",
+    "media-83c20349-8b44-49b1-8054-c64cf45ec73c",
+    "media-9d2bfa5c-152a-403e-a690-cd372d735754"
   ],
   "published": true,
   "couple": "",
@@ -16,9 +38,38 @@
   "sections": [],
   "review": null,
   "details": "",
-  "suppliers": [],
-  "contactTitle": "",
-  "contactLabel": "",
-  "contactUrl": "",
-  "related": []
+  "suppliers": [
+    {
+      "role": "Locatie",
+      "name": "Kasteel Keukenhof",
+      "url": "https://kasteelkeukenhof.nl/nl/"
+    },
+    {
+      "role": "Fotograaf",
+      "name": "Dyonne fotografie",
+      "url": "https://dyonnefotografie.nl/"
+    },
+    {
+      "role": "Videograaf",
+      "name": "Westerink Media Producties",
+      "url": "https://www.westerikmp.nl/"
+    },
+    {
+      "role": "Weddingplanner",
+      "name": "Weddingster",
+      "url": "https://www.weddingster.nl/"
+    },
+    {
+      "role": "Live zang en piano",
+      "name": "Frederique Music",
+      "url": "https://www.frederiquemusic.nl/"
+    }
+  ],
+  "contactTitle": "Wil jij ook zo'n fotorapportage van jullie trouwdag?",
+  "contactLabel": "Ontdek jullie mogelijkheden",
+  "contactUrl": "investering.html",
+  "related": [
+    "bordeaux",
+    "malaga"
+  ]
 }
