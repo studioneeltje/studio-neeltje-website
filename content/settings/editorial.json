@@ -20,7 +20,11 @@
       "emphasis": "kennismaking?",
       "text": "Neem vrijblijvend contact op en kom erachter of ik jullie trouwdag mooier kan maken.",
       "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
-      "tags": [],
+      "tags": [
+        "Contactgegevens",
+        "Vragen",
+        "Kennismaken"
+      ],
       "button": "Neem contact op",
       "href": "contact.html"
     }
