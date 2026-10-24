@@ -82,11 +82,14 @@ function prose(value){return sanitizeHTML(marked.parse(String(value||''),{async:
 for(const [collection,prefix]of [[stories,'reportage'],[articles,'artikel']])for(const record of collection.filter(r=>r.published!==false)){
  if(!/^[a-z0-9][a-z0-9-]{0,80}$/.test(record.id))throw Error('Ongeldige URL voor een reportage of artikel.');
  const custom=prefix==='reportage'?pages.find(page=>page.id===`reportage-${record.id}`):null;
- const content=prefix==='artikel'?renderArticle(record,context):custom?renderPage(custom,context):projectMarkup(record,context);
+ const content=prefix==='artikel'?renderArticle(record,context):custom?renderPage(custom,context):renderPage(projectPage(record),context);
  const title=record.seoTitle||record.title,description=record.seoDescription||record.excerpt;
  await fs.writeFile(path.join(out,`${prefix}-${record.id}.html`),documentHTML(title,description,content));
  if(prefix==='reportage')await fs.writeFile(path.join(out,`pagina-reportage-${record.id}.html`),documentHTML(title,description,content));
 }
+// The shared Sveltia card links to investering.html; retain that URL while
+// the existing investment page is still stored under its historic route.
+if(pages.some(page=>page.id==='werkwijze')&&!pages.some(page=>page.id==='investering'))await fs.writeFile(path.join(out,'investering.html'),'<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="robots" content="noindex,follow"><meta http-equiv="refresh" content="0;url=werkwijze.html"><title>Investering — Studio Neeltje</title><script>location.replace("werkwijze.html"+location.search+location.hash);</script></head><body><a href="werkwijze.html">Bekijk pakketten en investering</a></body></html>');
 const routes={reportages:'reportages',over:'over',werkwijze:'werkwijze',journal:'journal',contact:'contact',checklist:'weddingschecklist',leveranciers:'leveranciers',kasteel:'reportage-keukenhof',dengh:'reportage-dengh',bordeaux:'reportage-bordeaux',malaga:'reportage-malaga'};
 await fs.writeFile(path.join(out,'preview-pagina.html'),`<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>Studio Neeltje</title><script>const r=${JSON.stringify(routes)};const p=new URLSearchParams(location.search).get('pagina')||'reportages';location.replace((r[p]||r.reportages)+'.html'+location.hash);</script></head><body><a href="index.html">Naar de homepage</a></body></html>`);
 await fs.mkdir(path.join(out,'content'),{recursive:true});await fs.writeFile(path.join(out,'content/bundle.json'),JSON.stringify({...context,pages:[...pages,...stories.filter(story=>story.published!==false&&!pages.some(page=>page.id===`reportage-${story.id}`)).map(projectPage)],mediaSettings}));
