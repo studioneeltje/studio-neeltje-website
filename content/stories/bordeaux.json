@@ -1,12 +1,42 @@
 {
-  "id": "bordeaux",
-  "title": "Bordeaux, France",
-  "location": "Frankrijk",
-  "excerpt": "Een dag vol grote momenten en alles wat ertussen leeft.",
-  "body": "Deze reportage wordt aangevuld met het verhaal en de beelden van de dag.",
-  "cover": "foto-e21748886faf",
+  "id": "destination-wedding-fotograaf-bordeaux-frankrijk",
+  "title": "Trouwfotograaf Bordeaux voor jullie destination wedding",
+  "location": "Bordeaux, Frankrijk",
+  "excerpt": "Trouwen in Frankrijk met jullie favoriete mensen om je heen. Dat was precies wat Mark & Rooa deden. Hun bruiloft vond plaats bij Domaine de Perrotin in Bordeaux. Als trouwfotograaf mocht ik hun complete trouwweekend vastleggen.  Van de aankomst van de gasten tot het feest. Van kleine momenten tot grote emoties.",
+  "body": "Omdat het een meerdaagse bruiloft was, ontstond er ruimte voor veel meer dan alleen de ceremonie. En juist dat maakt een destination wedding zo bijzonder. Je beleeft samen meerdere dagen. Je gasten zijn niet alleen gasten op de trouwdag. Ze worden onderdeel van het hele verhaal.",
+  "cover": "media-2072566f-3a5d-4e35-825e-c05a826e9a49",
+  "hoverCover": "media-13142c87-82b3-4b9f-a16a-752ad117e4d8",
   "gallery": [
     "foto-e21748886faf"
   ],
-  "published": true
+  "published": true,
+  "couple": "Mark en Rooa",
+  "seoTitle": "Trouwfotograaf Bordeaux | Destination wedding Frankrijk | Studio Neeltje",
+  "seoDescription": "Een destination wedding in Bordeaux? Bekijk de bruiloft van Mark & Rooa bij Domaine de Perrotin en ontdek mijn stijl van trouwfotografie.",
+  "sections": [],
+  "review": {
+    "quote": "\"Neeltje, ik hoop dat je heerljik hebt geslapen. We hebben zo ontzettend genoten van je aanwezigheid. En we willen je nogmaals heel erg bedanken voor alles wat je gedaan hebt gisteren en al je support gisteren. Dank dank dank!! ❤️ Ik ben de foto’s nogmaals aan het bekijken. Ze zijn prachtig geworden.\"",
+    "name": "Mark en Rooa",
+    "image": "media-d8016321-1a7a-4ba2-bc21-4ad75fc202fe"
+  },
+  "details": "",
+  "suppliers": [
+    {
+      "role": "Locatie",
+      "name": "Domaine de Perrotin",
+      "url": "https://www.domaine-de-perrotin.com/"
+    },
+    {
+      "role": "Catering",
+      "name": "Mood Traiteur",
+      "url": "https://www.moodtraiteur.com/"
+    }
+  ],
+  "contactTitle": "",
+  "contactLabel": "",
+  "contactUrl": "",
+  "related": [
+    "trouwfotograaf-kasteel-keukenhof-lisse",
+    "malaga"
+  ]
 }
