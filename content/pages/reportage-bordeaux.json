@@ -1,10 +1,10 @@
 {
   "id": "reportage-bordeaux",
-  "title": "Bordeaux, France",
+  "title": "Bordeaux, Frankrijk",
   "description": "Een dag vol grote momenten en alles wat ertussen leeft.",
   "root": {
     "props": {
-      "title": "Bordeaux, France",
+      "title": "Bordeaux, Frankrijk",
       "description": "Een dag vol grote momenten en alles wat ertussen leeft."
     }
   },
