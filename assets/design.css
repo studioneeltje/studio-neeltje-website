@@ -861,3 +861,13 @@ body.sn-lightbox-open{overflow:hidden}
 .mode-canvas .sn-personal-photo img{object-position:var(--sn-x,50%) var(--sn-y,50%);transform:scale(var(--sn-z,1))}
 @media(hover:hover){.mode-canvas .sn-personal-panel:hover .sn-personal-photo img{transform:scale(calc(var(--sn-z,1) * 1.025))}}
 @media(max-width:760px){.mode-canvas .sn-personal-photo img{object-position:var(--sn-x-m,50%) var(--sn-y-m,50%);transform:scale(var(--sn-z-m,1))}}
+
+/* Three clear routes within the personal invitation. */
+.mode-canvas .sn-personal-about{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:12px;padding:7px 0;border-bottom:1px solid currentColor;text-decoration:none;color:#65001d;font:500 14px/1.4 'Host Grotesk',sans-serif;transition:gap 200ms}
+.mode-canvas .sn-personal-about i{font-style:normal;font-size:21px}.mode-canvas .sn-personal-about:hover{gap:24px}
+.mode-canvas .sn-personal-investment{margin-top:24px}
+.mode-canvas .sn-personal-secondary{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 18px;border:1px solid #65001d;border-radius:40px;color:#65001d;background:transparent;text-decoration:none;font:500 15px/1.4 'Host Grotesk',sans-serif;box-sizing:border-box;max-width:100%;transition:transform 200ms,background 200ms}
+.mode-canvas .sn-personal-secondary i{font-style:normal;font-size:22px}.mode-canvas .sn-personal-secondary:hover{background:#65001d09;transform:translateX(3px)}
+.mode-canvas .sn-personal-copy p.sn-personal-price{font:400 13px/1.5 'Host Grotesk',sans-serif!important;letter-spacing:0;color:#65001d!important;margin:10px 0 0}
+.mode-canvas :is(.sn-personal-secondary,.sn-personal-about):focus-visible{outline:3px solid #ff4802;outline-offset:5px}
+@container(max-width:700px){.mode-canvas .sn-personal-photo{height:230px;min-height:230px}.mode-canvas .sn-personal-photo figcaption{padding:12px 16px}.mode-canvas .sn-personal-about{margin-top:5px;min-height:32px;font-size:13px}.mode-canvas .sn-personal-secondary{font-size:14px;gap:12px}}

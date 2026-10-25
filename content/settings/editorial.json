@@ -78,7 +78,7 @@
     "background": "white"
   },
   "personalInvite": {
-    "eyebrow": "Jullie zijn erbij. Ik leg het vast.",
+    "eyebrow": "Trouwfotografie met energie",
     "title": "Jullie dag beleven.",
     "emphasis": "Ik leg het vast.",
     "body": "Jullie hoeven niet te weten hoe je moet poseren. Ik help jullie ontspannen, zodat jullie jezelf kunnen zijn.",
@@ -89,6 +89,11 @@
     "photoCaption": "Jullie trouwfotograaf",
     "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
     "quote": "Vanaf het eerste moment voelden we ons helemaal op ons gemak.",
-    "name": "Onno en Sari Koole"
+    "name": "Onno en Sari Koole",
+    "investmentLabel": "Bekijk pakketten & investering",
+    "investmentUrl": "investering.html",
+    "investmentNote": "Trouwreportages vanaf €1.550 · vanaf 6 uur",
+    "aboutLabel": "Leer Neeltje kennen",
+    "aboutUrl": "over.html"
   }
 }

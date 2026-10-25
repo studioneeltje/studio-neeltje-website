@@ -112,3 +112,5 @@
 .media-choice small{display:block;padding:0 8px 8px;font-size:12px;text-align:left;color:#65001d}
 .media-choice[aria-disabled="true"]{opacity:1}.media-choice[aria-disabled="true"] img{filter:grayscale(1);opacity:.55}.media-choice[aria-disabled="true"] small{color:#65001d;font-weight:600}
 .media-choice-missing{display:grid!important;place-items:center;aspect-ratio:3/2;padding:16px!important;background:#e8f2ff;color:#65001d;text-align:center}
+
+.admin-page-group{margin-block:40px}.admin-page-group>.page-grid{margin-top:20px}.admin-page-group a.page-card{display:block;color:inherit;text-decoration:none}.admin-page-group>h2{font-size:28px}
