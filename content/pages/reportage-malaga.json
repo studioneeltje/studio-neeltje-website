@@ -1,0 +1,32 @@
+{
+  "id": "reportage-malaga",
+  "title": "Destination wedding Málaga, Spanje - M&J",
+  "description": "Dromen jullie van een destination wedding in Málaga? Bekijk deze bruiloft bij Finca Monasterio en ontdek mijn stijl van ontspannen trouwfotografie.",
+  "root": {
+    "props": {
+      "title": "Destination wedding Málaga, Spanje - M&J",
+      "description": "Dromen jullie van een destination wedding in Málaga? Bekijk deze bruiloft bij Finca Monasterio en ontdek mijn stijl van ontspannen trouwfotografie."
+    }
+  },
+  "content": [
+    {
+      "type": "ProjectStory",
+      "props": {
+        "id": "project-malaga",
+        "storyId": "malaga",
+        "background": "white",
+        "crops": {},
+        "sectionOrder": []
+      }
+    },
+    {
+      "type": "PersonalInvite",
+      "props": {
+        "id": "reportage-malaga-personal-invite",
+        "background": "wine",
+        "portfolioInvite": true
+      }
+    }
+  ],
+  "zones": {}
+}
