@@ -285,6 +285,11 @@ collections:
               - {name: photoCaption, label: Ondertitel op het fotolabel, widget: string, required: false}
               - {name: quote, label: Echte korte review (optioneel), widget: text, required: false}
               - {name: name, label: Naam bij de review, widget: string, required: false}
+              - {name: investmentLabel, label: Knoptekst investering (optioneel), widget: string, required: false}
+              - {name: investmentUrl, label: Link naar investering (optioneel), widget: string, required: false}
+              - {name: investmentNote, label: Korte toelichting investering (optioneel), widget: string, required: false}
+              - {name: aboutLabel, label: Linktekst bij portret (optioneel), widget: string, required: false}
+              - {name: aboutUrl, label: Link naar Over mij (optioneel), widget: string, required: false}
           - name: portfolioCards
             label: Kop boven informatiekaarten op portfolio’s
             hint: Deze kop en de twee informatiekaarten hieronder worden automatisch op alle portfolio-projectpagina’s gebruikt, zoals op Bordeaux, Frankrijk.
