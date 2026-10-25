@@ -1,0 +1,32 @@
+{
+  "id": "reportage-dengh",
+  "title": "Trouwfotograaf Utrecht | Intieme bruiloft bij Dengh",
+  "description": "Op zoek naar een trouwfotograaf in Utrecht? Bekijk de intieme bruiloft van Marijn & Eva bij Dengh in Leidsche Rijn.",
+  "root": {
+    "props": {
+      "title": "Trouwfotograaf Utrecht | Intieme bruiloft bij Dengh",
+      "description": "Op zoek naar een trouwfotograaf in Utrecht? Bekijk de intieme bruiloft van Marijn & Eva bij Dengh in Leidsche Rijn."
+    }
+  },
+  "content": [
+    {
+      "type": "ProjectStory",
+      "props": {
+        "id": "project-dengh",
+        "storyId": "dengh",
+        "background": "white",
+        "crops": {},
+        "sectionOrder": []
+      }
+    },
+    {
+      "type": "PersonalInvite",
+      "props": {
+        "id": "reportage-dengh-personal-invite",
+        "background": "wine",
+        "portfolioInvite": true
+      }
+    }
+  ],
+  "zones": {}
+}
