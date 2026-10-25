@@ -20,13 +20,11 @@
       }
     },
     {
-      "type": "InfoCards",
+      "type": "PersonalInvite",
       "props": {
-        "eyebrow": "DIT WIL IK",
-        "title": "Ontdek jouw",
-        "emphasis": "mogelijkheden.",
-        "background": "white",
-        "id": "InfoCards-5cd6428e-1b2f-4c01-8ecf-8aa35c77583d"
+        "id": "reportage-bordeaux-personal-invite",
+        "background": "wine",
+        "portfolioInvite": true
       }
     }
   ],
