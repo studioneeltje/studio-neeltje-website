@@ -1,7 +1,9 @@
 {
   "id": "spontane-trouwfotos-tips",
   "title": "Spontane trouwfoto's? 7 tips voor ontspannen foto's",
-  "category": "SPONTANE FOTO'S",
+  "seoTitle": "Spontane trouwfoto's? 7 tips voor ontspannen foto's",
+  "seoDescription": "Wil je spontane trouwfoto's zoals op je moodboard? Ontdek 7 praktische tips over je trouwjurk, planning en ontspannen voor de camera staan.",
+  "category": "FOTOSHOOT",
   "excerpt": "Je hebt vast al een moodboard gemaakt. Misschien staat Pinterest vol met prachtige trouwfoto's. Een bruid die lachend over straat loopt. Een stel dat samen op een muurtje zit. Een spontane kus, een dansje of een foto waarop je vooral heel veel plezier ziet.\n\nEn dat wil jij ook. Maar wat veel bruidsparen niet beseffen, is dat er achter die spontane trouwfoto's soms best wat voorbereiding zit.\n\nNiet omdat je spontane momenten moet plannen. Juist niet. Maar omdat sommige keuzes ervoor zorgen dat je je vrij voelt om te bewegen, te lachen en gewoon lekker je gang te gaan. Als trouwfotograaf zie ik regelmatig hoe kleine dingen daarin een groot verschil maken.",
   "summary": [
     "Je moodboard staat vol spontane trouwfoto's. Lachend, dansend, lekker samen gek doen. Maar hoe zorg je ervoor dat jouw trouwfoto's ook zo worden? Dat heeft niet alleen met je fotograaf te maken. Een strakke trouwjurk, koude handen of de angst voor een vieze jurk kunnen behoorlijk in de weg zitten. Met deze 7 praktische tips geef je spontane momenten alle ruimte. Zodat je niet alleen mooie foto's krijgt, maar ook plezier hebt tijdens het maken ervan."
@@ -55,6 +57,11 @@
       "type": "text",
       "title": "Stop met poseren en richt je aandacht op elkaar",
       "text": "Misschien wel de belangrijkste tip als je ontspannen op je trouwfoto's wilt staan: je hoeft niet voortdurend iets te doen voor de camera.\n\nSterker nog, dat mag je best een beetje vergeten.\n\nVeel mensen denken dat ze tijdens een trouwfotoshoot precies moeten weten waar ze hun handen laten, hoe ze moeten kijken en welke houding het mooist is.\n\nMaar jullie hoeven helemaal geen professionele modellen te zijn.\n\nGa lekker samen wandelen. Vertel iets grappigs. Geef elkaar een knuffel. Of blijf gewoon even staan om van het moment te genieten.\n\nEn ja, soms geef ik jullie een kleine aanwijzing. Omdat het licht ergens mooier is, omdat ik een leuke plek zie of omdat een bepaalde beweging goed werkt op beeld.\n\nMaar daarna mogen jullie het vooral zelf invullen.\n\nJe hoeft ook niet de hele tijd te lachen. Een rustige blik, een liefdevolle aanraking of een moment waarop jullie even helemaal in elkaar opgaan, kan minstens zo mooi zijn.\n\n**Spontaan op trouwfoto's staan betekent niet dat je voortdurend moet bewegen of lachen. Het betekent vooral dat je jezelf kunt zijn.**\n\nEn daar help ik jullie als trouwfotograaf graag bij."
+    },
+    {
+      "type": "text",
+      "title": "Kies niet te veel fotolocaties voor jullie trouwfoto's",
+      "text": "Een prachtig landgoed, dat romantische straatje in de stad en natuurlijk nog even naar het strand. Allemaal fantastische plekken voor jullie trouwfoto's.\n\nMaar er zit een addertje onder het gras.\n\n**Hoe meer fotolocaties, hoe meer reistijd. En hoe meer reistijd, hoe minder tijd er overblijft om te ontspannen.**\n\nWant je moet niet alleen van A naar B. Je moet ook naar de auto lopen, instappen, parkeren, uitstappen en weer op weg naar de volgende plek. En dat allemaal in je trouwkleding.\n\nVoor je het weet, ben je meer bezig met de planning dan met elkaar.\n\nEn dat is nou precies wat je níét wilt als je spontane trouwfoto's wilt maken.\n\nMijn advies? Kies liever één mooie locatie waar je verschillende kanten op kunt. Een plek met een beetje afwisseling. Een leuk straatje, wat groen, een mooi gebouw of een gezellig terras.\n\nAls trouwfotograaf kijk ik graag om me heen. Soms zie ik tijdens een wandeling ineens een prachtig stukje licht of een plek waar ik jullie heel even wil neerzetten.\n\nJuist doordat we niet steeds naar de volgende locatie hoeven te haasten, ontstaat er ruimte voor dat soort momenten.\n\nEn geloof me: **voor afwisselende trouwfoto's hoef je echt niet de halve provincie door te rijden.**\n\nLiever een ontspannen fotoshoot op één fijne locatie dan 3 prachtige locaties waar jullie alleen maar doorheen rennen."
     }
   ],
   "related": [
@@ -62,6 +69,12 @@
     "fotoshoot-trouwdag",
     "niet-graag-op-de-foto-trouwfotografie"
   ],
-  "cta": null,
+  "cta": {
+    "enabled": false,
+    "title": "Meer rust in jullie planning?",
+    "text": "De gratis trouwchecklist helpt jullie stap voor stap op weg.",
+    "label": "Ontdek de gratis trouwchecklist",
+    "href": "weddingschecklist.html"
+  },
   "published": true
 }
