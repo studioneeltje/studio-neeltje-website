@@ -16,7 +16,7 @@
   "sections": [
     {
       "key": "intro-tekst",
-      "type": "text",
+      "type": "textPhoto",
       "heading": "Een destination wedding in Bordeaux",
       "body": "Trouwen in Frankrijk met al jullie favoriete mensen om je heen. Dat was precies wat Mark & Rooa deden.\n\nBij Domaine de Perrotin, vlak bij Bordeaux, vierden ze hun liefde. Niet één dag, maar een heel weekend. En ik mocht als trouwfotograaf mee om alles vast te leggen. Van de aankomst van de gasten tot het feest.",
       "image": "media-17911fc8-bf7f-4438-a7a7-8dc051fd60c5",
@@ -27,8 +27,20 @@
       "name": ""
     },
     {
+      "key": "1-fotos",
+      "type": "pair",
+      "heading": "",
+      "body": "",
+      "image": "media-0a6d2a66-c13a-45e8-9aa0-91fc41ccd71e",
+      "secondImage": "media-33648f20-d10f-49a9-8d7b-325b5c05163c",
+      "caption": "",
+      "gallery": "",
+      "quote": "",
+      "name": ""
+    },
+    {
       "key": "kennismaking",
-      "type": "text",
+      "type": "textPhoto",
       "heading": "Van een bruiloft in Spanje naar een bruiloft in Frankrijk",
       "body": "Hoe Mark & Rooa bij mij terechtkwamen? Dat vind ik dus zo leuk!\n\nMark was eerder te gast op de bruiloft van Martine & Jeroen in Spanje. Daar zag hij mij aan het werk. Blijkbaar heb ik een goede indruk achtergelaten, want voor zijn eigen bruiloft wilde hij mij er graag bij hebben. Een heuse eer!\n\nWe leerden elkaar beter kennen tijdens een videocall. Daarna maakten we tijdens een pre-weddingshoot alvast de eerste foto's. Zo konden Mark & Rooa wennen aan mijn camera en wist ik wat bij hen paste.",
       "image": "media-2cb651c1-6176-4ee3-b889-f6f5abbb7675",
@@ -39,8 +51,32 @@
       "name": ""
     },
     {
+      "key": "review",
+      "type": "review",
+      "heading": "",
+      "body": "",
+      "image": "",
+      "secondImage": "",
+      "caption": "",
+      "gallery": "",
+      "quote": "\"Neeltje, ik hoop dat je heerljik hebt geslapen. We hebben zo ontzettend genoten van je aanwezigheid. En we willen je nogmaals heel erg bedanken voor alles wat je gedaan hebt gisteren en al je support gisteren. Dank dank dank!! ❤️ Ik ben de foto’s nogmaals aan het bekijken. Ze zijn prachtig geworden. \"",
+      "name": "Rooa en Mark"
+    },
+    {
+      "key": "2-fotos",
+      "type": "pair",
+      "heading": "",
+      "body": "",
+      "image": "media-446746e4-3000-4dc9-a28c-b7895e7b9e48",
+      "secondImage": "media-bdd1189c-735c-4784-ba4d-c0703394ec38",
+      "caption": "",
+      "gallery": "",
+      "quote": "",
+      "name": ""
+    },
+    {
       "key": "trouwweekend",
-      "type": "text",
+      "type": "textPhoto",
       "heading": "Een heel trouwweekend bij Domaine de Perrotin",
       "body": "Op vrijdag reisde ik af naar Bordeaux. Ik verkende het landgoed en fotografeerde de eerste gasten die aankwamen.\n\nZaterdag was het tijd voor de bruiloft zelf. Van het klaarmaken en de reveal tot de ceremonie, de borrel en het feest.\n\nEn natuurlijk waren er al die kleine momenten tussendoor. Kinderen die rondrennen, ouders die zichtbaar genieten en gasten die elkaar in de armen vliegen.\n\nJuist omdat ik het hele weekend aanwezig was, kon ik veel meer vastleggen dan alleen de trouwdag.",
       "image": "media-d26dbf53-64d1-4e6d-b5e6-d161d0c8e517",
@@ -51,8 +87,20 @@
       "name": ""
     },
     {
+      "key": "3-fotos",
+      "type": "pair",
+      "heading": "",
+      "body": "",
+      "image": "media-02dcb870-0508-4865-8171-6f86aabd6eef",
+      "secondImage": "media-8d29455f-b46d-4275-ad2b-110c0daad1a1",
+      "caption": "",
+      "gallery": "",
+      "quote": "",
+      "name": ""
+    },
+    {
       "key": "cta",
-      "type": "text",
+      "type": "textPhoto",
       "heading": "Ook trouwen in Bordeaux of ergens anders in Frankrijk?",
       "body": "Een château in de Provence, een landhuis in de Dordogne of een wijngaard bij Bordeaux?\n\nIk reis graag met jullie mee.\n\nIk maak ruimte voor mooie portretten, maar kijk vooral naar alles wat er spontaan gebeurt. Zodat jullie lekker kunnen genieten en later niet alleen zien hoe jullie bruiloft eruitzag, maar ook weer voelen hoe het was.\n\n**Vertel me jullie trouwplannen. Dan kijken we of het klikt!**",
       "image": "media-692188ff-1c50-4f51-ac6b-b598a98a5a0d",
@@ -61,13 +109,54 @@
       "gallery": "",
       "quote": "",
       "name": ""
+    },
+    {
+      "key": "foto-galerij",
+      "type": "gallery",
+      "heading": "",
+      "body": "",
+      "image": "",
+      "secondImage": "",
+      "caption": "",
+      "gallery": [
+        "media-087acce5-f2cc-4622-9448-cbefd37baaf5",
+        "media-105f4e45-da53-41ef-a98d-911a07dd4785",
+        "media-0a00c152-b028-458e-89a0-312045139156",
+        "media-1f95254c-7424-4724-8fd5-38f3c5455655",
+        "media-25f5eb60-0ed4-408f-a334-c22e9b2a0a3a",
+        "media-437005a2-a847-4f5c-bcb9-97a8354d061b",
+        "media-33648f20-d10f-49a9-8d7b-325b5c05163c",
+        "media-463ab99a-5f55-4572-809b-dc7aeaa38aa0",
+        "media-462c4b29-20ec-4206-b532-8b8dcebaa1c6",
+        "media-481c93cb-2321-4961-a9a2-2c7e12a0a275",
+        "media-49e4825f-edf4-45fc-a1a3-74147adc45df",
+        "media-4a36fa2e-90cf-4fb8-8841-68e175b71051",
+        "media-7ad4f6ce-1dfe-482f-be96-1fdf18c357d0",
+        "media-7b93336e-23a7-4c73-98c5-da9807488435",
+        "media-83e98110-b584-4821-8172-d80c3923ba90",
+        "media-85dc042f-be1c-4da3-a4e3-e495f3808bfc",
+        "media-86e5e5dd-a992-450f-be21-8a9f45370c3c",
+        "media-8bd4b376-7c97-43ea-900c-6b8d4f452597",
+        "media-8cc33015-6d0b-44bc-ad92-c0db8f024c73",
+        "media-90774214-bc57-4cf7-9a0e-8e019cff1a09",
+        "media-91acca82-86cf-40e1-b79f-e2ad73cd7908",
+        "media-982df39c-a627-463b-82bd-58a7fe6b5109",
+        "media-94cf474a-2b38-4f32-a554-fdcf5b61a526",
+        "media-b98218c5-4f79-407a-a076-378fc003a1f4",
+        "media-b661d875-26aa-4ce0-bca1-af65e1f46b7b",
+        "media-c4ba177b-ccd1-4b08-b654-3028874161e4",
+        "media-cd66cd01-f669-47f5-a57c-f45771c4e1e2",
+        "media-d8016321-1a7a-4ba2-bc21-4ad75fc202fe",
+        "media-e678801e-ab7c-41a5-bb53-a97706dee4e1",
+        "media-fe08a431-bc93-4c88-9f5a-faca4a9a3f0b",
+        "media-de75bcd1-8e7a-4b56-9bfb-7e6a82fe3041",
+        "media-effe312d-ce2d-45af-a894-f96687052acc"
+      ],
+      "quote": "",
+      "name": ""
     }
   ],
-  "review": {
-    "quote": "\"Neeltje, ik hoop dat je heerljik hebt geslapen. We hebben zo ontzettend genoten van je aanwezigheid. En we willen je nogmaals heel erg bedanken voor alles wat je gedaan hebt gisteren en al je support gisteren. Dank dank dank!! ❤️ Ik ben de foto’s nogmaals aan het bekijken. Ze zijn prachtig geworden.\"",
-    "name": "Mark en Rooa",
-    "image": "media-d8016321-1a7a-4ba2-bc21-4ad75fc202fe"
-  },
+  "review": null,
   "details": "",
   "suppliers": [
     {
