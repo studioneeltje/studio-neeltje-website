@@ -27,7 +27,7 @@
       "name": ""
     },
     {
-      "key": "2-foto",
+      "key": "1-fotos",
       "type": "pair",
       "heading": "",
       "body": "",
@@ -63,7 +63,7 @@
       "name": "Rooa en Mark"
     },
     {
-      "key": "foto-2",
+      "key": "2-fotos",
       "type": "pair",
       "heading": "",
       "body": "",
@@ -87,7 +87,7 @@
       "name": ""
     },
     {
-      "key": "foto-2",
+      "key": "3-fotos",
       "type": "pair",
       "heading": "",
       "body": "",
@@ -111,14 +111,47 @@
       "name": ""
     },
     {
-      "key": "foto-gallerij",
+      "key": "foto-galerij",
       "type": "gallery",
       "heading": "",
       "body": "",
-      "image": "media-087acce5-f2cc-4622-9448-cbefd37baaf5",
-      "secondImage": "media-437005a2-a847-4f5c-bcb9-97a8354d061b",
+      "image": "",
+      "secondImage": "",
       "caption": "",
-      "gallery": "",
+      "gallery": [
+        "media-087acce5-f2cc-4622-9448-cbefd37baaf5",
+        "media-105f4e45-da53-41ef-a98d-911a07dd4785",
+        "media-0a00c152-b028-458e-89a0-312045139156",
+        "media-1f95254c-7424-4724-8fd5-38f3c5455655",
+        "media-25f5eb60-0ed4-408f-a334-c22e9b2a0a3a",
+        "media-437005a2-a847-4f5c-bcb9-97a8354d061b",
+        "media-33648f20-d10f-49a9-8d7b-325b5c05163c",
+        "media-463ab99a-5f55-4572-809b-dc7aeaa38aa0",
+        "media-462c4b29-20ec-4206-b532-8b8dcebaa1c6",
+        "media-481c93cb-2321-4961-a9a2-2c7e12a0a275",
+        "media-49e4825f-edf4-45fc-a1a3-74147adc45df",
+        "media-4a36fa2e-90cf-4fb8-8841-68e175b71051",
+        "media-7ad4f6ce-1dfe-482f-be96-1fdf18c357d0",
+        "media-7b93336e-23a7-4c73-98c5-da9807488435",
+        "media-83e98110-b584-4821-8172-d80c3923ba90",
+        "media-85dc042f-be1c-4da3-a4e3-e495f3808bfc",
+        "media-86e5e5dd-a992-450f-be21-8a9f45370c3c",
+        "media-8bd4b376-7c97-43ea-900c-6b8d4f452597",
+        "media-8cc33015-6d0b-44bc-ad92-c0db8f024c73",
+        "media-90774214-bc57-4cf7-9a0e-8e019cff1a09",
+        "media-91acca82-86cf-40e1-b79f-e2ad73cd7908",
+        "media-982df39c-a627-463b-82bd-58a7fe6b5109",
+        "media-94cf474a-2b38-4f32-a554-fdcf5b61a526",
+        "media-b98218c5-4f79-407a-a076-378fc003a1f4",
+        "media-b661d875-26aa-4ce0-bca1-af65e1f46b7b",
+        "media-c4ba177b-ccd1-4b08-b654-3028874161e4",
+        "media-cd66cd01-f669-47f5-a57c-f45771c4e1e2",
+        "media-d8016321-1a7a-4ba2-bc21-4ad75fc202fe",
+        "media-e678801e-ab7c-41a5-bb53-a97706dee4e1",
+        "media-fe08a431-bc93-4c88-9f5a-faca4a9a3f0b",
+        "media-de75bcd1-8e7a-4b56-9bfb-7e6a82fe3041",
+        "media-effe312d-ce2d-45af-a894-f96687052acc"
+      ],
       "quote": "",
       "name": ""
     }
