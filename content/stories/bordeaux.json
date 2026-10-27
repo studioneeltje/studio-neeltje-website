@@ -13,7 +13,56 @@
   "couple": "Mark en Rooa",
   "seoTitle": "Trouwfotograaf Bordeaux | Destination wedding Frankrijk | Studio Neeltje",
   "seoDescription": "Een destination wedding in Bordeaux? Bekijk de bruiloft van Mark & Rooa bij Domaine de Perrotin en ontdek mijn stijl van trouwfotografie.",
-  "sections": [],
+  "sections": [
+    {
+      "key": "intro-tekst",
+      "type": "text",
+      "heading": "Een destination wedding in Bordeaux",
+      "body": "Trouwen in Frankrijk met al jullie favoriete mensen om je heen. Dat was precies wat Mark & Rooa deden.\n\nBij Domaine de Perrotin, vlak bij Bordeaux, vierden ze hun liefde. Niet één dag, maar een heel weekend. En ik mocht als trouwfotograaf mee om alles vast te leggen. Van de aankomst van de gasten tot het feest.",
+      "image": "media-17911fc8-bf7f-4438-a7a7-8dc051fd60c5",
+      "secondImage": "",
+      "caption": "De nieuwe schoonzus feliciteert de bruid",
+      "gallery": "",
+      "quote": "",
+      "name": ""
+    },
+    {
+      "key": "kennismaking",
+      "type": "text",
+      "heading": "Van een bruiloft in Spanje naar een bruiloft in Frankrijk",
+      "body": "Hoe Mark & Rooa bij mij terechtkwamen? Dat vind ik dus zo leuk!\n\nMark was eerder te gast op de bruiloft van Martine & Jeroen in Spanje. Daar zag hij mij aan het werk. Blijkbaar heb ik een goede indruk achtergelaten, want voor zijn eigen bruiloft wilde hij mij er graag bij hebben. Een heuse eer!\n\nWe leerden elkaar beter kennen tijdens een videocall. Daarna maakten we tijdens een pre-weddingshoot alvast de eerste foto's. Zo konden Mark & Rooa wennen aan mijn camera en wist ik wat bij hen paste.",
+      "image": "media-2cb651c1-6176-4ee3-b889-f6f5abbb7675",
+      "secondImage": "",
+      "caption": "",
+      "gallery": "",
+      "quote": "",
+      "name": ""
+    },
+    {
+      "key": "trouwweekend",
+      "type": "text",
+      "heading": "Een heel trouwweekend bij Domaine de Perrotin",
+      "body": "Op vrijdag reisde ik af naar Bordeaux. Ik verkende het landgoed en fotografeerde de eerste gasten die aankwamen.\n\nZaterdag was het tijd voor de bruiloft zelf. Van het klaarmaken en de reveal tot de ceremonie, de borrel en het feest.\n\nEn natuurlijk waren er al die kleine momenten tussendoor. Kinderen die rondrennen, ouders die zichtbaar genieten en gasten die elkaar in de armen vliegen.\n\nJuist omdat ik het hele weekend aanwezig was, kon ik veel meer vastleggen dan alleen de trouwdag.",
+      "image": "media-d26dbf53-64d1-4e6d-b5e6-d161d0c8e517",
+      "secondImage": "",
+      "caption": "",
+      "gallery": "",
+      "quote": "",
+      "name": ""
+    },
+    {
+      "key": "cta",
+      "type": "text",
+      "heading": "Ook trouwen in Bordeaux of ergens anders in Frankrijk?",
+      "body": "Een château in de Provence, een landhuis in de Dordogne of een wijngaard bij Bordeaux?\n\nIk reis graag met jullie mee.\n\nIk maak ruimte voor mooie portretten, maar kijk vooral naar alles wat er spontaan gebeurt. Zodat jullie lekker kunnen genieten en later niet alleen zien hoe jullie bruiloft eruitzag, maar ook weer voelen hoe het was.\n\n**Vertel me jullie trouwplannen. Dan kijken we of het klikt!**",
+      "image": "media-692188ff-1c50-4f51-ac6b-b598a98a5a0d",
+      "secondImage": "",
+      "caption": "",
+      "gallery": "",
+      "quote": "",
+      "name": ""
+    }
+  ],
   "review": {
     "quote": "\"Neeltje, ik hoop dat je heerljik hebt geslapen. We hebben zo ontzettend genoten van je aanwezigheid. En we willen je nogmaals heel erg bedanken voor alles wat je gedaan hebt gisteren en al je support gisteren. Dank dank dank!! ❤️ Ik ben de foto’s nogmaals aan het bekijken. Ze zijn prachtig geworden.\"",
     "name": "Mark en Rooa",
@@ -37,6 +86,7 @@
   "contactUrl": "",
   "related": [
     "trouwfotograaf-kasteel-keukenhof-lisse",
-    "malaga"
+    "malaga",
+    "dengh"
   ]
 }
