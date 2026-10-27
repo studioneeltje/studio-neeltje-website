@@ -27,6 +27,18 @@
       "name": ""
     },
     {
+      "key": "2-foto",
+      "type": "pair",
+      "heading": "",
+      "body": "",
+      "image": "media-0a6d2a66-c13a-45e8-9aa0-91fc41ccd71e",
+      "secondImage": "media-33648f20-d10f-49a9-8d7b-325b5c05163c",
+      "caption": "",
+      "gallery": "",
+      "quote": "",
+      "name": ""
+    },
+    {
       "key": "kennismaking",
       "type": "textPhoto",
       "heading": "Van een bruiloft in Spanje naar een bruiloft in Frankrijk",
@@ -51,6 +63,18 @@
       "name": "Rooa en Mark"
     },
     {
+      "key": "foto-2",
+      "type": "pair",
+      "heading": "",
+      "body": "",
+      "image": "media-446746e4-3000-4dc9-a28c-b7895e7b9e48",
+      "secondImage": "media-bdd1189c-735c-4784-ba4d-c0703394ec38",
+      "caption": "",
+      "gallery": "",
+      "quote": "",
+      "name": ""
+    },
+    {
       "key": "trouwweekend",
       "type": "textPhoto",
       "heading": "Een heel trouwweekend bij Domaine de Perrotin",
@@ -63,12 +87,36 @@
       "name": ""
     },
     {
+      "key": "foto-2",
+      "type": "pair",
+      "heading": "",
+      "body": "",
+      "image": "media-02dcb870-0508-4865-8171-6f86aabd6eef",
+      "secondImage": "media-8d29455f-b46d-4275-ad2b-110c0daad1a1",
+      "caption": "",
+      "gallery": "",
+      "quote": "",
+      "name": ""
+    },
+    {
       "key": "cta",
       "type": "textPhoto",
       "heading": "Ook trouwen in Bordeaux of ergens anders in Frankrijk?",
       "body": "Een château in de Provence, een landhuis in de Dordogne of een wijngaard bij Bordeaux?\n\nIk reis graag met jullie mee.\n\nIk maak ruimte voor mooie portretten, maar kijk vooral naar alles wat er spontaan gebeurt. Zodat jullie lekker kunnen genieten en later niet alleen zien hoe jullie bruiloft eruitzag, maar ook weer voelen hoe het was.\n\n**Vertel me jullie trouwplannen. Dan kijken we of het klikt!**",
       "image": "media-692188ff-1c50-4f51-ac6b-b598a98a5a0d",
       "secondImage": "",
+      "caption": "",
+      "gallery": "",
+      "quote": "",
+      "name": ""
+    },
+    {
+      "key": "foto-gallerij",
+      "type": "gallery",
+      "heading": "",
+      "body": "",
+      "image": "media-087acce5-f2cc-4622-9448-cbefd37baaf5",
+      "secondImage": "media-437005a2-a847-4f5c-bcb9-97a8354d061b",
       "caption": "",
       "gallery": "",
       "quote": "",
