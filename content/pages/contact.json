@@ -63,6 +63,75 @@
       }
     },
     {
+      "type": "Wall",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 03 — Jullie foto's thuis",
+            "value": "muurbloempje"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Niet alleen in een album.",
+            "value": "Hangen jullie straks"
+          },
+          {
+            "key": "2",
+            "label": "Label: Ook aan de muur.",
+            "value": "bij mij op de muur?"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Trouwfoto in een klassieke houten staande lijst",
+            "mediaId": "media-2cb651c1-6176-4ee3-b889-f6f5abbb7675",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Details van een trouwdag in een liggende bronzen lijst",
+            "mediaId": "media-106322ca-b338-47d1-b316-0296a855ae66",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Trouwfoto in een vergulde staande lijst",
+            "mediaId": "media-f93f3313-4f88-4b76-b388-ec2d19ed570c",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "3",
+            "label": "Een spontaan moment in een donkerhouten staande lijst",
+            "mediaId": "media-41e8a879-35b2-4061-aa86-8b24402fc54f",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "4",
+            "label": "Een liggende trouwfoto in een klassieke houten lijst",
+            "mediaId": "media-59bb45ce-37b9-4a6a-9914-49b847a45e1c",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "5",
+            "label": "Een grote trouwfoto in een rijk vergulde staande lijst",
+            "mediaId": "media-8554910e-7208-4267-9797-41076273c4cb",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "id": "Wall-6c27de1e-5fe9-4425-b48c-1f611e2a4623",
+        "background": "white"
+      }
+    },
+    {
       "type": "ContactForm",
       "props": {
         "id": "contact-contactform-1",
@@ -159,72 +228,13 @@
       }
     },
     {
-      "type": "Wall",
+      "type": "Journey",
       "props": {
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: 03 — Jullie foto's thuis",
-            "value": "muurbloempje"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Niet alleen in een album.",
-            "value": "Hangen jullie straks"
-          },
-          {
-            "key": "2",
-            "label": "Label: Ook aan de muur.",
-            "value": "bij mij op de muur?"
-          }
-        ],
-        "images": [
-          {
-            "key": "0",
-            "label": "Trouwfoto in een klassieke houten staande lijst",
-            "mediaId": "media-2cb651c1-6176-4ee3-b889-f6f5abbb7675",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "1",
-            "label": "Details van een trouwdag in een liggende bronzen lijst",
-            "mediaId": "media-106322ca-b338-47d1-b316-0296a855ae66",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "2",
-            "label": "Trouwfoto in een vergulde staande lijst",
-            "mediaId": "media-f93f3313-4f88-4b76-b388-ec2d19ed570c",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "3",
-            "label": "Een spontaan moment in een donkerhouten staande lijst",
-            "mediaId": "media-41e8a879-35b2-4061-aa86-8b24402fc54f",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "4",
-            "label": "Een liggende trouwfoto in een klassieke houten lijst",
-            "mediaId": "media-59bb45ce-37b9-4a6a-9914-49b847a45e1c",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "5",
-            "label": "Een grote trouwfoto in een rijk vergulde staande lijst",
-            "mediaId": "media-8554910e-7208-4267-9797-41076273c4cb",
-            "desktop": null,
-            "mobile": null
-          }
-        ],
-        "links": [],
-        "id": "Wall-6c27de1e-5fe9-4425-b48c-1f611e2a4623",
-        "background": "white"
+        "eyebrow": "VAN EEN EERSTE HALLO TOT JULLIE HERINNERINGEN",
+        "title": "Samen op weg.",
+        "emphasis": "Helemaal jullie.",
+        "background": "white",
+        "id": "Journey-441eb5f1-b67c-4035-b34a-765b9d9b8f37"
       }
     }
   ],
