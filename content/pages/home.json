@@ -1,11 +1,11 @@
 {
   "id": "home",
-  "title": "Studio Neeltje — trouwfotografie",
-  "description": "Trouwfotografie door Studio Neeltje.",
+  "title": "Trouwfotograaf | Studio Neeltje – Ongedwongen trouwfotografie",
+  "description": "Ongedwongen trouwfotografie in Nederland & Europa. Met een ontspannen aanpak en aanstekelijke energie draag ik bij aan de sfeer, terwijl jullie jezelf kunnen zijn.",
   "root": {
     "props": {
-      "title": "Studio Neeltje — trouwfotografie",
-      "description": "Trouwfotografie door Studio Neeltje."
+      "title": "Trouwfotograaf | Studio Neeltje – Ongedwongen trouwfotografie",
+      "description": "Ongedwongen trouwfotografie in Nederland & Europa. Met een ontspannen aanpak en aanstekelijke energie draag ik bij aan de sfeer, terwijl jullie jezelf kunnen zijn."
     }
   },
   "content": [
