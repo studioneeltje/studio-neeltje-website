@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "eyebrow": "Hé, daar zijn jullie.",
+    "title": "Jullie\nhebben een",
+    "emphasis": "verhaal.",
+    "body": "Grote gevoelens. Kleine momenten.\nEn een fotograaf die er helemaal bij is.",
+    "button": "Even kennismaken",
+    "mode": "image",
+    "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
+    "gif": "",
+    "videoId": "",
+    "photoLabel": "Aangenaam, Neeltje.",
+    "photoCaption": "Trouwfotografie met energie",
+    "glitter": true
+  },
+  "form": {
+    "eyebrow": "Een berichtje is het begin.",
+    "title": "Vertel eens.",
+    "emphasis": "Wie zijn jullie?",
+    "intro": "Jullie hoeven het nog niet allemaal te weten. Een vraag stellen of vrijblijvend kennismaken kan gewoon.",
+    "sideTitle": "Ik ben\nbenieuwd.",
+    "sideText": "Wie zijn jullie? Waar kijken jullie naar uit? En wat maakt jullie dag van jullie?\n\nVertel het me. Jullie hoeven het nog niet allemaal te weten.",
+    "signature": "Liefs, Neeltje",
+    "namesLabel": "Hoe heten jullie?",
+    "emailLabel": "Waar kan ik jullie bereiken?",
+    "dateLabel": "Wanneer trouwen jullie?",
+    "locationLabel": "Waar vieren jullie het?",
+    "messageLabel": "Wat willen jullie mij vragen?",
+    "button": "Stuur Neeltje een bericht",
+    "reassurance": "Vrijblijvend kennismaken. Eerst ontdekken of het klikt.",
+    "reviewId": "sari-onno",
+    "stepsTitle": "En dan?",
+    "stepsEmphasis": "Gewoon, stap voor stap.",
+    "steps": [
+      {
+        "title": "Jullie sturen een bericht.",
+        "text": "Stel je vraag of laat weten dat jullie willen kennismaken."
+      },
+      {
+        "title": "Jullie horen van mij.",
+        "text": "Ik lees jullie bericht en reageer persoonlijk."
+      },
+      {
+        "title": "We maken kennis.",
+        "text": "Samen ontdekken we of ik bij jullie en jullie trouwdag pas."
+      }
+    ]
+  },
+  "personal": {
+    "title": "Achter de camera?",
+    "emphasis": "Ook gewoon Neeltje.",
+    "intro": "Betrokken, een beetje eigenwijs en met liefde voor alles wat echt is.",
+    "glitter": true,
+    "cards": [
+      {
+        "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
+        "caption": "Met camera.",
+        "title": "",
+        "emphasis": ""
+      },
+      {
+        "image": "",
+        "caption": "Zonder pose.",
+        "title": "Geen stijve",
+        "emphasis": "poses."
+      },
+      {
+        "image": "",
+        "caption": "Altijd betrokken.",
+        "title": "Wel een",
+        "emphasis": "beetje sjabam."
+      }
+    ]
+  }
+}

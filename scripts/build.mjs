@@ -39,6 +39,7 @@ for(const page of pages)for(const block of page.content){
 }
 for(const record of [...stories,...articles])if(record.published!==false){for(const id of [record.cover,record.hoverCover,record.review?.image,...(record.gallery||[]),...(record.sections||[]).flatMap(s=>[s.image,s.secondImage,...(s.gallery||[])])].filter(Boolean))checkPhoto(id,record.title);}
 settings.editorial=await read('content/settings/editorial.json');
+settings.contact=await read('content/settings/contact.json');
 const reviewIds=new Set();
 for(const review of settings.editorial.reviews){
  if(!/^[a-z0-9][a-z0-9-]{0,80}$/.test(review.id||'')||reviewIds.has(review.id))throw Error('Geef iedere review een unieke korte naam, zoals jeroen-martine.');

@@ -1,3 +1,4 @@
+import {contactHeaderMarkup,contactConversationMarkup,behindCameraMarkup} from './contact-page.mjs';
 import {personalInviteMarkup} from './personal-invite.mjs';
 import {portfolioCardsProps,withPortfolioCards} from './portfolio-cards.mjs';
 import {orbitGalleryMarkup} from './orbit-gallery.mjs';
@@ -20,6 +21,9 @@ export function renderBlock(block, context) {
   if (!spec) throw new Error(`Onbekend blok: ${block.type}`);
   let html = spec.html;
   if(block.type==='ProjectStory') html=projectMarkup(context.stories?.find(story=>story.id===p.storyId),context,p);
+  else if(block.type==='ContactHero') html=contactHeaderMarkup(p,context);
+  else if(block.type==='ContactConversation') html=contactConversationMarkup(p,context);
+  else if(block.type==='BehindCamera') html=behindCameraMarkup(p,context);
   else if(block.type==='PersonalInvite') html=personalInviteMarkup(p,context);
   else if(block.type==='TiltCard') html=tiltCardMarkup(p);
   else if(block.type==='Orbit') html=orbitGalleryMarkup(p,context);

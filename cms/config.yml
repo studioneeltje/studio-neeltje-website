@@ -263,6 +263,76 @@ collections:
               - {name: emphasis, label: Schuine titelregel, widget: string}
               - {name: copy, label: Toelichting, widget: text}
               - {name: button, label: Knoptekst, widget: string}
+      - name: contactPage
+        label: Contactpagina met glitter
+        file: content/settings/contact.json
+        fields:
+          - name: hero
+            label: Header · foto, GIF of video
+            widget: object
+            fields:
+              - {name: eyebrow, label: Bovenregel, widget: string, required: false}
+              - {name: title, label: Titel (regeleinde toegestaan), widget: text, required: false}
+              - {name: emphasis, label: Sierlijke titelregel, widget: string, required: false}
+              - {name: body, label: Korte tekst, widget: text, required: false}
+              - {name: button, label: Knop naar het formulier, widget: string, required: false}
+              - {name: image, label: Foto of stil posterbeeld, widget: neeltje-image, required: false}
+              - {name: mode, label: Soort headerbeeld, widget: select, default: image, options: [{label: Foto, value: image}, {label: Bewegende GIF, value: gif}, {label: Stille video, value: video}]}
+              - {name: gif, label: GIF uit de beeldbank, widget: neeltje-image, required: false}
+              - {name: videoId, label: Video uit de beeldbank, widget: relation, collection: media, search_fields: [title], value_field: id, display_fields: [title], required: false, hint: Kies een mediabestand van het soort Video. Uploaden en publiceren kan via Puck → Media.}
+              - {name: photoLabel, label: Fotolabel, widget: string, required: false}
+              - {name: photoCaption, label: Ondertitel fotolabel, widget: string, required: false}
+              - {name: glitter, label: Zichtbare glitteraccenten, widget: boolean, required: false}
+          - name: form
+            label: Formulier, review en vervolgstappen
+            widget: object
+            fields:
+              - {name: eyebrow, label: Bovenregel, widget: string, required: false}
+              - {name: title, label: Titel, widget: string, required: false}
+              - {name: emphasis, label: Sierlijke titelregel, widget: string, required: false}
+              - {name: intro, label: Introductie formulier, widget: text, required: false}
+              - {name: sideTitle, label: Sierlijke tekst naast het formulier, widget: text, required: false}
+              - {name: sideText, label: Tekst naast het formulier, widget: text, required: false}
+              - {name: signature, label: Ondertekening, widget: string, required: false}
+              - {name: namesLabel, label: Label namen, widget: string, required: false}
+              - {name: emailLabel, label: Label e-mailadres, widget: string, required: false}
+              - {name: dateLabel, label: Label optionele trouwdatum, widget: string, required: false}
+              - {name: locationLabel, label: Label optionele locatie, widget: string, required: false}
+              - {name: messageLabel, label: Label bericht, widget: string, required: false}
+              - {name: button, label: Verzendknop, widget: string, required: false}
+              - {name: reassurance, label: Tekst onder de knop, widget: string, required: false}
+              - {name: reviewId, label: Korte naam van de review (leeg = geen review), widget: string, required: false}
+              - {name: stepsTitle, label: Titel vervolgstappen, widget: string, required: false}
+              - {name: stepsEmphasis, label: Sierlijke tekst bij vervolgstappen, widget: string, required: false}
+              - name: steps
+                label: Drie vervolgstappen
+                widget: list
+                min: 3
+                max: 3
+                summary: "{{fields.title}}"
+                fields:
+                  - {name: title, label: Titel, widget: string}
+                  - {name: text, label: Toelichting, widget: text}
+          - name: personal
+            label: Achter de camera · Ook gewoon Neeltje
+            widget: object
+            fields:
+              - {name: title, label: Titel, widget: string, required: false}
+              - {name: emphasis, label: Sierlijke titelregel, widget: string, required: false}
+              - {name: intro, label: Korte introductie, widget: text, required: false}
+              - {name: glitter, label: Glitteraccenten, widget: boolean, required: false}
+              - name: cards
+                label: Drie losse kaarten
+                widget: list
+                min: 3
+                max: 3
+                summary: "{{fields.caption}}"
+                hint: Met een foto wordt een fotoprint getoond; zonder foto verschijnt de grafische tekstkaart.
+                fields:
+                  - {name: image, label: Foto (optioneel), widget: neeltje-image, required: false}
+                  - {name: caption, label: Bijschrift, widget: string}
+                  - {name: title, label: Tekstkaart titel (zonder foto), widget: string, required: false}
+                  - {name: emphasis, label: Sierlijke tekst (zonder foto), widget: string, required: false}
       - name: editorial
         label: Informatiekaarten & reviews
         file: content/settings/editorial.json
