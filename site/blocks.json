@@ -1896,5 +1896,26 @@
       "background": "wine",
       "image": {}
     }
+  },
+  "ContactHero": {
+    "label": "Contactheader · video en glitter",
+    "html": "",
+    "defaults": {
+      "background": "pink"
+    }
+  },
+  "ContactConversation": {
+    "label": "Contactformulier · kennismaken",
+    "html": "",
+    "defaults": {
+      "background": "wine"
+    }
+  },
+  "BehindCamera": {
+    "label": "Achter de camera · Neeltje",
+    "html": "",
+    "defaults": {
+      "background": "pink"
+    }
   }
 }

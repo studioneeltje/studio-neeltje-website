@@ -97,6 +97,7 @@ export async function processMedia({root=process.cwd(),outputDir=path.join(root,
     const variants=result.variants.map(({file,...rest})=>({...rest,src:`${prefix}/${file}`}));
     const fallback=(result.kind==='image'?variants.filter(v=>v.format==='webp'):variants).at(-1);
     manifest[asset.id]={...result,variants,src:fallback.src,full:fallback.src,poster:result.poster?`${prefix}/${result.poster}`:undefined};
+    if(input.subarray(0,3).toString()==='GIF'){await fs.writeFile(path.join(target,'animation.gif'),input);manifest[asset.id].animated=`${prefix}/animation.gif`;}
     console.log(`Media gereed: ${asset.id} (${variants.length} varianten)`);
   }
   await fs.mkdir(path.join(outputDir,'media'),{recursive:true});await fs.writeFile(path.join(outputDir,'media/manifest.json'),JSON.stringify(manifest,null,2));return manifest;

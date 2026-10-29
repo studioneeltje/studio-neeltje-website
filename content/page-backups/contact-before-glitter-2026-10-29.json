@@ -1,0 +1,161 @@
+{
+  "id": "contact",
+  "title": "Contact",
+  "description": "Trouwfotografie door Studio Neeltje.",
+  "root": {
+    "props": {
+      "title": "Contact",
+      "description": "Trouwfotografie door Studio Neeltje."
+    }
+  },
+  "content": [
+    {
+      "type": "Intro",
+      "props": {
+        "id": "contact-intro-0",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
+            "value": "STUDIO NEELTJE / TROUWFOTOGRAFIE"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie verhaal.",
+            "value": "Contact"
+          },
+          {
+            "key": "2",
+            "label": "Label: Helemaal eigen.",
+            "value": "Vertel me jullie plannen."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Een dag vol momenten om te bewaren.",
+            "value": "Een dag vol momenten om te bewaren."
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Foto achteraan",
+            "mediaId": "foto-26fee13582a7",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Hoofdfoto",
+            "mediaId": "foto-d5f77408f803",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Detailfoto",
+            "mediaId": "foto-6f5e773ded94",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "background": "white"
+      }
+    },
+    {
+      "type": "ContactForm",
+      "props": {
+        "id": "contact-contactform-1",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: EVEN AFSTEMMEN?",
+            "value": "EVEN AFSTEMMEN?"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Vertel me",
+            "value": "Vertel me"
+          },
+          {
+            "key": "2",
+            "label": "Label: jullie plannen.",
+            "value": "jullie plannen."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Een datum, een vraag of gewoon even kennismaken?",
+            "value": "Een datum, een vraag of gewoon even kennismaken? Laat een bericht achter. Ik lees graag wat jullie in gedachten hebben."
+          },
+          {
+            "key": "4",
+            "label": "Label: 01 / KENNISMAKEN",
+            "value": "01 / KENNISMAKEN"
+          },
+          {
+            "key": "5",
+            "label": "Label: Vrijblijvend en persoonlijk",
+            "value": "Vrijblijvend en persoonlijk"
+          },
+          {
+            "key": "6",
+            "label": "Label: STUUR NEELTJE EEN BERICHT",
+            "value": "STUUR NEELTJE EEN BERICHT"
+          },
+          {
+            "key": "7",
+            "label": "Label: Jullie namen",
+            "value": "Jullie namen"
+          },
+          {
+            "key": "8",
+            "label": "Label: E-mailadres",
+            "value": "E-mailadres"
+          },
+          {
+            "key": "9",
+            "label": "Label: Trouwdatum",
+            "value": "Trouwdatum"
+          },
+          {
+            "key": "10",
+            "label": "Label: als die al bekend is",
+            "value": "als die al bekend is"
+          },
+          {
+            "key": "11",
+            "label": "Label: Locatie",
+            "value": "Locatie"
+          },
+          {
+            "key": "12",
+            "label": "Label: optioneel",
+            "value": "optioneel"
+          },
+          {
+            "key": "13",
+            "label": "Label: Jullie bericht",
+            "value": "Jullie bericht"
+          },
+          {
+            "key": "14",
+            "label": "Label: Verstuur mijn bericht",
+            "value": "Verstuur mijn bericht"
+          },
+          {
+            "key": "15",
+            "label": "Tekst: Het formulier staat klaar. Om berichten te ontva",
+            "value": "Het formulier staat klaar. Om berichten te ontvangen, moet de verzendkoppeling nog worden ingesteld."
+          },
+          {
+            "key": "16",
+            "label": "Tekst: Je gegevens gebruik ik alleen om op jullie beric",
+            "value": "Je gegevens gebruik ik alleen om op jullie bericht te reageren."
+          }
+        ],
+        "images": [],
+        "links": []
+      }
+    }
+  ]
+}
