@@ -226,16 +226,6 @@
         "links": [],
         "background": "pink"
       }
-    },
-    {
-      "type": "Journey",
-      "props": {
-        "eyebrow": "VAN EEN EERSTE HALLO TOT JULLIE HERINNERINGEN",
-        "title": "Samen op weg.",
-        "emphasis": "Helemaal jullie.",
-        "background": "white",
-        "id": "Journey-441eb5f1-b67c-4035-b34a-765b9d9b8f37"
-      }
     }
   ],
   "zones": {}
