@@ -193,7 +193,7 @@
         "button": "Ontdek",
         "href": "werkwijze.html#prijzen",
         "motion": "on",
-        "background": "pink",
+        "background": "wine",
         "id": "TiltCard-3648be06-ba1d-43fa-b372-efc5576db3d7",
         "sectionBackground": "white"
       }
@@ -1345,7 +1345,7 @@
           {
             "key": "4",
             "label": "Knop / link: Bekijk mijn werk",
-            "value": "Meer lezen"
+            "value": "Lees meer over Neeltje"
           },
           {
             "key": "5",
