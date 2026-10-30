@@ -18,7 +18,7 @@ export function projectMarkup(record,context,props={}){
  const review=value=>value?.quote?.trim()?`<figure class="sn-project-review">${value.image?`<div class="sn-project-review-photo">${photo(value.image,{aspect:'1'})}</div>`:''}<div><span class="sn-review-mark" aria-hidden="true">“</span><blockquote>${e(value.quote).replace(/\n/g,'<br>')}</blockquote>${value.name?.trim()?`<figcaption>${e(value.name)}</figcaption>`:''}</div></figure>`:'';
  const parts=projectSections(record,props.sectionOrder).map(part=>{
   const heading=part.heading?.trim()?`<h2>${e(part.heading)}</h2>`:'',body=part.body?.trim()?`<div class="sn-project-prose">${projectProse(part.body)}</div>`:'';
-  if(part.type==='gallery')return `${heading?`<div class="sn-project-chapter">${heading}${body}</div>`:body?`<div class="sn-project-chapter">${body}</div>`:''}${gallery(part.gallery||[],part.heading||'Fotogalerij')}`;
+  if(part.type==='gallery'){const selected=Array.isArray(part.gallery)&&part.gallery.length?part.gallery:[part.image,part.secondImage].filter(Boolean);return `${heading?`<div class="sn-project-chapter">${heading}${body}</div>`:body?`<div class="sn-project-chapter">${body}</div>`:''}${gallery(selected,part.heading||'Fotogalerij')}`;}
   if(part.type==='photo')return `<figure class="sn-project-wide">${photo(part.image)}${part.caption?.trim()?`<figcaption>${e(part.caption)}</figcaption>`:''}</figure>`;
   if(part.type==='pair')return `<div class="sn-project-pair">${photo(part.image)}${photo(part.secondImage)}</div>`;
   if(part.type==='textPhoto')return `<section class="sn-project-split"><div>${heading}${body}</div><figure>${photo(part.image,{aspect:'3/4'})}</figure></section>`;
