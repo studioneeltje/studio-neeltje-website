@@ -19,7 +19,7 @@ export function renderBlock(block, context) {
   const spec = context.templates[block.type];
   if (!spec) throw new Error(`Onbekend blok: ${block.type}`);
   let html = spec.html;
-  if(block.type==='ProjectStory') html=projectMarkup(context.stories?.find(story=>story.id===p.storyId),context,p);
+  if(block.type==='ProjectStory') html=projectMarkup(context.stories?.find(story=>story.id===p.storyId)||context.stories?.find(story=>story.cmsSlug===p.storyId),context,p);
   else if(block.type==='PersonalInvite') html=personalInviteMarkup(p,context);
   else if(block.type==='TiltCard') html=tiltCardMarkup(p);
   else if(block.type==='Orbit') html=orbitGalleryMarkup(p,context);
