@@ -57,12 +57,27 @@ class PhotoControl extends CMS.React.Component{
 }
 CMS.registerFieldType('neeltje-image',PhotoControl,undefined,{type:'object',properties:{multiple:{type:'boolean'}}});
 function ProjectPreview({record}){
- const [context,setContext]=useState(null);
- useEffect(()=>{let active=true;loadLibrary().then(data=>{if(active)setContext(data);}).catch(()=>{});return()=>{active=false;};},[]);
- if(!context)return <p>Voorvertoning laden…</p>;
- const html=renderPage(projectPage(record),{...context,stories:[record,...(context.stories||[]).filter(story=>story.id!==record.id)],assetBaseURL:ROOT,preview:true});
- const source=`<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="${ROOT}"><link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;600;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/theme.css"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/blocks.css"><link rel="stylesheet" href="assets/design.css"></head><body class="sn-public"><main class="mode mode-canvas active">${html}</main></body></html>`;
- return <iframe title="Voorvertoning van deze reportage" sandbox="" srcDoc={source} style={{width:'100%',height:'90vh',border:0}}/>;
+ const [context,setContext]=useState(null),[error,setError]=useState(''),[mobile,setMobile]=useState(false),[large,setLarge]=useState(false);
+ useEffect(()=>{let active=true;const listener=data=>{if(active){setContext(data);setError('');}};libraryListeners.add(listener);loadLibrary().then(listener).catch(()=>{if(active)setError('De beeldbank kon niet laden. Sla je werk op en vernieuw de beheeromgeving.');});return()=>{active=false;libraryListeners.delete(listener);};},[]);
+ let markup='',renderError='';
+ if(context)try{markup=renderPage(projectPage(record),{...context,stories:[record,...(context.stories||[]).filter(story=>story.id!==record.id)],assetBaseURL:ROOT,preview:true});}catch(e){renderError=e.message;}
+ const photos=usePreviewPhotos(markup);
+ if(error||renderError)return <p role="alert">{error||'De reportagevoorvertoning kon niet worden opgebouwd: '+renderError}</p>;
+ if(!context)return <p role="status">Reportage en beeldbank laden…</p>;
+ const sections=Array.isArray(record.sections)?record.sections:[];
+ const keys=sections.map((section,index)=>String(section.key||index)),duplicates=[...new Set(keys.filter((key,i)=>keys.indexOf(key)!==i))];
+ const galleries=sections.filter(section=>section.type==='gallery'&&(!Array.isArray(section.gallery)||!section.gallery.length)&&![section.image,section.secondImage].some(Boolean));
+ const html=photos.ready?photos.html:'';
+ const source=`<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><base href="${ROOT}"><link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;600;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/theme.css"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/blocks.css"><link rel="stylesheet" href="assets/design.css"></head><body class="sn-public"><main class="mode mode-canvas active">${html}</main></body></html>`;
+ return <section style={large?{position:'fixed',inset:12,zIndex:10000,background:'#f5f5f5',padding:16,overflow:'auto',boxShadow:'0 0 0 40px #0008'}:{}} role={large?'dialog':undefined} aria-modal={large||undefined} aria-label="Reportagevoorvertoning" onKeyDown={event=>{if(event.key==='Escape')setLarge(false);}}>
+ <div style={{display:'flex',gap:12,flexWrap:'wrap',marginBottom:12}}><button type="button" onClick={()=>setMobile(false)} aria-pressed={!mobile}>Desktop</button><button type="button" onClick={()=>setMobile(true)} aria-pressed={mobile}>Mobiel</button><button type="button" onClick={()=>setLarge(!large)}>{large?'Sluit groot voorbeeld':'Groot bekijken ↗'}</button><button type="button" onClick={()=>loadLibrary(true).then(setContext).catch(e=>setError(e.message))}>Beeldbank vernieuwen</button></div>
+ <p style={{fontSize:14,margin:'0 0 12px'}}>Je huidige concept met gekozen foto's, zonder publicatie. Nog niet gepubliceerde media moeten online in Puck zijn opgeslagen.</p>
+ {duplicates.length>0&&<p role="alert">Dubbele onderdeelnaam: {duplicates.join(', ')}. Geef elk verhaalonderdeel vóór publicatie een unieke naam.</p>}
+ {galleries.length>0&&<p role="status">Er zijn nog lege galerijonderdelen. Kies galerijfoto's om ze te vullen.</p>}
+ {context.libraryWarning&&<p role="alert">{context.libraryWarning}</p>}
+ {photos.ready&&photos.failed>0&&<p role="alert">{photos.failed} foto('s) konden niet geladen worden. Je selectie blijft bewaard. <button type="button" onClick={photos.retry}>Opnieuw proberen</button></p>}
+ {!photos.ready?<p role="status">Foto's in voorvertoning laden…</p>:<iframe title="Visuele voorvertoning van je trouwreportage" sandbox="" srcDoc={source} style={{display:'block',width:mobile?'390px':'100%',maxWidth:'100%',height:large?'calc(100vh - 190px)':'80vh',border:0,margin:'0 auto',background:'#fff'}}/>}
+ </section>;
 }
 class ProjectPreviewControl extends CMS.React.Component{
  componentDidMount(){this.root=createRoot(this.host);this.draw();}
