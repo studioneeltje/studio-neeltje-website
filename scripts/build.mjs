@@ -14,7 +14,7 @@ import {renderArticle} from './render-article.mjs';
 import{imageMarkup,escapeHTML as e}from'../src/shared/media.mjs';
 
 export async function loadCollection(name,root=process.cwd()){
- const dir=path.join(root,'content',name);const names=(await fs.readdir(dir)).filter(n=>n.endsWith('.json')).sort();return Promise.all(names.map(async n=>{const record=JSON.parse(await fs.readFile(path.join(dir,n),'utf8'));return name==='articles'?{...record,cmsSlug:n.slice(0,-5)}:record;}));
+ const dir=path.join(root,'content',name);const names=(await fs.readdir(dir)).filter(n=>n.endsWith('.json')).sort();return Promise.all(names.map(async n=>{const record=JSON.parse(await fs.readFile(path.join(dir,n),'utf8'));return (name==='articles'||name==='stories')?{...record,cmsSlug:n.slice(0,-5)}:record;}));
 }
 const read=async p=>JSON.parse(await fs.readFile(p,'utf8'));
 const assetVersion=createHash('sha256').update((await Promise.all(['site/theme.css','assets/site.css','assets/blocks.css','assets/design.css','assets/checklist.css','assets/site.js','assets/blocks-runtime.js','assets/forms.js'].map(p=>fs.readFile(p,'utf8')))).join('\n')).digest('hex').slice(0,12);
