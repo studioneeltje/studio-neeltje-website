@@ -447,3 +447,16 @@ Neeltje kiest op 21 oktober 2026 twaalf foto's in plaats van vijftien. Het losse
 - [x] Reviewkaarten: korte quote zichtbaar houden met een eigen uitklapbare volledige review uit hetzelfde Sveltia-record. Geen losse titel zonder toegang tot een ingevulde lange tekst. Zonder afzonderlijke lange tekst staat de hele quote zichtbaar en verschijnt geen lege uitklapknop. Native bediening met toetsenbord, onafhankelijk per kaart, bestaande keuzes en kleuren behouden.
 
 Neeltje vraagt beide aanvullingen mee te nemen in dezelfde bouw en directe publicatie. Geen klantteksten of media automatisch ingevuld of vervangen.
+
+## Contactcorrecties — bouw in deze chat, 30 oktober 2026
+
+De onderstaande bouw vervangt de eerdere open bouwpunten van 30 oktober:
+
+- [x] Kort formulier met alleen namen en telefoon; aparte verzendblokkade behouden.
+- [x] Herzien gekozen ontwerp met portret naast formulier, echte uitklapbare review en drie bewerkbare fotokaarten.
+- [x] Geen ‘En dan?’-blok; ook oude instellingen kunnen het niet terugbrengen.
+- [x] Twinkelende headerglitters, pauze, hoverbeweging van foto/label en glans/lift op knop, met minder-bewegenondersteuning.
+- [x] Eigen fotomuurselectie uit bewaarde conceptversie overgenomen; oorspronkelijke lijstmaterialen, posities en vorm behouden, nieuwe titelopmaak toegepast.
+- [ ] Publicatie: alleen na afzonderlijke toestemming; deze bouw wijzigt de live website niet.
+
+De nieuwe bouw staat in de aparte checkout contactpagina-bouw. Bestaande conceptbranches en de oude lokale projectmap blijven behouden.

@@ -284,7 +284,7 @@ collections:
               - {name: photoCaption, label: Ondertitel fotolabel, widget: string, required: false}
               - {name: glitter, label: Zichtbare glitteraccenten, widget: boolean, required: false}
           - name: form
-            label: Formulier, review en vervolgstappen
+            label: Kort formulier, portret en review
             widget: object
             fields:
               - {name: eyebrow, label: Bovenregel, widget: string, required: false}
@@ -292,27 +292,15 @@ collections:
               - {name: emphasis, label: Sierlijke titelregel, widget: string, required: false}
               - {name: intro, label: Introductie formulier, widget: text, required: false}
               - {name: sideTitle, label: Sierlijke tekst naast het formulier, widget: text, required: false}
+              - {name: sideEmphasis, label: Sierlijke tweede regel naast het formulier, widget: string, required: false}
               - {name: sideText, label: Tekst naast het formulier, widget: text, required: false}
+              - {name: image, label: Portret naast het formulier, widget: neeltje-image, required: false}
               - {name: signature, label: Ondertekening, widget: string, required: false}
               - {name: namesLabel, label: Label namen, widget: string, required: false}
-              - {name: emailLabel, label: Label e-mailadres, widget: string, required: false}
-              - {name: dateLabel, label: Label optionele trouwdatum, widget: string, required: false}
-              - {name: locationLabel, label: Label optionele locatie, widget: string, required: false}
-              - {name: messageLabel, label: Label bericht, widget: string, required: false}
+              - {name: phoneLabel, label: Label telefoonnummer, widget: string, required: false}
               - {name: button, label: Verzendknop, widget: string, required: false}
               - {name: reassurance, label: Tekst onder de knop, widget: string, required: false}
               - {name: reviewId, label: Korte naam van de review (leeg = geen review), widget: string, required: false}
-              - {name: stepsTitle, label: Titel vervolgstappen, widget: string, required: false}
-              - {name: stepsEmphasis, label: Sierlijke tekst bij vervolgstappen, widget: string, required: false}
-              - name: steps
-                label: Drie vervolgstappen
-                widget: list
-                min: 3
-                max: 3
-                summary: "{{fields.title}}"
-                fields:
-                  - {name: title, label: Titel, widget: string}
-                  - {name: text, label: Toelichting, widget: text}
           - name: personal
             label: Achter de camera · Ook gewoon Neeltje
             widget: object

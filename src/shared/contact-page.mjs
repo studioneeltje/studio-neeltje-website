@@ -1,14 +1,66 @@
 import {escapeHTML as e,safeURL,imageMarkup,assetURL,mediaURL,isMediaAvailable,imagePresentation} from './media.mjs';
 
-const portrait='media-06bb057a-1e07-43fe-b00f-e12d6c726440';
 export const contactDefaults={
- hero:{eyebrow:'Hé, daar zijn jullie.',title:'Jullie\nhebben een',emphasis:'verhaal.',body:'Grote gevoelens. Kleine momenten.\nEn een fotograaf die er helemaal bij is.',button:'Even kennismaken',mode:'image',image:portrait,gif:'',videoId:'',photoLabel:'Aangenaam, Neeltje.',photoCaption:'Trouwfotografie met energie',glitter:true},
- form:{eyebrow:'Een berichtje is het begin.',title:'Vertel eens.',emphasis:'Wie zijn jullie?',intro:'Jullie hoeven het nog niet allemaal te weten. Een vraag stellen of vrijblijvend kennismaken kan gewoon.',sideTitle:'Ik ben\nbenieuwd.',sideText:'Wie zijn jullie? Waar kijken jullie naar uit? En wat maakt jullie dag van jullie?\n\nVertel het me. Jullie hoeven het nog niet allemaal te weten.',signature:'Liefs, Neeltje',namesLabel:'Hoe heten jullie?',emailLabel:'Waar kan ik jullie bereiken?',dateLabel:'Wanneer trouwen jullie?',locationLabel:'Waar vieren jullie het?',messageLabel:'Wat willen jullie mij vragen?',button:'Stuur Neeltje een bericht',reassurance:'Vrijblijvend kennismaken. Eerst ontdekken of het klikt.',reviewId:'sari-onno',stepsTitle:'En dan?',stepsEmphasis:'Gewoon, stap voor stap.',steps:[{title:'Jullie sturen een bericht.',text:'Stel je vraag of laat weten dat jullie willen kennismaken.'},{title:'Jullie horen van mij.',text:'Ik lees jullie bericht en reageer persoonlijk.'},{title:'We maken kennis.',text:'Samen ontdekken we of ik bij jullie en jullie trouwdag pas.'}]},
- personal:{title:'Achter de camera?',emphasis:'Ook gewoon Neeltje.',intro:'Betrokken, een beetje eigenwijs en met liefde voor alles wat echt is.',glitter:true,cards:[{image:portrait,caption:'Met camera.',title:'',emphasis:''},{image:'',caption:'Zonder pose.',title:'Geen stijve',emphasis:'poses.'},{image:'',caption:'Altijd betrokken.',title:'Wel een',emphasis:'beetje sjabam.'}]}
+ "hero": {
+  "eyebrow": "Hé, daar zijn jullie.",
+  "title": "Jullie hebben\neen verhaal.",
+  "emphasis": "Ik ben benieuwd.",
+  "body": "Grote gevoelens. Kleine momenten.\nEn een fotograaf die er helemaal bij is.",
+  "button": "Even kennismaken",
+  "mode": "image",
+  "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
+  "gif": "",
+  "videoId": "",
+  "photoLabel": "Aangenaam, Neeltje.",
+  "photoCaption": "Trouwfotografie met energie",
+  "glitter": true
+ },
+ "form": {
+  "eyebrow": "Een berichtje is het begin.",
+  "title": "Hé, wie zijn jullie?",
+  "emphasis": "",
+  "intro": "Meer dan jullie namen en telefoonnummer heb ik voor nu niet nodig.",
+  "sideTitle": "Even kennismaken?",
+  "sideText": "Laat jullie namen en telefoonnummer achter. Dan neem ik persoonlijk contact met jullie op.\n\nGewoon even ontdekken of het klikt.",
+  "signature": "Liefs, Neeltje",
+  "namesLabel": "Jullie namen",
+  "button": "Stuur Neeltje een bericht",
+  "reassurance": "Vrijblijvend. Persoonlijk. Zonder verplichtingen.",
+  "reviewId": "sari-onno",
+  "sideEmphasis": "Lijkt me leuk.",
+  "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
+  "phoneLabel": "Telefoonnummer"
+ },
+ "personal": {
+  "title": "Achter de camera?",
+  "emphasis": "Ook gewoon Neeltje.",
+  "intro": "Betrokken, een beetje eigenwijs en met liefde voor alles wat echt is.",
+  "glitter": true,
+  "cards": [
+   {
+    "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
+    "caption": "Met camera.",
+    "title": "",
+    "emphasis": ""
+   },
+   {
+    "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
+    "caption": "Zonder pose.",
+    "title": "Geen stijve",
+    "emphasis": "poses."
+   },
+   {
+    "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
+    "caption": "Altijd betrokken.",
+    "title": "Wel een",
+    "emphasis": "beetje sjabam."
+   }
+  ]
+ }
 };
 const text=value=>e(value).replace(/\n/g,'<br>');
 const settings=(context,key)=>({...contactDefaults[key],...context.settings.contact?.[key]});
-function sparkles(){return '<span class="sn-contact-sparkles" aria-hidden="true">'+[0,1,2,3,4,5,6].map(i=>`<span class="sn-contact-spark sn-contact-spark-${i}">✦</span>`).join('')+'</span>';}
+function sparkles(){return '<span class="sn-contact-halo" aria-hidden="true"></span><span class="sn-contact-sparkles" aria-hidden="true">'+Array.from({length:11},(_,i)=>`<span class="sn-contact-spark sn-contact-spark-${i}"><svg viewBox="0 0 32 32" focusable="false"><path d="M16 1 20 12 31 16 20 20 16 31 12 20 1 16 12 12Z" fill="currentColor"/></svg></span>`).join('')+'</span>';}
 export function contactHeaderMarkup(props,context){
  const p=settings(context,'hero'),selection={...props.image,mediaId:props.image?.mediaId||p.image,sizes:'(max-width:700px) 90vw, 480px'},poster=imageMarkup(selection,context,{aspect:'3/4',eager:true});
  const video=context.media.find(asset=>asset.id===p.videoId&&asset.kind==='video'),entry=video&&context.manifest?.[video.id];
@@ -22,11 +74,12 @@ export function contactHeaderMarkup(props,context){
  return `<section class="sn-contact-header${p.glitter!==false?' has-glitter':''}"><div class="sn-contact-hero-copy"><p class="sn-contact-kicker">${e(p.eyebrow)}</p><h1>${text(p.title)}<em>${e(p.emphasis)}</em></h1><p class="sn-contact-lead">${text(p.body)}</p>${p.button?.trim()?`<button type="button" class="sn-contact-jump" data-contact-jump>${e(p.button)} <span aria-hidden="true">↓</span></button>`:''}</div><figure class="sn-contact-hero-media" style="${e(frameStyle)}"><div class="sn-contact-poster">${poster}</div>${motion}<figcaption><strong>${e(p.photoLabel)}</strong><span>${e(p.photoCaption)}</span></figcaption></figure>${p.glitter!==false?sparkles():''}${warning}</section>`;
 }
 export function contactConversationMarkup(props,context){
- const p=settings(context,'form'),email=safeURL('mailto:'+String(context.settings.email||context.settings.forms?.recipient||'info@studioneeltje.com'));
+ const p=settings(context,'form'),address=String(context.settings.email||context.settings.forms?.recipient||'info@studioneeltje.com'),email=safeURL('mailto:'+address);
  const review=(context.settings.editorial?.reviews||[]).find(r=>r.id===p.reviewId&&r.visible!==false&&!r.continuationOf);
- const field=(label,name,type,placeholder,required=false)=>`<label class="sn-contact-field${['names','email','message'].includes(name)?' is-wide':''}"><span>${e(label)}${required?' <span aria-hidden="true">*</span>':''}</span>${name==='message'?`<textarea name="message" rows="3" placeholder="Hier is ruimte voor jullie bericht."></textarea>`:`<input name="${name}" type="${type}"${required?' required':''}${name==='email'?' autocomplete="email"':name==='names'?' autocomplete="name"':''} placeholder="${e(placeholder)}">`}</label>`;
- const steps=(Array.isArray(p.steps)?p.steps:contactDefaults.form.steps).filter(s=>s.title?.trim()).slice(0,3);
- return `<section class="sn-contact-conversation" data-contact-form-section><aside class="sn-contact-aside"><h2>${text(p.sideTitle)}</h2><p>${text(p.sideText)}</p><a href="${e(email)}">${e(context.settings.email||'info@studioneeltje.com')}</a><span class="sn-contact-signature">${e(p.signature)}</span></aside><div class="sn-contact-paper"><p class="sn-contact-kicker">${e(p.eyebrow)}</p><h2>${e(p.title)}<em>${e(p.emphasis)}</em></h2><p class="sn-contact-form-intro">${text(p.intro)}</p><form class="sn-contact-conversation-form" data-form="contact">${field(p.namesLabel,'names','text','Jullie namen',true)}${field(p.emailLabel,'email','email','Jullie e-mailadres',true)}${field(p.dateLabel,'date','text','Mag nog openstaan')}${field(p.locationLabel,'location','text','Als jullie het al weten')}${field(p.messageLabel,'message','text','')}<div class="sn-contact-send"><button type="submit" class="sn-contact-submit"><span>${e(p.button)}</span><i aria-hidden="true">↗</i></button><p>${e(p.reassurance)}</p></div><p data-form-status hidden aria-live="polite"></p></form>${review?`<figure class="sn-contact-review"><span aria-hidden="true">“</span><blockquote>${e(review.quote)}</blockquote><figcaption>${e(review.name)}</figcaption></figure>`:''}</div></section>${steps.length?`<section class="sn-contact-next"><header><h2>${e(p.stepsTitle)}</h2><em>${e(p.stepsEmphasis)}</em></header><ol>${steps.map((s,i)=>`<li><span aria-hidden="true">0${i+1}</span><h3>${e(s.title)}</h3><p>${e(s.text)}</p></li>`).join('')}</ol></section>`:''}`;
+ const field=(label,name,type,placeholder,autocomplete)=>`<label class="sn-contact-field is-wide"><span>${e(label)} <span aria-hidden="true">*</span></span><input name="${name}" type="${type}" required autocomplete="${autocomplete}" placeholder="${e(placeholder)}"></label>`;
+ const portrait=imageMarkup({...props.image,mediaId:props.image?.mediaId||p.image,sizes:'(max-width:700px) 100px, 330px'},context,{aspect:'1'});
+ const fullReview=review?.fullText?.trim();
+ return `<section class="sn-contact-conversation" data-contact-form-section><aside class="sn-contact-aside"><h2>${text(p.sideTitle)}${p.sideEmphasis?`<em>${e(p.sideEmphasis)}</em>`:''}</h2><p>${text(p.sideText)}</p><figure class="sn-contact-aside-portrait">${portrait}<figcaption>${e(p.signature)}</figcaption></figure></aside><div class="sn-contact-paper"><p class="sn-contact-kicker">${e(p.eyebrow)}</p><h2>${e(p.title)}${p.emphasis?`<em>${e(p.emphasis)}</em>`:''}</h2><p class="sn-contact-form-intro">${text(p.intro)}</p><form class="sn-contact-conversation-form" data-form="contact">${field(p.namesLabel,'names','text','Wij zijn…','name')}${field(p.phoneLabel,'phone','tel','Waar kan ik jullie bereiken?','tel')}<div class="sn-contact-send"><div class="sn-contact-send-effect"><button type="submit" class="sn-contact-submit"><span>${e(p.button)}</span><i aria-hidden="true">↗</i></button><span class="sn-contact-button-sparks" aria-hidden="true">✦ <b>✧</b> ✦</span></div><p>${e(p.reassurance)}<br>Liever mailen? <a href="${e(email)}">${e(address)}</a></p></div><p data-form-status hidden aria-live="polite"></p></form>${review?`<figure class="sn-contact-review"><span aria-hidden="true">“</span><blockquote>${e(review.quote)}</blockquote><figcaption>${e(review.name)}</figcaption>${fullReview&&fullReview!==review.quote.trim()?`<details><summary>Lees hun hele review</summary><p>${e(fullReview)}</p></details>`:''}</figure>`:''}</div></section>`;
 }
 export function behindCameraMarkup(props,context){
  const p=settings(context,'personal'),cards=(Array.isArray(p.cards)?p.cards:contactDefaults.personal.cards).slice(0,3);

@@ -1,0 +1,34 @@
+{
+  "id": "contact",
+  "title": "Contact",
+  "description": "Trouwfotografie door Studio Neeltje.",
+  "root": {
+    "props": {
+      "title": "Contact",
+      "description": "Trouwfotografie door Studio Neeltje."
+    }
+  },
+  "content": [
+    {
+      "type": "ContactHero",
+      "props": {
+        "id": "contact-contacthero",
+        "background": "pink"
+      }
+    },
+    {
+      "type": "ContactConversation",
+      "props": {
+        "id": "contact-contactconversation",
+        "background": "wine"
+      }
+    },
+    {
+      "type": "BehindCamera",
+      "props": {
+        "id": "contact-behindcamera",
+        "background": "pink"
+      }
+    }
+  ]
+}
