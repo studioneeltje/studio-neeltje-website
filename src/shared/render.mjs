@@ -60,6 +60,7 @@ export function renderBlock(block, context) {
       html = html.replace(/<!-- articles:start -->[\s\S]*?<!-- articles:end -->/, `<!-- articles:start -->${context.articles.filter(a=>a.published!==false).map((article,i)=>`<a class="journal-card" href="artikel-${e(article.id)}.html">${article.cover?`<div class="journal-card-visual">${imageMarkup({...p.crops?.[article.id],mediaId:article.cover,sizes:'(max-width: 780px) 88vw, 30vw'},context)}</div>`:''}<div class="journal-card-meta"><span>${e(article.category)}</span><span>${articleReadTime(article)}</span></div><h3>${e(article.title)}</h3><span class="journal-card-link"><span class="sn-link-label">Lees het artikel</span> <i aria-hidden="true">↗</i></span></a>`).join('')}<!-- articles:end -->`);
     }
   }
+  if(block.type==='Wall'&&p.contactWall===true)html=html.replace('class="canvas-wall"','class="canvas-wall sn-contact-wall"');
   if(block.type==='ContactForm'&&p.formKind==='checklist')html=html.replace(/<label[^>]*>[\s\S]*?<\/label>/g,label=>/name="(?:date|location|message)"/.test(label)?'':label);
   if (block.type === 'About') {
     const note=context.settings.aboutPhotoNote;

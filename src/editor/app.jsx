@@ -50,6 +50,7 @@ function blockConfig(context){
      if(spec.defaults.links?.length&&!['Journal','Orbit'].includes(type))fields.links={type:'custom',label:'Links en knoppen',render:props=><LinksField {...props} hiddenKeys={type==='Social'?['0','5']:[]}/>};
    }
    if(type==='ContactHero')fields.image={type:'custom',label:'Posterfoto en uitsnede van het headerbeeld',render:props=><ImagePicker {...props} value={{...props.value,mediaId:props.value?.mediaId||context.settings.contact?.hero?.image||'media-06bb057a-1e07-43fe-b00f-e12d6c726440'}} context={context}/>};
+   if(type==='ContactConversation')fields.image={type:'custom',label:'Portret naast het formulier en uitsnede',render:props=><ImagePicker {...props} value={{...props.value,mediaId:props.value?.mediaId||context.settings.contact?.form?.image}} context={context}/>};
    if(type==='BehindCamera')fields.crops={type:'custom',label:'Uitsneden van de fotoprints',render:props=><RecordCrops {...props} context={context} records={[...new Map((context.settings.contact?.personal?.cards||[]).filter(card=>card.image).map(card=>[card.image,{id:card.image,title:card.caption,cover:card.image}])).values()]} helpText="Foto’s kies je centraal in Sveltia → Contactpagina met glitter. Hier pas je de uitsneden voor deze pagina aan."/>};
    if(type==='Review'){
      const reviews=(context.settings.editorial?.reviews||[]).filter(review=>review.id&&review.quote?.trim()&&review.name?.trim()&&review.visible!==false);

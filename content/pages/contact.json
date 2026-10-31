@@ -24,6 +24,76 @@
       }
     },
     {
+      "type": "Wall",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 03 — Jullie foto's thuis",
+            "value": "muurbloempje"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Niet alleen in een album.",
+            "value": "Hangen jullie straks"
+          },
+          {
+            "key": "2",
+            "label": "Label: Ook aan de muur.",
+            "value": "bij mij op de muur?"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Trouwfoto in een klassieke houten staande lijst",
+            "mediaId": "media-5ef124c6-89df-446c-bbf7-0e273276ddf2",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Details van een trouwdag in een liggende bronzen lijst",
+            "mediaId": "media-7c72f7bb-72b0-483c-b48e-7e2145e062d1",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Trouwfoto in een vergulde staande lijst",
+            "mediaId": "media-f93f3313-4f88-4b76-b388-ec2d19ed570c",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "3",
+            "label": "Een spontaan moment in een donkerhouten staande lijst",
+            "mediaId": "media-41e8a879-35b2-4061-aa86-8b24402fc54f",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "4",
+            "label": "Een liggende trouwfoto in een klassieke houten lijst",
+            "mediaId": "media-96789996-abe9-4dd7-88d9-9ed2d8a566f6",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "5",
+            "label": "Een grote trouwfoto in een rijk vergulde staande lijst",
+            "mediaId": "media-3b472201-5575-497a-9875-b0267e4971c4",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "id": "Wall-6c27de1e-5fe9-4425-b48c-1f611e2a4623",
+        "background": "white",
+        "contactWall": true
+      }
+    },
+    {
       "type": "BehindCamera",
       "props": {
         "id": "contact-behindcamera",

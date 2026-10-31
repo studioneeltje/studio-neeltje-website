@@ -167,3 +167,29 @@ op donkerrood. Accenten blijven rood-oranje. Kaarten en formuliervlakken houden
 hun eigen leesbare kleurcombinatie. De foto in een header blijft zichtbaar.
 Bekijk je concept, sla het op en publiceer het zoals andere paginawijzigingen.
 Bestaande blokken behouden hun opmaak totdat je een kleur kiest.
+
+## Contactpagina — herzien ontwerp 30 oktober 2026
+
+Het contactformulier vraagt uitsluitend **Jullie namen** en **Telefoonnummer**.
+De verzending blijft uit totdat de aansluiting afzonderlijk is gekozen en getest.
+Het decoratieve knopeffect verandert die blokkade niet. De volledige bestaande
+review is via **Lees hun hele review** te openen.
+
+Teksten, veldlabels, het portret naast het formulier en de drie persoonlijke
+fotokaarten staan in **Sveltia → Algemene instellingen → Contactpagina met glitter**.
+Het bestaande portret wordt voorlopig op de drie kaarten hergebruikt; kies daar
+zelf andere eigen foto's. Het vervolgstappenblok ‘En dan?’ is verwijderd.
+
+De eigen fotomuur met zes gekozen beelden staat als los **Fotomuur**-blok in Puck.
+De oorspronkelijke lijstafbeelding en posities blijven behouden. De contactvariant
+geeft de titel een sierlijke rood-oranje tweede regel. Dit wijzigt geen andere fotomuren.
+Uitsneden van het headerbeeld, formulierportret en de persoonlijke kaarten blijven
+via Puck te beheren. De pauzeknop stopt de twinkelende headerglitters; de instelling
+voor minder beweging wordt gerespecteerd.
+
+De oude gepubliceerde contactindeling staat in
+`content/page-backups/contact-before-revision-2026-10-30.json`.
+De exacte fotomuurselectie met bronverwijzing staat in
+`content/page-backups/contact-wall-source-2026-10-30.json`.
+Bestaande online en lokale gebruikersconcepten worden niet overschreven. Bewaar
+bij later laden van de nieuwe versie eerst je huidige concept via Reservekopie.
