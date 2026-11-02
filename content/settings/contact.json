@@ -5,8 +5,8 @@
     "emphasis": "Ik ben benieuwd.",
     "body": "Grote gevoelens. Kleine momenten.\nEn een fotograaf die er helemaal bij is.",
     "button": "Even kennismaken",
-    "mode": "image",
     "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
+    "mode": "image",
     "gif": "",
     "videoId": "",
     "photoLabel": "Aangenaam, Neeltje.",
@@ -19,15 +19,15 @@
     "emphasis": "",
     "intro": "Meer dan jullie namen en telefoonnummer heb ik voor nu niet nodig.",
     "sideTitle": "Even kennismaken?",
+    "sideEmphasis": "Lijkt me leuk.",
     "sideText": "Laat jullie namen en telefoonnummer achter. Dan neem ik persoonlijk contact met jullie op.\n\nGewoon even ontdekken of het klikt.",
+    "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
     "signature": "Liefs, Neeltje",
     "namesLabel": "Jullie namen",
+    "phoneLabel": "Telefoonnummer",
     "button": "Stuur Neeltje een bericht",
     "reassurance": "Vrijblijvend. Persoonlijk. Zonder verplichtingen.",
-    "reviewId": "sari-onno",
-    "sideEmphasis": "Lijkt me leuk.",
-    "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
-    "phoneLabel": "Telefoonnummer"
+    "reviewId": "sari-onno"
   },
   "personal": {
     "title": "Achter de camera?",
@@ -36,22 +36,22 @@
     "glitter": true,
     "cards": [
       {
-        "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
-        "caption": "Met camera.",
-        "title": "",
-        "emphasis": ""
+        "image": "media-f7be80df-1f91-496c-8c7c-62305a8d2d68",
+        "caption": "Ik ben wel in beweging zeg maar",
+        "title": "Met een",
+        "emphasis": "beetje sjeu"
       },
       {
-        "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
+        "image": "media-15fbb9ac-4988-4e3e-bf57-209afbf0f816",
         "caption": "Zonder pose.",
         "title": "Geen stijve",
         "emphasis": "poses."
       },
       {
         "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
-        "caption": "Altijd betrokken.",
-        "title": "Wel een",
-        "emphasis": "beetje sjabam."
+        "caption": "Cool doen met camera's",
+        "title": "Doe maar rustig",
+        "emphasis": "maar ook weer niet"
       }
     ]
   }
