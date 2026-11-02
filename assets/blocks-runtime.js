@@ -151,3 +151,24 @@ if('IntersectionObserver'in window){const collageObserver=new IntersectionObserv
   document.addEventListener('visibilitychange',update);
  });
 })();
+
+
+// Reading aids for the complete, unabridged legal document.
+(()=>{
+ document.querySelectorAll('[data-legal-document]').forEach(root=>{
+  const articles=[...root.querySelectorAll('[data-legal-article]')],links=[...root.querySelectorAll('[data-legal-link]')],bar=root.querySelector('[data-legal-progress]'),toc=root.querySelector('.sn-legal-toc');
+  if(!articles.length)return;
+  const print=root.querySelector('[data-legal-print]');if(print){print.hidden=false;print.addEventListener('click',()=>window.print());}
+  if(toc&&matchMedia('(max-width:700px)').matches)toc.open=false;
+  let queued=false;
+  function update(){
+   queued=false;const first=articles[0].getBoundingClientRect(),last=articles.at(-1).getBoundingClientRect();
+   const distance=Math.max(1,last.bottom-first.top-innerHeight*.65),value=Math.max(0,Math.min(1,-first.top/distance));
+   if(bar)bar.style.transform=`scaleX(${value})`;
+   const active=[...articles].reverse().find(article=>article.getBoundingClientRect().top<innerHeight*.3)||articles[0];
+   for(const link of links){if(link.dataset.legalLink===active.dataset.legalArticle)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');}
+  }
+  const schedule=()=>{if(!queued){queued=true;requestAnimationFrame(update);}};
+  addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule,{passive:true});update();
+ });
+})();
