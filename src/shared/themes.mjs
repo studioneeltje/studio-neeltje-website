@@ -10,3 +10,5 @@ export const defaultBackground=type=>BLOCK_BACKGROUNDS[type]||'white';
 BLOCK_BACKGROUNDS.ContactHero='pink';
 BLOCK_BACKGROUNDS.ContactConversation='wine';
 BLOCK_BACKGROUNDS.BehindCamera='pink';
+
+BLOCK_BACKGROUNDS.LegalTerms='wine';

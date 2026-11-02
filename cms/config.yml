@@ -263,6 +263,33 @@ collections:
               - {name: emphasis, label: Schuine titelregel, widget: string}
               - {name: copy, label: Toelichting, widget: text}
               - {name: button, label: Knoptekst, widget: string}
+      - name: legalTerms
+        label: Algemene voorwaarden
+        file: content/settings/legal.json
+        fields:
+          - {name: title, label: Documenttitel, widget: string}
+          - {name: version, label: Versie, widget: string, hint: Bijvoorbeeld Juni 2026.}
+          - {name: updated, label: Laatst bijgewerkt, widget: datetime, date_format: 'DD-MM-YYYY', time_format: false, format: 'YYYY-MM-DD'}
+          - {name: effective, label: Van kracht per, widget: datetime, date_format: 'DD-MM-YYYY', time_format: false, format: 'YYYY-MM-DD'}
+          - {name: businessName, label: Bedrijfsnaam, widget: string}
+          - {name: kvk, label: KvK-nummer, widget: string}
+          - {name: phone, label: Telefoonnummer, widget: string}
+          - {name: email, label: E-mailadres, widget: string}
+          - {name: website, label: Website, widget: string}
+          - name: articles
+            label: Artikelen
+            label_singular: Artikel
+            widget: list
+            summary: 'Artikel {{fields.number}} · {{fields.title}}'
+            hint: De volledige juridische tekst. Iedere alinea wordt woordelijk weergegeven. Pas inhoud of volgorde alleen bewust aan.
+            fields:
+              - {name: number, label: Artikelnummer, widget: number, value_type: int, min: 1}
+              - {name: title, label: Titel van het artikel, widget: string}
+              - name: paragraphs
+                label: Alinea’s
+                label_singular: Alinea
+                widget: list
+                field: {name: paragraph, label: Alinea, widget: text}
       - name: contactPage
         label: Contactpagina met glitter
         file: content/settings/contact.json

@@ -1917,5 +1917,12 @@
     "defaults": {
       "background": "pink"
     }
+  },
+  "LegalTerms": {
+    "label": "Algemene voorwaarden",
+    "html": "",
+    "defaults": {
+      "background": "wine"
+    }
   }
 }
