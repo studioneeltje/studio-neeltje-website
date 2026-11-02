@@ -2,7 +2,7 @@
   "title": "Studio Neeltje",
   "email": "info@studioneeltje.com",
   "phone": "",
-  "instagram": "",
+  "instagram": "https://www.instagram.com/studioneeltje/",
   "colors": {
     "wine": "#65001D",
     "pink": "#FDE6F2",
@@ -41,15 +41,15 @@
       "kind": "contact"
     }
   ],
-  "footer": {
-    "title": "Schrijf je in",
-    "emphasis": "voor praktische tips.",
-    "copy": "Schrijf je in en ontvang praktische tips voor jullie trouwdag, precies op de momenten dat ze van pas komen.",
-    "button": "Ontvang de tips"
-  },
   "aboutPhotoNote": {
     "enabled": true,
     "text": "recht uit het hart",
     "position": "inside"
+  },
+  "footer": {
+    "title": "Schrijf je in",
+    "emphasis": "voor praktische tips.",
+    "copy": "Wil jij op en top voorbereid zijn op jullie trouwdag? Schrijf je in en ontvang de beste tips voor jullie trouwdag. Zo weet je zeker dat je overal aan hebt gedacht.",
+    "button": "Ja, dit wil ik"
   }
 }
