@@ -1,0 +1,32 @@
+{
+  "id": "reportage-trouwfotograaf-kasteel-keukenhof-lisse",
+  "title": "Kasteel Keukenhof, Lisse - R&A",
+  "description": "Een zonnige bruiloft vol liefde bij Kasteel Keukenhof in Lisse. Bekijk de spontane trouwfoto's van Rick & Ashley door Studio Neeltje.",
+  "root": {
+    "props": {
+      "title": "Kasteel Keukenhof, Lisse - R&A",
+      "description": "Een zonnige bruiloft vol liefde bij Kasteel Keukenhof in Lisse. Bekijk de spontane trouwfoto's van Rick & Ashley door Studio Neeltje."
+    }
+  },
+  "content": [
+    {
+      "type": "ProjectStory",
+      "props": {
+        "id": "project-trouwfotograaf-kasteel-keukenhof-lisse",
+        "storyId": "trouwfotograaf-kasteel-keukenhof-lisse",
+        "background": "white",
+        "crops": {},
+        "sectionOrder": []
+      }
+    },
+    {
+      "type": "PersonalInvite",
+      "props": {
+        "id": "reportage-trouwfotograaf-kasteel-keukenhof-lisse-personal-invite",
+        "background": "wine",
+        "portfolioInvite": true
+      }
+    }
+  ],
+  "zones": {}
+}
