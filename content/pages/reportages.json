@@ -39,33 +39,32 @@
           {
             "key": "0",
             "label": "Foto achteraan",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-41e8a879-35b2-4061-aa86-8b24402fc54f",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "1",
             "label": "Hoofdfoto",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-7c72f7bb-72b0-483c-b48e-7e2145e062d1",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Detailfoto",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "media-b5091794-9d66-4438-aa24-61c3ee573d28",
             "desktop": null,
             "mobile": null
           }
         ],
         "links": [],
-        "background": "white"
+        "background": "wine"
       }
     },
     {
       "type": "Stories",
       "props": {
-        "id": "reportages-stories-1",
         "texts": [
           {
             "key": "0",
@@ -95,17 +94,9 @@
             "label": "Alle verhalen",
             "href": "reportages.html"
           }
-        ]
-      }
-    },
-    {
-      "type": "Review",
-      "props": {
-        "id": "reportages-review-2",
-        "background": "wine",
-        "eyebrow": "LIEVE WOORDEN / VAN BRUIDSPAREN",
-        "title": "Wat zij",
-        "emphasis": "ervan vinden."
+        ],
+        "background": "blue",
+        "id": "Stories-d28d4706-19ae-48db-8f5d-0c8e11d6af45"
       }
     },
     {
@@ -153,7 +144,7 @@
           {
             "key": "0",
             "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "foto-75c93a94397c",
+            "mediaId": "media-1d8b3650-7a39-4265-bf49-9f13fc637e35",
             "desktop": null,
             "mobile": null
           }
@@ -167,5 +158,6 @@
         ]
       }
     }
-  ]
+  ],
+  "zones": {}
 }
