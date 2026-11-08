@@ -66,6 +66,30 @@ if(settings.forms.checklistFile){
 if(settings.experience.author.image)checkPhoto(settings.experience.author.image,'Auteursfoto');
 for(const item of [...settings.editorial.cards,...settings.editorial.reviews])if(item.image)checkPhoto(item.image,'Informatiekaart of review');
 const context={templates,settings,media,manifest,stories,articles};
+const storyIdAliases={bordeaux:'destination-wedding-fotograaf-bordeaux-frankrijk'};
+const resolveStoryId=id=>storyIdAliases[id]||id;
+const storyPageById=new Map(),storyPageIds=new Set(),reportageAliases=new Map();
+for(const story of stories){
+ const canonical=`reportage-${story.id}.html`;
+ reportageAliases.set(`pagina-reportage-${story.id}.html`,canonical);
+ for(const [alias,id] of Object.entries(storyIdAliases))if(id===story.id)reportageAliases.set(`reportage-${alias}.html`,canonical);
+}
+for(const page of pages.filter(p=>p.id.startsWith('reportage-'))){
+ const selected=page.content.find(block=>block.type==='ProjectStory')?.props?.storyId;
+ const id=resolveStoryId(selected||page.id.slice('reportage-'.length));
+ if(!stories.some(story=>story.id===id))continue;
+ if(storyPageById.has(id))throw Error(`Meerdere Puck-pagina's voor dezelfde reportage: ${id}`);
+ storyPageById.set(id,page);storyPageIds.add(page.id);
+ const alias=`${page.id}.html`,canonical=`reportage-${id}.html`;
+ if(alias!==canonical)reportageAliases.set(alias,canonical);
+}
+function reportagePage(page,storyId){
+ return {...page,content:page.content.map(block=>block.type==='ProjectStory'?{...block,props:{...block.props,storyId}}:block)};
+}
+function redirectHTML(target){
+ const script='location.replace('+JSON.stringify(target)+'+location.search+location.hash)';
+ return '<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="robots" content="noindex,follow"><meta http-equiv="refresh" content="0;url='+e(target)+'"><title>Pagina verplaatst — Studio Neeltje</title><script>'+script+'</script></head><body><a href="'+e(target)+'">Bekijk de reportage</a></body></html>';
+}
 const roleNames=[...new Set(Object.values(templates).flatMap(t=>[...t.html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1])))];
 function blockSelectors(css){for(const id of roleNames)css=css.replace(new RegExp('#'+id+'(?=[\\s.:,{>+~\\[])','g'),`[data-role="${id}"]`);return css;}
 
@@ -78,23 +102,24 @@ for(const name of ['studio-neeltje-logo.png','studio-neeltje-logo.svg','classic-
 await fs.writeFile(path.join(out,'.nojekyll'),'');
 const fonts='https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Host+Grotesk:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Homemade+Apple&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap';
 function documentHTML(title,description,content,{noindex=false}={}){return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(title)}</title><meta name="description" content="${e(description)}">${noindex?'<meta name="robots" content="noindex,follow">':''}<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="${fonts}" rel="stylesheet"><link rel="stylesheet" href="assets/theme.css?v=${assetVersion}"><link rel="stylesheet" href="assets/site.css?v=${assetVersion}"><link rel="stylesheet" href="assets/blocks.css?v=${assetVersion}"><link rel="stylesheet" href="assets/design.css?v=${assetVersion}"><link rel="stylesheet" href="assets/checklist.css?v=${assetVersion}"><script src="assets/site.js?v=${assetVersion}" defer></script><script src="assets/blocks-runtime.js?v=${assetVersion}" defer></script><script src="assets/forms.js?v=${assetVersion}" defer></script><noscript><style>.review-line,.quote-note,.quote-handwritten,.portfolio-mosaic-item{opacity:1!important;transform:none!important;clip-path:none!important}</style></noscript></head><body class="theme-canvas sn-public">${renderHeader(settings)}<main id="main-content" tabindex="-1"><div class="mode mode-canvas active">${content}</div></main>${renderFooter(settings)}${formSettingsScript(settings)}</body></html>`;}
-function fixLinks(html){const $=load(html);$('a').each((_,el)=>{const a=$(el),href=a.attr('href')||'';if(href.includes('preview-pagina.html?')){const url=new URL(href,'https://example.test/');const id=url.searchParams.get('pagina'),article=url.searchParams.get('artikel');const map={kasteel:'reportage-keukenhof',dengh:'reportage-dengh',bordeaux:'reportage-bordeaux',malaga:'reportage-malaga',checklist:'weddingschecklist'};a.attr('href',`${article?'artikel-'+article:map[id]||id||'reportages'}.html${url.hash}`);}if(a.closest('.orbit-card').length){const img=a.find('img');if(img.is('[data-sn-missing]')){a.removeAttr('href').attr('aria-disabled','true');}else if(img.length)a.attr('href',img.attr('data-full-src')||img.attr('src'));}});return $.html();}
-for(const page of pages){const html=fixLinks(documentHTML(page.root?.props?.title||page.title,page.root?.props?.description||page.description||'',renderPage(page,context),{noindex:page.id.startsWith('bedankt-')}));const file=page.id==='home'?'index.html':`${page.id}.html`;await fs.writeFile(path.join(out,file),html);if(page.id==='home')await fs.writeFile(path.join(out,'nieuwe-site.html'),html);}
+function fixLinks(html){const $=load(html);$('a').each((_,el)=>{const a=$(el),href=a.attr('href')||'';if(href.includes('preview-pagina.html?')){const url=new URL(href,'https://example.test/');const id=url.searchParams.get('pagina'),article=url.searchParams.get('artikel');const map={kasteel:'reportage-keukenhof',dengh:'reportage-dengh',bordeaux:'reportage-bordeaux',malaga:'reportage-malaga',checklist:'weddingschecklist'};a.attr('href',`${article?'artikel-'+article:map[id]||id||'reportages'}.html${url.hash}`);}const current=a.attr('href')||'';const match=/^([^?#]+\.html)([?#].*)?$/.exec(current);if(match&&reportageAliases.has(match[1]))a.attr('href',reportageAliases.get(match[1])+(match[2]||''));if(a.closest('.orbit-card').length){const img=a.find('img');if(img.is('[data-sn-missing]')){a.removeAttr('href').attr('aria-disabled','true');}else if(img.length)a.attr('href',img.attr('data-full-src')||img.attr('src'));}});return $.html();}
+for(const page of pages){if(storyPageIds.has(page.id))continue;const html=fixLinks(documentHTML(page.root?.props?.title||page.title,page.root?.props?.description||page.description||'',renderPage(page,context),{noindex:page.id.startsWith('bedankt-')}));const file=page.id==='home'?'index.html':`${page.id}.html`;await fs.writeFile(path.join(out,file),html);if(page.id==='home')await fs.writeFile(path.join(out,'nieuwe-site.html'),redirectHTML('index.html'));}
 function prose(value){return sanitizeHTML(marked.parse(String(value||''),{async:false}),{allowedTags:['p','br','h2','h3','h4','ul','ol','li','strong','em','a','blockquote'],allowedAttributes:{a:['href','title']},allowedSchemes:['https','http','mailto','tel']});}
 for(const [collection,prefix]of [[stories,'reportage'],[articles,'artikel']])for(const record of collection.filter(r=>r.published!==false)){
  if(!/^[a-z0-9][a-z0-9-]{0,80}$/.test(record.id))throw Error('Ongeldige URL voor een reportage of artikel.');
- const custom=prefix==='reportage'?pages.find(page=>page.id===`reportage-${record.id}`):null;
- const content=prefix==='artikel'?renderArticle(record,context):custom?renderPage(custom,context):renderPage(projectPage(record),context);
+ const custom=prefix==='reportage'?storyPageById.get(record.id):null;
+ const content=prefix==='artikel'?renderArticle(record,context):custom?renderPage(reportagePage(custom,record.id),context):renderPage(projectPage(record),context);
  const title=record.seoTitle||record.title,description=record.seoDescription||record.excerpt;
- await fs.writeFile(path.join(out,`${prefix}-${record.id}.html`),documentHTML(title,description,content));
- if(prefix==='reportage')await fs.writeFile(path.join(out,`pagina-reportage-${record.id}.html`),documentHTML(title,description,content));
+ await fs.writeFile(path.join(out,`${prefix}-${record.id}.html`),fixLinks(documentHTML(title,description,content)));
+
 }
+for(const [alias,target] of reportageAliases){if(alias!==target)await fs.writeFile(path.join(out,alias),redirectHTML(target));}
 // The shared Sveltia card links to investering.html; retain that URL while
 // the existing investment page is still stored under its historic route.
 if(pages.some(page=>page.id==='werkwijze')&&!pages.some(page=>page.id==='investering'))await fs.writeFile(path.join(out,'investering.html'),'<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="robots" content="noindex,follow"><meta http-equiv="refresh" content="0;url=werkwijze.html"><title>Investering — Studio Neeltje</title><script>location.replace("werkwijze.html"+location.search+location.hash);</script></head><body><a href="werkwijze.html">Bekijk pakketten en investering</a></body></html>');
 const routes={reportages:'reportages',over:'over',werkwijze:'werkwijze',journal:'journal',contact:'contact',checklist:'weddingschecklist',leveranciers:'leveranciers',kasteel:'reportage-keukenhof',dengh:'reportage-dengh',bordeaux:'reportage-bordeaux',malaga:'reportage-malaga'};
 await fs.writeFile(path.join(out,'preview-pagina.html'),`<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>Studio Neeltje</title><script>const r=${JSON.stringify(routes)};const p=new URLSearchParams(location.search).get('pagina')||'reportages';location.replace((r[p]||r.reportages)+'.html'+location.hash);</script></head><body><a href="index.html">Naar de homepage</a></body></html>`);
-await fs.mkdir(path.join(out,'content'),{recursive:true});await fs.writeFile(path.join(out,'content/bundle.json'),JSON.stringify({...context,pages:[...pages,...stories.filter(story=>story.published!==false&&!pages.some(page=>page.id===`reportage-${story.id}`)).map(projectPage)],mediaSettings}));
+await fs.mkdir(path.join(out,'content'),{recursive:true});await fs.writeFile(path.join(out,'content/bundle.json'),JSON.stringify({...context,pages:[...pages,...stories.filter(story=>story.published!==false&&!storyPageById.has(story.id)).map(projectPage)],mediaSettings}));
 await fs.mkdir(path.join(out,'cms/vendor'),{recursive:true});await fs.cp('node_modules/@sveltia/cms/dist',path.join(out,'cms/vendor'),{recursive:true,filter:source=>!source.endsWith('.map')&&!source.endsWith('.mjs')});
 const cmsConfig=(await fs.readFile('cms/config.yml','utf8')).replace(/max_file_size: \d+/,`max_file_size: ${mediaSettings.maxUploadMB*1024*1024}`);parse(cmsConfig);await fs.writeFile(path.join(out,'cms/config.yml'),cmsConfig);
 await viteBuild();
