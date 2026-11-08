@@ -125,6 +125,9 @@ for(const [collection,prefix]of [[stories,'reportage'],[articles,'artikel']])for
  await fs.writeFile(path.join(out,target),fixLinks(documentHTML(title,description,content,{canonicalPath:target})));trackPage(target);
 
 }
+for(const record of articles.filter(a=>a.published!==false&&a.cmsSlug&&a.cmsSlug!==a.id)){
+ await fs.writeFile(path.join(out,`artikel-${record.cmsSlug}.html`),redirectHTML(`artikel-${record.id}.html`));
+}
 for(const [alias,target] of reportageAliases){if(alias!==target)await fs.writeFile(path.join(out,alias),redirectHTML(target));}
 // Only canonical indexable pages appear in the sitemap. Aliases, previews and
 // thank-you pages are intentionally absent.
