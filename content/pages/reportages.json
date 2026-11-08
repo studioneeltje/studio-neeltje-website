@@ -1,11 +1,11 @@
 {
   "id": "reportages",
   "title": "Reportages",
-  "description": "Trouwfotografie door Studio Neeltje.",
+  "description": "Bekijk complete trouwreportages uit Nederland en het buitenland. Van de ceremonie tot de dansvloer: ontdek de trouwfotografie van Studio Neeltje.",
   "root": {
     "props": {
-      "title": "Reportages",
-      "description": "Trouwfotografie door Studio Neeltje."
+      "title": "Trouwreportages | Echte bruiloften – Studio Neeltje",
+      "description": "Bekijk complete trouwreportages uit Nederland en het buitenland. Van de ceremonie tot de dansvloer: ontdek de trouwfotografie van Studio Neeltje."
     }
   },
   "content": [
