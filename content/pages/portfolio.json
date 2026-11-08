@@ -3,8 +3,8 @@
   "title": "Portfolio",
   "root": {
     "props": {
-      "title": "Portfolio",
-      "description": ""
+      "title": "Trouwportfolio | Spontane trouwfoto's – Studio Neeltje",
+      "description": "Bekijk spontane trouwfoto's en bijzondere momenten uit echte bruiloften in Nederland en het buitenland. Ontdek de stijl van Studio Neeltje."
     }
   },
   "content": [
@@ -289,5 +289,5 @@
     }
   ],
   "zones": {},
-  "description": ""
+  "description": "Bekijk spontane trouwfoto's en bijzondere momenten uit echte bruiloften in Nederland en het buitenland. Ontdek de stijl van Studio Neeltje."
 }
