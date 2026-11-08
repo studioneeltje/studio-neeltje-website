@@ -78,7 +78,7 @@ if(settings.forms.checklistFile){
 if(settings.experience.author.image)checkPhoto(settings.experience.author.image,'Auteursfoto');
 for(const item of [...settings.editorial.cards,...settings.editorial.reviews])if(item.image)checkPhoto(item.image,'Informatiekaart of review');
 const context={templates,settings,media,manifest,stories,articles};
-const storyIdAliases={bordeaux:'destination-wedding-fotograaf-bordeaux-frankrijk',keukenhof:'trouwfotograaf-kasteel-keukenhof-lisse'};
+const storyIdAliases={bordeaux:'destination-wedding-fotograaf-bordeaux-frankrijk',malaga:'destination-wedding-fotograaf-malaga-spanje',keukenhof:'trouwfotograaf-kasteel-keukenhof-lisse'};
 const resolveStoryId=id=>storyIdAliases[id]||id;
 const storyPageById=new Map(),storyPageIds=new Set(),reportageAliases=new Map();
 for(const story of stories){
