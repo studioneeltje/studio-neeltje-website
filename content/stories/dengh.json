@@ -4,9 +4,21 @@
   "location": "Utrecht",
   "excerpt": "Een dag vol grote momenten en alles wat ertussen leeft.",
   "body": "Deze reportage wordt aangevuld met het verhaal en de beelden van de dag.",
-  "cover": "foto-6f5e773ded94",
+  "cover": "media-c48b7a21-e3ad-4fbe-a3fa-4133340d980e",
+  "hoverCover": "",
   "gallery": [
     "foto-6f5e773ded94"
   ],
-  "published": true
+  "published": true,
+  "couple": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "sections": [],
+  "review": null,
+  "details": "",
+  "suppliers": [],
+  "contactTitle": "",
+  "contactLabel": "",
+  "contactUrl": "",
+  "related": []
 }
