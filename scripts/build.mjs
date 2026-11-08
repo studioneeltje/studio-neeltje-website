@@ -140,5 +140,28 @@ await fs.writeFile(path.join(out,'preview-pagina.html'),`<!doctype html><html la
 await fs.mkdir(path.join(out,'content'),{recursive:true});await fs.writeFile(path.join(out,'content/bundle.json'),JSON.stringify({...context,pages:[...pages,...stories.filter(story=>story.published!==false&&!storyPageById.has(story.id)).map(projectPage)],mediaSettings}));
 await fs.mkdir(path.join(out,'cms/vendor'),{recursive:true});await fs.cp('node_modules/@sveltia/cms/dist',path.join(out,'cms/vendor'),{recursive:true,filter:source=>!source.endsWith('.map')&&!source.endsWith('.mjs')});
 const cmsConfig=(await fs.readFile('cms/config.yml','utf8')).replace(/max_file_size: \d+/,`max_file_size: ${mediaSettings.maxUploadMB*1024*1024}`);parse(cmsConfig);await fs.writeFile(path.join(out,'cms/config.yml'),cmsConfig);
+// SEO consistency audit of the generated HTML, before uploading the preview.
+// Avoid false positives from external websites, mailto links and in-page anchors.
+const auditFiles=(await fs.readdir(out)).filter(name=>name.endsWith('.html')&&!name.startsWith('pagina-reportage-')&&!['preview-pagina.html','nieuwe-site.html','investering.html'].includes(name));
+const generated=new Set(await fs.readdir(out));
+let headingProblems=0,brokenLinks=0;
+for(const file of auditFiles){
+ const html=await fs.readFile(path.join(out,file),'utf8');
+ const $=load(html);
+ const isCore=file==='index.html'||file.startsWith('artikel-')||file.startsWith('reportage-');
+ if(isCore&&!$('meta[http-equiv="refresh"]').length){
+  const count=$('main h1').length;
+  if(count!==1){headingProblems++;console.warn(`SEO audit: ${file} heeft ${count} H1-koppen (verwacht 1).`);}
+ }
+ $('a[href]').each((_,link)=>{
+  const href=$(link).attr('href')||'';
+  if(!href||/^(?:[a-z][a-z0-9+.-]*:|\/\/|#|\/)/i.test(href))return;
+  const local=href.split(/[?#]/)[0];
+  if(!local.endsWith('.html'))return;
+  if(!generated.has(local)){brokenLinks++;console.warn(`SEO audit: ${file} verwijst naar ontbrekende pagina ${local}.`);}
+ });
+}
+console.log(`SEO audit: ${auditFiles.length} HTML-pagina's gecontroleerd, ${headingProblems} H1-meldingen en ${brokenLinks} ontbrekende interne paginalinks.`);
+if(headingProblems||brokenLinks)throw Error('SEO audit: herstel onjuiste H1-koppen en interne links vóór publicatie.');
 await viteBuild();
 console.log(`Gebouwd: ${pages.length} Puck-pagina's, ${stories.length} reportages en ${articles.length} artikelen.`);
