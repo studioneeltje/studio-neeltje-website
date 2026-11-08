@@ -47,3 +47,31 @@ Er staan geen sleutels in de code. Het publieke deel heeft geen CMS-login nodig.
 
 GitHub Pages is de testomgeving. De uiteindelijke website komt op
 **studioneeltje.com** bij een later te kiezen hostingprovider.
+
+## Technische SEO en lancering
+
+De standaard GitHub Pages-build is een **testomgeving**. De HTML-pagina's hebben
+standaard `noindex,follow`. De sitemap en canonicals krijgen standaard het adres
+`https://studioneeltje.github.io/studio-neeltje-website/`.
+
+Maak voor definitieve hosting een productiebuild met het echte hoofdadres en
+expliciet ingeschakelde indexering:
+
+```bash
+SITE_URL=https://www.studioneeltje.com/ SITE_INDEXABLE=1 pnpm build
+```
+
+Gebruik uitsluitend de definitief gekozen domeinvariant (met óf zonder www) en
+laat de andere variant server-side naar die variant redirecten. De build maakt:
+
+- Zelfverwijzende canonical-tags voor indexeerbare pagina's.
+- `sitemap.xml` met alleen hoofd-URL's (geen bedankt- of doorverwijspagina's).
+- `robots.txt` die in productie crawlen toestaat en de sitemap vermeldt.
+
+**Let op:** GitHub Pages als projectsite kan geen eigen robots.txt aan de root van
+het gehele GitHub Pages-hostdomein plaatsen; de HTML-`noindex` is daarom de
+belangrijkste bescherming voor de testomgeving. Bij de definitieve hosting
+moet `robots.txt` op het hostroot staan en moet de productiebuild zonder
+`noindex` worden getest. Doorgestuurde HTML-bestanden zijn tijdelijke
+client-side doorverwijzingen: vervang ze op de definitieve host door echte
+HTTP 301-redirects. Test daarna de sitemap en canonical-URL's opnieuw.
