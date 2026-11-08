@@ -26,6 +26,7 @@ if(!['https:','http:'].includes(siteURL.protocol))throw Error('SITE_URL moet een
 siteURL.pathname=siteURL.pathname.replace(/\/?$/,'/');
 siteURL.search='';siteURL.hash='';
 const indexable=process.env.SITE_INDEXABLE==='1';
+if(indexable&&!process.env.SITE_URL)throw Error('Bij SITE_INDEXABLE=1 moet SITE_URL expliciet het definitieve domein bevatten.');
 const publicURL=relative=>new URL(relative,siteURL).href;
 const sitePath=siteURL.pathname;
 const searchablePages=[];
