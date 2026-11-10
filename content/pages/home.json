@@ -99,7 +99,7 @@
           {
             "key": "0",
             "label": "Een intiem moment tijdens een destination wedding",
-            "mediaId": "media-c3eae223-88d3-4733-bb0f-513728fb05de",
+            "mediaId": "media-2072566f-3a5d-4e35-825e-c05a826e9a49",
             "desktop": null,
             "mobile": null
           },
@@ -124,7 +124,8 @@
             "label": "Link 1",
             "href": "reportages.html"
           }
-        ]
+        ],
+        "background": "wine"
       }
     },
     {
@@ -255,7 +256,7 @@
           {
             "key": "1",
             "label": "Een liefdevol moment tijdens een destination wedding in Spanje",
-            "mediaId": "media-fa80922c-b664-414c-ad4a-57fcfb2233a5",
+            "mediaId": "media-1f475e04-7092-4631-86b1-0a181abf7d01",
             "desktop": null,
             "mobile": null
           },
@@ -597,7 +598,7 @@
           {
             "key": "2",
             "label": "Foto rechts",
-            "mediaId": "media-8d29455f-b46d-4275-ad2b-110c0daad1a1",
+            "mediaId": "media-e668db9d-1927-4e75-8432-977555405948",
             "desktop": null,
             "mobile": null
           },
@@ -692,7 +693,7 @@
           {
             "key": "0",
             "label": "Trouwfoto in een klassieke houten staande lijst",
-            "mediaId": "media-8c01d3c1-6616-4457-81e1-48e5c3400af5",
+            "mediaId": "media-00545440-c7de-4d83-872c-ea6f0f857f58",
             "desktop": null,
             "mobile": null
           },
@@ -864,6 +865,52 @@
       }
     },
     {
+      "type": "Availability",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: EEN DATUM IN GEDACHTEN?",
+            "value": "EEN DATUM IN GEDACHTEN?"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Is jullie datum",
+            "value": "Is jullie datum"
+          },
+          {
+            "key": "2",
+            "label": "Label: nog vrij?",
+            "value": "nog vrij?"
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Vul jullie trouwdatum in. Ik kijk persoonlijk of",
+            "value": "Vul jullie trouwdatum in. Ik kijk persoonlijk of ik nog beschikbaar ben en kom bij jullie terug."
+          },
+          {
+            "key": "4",
+            "label": "Label: Jullie trouwdatum",
+            "value": "Jullie trouwdatum"
+          },
+          {
+            "key": "5",
+            "label": "Label: Check onze datum",
+            "value": "Check onze datum"
+          },
+          {
+            "key": "6",
+            "label": "Label: Je datum wordt pas bevestigd nadat ik persoonlij",
+            "value": "Je datum wordt pas bevestigd nadat ik persoonlijk contact met jullie heb gehad."
+          }
+        ],
+        "images": [],
+        "links": [],
+        "background": "pink",
+        "id": "Availability-763ed293-b1b7-4776-96a6-1115d0e554de"
+      }
+    },
+    {
       "type": "Mosaic",
       "props": {
         "texts": [
@@ -927,14 +974,14 @@
           {
             "key": "0",
             "label": "Een spontaan moment tijdens een bruiloft bij Kasteel Keukenhof",
-            "mediaId": "media-83fd3a61-a89d-4899-b3ab-2d99026c566a",
+            "mediaId": "media-18404445-15e9-4571-a047-8f3cd73780c0",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "1",
             "label": "Een liefdevol moment tijdens een destination wedding in Spanje",
-            "mediaId": "media-21603446-6a70-4846-8437-b6c502a2c10a",
+            "mediaId": "media-41e8a879-35b2-4061-aa86-8b24402fc54f",
             "desktop": null,
             "mobile": null
           },
@@ -948,7 +995,7 @@
           {
             "key": "3",
             "label": "Een trouwmoment tijdens een bruiloft in Bordeaux",
-            "mediaId": "media-f3b05dcb-5a98-4985-a21f-d0ab451e6c1c",
+            "mediaId": "media-96789996-abe9-4dd7-88d9-9ed2d8a566f6",
             "desktop": null,
             "mobile": null
           },
