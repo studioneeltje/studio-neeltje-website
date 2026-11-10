@@ -39,7 +39,7 @@
           {
             "key": "0",
             "label": "Foto achteraan",
-            "mediaId": "media-ef86e876-ba1d-440b-9c47-a67638d8e694",
+            "mediaId": "media-9d7e74fe-241b-43f3-8a08-09cb1664446f",
             "desktop": null,
             "mobile": null
           },
@@ -105,7 +105,7 @@
             "href": ""
           }
         ],
-        "background": "blue",
+        "background": "white",
         "id": "Method-1c2102f2-68c6-4ad8-be44-32dfca236333"
       }
     },
@@ -353,7 +353,7 @@
             "href": "contact.html"
           }
         ],
-        "background": "blue"
+        "background": "white"
       }
     },
     {
@@ -399,7 +399,7 @@
             "href": "contact.html"
           }
         ],
-        "background": "white",
+        "background": "wine",
         "id": "Method-0bd3fa7d-2476-45bd-9ee8-9d7f7ff3891e"
       }
     },
@@ -446,7 +446,7 @@
             "href": ""
           }
         ],
-        "background": "white",
+        "background": "pink",
         "id": "Method-3a8707d8-2390-44b6-8c2d-b284d2d6c7af"
       }
     },
