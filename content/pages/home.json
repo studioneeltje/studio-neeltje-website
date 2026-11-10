@@ -1,11 +1,11 @@
 {
   "id": "home",
-  "title": "Studio Neeltje — trouwfotografie",
-  "description": "Trouwfotografie door Studio Neeltje.",
+  "title": "Trouwfotograaf | Studio Neeltje – Ongedwongen trouwfotografie",
+  "description": "Ongedwongen trouwfotografie in Nederland & Europa. Met een ontspannen aanpak en aanstekelijke energie draag ik bij aan de sfeer, terwijl jullie jezelf kunnen zijn.",
   "root": {
     "props": {
-      "title": "Studio Neeltje — trouwfotografie",
-      "description": "Trouwfotografie door Studio Neeltje."
+      "title": "Trouwfotograaf | Studio Neeltje – Ongedwongen trouwfotografie",
+      "description": "Ongedwongen trouwfotografie in Nederland & Europa. Met een ontspannen aanpak en aanstekelijke energie draag ik bij aan de sfeer, terwijl jullie jezelf kunnen zijn."
     }
   },
   "content": [
@@ -27,7 +27,7 @@
           {
             "key": "2",
             "label": "Label: De",
-            "value": "De"
+            "value": "Jullie"
           },
           {
             "key": "3",
@@ -37,27 +37,27 @@
           {
             "key": "4",
             "label": "Label: gaat.",
-            "value": "gaat."
+            "value": ""
           },
           {
             "key": "5",
             "label": "Label: Het",
-            "value": "Het"
+            "value": "écht"
           },
           {
             "key": "6",
             "label": "Label: gevoel",
-            "value": "gevoel"
+            "value": "beleven."
           },
           {
             "key": "7",
             "label": "Label: blijft.",
-            "value": "blijft."
+            "value": ""
           },
           {
             "key": "8",
             "label": "Tekst: Geen geregisseerde plaatjes. Wel de spanning, de",
-            "value": "Geen geregisseerde plaatjes. Wel de spanning, de tranen en alles wat jullie zelf misschien missen."
+            "value": "Foto's van hoe het was. Zodat jullie achteraf nog meer herinneringen hebben vastgelegd, dan je zelf hebt ervaren."
           },
           {
             "key": "9",
@@ -77,43 +77,43 @@
           {
             "key": "12",
             "label": "Label: THE DETAILS",
-            "value": "THE DETAILS"
+            "value": ""
           },
           {
             "key": "13",
             "label": "Label: 02",
-            "value": "02"
+            "value": ""
           },
           {
             "key": "14",
             "label": "Label: THE PEOPLE",
-            "value": "THE PEOPLE"
+            "value": ""
           },
           {
             "key": "15",
             "label": "Label: 03",
-            "value": "03"
+            "value": ""
           }
         ],
         "images": [
           {
             "key": "0",
             "label": "Een intiem moment tijdens een destination wedding",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-c3eae223-88d3-4733-bb0f-513728fb05de",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "1",
             "label": "Kleine details van een trouwdag",
-            "mediaId": "foto-f5d8e85a877d",
+            "mediaId": "media-46a4039a-9937-4e40-9a7e-f98f126c4a56",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Een emotioneel moment tussen bruid en bruidegom",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-2072566f-3a5d-4e35-825e-c05a826e9a49",
             "desktop": null,
             "mobile": null
           }
@@ -128,6 +128,249 @@
       }
     },
     {
+      "type": "About",
+      "props": {
+        "id": "home-about-11",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: TROUWFOTOGRAFIE / NEELTJE MEIJLER",
+            "value": "TROUWFOTOGRAAF / NEELTJE MEIJLER"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Wat er",
+            "value": "Wat er"
+          },
+          {
+            "key": "2",
+            "label": "Label: echt gebeurt.",
+            "value": "écht gebeurt."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Ik fotografeer de dag zoals hij zich ontvouwt: d",
+            "value": "Je wilt je dag beleven en niet bewust zijn van de camera. Daar liggen de momenten die ik vastleg. Ik beweeg mee met jullie dag en leg vast wat er écht gebeurt. Ook de dingen die jullie door alle drukte niet zien. Ik kijk niet alleen naar jullie. Ik let ook op jullie ouders, vrienden en familie. Ik maak contact, stel mensen op hun gemak en zorg dat de camera snel vergeten wordt.\n\n\nEn als de muziek begint? Dan sta ik gewoon tussen jullie op de dansvloer. Uiteraard mét camera, natuurlijk. Maar ook wel dansend."
+          },
+          {
+            "key": "4",
+            "label": "Knop / link: Bekijk mijn werk",
+            "value": "Ontdek hoe ik werk"
+          },
+          {
+            "key": "5",
+            "label": "Label: recht uit het hart",
+            "value": "Hoi, ik ben Neeltje"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "media-1d8b3650-7a39-4265-bf49-9f13fc637e35",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "over.html"
+          }
+        ],
+        "background": "white"
+      }
+    },
+    {
+      "type": "TiltCard",
+      "props": {
+        "labelText": "INVESTERING",
+        "eyebrow": "",
+        "title": "Jullie bruiloft",
+        "emphasis": "vastgelegd.",
+        "body": "Trouwreportages vanaf €1.550.\nVan 6 uur tot een volledige trouwdag.",
+        "button": "Ontdek",
+        "href": "investering.html",
+        "motion": "on",
+        "background": "wine",
+        "id": "TiltCard-3648be06-ba1d-43fa-b372-efc5576db3d7",
+        "sectionBackground": "white"
+      }
+    },
+    {
+      "type": "Orbit",
+      "props": {
+        "id": "home-orbit-7",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: DOOR DE LENS / MOMENTEN OM TE BEWAREN",
+            "value": "DOOR DE LENS / MOMENTEN OM TE BEWAREN"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Draai mee door",
+            "value": "Draai mee door"
+          },
+          {
+            "key": "2",
+            "label": "Label: jullie dag.",
+            "value": "jullie dag."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Een bewegende beeldwereld vol echte momenten. Kl",
+            "value": "Klik op een foto om haar groot te bekijken."
+          },
+          {
+            "key": "4",
+            "label": "Label: STUDIO NEELTJE",
+            "value": "STUDIO NEELTJE"
+          },
+          {
+            "key": "5",
+            "label": "Label: ECHT · ONGEREGISEERD · HELEMAAL JULLIE",
+            "value": ""
+          },
+          {
+            "key": "6",
+            "label": "Label: PORTFOLIO / 2024—26",
+            "value": "PORTFOLIO"
+          },
+          {
+            "key": "7",
+            "label": "Label: 01 / 07 · SLEEP OM TE DRAAIEN · KLIK OM TE OPENE",
+            "value": "01 / 07 · SLEEP OM TE DRAAIEN · KLIK OM TE OPENEN"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Een spontaan moment tijdens een bruiloft bij Kasteel Keukenhof",
+            "mediaId": "media-b8a24138-6ace-4808-aee9-c5a289478c7b",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Een liefdevol moment tijdens een destination wedding in Spanje",
+            "mediaId": "media-fa80922c-b664-414c-ad4a-57fcfb2233a5",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Een vrolijk moment tijdens een bruiloft in Utrecht",
+            "mediaId": "media-f3b05dcb-5a98-4985-a21f-d0ab451e6c1c",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "3",
+            "label": "Een trouwmoment tijdens een bruiloft in Bordeaux",
+            "mediaId": "media-9f44b0a0-3e9d-4625-b9db-b44c9d9409d5",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "4",
+            "label": "Persoonlijke details die klaarstaan voor de trouwdag",
+            "mediaId": "media-112304b6-77a5-482e-8d07-eaf795fbf7d2",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "5",
+            "label": "Neeltje, jullie trouwfotograaf, tussen de momenten door",
+            "mediaId": "media-3b6209b7-07e6-432d-823a-cac95c8cd861",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "6",
+            "label": "Een beeld om later samen naar terug te kijken",
+            "mediaId": "media-17911fc8-bf7f-4438-a7a7-8dc051fd60c5",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "7",
+            "label": "Foto 8 (optioneel)",
+            "mediaId": "media-0a6d2a66-c13a-45e8-9aa0-91fc41ccd71e",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "8",
+            "label": "Foto 9 (optioneel)",
+            "mediaId": "media-44aa961a-44d7-4ca0-90d5-39f2ecf68ee2",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "9",
+            "label": "Foto 10 (optioneel)",
+            "mediaId": "media-692188ff-1c50-4f51-ac6b-b598a98a5a0d",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "10",
+            "label": "Foto 11 (optioneel)",
+            "mediaId": "media-02dcb870-0508-4865-8171-6f86aabd6eef",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "11",
+            "label": "Foto 12 (optioneel)",
+            "mediaId": "media-3b1c19b0-bd8f-45c4-a697-fe809183570b",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "https://static.wixstatic.com/media/31108f_5954ea8bc4af4dc19ee32d1d9358dc0d~mv2.jpg"
+          },
+          {
+            "key": "1",
+            "label": "Link 2",
+            "href": "https://static.wixstatic.com/media/31108f_6bac505b81914da6b60da6829caa2f8e~mv2.jpg"
+          },
+          {
+            "key": "2",
+            "label": "Link 3",
+            "href": "https://static.wixstatic.com/media/31108f_a2289c669fbb4815a7b6835801ea71e2~mv2.jpg"
+          },
+          {
+            "key": "3",
+            "label": "Link 4",
+            "href": "https://static.wixstatic.com/media/31108f_026e0e715cbf4b3b8608bd92ca53cbd3~mv2.jpg"
+          },
+          {
+            "key": "4",
+            "label": "Link 5",
+            "href": "https://static.wixstatic.com/media/31108f_b36e517377c245e1bb63575a3e1b25cf~mv2.jpg"
+          },
+          {
+            "key": "5",
+            "label": "Link 6",
+            "href": "https://static.wixstatic.com/media/31108f_3cc72de4ebf540d9918eda3c6354b598~mv2.jpg"
+          },
+          {
+            "key": "6",
+            "label": "Link 7",
+            "href": "https://static.wixstatic.com/media/31108f_a93479a7875f4c97946f3613205982af~mv2.jpg"
+          }
+        ],
+        "background": "blue"
+      }
+    },
+    {
       "type": "Quote",
       "props": {
         "id": "home-quote-1",
@@ -135,27 +378,27 @@
           {
             "key": "0",
             "label": "Label: 01 — TUSSEN DE MOMENTEN",
-            "value": "01 — TUSSEN DE MOMENTEN"
+            "value": "HET IS NOGAL EEN EMOTIONEEL MOMENT"
           },
           {
             "key": "1",
             "label": "Titel: Jullie beleven de",
-            "value": "Jullie beleven de"
+            "value": "Je kiest een trouwfotograaf"
           },
           {
             "key": "2",
             "label": "Label: dag",
-            "value": "dag"
+            "value": "niet alleen "
           },
           {
             "key": "3",
             "label": "Titel: . Ik zie ook wat er tussendoor",
-            "value": ". Ik zie ook wat er tussendoor"
+            "value": " vanwege de "
           },
           {
             "key": "4",
             "label": "Label: gebeurt.",
-            "value": "gebeurt."
+            "value": "mooie foto's."
           },
           {
             "key": "5",
@@ -165,109 +408,101 @@
           {
             "key": "6",
             "label": "Tekst: Een trouwdag bestaat uit meer dan de grote momen",
-            "value": "Een trouwdag bestaat uit meer dan de grote momenten. Het zijn ook de blikken die je bijna mist, de handen die elkaar zoeken en de vrienden die alweer op de dansvloer staan. Ik ben dichtbij zonder jullie dag over te nemen, zodat jullie later niet alleen de foto’s terugzien, maar ook weer even voelen hoe het was."
+            "value": "Iedere website staat vol met prachtige foto's. Iedere fotograaf zegt dat jullie vooral jezelf moeten zijn. Eerlijk gezegd maakt dat het kiezen niet makkelijker. Want hoe weet je nou wie écht bij jullie past? Volgens mij begint dat niet bij een portfolio. Het begint bij een veel belangrijkere vraag. Met wie willen jullie de hele dag optrekken? Want op jullie trouwdag ben ik er vaker bij dan sommige gasten."
           }
         ],
         "images": [],
-        "links": []
+        "links": [],
+        "background": "wine"
       }
     },
     {
-      "type": "Checklist",
+      "type": "Method",
       "props": {
-        "id": "home-checklist-2",
         "texts": [
           {
             "key": "0",
-            "label": "Label: De ultieme",
-            "value": "De ultieme"
+            "label": "Label: MEER OVER NEELTJE",
+            "value": ""
           },
           {
             "key": "1",
-            "label": "Label: Trouw",
-            "value": "Trouw"
+            "label": "Titel: Rustig dichtbij.",
+            "value": "Je moet je "
           },
           {
             "key": "2",
-            "label": "Label: checklist",
-            "value": "checklist"
+            "label": "Label: Altijd alert.",
+            "value": "comfortabel voelen."
           },
           {
             "key": "3",
-            "label": "Label: De grote lijnen en planning",
-            "value": "De grote lijnen en planning"
+            "label": "Tekst: Ik fotografeer zoals ik zelf graag herinner: met",
+            "value": "Ik ben erbij als je je aankleedt. Ik zie de spanning vlak voordat jullie elkaar zien. Ik hoor jullie persoonlijke geloften, ik zie de tranen en hoor de grapjes. Ik loop mee tijdens de borrel. Ik hoor de eerlijke verhalen van vrienden. Ik zie je vader, die normaal nooit huilt, ineens stil worden. "
           },
           {
             "key": "4",
-            "label": "Label: Ceremonie & dagindeling",
-            "value": "Ceremonie & dagindeling"
+            "label": "Tekst: Vooraf leren we elkaar kennen. Op de dag zelf vo",
+            "value": "En ik hoor óók die ene speech waarvan iedereen denkt: \"Alsjeblieft oom Henk... rond hem maar af...\" Dan wil je niet alleen een goede trouwfotograaf. Je wilt iemand waarbij je jezelf kunt zijn."
           },
           {
             "key": "5",
-            "label": "Label: Ruimte voor jullie eigen ideeën",
-            "value": "Ruimte voor jullie eigen ideeën"
+            "label": "Knop / link: Lees mijn verhaal",
+            "value": ""
+          }
+        ],
+        "images": [],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": ""
+          }
+        ],
+        "background": "pink",
+        "id": "Method-f0069644-14d9-4e57-8602-90d653c05c56"
+      }
+    },
+    {
+      "type": "About",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: TROUWFOTOGRAFIE / NEELTJE MEIJLER",
+            "value": "TROUWFOTOGRAFIE / NEELTJE MEIJLER"
           },
           {
-            "key": "6",
-            "label": "Label: Tips vanuit fotografisch perspectief",
-            "value": "Tips vanuit fotografisch perspectief"
+            "key": "1",
+            "label": "Titel: Wat er",
+            "value": "Wat is dan"
           },
           {
-            "key": "7",
-            "label": "Label: GRATIS",
-            "value": "GRATIS"
+            "key": "2",
+            "label": "Label: echt gebeurt.",
+            "value": "een belangrijk keus?"
           },
           {
-            "key": "8",
-            "label": "Label: voor jullie",
-            "value": "voor jullie"
+            "key": "3",
+            "label": "Tekst: Ik fotografeer de dag zoals hij zich ontvouwt: d",
+            "value": "Dus nee. Het zijn niet alleen de mooie foto's die ertoe doen. Je kiest iemand die op een van de mooiste dagen van je leven de hele dag dichtbij is. Iemand die precies weet wanneer je behoefte hebt aan een grapje. Wanneer je juist even met rust gelaten wilt worden. En wanneer je gewoon wilt vergeten dat er überhaupt een camera aanwezig is. Dat is precies hoe ik werk. Zodat jullie kunnen genieten van elkaar. En ik de foto's maak waarvan je later zegt: \"Nee joh… heb je dát ook gezien?\""
           },
           {
-            "key": "9",
-            "label": "Label: EXTRA HULP BIJ JULLIE PLANNING",
-            "value": "EXTRA HULP BIJ JULLIE PLANNING"
+            "key": "4",
+            "label": "Knop / link: Bekijk mijn werk",
+            "value": ""
           },
           {
-            "key": "10",
-            "label": "Titel: Download de",
-            "value": "Download de"
-          },
-          {
-            "key": "11",
-            "label": "Label: gratis",
-            "value": "gratis"
-          },
-          {
-            "key": "12",
-            "label": "Titel: weddingchecklist",
-            "value": "weddingchecklist"
-          },
-          {
-            "key": "13",
-            "label": "Tekst: Willen jullie een dag die net zo soepel verloopt",
-            "value": "Willen jullie een dag die net zo soepel verloopt als jullie eruitzien? In deze checklist vind je overzicht, rust en handige ideeën voor jullie trouwdag."
-          },
-          {
-            "key": "14",
-            "label": "Tekst: Van de dagindeling tot kleine details: praktisch",
-            "value": "Van de dagindeling tot kleine details: praktische tips vanuit fotografisch perspectief, zodat er meer ruimte overblijft om volop te genieten."
-          },
-          {
-            "key": "15",
-            "label": "Label: Meer overzicht en rust tijdens het plannen",
-            "value": "Meer overzicht en rust tijdens het plannen"
-          },
-          {
-            "key": "16",
-            "label": "Knop / link: Bekijk de gratis checklist",
-            "value": "Bekijk de gratis checklist"
+            "key": "5",
+            "label": "Label: recht uit het hart",
+            "value": "recht uit het hart"
           }
         ],
         "images": [
           {
             "key": "0",
-            "label": "Een sfeervolle trouwdag met warme tafelsetting",
-            "mediaId": "foto-26fee13582a7",
+            "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "media-19fe16d2-28a2-4fa5-869f-ae0060534650",
             "desktop": null,
             "mobile": null
           }
@@ -276,54 +511,542 @@
           {
             "key": "0",
             "label": "Link 1",
-            "href": "weddingschecklist.html"
+            "href": "over.html"
           }
-        ]
+        ],
+        "background": "white",
+        "id": "About-32d07291-408f-4595-b799-e731c362b1c2"
       }
     },
     {
-      "type": "Availability",
+      "type": "SingleReview",
       "props": {
-        "id": "home-availability-3",
+        "eyebrow": "WOORDEN VAN EEN BRUIDSPAAR",
+        "reviewId": "jeroen-martine",
+        "crops": {},
+        "background": "blue",
+        "id": "SingleReview-17ea4c69-180f-4b2b-8578-191460dc316e"
+      }
+    },
+    {
+      "type": "Method",
+      "props": {
         "texts": [
           {
             "key": "0",
-            "label": "Label: EEN DATUM IN GEDACHTEN?",
-            "value": "EEN DATUM IN GEDACHTEN?"
+            "label": "Label: MEER OVER NEELTJE",
+            "value": "MEER OVER NEELTJE"
           },
           {
             "key": "1",
-            "label": "Titel: Is jullie datum",
-            "value": "Is jullie datum"
+            "label": "Titel: Rustig dichtbij.",
+            "value": "Waarom ik"
           },
           {
             "key": "2",
-            "label": "Label: nog vrij?",
-            "value": "nog vrij?"
+            "label": "Label: Altijd alert.",
+            "value": "zo werk."
           },
           {
             "key": "3",
-            "label": "Tekst: Vul jullie trouwdatum in. Ik kijk persoonlijk of",
-            "value": "Vul jullie trouwdatum in. Ik kijk persoonlijk of ik nog beschikbaar ben en kom bij jullie terug."
+            "label": "Tekst: Ik fotografeer zoals ik zelf graag herinner: met",
+            "value": "Het mooiste compliment dat ik ooit kreeg, kwam niet van een bruidspaar. Maar van een bruiloftsgast. Een paar jaar nadat ik zijn vrienden had gefotografeerd, ging hij zelf trouwen. Tijdens onze kennismaking vertelde hij:\n\n \n\n\"Ik zei meteen tegen mijn verloofde: ik wil Neeltje als fotograaf. Die is gewoon zó leuk om erbij te hebben. Je maakt echt een sfeertje.\""
           },
           {
             "key": "4",
-            "label": "Label: Jullie trouwdatum",
-            "value": "Jullie trouwdatum"
+            "label": "Tekst: Vooraf leren we elkaar kennen. Op de dag zelf vo",
+            "value": "Dat vond ik misschien nog wel mooier dan een compliment over mijn foto's. Want natuurlijk hoop ik dat jullie straks ontzettend blij zijn met jullie galerij. Daar doe ik alles aan, maak je daar geen zorgen om. Maar stiekem hoop ik nóg meer dat jullie aan het einde van de dag zeggen: \"Wat fijn dat jij erbij was.\""
           },
           {
             "key": "5",
-            "label": "Label: Check onze datum",
-            "value": "Check onze datum"
-          },
-          {
-            "key": "6",
-            "label": "Label: Je datum wordt pas bevestigd nadat ik persoonlij",
-            "value": "Je datum wordt pas bevestigd nadat ik persoonlijk contact met jullie heb gehad."
+            "label": "Knop / link: Lees mijn verhaal",
+            "value": ""
           }
         ],
         "images": [],
-        "links": []
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "over.html"
+          }
+        ],
+        "background": "wine",
+        "id": "Method-0b5c85f3-794e-468f-9110-5afe8c4b7f24"
+      }
+    },
+    {
+      "type": "FanGallery",
+      "props": {
+        "motion": "on",
+        "images": [
+          {
+            "key": "0",
+            "label": "Foto links",
+            "mediaId": "media-9d2bfa5c-152a-403e-a690-cd372d735754",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Foto midden",
+            "mediaId": "media-7f699810-3004-4378-a464-7c56b1e52337",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Foto rechts",
+            "mediaId": "media-8d29455f-b46d-4275-ad2b-110c0daad1a1",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "3",
+            "label": "Foto 4",
+            "mediaId": "",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "4",
+            "label": "Foto 5",
+            "mediaId": "",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "count": "3",
+        "background": "wine",
+        "id": "FanGallery-dabd1458-524c-41df-a8af-2798ac61f454"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 01 — TUSSEN DE MOMENTEN",
+            "value": "ZO zie ik het"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie beleven de",
+            "value": "Als fotograaf draag je óók"
+          },
+          {
+            "key": "2",
+            "label": "Label: dag",
+            "value": "bij aan de dag."
+          },
+          {
+            "key": "3",
+            "label": "Titel: . Ik zie ook wat er tussendoor",
+            "value": " Zowel negatief"
+          },
+          {
+            "key": "4",
+            "label": "Label: gebeurt.",
+            "value": " als positief."
+          },
+          {
+            "key": "5",
+            "label": "Label: met liefde gezien, Neeltje",
+            "value": "Laat het dan positief zijn!"
+          },
+          {
+            "key": "6",
+            "label": "Tekst: Een trouwdag bestaat uit meer dan de grote momen",
+            "value": "Voel je je comfortabel? Kun je vertrouwen hebben dat het goedkomt? En krijg je een beter gevoel over jezelf? Dan weet ik dat je de mooiste foto's gaat krijgen. Wat je voelt, straal je uit. En daar help ik heel graag een handje bij, ook met mijn achtergrond als portretfotograaf. Onzekerheden heeft iedereen, ermee omgaan en je een goed en rustig gevoel te geven leidt altijd tot mooie foto's. En daar begeleid ik op. En dus is bij mij geen gekke vraag tijdens een kennismaking of je wel of niet van een fotoshootje houdt."
+          }
+        ],
+        "images": [],
+        "links": [],
+        "background": "pink",
+        "id": "Quote-a2a29841-58a6-46f9-9651-74bef4d9dc05"
+      }
+    },
+    {
+      "type": "Wall",
+      "props": {
+        "id": "home-wall-10",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 03 — Jullie foto's thuis",
+            "value": "Jullie foto's thuis"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Niet alleen in een album.",
+            "value": "Niet alleen in een album."
+          },
+          {
+            "key": "2",
+            "label": "Label: Ook aan de muur.",
+            "value": "Ook aan de muur."
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Trouwfoto in een klassieke houten staande lijst",
+            "mediaId": "media-8c01d3c1-6616-4457-81e1-48e5c3400af5",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Details van een trouwdag in een liggende bronzen lijst",
+            "mediaId": "media-17911fc8-bf7f-4438-a7a7-8dc051fd60c5",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Trouwfoto in een vergulde staande lijst",
+            "mediaId": "media-3b472201-5575-497a-9875-b0267e4971c4",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "3",
+            "label": "Een spontaan moment in een donkerhouten staande lijst",
+            "mediaId": "media-02a06c59-e38a-4af4-b041-f3b54d5f3bb1",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "4",
+            "label": "Een liggende trouwfoto in een klassieke houten lijst",
+            "mediaId": "media-d26dbf53-64d1-4e6d-b5e6-d161d0c8e517",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "5",
+            "label": "Een grote trouwfoto in een rijk vergulde staande lijst",
+            "mediaId": "media-19cb0a65-f039-432d-9f33-42e1537d084f",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "background": "white"
+      }
+    },
+    {
+      "type": "About",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: TROUWFOTOGRAFIE / NEELTJE MEIJLER",
+            "value": "TROUWFOTOGRAFIE / NEELTJE MEIJLER"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Wat er",
+            "value": "Zo voelt een "
+          },
+          {
+            "key": "2",
+            "label": "Label: echt gebeurt.",
+            "value": "trouwdag met mij."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Ik fotografeer de dag zoals hij zich ontvouwt: d",
+            "value": "\nZo voelt een trouwdag met mij\nIk kom niet alleen foto's maken.\nIk kom bijdragen aan een ontspannen trouwdag.\n\n\nSoms betekent dat dat ik een grap maak.\nSoms neem ik de regie.\nBijvoorbeeld tijdens de familieshoot, zodat jullie niet 20 minuten kwijt zijn aan zoeken wie het beste naast je moeder kan staan."
+          },
+          {
+            "key": "4",
+            "label": "Knop / link: Bekijk mijn werk",
+            "value": ""
+          },
+          {
+            "key": "5",
+            "label": "Label: recht uit het hart",
+            "value": "recht uit het hart"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "media-f7be80df-1f91-496c-8c7c-62305a8d2d68",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "over.html"
+          }
+        ],
+        "background": "white",
+        "id": "About-5f686f27-2d70-4a29-9125-36519a90e660"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: 01 — TUSSEN DE MOMENTEN",
+            "value": "Zo voelt een trouwdag met mij"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie beleven de",
+            "value": "Soms heb je"
+          },
+          {
+            "key": "2",
+            "label": "Label: dag",
+            "value": " wel"
+          },
+          {
+            "key": "3",
+            "label": "Titel: . Ik zie ook wat er tussendoor",
+            "value": "een beetje"
+          },
+          {
+            "key": "4",
+            "label": "Label: gebeurt.",
+            "value": " sjeu nodig."
+          },
+          {
+            "key": "5",
+            "label": "Label: met liefde gezien, Neeltje",
+            "value": "Bijvoorbeeld met familie portretten."
+          },
+          {
+            "key": "6",
+            "label": "Tekst: Een trouwdag bestaat uit meer dan de grote momen",
+            "value": "Tijdens de ceremonie zul je me juist bijna niet opmerken. Niet omdat ik er niet ben.\n\n \n\nJullie gasten willen bezig zijn met jullie, niet met mij. Ga je niet graag op de foto? Juist dan is deze manier van fotograferen fijn.\n\n\nIk leg liever het perfecte moment vast, dan dat ik zelf het middelpunt word. Behalve als het nodig is, dan heb ik daar geen problemen mee. Bijvoorbeeld met familieportretten. Daar heb je een beetje sjeu voor nodig. En soms doe ik dingen die helemaal niet in mijn takenpakket horen..."
+          }
+        ],
+        "images": [],
+        "links": [],
+        "background": "blue",
+        "id": "Quote-f4d3dcf6-61da-4b7a-b99d-4ce1512fe66d"
+      }
+    },
+    {
+      "type": "SingleReview",
+      "props": {
+        "eyebrow": "WOORDEN VAN EEN BRUIDSPAAR",
+        "reviewId": "chiel-natascha",
+        "crops": {},
+        "background": "wine",
+        "id": "SingleReview-f056815c-9718-450c-8247-4d9628caed12"
+      }
+    },
+    {
+      "type": "TiltCard",
+      "props": {
+        "labelText": "Over neeltje",
+        "eyebrow": "WAAROM IK OOK KIJK NAAR JULLIE GASTEN?",
+        "title": "Meer weten",
+        "emphasis": "over mij?",
+        "body": "Ik geef je een kijkje achter de schermen. Of kijkje in mijn hoofd. Maar net hoe je het wilt noemen.",
+        "button": "Meer lezen",
+        "href": "werkwijze.html#prijzen",
+        "motion": "on",
+        "background": "pink",
+        "id": "TiltCard-d6393a3e-c970-4fa2-9ecd-e1997fc68d22",
+        "sectionBackground": "wine"
+      }
+    },
+    {
+      "type": "Mosaic",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: PORTFOLIO / MOMENTEN OM TE BEWAREN",
+            "value": "MOMENTEN OM TE BEWAREN"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Alles wat",
+            "value": "Alles wat"
+          },
+          {
+            "key": "2",
+            "label": "Label: ertussen leeft.",
+            "value": "ertussen leeft."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Van grote gebaren tot kleine blikken. Een verzam",
+            "value": "Soms gestileerd, altijd de mooiste herinneringen om later nog eens te bekijken."
+          },
+          {
+            "key": "4",
+            "label": "Label: 01",
+            "value": "01"
+          },
+          {
+            "key": "5",
+            "label": "Label: 02",
+            "value": "02"
+          },
+          {
+            "key": "6",
+            "label": "Label: 03",
+            "value": "03"
+          },
+          {
+            "key": "7",
+            "label": "Label: 04",
+            "value": "04"
+          },
+          {
+            "key": "8",
+            "label": "Label: 05",
+            "value": "05"
+          },
+          {
+            "key": "9",
+            "label": "Label: 06",
+            "value": "06"
+          },
+          {
+            "key": "10",
+            "label": "Label: 07",
+            "value": "07"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Een spontaan moment tijdens een bruiloft bij Kasteel Keukenhof",
+            "mediaId": "media-83fd3a61-a89d-4899-b3ab-2d99026c566a",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Een liefdevol moment tijdens een destination wedding in Spanje",
+            "mediaId": "media-21603446-6a70-4846-8437-b6c502a2c10a",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Een vrolijk moment tijdens een bruiloft in Utrecht",
+            "mediaId": "media-f669c3e1-6b18-4d21-8eaf-aa7754cbd0f3",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "3",
+            "label": "Een trouwmoment tijdens een bruiloft in Bordeaux",
+            "mediaId": "media-f3b05dcb-5a98-4985-a21f-d0ab451e6c1c",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "4",
+            "label": "Persoonlijke details die klaarstaan voor de trouwdag",
+            "mediaId": "media-5ef124c6-89df-446c-bbf7-0e273276ddf2",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "5",
+            "label": "Neeltje, jullie trouwfotograaf, tussen de momenten door",
+            "mediaId": "media-c83aff75-346b-4e62-b503-fe73b7ff5f58",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "6",
+            "label": "Een beeld om later samen naar terug te kijken",
+            "mediaId": "media-1029dacf-45ed-4685-9d53-acacfd65c26b",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "background": "white",
+        "id": "Mosaic-0357bef3-446d-4781-8be3-e8c2f126673d"
+      }
+    },
+    {
+      "type": "ContactCTA",
+      "props": {
+        "id": "home-contactcta-16",
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: Neeltje · jullie trouwfotograaf",
+            "value": "Neeltje · jullie trouwfotograaf"
+          },
+          {
+            "key": "1",
+            "label": "Label: 05 — ZULLEN WE KENNISMAKEN?",
+            "value": "ZULLEN WE KENNISMAKEN?"
+          },
+          {
+            "key": "2",
+            "label": "Titel: Voelt dit als",
+            "value": "Voelt dit als"
+          },
+          {
+            "key": "3",
+            "label": "Label: jullie verhaal?",
+            "value": "jullie verhaal?"
+          },
+          {
+            "key": "4",
+            "label": "Tekst: Vertel me over jullie trouwdag, datum en locatie",
+            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt en wat ik voor jullie kan betekenen."
+          },
+          {
+            "key": "5",
+            "label": "Knop / link: Vertel me jullie plannen",
+            "value": "Vertel me jullie plannen"
+          },
+          {
+            "key": "6",
+            "label": "Label: Vrijblijvend kennismaken · gewoon kijken of het ",
+            "value": "Vrijblijvend kennismaken · gewoon kijken of het klikt"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "media-59f8840e-3701-4844-b7b1-efb83fc31f58",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Link 1",
+            "href": "contact.html"
+          }
+        ],
+        "background": "wine"
+      }
+    },
+    {
+      "type": "Journey",
+      "props": {
+        "eyebrow": "Hoe zit dat 'vrijblijvend' kennismaken?",
+        "title": "Dit kun je ",
+        "emphasis": "verwachten.",
+        "background": "white",
+        "id": "Journey-995e9564-18ae-46c5-9033-22900b31a514"
       }
     },
     {
@@ -354,12 +1077,12 @@
           {
             "key": "4",
             "label": "Label: 01 / KENNISMAKEN",
-            "value": "01 / KENNISMAKEN"
+            "value": "natuurlijk vrijblijven"
           },
           {
             "key": "5",
             "label": "Label: Vrijblijvend en persoonlijk",
-            "value": "Vrijblijvend en persoonlijk"
+            "value": "altijd persoonlijk"
           },
           {
             "key": "6",
@@ -418,49 +1141,23 @@
           }
         ],
         "images": [],
-        "links": []
+        "links": [],
+        "background": "white"
       }
     },
     {
-      "type": "Stories",
+      "type": "Text",
       "props": {
-        "id": "home-stories-5",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: SELECTED STORIES / 2024—26",
-            "value": "SELECTED STORIES / 2024—26"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Reportages",
-            "value": "Reportages"
-          },
-          {
-            "key": "2",
-            "label": "Titel: in beeld.",
-            "value": "in beeld."
-          },
-          {
-            "key": "3",
-            "label": "Knop / link: Alle verhalen",
-            "value": "Alle verhalen"
-          }
-        ],
-        "images": [],
-        "links": [
-          {
-            "key": "0",
-            "label": "Alle verhalen",
-            "href": "reportages.html"
-          }
-        ]
+        "eyebrow": "We want more",
+        "title": "Nog niet klaar om contact op te nemen?",
+        "body": "Misschien vind je dit wel interessant.",
+        "background": "wine",
+        "id": "Text-9d3de718-4c30-4f0e-83dc-da21eecbfa91"
       }
     },
     {
       "type": "StoryCarousel",
       "props": {
-        "id": "home-storycarousel-6",
         "texts": [
           {
             "key": "0",
@@ -562,35 +1259,35 @@
           {
             "key": "0",
             "label": "Een spontaan moment tijdens een bruiloft bij Kasteel Keukenhof",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-0a00c152-b028-458e-89a0-312045139156",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "1",
             "label": "Een liefdevol moment tijdens een destination wedding",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-09d75fa4-85b3-4837-8c33-ba02423278ca",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Een vrolijk moment tijdens een bruiloft in Utrecht",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "media-087acce5-f2cc-4622-9448-cbefd37baaf5",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "3",
             "label": "Persoonlijke details die klaarstaan voor de trouwdag",
-            "mediaId": "foto-f5d8e85a877d",
+            "mediaId": "media-02a06c59-e38a-4af4-b041-f3b54d5f3bb1",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "4",
             "label": "Een intiem portret van een bruidspaar op hun trouwdag",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-0a6d2a66-c13a-45e8-9aa0-91fc41ccd71e",
             "desktop": null,
             "mobile": null
           }
@@ -601,352 +1298,29 @@
             "label": "Link 1",
             "href": "reportage-keukenhof.html"
           }
-        ]
-      }
-    },
-    {
-      "type": "Orbit",
-      "props": {
-        "id": "home-orbit-7",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: DOOR DE LENS / MOMENTEN OM TE BEWAREN",
-            "value": "DOOR DE LENS / MOMENTEN OM TE BEWAREN"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Draai mee door",
-            "value": "Draai mee door"
-          },
-          {
-            "key": "2",
-            "label": "Label: jullie dag.",
-            "value": "jullie dag."
-          },
-          {
-            "key": "3",
-            "label": "Tekst: Een bewegende beeldwereld vol echte momenten. Kl",
-            "value": "Een bewegende beeldwereld vol echte momenten. Klik op een foto om haar groot te bekijken."
-          },
-          {
-            "key": "4",
-            "label": "Label: STUDIO NEELTJE",
-            "value": "STUDIO NEELTJE"
-          },
-          {
-            "key": "5",
-            "label": "Label: ECHT · ONGEREGISEERD · HELEMAAL JULLIE",
-            "value": "ECHT · ONGEREGISEERD · HELEMAAL JULLIE"
-          },
-          {
-            "key": "6",
-            "label": "Label: PORTFOLIO / 2024—26",
-            "value": "PORTFOLIO / 2024—26"
-          },
-          {
-            "key": "7",
-            "label": "Label: 01 / 07 · SLEEP OM TE DRAAIEN · KLIK OM TE OPENE",
-            "value": "01 / 07 · SLEEP OM TE DRAAIEN · KLIK OM TE OPENEN"
-          }
         ],
-        "images": [
-          {
-            "key": "0",
-            "label": "Een spontaan moment tijdens een bruiloft bij Kasteel Keukenhof",
-            "mediaId": "foto-d5f77408f803",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "1",
-            "label": "Een liefdevol moment tijdens een destination wedding in Spanje",
-            "mediaId": "foto-26fee13582a7",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "2",
-            "label": "Een vrolijk moment tijdens een bruiloft in Utrecht",
-            "mediaId": "foto-6f5e773ded94",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "3",
-            "label": "Een trouwmoment tijdens een bruiloft in Bordeaux",
-            "mediaId": "foto-e21748886faf",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "4",
-            "label": "Persoonlijke details die klaarstaan voor de trouwdag",
-            "mediaId": "foto-f5d8e85a877d",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "5",
-            "label": "Neeltje, jullie trouwfotograaf, tussen de momenten door",
-            "mediaId": "foto-75c93a94397c",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "6",
-            "label": "Een beeld om later samen naar terug te kijken",
-            "mediaId": "foto-95c436480d00",
-            "desktop": null,
-            "mobile": null
-          }
-        ],
-        "links": [
-          {
-            "key": "0",
-            "label": "Link 1",
-            "href": "https://static.wixstatic.com/media/31108f_5954ea8bc4af4dc19ee32d1d9358dc0d~mv2.jpg"
-          },
-          {
-            "key": "1",
-            "label": "Link 2",
-            "href": "https://static.wixstatic.com/media/31108f_6bac505b81914da6b60da6829caa2f8e~mv2.jpg"
-          },
-          {
-            "key": "2",
-            "label": "Link 3",
-            "href": "https://static.wixstatic.com/media/31108f_a2289c669fbb4815a7b6835801ea71e2~mv2.jpg"
-          },
-          {
-            "key": "3",
-            "label": "Link 4",
-            "href": "https://static.wixstatic.com/media/31108f_026e0e715cbf4b3b8608bd92ca53cbd3~mv2.jpg"
-          },
-          {
-            "key": "4",
-            "label": "Link 5",
-            "href": "https://static.wixstatic.com/media/31108f_b36e517377c245e1bb63575a3e1b25cf~mv2.jpg"
-          },
-          {
-            "key": "5",
-            "label": "Link 6",
-            "href": "https://static.wixstatic.com/media/31108f_3cc72de4ebf540d9918eda3c6354b598~mv2.jpg"
-          },
-          {
-            "key": "6",
-            "label": "Link 7",
-            "href": "https://static.wixstatic.com/media/31108f_a93479a7875f4c97946f3613205982af~mv2.jpg"
-          }
-        ]
-      }
-    },
-    {
-      "type": "Mosaic",
-      "props": {
-        "id": "home-mosaic-8",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: PORTFOLIO / MOMENTEN OM TE BEWAREN",
-            "value": "PORTFOLIO / MOMENTEN OM TE BEWAREN"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Alles wat",
-            "value": "Alles wat"
-          },
-          {
-            "key": "2",
-            "label": "Label: ertussen leeft.",
-            "value": "ertussen leeft."
-          },
-          {
-            "key": "3",
-            "label": "Tekst: Van grote gebaren tot kleine blikken. Een verzam",
-            "value": "Van grote gebaren tot kleine blikken. Een verzameling beelden om rustig doorheen te dwalen."
-          },
-          {
-            "key": "4",
-            "label": "Label: 01",
-            "value": "01"
-          },
-          {
-            "key": "5",
-            "label": "Label: 02",
-            "value": "02"
-          },
-          {
-            "key": "6",
-            "label": "Label: 03",
-            "value": "03"
-          },
-          {
-            "key": "7",
-            "label": "Label: 04",
-            "value": "04"
-          },
-          {
-            "key": "8",
-            "label": "Label: 05",
-            "value": "05"
-          },
-          {
-            "key": "9",
-            "label": "Label: 06",
-            "value": "06"
-          },
-          {
-            "key": "10",
-            "label": "Label: 07",
-            "value": "07"
-          }
-        ],
-        "images": [
-          {
-            "key": "0",
-            "label": "Een spontaan moment tijdens een bruiloft bij Kasteel Keukenhof",
-            "mediaId": "foto-d5f77408f803",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "1",
-            "label": "Een liefdevol moment tijdens een destination wedding in Spanje",
-            "mediaId": "foto-26fee13582a7",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "2",
-            "label": "Een vrolijk moment tijdens een bruiloft in Utrecht",
-            "mediaId": "foto-6f5e773ded94",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "3",
-            "label": "Een trouwmoment tijdens een bruiloft in Bordeaux",
-            "mediaId": "foto-e21748886faf",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "4",
-            "label": "Persoonlijke details die klaarstaan voor de trouwdag",
-            "mediaId": "foto-f5d8e85a877d",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "5",
-            "label": "Neeltje, jullie trouwfotograaf, tussen de momenten door",
-            "mediaId": "foto-75c93a94397c",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "6",
-            "label": "Een beeld om later samen naar terug te kijken",
-            "mediaId": "foto-95c436480d00",
-            "desktop": null,
-            "mobile": null
-          }
-        ],
-        "links": []
-      }
-    },
-    {
-      "type": "InfoCards",
-      "props": {
-        "id": "home-info-cards",
-        "background": "white",
-        "eyebrow": "VOOR JULLIE DAG. EN DAARNA.",
-        "title": "Volop beleven.",
-        "emphasis": "Mooi bewaren."
-      }
-    },
-    {
-      "type": "Review",
-      "props": {
-        "id": "home-review-9",
         "background": "wine",
-        "eyebrow": "LIEVE WOORDEN / VAN BRUIDSPAREN",
-        "title": "Wat zij",
-        "emphasis": "ervan vinden."
-      }
-    },
-    {
-      "type": "Wall",
-      "props": {
-        "id": "home-wall-10",
-        "texts": [
+        "id": "StoryCarousel-46231fa5-56b8-42cf-9ac5-78fcbc44a2bc",
+        "storySource": "selected",
+        "storySelection": [
           {
-            "key": "0",
-            "label": "Label: 03 — Jullie foto's thuis",
-            "value": "03 — Jullie foto's thuis"
+            "storyId": "keukenhof"
           },
           {
-            "key": "1",
-            "label": "Titel: Niet alleen in een album.",
-            "value": "Niet alleen in een album."
+            "storyId": "bordeaux"
           },
           {
-            "key": "2",
-            "label": "Label: Ook aan de muur.",
-            "value": "Ook aan de muur."
+            "storyId": "malaga"
+          },
+          {
+            "storyId": "dengh"
           }
-        ],
-        "images": [
-          {
-            "key": "0",
-            "label": "Trouwfoto in een klassieke houten staande lijst",
-            "mediaId": "foto-26fee13582a7",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "1",
-            "label": "Details van een trouwdag in een liggende bronzen lijst",
-            "mediaId": "foto-f5d8e85a877d",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "2",
-            "label": "Trouwfoto in een vergulde staande lijst",
-            "mediaId": "foto-d5f77408f803",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "3",
-            "label": "Een spontaan moment in een donkerhouten staande lijst",
-            "mediaId": "foto-6f5e773ded94",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "4",
-            "label": "Een liggende trouwfoto in een klassieke houten lijst",
-            "mediaId": "foto-26fee13582a7",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "5",
-            "label": "Een grote trouwfoto in een rijk vergulde staande lijst",
-            "mediaId": "foto-26fee13582a7",
-            "desktop": null,
-            "mobile": null
-          }
-        ],
-        "links": []
+        ]
       }
     },
     {
       "type": "About",
       "props": {
-        "id": "home-about-11",
         "texts": [
           {
             "key": "0",
@@ -956,22 +1330,22 @@
           {
             "key": "1",
             "label": "Titel: Wat er",
-            "value": "Wat er"
+            "value": "Wie staat er"
           },
           {
             "key": "2",
             "label": "Label: echt gebeurt.",
-            "value": "echt gebeurt."
+            "value": "achter de lens?"
           },
           {
             "key": "3",
             "label": "Tekst: Ik fotografeer de dag zoals hij zich ontvouwt: d",
-            "value": "Ik fotografeer de dag zoals hij zich ontvouwt: de grote momenten, de kleine blikken en alles wat ertussen leeft."
+            "value": "Benieuwd naar wie ik ben? Waarom ik doe wat ik doe? En hoe ik het doe? Ik geef je graag een kijkje in mijn hoofd. Soms wat chaotisch, maar óók altijd levendig. En verplicht gestructureerd."
           },
           {
             "key": "4",
             "label": "Knop / link: Bekijk mijn werk",
-            "value": "Bekijk mijn werk"
+            "value": "Lees meer over Neeltje"
           },
           {
             "key": "5",
@@ -983,7 +1357,7 @@
           {
             "key": "0",
             "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "foto-75c93a94397c",
+            "mediaId": "media-f1c2c61f-c748-4b80-a782-ff9c8128c145",
             "desktop": null,
             "mobile": null
           }
@@ -994,18 +1368,19 @@
             "label": "Link 1",
             "href": "over.html"
           }
-        ]
+        ],
+        "background": "white",
+        "id": "About-62489d13-edeb-4372-ae96-7c6f49a771d8"
       }
     },
     {
       "type": "Journal",
       "props": {
-        "id": "home-journal-12",
         "texts": [
           {
             "key": "0",
             "label": "Label: JOURNAL / TIPS & VERHALEN",
-            "value": "JOURNAL / TIPS & VERHALEN"
+            "value": "BLOG / TIPS & VERHALEN"
           },
           {
             "key": "1",
@@ -1024,468 +1399,9 @@
           }
         ],
         "images": [],
-        "links": []
-      }
-    },
-    {
-      "type": "FAQ",
-      "props": {
-        "id": "home-faq-13",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: GOED OM TE WETEN",
-            "value": "GOED OM TE WETEN"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Veelgestelde",
-            "value": "Veelgestelde"
-          },
-          {
-            "key": "2",
-            "label": "Titel: vragen.",
-            "value": "vragen."
-          },
-          {
-            "key": "3",
-            "label": "Tekst: Praktische antwoorden over trouwfotografie, jull",
-            "value": "Praktische antwoorden over trouwfotografie, jullie planning en kennismaken met Studio Neeltje."
-          },
-          {
-            "key": "4",
-            "label": "Label: Is mijn trouwdatum nog beschikbaar?",
-            "value": "Is mijn trouwdatum nog beschikbaar?"
-          },
-          {
-            "key": "5",
-            "label": "Tekst: Stuur je trouwdatum en locatie via het contactfo",
-            "value": "Stuur je trouwdatum en locatie via het contactformulier. Ik laat jullie weten of ik beschikbaar ben en denk graag mee over de invulling van jullie dag."
-          },
-          {
-            "key": "6",
-            "label": "Label: Fotografeer je alleen in Utrecht?",
-            "value": "Fotografeer je alleen in Utrecht?"
-          },
-          {
-            "key": "7",
-            "label": "Tekst: Nee. Ik fotografeer bruiloften op verschillende ",
-            "value": "Nee. Ik fotografeer bruiloften op verschillende plekken in Nederland en ook op bestemmingen daarbuiten. Vertel me waar jullie trouwen, dan bespreken we samen de mogelijkheden."
-          },
-          {
-            "key": "8",
-            "label": "Label: Hoeveel uur fotografie hebben we nodig?",
-            "value": "Hoeveel uur fotografie hebben we nodig?"
-          },
-          {
-            "key": "9",
-            "label": "Tekst: Dat hangt af van wat jullie graag willen laten v",
-            "value": "Dat hangt af van wat jullie graag willen laten vastleggen. We bekijken samen jullie planning en kiezen welke momenten voor jullie belangrijk zijn, van de voorbereidingen tot het feest."
-          },
-          {
-            "key": "10",
-            "label": "Label: Moeten we de hele dag poseren?",
-            "value": "Moeten we de hele dag poseren?"
-          },
-          {
-            "key": "11",
-            "label": "Tekst: Nee. Ik fotografeer vooral wat er echt gebeurt e",
-            "value": "Nee. Ik fotografeer vooral wat er echt gebeurt en geef alleen aanwijzingen wanneer dat prettig is, bijvoorbeeld tijdens een korte portretsessie. Zo blijft er ruimte om jullie dag zelf te beleven."
-          },
-          {
-            "key": "12",
-            "label": "Label: Wat gebeurt er na onze trouwdag met de foto's?",
-            "value": "Wat gebeurt er na onze trouwdag met de foto's?"
-          },
-          {
-            "key": "13",
-            "label": "Tekst: Na de bruiloft selecteer en bewerk ik de beelden",
-            "value": "Na de bruiloft selecteer en bewerk ik de beelden zorgvuldig. Tijdens onze kennismaking vertel ik jullie hoe de oplevering en online galerij in zijn werk gaan."
-          },
-          {
-            "key": "14",
-            "label": "Label: Wat kost een trouwreportage?",
-            "value": "Wat kost een trouwreportage?"
-          },
-          {
-            "key": "15",
-            "label": "Tekst: De prijs hangt onder andere af van de duur en lo",
-            "value": "De prijs hangt onder andere af van de duur en locatie van jullie reportage. Stuur me jullie datum en plannen, dan kan ik vertellen welke mogelijkheden en tarieven passen."
-          },
-          {
-            "key": "16",
-            "label": "Label: Hoe leggen we onze datum vast?",
-            "value": "Hoe leggen we onze datum vast?"
-          },
-          {
-            "key": "17",
-            "label": "Tekst: We beginnen met een kennismaking en bespreken ju",
-            "value": "We beginnen met een kennismaking en bespreken jullie wensen en de mogelijkheden. Daarna ontvangen jullie duidelijkheid over het voorstel en de afspraken om de datum te reserveren."
-          }
-        ],
-        "images": [],
-        "links": []
-      }
-    },
-    {
-      "type": "Method",
-      "props": {
-        "id": "home-method-14",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: MEER OVER NEELTJE",
-            "value": "MEER OVER NEELTJE"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Rustig dichtbij.",
-            "value": "Rustig dichtbij."
-          },
-          {
-            "key": "2",
-            "label": "Label: Altijd alert.",
-            "value": "Altijd alert."
-          },
-          {
-            "key": "3",
-            "label": "Tekst: Ik fotografeer zoals ik zelf graag herinner: met",
-            "value": "Ik fotografeer zoals ik zelf graag herinner: met ruimte voor spontane momenten, zonder dat jullie steeds hoeven te denken aan de camera."
-          },
-          {
-            "key": "4",
-            "label": "Tekst: Vooraf leren we elkaar kennen. Op de dag zelf vo",
-            "value": "Vooraf leren we elkaar kennen. Op de dag zelf voel ik aan wanneer ik dichtbij mag komen en wanneer het mooier is om juist even afstand te houden. Zo ontstaat een reportage die bij jullie past."
-          },
-          {
-            "key": "5",
-            "label": "Knop / link: Lees mijn verhaal",
-            "value": "Lees mijn verhaal"
-          }
-        ],
-        "images": [],
-        "links": [
-          {
-            "key": "0",
-            "label": "Link 1",
-            "href": "over.html"
-          }
-        ]
-      }
-    },
-    {
-      "type": "Journey",
-      "props": {
-        "id": "home-journey",
+        "links": [],
         "background": "white",
-        "eyebrow": "VAN EEN EERSTE HALLO TOT JULLIE HERINNERINGEN",
-        "title": "Samen op weg.",
-        "emphasis": "Helemaal jullie."
-      }
-    },
-    {
-      "type": "Pricing",
-      "props": {
-        "id": "home-pricing-15",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: TROUWFOTOGRAFIE / INVESTERING",
-            "value": "TROUWFOTOGRAFIE / INVESTERING"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Hoeveel van jullie dag",
-            "value": "Hoeveel van jullie dag"
-          },
-          {
-            "key": "2",
-            "label": "Label: leggen we vast?",
-            "value": "leggen we vast?"
-          },
-          {
-            "key": "3",
-            "label": "Tekst: Kies de reportage die past bij jullie planning. ",
-            "value": "Kies de reportage die past bij jullie planning. Twijfel je? Vertel me wat jullie belangrijk vinden, dan denk ik met jullie mee."
-          },
-          {
-            "key": "4",
-            "label": "Label: 6 uur",
-            "value": "6 uur"
-          },
-          {
-            "key": "5",
-            "label": "Titel: trouwfotografie",
-            "value": "trouwfotografie"
-          },
-          {
-            "key": "6",
-            "label": "Tekst: Bijvoorbeeld ceremonie → borrel → diner",
-            "value": "Bijvoorbeeld ceremonie → borrel → diner"
-          },
-          {
-            "key": "7",
-            "label": "Titel: Dit is inbegrepen:",
-            "value": "Dit is inbegrepen:"
-          },
-          {
-            "key": "8",
-            "label": "Label: Tot 6 uur trouwfotografie",
-            "value": "Tot 6 uur trouwfotografie"
-          },
-          {
-            "key": "9",
-            "label": "Label: Oplevering binnen 8 weken",
-            "value": "Oplevering binnen 8 weken"
-          },
-          {
-            "key": "10",
-            "label": "Label: Preview binnen 1 week",
-            "value": "Preview binnen 1 week"
-          },
-          {
-            "key": "11",
-            "label": "Label: Een complete online galerij met zorgvuldig gesel",
-            "value": "Een complete online galerij met zorgvuldig geselecteerde foto’s in hoge resolutie"
-          },
-          {
-            "key": "12",
-            "label": "Label: Een prachtige beeldbank met alle foto’s die mooi",
-            "value": "Een prachtige beeldbank met alle foto’s die mooi zijn (geen maximum aantal foto’s)"
-          },
-          {
-            "key": "13",
-            "label": "Label: € 1.550",
-            "value": "€ 1.550"
-          },
-          {
-            "key": "14",
-            "label": "Label: totaal",
-            "value": "totaal"
-          },
-          {
-            "key": "15",
-            "label": "Knop / link: Bespreek 6 uur",
-            "value": "Kies 6 uur fotografie"
-          },
-          {
-            "key": "16",
-            "label": "Label: Ruimte voor de hele flow",
-            "value": "Meest gekozen"
-          },
-          {
-            "key": "17",
-            "label": "Label: 9 uur",
-            "value": "9 uur"
-          },
-          {
-            "key": "18",
-            "label": "Titel: trouwfotografie",
-            "value": "trouwfotografie"
-          },
-          {
-            "key": "19",
-            "label": "Tekst: Bijvoorbeeld voorbereidingen → ceremonie → borre",
-            "value": "Bijvoorbeeld voorbereidingen → ceremonie → borrel → diner"
-          },
-          {
-            "key": "20",
-            "label": "Titel: Dit is inbegrepen:",
-            "value": "Dit is inbegrepen:"
-          },
-          {
-            "key": "21",
-            "label": "Label: Tot 9 uur trouwfotografie",
-            "value": "Tot 9 uur trouwfotografie"
-          },
-          {
-            "key": "22",
-            "label": "Label: Oplevering binnen 8 weken",
-            "value": "Oplevering binnen 8 weken"
-          },
-          {
-            "key": "23",
-            "label": "Label: Preview binnen 1 week",
-            "value": "Preview binnen 1 week"
-          },
-          {
-            "key": "24",
-            "label": "Label: Een complete online galerij met zorgvuldig gesel",
-            "value": "Een complete online galerij met zorgvuldig geselecteerde foto’s in hoge resolutie"
-          },
-          {
-            "key": "25",
-            "label": "Label: Een prachtige beeldbank met alle foto’s die mooi",
-            "value": "Een prachtige beeldbank met alle foto’s die mooi zijn (geen maximum aantal foto’s)"
-          },
-          {
-            "key": "26",
-            "label": "Label: € 1.965",
-            "value": "€ 1.965"
-          },
-          {
-            "key": "27",
-            "label": "Label: totaal",
-            "value": "totaal"
-          },
-          {
-            "key": "28",
-            "label": "Tekst: Bespaar 10%",
-            "value": "Bespaar 10%"
-          },
-          {
-            "key": "29",
-            "label": "Knop / link: Bespreek 9 uur",
-            "value": "Kies 9 uur fotografie"
-          },
-          {
-            "key": "30",
-            "label": "Label: 12 uur",
-            "value": "12 uur"
-          },
-          {
-            "key": "31",
-            "label": "Titel: trouwfotografie",
-            "value": "trouwfotografie"
-          },
-          {
-            "key": "32",
-            "label": "Tekst: Van het aankleden tot de dansvloer",
-            "value": "Van het aankleden tot de dansvloer"
-          },
-          {
-            "key": "33",
-            "label": "Titel: Dit is inbegrepen:",
-            "value": "Dit is inbegrepen:"
-          },
-          {
-            "key": "34",
-            "label": "Label: Tot 12 uur trouwfotografie",
-            "value": "Tot 12 uur trouwfotografie"
-          },
-          {
-            "key": "35",
-            "label": "Label: Oplevering binnen 8 weken",
-            "value": "Oplevering binnen 8 weken"
-          },
-          {
-            "key": "36",
-            "label": "Label: Preview binnen 1 week",
-            "value": "Preview binnen 1 week"
-          },
-          {
-            "key": "37",
-            "label": "Label: Een complete online galerij met zorgvuldig gesel",
-            "value": "Een complete online galerij met zorgvuldig geselecteerde foto’s in hoge resolutie"
-          },
-          {
-            "key": "38",
-            "label": "Label: Een prachtige beeldbank met alle foto’s die mooi",
-            "value": "Een prachtige beeldbank met alle foto’s die mooi zijn (geen maximum aantal foto’s)"
-          },
-          {
-            "key": "39",
-            "label": "Label: € 2.250",
-            "value": "€ 2.250"
-          },
-          {
-            "key": "40",
-            "label": "Label: totaal",
-            "value": "totaal"
-          },
-          {
-            "key": "41",
-            "label": "Tekst: Bespaar 20%",
-            "value": "Bespaar 20%"
-          },
-          {
-            "key": "42",
-            "label": "Knop / link: Bespreek 12 uur",
-            "value": "Kies 12 uur fotografie"
-          },
-          {
-            "key": "43",
-            "label": "Tekst: Prijzen zijn exclusief reiskosten. Kennismaken e",
-            "value": "Kennismaken is vrijblijvend. Je zit nog nergens aan vast. Prijzen zijn exclusief reiskosten."
-          }
-        ],
-        "images": [],
-        "links": [
-          {
-            "key": "0",
-            "label": "Link 1",
-            "href": "contact.html"
-          },
-          {
-            "key": "1",
-            "label": "Link 2",
-            "href": "contact.html"
-          },
-          {
-            "key": "2",
-            "label": "Link 3",
-            "href": "contact.html"
-          }
-        ]
-      }
-    },
-    {
-      "type": "ContactCTA",
-      "props": {
-        "id": "home-contactcta-16",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: Neeltje · jullie trouwfotograaf",
-            "value": "Neeltje · jullie trouwfotograaf"
-          },
-          {
-            "key": "1",
-            "label": "Label: 05 — ZULLEN WE KENNISMAKEN?",
-            "value": "05 — ZULLEN WE KENNISMAKEN?"
-          },
-          {
-            "key": "2",
-            "label": "Titel: Voelt dit als",
-            "value": "Voelt dit als"
-          },
-          {
-            "key": "3",
-            "label": "Label: jullie verhaal?",
-            "value": "jullie verhaal?"
-          },
-          {
-            "key": "4",
-            "label": "Tekst: Vertel me over jullie trouwdag, datum en locatie",
-            "value": "Vertel me over jullie trouwdag, datum en locatie. Dan ontdekken we samen of het klikt — en wat ik voor jullie kan betekenen."
-          },
-          {
-            "key": "5",
-            "label": "Knop / link: Vertel me jullie plannen",
-            "value": "Vertel me jullie plannen"
-          },
-          {
-            "key": "6",
-            "label": "Label: Vrijblijvend kennismaken · gewoon kijken of het ",
-            "value": "Vrijblijvend kennismaken · gewoon kijken of het klikt"
-          }
-        ],
-        "images": [
-          {
-            "key": "0",
-            "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "foto-75c93a94397c",
-            "desktop": null,
-            "mobile": null
-          }
-        ],
-        "links": [
-          {
-            "key": "0",
-            "label": "Link 1",
-            "href": "contact.html"
-          }
-        ]
+        "id": "Journal-37fc23f3-0991-4c43-a524-ba508a18b589"
       }
     },
     {
@@ -1496,7 +1412,7 @@
           {
             "key": "0",
             "label": "Label: TUSSEN DE MOMENTEN / OP SOCIAL",
-            "value": "TUSSEN DE MOMENTEN / OP SOCIAL"
+            "value": "TUSSEN DE MOMENTEN / OP SOCIAL MEDIA"
           },
           {
             "key": "1",
@@ -1511,7 +1427,7 @@
           {
             "key": "3",
             "label": "Tekst: Een beetje voorpret, kleine blikken en alles wat",
-            "value": "Een beetje voorpret, kleine blikken en alles wat op een trouwdag tussendoor gebeurt."
+            "value": "Ik deel hoe ik werk, geef je praktische tips en geef je inspiratie hoe jouw trouwdag er ook uit kan komen te zien."
           },
           {
             "key": "4",
@@ -1521,27 +1437,27 @@
           {
             "key": "5",
             "label": "Label: ECHT SAMEN",
-            "value": "ECHT SAMEN"
+            "value": ""
           },
           {
             "key": "6",
             "label": "Label: DE KLEINE DINGEN",
-            "value": "DE KLEINE DINGEN"
+            "value": ""
           },
           {
             "key": "7",
             "label": "Label: ALLES ERTUSSENIN",
-            "value": "ALLES ERTUSSENIN"
+            "value": ""
           },
           {
             "key": "8",
             "label": "Label: VOLLE DANSVLOER",
-            "value": "VOLLE DANSVLOER"
+            "value": ""
           },
           {
             "key": "9",
             "label": "Label: ECHT · ONGEREGISEERD · HELEMAAL JULLIE",
-            "value": "ECHT · ONGEREGISEERD · HELEMAAL JULLIE"
+            "value": "KRIJG EEN BEELD ACHTER DE SCHERMEN"
           },
           {
             "key": "10",
@@ -1553,28 +1469,28 @@
           {
             "key": "0",
             "label": "Een liefdevol moment tijdens een destination wedding",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-44aa961a-44d7-4ca0-90d5-39f2ecf68ee2",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "1",
             "label": "Persoonlijke details die klaarstaan voor de trouwdag",
-            "mediaId": "foto-f5d8e85a877d",
+            "mediaId": "media-1029dacf-45ed-4685-9d53-acacfd65c26b",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Een vrolijk moment tijdens een bruiloft in Utrecht",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "media-c48b7a21-e3ad-4fbe-a3fa-4133340d980e",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "3",
             "label": "Een spontaan moment bij Kasteel Keukenhof",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-9d2bfa5c-152a-403e-a690-cd372d735754",
             "desktop": null,
             "mobile": null
           }
@@ -1610,8 +1526,10 @@
             "label": "Link 6",
             "href": "https://www.instagram.com/"
           }
-        ]
+        ],
+        "background": "blue"
       }
     }
-  ]
+  ],
+  "zones": {}
 }

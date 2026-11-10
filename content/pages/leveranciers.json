@@ -39,21 +39,21 @@
           {
             "key": "0",
             "label": "Foto achteraan",
-            "mediaId": "foto-26fee13582a7",
+            "mediaId": "media-44aa961a-44d7-4ca0-90d5-39f2ecf68ee2",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "1",
             "label": "Hoofdfoto",
-            "mediaId": "foto-d5f77408f803",
+            "mediaId": "media-9d2bfa5c-152a-403e-a690-cd372d735754",
             "desktop": null,
             "mobile": null
           },
           {
             "key": "2",
             "label": "Detailfoto",
-            "mediaId": "foto-6f5e773ded94",
+            "mediaId": "media-c48b7a21-e3ad-4fbe-a3fa-4133340d980e",
             "desktop": null,
             "mobile": null
           }
@@ -116,7 +116,7 @@
           {
             "key": "0",
             "label": "Neeltje, trouwfotograaf bij Studio Neeltje",
-            "mediaId": "foto-75c93a94397c",
+            "mediaId": "media-1d8b3650-7a39-4265-bf49-9f13fc637e35",
             "desktop": null,
             "mobile": null
           }
