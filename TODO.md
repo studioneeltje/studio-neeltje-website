@@ -460,3 +460,12 @@ De onderstaande bouw vervangt de eerdere open bouwpunten van 30 oktober:
 - [ ] Publicatie: alleen na afzonderlijke toestemming; deze bouw wijzigt de live website niet.
 
 De nieuwe bouw staat in de aparte checkout contactpagina-bouw. Bestaande conceptbranches en de oude lokale projectmap blijven behouden.
+
+## Puck en Sveltia — Havixhorst en de beeldbank
+
+- [x] Vastgesteld waar de overdracht stopt. De 55 Havixhorst-foto’s zijn lokaal in Puck, zonder mediarecords en originelen in het online mediaconcept.
+- [x] Geselecteerde nieuwe bestanden kunnen in een eigen mediaconcept worden opgeslagen, met behoud van hun ID’s. Bij onderbreking toont Puck de stap en kan dezelfde selectie verder. Ieder geslaagd deel bevat de records en bronbestanden samen.
+- [x] ‘Beeldbank vernieuwen’ vraagt de actuele branches en PR-versies op. Bij een tijdelijke GitHub-fout kan Sveltia in dezelfde browser het laatst bevestigde selectieconcept gebruiken.
+- [ ] Met de nieuwe editor in dezelfde browser de 55 bestaande Havixhorst-foto’s als afzonderlijk mediaconcept opslaan. Controleer alle mediarecords en bronpaden en verifieer de fotokiezer in Sveltia.
+- [ ] De juiste cover, hoverfoto en galerij voor Roelof Jan en Wendy kiezen in het reportageconcept.
+- [ ] Voor een afzonderlijk publicatiebesluit de beeldbankaudit, gekoppelde fotoreferenties en automatische verwerking controleren. De bestaande integratie- en mediaconcepten hebben een eigen beoordelingsstap.

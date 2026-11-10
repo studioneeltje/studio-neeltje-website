@@ -8,16 +8,16 @@ const CACHE_KEY='studio-neeltje-public-library-v2';
 let requests=new Map(),blockedUntil=0;
 try{const saved=JSON.parse(sessionStorage.getItem(CACHE_KEY)||'null');if(saved){requests=new Map(saved.requests||[]);blockedUntil=saved.blockedUntil||0;}}catch{}
 function saveCache(){try{sessionStorage.setItem(CACHE_KEY,JSON.stringify({requests:[...requests],blockedUntil}));}catch{}}
-async function json(url){
- const cached=requests.get(url),immutable=url.startsWith(RAW)||/git\/trees\/[a-f0-9]{40}/.test(url),ttl=immutable?86400000:300000;
- if(cached&&Date.now()-cached.time<ttl)return cached.value;
+async function json(url,{cacheKey=url,refresh=false}={}){
+ const cached=requests.get(cacheKey),immutable=url.startsWith(RAW)||/git\/trees\/[a-f0-9]{40}/.test(url),ttl=immutable?86400000:300000;
+ if(!refresh&&cached&&Date.now()-cached.time<ttl)return cached.value;
  if(url.startsWith(API)&&Date.now()<blockedUntil)throw Error('GitHub begrenst het ophalen tijdelijk. Je laatst opgehaalde beeldbank blijft beschikbaar. Probeer na '+new Date(blockedUntil).toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'})+' opnieuw.');
  const response=await fetch(url,{cache:immutable?'force-cache':'no-cache',credentials:'omit',referrerPolicy:'no-referrer'});
  if(!response.ok){
   if(response.status===403||response.status===429){const reset=Number(response.headers.get('x-ratelimit-reset'))*1000,retry=Number(response.headers.get('retry-after'))*1000;blockedUntil=Math.max(Date.now()+60000,reset||(retry?Date.now()+retry:Date.now()+300000));saveCache();throw Error('GitHub begrenst het ophalen tijdelijk. De laatst opgehaalde beeldbank blijft beschikbaar. Probeer later opnieuw.');}
   throw Error(`De online beeldbank kon niet laden (${response.status}). Je huidige selectie blijft behouden.`);
  }
- const value=await response.json();requests.set(url,{time:Date.now(),value});saveCache();return value;
+ const value=await response.json();requests.set(cacheKey,{time:Date.now(),value});saveCache();return value;
 }
 async function mapLimit(items,work){const results=new Array(items.length);let next=0;await Promise.all(Array.from({length:Math.min(5,items.length)},async()=>{let i;while((i=next++)<items.length)results[i]=await work(items[i]);}));return results;}
 async function treeAt(sha){const tree=await json(`${API}git/trees/${sha}?recursive=1`);if(tree.truncated)throw Error('De online beeldbank is te groot om volledig op te halen. Je huidige selectie blijft behouden.');return tree.tree||[];}
@@ -26,8 +26,8 @@ async function recordsAt(sha,files){return mapLimit(files,async file=>{const ass
 
 // Read the same canonical media records as Puck. No token, private CMS state or
 // new authentication storage is needed for this public GitHub Pages repository.
-export async function onlineLibrary(published){
- const [ref,pulls]=await Promise.all([json(`${API}git/ref/heads/main`),json(`${API}pulls?state=open&per_page=100`)]);
+export async function onlineLibrary(published,{refresh=false}={}){
+ const [ref,pulls]=await Promise.all([json(`${API}git/ref/heads/main`,{refresh}),json(`${API}pulls?state=open&per_page=100`,{refresh})]);
  const mainSha=ref.object.sha,mainTree=await treeAt(mainSha),paths=new Set(mainTree.filter(item=>item.type==='blob').map(item=>item.path));
  const assets=new Map((await recordsAt(mainSha,recordFiles(mainTree))).filter(Boolean).map(asset=>[asset.id,{...asset,libraryStatus:'Gepubliceerd'}]));
  const manifest={...published.manifest};
@@ -41,7 +41,8 @@ export async function onlineLibrary(published){
  for(const pr of drafts){
   const changed=[];
   for(let page=1;page<=30;page++){
-   const files=await json(`${API}pulls/${pr.number}/files?per_page=100&page=${page}`);
+   const url=`${API}pulls/${pr.number}/files?per_page=100&page=${page}`;
+   const files=await json(url,{cacheKey:`${url}@${pr.head.sha}:${pr.base?.sha||mainSha}`});
    changed.push(...files.filter(file=>/^content\/media\/[^/]+\.json$/.test(file.filename)));
    if(files.length<100)break;
    if(page===30)throw Error('Het mediaconcept bevat te veel wijzigingen om volledig te laden.');
