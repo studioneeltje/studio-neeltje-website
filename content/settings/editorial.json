@@ -1,4 +1,29 @@
 {
+  "personalInvite": {
+    "eyebrow": "Trouwfotografie met energie",
+    "title": "Jullie dag beleven.",
+    "emphasis": "Ik leg het vast.",
+    "body": "Jullie hoeven niet te weten hoe je moet poseren. Ik help jullie ontspannen, zodat jullie jezelf kunnen zijn.",
+    "button": "Vertel me over jullie trouwdag",
+    "href": "contact.html",
+    "reassurance": "Vrijblijvend kennismaken. Eerst ontdekken of het klikt.",
+    "image": "media-1d8b3650-7a39-4265-bf49-9f13fc637e35",
+    "photoLabel": "Aangenaam, Neeltje.",
+    "photoCaption": "Jullie trouwfotograaf",
+    "quote": "Vanaf het eerste moment voelden we ons helemaal op ons gemak.",
+    "name": "Onno en Sari Koole",
+    "investmentLabel": "Bekijk pakketten & investering",
+    "investmentUrl": "investering.html",
+    "investmentNote": "Trouwreportages vanaf €1.550 · vanaf 6 uur",
+    "aboutLabel": "Leer Neeltje kennen",
+    "aboutUrl": "over.html"
+  },
+  "portfolioCards": {
+    "eyebrow": "DIT WIL IK",
+    "title": "Ontdek jouw",
+    "emphasis": "mogelijkheden.",
+    "background": "white"
+  },
   "cards": [
     {
       "label": "NIEUWSGIERIG?",
@@ -70,30 +95,5 @@
       "image": "",
       "visible": true
     }
-  ],
-  "portfolioCards": {
-    "eyebrow": "DIT WIL IK",
-    "title": "Ontdek jouw",
-    "emphasis": "mogelijkheden.",
-    "background": "white"
-  },
-  "personalInvite": {
-    "eyebrow": "Trouwfotografie met energie",
-    "title": "Jullie dag beleven.",
-    "emphasis": "Ik leg het vast.",
-    "body": "Jullie hoeven niet te weten hoe je moet poseren. Ik help jullie ontspannen, zodat jullie jezelf kunnen zijn.",
-    "button": "Vertel me over jullie trouwdag",
-    "href": "contact.html",
-    "reassurance": "Vrijblijvend kennismaken. Eerst ontdekken of het klikt.",
-    "photoLabel": "Aangenaam, Neeltje.",
-    "photoCaption": "Jullie trouwfotograaf",
-    "image": "media-06bb057a-1e07-43fe-b00f-e12d6c726440",
-    "quote": "Vanaf het eerste moment voelden we ons helemaal op ons gemak.",
-    "name": "Onno en Sari Koole",
-    "investmentLabel": "Bekijk pakketten & investering",
-    "investmentUrl": "investering.html",
-    "investmentNote": "Trouwreportages vanaf €1.550 · vanaf 6 uur",
-    "aboutLabel": "Leer Neeltje kennen",
-    "aboutUrl": "over.html"
-  }
+  ]
 }
