@@ -87,6 +87,7 @@ collections:
           - {name: body, label: Verhaaltekst, widget: markdown, required: false}
           - {name: image, label: Foto, widget: neeltje-image, required: false}
           - {name: secondImage, label: Tweede foto, widget: neeltje-image, required: false}
+          - {name: naturalRatio, label: Originele beeldverhouding bij twee foto’s, widget: boolean, default: false, required: false}
           - {name: caption, label: Bijschrift, widget: string, required: false}
           - {name: gallery, label: Galerijfoto’s — meerdere kiezen en ordenen, widget: neeltje-image, multiple: true, required: false}
           - {name: quote, label: Echte reviewtekst, widget: text, required: false}
