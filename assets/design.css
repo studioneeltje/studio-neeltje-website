@@ -1103,10 +1103,10 @@ body.sn-lightbox-open{overflow:hidden}
   height: auto;
   aspect-ratio: auto;
 }
-#story-destination-wedding-fotograaf-bordeaux-frankrijk .sn-project-cover img {
+[data-role="story-destination-wedding-fotograaf-bordeaux-frankrijk"] .sn-project-cover img {
   height: auto;
   max-height: none;
 }
-#story-destination-wedding-fotograaf-bordeaux-frankrijk .sn-project-cover {
+[data-role="story-destination-wedding-fotograaf-bordeaux-frankrijk"] .sn-project-cover {
   margin-top: 0;
 }
