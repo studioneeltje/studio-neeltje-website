@@ -1,6 +1,6 @@
 {
   "id": "algemene-voorwaarden",
-  "title": "Algemene voorwaarden",
+  "title": "Algemene voorwaarden | Studio Neeltje",
   "description": "Lees de algemene voorwaarden van Studio Neeltje. Versie juni 2026, van kracht per 1 juni 2026.",
   "root": {
     "props": {
@@ -16,5 +16,6 @@
         "background": "wine"
       }
     }
-  ]
+  ],
+  "zones": {}
 }
