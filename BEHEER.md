@@ -67,12 +67,20 @@ publiceren. Een onderbroken online upload hervat met de al verstuurde bestanden.
 Een mediareservekopie bevat alleen mediagegevens; de originelen blijven tijdelijk
 in de browser totdat ze zijn gepubliceerd. Wis de browseropslag niet vóór online opslag.
 
+Voor één nieuwe reeks zoek je op de titel, kies je **Alle gevonden beelden
+selecteren** en klik je op **Selectie online opslaan als concept**. Puck bewaart
+de gekozen nieuwe bestanden in een afzonderlijk GitHub-concept. Als een deel
+mislukt, laat Puck zien bij welke stap. Zoek en selecteer dezelfde reeks en
+gebruik dezelfde knop om verder te gaan.
+
 In Puck klik je bij een fotoveld op **Foto visueel kiezen**. Je ziet miniaturen, kunt
 zoeken en krijgt een groter voorbeeld. Bij meerdere fotovakken kun je een selectie
 tegelijk toevoegen; deze vult de bestaande vakken in de gekozen volgorde. In Sveltia
 gebruik je dezelfde visuele kiezer bij omslagfoto’s, artikelblokken, galerijen en
 instellingen. Voor een galerij kies je meerdere foto's en kun je de volgorde aanpassen.
-Publiceer nieuw toegevoegde media eerst; kies daarna in Sveltia **Beeldbank vernieuwen**.
+Kies na het online opslaan in Sveltia **Beeldbank vernieuwen**. Ook online
+mediaconcepten zijn selecteerbaar. Publiceer de gekozen media vóór je de
+bijbehorende pagina of reportage publiceert.
 Een los bestand in de algemene uploadlijst van Sveltia maakt nog geen media-item.
 
 Gebruik **Naar prullenbak**, ook als een foto op pagina’s staat. Die verwijzingen

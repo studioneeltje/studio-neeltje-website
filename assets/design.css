@@ -1098,3 +1098,15 @@ body.sn-lightbox-open{overflow:hidden}
 @media(max-width:900px){.mode-canvas .sn-legal-clause-number{font-size:13px;line-height:2.2}}
 @media(max-width:700px){.mode-canvas .sn-legal-copy .sn-legal-clause{grid-template-columns:2.7em minmax(0,1fr);gap:8px}.mode-canvas .sn-legal-copy .sn-legal-clauses{gap:16px}}
 @media print{.mode-canvas .sn-legal-copy .sn-legal-clauses{gap:10pt}.mode-canvas .sn-legal-clause-number{font-size:10pt;line-height:1.7}}
+
+.sn-project-pair.sn-project-pair-natural img {
+  height: auto;
+  aspect-ratio: auto;
+}
+[data-role="story-destination-wedding-fotograaf-bordeaux-frankrijk"] .sn-project-cover img {
+  height: auto;
+  max-height: none;
+}
+[data-role="story-destination-wedding-fotograaf-bordeaux-frankrijk"] .sn-project-cover {
+  margin-top: 0;
+}

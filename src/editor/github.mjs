@@ -10,7 +10,7 @@ async function request(url,{method='GET',body,allow404=false}={}) {
   try{response=await fetch(url,{method,headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${token}`,'X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});}
   catch{throw new Error('De verbinding met GitHub kon niet worden gemaakt. Controleer je internetverbinding en probeer opnieuw. Blijft dit gebeuren? Vernieuw de beheerpagina en log opnieuw in.');}
   if(response.status===404&&allow404)return null;
-  if(!response.ok){if(response.status===401)throw new Error('GitHub herkent deze token niet. Controleer of je de volledige, geldige token hebt gekopieerd.');if(response.status===409||response.status===422)throw draftConflict();if(response.status===403)throw new Error('GitHub geeft geen toegang. Controleer of de token rechten heeft voor deze repository, Contents, Pull requests en Actions.');throw new Error(`De aanvraag bij GitHub is mislukt (${response.status}). Probeer later opnieuw.`);}
+  if(!response.ok){if(response.status===401)throw new Error('GitHub herkent deze token niet. Controleer of je de volledige, geldige token hebt gekopieerd.');if(response.status===409||response.status===422)throw draftConflict();if(response.status===429||response.headers.get('retry-after')||response.headers.get('x-ratelimit-remaining')==='0')throw new Error('GitHub begrenst het aantal verzoeken tijdelijk. Probeer het later opnieuw met dezelfde selectie.');if(response.status===403)throw new Error('GitHub geeft geen toegang. Controleer of de token rechten heeft voor deze repository, Contents, Pull requests en Actions.');throw new Error(`De aanvraag bij GitHub is mislukt (${response.status}). Probeer later opnieuw.`);}
   return response.status===204?null:response.json();
 }
 export async function api(endpoint,options={}) {
@@ -55,21 +55,55 @@ async function uploadFiles(uploads,tree,onProgress=()=>{}){
  const total=uploads.reduce((sum,item)=>sum+item.file.size,0);let completed=0;
  for(const upload of uploads){onProgress({name:upload.file.name,completed,total});let sha=upload.blobSha;if(!/^[a-f0-9]{40}$/.test(sha||'')){const buffer=await upload.file.arrayBuffer();let binary='';for(let i=0;i<buffer.byteLength;i+=0x8000)binary+=String.fromCharCode(...new Uint8Array(buffer,i,Math.min(0x8000,buffer.byteLength-i)));const blob=await api('git/blobs',{method:'POST',body:{content:btoa(binary),encoding:'base64'}});sha=blob.sha;upload.blobSha=sha;await saveUpload(upload);}tree.push({path:upload.path,mode:'100644',type:'blob',sha});completed+=upload.file.size;onProgress({name:upload.file.name,completed,total});}
 }
-export async function saveMediaDraft(changes,uploads,baselineMedia,onProgress,knownDraft){
+export async function saveMediaDraft(changes,uploads,baselineMedia,onProgress,knownDraft,branch=MEDIA_BRANCH){
  if(!changes.length)throw Error('Er zijn geen nieuwe mediaveranderingen om op te slaan.');
- let ref=await api(`git/ref/heads/${MEDIA_BRANCH}`,{allow404:true});
- const prs=ref?await api(`pulls?head=studioneeltje:${encodeURIComponent(MEDIA_BRANCH)}&base=main&state=open`):[];
- if(!ref){const main=await head();ref=await api('git/refs',{method:'POST',body:{ref:`refs/heads/${MEDIA_BRANCH}`,sha:main.object.sha}});}
- else if(!prs.length){await api('merges',{method:'POST',body:{base:MEDIA_BRANCH,head:'main'}});ref=await head(MEDIA_BRANCH);}
+ const selection=branch!==MEDIA_BRANCH;
+ let ref=await api(`git/ref/heads/${branch}`,{allow404:true});
+ const prs=ref?await api(`pulls?head=studioneeltje:${encodeURIComponent(branch)}&base=main&state=open`):[];
+ if(!ref){const main=await head();ref=await api('git/refs',{method:'POST',body:{ref:`refs/heads/${branch}`,sha:main.object.sha}});}
+ else if(!prs.length&&!selection){await api('merges',{method:'POST',body:{base:branch,head:'main'}});ref=await head(branch);}
  // Keep unrelated online media edits. A conflicting change is never overwritten.
  for(const asset of changes){const baseline=baselineMedia.find(a=>a.id===asset.id),current=(await readFile(`content/media/${asset.id}.json`,ref.object.sha))?.data;const previous=knownDraft?.head===ref.object.sha?knownDraft.changes?.find(item=>item.id===asset.id)||baseline:baseline;if(!sameAsset(current,previous)&&!sameAsset(current,asset))throw Error(`‘${asset.title}’ is online gewijzigd. Je lokale werk is behouden. Download een mediareservekopie en vergelijk de mediagegevens voordat je deze opnieuw opslaat.`);const main=(await readFile(`content/media/${asset.id}.json`))?.data;if(!sameAsset(main,baseline)&&!sameAsset(main,asset))throw Error(`‘${asset.title}’ is intussen gepubliceerd met andere gegevens. Je lokale bewerking is behouden.`);}
  const base=await api(`git/commits/${ref.object.sha}`),tree=[];
  await uploadFiles(uploads,tree,onProgress);
+ if(selection){
+  const existing=await api(`git/trees/${base.tree.sha}?recursive=1`);
+  if(existing.truncated)throw Error('De bestanden in het mediaconcept konden niet volledig worden gecontroleerd.');
+  const paths=new Map(existing.tree.map(item=>[item.path,item.sha]));
+  for(const entry of tree)if(paths.has(entry.path)&&paths.get(entry.path)!==entry.sha)throw Error('In dit concept staat al een ander origineel op hetzelfde pad. De lokale foto’s zijn behouden.');
+ }
  for(const asset of changes)tree.push({path:`content/media/${asset.id}.json`,mode:'100644',type:'blob',content:JSON.stringify(cleanAsset(asset),null,2)+'\n'});
- const created=await api('git/trees',{method:'POST',body:{base_tree:base.tree.sha,tree}}),commit=await api('git/commits',{method:'POST',body:{message:'Concept: mediabibliotheek',tree:created.sha,parents:[ref.object.sha]}});
- await api(`git/refs/heads/${MEDIA_BRANCH}`,{method:'PATCH',body:{sha:commit.sha,force:false}});
- const pr=prs[0]||await api('pulls',{method:'POST',body:{title:'Media: beeldbank bijwerken',head:MEDIA_BRANCH,base:'main',body:'Mediabeheer zonder pagina-aanpassingen. Controleer de beelden, prullenbak en automatische optimalisatie voordat je publiceert.'}});
- return {branch:MEDIA_BRANCH,head:commit.sha,pr};
+ const created=await api('git/trees',{method:'POST',body:{base_tree:base.tree.sha,tree}});
+ let sha=ref.object.sha;
+ if(!selection||created.sha!==base.tree.sha){
+  const commit=await api('git/commits',{method:'POST',body:{message:'Concept: mediabibliotheek',tree:created.sha,parents:[sha]}});
+  await api(`git/refs/heads/${branch}`,{method:'PATCH',body:{sha:commit.sha,force:false}});
+  sha=commit.sha;
+ }
+ const pr=prs[0]||await api('pulls',{method:'POST',body:{title:selection?'Media: geselecteerde nieuwe bestanden':'Media: beeldbank bijwerken',head:branch,base:'main',draft:selection,body:selection?'Concept met alleen de geselecteerde nieuwe mediabestanden en hun gegevens. Controleer de automatische beeldverwerking en de fotokiezer in Sveltia.':'Mediabeheer zonder pagina-aanpassingen. Controleer de beelden, prullenbak en automatische optimalisatie voordat je publiceert.'}});
+ return {branch,head:sha,pr};
+}
+
+export async function saveMediaSelection(changes,uploads,{onStage,onProgress,onBatch}){
+ const sorted=[...changes].sort((a,b)=>a.id.localeCompare(b.id));
+ const pending=new Map(uploads.map(upload=>[upload.path,upload]));
+ if(!sorted.length||sorted.some(asset=>asset.deletedAt||!/^media-[a-f0-9-]+$/.test(asset.id)||pending.get(asset.source)?.asset?.id!==asset.id))throw Error('Selecteer alleen nieuwe, lokaal bewaarde bestanden met hun originele upload.');
+ const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(sorted.map(asset=>asset.id).join('\n')));
+ const branch='puck/media-selectie-'+Array.from(new Uint8Array(digest).slice(0,16),byte=>byte.toString(16).padStart(2,'0')).join('');
+ for(let start=0;start<sorted.length;start+=10){
+  const batch=sorted.slice(start,start+10),end=start+batch.length;
+  let step='bestanden vergelijken met GitHub';
+  try{
+   onStage(`Foto’s ${start+1}–${end} van ${sorted.length}: ${step}…`);
+   const result=await saveMediaDraft(batch,batch.map(asset=>pending.get(asset.source)),[],progress=>{
+    step=progress.completed===progress.total?'het GitHub-concept bijwerken':`origineel versturen (${progress.name})`;
+    onProgress(progress);
+   },null,branch);
+   onBatch(result,sorted.slice(0,end));
+  }catch(error){
+   throw Error(`Online opslaan gestopt bij foto’s ${start+1}–${end} (${step}). ${error.message}`);
+  }
+ }
 }
 export async function openDraft(id){
  const branch=pageBranch(id),ref=await api(`git/ref/heads/${branch}`,{allow404:true});if(!ref)return null;

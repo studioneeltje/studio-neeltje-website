@@ -33,8 +33,9 @@ function loadLibrary(refresh=false){
   const response=await fetch(new URL('content/bundle.json',ROOT),{cache:'no-cache'});
   if(!response.ok)throw Error('De beeldbank kon niet laden. Je huidige fotoselectie blijft behouden.');
   let data=await response.json();
-  try{data=await onlineLibrary(data);lastLibrary={media:data.media,manifest:data.manifest};try{localStorage.setItem(SNAPSHOT,JSON.stringify(lastLibrary));}catch{}}catch(error){data={...data,...(lastLibrary||{}),libraryWarning:error.message,libraryNotice:lastLibrary?'Je laatst succesvol opgehaalde beeldbank blijft beschikbaar. Nieuwe online wijzigingen zijn nog niet opgehaald.':'De gepubliceerde beeldbank is beschikbaar. Online concepten konden nog niet worden opgehaald.'};}
+  try{data=await onlineLibrary(data,{refresh});lastLibrary={media:data.media,manifest:data.manifest};try{localStorage.setItem(SNAPSHOT,JSON.stringify(lastLibrary));}catch{}}catch(error){data={...data,...(lastLibrary||{}),libraryWarning:error.message,libraryNotice:lastLibrary?'Je laatst succesvol opgehaalde beeldbank blijft beschikbaar. Nieuwe online wijzigingen zijn nog niet opgehaald.':'De gepubliceerde beeldbank is beschikbaar. Online concepten konden nog niet worden opgehaald.'};}
   if(data.libraryWarning)data=savedOnlineLibrary(data,readLocal('mediaDraft',null));
+   if(data.libraryWarning)data=savedOnlineLibrary(data,readLocal('mediaSelectionDraft',null));
   try{data=localLibrary(data,await getUploads(),readLocal('mediaChanges',[]),localURL);}catch{data={...data,libraryWarning:[data.libraryWarning,'Lokale uploads konden niet worden gelezen. Online foto’s blijven beschikbaar.'].filter(Boolean).join(' ')};}
   for(const listener of libraryListeners)listener(data);
   return data;
