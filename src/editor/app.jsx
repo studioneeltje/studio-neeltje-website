@@ -193,7 +193,7 @@ function App(){
    const online=await openDraft(normalized.id);
    const knownHead=acceptedHead||cloud?.head||readLocal(`savedHead:${normalized.id}`,null);
    if(online)await saveRecovery(online.data,changesFrom(online.media),'Online versie vóór opslaan');
-   const firstSaveDiffers=online&&!knownHead&&signature(online.data,changesFrom(online.media))!==signature(normalized,changes);
+   const firstSaveDiffers=online&&!knownHead&&JSON.stringify(online.data)!==JSON.stringify(normalized);
    if(online&&((knownHead&&online.head!==knownHead)||firstSaveDiffers)){
      assertCurrent(normalized.id,generation);
      setComparison({id:normalized.id,generation,mode:'save',draft:online,label:'Intussen online opgeslagen'});
@@ -210,10 +210,11 @@ function App(){
    }
    writeLocal(`savedHead:${normalized.id}`,result.head);
    if(latest.current?.id===normalized.id&&editorGeneration.current===generation){
-     setCloud({...result,pageId:normalized.id,signature:signature(normalized,changes),changes,pendingPaths:pending.map(item=>item.path)});
+     setCloud({...result,pageId:normalized.id,signature:signature(normalized,changes),changes:result.savedMedia});
      setComparison(null);
      const newer=signature(latest.current,mediaChangesRef.current)!==signature(normalized,changes);
-     setStatus(newer?'Concept online opgeslagen. Je nieuwere wijzigingen staan nog lokaal; sla die ook op.':'Concept opgeslagen in GitHub. De vorige online versie blijft in de versiegeschiedenis.');
+     const mediaNote=result.deferredMedia.length?' De online mediagegevens zijn behouden. Je afwijkende mediabewerkingen staan nog lokaal bij Media.':'';
+     setStatus((newer?'Concept online opgeslagen. Je nieuwere wijzigingen staan nog lokaal; sla die ook op.':'Concept opgeslagen in GitHub. De vorige online versie blijft in de versiegeschiedenis.')+mediaNote);
    }else setStatus(`Concept ‘${normalized.title}’ online opgeslagen. De pagina waarop je nu werkt is niet vervangen.`);
  }
  async function compareOnline(){
