@@ -1,0 +1,43 @@
+{
+  "id": "reportage-destination-wedding-fotograaf-bordeaux-frankrijk",
+  "title": "Trouwfotograaf Bordeaux | Destination wedding Frankrijk",
+  "description": "Een destination wedding in Bordeaux? Bekijk de bruiloft van Mark & Rooa bij Domaine de Perrotin. Spontane trouwfotografie vol sfeer en energie.",
+  "root": {
+    "props": {
+      "title": "Trouwfotograaf Bordeaux | Destination wedding Frankrijk",
+      "description": "Een destination wedding in Bordeaux? Bekijk de bruiloft van Mark & Rooa bij Domaine de Perrotin. Spontane trouwfotografie vol sfeer en energie."
+    }
+  },
+  "content": [
+    {
+      "type": "ProjectStory",
+      "props": {
+        "id": "project-destination-wedding-fotograaf-bordeaux-frankrijk",
+        "storyId": "destination-wedding-fotograaf-bordeaux-frankrijk",
+        "background": "white",
+        "crops": {
+          "media-effe312d-ce2d-45af-a894-f96687052acc": {
+            "desktop": null
+          },
+          "media-4a36fa2e-90cf-4fb8-8841-68e175b71051": {
+            "desktop": {
+              "x": 36,
+              "y": 73,
+              "zoom": 1
+            }
+          }
+        },
+        "sectionOrder": []
+      }
+    },
+    {
+      "type": "PersonalInvite",
+      "props": {
+        "id": "reportage-destination-wedding-fotograaf-bordeaux-frankrijk-personal-invite",
+        "background": "wine",
+        "portfolioInvite": true
+      }
+    }
+  ],
+  "zones": {}
+}
