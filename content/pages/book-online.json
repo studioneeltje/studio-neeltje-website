@@ -1,0 +1,76 @@
+{
+  "id": "book-online",
+  "title": "Online boeken",
+  "root": {
+    "props": {
+      "title": "Online boeken",
+      "seoTitle": "Online boeken | Studio Neeltje",
+      "description": "Online reserveren is niet beschikbaar. Neem contact op met Studio Neeltje.",
+      "searchVisibility": "noindex"
+    }
+  },
+  "content": [
+    {
+      "type": "Intro",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
+            "value": "STUDIO NEELTJE"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie verhaal.",
+            "value": "Online boeken."
+          },
+          {
+            "key": "2",
+            "label": "Label: Helemaal eigen.",
+            "value": "Even persoonlijk afstemmen."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Een dag vol momenten om te bewaren.",
+            "value": "Er kan nog niets worden gereserveerd. Kom later terug."
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Foto achteraan",
+            "mediaId": "media-ef86e876-ba1d-440b-9c47-a67638d8e694",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Hoofdfoto",
+            "mediaId": "media-9d2bfa5c-152a-403e-a690-cd372d735754",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Detailfoto",
+            "mediaId": "media-8c01d3c1-6616-4457-81e1-48e5c3400af5",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "id": "book-online-intro"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "book-online-contact",
+        "title": "Wil je alvast contact?",
+        "body": "[Naar de contactpagina](contact.html)",
+        "format": "markdown",
+        "eyebrow": "STUDIO NEELTJE"
+      }
+    }
+  ]
+}

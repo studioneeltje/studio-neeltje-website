@@ -1,163 +1,128 @@
 {
   "id": "weddingschecklist",
   "title": "Gratis trouwchecklist",
-  "description": "Trouwfotografie door Studio Neeltje.",
+  "description": "Gratis trouwchecklist van Studio Neeltje. Plan jullie bruiloft stap voor stap, met een tijdlijn, laatste checks en tips van een trouwfotograaf.",
   "root": {
     "props": {
-      "title": "Gratis trouwchecklist",
-      "description": "Trouwfotografie door Studio Neeltje."
+      "title": "Gratis trouwchecklist voor jullie bruiloft | Studio Neeltje",
+      "description": "Gratis trouwchecklist van Studio Neeltje. Plan jullie bruiloft stap voor stap, met een tijdlijn, laatste checks en tips van een trouwfotograaf."
     }
   },
   "content": [
-    {
-      "type": "Intro",
-      "props": {
-        "id": "weddingschecklist-intro-0",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
-            "value": "STUDIO NEELTJE / TROUWFOTOGRAFIE"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Jullie verhaal.",
-            "value": "Gratis trouwchecklist"
-          },
-          {
-            "key": "2",
-            "label": "Label: Helemaal eigen.",
-            "value": "Helemaal eigen."
-          },
-          {
-            "key": "3",
-            "label": "Tekst: Een dag vol momenten om te bewaren.",
-            "value": "Een dag vol momenten om te bewaren."
-          }
-        ],
-        "images": [
-          {
-            "key": "0",
-            "label": "Foto achteraan",
-            "mediaId": "foto-26fee13582a7",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "1",
-            "label": "Hoofdfoto",
-            "mediaId": "foto-d5f77408f803",
-            "desktop": null,
-            "mobile": null
-          },
-          {
-            "key": "2",
-            "label": "Detailfoto",
-            "mediaId": "foto-6f5e773ded94",
-            "desktop": null,
-            "mobile": null
-          }
-        ],
-        "links": [],
-        "background": "white"
-      }
-    },
     {
       "type": "Checklist",
       "props": {
         "id": "weddingschecklist-checklist-1",
         "texts": [
           {
-            "key": "0",
-            "label": "Label: De ultieme",
-            "value": "De ultieme"
-          },
-          {
-            "key": "1",
-            "label": "Label: Trouw",
-            "value": "Trouw"
-          },
-          {
-            "key": "2",
-            "label": "Label: checklist",
-            "value": "checklist"
-          },
-          {
-            "key": "3",
-            "label": "Label: De grote lijnen en planning",
-            "value": "De grote lijnen en planning"
-          },
-          {
-            "key": "4",
-            "label": "Label: Ceremonie & dagindeling",
-            "value": "Ceremonie & dagindeling"
-          },
-          {
-            "key": "5",
-            "label": "Label: Ruimte voor jullie eigen ideeën",
-            "value": "Ruimte voor jullie eigen ideeën"
-          },
-          {
-            "key": "6",
-            "label": "Label: Tips vanuit fotografisch perspectief",
-            "value": "Tips vanuit fotografisch perspectief"
-          },
-          {
-            "key": "7",
-            "label": "Label: GRATIS",
-            "value": "GRATIS"
-          },
-          {
-            "key": "8",
-            "label": "Label: voor jullie",
-            "value": "voor jullie"
-          },
-          {
             "key": "9",
-            "label": "Label: EXTRA HULP BIJ JULLIE PLANNING",
-            "value": "EXTRA HULP BIJ JULLIE PLANNING"
+            "label": "Bovenregel",
+            "value": "Gratis trouwchecklist van Studio Neeltje"
           },
           {
             "key": "10",
-            "label": "Titel: Download de",
-            "value": "Download de"
+            "label": "Hoofdkop, eerste regel",
+            "value": "Regel wat telt."
           },
           {
             "key": "11",
-            "label": "Label: gratis",
-            "value": "gratis"
-          },
-          {
-            "key": "12",
-            "label": "Titel: weddingchecklist",
-            "value": "weddingchecklist"
+            "label": "Hoofdkop, sierlijke regel",
+            "value": "Beleef jullie dag."
           },
           {
             "key": "13",
-            "label": "Tekst: Willen jullie een dag die net zo soepel verloopt",
-            "value": "Willen jullie een dag die net zo soepel verloopt als jullie eruitzien? In deze checklist vind je overzicht, rust en handige ideeën voor jullie trouwdag."
+            "label": "Introductie",
+            "value": "Al tien lijstjes open en nog steeds het gevoel dat je iets vergeet? Ik laat je zien wat je eerst regelt, wat kan wachten en waar je ruimte laat voor de momenten die jullie willen meemaken."
           },
           {
             "key": "14",
-            "label": "Tekst: Van de dagindeling tot kleine details: praktisch",
-            "value": "Van de dagindeling tot kleine details: praktische tips vanuit fotografisch perspectief, zodat er meer ruimte overblijft om volop te genieten."
+            "label": "Wat krijg je na aanvragen?",
+            "value": "Download de PDF meteen na je aanvraag. Ik mail je de link ook."
           },
           {
             "key": "15",
-            "label": "Label: Meer overzicht en rust tijdens het plannen",
-            "value": "Meer overzicht en rust tijdens het plannen"
+            "label": "Bijschrift bij de cover",
+            "value": "17 pagina’s · Van verloving tot loslaten"
           },
           {
             "key": "16",
-            "label": "Knop / link: Bekijk de gratis checklist",
-            "value": "Bekijk de gratis checklist"
+            "label": "Knoptekst",
+            "value": "Stuur mij de trouwchecklist"
           }
         ],
         "images": [
           {
             "key": "0",
-            "label": "Een sfeervolle trouwdag met warme tafelsetting",
-            "mediaId": "foto-26fee13582a7",
+            "label": "Originele cover van de gratis trouwchecklist",
+            "mediaId": "checklist-originele-cover",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [
+          {
+            "key": "0",
+            "label": "Naar de voorbeeldpagina",
+            "href": "#checklist-voorbeeld"
+          }
+        ],
+        "background": "pink",
+        "variant": "signup"
+      }
+    },
+    {
+      "type": "ChecklistContents",
+      "props": {
+        "image": {
+          "desktop": null,
+          "mobile": null,
+          "mediaId": "media-9f44b0a0-3e9d-4625-b9db-b44c9d9409d5"
+        },
+        "id": "weddingschecklist-contents",
+        "background": "white",
+        "variant": "example"
+      }
+    },
+    {
+      "type": "About",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: TROUWFOTOGRAFIE / NEELTJE MEIJLER",
+            "value": "GEMAAKT DOOR NEELTJE · TROUWFOTOGRAAF"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Wat er",
+            "value": "Geef de dag"
+          },
+          {
+            "key": "2",
+            "label": "Label: echt gebeurt.",
+            "value": "een beetje lucht."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Ik fotografeer de dag zoals hij zich ontvouwt: d",
+            "value": "Ik zie het vaak net na het jawoord. Iedereen wil jullie omhelzen, maar volgens het draaiboek moeten jullie alweer door naar de foto’s. Plan je daar wat ruimte, dan kun je even blijven staan en die mensen écht zien. Zulke keuzes neem ik mee in deze checklist. Liefs, Neeltje."
+          },
+          {
+            "key": "4",
+            "label": "Knop / link: Bekijk mijn werk",
+            "value": ""
+          },
+          {
+            "key": "5",
+            "label": "Label: Studio Neeltje",
+            "value": "Studio Neeltje"
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Neeltje Meijler, trouwfotograaf bij Studio Neeltje",
+            "mediaId": "media-4d094ad9-eb76-4185-98c9-d332814bc9e3",
             "desktop": null,
             "mobile": null
           }
@@ -166,127 +131,24 @@
           {
             "key": "0",
             "label": "Link 1",
-            "href": "#checklist-aanvragen"
+            "href": "over.html"
           }
-        ]
-      }
-    },
-    {
-      "type": "ChecklistContents",
-      "props": {
-        "image": {
-          "desktop": null,
-          "mobile": null
-        },
-        "id": "weddingschecklist-contents",
-        "background": "white"
+        ],
+        "background": "pink",
+        "id": "About-d73ab92f-cfd0-4282-9343-86e042e94a73"
       }
     },
     {
       "type": "ChecklistAudience",
       "props": {
-        "variant": "personal",
+        "variant": "editorial",
         "openFirst": true,
         "id": "weddingschecklist-audience",
-        "background": "pink"
-      }
-    },
-    {
-      "type": "ContactForm",
-      "props": {
-        "id": "weddingschecklist-contactform-2",
-        "texts": [
-          {
-            "key": "0",
-            "label": "Label: EVEN AFSTEMMEN?",
-            "value": "EEN FIJNE START VOOR JULLIE PLANNING"
-          },
-          {
-            "key": "1",
-            "label": "Titel: Vertel me",
-            "value": "Jullie checklist."
-          },
-          {
-            "key": "2",
-            "label": "Label: jullie plannen.",
-            "value": "Meer rust."
-          },
-          {
-            "key": "3",
-            "label": "Tekst: Een datum, een vraag of gewoon even kennismaken?",
-            "value": "Vraag de gratis trouwchecklist aan met jullie namen en e-mailadres."
-          },
-          {
-            "key": "4",
-            "label": "Label: 01 / KENNISMAKEN",
-            "value": "GRATIS VOOR JULLIE"
-          },
-          {
-            "key": "5",
-            "label": "Label: Vrijblijvend en persoonlijk",
-            "value": "STAP VOOR STAP OVERZICHT"
-          },
-          {
-            "key": "6",
-            "label": "Label: STUUR NEELTJE EEN BERICHT",
-            "value": "DE GRATIS TROUWCHECKLIST"
-          },
-          {
-            "key": "7",
-            "label": "Label: Jullie namen",
-            "value": "Jullie namen"
-          },
-          {
-            "key": "8",
-            "label": "Label: E-mailadres",
-            "value": "E-mailadres"
-          },
-          {
-            "key": "9",
-            "label": "Label: Trouwdatum",
-            "value": "Trouwdatum"
-          },
-          {
-            "key": "10",
-            "label": "Label: als die al bekend is",
-            "value": "als die al bekend is"
-          },
-          {
-            "key": "11",
-            "label": "Label: Locatie",
-            "value": "Locatie"
-          },
-          {
-            "key": "12",
-            "label": "Label: optioneel",
-            "value": "optioneel"
-          },
-          {
-            "key": "13",
-            "label": "Label: Jullie bericht",
-            "value": "Jullie bericht"
-          },
-          {
-            "key": "14",
-            "label": "Label: Verstuur mijn bericht",
-            "value": "Vraag de checklist aan"
-          },
-          {
-            "key": "15",
-            "label": "Tekst: Het formulier staat klaar. Om berichten te ontva",
-            "value": "Het formulier staat klaar. Om berichten te ontvangen, moet de verzendkoppeling nog worden ingesteld."
-          },
-          {
-            "key": "16",
-            "label": "Tekst: Je gegevens gebruik ik alleen om op jullie beric",
-            "value": "Je gegevens gebruik ik alleen om op jullie bericht te reageren."
-          }
-        ],
-        "images": [],
-        "links": [],
-        "formKind": "checklist"
+        "background": "white",
+        "showAction": true
       }
     }
   ],
+  "zones": {},
   "checklistDesignVersion": 1
 }

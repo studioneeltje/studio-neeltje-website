@@ -25,6 +25,15 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - name: Beeldbank en gebruikte foto's controleren
+        run: pnpm audit:media
+      - name: Beeldbankrapport als conceptbijlage bewaren
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: beeldbank-audit
+          path: .cache/media-audit.json
+          retention-days: 7
       - uses: actions/cache@v4
         with:
           path: .cache/processed

@@ -1,0 +1,187 @@
+{
+  "id": "veelgestelde-vragen",
+  "title": "Veelgestelde vragen",
+  "root": {
+    "props": {
+      "title": "Veelgestelde vragen",
+      "seoTitle": "Veelgestelde vragen over trouwfotografie | Studio Neeltje",
+      "description": "Antwoorden op jullie vragen over boeken, voorbereiding, de trouwdag en de foto’s na jullie bruiloft. Lees hoe Studio Neeltje werkt."
+    }
+  },
+  "content": [
+    {
+      "type": "Intro",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
+            "value": "STUDIO NEELTJE"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie verhaal.",
+            "value": "Jullie vragen."
+          },
+          {
+            "key": "2",
+            "label": "Label: Helemaal eigen.",
+            "value": "Mijn antwoorden."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Een dag vol momenten om te bewaren.",
+            "value": "Misschien vragen jullie je af hoeveel foto's je krijgt. Of wat er gebeurt als je niet graag op de foto staat. Dat zijn precies de vragen die ik bijna iedere kennismaking hoor. Daarom heb ik de antwoorden hieronder alvast voor jullie op een rij gezet."
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Foto achteraan",
+            "mediaId": "media-ef86e876-ba1d-440b-9c47-a67638d8e694",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Hoofdfoto",
+            "mediaId": "media-9d2bfa5c-152a-403e-a690-cd372d735754",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Detailfoto",
+            "mediaId": "media-8c01d3c1-6616-4457-81e1-48e5c3400af5",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "id": "faq-intro"
+      }
+    },
+    {
+      "type": "FAQGroup",
+      "props": {
+        "id": "faq-categorie-0",
+        "eyebrow": "GOED OM TE WETEN",
+        "title": "Over Studio Neeltje",
+        "items": [
+          {
+            "answer": "Hoi! Ik ben Neeltje. Waarschijnlijk de persoon die op jullie trouwdag nét iets vaker naast jullie staat dan sommige familieleden. Dan is het wel zo fijn om alvast een beetje kennis te maken.\n\nIk woon in Huizen en fotografeer bruiloften door heel Nederland (en stiekem word ik ook heel blij van een bruiloft in het buitenland). Hiervoor had ik een fotostudio in Hilversum, waar ik jarenlang professionals fotografeerde. Geen stijve portretten of gemaakte glimlachen, maar mensen zoals ze echt zijn.\n\nMisschien is dat wel wat ik het meeste heb meegenomen naar trouwfotografie.\n\nIk kijk niet zozeer naar hoe iets eruitziet, maar naar hoe iemand zich voelt. Naar die ene blik die jullie elkaar geven als niemand kijkt. Naar de moeder die nog snel een plukje haar achter je oor strijkt. Naar de vriend die nét iets te hard lacht om zijn eigen grap. Dat zijn de momenten die me bijblijven.\n\nEn misschien ook wel de reden dat ik op een bruiloft al snel met iedereen een praatje maak. Regelmatig hoor ik aan het einde van de dag: \"Ken jij hier eigenlijk iedereen?\"\n\nNee hoor.\n\nIk vind mensen gewoon oprecht leuk.\n\nWat ik misschien nog wel het mooiste vind, is wat er ná de bruiloft gebeurt.\n\nAls ik berichtjes krijg als:\n\n\"Mijn man had tranen in zijn ogen toen we de foto's bekeken.\"\n\n\"Ik heb de galerij al drie keer geopend en blijf nieuwe dingen ontdekken.\"\n\nOf simpelweg: \"Wat zijn we blij dat jij erbij was.\"\n\nDat laatste is misschien wel het grootste compliment dat ik kan krijgen.\n\nWant natuurlijk wil ik dat jullie de foto's prachtig vinden.\n\nMaar ik hoop vooral dat jullie later terugdenken aan jullie trouwdag en denken:\n\n\"Wat was het fijn dat Neeltje erbij was.\"",
+            "question": "Wie is Neeltje van Studio Neeltje?"
+          },
+          {
+            "answer": "Kijk natuurlijk naar de foto's. Maar kijk vooral ook naar de persoon erachter.\n\nOp jullie trouwdag ben ik er de hele dag bij. Ik loop tussen jullie familie en vrienden, ben aanwezig tijdens de mooiste én spannendste momenten en sta soms dichterbij dan sommige gasten.\n\nDan is het belangrijk dat jullie denken: \"Volgens mij willen wij haar erbij hebben.\"\n\nMijn advies? Plan altijd een kennismaking. Niet om over camera's of lenzen te praten, maar om te voelen of er een klik is. Want als jullie je op je gemak voelen, zie je dat uiteindelijk terug in de foto's.",
+            "question": "Hoe kiezen we een trouwfotograaf?"
+          },
+          {
+            "answer": "Zo'n kennismaking is eigenlijk heel simpel.\n\nWe drinken koffie of thee bij mij thuis. Of we videobellen, net wat jullie fijn vinden.\n\nDe meeste mensen denken dat ik tijdens zo'n gesprek vooral veel vertel. Dat valt meestal flink tegen.\n\nIk stel namelijk vooral veel vragen. Hoe hebben jullie elkaar ontmoet? Waar kijken jullie het meest naar uit? Waar zien jullie misschien een beetje tegenop?\n\nNiet omdat ik nieuwsgierig ben om het nieuwsgierig zijn, maar omdat ik geloof dat hoe beter ik jullie leer kennen, hoe minder jullie straks met mij bezig hoeven te zijn.\n\nEn als we aan het einde allebei denken: \"Ja... dit voelt goed.\" Dan weet ik dat we een mooie dag tegemoet gaan.",
+            "question": "Hoe ziet een kennismaking eruit?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "FAQGroup",
+      "props": {
+        "id": "faq-categorie-1",
+        "eyebrow": "GOED OM TE WETEN",
+        "title": "Boeken & voorbereiding",
+        "items": [
+          {
+            "answer": "Zodra jullie een trouwdatum hebben, is het slim om contact op te nemen.\n\nPopulaire data, vooral in het voorjaar en de zomer, zijn vaak ruim van tevoren volgeboekt.\n\nTwijfelen jullie nog of zijn jullie net verloofd? Dan mogen jullie natuurlijk ook alvast een berichtje sturen. Ik kijk graag met jullie mee, ook als jullie nog niet alles hebben gepland.",
+            "question": "Hoe lang van tevoren boeken we een trouwfotograaf?"
+          },
+          {
+            "answer": "Dat hangt helemaal af van wat jullie belangrijk vinden.\n\nDe een zoekt iemand die alleen de ceremonie vastlegt. De ander wil juist de hele dag laten vertellen, van de eerste kop koffie in de ochtend tot de laatste dans.\n\nDaarom werk ik met verschillende pakketten. Tijdens onze kennismaking kijken we samen wat het beste bij jullie plannen past. Niet om jullie het duurste pakket te laten kiezen, maar juist om ervoor te zorgen dat jullie niet betalen voor uren die jullie niet nodig hebben.",
+            "question": "Wat kost een trouwfotograaf?"
+          },
+          {
+            "answer": "Jazeker.\n\nOngeveer een maand voor jullie bruiloft plannen we nog een videogesprek in. Dan lopen we samen de planning door en kijken we of alles nog klopt.\n\nVaak is tegen die tijd veel duidelijker hoe de dag eruit gaat zien. Misschien blijkt dat het gekozen aantal uren precies goed is. Of misschien is het juist fijn om wat extra tijd toe te voegen.\n\nJullie hoeven dus nu nog niet bang te zijn dat jullie meteen de perfecte keuze moeten maken.",
+            "question": "Kunnen we ons pakket of het aantal uren later nog aanpassen?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "FAQGroup",
+      "props": {
+        "id": "faq-categorie-2",
+        "eyebrow": "GOED OM TE WETEN",
+        "title": "De planning van jullie trouwdag",
+        "items": [
+          {
+            "answer": "Dat is voor iedere bruiloft anders.\n\nWillen jullie alleen de ceremonie en een paar foto's samen? Dan hebben jullie minder uren nodig dan wanneer jullie ook de voorbereidingen, het diner en het feest willen laten vastleggen.\n\nTijdens ons videogesprek, ongeveer een maand voor de bruiloft, kijken we samen nog eens naar de planning. Dan bepalen we of het gekozen pakket nog goed aansluit.",
+            "question": "Hoeveel uur fotografie hebben we nodig?"
+          },
+          {
+            "answer": "Waarschijnlijk niet.\n\nIk ben trouwfotograaf in Noord-Holland en fotografeer regelmatig bruiloften in Huizen, Laren, Naarden, Blaricum, het Gooi en de Vechtstreek. Maar ook voor een bruiloft ergens anders in Nederland of in het buitenland reis ik graag met jullie mee.\n\nDe locatie is voor mij nooit het belangrijkste. Veel belangrijker vind ik dat ik een bruiloft mag vastleggen van mensen bij wie ik denk: Wat fijn dat ik hier onderdeel van mag zijn.\n\nTrouwen jullie ergens in Nederland? Dan reken ik € 0,30 per kilometer. Trouwen jullie in het buitenland? Dan bespreken we de reis- en verblijfskosten vooraf, zodat jullie precies weten waar jullie aan toe zijn.",
+            "question": "Is onze bruiloft niet te ver weg?"
+          },
+          {
+            "answer": "Jazeker.\n\nOf jullie nu trouwen in Portugal, Frankrijk, Italië of ergens anders in Europa: als ik bij jullie pas, reis ik met alle liefde met jullie mee.\n\nHet mooiste aan een destination wedding vind ik misschien nog wel dat iedereen er echt even helemaal is. Een paar dagen samen herinneringen maken, op een plek die voor altijd bijzonder zal blijven.\n\nEn daar vertel ik graag het verhaal van.",
+            "question": "Fotografeer je ook destination weddings?"
+          },
+          {
+            "answer": "Absoluut. Ik zie ieder jaar tientallen bruiloften van dichtbij. Daardoor weet ik welke keuzes rust geven op de dag zelf en welke dingen vaak worden onderschat.\n\nDaarom heb ik een gratis trouwchecklist gemaakt. Daarin deel ik de tips die ik zelf ook aan mijn bruidsparen geef. Zo hoeven jullie niet alles zelf uit te zoeken.",
+            "question": "Heb je tips voor het plannen van een bruiloft?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "FAQGroup",
+      "props": {
+        "id": "faq-categorie-3",
+        "eyebrow": "GOED OM TE WETEN",
+        "title": "Op jullie trouwdag",
+        "items": [
+          {
+            "answer": "Dan zijn jullie in goed gezelschap. Bijna ieder bruidspaar zegt dit tijdens onze kennismaking.\n\nNo worries. Dat hoeft helemaal geen probleem te zijn.\n\nJullie hoeven niet ineens te weten hoe je moet poseren of de hele dag bewust te zijn van de camera. Mijn werk is juist om ervoor te zorgen dat jullie kunnen genieten van elkaar. Ik help waar nodig, geef kleine aanwijzingen en voel aan wanneer ik juist even niets hoef te zeggen.\n\nVaak hoor ik achteraf: \"We vergaten gewoon dat je foto's aan het maken was.\"\n\nEn precies dát is waar de mooiste beelden ontstaan.\n\nWillen jullie vooraf alvast ervaren hoe het is om voor mijn camera te staan?  En wil je wennen aan de spotlight op intieme momenten? Dan plannen we gewoon een pre-weddingshoot.",
+            "question": "Wat als we niet graag op de foto staan?"
+          },
+          {
+            "answer": "Natuurlijk.\n\nIk weet hoe waardevol die foto's later worden. Daarom maken we vooraf samen een lijstje van de mensen die jullie graag samen op de foto willen. En de stijl die hierbij past. De een kiest voor een portretten reeks, de ander heeft als thema: hoe wilder hoe beter. Ik stem de stijl af op jullie.\n\nOp de dag zelf help ik iedereen bij elkaar te krijgen, zodat het snel en ontspannen verloopt. Dan kunnen jullie daarna gewoon weer verder genieten van jullie gasten.",
+            "question": "Maak je ook groepsfoto's?"
+          },
+          {
+            "answer": "Dan trouwen jullie nog steeds.\n\nEn maken we nog steeds mooie foto's.\n\nWe zoeken een mooie plek binnen, gebruiken een overkapping of wachten gewoon even tot het droog is.\n\nEen verliefd bruidspaar onder één paraplu levert vaak minstens zo veel sfeer op als een strakblauwe lucht.",
+            "question": "Wat gebeurt er als het regent?"
+          },
+          {
+            "answer": "Meestal niet. Ik fotografeer de meeste bruiloften alleen. Zo hebben jullie de hele dag één vertrouwd gezicht om je heen. Is jullie bruiloft heel groot of zijn jullie plannen zo uitgebreid dat een second shooter echt iets toevoegt? Dan kijken we samen naar de mogelijkheden.",
+            "question": "Werk je met een second shooter?"
+          },
+          {
+            "answer": "Geen zorgen.\n\nIk kom niet in een witte jurk en ook niet in een felroze blouse.\n\nIk kleed me netjes, comfortabel en vooral zo dat ik niet opval. Jullie zijn degene die alle aandacht verdienen. Ik beweeg liever onopvallend tussen de gasten, zodat iedereen zich op zijn gemak voelt.",
+            "question": "Wat trek je zelf aan op een bruiloft?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "FAQGroup",
+      "props": {
+        "id": "faq-categorie-4",
+        "eyebrow": "GOED OM TE WETEN",
+        "title": "Na de bruiloft",
+        "items": [
+          {
+            "answer": "Ik weet hoe verleidelijk het is om de dag daarna al steeds even in je inbox te kijken.\n\nDaarom stuur ik binnen 1 week alvast een kleine preview, zodat jullie meteen iets hebben om van na te genieten.\n\nDe complete reportage ontvangen jullie binnen 8 weken. Ik neem de tijd om alle foto's zorgvuldig uit te zoeken en na te bewerken, zodat jullie weer even helemaal terug zijn op jullie trouwdag.",
+            "question": "Wanneer ontvangen we de foto's?"
+          },
+          {
+            "answer": "Ik werk niet met een vast aantal foto's.\n\nIedere bruiloft is anders en ieder verhaal verdient de ruimte die het nodig heeft.\n\nGemiddeld ontvangen jullie tussen de 175 en 300 zorgvuldig geselecteerde en nabewerkte foto's. Al moet ik eerlijk bekennen dat ik daar regelmatig overheen ga.\n\nSorry, not sorry. 😉",
+            "question": "Hoeveel foto's krijgen we?"
+          },
+          {
+            "answer": "Ja, ik bewaar jullie foto's nog een tijd nadat jullie de reportage hebben ontvangen.\n\nToch raad ik altijd aan om de foto's zelf ook op meerdere plekken op te slaan. Bijvoorbeeld op jullie computer én op een externe harde schijf.\n\nHet zou zonde zijn als jullie over tien jaar ineens denken:\n\n\"Waar hadden we die foto's ook alweer opgeslagen?\"",
+            "question": "Bewaar je onze foto's ook na levering?"
+          }
+        ]
+      }
+    }
+  ]
+}

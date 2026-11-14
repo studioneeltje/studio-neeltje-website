@@ -3,9 +3,9 @@ import {contactHeaderMarkup,contactConversationMarkup,behindCameraMarkup} from '
 import {personalInviteMarkup} from './personal-invite.mjs';
 import {portfolioCardsProps,withPortfolioCards} from './portfolio-cards.mjs';
 import {orbitGalleryMarkup} from './orbit-gallery.mjs';
-import {projectMarkup} from './project-story.mjs';
+import {projectMarkup,projectProse} from './project-story.mjs';
 import {prepareForms} from './forms.mjs';
-import {checklistContentsMarkup,checklistAudienceMarkup} from './checklist.mjs';
+import {checklistSignupMarkup,checklistContentsMarkup,checklistAudienceMarkup} from './checklist.mjs';
 import {journeyMarkup,thankYouMarkup} from './experience.mjs';
 import {infoCardsMarkup,reviewCardsMarkup,singleReviewMarkup,removeEmptyButtons} from './editorial.mjs';
 import {articleReadTime} from './article-data.mjs';
@@ -16,12 +16,12 @@ import {fanGalleryMarkup} from './fan-gallery.mjs';
 import {storyCarouselMarkup} from './story-carousel.mjs';
 import {escapeHTML as e, safeURL, imageMarkup, videoMarkup, assetURL} from './media.mjs';
 
-export function renderBlock(block, context) {
+export function renderBlock(block, context, { checklistExampleAnchor = false } = {}) {
   const p = block.type==='InfoCards'&&block.props?.portfolioLinked?{...block.props,...portfolioCardsProps(context.settings)}:block.props||{};
   const spec = context.templates[block.type];
   if (!spec) throw new Error(`Onbekend blok: ${block.type}`);
   let html = spec.html;
-  if(block.type==='ProjectStory') html=projectMarkup(context.stories?.find(story=>story.id===p.storyId),context,p);
+  if(block.type==='ProjectStory') html=projectMarkup(context.stories?.find(story=>story.id===p.storyId||story.cmsSlug===p.storyId),context,p);
   else if(block.type==='LegalTerms') html=legalTermsMarkup(p,context);
   else if(block.type==='ContactHero') html=contactHeaderMarkup(p,context);
   else if(block.type==='ContactConversation') html=contactConversationMarkup(p,context);
@@ -31,16 +31,18 @@ export function renderBlock(block, context) {
   else if(block.type==='Orbit') html=orbitGalleryMarkup(p,context);
   else if(block.type==='FanGallery') html=fanGalleryMarkup(p,context);
   else if(block.type==='StoryCarousel'&&['all','selected'].includes(p.storySource)) html=storyCarouselMarkup(p,context);
+  else if(block.type==='Checklist'&&p.variant==='signup') html=checklistSignupMarkup(p,context);
   else if(block.type==='ChecklistContents') html=checklistContentsMarkup(p,context);
   else if(block.type==='ChecklistAudience') html=checklistAudienceMarkup(p,context);
   else if(block.type==='ThankYou') html=thankYouMarkup(p.kind||'contact',context);
   else if(block.type==='Journey') html=journeyMarkup(p,context);
   else if (block.type === 'InfoCards') html=infoCardsMarkup(p,context);
+  else if (block.type === 'FAQGroup')html=`<section class="canvas-faq" id="veelgestelde-vragen"><div class="canvas-faq-intro"><div class="section-tag">${e(p.eyebrow||'GOED OM TE WETEN')}</div><h2>${e(p.title)}</h2>${p.intro?`<p>${e(p.intro)}</p>`:''}</div><div class="canvas-faq-list">${(p.items||[]).map(item=>`<details><summary>${e(item.question)}</summary>${projectProse(item.answer)}</details>`).join('')}</div></section>`;
   else if(block.type === 'Review') html=reviewCardsMarkup(p,context);
   else if(block.type === 'SingleReview') html=singleReviewMarkup(p,context);
   else if (block.type === 'Video') html = `<section class="sn-video-section"><div class="section-tag">${e(p.eyebrow)}</div><h2>${e(p.title)}</h2>${videoMarkup(p.mediaId,context,p)}</section>`;
   else if (block.type === 'Photo') html = `<section class="sn-photo-section" style="--sn-aspect:${e(p.aspect || '3/2')}">${imageMarkup(p.image,context,{aspect:p.aspect || '3/2'})}${p.caption ? `<p>${e(p.caption)}</p>` : ''}</section>`;
-  else if (block.type === 'Text') html = `<section class="sn-text-section"><div class="section-tag">${e(p.eyebrow)}</div><h2>${e(p.title)}</h2><p>${e(p.body).replace(/\n/g,'<br>')}</p></section>`;
+  else if (block.type === 'Text') html = `<section class="sn-text-section"><div class="section-tag">${e(p.eyebrow)}</div><h2>${e(p.title)}</h2>${p.format==='markdown'?projectProse(p.body):`<p>${e(p.body).replace(/\n/g,'<br>')}</p>`}</section>`;
   else {
     html = html.replace(/\{\{t:(\d+)\}\}/g,(_,key)=>e(p.texts?.[key]?.value ?? spec.defaults.texts?.[key]?.value ?? ''));
     const sizes={Hero:'100vw',Orbit:'(max-width: 760px) 150px, 280px',Mosaic:'(max-width: 760px) 88vw, 45vw',StoryCarousel:'(max-width: 760px) 70vw, 480px',Social:'(max-width: 760px) 45vw, 25vw',Wall:'(max-width: 760px) 40vw, 300px',Checklist:'(max-width: 760px) 88vw, 45vw',About:'(max-width: 760px) 88vw, 45vw',ContactCTA:'(max-width: 760px) 88vw, 400px'};
@@ -55,7 +57,7 @@ export function renderBlock(block, context) {
     if (block.type === 'Stories') {
       const stories = context.stories.filter(s => s.published !== false);
       html = html.replace(/<!-- stories:start -->[\s\S]*?<!-- stories:end -->/, `<!-- stories:start -->${stories.map((story,i)=>{
-        return `<a class="canvas-project sn-story-row" href="reportage-${e(story.id)}.html"><span class="sn-story-index">${String(i+1).padStart(2,'0')}</span><b>${e(story.title)}</b><span class="sn-story-location">${e(story.location||'Trouwreportage')}</span><i aria-hidden="true">↗</i><div class="sn-story-hover-photo">${imageMarkup({...p.crops?.[story.id],mediaId:story.cover,sizes:'(max-width: 760px) 90vw, 420px'},context)}</div></a>`;
+        return `<a class="canvas-project sn-story-row" href="reportage-${e(story.id)}.html"><span class="sn-story-index">${String(i+1).padStart(2,'0')}</span><h3 class="sn-story-title">${e(story.title)}</h3><span class="sn-story-location">${e(story.location||'Trouwreportage')}</span><i aria-hidden="true">↗</i><div class="sn-story-hover-photo">${imageMarkup({...p.crops?.[story.id],mediaId:story.cover,sizes:'(max-width: 760px) 90vw, 420px'},context)}</div></a>`;
       }).join('')}<!-- stories:end -->`);
     }
     if (block.type === 'Journal') {
@@ -63,7 +65,15 @@ export function renderBlock(block, context) {
     }
   }
   if(block.type==='Wall'&&p.contactWall===true)html=html.replace('class="canvas-wall"','class="canvas-wall sn-contact-wall"');
-  if(block.type==='ContactForm'&&p.formKind==='checklist')html=html.replace(/<label[^>]*>[\s\S]*?<\/label>/g,label=>/name="(?:date|location|message)"/.test(label)?'':label);
+  if(block.type==='Checklist'&&p.headingLevel===1){
+    html=html.replace('class="checklist-feature"','class="checklist-feature checklist-conversion-hero"')
+      .replace(/<h2 id="checklist-title">([\s\S]*?)<\/h2>/,'<h1 id="checklist-title">$1</h1>')
+      .replace(/<div class="checklist-row"><i>✓<\/i>\s*<\/div>/g,'');
+  }
+  if(block.type==='ContactForm'&&p.formKind==='checklist'){
+    const omitted=p.emailOnly?/name="(?:names|date|location|message)"/:/name="(?:date|location|message)"/;
+    html=html.replace(/<label[^>]*>[\s\S]*?<\/label>/g,label=>omitted.test(label)?'':label);
+  }
   if (block.type === 'About') {
     const note=context.settings.aboutPhotoNote;
     const position=note?.position==='below'?'below':'inside';
@@ -75,23 +85,38 @@ export function renderBlock(block, context) {
   }
   if (block.type === 'Social') html = html.replace(/href="https:\/\/(?:www\.)?instagram\.com[^"]*"/g, `href="${e(safeURL(context.settings.instagram))}"`);
   html=prepareForms(removeEmptyButtons(html),context.settings,{preview:context.preview,defaultKind:p.formKind||'contact'});
+  html=html.replace(/<h[1-6]\b[^>]*>[\s\S]*?<\/h[1-6]>/g,heading=>heading.replace(/<br>/g,'<br>\n'));
   const id = String(p.id || block.type).replace(/[^\w-]/g,'');
+  const scopedId = old => checklistExampleAnchor && old === 'checklist-voorbeeld' ? old : `${id}-${old}`;
   // Original named anchors remain as data roles. Every instance gets unique IDs.
-  html = html.replace(/\bid="([^"]+)"/g,(_,old)=>`id="${e(id)}-${e(old)}" data-role="${e(old)}"`)
-    .replace(/(aria-labelledby|aria-describedby|aria-controls|for)="([^"]+)"/g,(_,attr,ids)=>`${attr}="${ids.split(' ').map(old=>`${id}-${old}`).join(' ')}"`);
+  html = html.replace(/\bid="([^"]+)"/g,(_,old)=>`id="${e(scopedId(old))}" data-role="${e(old)}"`)
+    .replace(/(aria-labelledby|aria-describedby|aria-controls|for)="([^"]+)"/g,(_,attr,ids)=>`${attr}="${ids.split(' ').map(old=>e(scopedId(old))).join(' ')}"`);
   return `<div data-sn-block="${e(block.type)}" data-block-id="${e(id)}"${BACKGROUNDS.includes(p.background)?` data-sn-theme="${p.background}"`:''}>${html}</div>`;
 }
 
 export function renderPage(page, context) {
   const ids = new Set();
-  let checklistAnchor=false;
+  const publicAnchors = new Map([['Pricing', 'prijzen'], ['Orbit', 'momenten-orbit']]);
+  let checklistAnchor=false,checklistExampleAnchor=false;
   return withPortfolioCards(page).content.map(block=>{
     const id=block.props?.id;
     if (!id || ids.has(id)) throw new Error('Ieder blok moet een unieke identificatie hebben.');
     ids.add(id);
-    const anchor=block.type==='ContactForm'&&block.props.formKind==='checklist'&&!checklistAnchor?'<span class="sn-checklist-form-anchor" id="checklist-aanvragen" aria-hidden="true"></span>':'';
-    if(anchor)checklistAnchor=true;
-    return anchor+renderBlock(block,context);
+    const hasChecklistForm=(block.type==='ContactForm'&&block.props.formKind==='checklist')||(block.type==='Checklist'&&block.props.variant==='signup');
+    if(hasChecklistForm&&!checklistAnchor){
+      checklistAnchor=true;
+      return '<span class="sn-checklist-form-anchor" id="checklist-aanvragen" aria-hidden="true"></span>'+renderBlock(block,context);
+    }
+    if(block.type==='ChecklistContents'&&block.props.variant==='example'&&!checklistExampleAnchor){
+      checklistExampleAnchor=true;
+      return renderBlock(block,context,{checklistExampleAnchor:true});
+    }
+    const publicAnchor=publicAnchors.get(block.type);
+    if(publicAnchor){
+      publicAnchors.delete(block.type);
+      return `<span id="${publicAnchor}" aria-hidden="true"></span>`+renderBlock(block,context);
+    }
+    return renderBlock(block,context);
   }).join('\n');
 }
 

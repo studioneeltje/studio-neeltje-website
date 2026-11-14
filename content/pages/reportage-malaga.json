@@ -1,0 +1,32 @@
+{
+  "id": "reportage-malaga",
+  "title": "Destination wedding Málaga, Spanje - M&J",
+  "description": "Bekijk het trouwweekend van Jeroen en Martine bij Finca Monasterio in Málaga. Van het klaarmaken tot het feest met familie en vrienden in Spanje.",
+  "root": {
+    "props": {
+      "title": "Trouwfotograaf Málaga | Destination wedding Spanje",
+      "description": "Bekijk het trouwweekend van Jeroen en Martine bij Finca Monasterio in Málaga. Van het klaarmaken tot het feest met familie en vrienden in Spanje."
+    }
+  },
+  "content": [
+    {
+      "type": "ProjectStory",
+      "props": {
+        "id": "project-malaga",
+        "storyId": "malaga",
+        "background": "white",
+        "crops": {},
+        "sectionOrder": []
+      }
+    },
+    {
+      "type": "PersonalInvite",
+      "props": {
+        "id": "reportage-malaga-personal-invite",
+        "background": "wine",
+        "portfolioInvite": true
+      }
+    }
+  ],
+  "zones": {}
+}

@@ -1,0 +1,175 @@
+{
+  "id": "privacy-beleid",
+  "title": "Privacybeleid",
+  "root": {
+    "props": {
+      "title": "Privacybeleid",
+      "seoTitle": "Privacybeleid | Studio Neeltje",
+      "description": "Lees het privacybeleid van Studio Neeltje en hoe er met persoonsgegevens wordt omgegaan."
+    }
+  },
+  "content": [
+    {
+      "type": "Intro",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
+            "value": "STUDIO NEELTJE"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie verhaal.",
+            "value": "Jullie gegevens."
+          },
+          {
+            "key": "2",
+            "label": "Label: Helemaal eigen.",
+            "value": "Zorgvuldig behandeld."
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Een dag vol momenten om te bewaren.",
+            "value": "Lees hoe Studio Neeltje met persoonsgegevens omgaat."
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Foto achteraan",
+            "mediaId": "media-ef86e876-ba1d-440b-9c47-a67638d8e694",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Hoofdfoto",
+            "mediaId": "media-9d2bfa5c-152a-403e-a690-cd372d735754",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Detailfoto",
+            "mediaId": "media-8c01d3c1-6616-4457-81e1-48e5c3400af5",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "id": "privacy-intro"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "privacy-tekst-2",
+        "eyebrow": "PRIVACY",
+        "title": "Laatst bijgewerkt: 19 januari 2026",
+        "body": "Studio Neeltje, is verantwoordelijk voor de verwerking van persoonsgegevens zoals weergegeven in dit privacybeleid.\n\nBedrijfsgegevens Studio Neeltje (eenmanszaak) E-mailadres: info@studioneeltje.com KvK-nummer: 80310109 Website: https://www.studioneeltje.com",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "privacy-tekst-3",
+        "eyebrow": "PRIVACY",
+        "title": "Belangrijke opmerking",
+        "body": "De uitleg en informatie in dit document zijn algemene richtlijnen voor een privacybeleid. Het kan niet worden beschouwd als juridisch advies of als aanbeveling voor specifieke acties tussen Studio Neeltje en bezoekers of klanten. Wij raden aan juridisch advies in te winnen om er zeker van te zijn dat het privacybeleid volledig aansluit bij uw situatie en verplichtingen.",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "privacy-tekst-4",
+        "eyebrow": "PRIVACY",
+        "title": "1. Persoonsgegevens die wij verwerken",
+        "body": "Studio Neeltje verwerkt je persoonsgegevens doordat je gebruikmaakt van onze diensten en/of omdat je deze gegevens zelf aan ons verstrekt. Het gaat om de volgende gegevens:\n\nVoor- en achternaam\n\nE-mailadres\n\nTelefoonnummer (indien ingevuld)\n\nInhoud van berichten die je via het contactformulier verstuurt\n\nGegevens die je verstrekt bij inschrijving voor de gratis weggever (weddingchecklist)\n\nWij verzamelen geen bijzondere of gevoelige persoonsgegevens en hebben niet de intentie gegevens te verzamelen van websitebezoekers jonger dan 16 jaar.",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "privacy-tekst-5",
+        "eyebrow": "PRIVACY",
+        "title": "2. Met welk doel en op basis van welke grondslag wij persoonsgegevens verwerken",
+        "body": "Studio Neeltje verwerkt jouw persoonsgegevens voor de volgende doelen:\n\nContact met je op te nemen naar aanleiding van een aanvraag of bericht\n\nHet toesturen van de aangevraagde gratis weggever\n\nHet versturen van e-mails binnen een e-mailflow (via Wix)\n\nHet verkrijgen van inzicht in het gebruik van onze website\n\nDe verwerking van persoonsgegevens gebeurt op basis van:\n\nJouw toestemming\n\nDe uitvoering van een overeenkomst of voorbereiding daarvan\n\nHet gerechtvaardigd belang om onze dienstverlening en website te verbeteren",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "privacy-tekst-6",
+        "eyebrow": "PRIVACY",
+        "title": "3. Bewaartermijnen",
+        "body": "Studio Neeltje bewaart je persoonsgegevens niet langer dan strikt nodig is om de doelen te realiseren waarvoor je gegevens worden verzameld.\n\nGegevens uit contactformulieren: maximaal 12 maanden\n\nGegevens voor e-mailflows en gratis weggevers: totdat je je uitschrijft\n\nAdministratieve gegevens (indien van toepassing): conform wettelijke bewaartermijnen (7 jaar)",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "privacy-tekst-7",
+        "eyebrow": "PRIVACY",
+        "title": "4. Delen van persoonsgegevens met derden",
+        "body": "Studio Neeltje verkoopt jouw gegevens niet aan derden en verstrekt deze uitsluitend indien dit nodig is voor de uitvoering van onze dienstverlening of om te voldoen aan een wettelijke verplichting.\n\nWij maken gebruik van de volgende verwerkers:\n\nWix (website, hosting en e-mailflows)\n\nGoogle Analytics (website-analyse)\n\nMet deze partijen zijn verwerkersovereenkomsten gesloten of zij handelen conform de AVG.",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "privacy-tekst-8",
+        "eyebrow": "PRIVACY",
+        "title": "5. Cookies of vergelijkbare technieken",
+        "body": "Studio Neeltje gebruikt functionele cookies en analytische cookies.\n\nFunctionele cookies zorgen ervoor dat de website naar behoren werkt.\n\nAnalytische cookies (Google Analytics) helpen ons inzicht te krijgen in het gebruik van de website.\n\nGoogle Analytics wordt alleen geladen nadat je toestemming hebt gegeven. Je kunt je keuze op elk moment wijzigen via Privacykeuze onderaan de website.",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "privacy-tekst-9",
+        "eyebrow": "PRIVACY",
+        "title": "6. Gegevens inzien, aanpassen of verwijderen",
+        "body": "Je hebt het recht om je persoonsgegevens in te zien, te corrigeren of te verwijderen. Daarnaast heb je het recht om je toestemming in te trekken of bezwaar te maken tegen de verwerking van je persoonsgegevens.\n\nJe kunt een verzoek sturen naar info@studioneeltje.com. We reageren zo snel mogelijk, maar uiterlijk binnen vier weken.",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "privacy-tekst-10",
+        "eyebrow": "PRIVACY",
+        "title": "7. Beveiliging van persoonsgegevens",
+        "body": "Studio Neeltje neemt passende technische en organisatorische maatregelen om misbruik, verlies, onbevoegde toegang en ongewenste openbaarmaking tegen te gaan.",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "privacy-tekst-11",
+        "eyebrow": "PRIVACY",
+        "title": "8. Klachten",
+        "body": "Heb je een klacht over de verwerking van jouw persoonsgegevens, dan kun je contact met ons opnemen. Daarnaast heb je het recht een klacht in te dienen bij de Autoriteit Persoonsgegevens via www.autoriteitpersoonsgegevens.nl.",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "privacy-tekst-12",
+        "eyebrow": "PRIVACY",
+        "title": "9. Wijzigingen in dit privacybeleid",
+        "body": "Studio Neeltje behoudt zich het recht voor dit privacybeleid te wijzigen. Wij adviseren je dit privacybeleid regelmatig te raadplegen.",
+        "format": "markdown"
+      }
+    }
+  ]
+}

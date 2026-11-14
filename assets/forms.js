@@ -1,5 +1,5 @@
-/* Only a configured, explicitly enabled public JSON endpoint may receive data.
-   The testsite ships with all delivery switches off. No keys belong in this file. */
+/* Only a configured, explicitly enabled JSON endpoint may receive data.
+   No keys belong in this file. */
 (() => {
  const source=document.getElementById('sn-form-settings');if(!source)return;
  let config;try{config=JSON.parse(source.textContent);}catch{return;}
@@ -25,9 +25,16 @@
    busy=true;form.setAttribute('aria-busy','true');const button=form.querySelector('[type="submit"]');if(button)button.disabled=true;message('Even versturen…');
    const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),20000);
    try{
-    const endpoint=new URL(service.endpoint);if(endpoint.protocol!=='https:')throw Error('endpoint');
-    const response=await fetch(endpoint.href,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload),credentials:'omit',signal:controller.signal});
+    const endpoint=new URL(service.endpoint,location.href);
+    const localTest=endpoint.origin===location.origin&&endpoint.hostname==='127.0.0.1'&&endpoint.protocol==='http:';
+    if(endpoint.protocol!=='https:'&&!localTest)throw Error('endpoint');
+    const response=await fetch(endpoint.href,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload),credentials:endpoint.origin===location.origin?'same-origin':'omit',signal:controller.signal});
     const result=await response.json();if(!response.ok||result.success!==true)throw Error('submission');
+    // Only a confirmed backend success can become a measured application.
+    const receiptId=globalThis.crypto?.randomUUID?.()||String(Date.now())+'-'+Math.random().toString(36).slice(2);
+    const measurement={kind,confirmed:true,receiptId};
+    document.dispatchEvent(new CustomEvent('sn:form-success',{detail:measurement}));
+    if(measurement.waitUntil)await Promise.race([measurement.waitUntil,new Promise(resolve=>setTimeout(resolve,1200))]);
     // This marker contains no personal data and is set only after backend acceptance.
     let remembered=false;try{sessionStorage.setItem('sn-form-receipt',JSON.stringify({kind,at:Date.now()}));remembered=true;}catch{}
     if(remembered){location.assign(new URL(config.routes[kind],location.href).href);return;}
@@ -48,5 +55,5 @@
   const element=page.querySelector(selector);if(element)element.textContent=data[key]||'';
  }
  const download=page.querySelector('[data-thanks-download]');
- if(confirmed&&kind==='checklist'&&download&&config.services.checklistFile){try{const url=new URL(config.services.checklistFile,location.href);if(['https:','http:'].includes(url.protocol)&&url.origin===location.origin){download.href=url.href;download.hidden=false;download.setAttribute('download','');}}catch{}}
+ if(kind==='checklist'&&download&&config.services.checklistFile){try{const url=new URL(config.services.checklistFile,location.href);if(['https:','http:'].includes(url.protocol)&&url.origin===location.origin){download.href=url.href;download.hidden=false;download.setAttribute('download','');}}catch{}}
 })();

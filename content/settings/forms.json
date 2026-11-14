@@ -3,7 +3,7 @@
   "contact": {"provider": "none", "endpoint": "", "activated": false},
   "newsletter": {"provider": "none", "endpoint": "", "activated": false},
   "checklist": {"provider": "none", "endpoint": "", "activated": false},
-  "checklistFile": "",
-  "checklistNewsletterText": "Ik wil de gratis trouwchecklist én nieuwsbrieven van Studio Neeltje ontvangen. Ik kan me op ieder moment uitschrijven.",
+  "checklistFile": "media/originals/studio-neeltje-trouwchecklist-juni-2026.pdf",
+  "checklistNewsletterText": "Ik wil de checklist en ongeveer elke twee weken trouwtips van Neeltje ontvangen. Uitschrijven kan altijd.",
   "privacyURL": ""
 }

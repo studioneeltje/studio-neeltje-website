@@ -1,0 +1,32 @@
+{
+  "id": "reportage-bordeaux",
+  "title": "Destination wedding Bordeaux - M&R",
+  "description": "Bekijk het trouwweekend van Mark en Rooa bij Domaine de Perrotin in Bordeaux, van de eerste feestavond tot de ceremonie en het diner.",
+  "root": {
+    "props": {
+      "title": "Trouwfotograaf Bordeaux | Studio Neeltje",
+      "description": "Bekijk het trouwweekend van Mark en Rooa bij Domaine de Perrotin in Bordeaux, van de eerste feestavond tot de ceremonie en het diner."
+    }
+  },
+  "content": [
+    {
+      "type": "ProjectStory",
+      "props": {
+        "id": "project-bordeaux",
+        "storyId": "bordeaux",
+        "background": "white",
+        "crops": {},
+        "sectionOrder": []
+      }
+    },
+    {
+      "type": "PersonalInvite",
+      "props": {
+        "id": "reportage-bordeaux-personal-invite",
+        "background": "wine",
+        "portfolioInvite": true
+      }
+    }
+  ],
+  "zones": {}
+}
