@@ -5,8 +5,14 @@ paginabouwer en Sveltia voor inhoud en instellingen.
 
 ## Beheren
 
-Zie [BEHEER.md](BEHEER.md) voor de Nederlandstalige handleiding en
-[TODO.md](TODO.md) voor het resterende werk.
+Zie [BEHEER.md](BEHEER.md) voor de Nederlandstalige handleiding.
+
+Werkafspraken en lijsten:
+- [CLAUDE.md](CLAUDE.md) — werkregels (verzamelen → bouw → publiceer).
+- [TODO.md](TODO.md) — open taken voor het volgende *bouw*.
+- [LATER.md](LATER.md) — ideeën voor later.
+- [HUISSTIJL.md](HUISSTIJL.md) — kleur, typografie, beeld en toon.
+- [ARCHIEF.md](ARCHIEF.md) — afgeronde bouwstappen.
 
 ## Structuur
 
