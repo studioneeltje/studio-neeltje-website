@@ -40,7 +40,17 @@ async function readDraftAt(id,ref){
 }
 const MEDIA_BRANCH='beheer/media-bibliotheek';
 const cleanAsset=asset=>asset&&Object.fromEntries(Object.entries(asset).filter(([key])=>key!=='previewURL').sort(([a],[b])=>a.localeCompare(b)));
-const sameAsset=(a,b)=>JSON.stringify(cleanAsset(a))===JSON.stringify(cleanAsset(b));
+const stableAsset=(key,value)=>key==='previewURL'?undefined:value&&typeof value==='object'&&!Array.isArray(value)?Object.fromEntries(Object.entries(value).sort(([a],[b])=>a.localeCompare(b))):value;
+export const sameAsset=(a,b)=>JSON.stringify(a,stableAsset)===JSON.stringify(b,stableAsset);
+export function mediaForPage(page,changes){
+ const ids=new Set(changes.map(asset=>asset.id)),used=new Set();
+ function visit(value){
+  if(typeof value==='string'&&ids.has(value))used.add(value);
+  else if(value&&typeof value==='object')Object.values(value).forEach(visit);
+ }
+ visit(page);
+ return changes.filter(asset=>used.has(asset.id));
+}
 async function uploadFiles(uploads,tree,onProgress=()=>{}){
  const total=uploads.reduce((sum,item)=>sum+item.file.size,0);let completed=0;
  for(const upload of uploads){onProgress({name:upload.file.name,completed,total});let sha=upload.blobSha;if(!/^[a-f0-9]{40}$/.test(sha||'')){const buffer=await upload.file.arrayBuffer();let binary='';for(let i=0;i<buffer.byteLength;i+=0x8000)binary+=String.fromCharCode(...new Uint8Array(buffer,i,Math.min(0x8000,buffer.byteLength-i)));const blob=await api('git/blobs',{method:'POST',body:{content:btoa(binary),encoding:'base64'}});sha=blob.sha;upload.blobSha=sha;await saveUpload(upload);}tree.push({path:upload.path,mode:'100644',type:'blob',sha});completed+=upload.file.size;onProgress({name:upload.file.name,completed,total});}
@@ -84,23 +94,35 @@ export async function sourcePreview(asset,branch){
  return new Blob([bytes],{type:asset.kind==='video'?'video/mp4':'image/jpeg'});
 }
 export async function saveDraft(page,mediaChanges=[],uploads=[],expectedHead=null,baselineMedia=[]){
-  const stable=value=>JSON.stringify(value&&typeof value==='object'&&!Array.isArray(value)?Object.fromEntries(Object.keys(value).sort().filter(k=>k!=='previewURL').map(k=>[k,JSON.parse(stable(value[k])||'null')])):value);
-  for(const asset of mediaChanges){const baseline=baselineMedia.find(m=>m.id===asset.id);const current=await readFile(`content/media/${asset.id}.json`);if(stable(current?.data)!==stable(baseline))throw Error(`De mediagegevens van ${asset.title} zijn intussen elders veranderd. Je pagina is lokaal bewaard. Download een reservekopie voordat je de beheeromgeving vernieuwt.`);}
   const branch=pageBranch(page.id);const main=await head();let ref=await api(`git/ref/heads/${branch}`,{allow404:true});
   if(!ref){ref=await api('git/refs',{method:'POST',body:{ref:`refs/heads/${branch}`,sha:main.object.sha}});}
   else if(!expectedHead){const open=await api(`pulls?head=studioneeltje:${encodeURIComponent(branch)}&base=main&state=open`);if(open.length)throw draftConflict();await api('merges',{method:'POST',body:{base:branch,head:'main'}});ref=await head(branch);}
   else if(expectedHead!==ref.object.sha)throw draftConflict();
+  const savedMedia=[],deferredMedia=[];
+  for(const asset of mediaForPage(page,mediaChanges)){
+    const file=`content/media/${asset.id}.json`;
+    const baseline=baselineMedia.find(item=>item.id===asset.id);
+    const published=(await readFile(file,main.object.sha))?.data;
+    const draft=ref.object.sha===main.object.sha?published:(await readFile(file,ref.object.sha))?.data;
+    if((!sameAsset(published,baseline)&&!sameAsset(published,asset))||
+       (!sameAsset(draft,baseline)&&!sameAsset(draft,published)&&!sameAsset(draft,asset)&&!expectedHead)){
+      deferredMedia.push(asset);
+      continue;
+    }
+    savedMedia.push(asset);
+  }
+  const pending=uploads.filter(upload=>savedMedia.some(asset=>upload.path===asset.source||upload.path===asset.captions));
   const base=await api(`git/commits/${ref.object.sha}`);const tree=[];
-  await uploadFiles(uploads,tree);
+  await uploadFiles(pending,tree);
   tree.push({path:`content/pages/${page.id}.json`,mode:'100644',type:'blob',content:JSON.stringify(Object.fromEntries(Object.entries(page).filter(([key])=>key!=='localOnly')),null,2)+'\n'});
-  for(const asset of mediaChanges){const {previewURL,...saved}=asset;tree.push({path:`content/media/${asset.id}.json`,mode:'100644',type:'blob',content:JSON.stringify(saved,null,2)+'\n'});}
+  for(const asset of savedMedia)tree.push({path:`content/media/${asset.id}.json`,mode:'100644',type:'blob',content:JSON.stringify(cleanAsset(asset),null,2)+'\n'});
   const createdTree=await api('git/trees',{method:'POST',body:{base_tree:base.tree.sha,tree}});
   const commit=await api('git/commits',{method:'POST',body:{message:`Concept: ${page.title}`,tree:createdTree.sha,parents:[ref.object.sha]}});
   // A normal fast-forward rejects an intervening edit; never force-push.
   await api(`git/refs/heads/${branch}`,{method:'PATCH',body:{sha:commit.sha,force:false}});
   let prs=await api(`pulls?head=studioneeltje:${encodeURIComponent(branch)}&base=main&state=open`);
   const pr=prs[0]||await api('pulls',{method:'POST',body:{title:`Pagina: ${page.title}`,head:branch,base:'main',body:'Concept uit de visuele editor. Controleer de voorvertoning en de automatische beeldverwerking voordat je publiceert.'}});
-  return {branch,head:commit.sha,pr};
+  return {branch,head:commit.sha,pr,savedMedia,deferredMedia,pendingPaths:pending.map(upload=>upload.path)};
 }
 export async function publishDraft(pr,sha){
   const latest=await api(`pulls/${pr.number}`);if(latest.head.sha!==sha)throw new Error('Het concept is gewijzigd. Bekijk eerst opnieuw de laatste versie.');

@@ -352,8 +352,8 @@ body.motion-ready .in-view{opacity:1!important;transform:none!important}
 .story-showcase:after{content:"";position:absolute;z-index:-1;width:20vw;height:20vw;left:-10vw;bottom:-12vw;background:#FF4802;border-radius:50%}
 .story-showcase-head{display:flex;justify-content:space-between;align-items:end;gap:24px;max-width:1450px;margin:0 auto 32px}
 .story-showcase-head .section-tag{color:#FDE6F2}
-.story-showcase-head h3{margin:12px 0 0;font:800 clamp(36px,6vw,82px)/.9 'Host Grotesk',sans-serif;letter-spacing:-.045em}
-.story-showcase-head h3 em{color:#FF4802;font-style:italic;font-weight:600}
+.story-showcase-head :is(h2,h3){margin:12px 0 0;font:800 clamp(36px,6vw,82px)/.9 'Host Grotesk',sans-serif;letter-spacing:-.045em}
+.story-showcase-head :is(h2,h3) em{color:#FF4802;font-style:italic;font-weight:600}
 .story-showcase-hint{font:500 11px/1.6 'Host Grotesk',sans-serif;max-width:210px;text-align:right;color:#FDE6F2}
 .story-carousel{position:relative;max-width:1450px;height:clamp(490px,54vw,700px);margin:auto;touch-action:pan-y;user-select:none;cursor:grab}
 .story-carousel.is-dragging{cursor:grabbing}
@@ -377,10 +377,10 @@ body.motion-ready .in-view{opacity:1!important;transform:none!important}
 .story-slide-label{display:none}
 .story-project-meta{min-height:112px;max-width:650px;margin:8px auto 8px;text-align:center;color:#FDE6F2}
 .story-project-meta .section-tag{color:#FDE6F2;font-size:9px}
-.story-project-meta h4{margin:9px 0 10px;font:800 clamp(28px,4vw,46px)/1 'Host Grotesk',sans-serif;letter-spacing:-.035em}
+.story-project-meta :is(h3,h4){margin:9px 0 10px;font:800 clamp(28px,4vw,46px)/1 'Host Grotesk',sans-serif;letter-spacing:-.035em}
 .story-project-link{display:inline-flex;align-items:center;gap:14px;padding-bottom:4px;border-bottom:1px solid #FDE6F2;font:600 12px 'Host Grotesk',sans-serif;color:#FDE6F2;transition:color .2s,border-color .2s,gap .2s}
 .story-project-link:hover{color:#FF4802;border-color:#FF4802;gap:22px}
-@media(max-width:760px){.story-showcase{margin-top:75px;padding:68px 5vw 70px}.story-showcase-head{display:block;margin-bottom:14px}.story-showcase-head h3{font-size:clamp(38px,10vw,64px)}.story-showcase-hint{max-width:260px;text-align:left;margin:14px 0 0}.story-carousel{height:500px;margin:0 -3vw}.story-slide{width:70vw;height:405px;min-width:0;min-height:0;padding:8px 8px 52px;border-radius:20px}.story-slide img{border-radius:13px}.story-slide:after{inset:8px 8px 52px;border-radius:13px}.story-slide-label{left:19px;right:19px;bottom:16px;font-size:11px}.story-slide-label small{font-size:8px}.story-sticker{left:7%;top:13%;width:82px;height:82px;font-size:10px}.story-sticker span{font-size:21px}.story-slider-controls{padding:0 7vw;gap:13px}.story-arrow{width:42px;height:42px}.story-showcase:before{width:62vw;height:62vw;right:-27vw;top:15%}}
+@media(max-width:760px){.story-showcase{margin-top:75px;padding:68px 5vw 70px}.story-showcase-head{display:block;margin-bottom:14px}.story-showcase-head :is(h2,h3){font-size:clamp(38px,10vw,64px)}.story-showcase-hint{max-width:260px;text-align:left;margin:14px 0 0}.story-carousel{height:500px;margin:0 -3vw}.story-slide{width:70vw;height:405px;min-width:0;min-height:0;padding:8px 8px 52px;border-radius:20px}.story-slide img{border-radius:13px}.story-slide:after{inset:8px 8px 52px;border-radius:13px}.story-slide-label{left:19px;right:19px;bottom:16px;font-size:11px}.story-slide-label small{font-size:8px}.story-sticker{left:7%;top:13%;width:82px;height:82px;font-size:10px}.story-sticker span{font-size:21px}.story-slider-controls{padding:0 7vw;gap:13px}.story-arrow{width:42px;height:42px}.story-showcase:before{width:62vw;height:62vw;right:-27vw;top:15%}}
 @media(prefers-reduced-motion:reduce){.story-slide,.story-arrow{transition:none}}
 
 .portfolio-polaroids{position:relative;margin:110px -5vw 0;padding:96px 5vw 80px;background:#65001D;color:#FDE6F2;overflow:hidden;isolation:isolate}
@@ -626,13 +626,13 @@ body.motion-ready .in-view{opacity:1!important;transform:none!important}
 .checklist-sticker{position:absolute;z-index:2;right:5%;bottom:9%;padding:18px 20px;border-radius:50%;background:#FF4802;color:#65001D;text-align:center;font:800 11px/1.1 'Host Grotesk',sans-serif;transform:rotate(8deg)}
 .checklist-sticker span{display:block;font:italic 600 18px 'Playfair Display',serif}
 .checklist-copy .section-tag{color:#FF4802;margin-bottom:22px}
-.checklist-copy h2{margin:0 0 25px;font:800 clamp(42px,5.4vw,74px)/.92 'Host Grotesk',sans-serif;letter-spacing:-.055em}
-.checklist-copy h2 em{color:#FF4802;font:italic 600 .9em 'Playfair Display',serif;letter-spacing:-.06em}
+.checklist-copy :is(h1,h2){margin:0 0 25px;font:800 clamp(42px,5.4vw,74px)/.92 'Host Grotesk',sans-serif;letter-spacing:-.055em}
+.checklist-copy :is(h1,h2) em{color:#FF4802;font:italic 600 .9em 'Playfair Display',serif;letter-spacing:-.06em}
 .checklist-copy p{max-width:560px;margin:0 0 18px;font:400 16px/1.7 'Host Grotesk',sans-serif}
 .checklist-copy .button{background:#65001D;color:#FDE6F2}
 .checklist-reassurance{display:flex;align-items:center;gap:10px;margin:22px 0 0;color:#65001D;font:500 14px/1.5 'Host Grotesk',sans-serif;letter-spacing:.01em}
 .checklist-reassurance span{color:#FF4802;font-size:19px;line-height:1}
-@media(max-width:780px){.checklist-feature{grid-template-columns:1fr;gap:42px;padding:68px 7vw}.checklist-art{min-height:112vw;max-height:560px;margin-right:7%}.checklist-sheet{left:12%;top:10%;width:68%;min-height:78%;padding:22px}.checklist-sheet strong{font-size:clamp(28px,8vw,42px)}.checklist-copy h2{font-size:clamp(42px,11vw,66px)}.checklist-copy p{font-size:15px}}
+@media(max-width:780px){.checklist-feature{grid-template-columns:1fr;gap:42px;padding:68px 7vw}.checklist-art{min-height:112vw;max-height:560px;margin-right:7%}.checklist-sheet{left:12%;top:10%;width:68%;min-height:78%;padding:22px}.checklist-sheet strong{font-size:clamp(28px,8vw,42px)}.checklist-copy :is(h1,h2){font-size:clamp(42px,11vw,66px)}.checklist-copy p{font-size:15px}}
 /* Living Canvas: oversized editorial headline from the supplied reference */
 .canvas-title{left:3vw;top:29%;width:94%;max-width:none;text-align:left;transform:none;font:500 clamp(54px,10.5vw,160px)/.8 'Playfair Display',serif;letter-spacing:-.075em;color:#FDE6F2}
 .canvas-title .title-outline,.canvas-title .title-script{font:inherit;font-style:normal;letter-spacing:inherit;text-shadow:0 3px 26px #25000b50;white-space:nowrap}
@@ -762,8 +762,8 @@ body.motion-ready .in-view{opacity:1!important;transform:none!important}
 @media(max-width:780px){.mode-canvas .canvas-wall:not(.studio-wall){padding:76px 6vw!important}.mode-canvas .canvas-wall:not(.studio-wall)>.section-tag{font-size:9px;margin-bottom:14px}.mode-canvas .canvas-wall:not(.studio-wall)>h2{font-size:clamp(43px,11vw,68px)!important}}
 /* The showcase underline is removed; its heading follows the polaroid title hierarchy */
 .mode-canvas .showcase-intro h2 em:after{content:none!important;animation:none!important}
-.mode-canvas .story-showcase-head h3{font-family:'Host Grotesk',sans-serif!important;font-style:normal!important;font-weight:800!important;letter-spacing:-.025em!important;line-height:.92!important;font-size:clamp(48px,8vw,104px)!important}
-.mode-canvas .story-showcase-head h3 em{display:inline-block;color:#FF4802!important;font-family:'Playfair Display',serif!important;font-style:italic!important;font-weight:600!important;letter-spacing:-.015em!important;line-height:.92!important}
+.mode-canvas .story-showcase-head :is(h2,h3){font-family:'Host Grotesk',sans-serif!important;font-style:normal!important;font-weight:800!important;letter-spacing:-.025em!important;line-height:.92!important;font-size:clamp(48px,8vw,104px)!important}
+.mode-canvas .story-showcase-head :is(h2,h3) em{display:inline-block;color:#FF4802!important;font-family:'Playfair Display',serif!important;font-style:italic!important;font-weight:600!important;letter-spacing:-.015em!important;line-height:.92!important}
 /* Draw highlighter marks only after the related words have settled into view */
 .mode-canvas .quote-module .quote-marker:before{transition-delay:1.1s!important}
 .mode-canvas .quote-module .marker-orange:before{transition-delay:1.35s!important}
@@ -813,12 +813,12 @@ body.motion-ready .in-view{opacity:1!important;transform:none!important}
 .story-showcase{margin:105px 0 0;padding:90px clamp(24px,7vw,120px) 85px}
 .story-showcase-head{display:grid;width:100%;grid-template-columns:minmax(0,1fr) minmax(220px,300px);align-items:end;gap:clamp(28px,5vw,80px)}
 .story-showcase-head>div{min-width:0}
-.story-showcase-head h3{max-width:1020px;font-size:clamp(42px,5.2vw,82px);line-height:.98;letter-spacing:-.045em}
-.story-showcase-head h3 em{display:inline-block;font-family:'Host Grotesk',sans-serif;font-weight:400;font-style:normal;letter-spacing:-.035em}
+.story-showcase-head :is(h2,h3){max-width:1020px;font-size:clamp(42px,5.2vw,82px);line-height:.98;letter-spacing:-.045em}
+.story-showcase-head :is(h2,h3) em{display:inline-block;font-family:'Host Grotesk',sans-serif;font-weight:400;font-style:normal;letter-spacing:-.035em}
 .story-showcase-hint{max-width:280px;margin:0 0 .45em;text-align:left;font:400 14px/1.65 'Host Grotesk',sans-serif;color:#FDE6F2}
 .story-showcase:before{width:27vw;height:27vw;right:-14vw;top:38%;opacity:.12}
 .story-showcase:after{opacity:.12}
-@media(max-width:760px){.story-showcase{margin-top:75px;padding:68px 6vw 70px}.story-showcase-head{display:block;width:100%;margin-bottom:18px}.story-showcase-head h3{max-width:100%;font-size:clamp(38px,10vw,64px);line-height:.98}.story-showcase-head h3 em{display:inline}.story-showcase-hint{max-width:300px;text-align:left;margin:14px 0 0;font-size:13px}.story-showcase:before{width:48vw;height:48vw;right:-23vw;top:38%;opacity:.1}}
+@media(max-width:760px){.story-showcase{margin-top:75px;padding:68px 6vw 70px}.story-showcase-head{display:block;width:100%;margin-bottom:18px}.story-showcase-head :is(h2,h3){max-width:100%;font-size:clamp(38px,10vw,64px);line-height:.98}.story-showcase-head :is(h2,h3) em{display:inline}.story-showcase-hint{max-width:300px;text-align:left;margin:14px 0 0;font-size:13px}.story-showcase:before{width:48vw;height:48vw;right:-23vw;top:38%;opacity:.1}}
 /* Host Grotesk Regular is the consistent reading voice for site copy. */
 .mode p,.mode .long-copy,.mode .long-copy p{font-family:'Host Grotesk',sans-serif;font-weight:400}
 /* “Rustig dichtbij. Altijd alert.” uses the clear Host Grotesk headline face. */
@@ -856,7 +856,7 @@ body.motion-ready .in-view{opacity:1!important;transform:none!important}
 
 /* Free wedding checklist signup: clear benefits, simple fields and a prominent CTA. */
 .checklist-feature{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(38px,6vw,90px);align-items:center}
-.checklist-copy h2{max-width:700px;margin-bottom:18px}
+.checklist-copy :is(h1,h2){max-width:700px;margin-bottom:18px}
 .checklist-copy>p{font:400 15px/1.65 'Host Grotesk',sans-serif;margin:0 0 12px}
 .checklist-download-form{padding:20px;background:#fff;border-top:3px solid #FF4802;box-shadow:0 14px 38px #65001d12}
 .checklist-form-top{display:flex;justify-content:space-between;gap:12px;margin-bottom:15px;color:#65001D;font:500 8px 'DM Mono',monospace;letter-spacing:.1em}

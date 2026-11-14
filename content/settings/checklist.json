@@ -1,21 +1,29 @@
 {
   "contents": {
-    "eyebrow": "Jullie trouwdag begint hier",
-    "title": "Minder uitzoekwerk.",
-    "emphasis": "Meer voorpret.",
-    "intro": "Van de eerste plannen tot de laatste checks. In 15 pagina’s weten jullie wat aandacht verdient — en wat nog even kan wachten.",
+    "eyebrow": "17 PAGINA’S · VAN VERLOVING TOT TROUWWEEK",
+    "title": "Wat staat er",
+    "emphasis": "in de checklist?",
+    "intro": "Per fase zie je wat je kunt afvinken en waar je beter even bij stilstaat. Dit zijn de vijf onderdelen die jullie van de eerste ideeën naar de trouwweek helpen.",
     "benefits": [
       {
-        "title": "Weten waar je begint.",
-        "text": "Een logische volgorde, slimme keuzes en tips voor jullie locatie."
+        "title": "Datum, budget en jullie prioriteiten.",
+        "text": "De tijdlijn begint 12 tot 18 maanden voor de bruiloft. Maak een voorlopige gastenlijst, bespreek waar jullie graag geld aan uitgeven en kies wat voor jullie echt telt."
       },
       {
-        "title": "Ruimte in jullie planning.",
-        "text": "Een tijdlijn vanaf 18 maanden en genoeg tijd voor de momenten die tellen."
+        "title": "Een locatie en leveranciers die bij jullie passen.",
+        "text": "Vraag wat bij de locatie inbegrepen is en waar je op let bij een bezichtiging. Ik geef ook mijn blik als fotograaf mee, zoals waar het licht valt en hoeveel ruimte er rond de ceremonieplek is."
       },
       {
-        "title": "Ook aan de rest gedacht.",
-        "text": "Last-minute checks en eerlijke inzichten uit de praktijk. Juist die helpen."
+        "title": "Een draaiboek met ruimte om te genieten.",
+        "text": "Van de muziek en de sprekers tot tijd voor foto’s verspreid over de dag. Zo kun je een planning maken die ook ruimte laat voor de momenten die vanzelf ontstaan."
+      },
+      {
+        "title": "Duidelijkheid voor gasten en leveranciers.",
+        "text": "Houd uitnodigingen en RSVP’s bij, stem de definitieve planning af en vertel je fotograaf welke mensen en momenten je graag terug wilt zien."
+      },
+      {
+        "title": "De laatste checks voor jullie trouwdag.",
+        "text": "Loop 7 tot 10 dagen van tevoren onder meer de ringen, geloften, reserveringen en het weer na. Deel het draaiboek en spreek af wie op de dag zelf de praktische vragen opvangt."
       }
     ],
     "cover": "media-44aa961a-44d7-4ca0-90d5-39f2ecf68ee2",
@@ -23,45 +31,36 @@
     "coverTitle": "De trouw",
     "coverEmphasis": "checklist.",
     "coverFooter": "Meer rust. Meer jullie.",
-    "button": "Ja, ik wil de gratis checklist",
+    "button": "Stuur mij de trouwchecklist",
     "href": "#checklist-aanvragen",
-    "note": "15 pagina’s · Praktisch en helder · Van een trouwfotograaf"
+    "note": "Gratis PDF · Meteen downloaden en ook per mail ontvangen.",
+    "sampleImage": "checklist-voorbeeld-trouwlocatie"
   },
   "audience": {
-    "eyebrow": "Deze is voor jullie",
-    "title": "Volop beleven.",
-    "emphasis": "Goed voorbereid.",
-    "editorialTitle": "Klinkt dit",
-    "editorialEmphasis": "als jullie?",
-    "intro": "Jullie plannen bewust. Want de dag mag niet alleen mooi zijn, maar ook goed voelen.",
-    "asideTitle": "Klinkt dit als jullie?",
-    "asideText": "Dan is deze trouwchecklist een fijne plek om te beginnen.",
-    "footer": "Dan is deze trouwchecklist voor jullie.",
+    "eyebrow": "NOG EVEN DIT",
+    "title": "Veel te regelen.",
+    "emphasis": "Waar begin je?",
+    "editorialTitle": "Begin waar",
+    "editorialEmphasis": "jullie zijn.",
+    "intro": "Misschien is jullie locatie al geboekt, of misschien zijn jullie gisteren verloofd. De checklist helpt je vanuit het punt waar jullie nu zijn.",
+    "asideTitle": "Op jullie eigen tempo.",
+    "asideText": "Pak eruit wat voor jullie nú speelt. Eén volgende stap is vaak genoeg.",
+    "footer": "Pak de checklist er samen bij en kies één ding dat jullie deze week willen uitzoeken.",
     "points": [
       {
-        "title": "Jullie houden van overzicht.",
-        "shortTitle": "Meer overzicht.",
-        "text": "Weten wat je wanneer regelt, met ruimte in je hoofd."
+        "title": "We trouwen al snel. Heeft dit nog zin?",
+        "shortTitle": "We trouwen al snel. Heeft dit nog zin?",
+        "text": "Jazeker. Sla over wat al geregeld is en ga meteen naar wat nu speelt, zoals het draaiboek of de laatste checks."
       },
       {
-        "title": "Jullie willen vooral genieten.",
-        "shortTitle": "Zelf kunnen genieten.",
-        "text": "De dag beleven, zonder steeds de planning te managen."
+        "title": "Moeten we alles afvinken?",
+        "shortTitle": "Moeten we alles afvinken?",
+        "text": "Gebruik de onderdelen die bij jullie dag passen. Een tuinbruiloft vraagt soms andere keuzes dan een dag op één locatie."
       },
       {
-        "title": "Jullie vinden herinneringen belangrijk.",
-        "shortTitle": "Herinneringen voor later.",
-        "text": "Aandacht voor de momenten die jullie later nog voelen."
-      },
-      {
-        "title": "Jullie kijken graag vooruit.",
-        "shortTitle": "Weten wat er aankomt.",
-        "text": "Je voorbereiden op wat er op jullie afkomt."
-      },
-      {
-        "title": "Jullie leren graag van ervaring.",
-        "shortTitle": "Leren van ervaring.",
-        "text": "Praktische inzichten en valkuilen die je liever voor bent."
+        "title": "Wat krijg ik na mijn aanvraag?",
+        "shortTitle": "Wat krijg ik na mijn aanvraag?",
+        "text": "Je kunt de PDF meteen downloaden en krijgt de link per mail. Daarna stuur ik ongeveer om de twee weken een mailtje met trouwtips of een verhaal van achter mijn camera. Afmelden kan altijd."
       }
     ]
   }

@@ -38,7 +38,7 @@ export async function readSource(asset,root,maxBytes,cacheDir) {
   return fs.readFile(absolute);
 }
 
-export async function processMedia({root=process.cwd(),outputDir=path.join(root,'dist'),cacheDir=path.join(root,'.cache')}={}) {
+export async function processMedia({root=process.cwd(),outputDir=path.join(root,'dist'),cacheDir=path.join(root,'.cache'),writeManifest=true}={}) {
   const settings=JSON.parse(await fs.readFile(path.join(root,'content/settings/media.json'),'utf8'));
   const config={imageWidths:[480,800,1280,1920,2560],webpQuality:85,avifQuality:65,videoWidths:[640,1280],videoCRF:23,maxVideoMinutes:15,maxUploadMB:45,...settings};
   if(!Array.isArray(config.imageWidths)||config.imageWidths.some(w=>!Number.isInteger(w)||w<100||w>4096))throw new Error('Ongeldige fotoformaten.');
@@ -100,6 +100,10 @@ export async function processMedia({root=process.cwd(),outputDir=path.join(root,
     if(input.subarray(0,3).toString()==='GIF'){await fs.writeFile(path.join(target,'animation.gif'),input);manifest[asset.id].animated=`${prefix}/animation.gif`;}
     console.log(`Media gereed: ${asset.id} (${variants.length} varianten)`);
   }
-  await fs.mkdir(path.join(outputDir,'media'),{recursive:true});await fs.writeFile(path.join(outputDir,'media/manifest.json'),JSON.stringify(manifest,null,2));return manifest;
+  if(writeManifest){
+    await fs.mkdir(path.join(outputDir,'media'),{recursive:true});
+    await fs.writeFile(path.join(outputDir,'media/manifest.json'),JSON.stringify(manifest,null,2));
+  }
+  return manifest;
 }
 if(process.argv[1]&&fileURLToPath(import.meta.url)===path.resolve(process.argv[1]))await processMedia();

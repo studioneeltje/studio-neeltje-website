@@ -23,7 +23,8 @@ Zie [BEHEER.md](BEHEER.md) voor de Nederlandstalige handleiding en
 - `assets/blocks-runtime.js`: toegankelijke galerijen en animaties per blok.
 
 De HTML-bestanden in de repository-root zijn de vorige statische versie ter
-referentie. De publicatie gebruikt uitsluitend de gegenereerde map `dist`.
+referentie. De huidige GitHub Pages-bouw gebruikt `dist`. Voor een verhuistest
+en de definitieve publicatie worden aparte openbare pakketten gemaakt.
 Nieuwe wijzigingen gebeuren in `content`, `site`, `src` en `assets`.
 
 ## Lokaal bouwen
@@ -51,8 +52,8 @@ GitHub Pages is de testomgeving. De uiteindelijke website komt op
 ## Technische SEO en lancering
 
 De standaard GitHub Pages-build is een **testomgeving**. De HTML-pagina's hebben
-standaard `noindex,follow`. De sitemap en canonicals krijgen standaard het adres
-`https://studioneeltje.github.io/studio-neeltje-website/`.
+standaard `noindex,follow` en de sitemap is leeg. De canonicals gebruiken
+standaard het GitHub Pages-adres van deze testomgeving.
 
 Maak voor definitieve hosting een productiebuild met het echte hoofdadres en
 expliciet ingeschakelde indexering:
@@ -60,6 +61,30 @@ expliciet ingeschakelde indexering:
 ```bash
 SITE_URL=https://www.studioneeltje.com/ SITE_INDEXABLE=1 pnpm build
 ```
+
+Deze productiebuild schrijft naar `dist-production`. Een verhuistest met
+dezelfde pagina-adressen en doorverwijzingen kan in `dist-staging` worden gebouwd:
+
+```bash
+SITE_URL=http://127.0.0.1:4195/ SITE_STAGING=1 pnpm build
+```
+
+Serveer beide pakketten via een webserver die adressen zonder `.html` en de
+regels in `_redirects` ondersteunt. Gebruik `404.html` met HTTP-status 404 als
+een adres niet bestaat. De verhuistest heeft een lege sitemap, `noindex` en
+uitgeschakelde formulieren en Analytics. Beveilig een eventueel online testadres
+ook met toegangscontrole.
+
+Voor mijn.host bevatten beide openbare pakketten ook een gegenereerde
+`.htaccess` met dezelfde permanente doorverwijzingen en de regels voor URL’s
+zonder `.html`. Neem dit verborgen bestand mee bij het uploaden. Stel de
+wachtwoordbeveiliging voor het testadres in via DirectAdmin en behoud de regels
+die DirectAdmin daarvoor toevoegt. Controleer de toegang via HTTPS voordat het
+testadres wordt gedeeld.
+
+De twee openbare pakketten bevatten alleen media waar de gebouwde site naar
+verwijst. De volledige beeldbank, concepten en Puck- en Sveltia-beheerbestanden
+worden alleen in de beheerbouw `dist` opgenomen.
 
 Gebruik uitsluitend de definitief gekozen domeinvariant (met óf zonder www) en
 laat de andere variant server-side naar die variant redirecten. De build maakt:
@@ -72,6 +97,21 @@ laat de andere variant server-side naar die variant redirecten. De build maakt:
 het gehele GitHub Pages-hostdomein plaatsen; de HTML-`noindex` is daarom de
 belangrijkste bescherming voor de testomgeving. Bij de definitieve hosting
 moet `robots.txt` op het hostroot staan en moet de productiebuild zonder
-`noindex` worden getest. Doorgestuurde HTML-bestanden zijn tijdelijke
-client-side doorverwijzingen: vervang ze op de definitieve host door echte
-HTTP 301-redirects. Test daarna de sitemap en canonical-URL's opnieuw.
+`noindex` worden getest. De productiebuild behoudt bestaande Wix-adressen, waaronder `/over-studio-neeltje`, `/gratis-trouwchecklist`, `/investering` en de artikelen onder `/blogs/`. Serveer de bijbehorende HTML-bestanden op hun adres zonder `.html`. Pas de permanente doorverwijzingen uit `_redirects` toe op de definitieve hosting. Controleer daar de HTTP-statuscodes, HTTPS, sitemap en voorkeursadressen.
+
+Voeg `SITE_ANALYTICS=1` toe aan de productiebuild zodra de meting bij de livegang is ingeregeld. De Google-tag laadt alleen op het ingestelde hoofddomein en na toestemming. In Google Analytics telt `generate_lead` uitsluitend voor bevestigde contact- en datumaanvragen. `contact_click` en `checklist_request_success` worden apart gemeten. Controleer een echte aanvraag in de inbox én in Analytics voordat je `generate_lead` als belangrijke gebeurtenis markeert.
+
+### Formulieren en Sender
+
+De lokale Sender-proef bevestigde de ontvangst van één contactmail en één
+checklistmail in `info@studioneeltje.com`. De download op de bedankpagina levert
+dezelfde PDF als het productiepakket. De link in de proefmail is alleen lokaal.
+De productiebezorgmail verwijst naar `/downloads/trouwchecklist.pdf` op het
+ingestelde HTTPS-adres.
+
+`src/server/sender.mjs` bevat de gedeelde servercode voor de twee mails. Sluit
+die op de gekozen hosting aan op een HTTPS-formulierontvanger. Bewaar een nieuwe
+Sender-sleutel uitsluitend in de geheime instellingen van die server. Leg
+checklisttoestemming vast en koppel de gekozen nieuwsbriefreeks afzonderlijk.
+Controleer op de hosting de bezorging, de publieke download en de meting van
+een geslaagde contactaanvraag. De lokale proef schrijft geen abonnees in.

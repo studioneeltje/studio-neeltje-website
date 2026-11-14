@@ -3,8 +3,8 @@
   "title": "Portfolio",
   "root": {
     "props": {
-      "title": "Trouwportfolio | Spontane trouwfoto's – Studio Neeltje",
-      "description": "Bekijk spontane trouwfoto's en bijzondere momenten uit echte bruiloften in Nederland en het buitenland. Ontdek de stijl van Studio Neeltje."
+      "title": "Trouwportfolio | Spontane trouwfoto’s | Studio Neeltje",
+      "description": "Bekijk spontane trouwfoto’s uit Nederland, Frankrijk en Spanje. Ontdek hoe Studio Neeltje de sfeer van een bruiloft vastlegt, van kleine momenten tot het feest."
     }
   },
   "content": [
@@ -25,12 +25,12 @@
           {
             "key": "2",
             "label": "Label: Helemaal eigen.",
-            "value": "showcases."
+            "value": "trouwfotografie."
           },
           {
             "key": "3",
             "label": "Tekst: Een dag vol momenten om te bewaren.",
-            "value": "Om je een beetje een beeld te gevne"
+            "value": "Bekijk hoe ik bruiloften vastleg, van een intiem jawoord tot een volle dansvloer."
           }
         ],
         "images": [
@@ -289,5 +289,5 @@
     }
   ],
   "zones": {},
-  "description": "Bekijk spontane trouwfoto's en bijzondere momenten uit echte bruiloften in Nederland en het buitenland. Ontdek de stijl van Studio Neeltje."
+  "description": "Bekijk spontane trouwfoto’s uit Nederland, Frankrijk en Spanje. Ontdek hoe Studio Neeltje de sfeer van een bruiloft vastlegt, van kleine momenten tot het feest."
 }

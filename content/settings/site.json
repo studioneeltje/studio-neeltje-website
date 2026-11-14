@@ -21,7 +21,7 @@
       "kind": "link"
     },
     {
-      "label": "Werkwijze",
+      "label": "Investering",
       "href": "werkwijze.html",
       "kind": "link"
     },
@@ -43,7 +43,7 @@
   ],
   "aboutPhotoNote": {
     "enabled": true,
-    "text": "recht uit het hart",
+    "text": "Studio Neeltje",
     "position": "inside"
   },
   "footer": {

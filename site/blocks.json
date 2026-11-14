@@ -1001,8 +1001,8 @@
         },
         {
           "key": "5",
-          "label": "Label: recht uit het hart",
-          "value": "recht uit het hart"
+          "label": "Label: Studio Neeltje",
+          "value": "Studio Neeltje"
         }
       ],
       "images": [
@@ -1051,6 +1051,15 @@
       ],
       "images": [],
       "links": []
+    }
+  },
+  "FAQGroup": {
+    "label": "Veelgestelde vragen — categorie",
+    "html": "",
+    "defaults": {
+      "eyebrow": "GOED OM TE WETEN",
+      "title": "Jullie vragen",
+      "items": []
     }
   },
   "FAQ": {

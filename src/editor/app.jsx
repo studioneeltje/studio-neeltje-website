@@ -44,6 +44,7 @@ function blockConfig(context){
    else if(type==='ThankYou')fields={kind:{type:'select',label:'Soort bevestiging',options:[{label:'Contact',value:'contact'},{label:'Datumaanvraag',value:'availability'},{label:'Nieuwsbrief',value:'newsletter'},{label:'Checklist',value:'checklist'}]},beheer:{type:'custom',label:'Teksten bewerken',render:()=> <p className="field-help">De bevestigingsteksten bewerk je in Sveltia → Algemene instellingen → Stappen, auteur &amp; bevestigingen. Verzending staat los van deze voorbeeldweergave.</p>}};
    else if(type==='Photo')fields={image:{type:'custom',label:'Foto en uitsnede',render:props=><ImagePicker {...props} context={context}/>},aspect:{type:'select',label:'Vorm van het vlak',options:[{label:'Liggend 3:2',value:'3/2'},{label:'Breed 16:9',value:'16/9'},{label:'Vierkant',value:'1'},{label:'Staand 2:3',value:'2/3'}]},caption:{type:'text',label:'Bijschrift (optioneel)'}};
    else if(type==='Video')fields={title:{type:'text',label:'Titel'},eyebrow:{type:'text',label:'Bovenregel'},mediaId:{type:'select',label:'Video uit de mediabibliotheek',options:[{label:'Kies een video',value:''},...context.media.filter(a=>a.kind==='video'&&!a.deletedAt).map(a=>({label:a.title,value:a.id}))]},type:{type:'radio',label:'Gebruik',options:[{label:'Vertelvideo met geluid',value:'talk'},{label:'Stille sfeerclip',value:'clip'}]},caption:{type:'textarea',label:'Bijschrift'}};
+   else if(type==='FAQGroup')fields={eyebrow:{type:'text',label:'Bovenregel'},title:{type:'text',label:'Categorie'},items:{type:'array',label:'Vragen en antwoorden',getItemSummary:item=>item.question||'Nieuwe vraag',defaultItemProps:{question:'',answer:''},arrayFields:{question:{type:'text',label:'Vraag'},answer:{type:'textarea',label:'Antwoord'}}}};
    else if(type==='Text')fields={title:{type:'text',label:'Titel'},eyebrow:{type:'text',label:'Bovenregel'},body:{type:'textarea',label:'Tekst'}};
    else{
      if(spec.defaults.texts?.length)fields.texts={type:'custom',label:'Teksten in dit blok',render:props=><><TextsField {...props} hiddenKeys={type==='About'?['5']:[]}/>{type==='About'&&<p className="field-help">Het roze fotolabel beheer je in Sveltia → Algemene instellingen → Huisstijl, menu &amp; footer → Fotolabel bij Over Neeltje.</p>}</>};
@@ -90,7 +91,7 @@ function blockConfig(context){
    }
    components[type]={label:spec.label,fields,defaultProps:{...structuredClone(spec.defaults),background:defaultBackground(type)},...(resolveCarouselFields?{resolveFields:resolveCarouselFields}:{}),render:props=><div className="sn-puck-block" dangerouslySetInnerHTML={{__html:renderBlock({type,props},context)}}/>};
  }
- return{components,categories:{intro:{title:'Introductie',components:['Hero','Intro','Text','Quote','About','Method','InfoCards']},media:{title:'Foto’s en video',components:['Photo','Video','Mosaic','Orbit','StoryCarousel','FanGallery','Wall']},stories:{title:'Verhalen',components:['ProjectStory','Stories','Journal','Review','SingleReview','Social']},actions:{title:'Plannen en contact',components:['ContactHero','ContactConversation','BehindCamera','PersonalInvite','TiltCard','Checklist','ChecklistContents','ChecklistAudience','ContactForm','ContactCTA','Availability','Pricing','FAQ','Steps','Journey','ThankYou','LegalTerms']}},root:{fields:{title:{type:'text',label:'Paginatitel'},description:{type:'textarea',label:'Omschrijving voor zoekmachines'}},render:({children})=><div className="mode mode-canvas active">{children}</div>}};
+ return{components,categories:{intro:{title:'Introductie',components:['Hero','Intro','Text','Quote','About','Method','InfoCards']},media:{title:'Foto’s en video',components:['Photo','Video','Mosaic','Orbit','StoryCarousel','FanGallery','Wall']},stories:{title:'Verhalen',components:['ProjectStory','Stories','Journal','Review','SingleReview','Social']},actions:{title:'Plannen en contact',components:['ContactHero','ContactConversation','BehindCamera','PersonalInvite','TiltCard','Checklist','ChecklistContents','ChecklistAudience','ContactForm','ContactCTA','Availability','Pricing','FAQ','FAQGroup','Steps','Journey','ThankYou','LegalTerms']}},root:{fields:{title:{type:'text',label:'Paginatitel'},description:{type:'textarea',label:'Omschrijving voor zoekmachines'}},render:({children})=><div className="mode mode-canvas active">{children}</div>}};
 }
 
 function App(){
@@ -174,7 +175,7 @@ function App(){
    const online=await openDraft(normalized.id);
    const knownHead=acceptedHead||cloud?.head||readLocal(`savedHead:${normalized.id}`,null);
    if(online)await saveRecovery(online.data,changesFrom(online.media),'Online versie vóór opslaan');
-   const firstSaveDiffers=online&&!knownHead&&signature(online.data,changesFrom(online.media))!==signature(normalized,changes);
+   const firstSaveDiffers=online&&!knownHead&&JSON.stringify(online.data)!==JSON.stringify(normalized);
    if(online&&((knownHead&&online.head!==knownHead)||firstSaveDiffers)){
      assertCurrent(normalized.id,generation);
      setComparison({id:normalized.id,generation,mode:'save',draft:online,label:'Intussen online opgeslagen'});
@@ -191,10 +192,11 @@ function App(){
    }
    writeLocal(`savedHead:${normalized.id}`,result.head);
    if(latest.current?.id===normalized.id&&editorGeneration.current===generation){
-     setCloud({...result,pageId:normalized.id,signature:signature(normalized,changes),changes,pendingPaths:pending.map(item=>item.path)});
+     setCloud({...result,pageId:normalized.id,signature:signature(normalized,changes),changes:result.savedMedia});
      setComparison(null);
      const newer=signature(latest.current,mediaChangesRef.current)!==signature(normalized,changes);
-     setStatus(newer?'Concept online opgeslagen. Je nieuwere wijzigingen staan nog lokaal; sla die ook op.':'Concept opgeslagen in GitHub. De vorige online versie blijft in de versiegeschiedenis.');
+     const mediaNote=result.deferredMedia.length?' De online mediagegevens zijn behouden. Je afwijkende mediabewerkingen staan nog lokaal bij Media.':'';
+     setStatus((newer?'Concept online opgeslagen. Je nieuwere wijzigingen staan nog lokaal; sla die ook op.':'Concept opgeslagen in GitHub. De vorige online versie blijft in de versiegeschiedenis.')+mediaNote);
    }else setStatus(`Concept ‘${normalized.title}’ online opgeslagen. De pagina waarop je nu werkt is niet vervangen.`);
  }
  async function compareOnline(){

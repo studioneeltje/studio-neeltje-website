@@ -1,11 +1,11 @@
 {
   "id": "reportages",
   "title": "Reportages",
-  "description": "Bekijk complete trouwreportages uit Nederland en het buitenland. Van de ceremonie tot de dansvloer: ontdek de trouwfotografie van Studio Neeltje.",
+  "description": "Lees de verhalen achter complete trouwreportages in Nederland en het buitenland. Van een intieme bruiloft in Utrecht tot een trouwweekend in Bordeaux.",
   "root": {
     "props": {
-      "title": "Trouwreportages | Echte bruiloften – Studio Neeltje",
-      "description": "Bekijk complete trouwreportages uit Nederland en het buitenland. Van de ceremonie tot de dansvloer: ontdek de trouwfotografie van Studio Neeltje."
+      "title": "Trouwreportages | Echte bruiloften | Studio Neeltje",
+      "description": "Lees de verhalen achter complete trouwreportages in Nederland en het buitenland. Van een intieme bruiloft in Utrecht tot een trouwweekend in Bordeaux."
     }
   },
   "content": [
@@ -22,17 +22,17 @@
           {
             "key": "1",
             "label": "Titel: Jullie verhaal.",
-            "value": "Verhalen die je"
+            "value": "Trouwreportages"
           },
           {
             "key": "2",
             "label": "Label: Helemaal eigen.",
-            "value": "bijblijven."
+            "value": "die je bijblijven."
           },
           {
             "key": "3",
             "label": "Tekst: Een dag vol momenten om te bewaren.",
-            "value": "Een dag vol momenten om te bewaren."
+            "value": "Duik in de verhalen achter de beelden, van het klaarmaken tot het feest."
           }
         ],
         "images": [

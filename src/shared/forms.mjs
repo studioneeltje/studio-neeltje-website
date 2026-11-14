@@ -2,8 +2,8 @@ import {escapeHTML as e,safeURL} from './media.mjs';
 export const THANKS_ROUTES={contact:'bedankt-contact.html',availability:'bedankt-datum.html',newsletter:'bedankt-nieuwsbrief.html',checklist:'bedankt-checklist.html'};
 export function formService(kind,settings){return settings.forms?.[kind==='availability'?'contact':kind]||{};}
 export function formIsReady(kind,settings){const service=formService(kind,settings);return service.provider==='json'&&service.activated===true&&/^https:\/\//i.test(safeURL(service.endpoint,''));}
-export function formSettingsScript(settings,{preview=false}={}){
- const data={preview,services:settings.forms||{},thanks:settings.experience?.thanks||{},routes:THANKS_ROUTES};
+export function formSettingsScript(settings,{preview=false,routes=THANKS_ROUTES}={}){
+ const data={preview,services:settings.forms||{},thanks:settings.experience?.thanks||{},routes};
  return `<script type="application/json" id="sn-form-settings">${JSON.stringify(data).replace(/</g,'\\u003c')}</script>`;
 }
 export function prepareForms(html,settings,{preview=false,defaultKind='contact'}={}){

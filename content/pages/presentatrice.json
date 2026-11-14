@@ -1,0 +1,175 @@
+{
+  "id": "presentatrice",
+  "title": "Presentatrice",
+  "root": {
+    "props": {
+      "title": "Presentatrice",
+      "seoTitle": "Webinar host en presentatrice | Studio Neeltje",
+      "description": "Neeltje als webinar host, presentatrice en moderator. Inhoudelijke gesprekken, ontspannen sprekers en energie voor jullie webinar of video."
+    }
+  },
+  "content": [
+    {
+      "type": "Intro",
+      "props": {
+        "texts": [
+          {
+            "key": "0",
+            "label": "Label: STUDIO NEELTJE / TROUWFOTOGRAFIE",
+            "value": "STUDIO NEELTJE"
+          },
+          {
+            "key": "1",
+            "label": "Titel: Jullie verhaal.",
+            "value": "Webinar host & presentatrice"
+          },
+          {
+            "key": "2",
+            "label": "Label: Helemaal eigen.",
+            "value": "Moderator met inhoud én energie"
+          },
+          {
+            "key": "3",
+            "label": "Tekst: Een dag vol momenten om te bewaren.",
+            "value": "Zoek je een webinar host of presentatrice die niet alleen vragen stelt, maar ook écht betrokken is bij de inhoud?\n\nIemand die sprekers op hun gemak stelt, het gesprek scherp houdt én de aandacht van de kijker vasthoudt?\n\nDan ben je bij mij aan het juiste adres.\n\nIk ben Neeltje — webinar host, presentatrice en moderator — met jarenlange ervaring in interviewen, online presenteren en het begeleiden van gesprekken voor organisaties."
+          }
+        ],
+        "images": [
+          {
+            "key": "0",
+            "label": "Foto achteraan",
+            "mediaId": "wix-254512a75d89",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "1",
+            "label": "Hoofdfoto",
+            "mediaId": "wix-c04381ada2ca",
+            "desktop": null,
+            "mobile": null
+          },
+          {
+            "key": "2",
+            "label": "Detailfoto",
+            "mediaId": "wix-1c7dbf490be9",
+            "desktop": null,
+            "mobile": null
+          }
+        ],
+        "links": [],
+        "id": "presentatrice-intro"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "presentatrice-tekst-0",
+        "title": "Wat mij onderscheidt als webinar host",
+        "eyebrow": "PRESENTATRICE & WEBINAR HOST",
+        "body": "Een goed webinar staat of valt met het gesprek. Met de energie. En met hoe comfortabel mensen zich voelen voor de camera.\n\nDit is waar ik sterk in ben:\n\nIk laat mensen ontspannen en zichzelf zijn, zodat ze beter tot hun recht komen\n\nIk stel vragen die verder gaan dan het standaardlijstje\n\nIk bereid me inhoudelijk goed voor en denk actief mee over wat er écht gezegd moet worden\n\nIk bewaak de rode draad, timing en energie van het webinar\n\nOf het nu gaat om een interview, panelgesprek of online presentatie: mijn doel is altijd hetzelfde — het beste resultaat voor kijker én opdrachtgever.",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "presentatrice-tekst-1",
+        "title": "Specialisatie arbeidsmarktcommunicatie (en meer)",
+        "eyebrow": "PRESENTATRICE & WEBINAR HOST",
+        "body": "Door mijn achtergrond en ervaring ben ik gespecialiseerd in thema’s als:\n\nwerkgelegenheid\n\narbeidsmarkt\n\nemployer branding\n\nwerkgeverschap\n\nloopbaan & ontwikkeling\n\nMaar dankzij mijn enthousiasme, energie en speelse stijl ben ik ook breed inzetbaar. Juist bij wat meer stoffige onderwerpen breng ik lucht, ritme en betrokkenheid. Zonder de inhoud tekort te doen.",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "presentatrice-tekst-2",
+        "title": "Mijn stijl: serieus waar nodig, luchtig waar het kan",
+        "eyebrow": "PRESENTATRICE & WEBINAR HOST",
+        "body": "Ik geloof dat inhoud en luchtigheid elkaar versterken.\n\nMijn stijl kun je omschrijven als:\n\noprechte nieuwsgierigheid\n\nduidelijke, scherpe vragen\n\nveel interactie\n\nexpressie en energie\n\naf en toe een grapje (op het juiste moment)\n\nHet mag serieus zijn. Maar het hoeft nooit zwaar te worden.\n\nZo blijft de kijker aangehaakt. Van begin tot eind.",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "presentatrice-tekst-3",
+        "title": "Presentatrice",
+        "eyebrow": "PRESENTATRICE & WEBINAR HOST",
+        "body": "Neem met mij een kijkje bij Alliander Herinzet. De plek waar materialen worden gecheckt en compleet worden gemaakt. Zo krijgen ze een 2e leven en hoeft er veel minder nieuw apparatuur gekocht te worden.\n\nIk ging met René en zijn collega's in gesprek. Bekijk nu de externe video (ingekort voor externe communicatie).",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "presentatrice-tekst-4",
+        "title": "Meer dan alleen presenteren",
+        "eyebrow": "PRESENTATRICE & WEBINAR HOST",
+        "body": "Wat opdrachtgevers vaak prettig vinden: ik denk niet alleen mee tijdens het webinar, maar ook ervoor.\n\nIk kan ondersteunen bij:\n\nhet aanscherpen van vragen\n\nde opbouw van het gesprek\n\nhet reviewen van de inhoud\n\nhet zelfstandig begeleiden van het interview als dit intern niet is belegd\n\nDaarnaast ben ik ook contentspecialist (marketing, copywriting, social media) en fotograaf. Die brede blik neem ik mee in alles wat ik doe. Zo ook als je het fijn vindt om te praten over de inhoud.\n\nIk mocht dit technische webinar hosten en het gesprek leiden over een rol die onmisbaar is in de energietransitie.\n\nWat maakt het werk van een uitvoerder of werkverantwoordelijke bij Alliander zo interessant?\n\nIn dit webinar krijg je een helder beeld van de praktijk én de impact van deze functie.\n\n[Bekijk het webinar](https://werkenbij.alliander.com/event/webinar-de-rol-van-uitvoerder-bij-alliander/)\n\nVoor dit webinar begeleidde ik het gesprek over data, technologie en innovatie. Samen verkenden we hoe IT en digitalisering bijdragen aan de energietransitie.\n\nWerk je in IT, data of technologie — of heb je daar affiniteit mee? Dan geeft dit webinar een mooi inkijkje in hoe innovatie bij Alliander vorm krijgt.\n\n[Bekijk het webinar](https://werkenbij.alliander.com/event/webinar-data-innovatie-bij-alliander/)\n\nAls host mocht ik dit webinar begeleiden over een complexe en veelzijdige rol. De netarchitect legt de puzzel van het energienet van de toekomst — en dat vraagt visie, samenwerking en technische kennis.\n\nIn dit webinar maak je kennis met de functie én de mensen erachter.\n\n[Bekijk het webinar](https://werkenbij.alliander.com/event/webinar-netarchitecten-archief/)\n\nVoor dit webinar mocht ik de begeleiding verzorgen. We doken in de wereld van smart grids, IT en security en spraken over de uitdagingen én innovatieve projecten binnen digitalisering.\n\nBenieuwd waarom werken als solution of security architect zo interessant is? Bekijk het webinar en luister mee met de mensen uit het vak.\n\n[Bekijk het webinar](https://werkenbij.alliander.com/event/webinar-smartgrid-security-it-bij-alliander/)",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "presentatrice-tekst-5",
+        "title": "Presentatrice",
+        "eyebrow": "PRESENTATRICE & WEBINAR HOST",
+        "body": "Voor jouw video's, zowel instructief als spontaan en interview",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "presentatrice-tekst-6",
+        "title": "Webinar host",
+        "eyebrow": "PRESENTATRICE & WEBINAR HOST",
+        "body": "Online webinars, interviews en panels",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "presentatrice-tekst-7",
+        "title": "Inzetbaar",
+        "eyebrow": "PRESENTATRICE & WEBINAR HOST",
+        "body": "Inzetbaar door heel Nederland",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "presentatrice-tekst-8",
+        "title": "Locatie",
+        "eyebrow": "PRESENTATRICE & WEBINAR HOST",
+        "body": "Gevestigd in Huizen, Noord-Holland",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "presentatrice-tekst-9",
+        "title": "Klaar voor een webinar of video die blijft hangen?",
+        "eyebrow": "PRESENTATRICE & WEBINAR HOST",
+        "body": "Een goed webinar draait niet om perfecte zinnen, maar om échte gesprekken. Dat houdt de aandacht vast. Om mensen die zich comfortabel voelen en inhoud die tot zijn recht komt.\n\nBenieuwd of ik daarin iets voor jullie kan betekenen? Laten we kennismaken en samen kijken wat werkt voor jullie organisatie en thema.",
+        "format": "markdown"
+      }
+    },
+    {
+      "type": "Text",
+      "props": {
+        "id": "presentatrice-tekst-10",
+        "title": "→ Plan een vrijblijvende kennismaking",
+        "eyebrow": "PRESENTATRICE & WEBINAR HOST",
+        "body": "Zin om te kijken of het klikt? Plan een vrijblijvende kennismaking.\n\nGeen verplichtingen. Wel alle ruimte voor je verhaal, wensen en vragen.\n\nVia de contactpagina nemen jullie eenvoudig contact op. Geef aan hoe je het liefst contact hebt, dan stem ik daar mijn reactie op af. Zo houden we het persoonlijk en zonder gemiste belletjes.\n\nZonde van je tijd, toch?!\n\n[Neem contact op](contact.html)",
+        "format": "markdown"
+      }
+    }
+  ]
+}

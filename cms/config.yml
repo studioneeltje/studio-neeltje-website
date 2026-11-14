@@ -48,7 +48,7 @@ collections:
     preview_path: 'reportage-{{id}}.html'
     fields:
       - {name: id, label: Korte naam in de URL, widget: string, pattern: ['^[a-z0-9][a-z0-9-]{0,80}$', 'Gebruik kleine letters, cijfers en streepjes.']}
-      - {name: title, label: Titel, widget: string}
+      - {name: title, label: Zichtbare titel (H1), widget: string}
       - {name: location, label: Locatie, widget: string}
       - {name: excerpt, label: Korte introductie, widget: text}
       - {name: body, label: Introductie van het verhaal, widget: markdown, required: false, hint: "Bestaande verhaaltekst blijft behouden. Voeg hieronder bij Verhaalonderdelen extra hoofdstukken en galerijen toe."}
@@ -62,7 +62,7 @@ collections:
         hint: Kies meerdere foto's op beeld en stel de volgorde in voordat je ze toevoegt.
       - {name: published, label: Tonen op de website, widget: boolean, default: true}
       - {name: couple, label: Namen van het bruidspaar, widget: string, required: false}
-      - {name: seoTitle, label: Titel voor zoekmachines, widget: string, required: false}
+      - {name: seoTitle, label: Titel voor zoekmachines, widget: string, required: false, hint: "Deze titel verschijnt in het tabblad en kan in Google worden gebruikt."}
       - {name: seoDescription, label: Omschrijving voor zoekmachines, widget: text, required: false}
       - name: sections
         label: Verhaalonderdelen — tekst en foto’s afwisselen
@@ -83,8 +83,8 @@ collections:
               - {label: Twee foto’s, value: pair}
               - {label: Fotogalerij, value: gallery}
               - {label: Review, value: review}
-          - {name: heading, label: Tussenkop, widget: string, required: false}
-          - {name: body, label: Verhaaltekst, widget: markdown, required: false}
+          - {name: heading, label: Tussenkop (H2), widget: string, required: false}
+          - {name: body, label: Verhaaltekst, widget: markdown, required: false, hint: "Gebruik Kop 3 voor een subkop binnen dit onderdeel."}
           - {name: image, label: Foto, widget: neeltje-image, required: false}
           - {name: secondImage, label: Tweede foto, widget: neeltje-image, required: false}
           - {name: caption, label: Bijschrift, widget: string, required: false}
@@ -442,6 +442,7 @@ collections:
                   - {name: title, label: Titel, widget: string}
                   - {name: text, label: Toelichting, widget: text}
               - {name: cover, label: Coverfoto (optioneel), widget: neeltje-image, required: false}
+              - {name: sampleImage, label: Voorbeeldpagina (optioneel), widget: neeltje-image, required: false}
               - {name: coverLabel, label: Label op de cover, widget: string, required: false}
               - {name: coverTitle, label: Cover titel, widget: string}
               - {name: coverEmphasis, label: Cover sierlijke regel, widget: string}

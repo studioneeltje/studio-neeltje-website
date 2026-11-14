@@ -5,8 +5,11 @@
     const link=event.target.closest('a[href="#checklist-aanvragen"]');
     const anchor=link&&document.getElementById('checklist-aanvragen');
     if(!anchor)return;
-    event.preventDefault();anchor.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});
-    anchor.nextElementSibling?.querySelector('form input:not([type="hidden"])')?.focus({preventScroll:true});
+    event.preventDefault();
+    const section=anchor.nextElementSibling;
+    const target=section?.querySelector('.sn-checklist-inline-form')||anchor;
+    target.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});
+    section?.querySelector('form input:not([type="hidden"])')?.focus({preventScroll:true});
   });
   document.querySelectorAll('.sn-fan-section').forEach(section=>{
     const rail=section.querySelector('.sn-fan-gallery'),controls=section.querySelector('.sn-fan-controls');if(!rail||!controls)return;

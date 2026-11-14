@@ -1,17 +1,24 @@
 {
   "id": "onno-sari",
-  "title": "onno en sari",
-  "location": "onno en sari",
-  "excerpt": "onno en sari",
+  "title": "Bruiloft van Sari en Onno",
+  "location": "",
+  "excerpt": "Een hartelijke trouwdag met ruimte voor gezelligheid en groepsfoto’s vol beweging.",
   "body": "",
   "cover": "",
   "hoverCover": "",
-  "gallery": "",
+  "gallery": [],
   "published": false,
-  "couple": "",
-  "seoTitle": "",
-  "seoDescription": "",
-  "sections": [],
+  "couple": "Sari en Onno",
+  "seoTitle": "Bruiloft van Sari en Onno | Studio Neeltje",
+  "seoDescription": "Een persoonlijke trouwreportage van Studio Neeltje over de bruiloft van Sari en Onno, met hartelijke momenten en groepsfoto’s vol beweging.",
+  "sections": [
+    {
+      "key": "groepsfotos",
+      "type": "text",
+      "heading": "Groepsfoto’s met een beetje sjeu",
+      "body": "Bij de bruiloft van Sari en Onno kreeg ik de eerste take voor de groepsfoto’s. Bij het vrijgezellenfeest hadden ze een burlesqueworkshop gedaan. Ik vroeg of ze daar iets van wilden laten zien terwijl ze naar voren liepen. Zo kwam de hele groep in beweging."
+    }
+  ],
   "review": null,
   "details": "",
   "suppliers": [],
